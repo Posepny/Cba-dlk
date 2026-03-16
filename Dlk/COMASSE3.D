@@ -1,242 +1,242 @@
-BEGIN ~COMASSE3~
+BEGIN ~COMASSE3~ 
 
-// Devant le puit: Massena est réssucité et il s'aprête à éliminer le groupe.
-IF ~Global("MASSENA_PUIT_INIT","GLOBAL",1)~ THEN BEGIN 0
+// In front of the well: Massena is resurrected and he prepares to eliminate the group. 
+IF ~Global("MASSENA_PUIT_INIT","GLOBAL",1)~ THEN BEGIN 0 
 
-  SAY @1 /* ~Vous êtes donc toujours en vie. Je pensais que le temple aurait raison de vous... ~ */
+  SAY @1 /* ~So you are still alive. I thought the temple would get the better of you... ~ */ 
     
-    // Ekilis est allié du groupe
-    IF ~Global("ekilis_alliance","Global",1)
+    // Ekilis is allied with the group 
+    IF ~Global("ekilis_alliance","Global",1) 
      Global("ekilis_mort","Global",0)~ THEN 
-     REPLY @2 /* ~Massena, c'est vous?~ */
-     DO ~SetGlobal("MASSENA_PUIT_INIT","Global",2)~
-     GOTO 1
+     REPLY @2 /* ~Massena, is that you?~ */ 
+     DO ~SetGlobal("MASSENA_PUIT_INIT","Global",2)~ 
+     GOTO 1 
     
     IF ~Global("ekilis_alliance","Global",0)~ THEN 
-     REPLY @2 /* ~Massena, c'est vous?~ */
-     DO ~SetGlobal("MASSENA_PUIT_INIT","Global",2)~
-     GOTO 2
+     REPLY @2 /* ~Massena, is that you?~ */ 
+     DO ~SetGlobal("MASSENA_PUIT_INIT","Global",2)~ 
+     GOTO 2 
 
-    // Ekilis est allié du groupe et mort
-    IF ~Global("ekilis_alliance","Global",1)
+    // Ekilis is allied with the group and is dead 
+    IF ~Global("ekilis_alliance","Global",1) 
      Global("ekilis_mort","Global",1)~ THEN 
-     REPLY @2 /* ~Massena, c'est vous?~ */
-     DO ~SetGlobal("MASSENA_PUIT_INIT","Global",2)~
-     GOTO 2
+     REPLY @2 /* ~Massena, is that you?~ */ 
+     DO ~SetGlobal("MASSENA_PUIT_INIT","Global",2)~ 
+     GOTO 2 
 
-END
+END 
 
-IF ~~ THEN BEGIN 1
+IF ~~ THEN BEGIN 1 
 
-  SAY @3 /* ~Je vois qu'il est toujours parmi vous. (Massena désigne Karl)~ */
+  SAY @3 /* ~I see he is still among you. (Massena points to Karl)~ */ 
   IF ~~ THEN 
-    EXTERN ~COEKILIS~ 22
+    EXTERN ~COEKILIS~ 22 
 
-END
+END 
 
-IF ~~ THEN BEGIN 2
+IF ~~ THEN BEGIN 2 
 
-  SAY @4 /* ~De chair et d'os cette fois.~ */
+  SAY @4 /* ~Of flesh and blood this time.~ */ 
   IF ~~ THEN 
-    REPLY @5 /* ~Comment avez-vous fait? vous étiez mort!~ */
-    GOTO 3
+    REPLY @5 /* ~How did you do it? You were dead!~ */ 
+    GOTO 3 
 
-END
+END 
 
-IF ~~ THEN BEGIN 3
+IF ~~ THEN BEGIN 3 
 
-  SAY @6 /* ~Le temple de Bhaal recele de grands pouvoirs pour celui qui sait lui rester fidèle. ~ */
+  SAY @6 /* ~The Temple of Bhaal holds great powers for those who remain faithful to it. ~ */ 
   IF ~~ THEN 
-    REPLY @7 /* ~Je vois. Je vous aide et ensuite le temple devait vous débarrasser de nous...~ */
-    GOTO 4
+    REPLY @7 /* ~I see. I'll help you, and then the temple was supposed to rid you of us...~ */ 
+    GOTO 4 
 
-END
+END 
 
-IF ~~ THEN BEGIN 4
+IF ~~ THEN BEGIN 4 
 
-  SAY @8 /* ~Vous pensiez vraiment que j'allais laisser des étrangers sortir du temple secret de mon maître. ~ */
+  SAY @8 /* ~You really thought I'd let strangers leave my master's secret temple. ~ */ 
   IF ~~ THEN 
-    GOTO 7
+    GOTO 7 
 
-END
+END 
 
-IF ~~ THEN BEGIN 5
+IF ~~ THEN BEGIN 5 
 
-  //SAY @9 /* ~Bhaal sera bientôt de retour et Cyric tremblera devant lui!~ */
-  SAY @9 /* ~Tu oses insulter Bhaal le seigneur du meurtre dans son antre! Méfies toi de son courroux!~ */
+  //SAY @9 /* ~Bhaal will soon return, and Cyric will tremble before him!~ */ 
+  SAY @9 /* ~You dare insult Bhaal, the Lord of Murder, in his lair! Beware his wrath!~ */ 
   IF ~~ THEN 
-    EXTERN ~COEKILIS~ 23
+    EXTERN ~COEKILIS~ 23 
 
-END
+END 
 
-IF ~~ THEN BEGIN 6
+IF ~~ THEN BEGIN 6 
 
-  //SAY @10 /* ~Tu seras le premier à mourir Ekilis grand inquisiteur du dieu fou!~ */
-  SAY @10 /* ~Je vais offrir vos têtes à mon maître. (il désigne du doigt Ekilis). Tu seras le premier à mourir serviteur du dieu fou!~*/
+  //SAY @10 /* ~You will be the first to die, Ekilis, Grand Inquisitor of the Mad God!~ */ 
+  SAY @10 /* ~I will offer your heads to my master. (He points at Ekilis.) You will be the first to die, a servant of the mad god!~*/ 
   IF ~~ THEN 
-    DO ~ChangeEnemyAlly("COMASSE2",ENEMY)
-    SetGlobal("Puit_combat","GLOBAL",1)~ 
-    EXIT
+    DO ~ChangeEnemyAlly("COMASSE2",ENEMY) 
+    SetGlobal("Combat_well","GLOBAL",1)~ 
+    EXIT 
 
-END
+END 
 
 IF ~~ THEN BEGIN 7
 
-  SAY @11=@12 /* ~N'y voyez rien de personnel. Dans le fond je vous aime bien mais vôtre route s'arrête ici.~ ~Adieu étranger(s)!~  */
+  SAY @11=@12 /* ~Don't take it personally. Deep down, I like you, but your journey ends here.~ ~Farewell, stranger(s)!~ */ 
   IF ~~ THEN 
-    DO ~ChangeEnemyAlly("COMASSE2",ENEMY)
-        SetGlobal("Puit_combat","GLOBAL",1)
-        AddJournalEntry(@100,QUEST)~
-    EXIT
+    DO ~ChangeEnemyAlly("COMASSE2",ENEMY) 
+        SetGlobal("Puit_combat","GLOBAL",1) 
+        AddJournalEntry(@100,QUEST)~ 
+    EXIT 
 
-END
+END 
 
-// Devant le puit: Massena stoppe le combat.
-IF ~Global("Puit_combat","GLOBAL",2) ~ THEN BEGIN 8
+// In front of the well: Massena stops the fight. 
+IF ~Global("Puit_combat","GLOBAL",2) ~ THEN BEGIN 8 
 
-  SAY @13=@14 /* ~Attendez! Comment est ce possible? ~ ~Le puit de Bhaal communique avec votre chef! Cessez le combat immédiatement!~  */
+  SAY @13=@14 /* ~Wait! How is this possible? ~ ~Bhaal's well is communicating with your leader! Cease fighting immediately!~ */ 
   IF ~~ THEN 
-    DO ~SetGlobal("Puit_combat","Global",3)~
-    EXIT
+    DO ~SetGlobal("Combat_Well","Global",3)~ 
+    EXIT 
 
-END
+END 
 
-// Devant le puit: Massena réalise que le Charname est p.e l'élu.
-IF ~Global("Puit_combat","GLOBAL",4)~ THEN BEGIN 9
+// In front of the well: Massena realizes that Charname is the chosen one. 
+IF ~Global("Combat_Well","GLOBAL",4)~ THEN BEGIN 9 
 
-  SAY @15 /* ~Incroyable! L'essence de mon maître coule dans vos veines!~ */
+  SAY @15 /* ~Incredible! The essence of my master flows in your veins!~ */ 
   IF ~~ THEN 
-    REPLY @16 /* ~Je vous l'avais dit mais vous ne m'avez pas cru!~ */
-    DO ~SetGlobal("Puit_combat","GLOBAL",5)~
-    GOTO 10
-
-  IF ~~ THEN 
-    REPLY @17 /* ~Mon père est Bhaal. Ce qui fait de toi mon humble serviteur!~ */
-    DO ~SetGlobal("Puit_combat","GLOBAL",5)~
-    GOTO 10
+    REPLY @16 /* ~I told you so, but you didn't believe me!~ */ 
+    DO ~SetGlobal("Combat_Well","GLOBAL",5)~ 
+    GOTO 10 
 
   IF ~~ THEN 
-    REPLY @18 /* ~Bhaal a couché avec ma mère et hop neuf mois plus tard me voilà!~ */
-    DO ~SetGlobal("Puit_combat","GLOBAL",5)~
-    GOTO 10
+    REPLY @17 /* ~My father is Bhaal. Which makes you my humble servant!~ */ 
+    DO ~SetGlobal("Puit_combat","GLOBAL",5)~ 
+    GOTO 10 
 
   IF ~~ THEN 
-    REPLY @19 /* ~C'est pas ton problème! Le combat n'est pas terminé!~ */
-    DO ~SetGlobal("Puit_combat","GLOBAL",5)~
-    GOTO 10
-
-END
-
-IF ~~ THEN BEGIN 10
-
-  SAY @20=@21 /* ~Bhaal a un enfant et le temple l'a laissé entrer! ~ ~Systéra avait raison... L'élu existe!~  */
-  IF ~~ THEN 
-    REPLY @22 /* ~Il faudrait savoir ce que vous voulez! On se bat ou pas?~ */
-    GOTO 11
+    REPLY @18 /* ~Bhaal slept with my mother and poof, nine months later here I am!~ */ 
+    DO ~SetGlobal("Puit_combat","GLOBAL",5)~ 
+    GOTO 10 
 
   IF ~~ THEN 
-    REPLY @23 /* ~Je ne comprends rien! L'élu de quoi!~ */
-    GOTO 13
+    REPLY @19 /* ~That's not your problem! The fight isn't over!~ */ 
+    DO ~SetGlobal("Puit_combat","GLOBAL",5)~ 
+    GOTO 10 
 
-END
+END 
 
-IF ~~ THEN BEGIN 11
+IF ~~ THEN BEGIN 10 
 
-  SAY @24 /* ~Milles pardons, j'ignorai qui vous étiez.~ */
+  SAY @20=@21 /* ~Bhaal has a child and the temple let him in! ~ ~Systera was right... The chosen one exists!~ */ 
   IF ~~ THEN 
-    GOTO 13
+    REPLY @22 /* ~You need to make up your mind! Are we fighting or not?~ */ 
+    GOTO 11 
 
-END
-
-IF ~~ THEN BEGIN 12
-
-  SAY @25 /* ~Bhaal vous a choisi!~ */
   IF ~~ THEN 
-    GOTO 13
+    REPLY @23 /* ~I don't understand anything! The chosen one of what!~ */ 
+    GOTO 13 
 
-END
+END 
 
-IF ~~ THEN BEGIN 13
+IF ~~ THEN BEGIN 11 
 
-  SAY @26 /* ~Bhaal vous a fait venir ici pour affronter les épreuves du temple. Lorsque vous aurez réussi son présent sera vôtre!~ */
+  SAY @24 /* ~A thousand pardons, I didn't know who you were.~ */ 
   IF ~~ THEN 
-    REPLY @27 /* ~La mort ne vous a pas réussi! Vous êtes complètement malade. Je veux juste sortir de ce maudit temple!~ */
+    GOTO 13 
+
+END 
+
+IF ~~ THEN BEGIN 12 
+
+  SAY @25 /* ~Bhaal has chosen you!~ */ 
+  IF ~~ THEN 
+    GOTO 13 
+
+END 
+
+IF ~~ THEN BEGIN 13 
+
+  SAY @26 /* ~Bhaal has brought you here to face the trials of the temple. When you succeed, his gift will be yours!~ */ 
+  IF ~~ THEN 
+    REPLY @27 /* ~Death didn't do you any good! You're completely insane. I just want to get out of this damned temple!~ */ 
     GOTO 14
 
-  IF ~Global("Bhaal_present","GLOBAL",0)~ THEN 
-    DO ~SetGlobal("Bhaal_present","GLOBAL",1)~ 
-    REPLY @28 /* ~Un présent?~ */
-    GOTO 16
+  If
+    â€‹
+    â€‹
+    â€‹
 
-  IF ~Global("Bhaal_sansvie","GLOBAL",0)~ THEN 
-    DO ~SetGlobal("Bhaal_sansvie","GLOBAL",1)~ 
-    REPLY @30 /* ~Ca ne peut pas être Bhaal. Il est mort!~ */
-    GOTO 19
+  â€‹
+    â€‹ 
+    â€‹@30 /* ~It can't be Bhaal. He's dead!~ */ 
+    GOTO 19 
 
   IF ~~ THEN 
-    REPLY @31 /* ~Dans ce cas que les épreuvent commencent!~ */
-    GOTO 18
+    REPLY @31 /* ~In that case, let the trials begin!~ */ 
+    GOTO 18 
 
-END
+END 
 
-IF ~~ THEN BEGIN 14
+IF ~~ THEN BEGIN 14 
 
-  SAY @32 /* ~Vôtre père a un plan pour vous et vous ne pouvez vous y soustraire!~ */
+  SAY @32 /* ~Your father has a plan for you, and you cannot escape it!~ */ 
   IF ~~ THEN 
-    REPLY @33 /* ~Hors de question d'obéir à quiconque. J'ai un plan pour vous. Trouvez quelqu'un d'autre!~ */
-    GOTO 15
+    REPLY @33 /* ~There's no question of obeying anyone. I have a plan for you. Find someone else!~ */ 
+    GOTO 15 
 
-END
+END 
 
-IF ~~ THEN BEGIN 15
+IF ~~ THEN BEGIN 15 
 
-  SAY @34 /* ~Vous refusez les épreuves! Dans ce cas, n'êtes pas digne de mon maître! ~ */
+  SAY @34 /* ~You refuse the trials! In that case, you are not worthy of my master! ~ */ 
   IF ~~ THEN 
-    DO ~ChangeEnemyAlly("COMASSE2",ENEMY)
-        AddJournalEntry(@201,QUEST)~
-    EXIT
+    DO ~ChangeEnemyAlly("COMASSE2",ENEMY) 
+        AddJournalEntry(@201,QUEST)~ 
+    EXIT 
 
-END
+END 
 
-IF ~~ THEN BEGIN 16
+IF ~~ THEN BEGIN 16 
 
-  SAY @35 /* ~~ */
+  SAY @35 /* ~~ */ 
   IF ~~ THEN 
-    GOTO 13
+    GOTO 13 
 
-END
+END 
 
-IF ~~ THEN BEGIN 17
+IF ~~ THEN BEGIN 17 
 
-  SAY @36 /* ~Oui et grâce à vous Bhaal sera bientôt de retour!~ */
+  SAY @36 /* ~Yes, and thanks to you, Bhaal will soon be back!~ */ 
   IF ~~ THEN 
-    GOTO 13
+    GOTO 13 
 
-END
+END 
 
-IF ~~ THEN BEGIN 18
+IF ~~ THEN BEGIN 18 
 
-  SAY @37 /* ~Derrière cette grille, les épreuves du temple vous attendent. Vos serviteurs vous assisteront.~ */
+  SAY @37 /* ~Behind this gate, the trials of the temple await you. Your servants will assist you.~ */ 
 IF ~~ THEN 
-    DO~SetGlobal("Bhaal_epreuves","GLOBAL",1)
-       AddJournalEntry(@200,QUEST)~    
-    EXIT
+    DO~SetGlobal("Bhaal_epreuves","GLOBAL",1) 
+       AddJournalEntry(@200,QUEST)~     
+    EXIT 
     
-END
+END 
 
-IF ~~ THEN BEGIN 19
+IF ~~ THEN BEGIN 19 
 
-  SAY @38 /* ~Mon maître est ici en sommeil dans ce puit. Vous avez senti son bref contact tout comme moi.~ */
+  SAY @38 /* ~My master is here asleep in this well. You felt his brief touch, just as I did.~ */ 
 IF ~~ THEN 
-    REPLY @39 /* ~Et il attend quoi pour se réveiller alors?~ */
-    GOTO 20
+    REPLY @39 /* ~And what is he waiting for to awaken then?~ */ 
+    GOTO 20 
     
-END
+END 
 
-IF ~~ THEN BEGIN 20
+IF ~~ THEN BEGIN 20 
 
-  SAY @40 /* ~J'ignore ses desseins mais vous en faite parti.~ */
+  SAY @40 /* ~I do not know his plans, but you are part of them.~ */ 
   IF ~~ THEN 
-   GOTO 13
+   GOTO 13 
 
 END
