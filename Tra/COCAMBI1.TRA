@@ -1,0 +1,36 @@
+@1=~Vous désirez quitter les lieux je présume.~
+@2=~(ne rien répondre)~
+@3=~Sachez que cette porte est mienne. Je maîtrise sa fermeture comme son ouverture... Un droit de passage est de mise pour quitter les lieux.~
+@4=~Quel est le prix à payer?~
+@5=~Un démon désire ton épée. Donnes la moi.~
+@6=~Revenez sur vos pas. Vous trouverez dans un coin puant un démon. Apportez moi son coeur et je vous laisserai passer.~
+@7=~Très bien, je vais chercher ce que tu demandes mais tu as intérêt à tenir parôle.~
+@8=~Est-ce celà que tu cherches (vous lui montrez le coeur du démon).~
+@9=~Je n'ai pas de temps à perdre!~
+@10=~Dans ce cas, trouvez un autre chemin.~
+@11=~Dans ce cas, viens me la prendre. Mais ce passage sera définitivement fermé...~
+@12=~Le plus simple serait de me rapporter le coeur de ce démon afin de d'acquitter du droit de passage.~
+@13=~Magnifique, vous avez le coeur du démon! Je vais pouvoir augmenter mes pouvoirs!~
+@14=~(il fait un vague mouvement de bras vers la porte). Vous pouvez quitter ces lieux!~
+@15=~Pas de coeur, pas de passage!~
+@16=~Payer le prix aurait tellement plus simple...~
+
+
+// quete
+@100=~Le coeur du démon
+
+Le cambion m'annonce qu'il contrôle la grille. Si je désire quitter les lieux, je dois lui apporter le coeur du démon qui est dans le secteur.~
+@101=~Le coeur du démon
+
+Le cambion m'annonce qu'il contrôle la grille. Si je désire quitter les lieux, je dois lui apporter le coeur du démon qui est dans le secteur.
+
+J'ai rapporté le coeur du démon. Le Cambion était ravi et m'a annoncé que le passage était ouvert après qu'il ait fait un vague mouvement de bras. Je me demande si le passage était libre depuis le début...~
+@102=~Le coeur du démon
+
+J'ai décidé de me rendre à la porte et elle s'est ouverte toute seule. Ce cambion a voulu me tromper pour que j'accomplisse sa sale besogne.~
+
+@103=~Le coeur du démon
+
+Le cambion m'annonce qu'il contrôle la grille. Si je désire quitter les lieux, je dois lui apporter le coeur du démon qui est dans le secteur.
+
+J'ai opté pour ouvrir la grille moi même. Le cambion l'a mal pris...~

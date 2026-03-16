@@ -1,0 +1,42 @@
+On ne passe pas. Que le sang de Bhaal approche.
+
+
+Bienvenu à toi, Sang de Bhaal.
+
+=Cette porte est mienne. Je maîtrise sa fermeture comme son ouverture...un droit de passage est de mise pour quitter ces lieux.
+  
+	Tu as toute mon attention. Je t'écoute.
+    
+		Reviens sur tes pas. Tu trouveras dans un coin puant un démon. Apportes moi son coeur et je te laisserai passer.
+
+			Je vais chercher ce que tu demandes. Tu as intérêt à tenir parôle.
+				// Quête
+			
+			
+			// quête coeur du démon réussie			
+			Est-ce celà que tu cherches (vous lui montrez le coeur du démon).
+			
+		
+			Je n'ai pas de temps à perdre!
+
+				Comme il te plaira, sang de Bhaal! Trouves un autre chemin.
+
+
+	Un démon désire ton épée. Donnes la moi.
+
+		Dans ce cas, viens me la prendre. Mais ce passage sera définitivement fermé pour toi...
+
+
+ 		=Le plus simple serait de me rapporter le coeur de ce démon afin de d'acquitter du droit de passage.
+
+
+// quête coeur du démon réussie
+Magnifique! Grâce à toi, sang de Bhaal, mon épée va gagner en puissance! 
+// Cutscene
+
+// fin cutscène
+La porte t'es ouverte. 
+
+
+
+

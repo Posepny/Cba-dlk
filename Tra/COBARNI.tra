@@ -1,0 +1,65 @@
+// 1iere rencontre
+@1=~Ahhh Protecteur, merci de m'accorder de votre précieux temps. Voilà ce qui me tracasse.~ 
+@2=~Je viens d'hériter de cette taverne. Dans la cave, il y a une trappe que j'ai ouverte. J'ai descendu l'échelle et voilà que je me retrouve dans une salle avec pleins de cellules!~
+@3=~Protecteur, je vous jure que j'ignore tout des activités de mon défunt père et je ne veux pas d'ennuis avec la justice. Accepteriez-vous de m'aider?~  
+@4=~En tant que Protecteur de Baldur, je suis toujours prêt à aider un honnête citadin. Je vais tirer cette affaire au clair.~ 
+@5=~Il y a des cellules sous la taverne. Effectivement tout celà m'a l'air bien louche... Le mieux est que j'aille jeter un oeil à vôtre cave.~ 
+@6=~Oh merci, je me sens beaucoup mieux! Voici la clé de la trappe. Si vous avez besoin d'équipement, j'ai en ce moment deux marchands dans la chambre double à l'étage.~
+@7=~Avez-vous visité la cave? (l'air inquiet)~ 
+
+// galerie non explorée
+@8=~Je reviendrai vers vous dès que ce sera fait.~
+
+// Porte ouverte à nouveau / Mod terminé
+@9= ~Le lieu est effectivement malsain, il faut condamner la trappe.~ 
+@10= ~Le lieu est malsain et dangeureux. Je vais garder la clé pour m'assurer régulièrement que tout va bien.~ 
+@11= ~Vous avez raison, je vais suivre votre conseil. Merci pour votre aide Protecteur.~ 
+@12= ~ Vous feriez ça pour moi. Grâce à vous, je suis soulagé. J'avais peur de finir en prison. Merci pour votre aide Protecteur.~   
+ 
+@13=~Je n'ai pas le temps pour cette affaire en ce moment.~
+@14=~Je suis désolé mais cette cave me fait peur...~
+@15=~Je reviendrai plus tard m'occuper de votre problème.~
+@16=~Non, j'ai besoin de vos services.~
+@17=~Oui, je vais explorer les lieux.~
+
+// Quête cave terminée
+@18=~Vous avez besoin de mes services?~
+@19=~Oui, montrez-moi.~
+@20=~Non, je ne fais que passer.~	
+@21=~Vous êtes revenu pour la cave? (plein d'espoir)~
+
+
+
+// Quête
+@100=~Une mystérieuse cave
+
+Barni le nouveau tavernier du Heaume et de la cape s'inquiète. Son défunt père avait accès, sous sa cave, à des cellules.
+
+Ne voulant pas avoir d'ennuis avec la justice, il demande mon aide. 
+
+Le mieux est d'explorer les lieux pour me faire une opinion.~
+
+
+@101=~Une mystérieuse cave
+
+Barni le nouveau tavernier du Heaume et de la cape s'inquiètait. Son défunt père avait accès, sous sa cave, à des cellules.
+
+En explorant les lieux, j'ai découvert un temple secret de Bhaal. J'ai demandé à Barni qu'il condamne l'accès à la trappe.~
+
+
+@102=~Une mystérieuse cave
+
+Barni le nouveau tavernier du Heaume et de la cape s'inquiètait. Son défunt père avait accès, sous sa cave, à des cellules.
+
+En explorant les lieux, j'ai découvert un temple secret de Bhaal. J'ai prétexté à Barni que le lieu était à surveiller. De ce fait, je garde la clé pour avoir un libre accès au temple.~
+
+// Info refus
+@103=~Une mystérieuse cave
+
+Barni le nouveau tavernier du Heaume et de la cape s'inquiète. Son défunt père avait accès, sous sa cave, à des cellules.
+
+Ne voulant pas avoir d'ennuis avec la justice, il demande mon aide. 
+
+Pour le moment, j'ai des tâches plus urgente. Je retournerai le voir plus tard.~
+
+

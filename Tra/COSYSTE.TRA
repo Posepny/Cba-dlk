@@ -1,0 +1,32 @@
+@1=~Ils sont donc parvenus à traverser la grille...~ 
+@2=~Fidèles du dieu fou, je suis Systéra la grande prêtresse de Bhaal. Vous ne sortirez pas d'ici vivant!~ 
+@3=~Il y a méprise, je suis juste coincé dans votre temple. Massena m'a dit que je devais trouver le crâne de Kept pour en sortir.~ 
+@4=~Hey doucement, je ne suis pas un fidèle de Cyric mais un enfant de Bhaal.~ 
+@5=~Donnez moi le crâne de Kept.~ 
+@6=~Massena aurait dû tenir sa langue. Quand à la vôtre, vous n'en aurai bientôt plus besoin.~ 
+@7=~Bien essayé je dois dire. Mais ma vision était claire et il n'y a pas de ressemblance possible. L'élu va venir et Cyric, ton maître, sera vaincu!~
+//@7=~Cyric croit pouvoir me tromper avec ces douces parôles. mais je sais reconnaître les fidèles de mon maître.~ 
+@8=~Croyez_vous vraiment être capable de me le prendre?~ 
+@9=~J'ai préparé spécialement ce temple car je savais que nous serions trahis. Maintenant il est temps de terminer ce que j'ai commencé.~ 
+@10=~Personne ne troublera le repos de mon maître!~ 
+@11=~Nous ne sommes pas au service de Cyric et nous désirons simplement pouvoir sortir du temple.~
+
+// Pendant le combat
+@100=~Vous ne m'échapperez pas!~
+@101=~Vous ne vous cacherez pas longtemps!~
+
+
+
+// Annonce enfant de Bhaal
+@200=~Histoire du temple de Bhaal
+
+Systéra savait qu'ils seraient attaqués par les fidèles de Cyric et elle a préparé le temple pour les recevoir dans l'attendre de l'arrivée de l'élu, l'enfant de Bhaal. Visiblement, je ne correspond pas à sa vision.
+
+D'après elle, Bhaal ne serait pas mort mais en sommeil dans le temple!~
+
+// info simple
+@201=~Histoire du temple de Bhaal
+
+Systéra, la gardienne du temple, savait qu'ils seraient attaqués par les fidèles de Cyric et elle avait préparé le temple pour les recevoir. 
+
+D'après elle, Bhaal ne serait pas mort mais en sommeil dans le temple!~ 

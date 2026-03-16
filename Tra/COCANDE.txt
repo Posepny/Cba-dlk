@@ -1,0 +1,32 @@
+[Candelas]Protecteur, je tenais à vous remercier personnellement d'avoir ouvert la porte du temple.
+
+	[PC]Qui êtes-vous?
+
+		[Candelas]Je suis Candelas, humble serviteur du dieu des dieux, Cyric.
+
+	[PC]Je n'ai rien fait, la porte s'est ouverte toute seule.
+
+		[Candelas]J'aurai aimé voir celà de mes yeux.
+
+[Candelas]A la mort de Bhaal, beaucoup de ses serviteurs se sont ralliés à Cyric et nous avons appris l'existance de ce temple. Ekilis avait pour mission de le détruire.
+[Candelas]=Grâce à sa stupidité, le temple s'est trouvé scellé pendant de nombreuses années dans l'attente qu'un enfant de Bhaal se présente à sa porte.  
+[Candelas]=J'allais utiliser Sarevok lorsque vous l'avez tué. Imaginez ma déception quand j'ai appris sa mort... 
+[Candelas]=J'ai supposé que vous êtiez aussi un enfant de Bhaal. Pour cela, il m'a suffit de le vérifier en me servant de Barni pour vous attirer ici et je ne suis pas déçu du résultat. 
+[Candelas]=Voilà Protecteur, je vous ai compté mon histoire. A votre tour, parlez moi de ce temple.
+
+	[PC](Vous accédez à la demande de Candelas)
+
+		[Candelas]Excellent, il me tarde d'y pénétrer. Il me reste juste à me débarrasser de vous maintenant.
+
+			[PC]Je tenais à vous rendre la pareille. Finis de jouer! A l'attaque!
+			[PC]Cyric est vraiment entouré de crétins. Il est temps de faire le ménage!
+			[PC]Je vous remercie de m'avoir conduit ici. Mais j'ai autre idée en tête. Vous allez goûter au CHAMPION DE BHAAL!
+			[PC](ne rien répondre et passer à l'attaque)
+
+	[PC]Je vois, vous avez peur d'être enfermé à votre tour et vous avez bien raison. Ce temple est un piège mortel pour les fidèles de Cyric. (air moqueur)
+		
+		[Candelas]Comme il vous plaira. Je le découvrirai par moi même. Finissons en!
+
+	[PC]Cyric est vraiment entouré de crétins. Il est urgent de faire le ménage!
+	[PC]Je vous remercie de m'avoir conduit ici. Mais j'ai autre idée en tête. Vous allez goûter au CHAMPION DE BHAAL!
+	[PC](ne rien répondre et passer à l'attaque)
