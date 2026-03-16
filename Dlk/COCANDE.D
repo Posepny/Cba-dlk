@@ -1,110 +1,110 @@
-BEGIN ~COCANDE~
+BEGIN ~COCANDE~ 
 
-IF ~Global("candelas_init","COM026",1)
-    OR(2)
-     Global("ekilis_mort","Global",1)
-     Global("ekilis_alliance","Global",0)~ THEN BEGIN 1
+IF ~Global("candelas_init","COM026",1) 
+    OR(2) 
+     Global("ekilis_mort","Global",1) 
+     Global("ekilis_alliance","Global",0)~ THEN BEGIN 1 
 
-  SAY   @1 /*  ~Protecteur, je tenais à vous remercier personnellement d'avoir ouvert la porte du temple.~  */ 
-  IF ~~ THEN REPLY @2 /* ~Qui êtes-vous?~  */
-           GOTO  2
+  SAY @1 /* ~Protector, I wanted to thank you personally for opening the temple door.~ */ 
+  IF ~~ THEN REPLY @2 /* ~Who are you?~ */ 
+           GOTO 2 
 
-  IF ~~ THEN REPLY @3 /* ~Je n'ai rien fait, la porte s'est ouverte toute seule.~  */
-           GOTO  3
+  IF ~~ THEN REPLY @3 /* ~I didn't do anything, the door opened by itself.~ */ 
+           GOTO 3 
 
-END
+END 
 
-IF ~~ THEN BEGIN 2
+IF ~~ THEN BEGIN 2 
 
-  SAY   @4 /*  ~Je suis Candelas, humble serviteur du dieu des dieux, Cyric.~  */ 
-  IF ~~ THEN GOTO 4
+  SAY @4 /* ~I am Candelas, humble servant of the god of gods, Cyric.~ */ 
+  IF ~~ THEN GOTO 4 
 
-END
+END IF 
 
-IF ~~ THEN BEGIN 3
+~~ THEN BEGIN 3 
 
-  SAY   @5 /*  ~J'aurai aimé voir celà de mes yeux.~  */ 
-  IF ~~ THEN GOTO 4
+  SAY @5 /* ~I wish I could have seen this with my own eyes.~ */ 
+  IF ~~ THEN GOTO 4 
 
-END
+END 
 
-IF ~~ THEN BEGIN 4
+IF ~~ THEN BEGIN 4 
 
-  SAY   @6=@7=@8=@9=@10 /*  ~A la mort de Bhaal, beaucoup de ses serviteurs se sont ralliés à Cyric et nous avons appris l'existance de ce temple. Ekilis avait pour mission de le détruire.~ ~Grâce à sa stupidité, le temple s'est trouvé scellé pendant de nombreuses années dans l'attente qu'un enfant de Bhaal se présente à sa porte.~ ~J'allais utiliser Sarevok lorsque vous l'avez tué. Imaginez ma déception quand j'ai appris sa mort...~ ~J'ai supposé que vous êtiez aussi un enfant de Bhaal. Pour cela, il m'a suffit de le vérifier en me servant de Barni pour vous attirer ici et je ne suis pas déçu du résultat.~ ~Voilà Protecteur, je vous ai compté mon histoire. A votre tour, parlez moi de ce temple.~  */ 
-  IF ~~ THEN REPLY @11 /* ~(Vous accédez à la demande de Candelas)~  */
-         DO ~SetGlobal("candelas_init","COM026",2)~
-         GOTO  5
+  SAY @6=@7=@8=@9=@10 /* ~Upon Bhaal's death, many of his servants rallied to Cyric, and we learned of the existence of this temple. Ekilis's mission was to destroy it.~ ~Thanks to his stupidity, the temple remained sealed for many years, waiting for a child of Bhaal to appear at its door.~ ~I was about to use Sarevok when you killed him. Imagine my disappointment when I learned of his death...~ ~I assumed you were also a child of Bhaal. To confirm this, I simply used Barni to lure you here, and I am not disappointed with the result.~ ~There, Protector, I have told you my story. Now it's your turn. Tell me about this temple.~ */ 
+  IF ~~ THEN REPLY @11 /* ~(You grant Candelas' request)~ */ 
+         DO ~SetGlobal("candelas_init","COM026",2)~ 
+         GOTO 5 
 
-  IF ~~ THEN REPLY @12 /* ~Je vois, vous avez peur d'être enfermé à votre tour et vous avez bien raison. Ce temple est un piège mortel pour les fidèles de Cyric. (air moqueur)~  */
-         DO ~SetGlobal("candelas_init","COM026",2)~
-         GOTO  6
+  IF ~~ THEN REPLY @12 /* ~I see, you're afraid of being locked up yourself, and you're quite right. This temple is a death trap for Cyric's followers. (mocking tone)~ */ 
+         DO ~SetGlobal("candelas_init","COM026",2)~ 
+         GOTO 6 
 
-  IF ~~ THEN REPLY @13 /* ~Cyric est vraiment entouré de crétins. Il est urgent de faire le ménage!~  */
-          DO ~SetGlobal("candelas_init","COM026",2)~
-		 EXIT
+  IF ~~ THEN REPLY @13 /* ~Cyric is truly surrounded by idiots. It's urgent to clean house!~ */ 
+          DO ~SetGlobal("candelas_init","COM026",2)~ 
+		 EXIT 
 
-  IF ~Global("Champion_bhaal","GLOBAL",1)~ THEN REPLY @14 /* ~Je vous remercie de m'avoir conduit ici. Mais j'ai autre idée en tête. Vous allez goûter au CHAMPION DE BHAAL!~  */
-          DO ~SetGlobal("candelas_init","COM026",2)~
-		 EXIT
+  IF ~Global("Champion_bhaal","GLOBAL",1)~ THEN REPLY @14 /* ~Thank you for bringing me here. But I have another idea in mind. You're going to taste the CHAMPION OF BHAAL!~ */ 
+          DO ~SetGlobal("candelas_init","COM026",2)~ 
+		 EXIT 
 
-  IF ~~ THEN REPLY @15 /* ~(ne rien répondre et passer à l'attaque)~  */
-          DO ~SetGlobal("candelas_init","COM026",2)~
-		 EXIT
+  IF ~~ THEN REPLY @15 /* ~(don't reply and go on the attack)~ */ 
+          DO ~SetGlobal("candelas_init","COM026",2)~ 
+		 EXIT 
 
-END
+END 
 
-IF ~~ THEN BEGIN 5
+IF ~~ THEN BEGIN 5 
+ 
+  SAY @16 /* ~Excellent, I can't wait to get in. Now I just have to get rid of you.~ */
+  IF ~~ THEN REPLY @17 /* ~I wanted to return the favor. No more playing around! Let's attack!~ */ 
+          DO ~SetGlobal("candelas_init","COM026",2)~ 
+		 EXIT 
 
-  SAY   @16 /*  ~Excellent, il me tarde d'y pénétrer. Il me reste juste à me débarrasser de vous maintenant.~  */ 
-  IF ~~ THEN REPLY @17 /* ~Je tenais à vous rendre la pareille. Finis de jouer! A l'attaque!~  */
-          DO ~SetGlobal("candelas_init","COM026",2)~
-		 EXIT
+  IF ~~ THEN REPLY @18 /* ~Cyric is really surrounded by idiots. It's time to clean house!~ */ 
+          DO ~SetGlobal("candelas_init","COM026",2)~ 
+		 EXIT 
 
-  IF ~~ THEN REPLY @18 /* ~Cyric est vraiment entouré de crétins. Il est temps de faire le ménage!~  */
-          DO ~SetGlobal("candelas_init","COM026",2)~
-		 EXIT
+  IF ~~ THEN REPLY @19 /* ~Thank you for leading me here. But I have another idea in mind. You're about to get a taste of BHAAL'S CHAMPION!~ */ 
+          DO ~SetGlobal("candelas_init","COM026",2)~ 
+		 EXIT 
 
-  IF ~~ THEN REPLY @19 /* ~Je vous remercie de m'avoir conduit ici. Mais j'ai autre idée en tête. Vous allez goûter au CHAMPION DE BHAAL!~  */
-          DO ~SetGlobal("candelas_init","COM026",2)~
-		 EXIT
+  IF ~~ THEN REPLY @20 /* ~(don't reply and go on the attack)~ */ 
+          DO ~SetGlobal("candelas_init","COM026",2)~ 
+		 EXIT 
 
-  IF ~~ THEN REPLY @20 /* ~(ne rien répondre et passer à l'attaque)~  */
-          DO ~SetGlobal("candelas_init","COM026",2)~
-		 EXIT
+END 
 
-END
-
-IF ~~ THEN BEGIN 6
-  SAY   @21 /*  ~Comme il vous plaira. Je le découvrirai par moi même. Finissons en!~  */ 
+IF ~~ THEN BEGIN 6 
+  SAY @21 /* ~As you please. I'll find out for myself. Let's finish this!~ */ 
   IF ~~ THEN 
-          DO ~SetGlobal("candelas_init","COM026",2)~
-          EXIT
+          DO ~SetGlobal("candelas_init","COM026",2)~ 
+          EXIT 
 
-END
+END 
 
-CHAIN IF ~Global("ekilis_alliance","GLOBAL",1)~ THEN ~COCANDE~ 10
-  @100 /*  ~Vous voilà donc enfin de retour et avec Ekilis que nous pensions perdu.~  */ 
-  == ~COEKILIS~ IF ~~ THEN @101 /* ~J'aurais dû me douter que vous profiteriez de l'occasion...~ */
-END
-IF ~~ THEN REPLY @102 /* ~On peut savoir qui vous êtes?~ */
-   GOTO  11
+CHAIN â€‹â€‹IF ~Global("ekilis_alliance","GLOBAL",1)~ THEN ~COCANDE~ 10 
+  @100 /* ~So here you are, finally back with Ekilis, whom we thought was lost.~ */ 
+  == ~COEKILIS~ IF ~~ THEN @101 /* ~I should have known you'd take advantage of the situation...~ */ 
+END 
+IF ~~ THEN REPLY @102 /* ~May we know who you are?~ */ 
+   GOTO 11 
    
   
-CHAIN IF ~~ THEN ~COCANDE~ 11
-  @4=@6=@7=@8=@9=@10 /*  ~A la mort de Bhaal, beaucoup de ses serviteurs se sont ralliés à Cyric et nous avons appris l'existance de ce temple. Ekilis avait pour mission de le détruire.~ ~Grâce à sa stupidité, le temple s'est trouvé scellé pendant de nombreuses années dans l'attente qu'un enfant de Bhaal se présente à sa porte.~ ~J'allais utiliser Sarevok lorsque vous l'avez tué. Imaginez ma déception quand j'ai appris sa mort...~ ~J'ai supposé que vous êtiez aussi un enfant de Bhaal. Pour cela, il m'a suffit de le vérifier en me servant de Barni pour vous attirer ici et je ne suis pas déçu du résultat.~ ~Voilà Protecteur, je vous ai compté mon histoire. A votre tour, parlez moi de ce temple.~  */ 
-  == ~COEKILIS~ IF ~~ THEN @103 /* ~Je ne suis pas stupide! Vous devriez faire attention à vos parôles. Je suis Ekilis le grand inquisiteur de Cyric, vous devez me traiter avec respect!~ */
-  == ~COCANDE~ IF ~~ THEN @104 /* ~Les choses ont bien changé en votre absence, mon cher Ekilis. Nous réglerons ce point après nous être débarrassé de l'enfant de Bhaal.~ */
-  == ~COEKILIS~ IF ~~ THEN @105 /* ~De l'enfant de Bhaal? La rumeur était donc vrai. Nous offrirons son coeur à la gloire de Cyric!~ */
-END
-  IF ~~ THEN REPLY @13 /* ~Cyric est vraiment entouré de crétins. Il est urgent de faire le ménage!~  */
-     DO ~SetGlobal("candelas_init","COM026",2)~
+CHAIN â€‹â€‹IF ~~ THEN ~COCANDE~ 11 
+  @4=@6=@7=@8=@9=@10 /* ~After Bhaal's death, many of his servants rallied to Cyric, and we learned of the existence of this temple. Ekilis's mission was to destroy it. ~ ~Thanks to his stupidity, the temple remained sealed for many years, waiting for a child of Bhaal to appear at its gate.~ ~I was about to use Sarevok when you killed him. Imagine my disappointment when I learned of his death...~ ~I assumed you were also a child of Bhaal. To confirm this, I simply used Barni to lure you here, and I am not disappointed with the result.~ ~There you have it, Protector, I have told you my story. Now it's your turn. Tell me about this temple.~ */ 
+  == ~COEKILIS~ IF ~~ THEN @103 /* ~I am not stupid! You should watch your words. I am Ekilis, the Grand Inquisitor of Cyric. You must treat me with respect!~ */ 
+  == ~COCANDE~ IF ~~ THEN @104 /* ~Things have changed a lot in your absence, my dear Ekilis. We will settle this matter after we get rid of Bhaal's child.~ */ 
+  == ~COEKILIS~ IF ~~ THEN @105 /* ~Bhaal's child? So the rumor was true. We will offer his heart to the glory of Cyric!~ */ 
+END 
+  IF ~~ THEN REPLY @13 /* ~Cyric is really surrounded by idiots. It's urgent to clean house!~ */
+     DO ~SetGlobal("candelas_init","COM026",2)~ 
 		 EXIT
 
-  IF ~Global("Champion_bhaal","GLOBAL",1) ~ THEN REPLY @14 /* ~Je vous remercie de m'avoir conduit ici. Mais j'ai autre idée en tête. Vous allez goûter au CHAMPION DE BHAAL!~  */
-     DO ~SetGlobal("candelas_init","COM026",2)~
-		 EXIT
+  IF ~Global("Champion_bhaal","GLOBAL",1) ~ THEN REPLY @14 /* ~Thank you for bringing me here. But I have another idea in mind. You're going to taste the CHAMPION OF BHAAL!~ */ 
+     DO ~SetGlobal("candelas_init","COM026",2)~ 
+		 EXIT 
 
-  IF ~~ THEN REPLY @15 /* ~(ne rien répondre et passer à l'attaque)~  */
-     DO ~SetGlobal("candelas_init","COM026",2)~
+  IF ~~ THEN REPLY @15 /* ~(don't reply and go on the attack)~ */ 
+     DO ~SetGlobal("candelas_init","COM026",2)~ 
 		 EXIT
 		 
