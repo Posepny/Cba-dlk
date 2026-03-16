@@ -38,7 +38,7 @@ IF ~Global("Corde_lancee2","GLOBAL",1)~ THEN BEGIN 2
     EXIT
 
   IF ~~ THEN 
-    REPLY @8 /* ~Récuperer la corde.~ */
+    REPLY @8 /* ~RÃ©cuperer la corde.~ */
     DO ~SetGlobal("Corde_lancee2","GLOBAL",0)
         ActionOverride(Myself,CreateItem("MISCP31",0,0,0))
         AmbientActivate("TR2C",FALSE)~
@@ -88,15 +88,15 @@ IF ~Global("corde_msg","COM019",1)
     EXIT
 END
 
-IF ~Global("corde_msg","COM019",1)
-    Global("Corde_lancee2","GLOBAL",1)~ THEN BEGIN 3
-
-  SAY @6 /* ~Vous voulez descendre?~ */
-
-  IF ~~ THEN 
-    REPLY @4 /* ~Oui~ */
-    DO ~SetGlobal("Corde_descendre2","COM019",1)
+IF ~Global("corde_msg","COM019",1) 
         ActionOverride(LastTalkedToBy(Myself),LeaveAreaLUA("COM020","",[468.390],10))~
+    REPLY @4 /* ~Yes~ */
+  IF ~~ THEN
+  SAY @6 /* ~Do you want to get off?~ */
+    Global("Rope_launched2","GLOBAL",1)~ THEN BEGIN 3
+
+
+    DO ~SetGlobal("Rope_go down2","COM019",1)
     EXIT
 
  IF ~~ THEN 
