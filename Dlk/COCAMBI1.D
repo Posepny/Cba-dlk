@@ -15,15 +15,15 @@ END
 
 IF ~Global("Quete_demon_coeur","COM018",0)~ THEN BEGIN 1
 
-  SAY @1=@3 /* ~Bienvenu à toi, Sang de Bhaal.~ ~Cette porte est mienne. Je maîtrise sa fermeture comme son ouverture...un droit de passage est de mise pour quitter ces lieux.~  */
+  SAY @1=@3 /* ~Bienvenu Ã  toi, Sang de Bhaal.~ ~Cette porte est mienne. Je maÃ®trise sa fermeture comme son ouverture...un droit de passage est de mise pour quitter ces lieux.~  */
   IF ~~ THEN 
     DO ~SetGlobal("Quete_demon_coeur","COM018",1)~
-    REPLY @4 /* ~Tu as toute mon attention. Je t'écoute.~ */
+    REPLY @4 /* ~Tu as toute mon attention. Je t'Ã©coute.~ */
     GOTO 2
 
   IF ~Global("Quete_cambion_epee","COM018",1)
       Exists("COTANAR1")~ THEN 
-    REPLY @5 /* ~Un démon désire ton épée. Donnes la moi.~ */
+    REPLY @5 /* ~Un dÃ©mon dÃ©sire ton Ã©pÃ©e. Donnes la moi.~ */
     DO ~SetGlobal("cambion_donne_epee","COM018",1)~
     GOTO 4
 
@@ -31,18 +31,18 @@ END
 
 IF ~~ THEN BEGIN 2
 
-  SAY @6 /* ~Reviens sur tes pas. Tu trouveras dans un coin puant un démon. Apportes moi son coeur et je te laisserai passer.~ */
+  SAY @6 /* ~Reviens sur tes pas. Tu trouveras dans un coin puant un dÃ©mon. Apportes moi son coeur et je te laisserai passer.~ */
   IF ~~ THEN    
-    REPLY @7 /* ~Je vais chercher ce que tu demandes. Tu as intérêt à tenir parôle.~ */
+    REPLY @7 /* ~Je vais chercher ce que tu demandes. Tu as intÃ©rÃªt Ã  tenir parÃ´le.~ */
     DO ~SetGlobal("Quete_demon_coeur_OK","COM018",1)~
     EXIT
 
     IF ~HasItem("MISC6M",LastTalkedToBy(Myself))~ THEN   
-      REPLY @8 /* ~Est-ce celà que tu cherches (vous lui montrez le coeur du démon).~ */
+      REPLY @8 /* ~Est-ce celÃ  que tu cherches (vous lui montrez le coeur du dÃ©mon).~ */
       GOTO 5
    
     IF ~~ THEN 
-      REPLY @9 /* ~Je n'ai pas de temps à perdre!~ */
+      REPLY @9 /* ~Je n'ai pas de temps Ã  perdre!~ */
       GOTO 3
 
 END
@@ -58,17 +58,17 @@ END
 
 IF ~~ THEN BEGIN 4
 
-  SAY @11=@12 /* ~Dans ce cas, viens me la prendre. Mais ce passage sera définitivement fermé pour toi... ~Le plus simple serait de me rapporter le coeur de ce démon afin de d'acquitter du droit de passage.~ */
+  SAY @11=@12 /* ~Dans ce cas, viens me la prendre. Mais ce passage sera dÃ©finitivement fermÃ© pour toi... ~Le plus simple serait de me rapporter le coeur de ce dÃ©mon afin de d'acquitter du droit de passage.~ */
   IF ~~ THEN 
     DO ~SetGlobal("Quete_demon_coeur_OK","COM018",1)~
     EXIT
 END
 
-// quête coeur du démon réussie
+// quÃªte coeur du dÃ©mon rÃ©ussie
 IF ~Global("Quete_demon_coeur","COM018",1)
     HasItem("MISC6M",LastTalkedToBy(Myself))~ THEN BEGIN 5
 
-  SAY @13 /* ~Magnifique, le coeur du démon! Grâce à toi, sang de Bhaal, mon épée va gagner en puissance! ~ */
+  SAY @13 /* ~Magnifique, le coeur du dÃ©mon! GrÃ¢ce Ã  toi, sang de Bhaal, mon Ã©pÃ©e va gagner en puissance! ~ */
   IF ~~ THEN 
     DO ~SetGlobal("Quete_demon_coeur","COM018",2)~    
     GOTO 6
@@ -90,13 +90,12 @@ IF ~Global("Quete_demon_coeur","COM018",1)
   IF ~Global("Quete_cambion_epee","COM018",1)
       Global("cambion_donne_epee","COM018",0)
 	  Exists("COTANAR1")~ THEN 
-    REPLY @5 /* ~Un démon désire ton épée. Donnes la moi.~ */
+    REPLY @5 /* ~Un dÃ©mon dÃ©sire ton Ã©pÃ©e. Donnes la moi.~ */
     DO ~SetGlobal("cambion_donne_epee","COM018",1)~
     GOTO 4
 
   IF ~~ THEN 
-    REPLY @2 /* ~(ne rien répondre)~ */
+    REPLY @2 /* ~(ne rien rÃ©pondre)~ */
     EXIT
 
 END
-
