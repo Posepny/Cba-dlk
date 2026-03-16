@@ -1,74 +1,73 @@
-BEGIN ~COISLEN~
+BEGIN ~COISLEN~ 
 
-// 2nd rencontre ********************************************************************************************************************************************************
-IF ~Global("COM020_Duel_combat","COM020",1)~ THEN BEGIN 1
+// 2nd encounter ********************************************************************************************************************************************************** 
+IF ~Global("COM020_Duel_combat","COM020",1)~ THEN BEGIN 1 
 
-  SAY   @1=@2 /*  ~Passons aux choses sérieuses maintenant.~ ~Voyons voir si entre 4 yeux vous ne pissez pas dessus! (sourire dément)~  */ 
-  IF ~~ THEN REPLY @3 /* ~On pourrait peut-être arrêter un instant et discuter un peu?~  */
-       GOTO  2
+  SAY @1=@2 /* ~Let's get down to business now.~ ~Let's see if you don't piss on each other between the two of you! (mad smile)~ */ 
+  IF ~~ THEN REPLY @3 /* ~Perhaps we could stop for a moment and chat a little?~ */ 
+       GOTO 2 
 
-  IF ~~ THEN REPLY @4 /* ~(ne rien répondre)~  */
-     DO ~SetGlobal("COM020_Duel_combat","COM020",3)~
-		 EXIT
+  IF ~~ THEN REPLY @4 /* ~(no reply)~ */ 
+     DO ~SetGlobal("COM020_Duel_combat","COM020",3)~ 
+		 EXIT 
 
-END
+END 
 
 
-IF ~~ THEN BEGIN 2
+IF ~~ THEN BEGIN 2 
 
-  SAY   @5 /*  ~On discutera quand vous serez mort et que je mangerai votre coeur.~  */ 
+  SAY @5 /* ~We'll talk when you're dead and I've eaten your heart.~ */ 
   IF ~~ THEN 
-      DO ~SetGlobal("COM020_Duel_combat","COM020",3)~
-      EXIT
+      DO ~SetGlobal("COM020_Duel_combat","COM020",3)~ 
+      EXIT 
 
-END
-
-
-IF ~Global("COM020_Duel_combat","COM020",2)~ THEN BEGIN 3
-
-  SAY   @6=@7 /*  ~Je vois que je suis attendu. Intéressant...~ ~ Glabuk ramènes ton cul ici!~  */ 
-  IF ~~ THEN REPLY @8 /* ~On pourrait peut-être arrêter un instant et discuter un peu?~  */
-     DO ~SetGlobal("Glabuk_apparition","GLOBAL",1)~
-     GOTO  2
-
-  IF ~~ THEN REPLY @9 /* ~(ne rien répondre)~  */
-     DO ~SetGlobal("COM020_Duel_combat","GLOBAL",3)
-         SetGlobal("Glabuk_apparition","GLOBAL",1)~
-		 EXIT
-
-END
+END 
 
 
-// groupe dans l'antre de Islendra ***************************************************************************************************************************************
-IF ~Global("COM020_PNJ_capture","GLOBAL",0)
-    Global("islendra_dial_antre","GLOBAL",0)~ THEN BEGIN 3
+IF ~Global("COM020_Duel_combat","COM020",2)~ THEN BEGIN 3 
 
-  SAY   @11 /*  ~Vous êtes encore là! A chaque fois c'est la même chose, ils ne comprennent que la mort.~  */ 
-  IF ~~ THEN REPLY @12 /* ~Comment ça?~  */
-     GOTO  4
+  SAY @6=@7 /* ~I see I'm expected. Interesting...~ ~ Glabuk, get your ass back here!~ */ 
+  IF ~~ THEN REPLY @8 /* ~Maybe we could stop for a moment and chat a bit?~ */ 
+     DO ~SetGlobal("Glabuk_apparition","GLOBAL",1)~ 
+     GOTO 2 
 
-  IF ~~ THEN REPLY @14 /* ~Qui êtes-vous?~  */
-     GOTO 5
-END
+  IF ~~ THEN REPLY @9 /* ~(don't reply)~ */ 
+     DO ~SetGlobal("COM020_Duel_combat","GLOBAL",3) 
+         SetGlobal("Glabuk_apparition","GLOBAL",1)~ 
+		 EXIT 
+
+END 
 
 
-IF ~~ THEN BEGIN 4
+// group in Islendra's lair ********************************************************************************************************************************************* 
+IF ~Global("COM020_PNJ_capture","GLOBAL",0) 
+    Global("islendra_dial_antre","GLOBAL",0)~ THEN BEGIN 3 
 
-  SAY   @13 /*  ~Vous pensiez être les premiers à prétendre au titre. Désolée de vous décevoir mais consolez-vous, vous allez les rejoindre sur le champ!~  */ 
+  SAY @11 /* ~You're still here! It's always the same thing, they only understand death.~ */ 
+  IF ~~ THEN REPLY @12 /* ~What do you mean?~ */ 
+     GOTO 4 
+
+  IF ~~ THEN REPLY @14 /* ~Who are you?~ */ 
+     GOTO 5 
+END 
+
+
+IF ~~ THEN BEGIN 4 
+
+  SAY @13 /* ~You thought you were the first to claim the title. Sorry to disappoint you, but take heart, you'll be joining them right away!~ */ 
+  IF ~~ THEN 
+     DO ~Enemy() 
+         SetGlobal("islendra_dial_antre","GLOBAL",1)~ 
+     // Journal of intrigue about Bhaal's champion, he's not the only one 
+     EXIT 
+END 
+
+
+IF ~~ THEN BEGIN 5 
+
+  SAY @15=@16 /* ~Who am I? Ah ah~ ~I am Islendra,The Great Huntress of Bhaal, and this is MY territory. You have been warned!~ */ 
   IF ~~ THEN 
      DO ~Enemy()
-         SetGlobal("islendra_dial_antre","GLOBAL",1)~
-     // journal intrigue sur le champion de Bhaal, il n'est pas le seul
+         SetGlobal("islendra_dial_antre","GLOBAL",1)~ 
      EXIT
 END
-
-
-IF ~~ THEN BEGIN 5
-
-  SAY   @15=@16 /*  ~Qui je suis? Ah ah~ ~Je suis Islendra, la grande Chasseresse de Bhaal et ceci est MON territoire. Vous êtiez prévenus!~  */ 
-  IF ~~ THEN 
-     DO ~Enemy()
-         SetGlobal("islendra_dial_antre","GLOBAL",1)~
-     EXIT
-END
-
