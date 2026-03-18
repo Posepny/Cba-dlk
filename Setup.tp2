@@ -1,98 +1,104 @@
-BACKUP \~CDB/backup\~ AUTHOR 
-\~\"https://www.baldursgateworld.fr/lacouronne/le-champion-de-bhaal/\"\~ 
-VERSION \~BGT v1.1 - 2019\~ 
+BACKUP ~CDB/backup~ 
+AUTHOR ~"https://www.baldursgateworld.fr/lacouronne/le-champion-de-bhaal/"~ 
+VERSION ~BGT v1.1 - 2019~ 
 
-LANGUAGE \~French\~ \~french\~ \~CDB\\LANGUAGE\\French\\Setup.tra\~ 
 
-BEGIN \@4 
+LANGUAGE ~French~ 
+~french~ 
+~CDB\LANGUAGE\French\Setup.tra~ 
 
-COMPILE \~CDB\\CRE\\BCS\\COEKILI2.baf\~ \~override\~ USING 
-\~CDB\\DLG\\COEKILIS.tra\~ // combat management COMPILE 
-\~CDB\\CRE\\BCS\\COEKILI3.baf\~ \~override\~ USING 
-\~CDB\\DLG\\COEKILIS.tra\~ // Ekilis ally of the 
+BEGIN @4 
 
-COMPILE group \~CDB\\AREA\\BCS\\COT014TP.baf\~ \~override\~ // Activation TP 
-COM014 COMPILE \~CDB\\AREA\\BCS\\COT015TP.baf\~ \~override\~ // 
-Activation TP COM015 COMPILE \~CDB\\AREA\\BCS\\COT01515.baf\~ 
-\~override\~ COMPILE \~CDB\\AREA\\BCS\\COM015.baf\~ \~override\~ USING 
-\~CDB\\LANGUAGE\\FRENCH\\COM015.TRA\~ 
+COMPILE ~CDB\CRE\BCS\COEKILI2.baf~ ~override~ USING ~CDB\DLG\COEKILIS.tra~ // combat management 
+COMPILE ~CDB\CRE\BCS\COEKILI3.baf~ ~override~ USING ~CDB\DLG\COEKILIS.tra~ // Ekilis ally of the group 
 
-LOAD_TRA \~CDB\\LANGUAGE\\FRENCH\\OBJETS.TRA\~ // Message from Entar COPY 
-\~CDB\\ITM\\SCRP06.itm\~ \~override\~ SAY NAME2 \@5132 SAY DESC \@5133 
+COMPILE ~CDB\AREA\BCS\COT014TP.baf~ ~override~ // Activation TP COM014 
+COMPILE ~CDB\AREA\BCS\COT015TP.baf~ ~override~ // Activation TP COM015 
+COMPILE ~CDB\AREA\BCS\COT01515.baf~ ~override~ 
+COMPILE ~CDB\AREA\BCS\COM015.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM015.TRA~ 
 
-ADD_PROJECTILE \~CDB\\PRO\\COSKUF1.pro\~ \~Fire Skull\~ COPY 
-\~CDB\\PRO\\COSKUF1.pro\~ \~override\~ 
+LOAD_TRA ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~ 
+// Message from Entar 
+COPY ~CDB\ITM\SCRP06.itm~ ~override~ 
+SAY NAME2 @5132 
+SAY DESC @5133 
 
-// Fire Skull COPY \~CDB\\ITM\\MISCP57.itm\~ \~override\~ LPF 
-ALTER_SPELL_HEADER INT_VAR projectile = (IDS_OF_SYMBOL (projectl 
-COSKUF1) + 1) END WRITE_SHORT 0x09C \~%COSKUF1%\~ SAY NAME1 \@5114 SAY 
-NAME2 \@5114 SAY DESC \@5115 //SAY UNIDENTIFIED_DESC BUT_ONLY 
 
-COMPILE \~CDB\\CRE\\BCS\\COMASSE1.baf\~ \~override\~ USING 
-\~CDB\\DLG\\COMASSE4.tra\~ 
+ADD_PROJECTILE ~CDB\PRO\COSKUF1.pro~ ~Fire Skull~ 
+COPY ~CDB\PRO\COSKUF1.pro~ ~override~ 
 
-COPY \~CDB\\SPELL\\COM017TP.spl\~ \~override\~ // Teleport tests 
+// Fire Skull 
+COPY ~CDB\ITM\MISCP57.itm~ ~override~ 
+  LPF ALTER_SPELL_HEADER INT_VAR projectile = (IDS_OF_SYMBOL (projectl COSKUF1) + 1) END 
+  WRITE_SHORT 0x09C ~%COSKUF1%~ 
+  SAY NAME1 @5114 
+  SAY NAME2 @5114 
+  SAY DESC @5115 
+  //SAY UNIDENTIFIED_DESC 
+BUT_ONLY 
 
-EXTEND_TOP \~AR7216.bcs\~ \~CDB\\AREA\\BCS\\AR7216.baf\~ USING 
-\~CDB\\LANGUAGE\\FRENCH\\AR7216.TRA\~ // Inn Helm and the cape 
-COMPILE \~AR7217.bcs\~ \~CDB\\AREA\\BCS\\AR7217.baf\~ // Inn Helm 
-and cloak: double room EXTEND_TOP \~AR7218.bcs\~ 
-\~CDB\\AREA\\BCS\\AR7218.baf\~ USING 
-\~CDB\\LANGUAGE\\FRENCH\\AR0000.TRA\~ //Inn Helm and cloak: 
-Protector's room 
+COMPILE ~CDB\CRE\BCS\COMASSE1.baf~ ~override~ USING ~CDB\DLG\COMASSE4.tra~ 
 
-COMPILE \~CDB\\AREA\\BCS\\COM026.baf\~ \~override\~ USING 
-\~CDB\\LANGUAGE\\FRENCH\\COM026.TRA\~ COMPILE 
-\~CDB\\AREA\\BCS\\COM027.baf\~ \~override\~ USING 
-\~CDB\\LANGUAGE\\FRENCH\\COM027.TRA\~ COMPILE \~CDB\\DLG\\COBARNI.d\~ 
-\~override\~ USING \~CDB\\DLG\\COBARNI.tra\~ 
 
-// Pnj BG1 COPY_EXISTING \~EDWINP.dlg\~ \~override\~ DECOMPILE_AND_PATCH 
-BEGIN REPLACE_TEXTUALLY \~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2)\~ 
-\~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2) 
-Global(\"Protecteur_baldur\",\"GLOBAL\",0)\~ REPLACE_TEXTUALLY 
-\~Global(\"ENDOFBG1\",\"GLOBAL\",2)\~ 
-\~Global(\"ENDOFBG1\",\"GLOBAL\",2)
-Global(\"Protector_baldur\",\"GLOBAL\",0)\~ END BUT_ONLY_IF_IT_CHANGES 
-COMPILE \~CDB\\DLG\\PNJ_heros\\EDWINP.d\~ \~override\~ USING 
-\~CDB\\DLG\\PNJ_heros\\EDWINP.tra\~ 
+COPY ~CDB\SPELL\COM017TP.spl~ ~override~ // Teleport trials 
 
-COPY_EXISTING \~AJANTP.dlg\~ \~override\~ DECOMPILE_AND_PATCH BEGIN 
-REPLACE_TEXTUALLY \~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2)\~ 
-\~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2) 
-Global(\"Protector_baldur\",\"GLOBAL\",0)\~ END BUT_ONLY_IF_IT_CHANGES 
-COMPILE \~CDB\\DLG\\PNJ_heros\\AJANTP.d\~ \~override\~ USING 
-\~CDB\\DLG\\PNJ_heros\\AJANTP.tra\~ 
+EXTEND_TOP ~AR7216.bcs~ ~CDB\AREA\BCS\AR7216.baf~ USING ~CDB\LANGUAGE\FRENCH\AR7216.TRA~ // Inn Helm and the cape 
+COMPILE ~AR7217.bcs~ ~CDB\AREA\BCS\AR7217.baf~ // Helm and Cloak Inn: double room 
+EXTEND_TOP ~AR7218.bcs~ ~CDB\AREA\BCS\AR7218.baf~ USING ~CDB\LANGUAGE\FRENCH\AR0000.TRA~ //Helm and Cloak Inn: Protector's room 
 
-COPY_EXISTING \~SHARTP.dlg\~ \~override\~ DECOMPILE_AND_PATCH BEGIN 
-REPLACE_TEXTUALLY \~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2)\~ 
-\~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2) 
-Global(\"Protector_baldur\",\"GLOBAL\",0)\~ END BUT_ONLY_IF_IT_CHANGES 
-COMPILE \~CDB\\DLG\\PNJ_heros\\SHARTP.d\~ \~override\~ USING 
-\~CDB\\DLG\\PNJ_heros\\SHARTP.tra\~ 
+COMPILE ~CDB\AREA\BCS\COM026.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM026.TRA~ 
+COMPILE ~CDB\AREA\BCS\COM027.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM027.TRA~ 
+COMPILE ~CDB\DLG\COBARNI.d~ ~override~ USING ~CDB\DLG\COBARNI.tra~ 
 
-COPY_EXISTING \~CORANP.dlg\~ \~override\~ DECOMPILE_AND_PATCH BEGIN 
-REPLACE_TEXTUALLY \~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2)\~ 
-\~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2) 
-Global(\"Baldur_Protector\",\"GLOBAL\",0)\~ END BUT_ONLY_IF_IT_CHANGES 
-COMPILE \~CDB\\DLG\\PNJ_heros\\CORANP.d\~ \~override\~ USING 
-\~CDB\\DLG\\PNJ_heros\\CORANP.tra\~ 
 
-COPY_EXISTING \~YESLIP.dlg\~ \~override\~ DECOMPILE_AND_PATCH BEGIN 
-REPLACE_TEXTUALLY \~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2)\~ 
-\~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2) 
-Global(\"Protector_baldur\",\"GLOBAL\",0)\~ END BUT_ONLY_IF_IT_CHANGES 
-COMPILE \~CDB\\DLG\\PNJ_heros\\YESLIP.d\~ \~override\~ USING 
-\~CDB\\DLG\\PNJ_heros\\YESLIP.tra\~ 
 
-COPY_EXISTING \~IMOENP.dlg\~ \~override\~ DECOMPILE_AND_PATCH BEGIN 
-REPLACE_TEXTUALLY \~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2)\~ 
-\~GlobalLT(\"ENDOFBG1\",\"GLOBAL\",2) 
-Global(\"Protector_baldur\",\"GLOBAL\",0)\~ REPLACE_TEXTUALLY 
-\~NumberOfTimesTalkedTo(0)\~ \~NumberOfTimesTalkedTo(0) 
-Global(\"Protector_baldur\",\"GLOBAL\",0)\~ REPLACE_TEXTUALLY 
-\~True()\~ \~True() Global(\"Protector_baldur\",\"GLOBAL\",0)\~ END 
-BUT_ONLY_IF_IT_CHANGES COMPILE \~CDB\\DLG\\PNJ_heros\\IMOENP.d\~ 
-\~override\~ USING \~CDB\\DLG\\PNJ_heros\\IMOENP.tra\~ 
 
-COPY_EXISTING \~XANP.dlg\~ \~override\~ DECOMPILE_AND_PATCH BEGIN RE
+// NPC BG1 
+COPY_EXISTING ~EDWINP.dlg~ ~override~ 
+DECOMPILE_AND_PATCH BEGIN 
+REPLACE_TEXTUALLY ~GlobalLT("ENDOFBG1","GLOBAL",2)~ ~GlobalLT("ENDOFBG1","GLOBAL",2) Global("Protecteur_baldur","GLOBAL",0)~ 
+REPLACE_TEXTUALLY ~Global("ENDOFBG1","GLOBAL",2)~ ~Global("ENDOFBG1","GLOBAL",2) Global("Baldur_Protector","GLOBAL",0)~ 
+END 
+BUT_ONLY_IF_IT_CHANGES 
+COMPILE ~CDB\DLG\PNJ_heros\EDWINP.d~ ~override~ USING ~CDB\DLG\PNJ_heros\EDWINP.tra~ 
+
+COPY_EXISTING ~AJANTP.dlg~ ~override~ 
+DECOMPILE_AND_PATCH BEGIN
+REPLACE_TEXTUALLY ~GlobalLT("ENDOFBG1","GLOBAL",2)~ ~GlobalLT("ENDOFBG1","GLOBAL",2) Global("Protecteur_baldur","GLOBAL",0)~ 
+END 
+BUT_ONLY_IF_IT_CHANGES 
+COMPILE ~CDB\DLG\PNJ_heros\AJANTP.d~ ~override~ USING ~CDB\DLG\PNJ_heros\AJANTP.tra~ 
+
+COPY_EXISTING ~SHARTP.dlg~ ~override~ 
+DECOMPILE_AND_PATCH BEGIN 
+REPLACE_TEXTUALLY ~GlobalLT("ENDOFBG1","GLOBAL",2)~ ~GlobalLT("ENDOFBG1","GLOBAL",2) Global("Protecteur_baldur","GLOBAL",0)~ 
+END 
+BUT_ONLY_IF_IT_CHANGES 
+COMPILE ~CDB\DLG\PNJ_heros\SHARTP.d~ ~override~ USING ~CDB\DLG\PNJ_heros\SHARTP.tra~ 
+
+COPY_EXISTING ~CORANP.dlg~ ~override~ 
+DECOMPILE_AND_PATCH BEGIN 
+REPLACE_TEXTUALLY ~GlobalLT("ENDOFBG1","GLOBAL",2)~ ~GlobalLT("ENDOFBG1","GLOBAL",2) Global("Protecteur_baldur","GLOBAL",0)~ 
+END 
+BUT_ONLY_IF_IT_CHANGES 
+COMPILE ~CDB\DLG\PNJ_heros\CORANP.d~ ~override~ USING ~CDB\DLG\PNJ_heros\CORANP.tra~ 
+
+COPY_EXISTING ~YESLIP.dlg~ ~override~ 
+DECOMPILE_AND_PATCH BEGIN 
+REPLACE_TEXTUALLY roughly
+​
+​
+​ 
+
+COPY_EXISTING ~IMOENP.dlg~ ~override~ 
+DECOMPILE_AND_PATCH BEGIN 
+REPLACE_TEXTUALLY ~GlobalLT("ENDOFBG1","GLOBAL",2)~ ~GlobalLT("ENDOFBG1","GLOBAL",2) Global("Protecteur_baldur","GLOBAL",0)~ 
+REPLACE_TEXTUALLY ~NumberOfTimesTalkedTo(0)~ ~NumberOfTimesTalkedTo(0) Global("Protector_baldur","GLOBAL",0)~ 
+REPLACE_TEXTUALLY ~True()~ ~True() Global("Protector_baldur","GLOBAL",0)~ 
+END 
+BUT_ONLY_IF_IT_CHANGES 
+COMPILE ~CDB\DLG\PNJ_heros\IMOENP.d~ ~override~ USING ~CDB\DLG\PNJ_heros\IMOENP.tra~ 
+
+COPY_EXISTING ~XANP.dlg~ ~override~ 
+DECOMPILE_AND_PATCH BEGIN 
+RE
