@@ -1,0 +1,17 @@
+// Logique de fonctionnement
+// Ouverture du coffre: le PS s'ouvre + son clic
+// COT1501: Marche vers l'entrée: souffle + glisse
+// COT1510: fermeture porte
+// Délai: son clic, on peut ouvrir la porte à nouveau via l'ouverture du coffre
+// 2nd tête de Wyvern placée: piège souffle et porte stoppée
+
+IF
+  Opened([0])  
+  Global("COT01501","COM015",0) 
+THEN
+  RESPONSE #100
+  SetGlobal("COT01501","COM015",1)
+  OpenDoor("DOOR0001") 
+  PlaySound("EFF_M15")
+END
+

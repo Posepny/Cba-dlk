@@ -1,0 +1,40 @@
+// Le groupe a vu Cespenar et discuté avec le Meurtre: fin des épreuves de Bhaal
+IF
+ Global("CESPENAR_init","COM025",3)
+ Global("MEURTRE2_recomp_Bhaal","COM025",4)
+THEN
+ RESPONSE #100
+ SetGlobal("MEURTRE2_recomp_Bhaal","COM025",5)
+ SetGlobal("Bhaal_epreuves","GLOBAL",2)
+ 
+ // Retour à la carte Puit de Bhaal
+ Wait(5)
+ ForceSpellRES("COTPEND",PLAYER1) 
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER2) 
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER3) 
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER4) 
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER5) 
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER6)
+ PlaySound("CAS_P07")
+ Wait(1)
+ ActionOverride(PLAYER1,LeaveAreaLUA("COM017","",[3660.600],10)) 
+ ActionOverride(PLAYER2,LeaveAreaLUA("COM017","",[3630.590],10))
+ ActionOverride(PLAYER3,LeaveAreaLUA("COM017","",[3700.580],10))
+ ActionOverride(PLAYER4,LeaveAreaLUA("COM017","",[3630.590],10))
+ ActionOverride(PLAYER5,LeaveAreaLUA("COM017","",[3700.580],10)) 
+ ActionOverride(PLAYER6,LeaveAreaLUA("COM017","",[3650.550],10))
+
+  /*
+ ForceSpell(PLAYER1,TRIGGER_TELEPORT_END) 
+ ForceSpell(PLAYER2,TRIGGER_TELEPORT_END) 
+ ForceSpell(PLAYER3,TRIGGER_TELEPORT_END) 
+ ForceSpell(PLAYER4,TRIGGER_TELEPORT_END) 
+ ForceSpell(PLAYER5,TRIGGER_TELEPORT_END) 
+ ForceSpell(PLAYER6,TRIGGER_TELEPORT_END) 
+ */
+END

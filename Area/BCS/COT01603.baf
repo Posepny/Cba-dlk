@@ -1,0 +1,9 @@
+IF
+ Clicked([0])
+THEN
+  RESPONSE #100
+  DisplayString("Statue1",@3)
+END
+
+
+

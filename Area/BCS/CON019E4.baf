@@ -1,0 +1,9 @@
+// A chaque ouverture du container, on vérifie ce qu'il a au final dedans (via COM019)
+IF
+  Opened([0])
+  Global("effigie04","COM019",0)
+THEN
+  RESPONSE #100  
+  SetGlobal("effigie04","COM019",1)
+END
+

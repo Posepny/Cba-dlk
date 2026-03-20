@@ -1,0 +1,12 @@
+// Le container a été vidé: réactivation du contrôle
+IF 
+ Opened([PC])
+ Global("Niche_sanction3","Com021",2)
+ !Contains("Miscp47","Niche3")
+ !Contains("Miscp48","Niche3")
+ !Contains("Miscp49","Niche3")  
+THEN
+ Response #100
+ SetGlobal("Niche_sanction3","Com021",0)
+ //PlaySound("CAS_M02")
+END

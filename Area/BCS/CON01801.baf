@@ -1,0 +1,11 @@
+IF
+ Opened([0])
+ Global("GRILLE2","COM018",0)
+THEN
+ RESPONSE #100
+ SetGlobal("GRILLE2","COM018",1)
+ 
+ OpenDoor("GRILLE2")
+ PlaySound("AM0301B3")
+ SetGlobal("COM018_grille2","GLOBAL",1)
+END

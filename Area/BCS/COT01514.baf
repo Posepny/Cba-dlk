@@ -1,0 +1,17 @@
+IF
+  IsOverMe([ANYTHING])
+  Global("COT01514","GLOBAL",0)  
+  //Global("Crane_place","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("COT01514","GLOBAL",1)
+  ForceSpellPoint([3450.1920],WIZARD_HORROR)
+END
+
+IF
+ Global("COT01514","GLOBAL",1)
+THEN
+ RESPONSE #100
+ WAIT(100)
+ SetGlobal("COT01514","GLOBAL",0)
+END

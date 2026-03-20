@@ -1,0 +1,15 @@
+IF
+  //Entered([0]) 
+  IsOverMe([ANYTHING])
+  Global("COT01406","GLOBAL",0)  
+  //Global("Crane_place","GLOBAL",0)
+  Global("Ekilis_fin_stase","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("COT01406","GLOBAL",1)
+  SetGlobal("Ekilis_fin_stase","GLOBAL",1)
+  
+  ForceSpellPoint([3760.1296],WIZARD_TRUE_DISPEL_MAGIC)
+  ActionOverride("COEKILIS",DestroyItem("costase")) // Arrêt stase via perte objet
+  ActionOverride("COEKILIS", ChangeAIScript("COEKILI2",GENERAL))  
+END

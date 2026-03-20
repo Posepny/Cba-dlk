@@ -1,0 +1,266 @@
+IF
+ Global("com026_init","COM026",0)
+THEN
+ RESPONSE #100
+ SetGlobal("com026_init","COM026",1)
+  
+ CreateCreature("RAT",[255.275],6)   
+ CreateCreature("RAT",[540.213],6)  
+ CreateCreature("RAT",[700.300],6)  
+END
+
+
+// Quête barni: condamner la cave et reprise de la clé.
+IF
+ Global("Barni_quete","GLOBAL",5)  
+THEN
+ RESPONSE #100
+ SetGlobal("Barni_quete","GLOBAL",6)
+ CloseDoor("TRAPPE01")
+ Lock("TRAPPE01")
+END
+
+// Le groupe a débloqué la porte du temple et remonte à l'auberge: Candelas les attends dans la cave.
+IF
+ Global("candelas_init","COM026",0)
+ Global("Crane_place","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("candelas_init","COM026",1)
+ 
+ createcreature("COCANDE",[340.340],10)
+END
+
+// Fin du dialogue avec Candelas: combat
+IF
+ Global("candelas_init","COM026",2)
+THEN
+ RESPONSE #100
+ SetGlobal("candelas_init","COM026",3)
+ 
+ AddJournalEntry(@7,QUEST) 
+ ChangeEnemyAlly("COCANDE",ENEMY)
+ DisplayStringHead("COCANDE",@100)
+ 
+ ChangeEnemyAlly("COEKILIS",ENEMY)
+ DisplayStringHead("COEKILIS",@101)
+  
+ // Tueurs de Cyric
+ createcreature("COCYRv1",[277.232],15) 
+ createcreature("COCYRv1",[604.201],15)
+ createcreature("COCYRv1",[446.236],15)
+  
+ // Guerriers de Cyric
+ createcreature("COCYRG1",[260.146],15)
+ SmallWait(50)
+ createcreature("COCYRG1",[260.146],15)
+ smallWait(50)
+ createcreature("COCYRG1",[260.146],15)
+END
+
+// Quête terminée "Histoire du temple de Bhaal": prise en compte des infos trouvées
+// Cas 1: Rencontre Massena + discut Systera Systéra Elu + discut Candelas + Champion de Bhaal + présence Ekilis
+IF
+ !ActuallyIncombat()
+ Global("candelas_init","COM026",3) 
+ Global("Champion_bhaal","GLOBAL",1) 
+ Global("Fin_quete_hist_bhaal","COM026",0)
+ AreaCheckObject("COM026","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("Fin_quete_hist_bhaal","COM026",1)
+  
+ EraseJournalEntry(@1)
+ EraseJournalEntry(@2) 
+ EraseJournalEntry(@3)
+ EraseJournalEntry(@4) 
+ EraseJournalEntry(@5)
+ EraseJournalEntry(@6) 
+ EraseJournalEntry(@7) 
+ AddJournalEntry(@15,QUEST_DONE)
+ AddexperienceParty(2000)
+ 
+ // Karl démasqué 
+ EraseJournalEntry(@50)
+ EraseJournalEntry(@51)
+ EraseJournalEntry(@52)
+ EraseJournalEntry(@53)
+ EraseJournalEntry(@54)
+ AddJournalEntry(@55,QUEST_DONE)
+ AddexperienceParty(500)
+END
+
+// Cas 2: Rencontre Massena + discut Systera Systéra Elu + discut Candelas + pas Champion de Bhaal + présence Ekilis
+IF
+ !ActuallyIncombat()
+ Global("candelas_init","COM026",3) 
+ Global("Champion_bhaal","GLOBAL",0) 
+ Global("Fin_quete_hist_bhaal","COM026",0)
+ AreaCheckObject("COM026","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("Fin_quete_hist_bhaal","COM026",1)
+  
+ EraseJournalEntry(@1)
+ EraseJournalEntry(@2) 
+ EraseJournalEntry(@3)
+ EraseJournalEntry(@4) 
+ EraseJournalEntry(@5)
+ EraseJournalEntry(@6) 
+ EraseJournalEntry(@7) 
+ AddJournalEntry(@16,QUEST_DONE)
+ AddexperienceParty(1000)
+ 
+ // Karl démasqué 
+ EraseJournalEntry(@50)
+ EraseJournalEntry(@51)
+ EraseJournalEntry(@52)
+ EraseJournalEntry(@53)
+ EraseJournalEntry(@54)
+ AddJournalEntry(@55,QUEST_DONE)
+ AddexperienceParty(500)
+END
+
+
+// Cas 3: Rencontre Massena + discut Systera Systéra Elu + discut Candelas + Champion de Bhaal + absence Ekilis
+IF
+ !ActuallyIncombat()
+ Global("candelas_init","COM026",3) 
+ Global("Champion_bhaal","GLOBAL",1) 
+ Global("Fin_quete_hist_bhaal","COM026",0)
+ !AreaCheckObject("COM026","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("Fin_quete_hist_bhaal","COM026",1)
+  
+ EraseJournalEntry(@1)
+ EraseJournalEntry(@2) 
+ EraseJournalEntry(@3)
+ EraseJournalEntry(@4) 
+ EraseJournalEntry(@5)
+ EraseJournalEntry(@6) 
+ EraseJournalEntry(@7) 
+ AddJournalEntry(@17,QUEST_DONE)
+ AddexperienceParty(2000)
+ 
+ // Karl démasqué 
+ EraseJournalEntry(@50)
+ EraseJournalEntry(@51)
+ EraseJournalEntry(@52)
+ EraseJournalEntry(@53)
+ EraseJournalEntry(@54)
+ AddJournalEntry(@55,QUEST_DONE)
+ AddexperienceParty(500)
+END
+
+// Cas 4: Rencontre Massena + discut Systera Systéra Elu + discut Candelas + pas Champion de Bhaal + absence Ekilis
+IF
+ !ActuallyIncombat()
+ Global("candelas_init","COM026",3) 
+ Global("Champion_bhaal","GLOBAL",0) 
+ Global("Fin_quete_hist_bhaal","COM026",0)
+ !AreaCheckObject("COM026","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("Fin_quete_hist_bhaal","COM026",1)
+  
+ EraseJournalEntry(@1)
+ EraseJournalEntry(@2) 
+ EraseJournalEntry(@3)
+ EraseJournalEntry(@4) 
+ EraseJournalEntry(@5)
+ EraseJournalEntry(@6) 
+ EraseJournalEntry(@7) 
+ AddJournalEntry(@18,QUEST_DONE)
+ AddexperienceParty(1000)
+ 
+ // Karl démasqué 
+ EraseJournalEntry(@50)
+ EraseJournalEntry(@51)
+ EraseJournalEntry(@52)
+ EraseJournalEntry(@53)
+ EraseJournalEntry(@54)
+ AddJournalEntry(@55,QUEST_DONE)
+ AddexperienceParty(500)
+END
+
+
+
+// Ekilis devient l'allié du groupe: il sera dans chaque carte où le PNJ qu'il suit prend une sortie
+IF
+  Global("ekilis_alliance","GLOBAL",1)
+  !AreaCheckObject("COM026","COEKILIS")
+  !Dead("COEKILIS")  
+  AreaCheckObject("COM026",PLAYER1)
+  Global("ekilis_follow","GLOBAL",1)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER1)
+  wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM026","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM026",PLAYER2)
+  Global("ekilis_follow","GLOBAL",2)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER2)
+  wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM026","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM026",PLAYER3)
+  Global("ekilis_follow","GLOBAL",3)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER3)
+  wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM026","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM026",PLAYER4)
+  Global("ekilis_follow","GLOBAL",4)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER4)
+  wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM026","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM026",PLAYER5)
+  Global("ekilis_follow","GLOBAL",5)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER5)
+  Wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM026","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM026",PLAYER6)
+  Global("ekilis_follow","GLOBAL",6)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER6)
+  Wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END

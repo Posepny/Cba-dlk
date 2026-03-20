@@ -1,0 +1,11 @@
+// Mod le protecteur de Baldur: Présence d'Elminster
+IF 
+ Global("Protecteur_baldur","GLOBAL",1)
+ Global("Rencontre1_Elminster","AR7218",0)
+THEN
+ RESPONSE #100
+ SETGLOBAL("Rencontre1_Elminster","AR7218",1)
+ 
+ createcreature("elminp1",[349.317],2) 
+END
+

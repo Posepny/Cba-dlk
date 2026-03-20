@@ -1,0 +1,38 @@
+IF
+  //Entered([0]) 
+  IsOverMe([ANYTHING])
+  Global("COT01404","GLOBAL",0)  
+  //Global("Crane_place","GLOBAL",0)
+THEN
+  RESPONSE #100  
+  //Bruit grille
+  Playsound("AM0301B3")
+  
+  // Grille1
+  Createcreature("SKELET_A",[560.1520],15)
+  Createcreature("SKELET_B",[560.1520],15)
+  wAIT(2)
+  Createcreature("SKELET_C",[560.1520],15)
+  DisplayStringHead("SKELET_C",@8)
+  Createcreature("COSKEL01",[560.1520],15) 
+  
+  /*  gestion difficultée
+  // Grille2
+  Createcreature("SKELET_A",[470.1570],15)
+  Createcreature("SKELET_B",[470.1570],15)
+  DisplayStringHead("SKELET_B",@8)
+  wAIT(2)
+  Createcreature("SKELET_C",[470.1570],15)  
+  Createcreature("COSKEL01",[470.1570],15)
+  */
+  
+  SetGlobal("COT01404","GLOBAL",1)
+END
+
+IF
+ Global("COT01404","GLOBAL",1)
+THEN
+ RESPONSE #100
+ WAIT(300)
+ SetGlobal("COT01404","GLOBAL",0)
+END

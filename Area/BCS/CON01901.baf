@@ -1,0 +1,8 @@
+IF
+  Opened([0])
+  Global("Spectateur","COM019",0)
+THEN
+  RESPONSE #100  
+  SetGlobal("Spectateur","COM019",1)
+  Createcreature("COSPEC1",[825.825],10)  
+END

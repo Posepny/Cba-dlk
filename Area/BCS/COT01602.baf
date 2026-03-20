@@ -1,0 +1,28 @@
+// Les restes de Massena ne sont pas dans le sarcophage: c'est chaud
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger,6)
+THEN
+  RESPONSE #100
+  DisplayStringHead(LastTrigger,@5)  
+END
+
+IF
+ Clicked([0])
+ !Global("Massena_sarcophage","Global",2)
+ Range(LastTrigger,6)
+THEN
+  RESPONSE #100
+  DisplayString("Sol1",@2)
+END
+
+// Les restes de Massena sont dans le sarcophage: c'est froid
+IF
+ Clicked([0])
+ Global("Massena_sarcophage","Global",2)
+ Range(LastTrigger,6)
+THEN
+  RESPONSE #100
+  DisplayString("Sol1",@4)
+END
+

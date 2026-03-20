@@ -1,0 +1,11 @@
+IF
+  Opened([0])    
+  Global("COM017_door2","COM017",0) 
+THEN
+  RESPONSE #100
+  SetGlobal("COM017_door2","COM017",1)
+  ContainerEnable("Con01701",TRUE)  
+  ForceSpell(Lasttrigger,TRAP_STINKING_CLOUD)
+  Wait(2)
+  Createcreature("KSHADOW",[220.2300],10)
+END

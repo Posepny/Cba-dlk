@@ -1,0 +1,38 @@
+IF
+ OnCreation()
+THEN
+  RESPONSE #100
+  CLOSEDOOR("HERSE01")
+  CLOSEDOOR("LEVIER01") 
+END
+
+// ouvre la herse
+IF
+  CLICKED([0])
+  Global("herse01","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetInterrupt(TRUE)
+  ActionOverride(lasttrigger,MoveToObjectNoInterrupt("LEVIER01"))
+  setGlobal("herse01","GLOBAL",1)
+  SetInterrupt (FALSE)
+  
+  OPENDOOR("HERSE01")
+  OPENDOOR("LEVIER01")
+ // PlaySound("CAS_M06")
+END
+
+// ferme la herse
+IF
+  CLICKED([0])
+  Global("herse01","GLOBAL",1)
+THEN
+  RESPONSE #100
+  SetInterrupt(TRUE)
+  ActionOverride(lasttrigger,MoveToObject("LEVIER01"))
+  SetGlobal("herse01","GLOBAL",0)
+  CLOSEDOOR("HERSE01")
+  CLOSEDOOR("LEVIER01")  
+ // PlaySound("CAS_M06")
+  SetInterrupt (FALSE)
+END

@@ -1,0 +1,9 @@
+IF
+  Entered([0])
+  Global("TP013F","GLOBAL",0)
+  //!ActuallyInCombat()
+THEN
+  RESPONSE #100
+  SetGlobal("TP013F","GLOBAL",1)
+  CreateCreature("COMASSE1",[-1.-1],10)
+END

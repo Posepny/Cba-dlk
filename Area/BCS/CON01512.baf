@@ -1,0 +1,9 @@
+IF
+  Opened([0]) 
+THEN
+  RESPONSE #100
+  CreateCreature("COHARP1",[3620.1760],0)
+  
+  CreateCreature("COTBAT2",[-1.-1],0)
+  CreateCreature("COTBAT2",[-1.-1],0)
+END

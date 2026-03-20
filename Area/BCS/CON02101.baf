@@ -1,0 +1,15 @@
+// gestion aléatoire de l'ouverture d'un cercueil de la salle 1 ou 2
+IF
+ Opened([0])
+THEN
+ RESPONSE #100
+
+ RESPONSE #50
+ CreateCreature("coelai01",[-1.-1],6) 
+ 
+ RESPONSE #50
+ CreateCreature("coskel02",[-1.-1],6)  
+ 
+ RESPONSE #50
+ CreateCreature("ELWATG01",[-1.-1],6)   
+END

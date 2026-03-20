@@ -1,0 +1,30 @@
+// Le coffre est ouvert et Maladie n'est pas encore apparu: Maladie apparait ***************************************************************************************************************************
+IF
+ Opened([0])
+ Global("coffre_ouvert","COM023",0) // la 1iere fois
+ Global("Maladie_apparait","COM023",0) 
+THEN
+ RESPONSE #100 
+ SetGlobal("coffre_ouvert","COM023",1)
+ SetGlobal("Maladie_apparait","COM023",1) 
+  
+ //CreateCreature("MINSC",[1000.600],6) 
+ //CreateCreature("MINSC",[1000.600],6) 
+ //CreateCreature("MINSC",[1000.600],6) 
+ 
+  // Le Sphinx se réveille et parle au groupe
+ SetGlobal("Sphinx_destroy","COM023",0)
+ OpenDoor("SPHOFF")
+ Wait(2)
+ CreateCreature("COSPHIN",[882.351],10) // statue pour lancer le sort 
+ ActionOverride("COSPHIN",StartDialogueNoSet([PC]))
+ Wait(2)
+ 
+ // Lancement sort d'apparition de maladie
+ Createcreature("COSPHI1",[1409.724],10) // statue pour recevoir le sort
+ SetGlobalTimer("TIME_MALADIE_RECHERCHE","COM023",2) 
+ ForceSpellRES("COMALAV","COSPHI1") 
+ Wait(2)
+ SetGlobal("Sphinx_destroy","COM023",1) 
+END
+

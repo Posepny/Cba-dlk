@@ -1,0 +1,689 @@
+IF
+ Global("GLOBAL_init","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("GLOBAL_init","GLOBAL",1)
+ 
+ Createcreature("COBATIN",[200.240],10) 
+ Createcreature("COBATIN",[160.235],10) 
+ Createcreature("COBATIN",[1530.350],10) 
+ Createcreature("COBATIN",[1380.920],10) 
+ Createcreature("COBATIN",[900.640],10) 
+ Createcreature("COBATIN",[340.680],10) 
+ Createcreature("COBATIN",[460.990],10) 
+ Createcreature("COBATIN",[1190.140],10) 
+ Createcreature("COBATIN",[750.1200],10) 
+ 
+ Createcreature("COBASIL1",[1310.1005],10)  
+ 
+ Wait(3)
+ 
+ // lorsqu'un membre du groupe entre dans le sous-sol, les portes se ferment: enfermé avec Islendra
+ CloseDoor("GRILLE1")
+ Lock("GRILLE1")
+ TriggerActivation("COM022",FALSE)
+ SetGlobal("COM020_grille1","GLOBAL",0) 
+ SetGlobal("ordre_GR_20-22","GLOBAL",0) 
+ PlaySound("AM0301B3")
+ 
+ CloseDoor("GRILLE2")
+ Lock("GRILLE2")
+ TriggerActivation("COM019",FALSE)  
+ SetGlobal("COM020_grille2","GLOBAL",0)  
+ SetGlobal("ordre_GR_20-19","GLOBAL",0)
+ PlaySound("AM0301B3")
+END
+
+// DEBUT Gestion de la grille Salle Grotte - Salle Bassins ***************************************************************************************************************************
+// Grille1 grotte ouverte: elle doit l'être du côté bassin aussi
+IF
+  OpenState("GRILLE1",TRUE)
+  Global("COM020_grille1","GLOBAL",0) 
+  Global("ordre_GR_20-22","GLOBAL",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_grille1","GLOBAL",1) 
+ TriggerActivation("COM022",TRUE)
+END
+
+// Grille1 grotte fermée: elle doit l'être du côté bassin aussi
+IF
+ OpenState("GRILLE1",FALSE)
+ Global("COM020_grille1","GLOBAL",1) 
+ Global("ordre_GR_20-22","GLOBAL",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_grille1","GLOBAL",0) 
+ TriggerActivation("COM022",FALSE)
+END
+
+// Grille2 Bassin ouverte: elle doit l'être du côté grotte aussi
+IF
+ OpenState("GRILLE1",FALSE)
+ Global("COM022_grille2","GLOBAL",1)  
+ Global("ordre_GR_20-22","GLOBAL",1)
+THEN
+ RESPONSE #100
+ UnLock("GRILLE1")
+ OpenDoor("GRILLE1")
+ TriggerActivation("COM022",TRUE)
+ PlaySound("AM0301B3")
+ SetGlobal("COM020_grille1","GLOBAL",1) 
+END
+
+// Grille2 Bassin fermée: elle doit l'être du côté grotte aussi
+IF
+ OpenState("GRILLE1",TRUE)
+ Global("COM022_grille2","GLOBAL",0)  
+ Global("ordre_GR_20-22","GLOBAL",1)
+THEN
+ RESPONSE #100
+ CloseDoor("GRILLE1")
+ Lock("GRILLE1")
+ TriggerActivation("COM022",FALSE)
+ PlaySound("AM0301B3")
+ SetGlobal("COM020_grille1","GLOBAL",0) 
+END
+// FIN Gestion de la grille Salle Grotte - Salle Bassins ***************************************************************************************************************************
+
+
+// DEBUT Gestion de la grille Salle Grotte - Salle Damiers ***************************************************************************************************************************
+// Grille2 grotte ouverte: elle doit l'être du côté Damiers aussi
+IF
+  OpenState("GRILLE2",TRUE)
+  Global("COM020_grille2","GLOBAL",0) 
+  Global("ordre_GR_20-19","GLOBAL",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_grille2","GLOBAL",1) 
+ TriggerActivation("COM019",TRUE)
+ 
+ 
+ //PlaySound("COBOO1") // TEMOIN
+END
+
+// Grille1 grotte fermée: elle doit l'être du côté bassin aussi
+IF
+ OpenState("GRILLE2",FALSE)
+ Global("COM020_grille2","GLOBAL",1) 
+ Global("ordre_GR_20-19","GLOBAL",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_grille2","GLOBAL",0) 
+ TriggerActivation("COM019",FALSE)
+ 
+ 
+ //PlaySound("COBOO1") // TEMOIN
+END
+
+// FIN Gestion de la grille Salle Grotte - Salle Damiers ***************************************************************************************************************************
+
+
+
+
+
+
+
+// Islendra: position aléatoire à l'arrivée du groupe ********************************************************************************************************************
+IF
+ Global("COISLEN_position","COM020",0)
+THEN
+ RESPONSE #70
+ SetGlobal("COISLEN_position","COM020",1)
+ CreateCreature("COISLEN",[1540.345],15)
+  
+ RESPONSE #80
+ SetGlobal("COISLEN_position","COM020",1)
+ CreateCreature("COISLEN",[1600.640],15)
+ 
+ RESPONSE #100
+ SetGlobal("COISLEN_position","COM020",1)
+ CreateCreature("COISLEN",[1750.1215],15)
+END 
+
+
+// Islendra est en chasse ************************************************************************************************************************************************
+IF
+ Global("COM020_chasse","GLOBAL",0)
+THEN 
+ RESPONSE #100
+ SetGlobal("COM020_chasse","GLOBAL",1)
+ ActionOverride("COISLEN",RandomWalk())
+END
+
+// Téléportation duel Islendra ****************************************************************************************************************************************************
+IF
+ Global("COM020_PNJ_capture","GLOBAL",1)
+ AreaCheckObject("COM020","COISLEN") 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_capture","GLOBAL",2)
+ 
+
+ ActionOverride("COISLEN",DestroyItem("arop01"))
+ //CreateVisualEffectObject("SPMAZE1",Lastseenby("COISLEN"))
+ Wait(1)
+ ActionOverride(Lastseenby("COISLEN"),JumpToPoint([360.665])) // Téléportation de la cible  
+END
+
+// Arrivée de Islendra à son tour
+IF
+ Global("COM020_PNJ_capture","GLOBAL",2)
+ AreaCheckObject("COM020","COISLEN") 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_capture","GLOBAL",3)
+ 
+ //Createcreature("MINSC",[360.665],10)  
+ 
+ 
+ CreateVisualEffectObject("SPMAZE1","COISLEN")
+ Wait(1)
+ ActionOverride("COISLEN",JumpToPoint([250.825]))
+END 
+
+
+// Arrivée de Islendra à son tour
+IF
+ Global("COM020_PNJ_capture","GLOBAL",2)
+ !AreaCheckObject("COM020","COISLEN") 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_capture","GLOBAL",3)
+ 
+ //Createcreature("MINSC",[360.665],10) 
+ //Createcreature("MINSC",[360.665],10) 
+ 
+ CreateVisualEffectObject("SPMAZE1","COISLEN")
+ Wait(1)
+ ActionOvErride("COISLEN",LeaveAreaLUA("COM020","",[250.825],1))
+END 
+
+
+
+/*
+// Glabuk apparait dans la zone de duel 
+IF
+ Global("Glabuk_apparition","GLOBAL",1)
+ AreaCheckObject("COM020","COISLEN") 
+THEN
+ RESPONSE #100
+ SetGlobal("Glabuk_apparition","GLOBAL",2)
+ 
+ ActionOverride("cobasil1",JumpToPoint([250.825]))
+ForceSpell("cobasil1",GREY_MUSHROOM)
+END
+*/
+
+
+
+// Gestion de la corde **********************************************************************************************************************************************************************
+// La corde a été lancée du niveau sup, on peut grimper à la corde qui est visible.
+IF 
+ Global("Corde_lancee1","GLOBAL",1)
+ Global("Corde_grimper1","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_grimper1","GLOBAL",1)
+ 
+ // Gestion graphique 
+ closeDoor("CORD1")
+   
+ // Activation gestion de la corde
+ TriggerActivation("COT020C1",TRUE)
+END
+
+IF 
+ Global("Corde_lancee2","GLOBAL",1)
+ Global("Corde_grimper2","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_grimper2","GLOBAL",1)
+ 
+ // Gestion graphique 
+ closeDoor("CORD2")
+   
+ // Activation gestion de la corde
+ TriggerActivation("COT020C2",TRUE)
+END
+
+IF 
+ Global("Corde_lancee3","GLOBAL",1)
+ Global("Corde_grimper3","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_grimper3","GLOBAL",1)
+ 
+ // Gestion graphique 
+ closeDoor("CORD3")
+   
+ // Activation gestion de la corde
+ TriggerActivation("COT020C3",TRUE)
+END
+
+IF 
+ Global("Corde_lancee4","GLOBAL",1)
+ Global("Corde_grimper4","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_grimper4","GLOBAL",1)
+ 
+ // Gestion graphique 
+ closeDoor("CORD4")
+   
+ // Activation gestion de la corde
+ TriggerActivation("COT020C4",TRUE)
+END
+
+IF 
+ Global("Corde_lancee5","GLOBAL",1)
+ Global("Corde_grimper5","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_grimper5","GLOBAL",1)
+ 
+ // Gestion graphique 
+ closeDoor("CORD5")
+   
+ // Activation gestion de la corde
+ TriggerActivation("COT020C5",TRUE)
+END
+
+// Un PLAYER monte à la corde mais n'est pas assez doué. Il chute.
+IF
+ Global("Corde_chuter_player","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_chuter_player","GLOBAL",0) 
+ ActionOverride(PLAYER1,PlayDead(100))
+END
+
+IF
+ Global("Corde_chuter_player","GLOBAL",2)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_chuter_player","GLOBAL",0) 
+ ActionOverride(PLAYER2,PlayDead(100))
+END
+
+IF
+ Global("Corde_chuter_player","GLOBAL",3)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_chuter_player","GLOBAL",0) 
+ ActionOverride(PLAYER3,PlayDead(100))
+END
+
+IF
+ Global("Corde_chuter_player","GLOBAL",4)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_chuter_player","GLOBAL",0) 
+ ActionOverride(PLAYER4,PlayDead(100))
+END
+
+IF
+ Global("Corde_chuter_player","GLOBAL",5)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_chuter_player","GLOBAL",0) 
+ ActionOverride(PLAYER5,PlayDead(100))
+END
+
+IF
+ Global("Corde_chuter_player","GLOBAL",6)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_chuter_player","GLOBAL",0) 
+ ActionOverride(PLAYER6,PlayDead(100))
+END
+
+// La corde est retirée, on ne peut plus grimper. La corde n'est plus visible
+IF 
+ Global("Corde_lancee1","GLOBAL",0)
+ Global("Corde_grimper1","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_grimper1","GLOBAL",0)
+ 
+ // Gestion graphique 
+ OpenDoor("CORD1")
+   
+ // Activation gestion de la corde
+ TriggerActivation("COT020C1",FALSE)
+END
+
+IF 
+ Global("Corde_lancee2","GLOBAL",0)
+ Global("Corde_grimper2","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_grimper2","GLOBAL",0)
+ 
+ // Gestion graphique 
+ OpenDoor("CORD2")
+   
+ // Activation gestion de la corde
+ TriggerActivation("COT020C2",FALSE)
+END
+
+IF 
+ Global("Corde_lancee3","GLOBAL",0)
+ Global("Corde_grimper3","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_grimper3","GLOBAL",0)
+ 
+ // Gestion graphique 
+ OpenDoor("CORD3")
+  
+ CreateCreature("COMONK1",[460.410],10) 
+  
+ // Activation gestion de la corde
+ TriggerActivation("COT020C2",FALSE)
+END
+
+IF 
+ Global("Corde_lancee4","GLOBAL",0)
+ Global("Corde_grimper4","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_grimper4","GLOBAL",0)
+ 
+ // Gestion graphique 
+ OpenDoor("CORD4")
+   
+ // Activation gestion de la corde
+ TriggerActivation("COT020C4",FALSE)
+END
+
+IF 
+ Global("Corde_lancee5","GLOBAL",0)
+ Global("Corde_grimper5","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Corde_grimper5","GLOBAL",0)
+ 
+ // Gestion graphique 
+ OpenDoor("CORD5")
+   
+ // Activation gestion de la corde
+ TriggerActivation("COT020C5",FALSE)
+END
+
+
+// Gestion des ennemis trombés dans le trou (Elementaux ou le sorcier): apparition de l'ennemi ***************************************************************************
+// Trappe1
+IF 
+ Global("Chute_ELE_AIR1","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_AIR1","GLOBAL",0)
+ 
+ CreateCreature("COELAIR1",[140.655],10)  
+END
+
+IF 
+ Global("Chute_ELE_TER1","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_TER1","GLOBAL",0)
+ 
+ CreateCreature("ELEARL01",[140.655],10)  
+END
+
+IF 
+ Global("Chute_ELE_FEU1","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_FEU1","GLOBAL",0)
+ 
+ CreateCreature("ELEFEL01",[140.655],10)  
+END
+
+IF 
+ Global("Chute_ELE_WAT1","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_WAT1","GLOBAL",0)
+ 
+ CreateCreature("COELWAT1",[140.655],10)  
+END
+
+IF 
+ Global("Chute_monk1","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_monk1","GLOBAL",0)
+ 
+ CreateCreature("COMONK1",[140.655],10)  
+END
+
+IF 
+ Global("Chute_galik1","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_galik1","GLOBAL",0)
+ 
+ CreateCreature("COGALIK",[140.655],10)  
+END
+
+// Trappe2
+IF 
+ Global("Chute_ELE_AIR2","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_AIR2","GLOBAL",0)
+ 
+ CreateCreature("COELAIR1",[460.410],10)  
+END
+
+IF 
+ Global("Chute_ELE_TER2","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_TER2","GLOBAL",0)
+ 
+ CreateCreature("ELEARL01",[460.410],10)  
+END
+
+IF 
+ Global("Chute_ELE_FEU2","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_FEU2","GLOBAL",0)
+ 
+ CreateCreature("ELEFEL01",[460.410],10)  
+END
+
+IF 
+ Global("Chute_ELE_WAT2","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_WAT2","GLOBAL",0)
+ 
+ CreateCreature("COELWAT1",[460.410],10)  
+END
+
+IF 
+ Global("Chute_monk2","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_monk2","GLOBAL",0)
+ 
+ CreateCreature("COMONK1",[460.410],10)  
+END
+
+IF 
+ Global("Chute_galik2","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_galik2","GLOBAL",0)
+ 
+ CreateCreature("COGALIK",[460.410],10)  
+END
+
+// Trappe3
+IF 
+ Global("Chute_ELE_AIR3","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_AIR3","GLOBAL",0)
+ 
+ CreateCreature("COELAIR1",[335.520],10)  
+END
+
+IF 
+ Global("Chute_ELE_TER3","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_TER3","GLOBAL",0)
+ 
+ CreateCreature("ELEARL01",[335.520],10)  
+END
+
+IF 
+ Global("Chute_ELE_FEU3","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_FEU3","GLOBAL",0)
+ 
+ CreateCreature("ELEFEL01",[335.520],10)  
+END
+
+IF 
+ Global("Chute_ELE_WAT3","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_WAT3","GLOBAL",0)
+ 
+ CreateCreature("COELWAT1",[335.520],10)  
+END
+
+IF 
+ Global("Chute_monk","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_monk3","GLOBAL",0)
+ 
+ CreateCreature("COMONK1",[335.520],10)  
+END
+
+IF 
+ Global("Chute_galik3","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_galik3","GLOBAL",0)
+ 
+ CreateCreature("COGALIK",[335.520],10)   
+END
+
+// Trappe4
+IF 
+ Global("Chute_ELE_AIR4","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_AIR4","GLOBAL",0)
+ 
+ CreateCreature("COELAIR1",[1060.730],10)  
+END
+
+IF 
+ Global("Chute_ELE_TER4","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_TER4","GLOBAL",0)
+ 
+ CreateCreature("ELEARL01",[1060.730],10)  
+END
+
+IF 
+ Global("Chute_ELE_FEU4","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_FEU4","GLOBAL",0)
+ 
+ CreateCreature("ELEFEL01",[1060.730],10)  
+END
+
+IF 
+ Global("Chute_ELE_WAT4","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_WAT4","GLOBAL",0)
+ 
+ CreateCreature("COELWAT1",[1060.730],10)  
+END
+
+IF 
+ Global("Chute_monk4","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_monk4","GLOBAL",0)
+ 
+ CreateCreature("COMONK1",[1060.730],10)  
+END
+
+IF 
+ Global("Chute_galik4","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_galik4","GLOBAL",0)
+ 
+ CreateCreature("COGALIK",[1060.730],10) 
+END
+
+// Trappe5
+IF 
+ Global("Chute_ELE_AIR5","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_AIR5","GLOBAL",0)
+ 
+ CreateCreature("COELAIR1",[455.960],10)  
+END
+
+IF 
+ Global("Chute_ELE_TER5","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_TER5","GLOBAL",0)
+ 
+ CreateCreature("ELEARL01",[455.960],10)  
+END
+
+IF 
+ Global("Chute_ELE_FEU5","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_FEU5","GLOBAL",0)
+ 
+ CreateCreature("ELEFEL01",[455.960],10)  
+END
+
+IF 
+ Global("Chute_ELE_WAT5","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_ELE_WAT5","GLOBAL",0)
+ 
+ CreateCreature("COELWAT1",[455.960],10)  
+END
+
+IF 
+ Global("Chute_monk5","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_monk5","GLOBAL",0)
+ 
+ CreateCreature("COMONK1",[455.960],10)  
+END
+
+IF 
+ Global("Chute_galik5","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_galik5","GLOBAL",0)
+ 
+ CreateCreature("COGALIK",[455.960],10)  
+END

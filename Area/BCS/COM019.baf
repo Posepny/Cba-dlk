@@ -1,0 +1,564 @@
+IF 
+ OnCreation()
+THEN
+ RESPONSE #100
+ 
+ // Escalier grotte accessible
+ SetGlobal("COM020_grille2","GLOBAL",1)
+END
+
+
+// DEBUT gestion porte Salle Cambion - Salle damier **********************************************************************************************************************************
+// Grille 1819A:  Si la porte est ouverte sur l'autre carte: elle s'ouvre sans bruit pour être cohérent sur les accès *******************************************************************************
+IF
+ Global("COM018_grille3","GLOBAL",1)
+ Global("COM019_grille3_i","COM019",0)
+THEN 
+ RESPONSE #100
+ SetGlobal("COM019_grille3_i","COM019",1)
+
+ // grille ouverte
+ OpenDoor("D1819A")
+ TriggerActivation("COM018A",TRUE) // travel
+END
+
+// si la porte n'est pas ouverte sur COM018 ou COM019, elle s'ouvre automatiquement avec du son.
+IF
+ Global("COM018_grille2","GLOBAL",1)
+ Global("COM019_grille2_i","COM019",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM019_grille2_i","COM019",1)
+
+ // grille ouverte
+ Unlock("D1819B")
+ OpenDoor("D1819B")
+ TriggerActivation("COM018B",TRUE) // travel
+
+ PlaySound("CAS_M06")
+END
+// FIN gestion porte Salle Cambion - Salle damier **********************************************************************************************************************************
+
+
+// DEBUT Gestion de la grille Salle Grotte - Salle Damiers ***************************************************************************************************************************
+// Grille2 grotte ouverte: elle doit l'être du côté Damiers aussi
+IF
+ Global("ordre_GR_20-19","GLOBAL",0)
+ Global("COM020_grille2","GLOBAL",1) 
+ OpenState("ESCALIE1","FALSE") 
+THEN
+ RESPONSE #100
+ 
+ UnLock("ESCALIE1")
+ OpenDoor("ESCALIE1")
+ TriggerActivation("COM020",TRUE)
+ TriggerActivation("COM020_KO",FALSE)
+ //PlaySound("COBOO1") // TEMOIN
+END
+
+// Grille2 grotte fermée: elle doit l'être du côté Damiers aussi
+IF
+ Global("ordre_GR_20-19","GLOBAL",0)
+ Global("COM020_grille2","GLOBAL",0) 
+ OpenState("ESCALIE1","TRUE") 
+THEN
+ RESPONSE #100 
+  
+ CloseDoor("ESCALIE1")
+ Lock("ESCALIE1")
+ TriggerActivation("COM020",FALSE)
+ TriggerActivation("COM020_KO",TRUE)
+ 
+ //PlaySound("CAS_M06") // TEMOIN
+END
+// FIN Gestion de la grille Salle Grotte - Salle Damiers ***************************************************************************************************************************
+
+
+
+
+// Pierre blanche de la coupole 1 déposée dans l'effigie 1: arrêt éclair ***********************************************************************************************************************************
+IF
+  Contains("MISCP27","EFFIGIE01")
+  Global("com019_eff1","COM019",0)
+THEN
+  RESPONSE #100  
+  SetGlobal("com019_eff1","COM019",1)
+  
+  TriggerActivation("COT019C1",FALSE)  
+  TriggerActivation("COT019C2",FALSE)  
+  
+  PlaySound("GAM_21")
+  
+  continue() 
+END
+
+// Pierre non déposée dans l'effigie 1
+IF
+  !Contains("MISCP27","EFFIGIE01")
+  Global("com019_eff1","COM019",1)
+THEN
+  RESPONSE #100  
+  SetGlobal("com019_eff1","COM019",0)
+  
+  TriggerActivation("COT019C1",TRUE)  
+  TriggerActivation("COT019C2",TRUE)  
+  
+  continue() 
+END
+
+// Pierre jaune du moine déposée dans l'effigie 2: arrêt incinérateur ***********************************************************************************************************************************
+IF
+  Contains("MISCP28","EFFIGIE02")
+  Global("com019_eff2","COM019",0)
+THEN
+  RESPONSE #100 
+  SetGlobal("com019_eff2","COM019",1)
+   
+  TriggerActivation("COT019E1",FALSE)  
+  TriggerActivation("COT019E2",FALSE)  
+  
+  PlaySound("GAM_21")
+  
+  continue() 
+END
+
+// Pierre non déposée dans l'effigie 2
+IF
+  !Contains("MISCP28","EFFIGIE02")
+  Global("com019_eff2","COM019",1)
+THEN
+  RESPONSE #100  
+  SetGlobal("com019_eff2","COM019",0)
+  
+  TriggerActivation("COT019E1",TRUE)  
+  TriggerActivation("COT019E2",TRUE)  
+  
+  continue() 
+END
+
+// *** GRILLE2: salle damiers - salle Bassins  ***
+// ouverture par la porte du Bassin: répit pour passer ensuite la porte se referme
+IF
+ Global("ordre_GR_19-22","GLOBAL",1) 
+ GlobalTimerExpired("Tordre_GR_19-22","GLOBAL")
+THEN
+ RESPONSE #100
+ SetGlobal("ordre_GR_19-22","GLOBAL",0) 
+END
+
+// Pierre rouge déposée dans l'effigie 3: ouverture Salle porte Kael ******************************************************************************************
+IF
+  Global("ordre_GR_19-22","GLOBAL",0)  
+  OpenState("GRILLE2",FALSE)
+  Contains("MISCP33","EFFIGIE03")
+THEN
+  RESPONSE #100    
+  SetGlobal("COM019_grille2","GLOBAL",1) 
+
+ //PlaySound("COBOO1") // TEMOIN
+  PlaySound("AM0301B3")
+  Unlock("GRILLE2")  
+  OpenDoor("GRILLE2") 
+  //DisplayStringHead("KAGAIN",~19 Grille ouverte~)
+END
+
+// Pierre non déposée dans l'effigie 3
+IF
+  Global("ordre_GR_19-22","GLOBAL",0) 
+  OpenState("GRILLE2",TRUE)
+  !Contains("MISCP33","EFFIGIE03")
+THEN
+  RESPONSE #100  
+  SetGlobal("COM019_grille2","GLOBAL",0)   
+  
+  //PlaySound("COBOO1") // TEMOIN
+  PlaySound("AM0301B3")
+  CloseDoor("GRILLE2")
+  //Lock("GRILLE2")
+  Wait(1)
+  //DisplayStringHead("KAGAIN",~19 Grille fermée~)
+END
+
+// Grille ouverte dans la salle bassin: ouverture coté Damiers 
+IF
+ Global("ordre_GR_19-22","GLOBAL",1) 
+ Global("COM019_grille2","GLOBAL",1)
+ OpenState("GRILLE2",FALSE)
+THEN
+  RESPONSE #100    
+  PlaySound("AM0301B3")
+  //Unlock("GRILLE2")  
+  OpenDoor("GRILLE2") 
+  Wait(1)
+  //DisplayStringHead("KAGAIN",~19 Grille ouverte cote damiers~)
+END
+
+// Grille fermée dans la salle bassin: fermée coté Damiers 
+IF
+ Global("ordre_GR_19-22","GLOBAL",1) 
+ Global("COM019_grille2","GLOBAL",0)
+ OpenState("GRILLE2",TRUE)
+THEN
+  RESPONSE #100    
+  PlaySound("AM0301B3")
+  CloseDoor("GRILLE2")
+  Lock("GRILLE2")
+  //DisplayStringHead("KAGAIN",~19 Grille fermee cote damiers~)
+END
+
+// Pierre grenat déposée dans l'effigie 4: arrêt piège crâne et rûnes ******************************************************************************************************
+// Apparition coffre
+IF
+  Contains("MISCP29","EFFIGIE04")
+  Global("com019_eff4","COM019",0)
+THEN
+  RESPONSE #100  
+  SetGlobal("com019_eff4","COM019",1)
+  
+  TriggerActivation("COT0196A",FALSE)  
+  TriggerActivation("COT0196B",FALSE)  
+  TriggerActivation("COT0196C",FALSE)  
+  
+  TriggerActivation("COT0197A",FALSE)  
+  TriggerActivation("COT0197B",FALSE)  
+  TriggerActivation("COT0197C",FALSE)    
+  TriggerActivation("COT0197D",FALSE)  
+  
+  CloseDoor("DCoffre1")  
+  ContainerEnable("Coffre1",TRUE)
+  PlaySound("GAM_21")
+
+  //PlaySound("GAM_21")
+    
+  continue()  
+END
+
+// Pierre non déposée dans l'effigie 4
+IF
+  !Contains("MISCP29","EFFIGIE04")
+  Global("com019_eff4","COM019",1)
+THEN
+  RESPONSE #100  
+  SetGlobal("com019_eff4","COM019",0)
+  
+  TriggerActivation("COT0196A",TRUE)  
+  TriggerActivation("COT0196B",TRUE)  
+  TriggerActivation("COT0196C",TRUE)  
+  
+  TriggerActivation("COT0197A",TRUE)  
+  TriggerActivation("COT0197B",TRUE)  
+  TriggerActivation("COT0197C",TRUE)    
+  TriggerActivation("COT0197D",TRUE)  
+
+  Opendoor("DCoffre1")
+  ContainerEnable("Coffre1",FALSE)
+  PlaySound("CAS_M06")
+
+  continue() 
+END
+
+// Pierre bleu étoile déposée dans l'effigie 5 ou 6: arrêt piège cône de glace ***************************************************************************************************
+IF
+  Global("com019_eff56","COM019",0)
+  OR(2)
+   Contains("MISCP34","EFFIGIE05")
+   Contains("MISCP34","EFFIGIE06")
+THEN
+  RESPONSE #100  
+  SetGlobal("com019_eff56","COM019",1)
+ 
+  TriggerActivation("COT01951",FALSE) 
+  TriggerActivation("COT01952",FALSE)   
+  
+  PlaySound("GAM_21")
+  
+  continue() 
+END
+
+// Pierre non déposée dans l'effigie 5 ou 6
+IF
+  Global("com019_eff56","COM019",1)
+  !Contains("MISCP34","EFFIGIE05")
+  !Contains("MISCP34","EFFIGIE06")
+THEN
+  RESPONSE #100  
+  SetGlobal("com019_eff56","COM019",0)
+  
+  TriggerActivation("COT01951",TRUE)  
+  TriggerActivation("COT01952",TRUE)  
+  
+  continue() 
+END
+
+// crâne déposé dans l'effigie 7 ou 8: ouverture salle des morts ************************************************************************************************
+IF
+  OpenState("GRILLE1",FALSE)
+  OR(2)
+   Contains("MISC50","EFFIGIE07")
+   Contains("MISC50","EFFIGIE08")  
+THEN
+  RESPONSE #100  
+
+  PlaySound("AM0301B3")
+  Unlock("GRILLE1")  
+  OpenDoor("GRILLE1")   
+  
+  continue() 
+END
+
+// crane non déposé dans l'effigie 7
+IF  
+  OpenState("GRILLE1",TRUE)
+  !Contains("MISC50","EFFIGIE07")
+  !Contains("MISC50","EFFIGIE08")
+THEN
+  RESPONSE #100    
+
+  PlaySound("AM0301B3")
+  CloseDoor("GRILLE1")
+  Lock("GRILLE1")
+  
+  continue() 
+END
+
+// Elvina est en colère. Galik apparait ************************************************************************************************************************************
+IF
+ Global("statue_elvina_Galik","COM019",1)
+THEN
+ RESPONSE #100
+ SetGlobal("statue_elvina_Galik","COM019",2)
+ //CreateCreature("MINSC",[574.685],6)
+ CreateCreature("COGalik",[1065.365],10)
+ ActionOverride("COGalik",FaceObject([PC]))
+ CreateVisualEffectObject("gwshair7","COGalik")
+ Playsound("EFF_M11B")
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+IF
+ GlobalTimerExpired("T_COISLEN_chasse","GLOBAL")
+ Global("COISLEN_chasse","GLOBAL",1)
+ !AreaCheckObject("COM020",PLAYER1)
+ !AreaCheckObject("COM020",PLAYER2)
+ !AreaCheckObject("COM020",PLAYER3)
+ !AreaCheckObject("COM020",PLAYER4)
+ !AreaCheckObject("COM020",PLAYER5)
+ !AreaCheckObject("COM020",PLAYER6)
+THEN
+ RESPONSE #100
+ ClearActions("COISLEN")
+ 
+ 
+END
+
+
+// Islendra est en chasse et aucun player dans le sous-sol: les portes s'ouvrent à nouveau
+IF
+ Global("sous_sol_ferme","GLOBAL",1) 
+ !AreaCheckObject("COM020",PLAYER1)
+ !AreaCheckObject("COM020",PLAYER2)
+ !AreaCheckObject("COM020",PLAYER3)
+ !AreaCheckObject("COM020",PLAYER4)
+ !AreaCheckObject("COM020",PLAYER5)
+ !AreaCheckObject("COM020",PLAYER6)
+THEN 
+ RESPONSE #100
+ SetGlobal("sous_sol_ferme","GLOBAL",5)
+ 
+ TriggerActivation("COM020",TRUE)
+ TriggerActivation("COM020_KO",FALSE) 
+ 
+ //Createcreature("MINSC",[574.685],6)
+ //Createcreature("MINSC",[574.685],6)
+END
+
+
+// Téléportation duel Islendra ****************************************************************************************************************************************************
+IF
+ Global("COM020_PNJ_capture","GLOBAL",1)
+ AreaCheckObject("COM019","COISLEN") 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_capture","GLOBAL",2)
+ 
+ 
+ ActionOverride("COISLEN",DestroyItem("arop01"))
+ Wait(1)
+ ActionOvErride(Lastseenby("COISLEN"),LeaveAreaLUA("COM020","",[360.665],15)) // Téléportation de la cible  
+END
+
+// Arrivée de Islendra à son tour
+IF
+ Global("COM020_PNJ_capture","GLOBAL",2)
+ AreaCheckObject("COM019","COISLEN") 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_capture","GLOBAL",3)
+ 
+ //Createcreature("MINSC",[574.685],6)
+ //Createcreature("MINSC",[574.685],6)
+ //Createcreature("MINSC",[574.685],6)
+ 
+ CreateVisualEffectObject("SPMAZE1","COISLEN")
+ Wait(1)
+ ActionOvErride("COISLEN",LeaveAreaLUA("COM020","",[250.825],1))
+END 
+
+// Glabuk apparait dans la zone de duel 
+IF
+ Global("Glabuk_apparition","GLOBAL",1)
+ AreaCheckObject("COM019","COISLEN") 
+THEN
+ RESPONSE #100
+ SetGlobal("Glabuk_apparition","GLOBAL",2)
+ 
+ ActionOverride("cobasil1",JumpToPoint([250.825]))
+ ForceSpell("cobasil1",GREY_MUSHROOM)
+END
+*/
+
+/*
+IF
+  Global("Chute_trou1","GLOBAL",1) 
+  Global("Active_corde1","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Active_corde1","GLOBAL",1)
+  
+  // Activation gestion de la corde
+  TriggerActivation("COT0191I",TRUE)
+
+  //CreateCreature("MINSC",[574.685],6)  
+END
+
+IF
+  Global("Chute_trou2","GLOBAL",1) 
+  Global("Active_corde2","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Active_corde2","GLOBAL",1)
+  
+  // Activation gestion de la corde
+  TriggerActivation("COT0192I",TRUE)
+
+ // CreateCreature("MINSC",[574.685],6) 
+END
+
+IF
+  Global("Chute_trou3","GLOBAL",1) 
+  Global("Active_corde3","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Active_corde3","GLOBAL",1)
+  
+  // Activation gestion de la corde
+  TriggerActivation("COT0193I",TRUE)
+
+  //CreateCreature("MINSC",[574.685],6)  
+END
+
+IF
+  Global("Chute_trou4","GLOBAL",1) 
+  Global("Active_corde41","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Active_corde4","GLOBAL",1)
+  
+  // Activation gestion de la corde
+  TriggerActivation("COT0194I",TRUE)
+
+  //CreateCreature("MINSC",[574.685],6) 
+END
+
+IF
+  Global("Chute_trou5","GLOBAL",1) 
+  Global("Active_corde5","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Active_corde5","GLOBAL",1)
+  
+  // Activation gestion de la corde
+  TriggerActivation("COT0195I",TRUE)
+
+  //CreateCreature("MINSC",[574.685],6)  
+END
+*/
+
+/*
+// Pierre déposée dans l'effigie 1: arrêt piège éclair **********
+IF
+  //Global("effigie01","COM019",1)
+  Contains("MISCP27","EFFIGIE01")  
+THEN
+  RESPONSE #100  
+  //SetGlobal("effigie01","COM019",0)  
+  //CreateCreature("MINSC",[574.685],6) 
+  
+  TriggerActivation("COT019C",FALSE) 
+  
+  continue() 
+END
+
+// Pierre non déposée dans l'effigie 1
+IF
+  //Global("effigie01","COM019",1)
+  !Contains("MISCP27","EFFIGIE01")
+THEN
+  RESPONSE #100  
+  TriggerActivation("COT019C",TRUE) 
+  
+  continue() 
+END
+
+// Pierre violette déposée dans l'effigie 2: arrêt piège incinérateur **********
+IF
+  Contains("MISCP29","EFFIGIE02")
+THEN
+  RESPONSE #100      
+  TriggerActivation("COT019E",FALSE)  
+  //CreateCreature("MINSC",[574.685],6) 
+  //CreateCreature("MINSC",[574.685],6)  
+  
+  continue() 
+END
+
+// Pierre non déposée dans l'effigie 2
+IF
+  !Contains("MISCP29","EFFIGIE02")
+THEN
+  RESPONSE #100  
+  TriggerActivation("COT019E",TRUE)  
+  
+  continue() 
+END
+*/
+

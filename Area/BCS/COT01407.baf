@@ -1,0 +1,18 @@
+IF
+  //Entered([0]) 
+  IsOverMe([ANYTHING])
+  Global("COT01407","GLOBAL",0)  
+  //Global("Crane_place","GLOBAL",0)
+THEN
+  RESPONSE #100
+  ForceSpell(Lasttrigger,TRAP_ARROW_ACID)
+  SetGlobal("COT01407","GLOBAL",1)
+END
+
+IF
+ Global("COT01407","GLOBAL",1)
+THEN
+ RESPONSE #100
+ WAIT(100)
+ SetGlobal("COT01407","GLOBAL",0)
+END

@@ -1,0 +1,9 @@
+IF
+  Opened([0])
+  Global("Stele","COM018",0)
+THEN
+  RESPONSE #100  
+  SetGlobal("Stele","COM018",1)
+  Createcreature("cogole01",[1913.772],5) 
+  CreateVisualEffectObject("gwshair7","cogole01")  
+END

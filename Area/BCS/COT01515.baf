@@ -1,0 +1,31 @@
+IF
+  //IsOverMe([ANYTHING])
+  Entered([0])
+  Global("COT01515","GLOBAL",0)  
+  //Global("Crane_place","GLOBAL",0)
+THEN
+  RESPONSE #100
+  //PlaySound("COBOO1") // TEMOIN
+  //PlaySound("COBOO1") // TEMOIN
+  
+  SetGlobal("COT01515","GLOBAL",1)
+  ForceSpellPoint([3533.1707],WIZARD_CHAIN_LIGHTNING)
+  SetGlobalTimer("COT01515","COM015",60)
+END
+
+// Reactivation du piège au bou d'un certain temps
+IF
+ GlobalTimerExpired("COT01515","COM015")
+THEN
+ RESPONSE #100
+ SetGlobal("COT01515","GLOBAL",0)
+END
+
+// Piège désamorcé
+IF
+ DisArmed("COT01515")
+THEN
+ RESPONSE #100
+ //PlaySound("COBOO1") // TEMOIN
+ Triggeractivation("COT01515",FALSE) 
+END

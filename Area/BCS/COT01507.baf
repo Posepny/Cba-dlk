@@ -1,0 +1,18 @@
+//la grille de la prison 1 se ferme
+IF
+ ENTERED([0])
+ OpenState("DOOR0005",TRUE) 
+THEN
+ Response #100
+ CloseDoor("DOOR0005")
+END
+
+
+//la grille de la prison 1 s'ouvre
+IF
+ ENTERED([0])
+ OpenState("DOOR0005",FALSE) 
+THEN
+ Response #100
+ OpenDoor("DOOR0005")
+END

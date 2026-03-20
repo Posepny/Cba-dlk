@@ -1,0 +1,366 @@
+IF
+ Global("COM022_init","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM022_init","GLOBAL",1)
+  
+ Createcreature("COKAEL",[2040.745],7) 
+  
+ SetGlobalTimer("com022_ombre","COM022",1)
+ SetGlobalTimer("com022_bassin1","COM022",1)
+ SetGlobalTimer("com022_bassin2","COM022",1)
+  
+ OpenDoor("Fontaine")
+ OpenDoor("Bassg1")
+ OpenDoor("Bassg2")
+ OpenDoor("Bassg3")
+ OpenDoor("Bassg4")
+ OpenDoor("Bassg5")
+ OpenDoor("Bassg6")
+ OpenDoor("Bassg7")
+ OpenDoor("Bassg8")
+ 
+ // Porte entre salle damiers et salle bassin ouverte (porte au sud)
+ SetGlobalTimer("Tordre_GR_19-22","GLOBAL",1)
+ 
+ 
+ // SetGlobal("KAEL_rencontre","COM022",1)
+ //Createcreature("golem01",[2040.745],10) // TEMOIN
+ //Createcreature("golem01",[2040.745],10)
+ //Createcreature("cohelm01",[2040.745],10)
+END
+
+// DEBUT Gestion de la grille Salle Grotte - Salle Bassins ***************************************************************************************************************************
+// Grille2 bassin ouverte: elle doit l'être du côté grotte aussi
+IF
+  OpenState("GRILLE2",TRUE)
+  Global("COM022_grille2","GLOBAL",0)  
+  Global("ordre_GR_20-22","GLOBAL",1) 
+THEN
+ RESPONSE #100
+ SetGlobal("COM022_grille2","GLOBAL",1) 
+ TriggerActivation("COM020",TRUE)
+END
+
+// Grille1 bassin fermée: elle doit l'être du côté grotte aussi
+IF
+ OpenState("GRILLE2",FALSE)
+ Global("COM022_grille2","GLOBAL",1) 
+ Global("ordre_GR_20-22","GLOBAL",1) 
+THEN
+ RESPONSE #100
+ SetGlobal("COM022_grille2","GLOBAL",0)  
+ TriggerActivation("COM020",FALSE)
+END
+
+// Grille2 grotte ouverte: elle doit l'être du côté Bassin aussi
+IF
+ OpenState("GRILLE2",FALSE)
+ Global("COM020_grille1","GLOBAL",1)  
+ Global("ordre_GR_20-22","GLOBAL",0)
+THEN
+ RESPONSE #100
+ //UnLock("GRILLE2")  // Non verrouillée de ce côté
+ OpenDoor("GRILLE2")
+ TriggerActivation("COM020",TRUE)
+ PlaySound("AM0301B3")
+ SetGlobal("COM022_grille2","GLOBAL",1) 
+END
+
+// Grille2 grotte fermée: elle doit l'être du côté Bassin aussi
+IF
+ OpenState("GRILLE2",TRUE)
+ Global("COM020_grille1","GLOBAL",0) 
+ Global("ordre_GR_20-22","GLOBAL",0)
+THEN
+ RESPONSE #100
+ CloseDoor("GRILLE2")
+ //Lock("GRILLE2")  // Non verrouillée de ce côté
+ TriggerActivation("COM020",FALSE)
+ PlaySound("AM0301B3")
+ SetGlobal("COM022_grille2","GLOBAL",0) 
+END
+// FIN Gestion de la grille Salle Grotte - Salle Bassins ***************************************************************************************************************************
+
+
+// DEBUT Gestion de la grille Salle Damiers - Salle Bassins ***************************************************************************************************************************
+// Grille2 ouverte côté Damiers: elle doit être ouverte aussi de ce côté
+IF
+ Global("ordre_GR_19-22","GLOBAL",0) 
+ Global("COM019_grille2","GLOBAL",1)
+ OpenState("GRILLE3",FALSE)
+THEN
+ RESPONSE #100
+ UnLock("GRILLE3")
+ OpenDoor("GRILLE3")
+ TriggerActivation("COM019",TRUE)  
+ Wait(1)
+ //DisplayStringHead("KAGAIN",~22 Grille ouverte~)
+END
+
+// Grille2 fermée côté Damiers: elle doit être fermée aussi de ce côté
+IF
+  Global("ordre_GR_19-22","GLOBAL",0) 
+  Global("COM019_grille2","GLOBAL",0) 
+  OpenState("GRILLE3",TRUE)
+THEN
+ RESPONSE #100
+ CloseDoor("GRILLE3")
+ Lock("GRILLE3")
+ TriggerActivation("COM019",FALSE)  
+ Wait(1)
+ //DisplayStringHead("KAGAIN",~22 Grille fermee~)
+END
+// FIN Gestion de la grille Salle Damiers - Salle Bassins ***************************************************************************************************************************
+
+// DEBUT Gestion de la grille Salle Damiers - Salle Bassins ***************************************************************************************************************************
+// 1ière arrivée carte par la grotte de Islendra: grille salle énigme fermée 
+IF
+ Global("COM022_grille","GLOBAL",0) // le groupe est potentiellement séparé en deux
+ OpenState("GRILLE1",TRUE)
+THEN
+ RESPONSE #100
+ 
+ TriggerActivation("COM023",FALSE) // Travel pour tous
+ TriggerActivation("COT022TS",FALSE) // Travel pour Player1 
+ CloseDoor("GRILLE1") 
+ lock("GRILLE1") 
+END
+// FIN Gestion de la grille Salle Damiers - Salle Bassins ***************************************************************************************************************************
+
+
+// DEBUT Kael vaincu: proposition d'aide de Kael ****************************************************************************************************
+IF 
+ !Global("Kael_vaincu","COM022",0)
+ Global("Kael_marche","COM022",0)
+ AreaCheckObject("COM022",PLAYER1)
+THEN
+ RESPONSE #100
+ SetGlobal("Kael_marche","COM022",1) 
+ 
+ SetInterrupt(FALSE)
+  //Activate("COKAEL2")
+  //Wait(1)  
+  MoveGlobalObject("COKAEL2",PLAYER1)
+  ActionOverride("COKAEL2",FaceObject(PLAYER1))
+  Wait(1)
+ SetInterrupt(TRUE)
+ ActionOverride("COKAEL2",StartDialogueNoSet(PLAYER1)) 
+END
+
+IF 
+ !Global("Kael_vaincu","COM022",0)
+ Global("Kael_marche","COM022",0)
+ !AreaCheckObject("COM022",PLAYER1)
+THEN
+ RESPONSE #100
+ SetGlobal("Kael_marche","COM022",1)
+
+ Activate("COKAEL2")
+ Wait(1)
+ ActionOverride("COKAEL2",FaceObject([PC])
+ Wait(2)
+ ActionOverride("COKAEL2",DisplayStringHead("COKAEL2",@510) 
+END
+
+// Kael vaincu: la grille s'ouvre **************************************************************************************
+IF 
+ Global("Kael_vaincu","COM022",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Kael_vaincu","COM022",2)
+
+ SetGlobal("COM022_grille","GLOBAL",1)  
+END
+// FIN Kael vaincu: proposition d'aide de Kael ****************************************************************************************************
+
+
+// Présence groupe dans la salle Enigme: Ouverture de la grille en auto au bou de quelques secondes
+IF
+ Global("COM022_grille","GLOBAL",1) // le groupe est potentiellement séparé en deux 
+ OpenState("GRILLE1",FALSE)
+THEN
+ RESPONSE #100
+ 
+ TriggerActivation("COM023",FALSE) // Travel pour tous
+ TriggerActivation("COT022TS",TRUE) // Travel pour Player1  
+ smallWait(10)
+ PlaySound("AM0301B3")
+ Unlock("GRILLE1")
+ OpenDoor("GRILLE1")
+END
+
+// Charname 1ière arrivée carte par la salle Enigme: Région TS inactive + désactivation TEXTSCREEN stalagtite
+IF
+ Global("COM022_TS","GLOBAL",1) 
+ Global("COM022_TS_activ","COM022",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM022_TS_activ","COM022",1)
+ TriggerActivation("COM023",TRUE) // Travel pour tous
+ TriggerActivation("COT022TS",FALSE) // Travel pour Player1 
+END
+// FIN Gestion de la grille Salle Damiers - Salle Bassins ***************************************************************************************************************************
+
+
+// Kael est sévèrement blessé: la fontaine soigne Kael ***********************************************************************************************************************
+IF
+  HpPercentLT("COKAEL",99)
+  Global("KAEL_blesse","COM022",0)  
+  Global("KAEL_vaincu","COM022",0)
+  Global("Fontaine_vide","COM022",0) // Fontaine active
+THEN
+  RESPONSE #100  
+  SetGlobal("KAEL_blesse","COM022",1) 
+  
+  TriggerActivation("COT022F",TRUE) 
+END
+
+// 1ier bassin vidé: Kael râle! ********************************************************************************************************************************************************
+IF
+ Global("bassin_vide","COM022",0)
+ OR(8)
+ Global("bassin1_click","COM022",2)
+ Global("bassin2_click","COM022",2)
+ Global("bassin3_click","COM022",2)
+ Global("bassin4_click","COM022",2)
+ Global("bassin5_click","COM022",2)
+ Global("bassin6_click","COM022",2)
+ Global("bassin7_click","COM022",2)
+ Global("bassin8_click","COM022",2)
+ Global("Fontaine_vide","COM022",0)  
+THEN
+ RESPONSE #100
+ SetGlobal("bassin_vide","COM022",1) 
+ DisplayStringHead("COKAEL",@500) // ~VOUS osez toucher à mes bassins!~ 
+END 
+
+// Les 8 bassins sont vidés: la fontaine se vide à son tour ******************************************************************************************************
+IF
+ Global("bassin1_click","COM022",2)
+ Global("bassin2_click","COM022",2)
+ Global("bassin3_click","COM022",2)
+ Global("bassin4_click","COM022",2)
+ Global("bassin5_click","COM022",2)
+ Global("bassin6_click","COM022",2)
+ Global("bassin7_click","COM022",2)
+ Global("bassin8_click","COM022",2)
+ Global("Fontaine_vide","COM022",0)  
+THEN
+ RESPONSE #100
+ SetGlobal("Fontaine_vide","COM022",1)
+ 
+ TriggerActivation("COT022F",FALSE) // pouvoir de régénération désactivé 
+ CloseDoor("Fontaine")
+
+ // ambiant grand bassin desactivé
+ SoundActivate("COM022B9",FALSE)
+  
+ DisplayStringHead("COKAEL",@501) // ~Vaine tentative pour me vaincre, venez m'affronter!~
+ ActionOverride("COKAEL",Enemy())
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* NON UTILE
+// CUTSCENE placement pour le sacrifice ***********************************************************************************************************************************
+IF
+ Global("Kael_sacrifice_place","COM022",0)
+ Global("Kael_sacrifice","COM022",2)
+THEN
+ Response #100 
+ SetGlobal("Kael_sacrifice_place","COM022",1)
+ 
+ DisplayStringHead("COKAEL",@12) // Excellent choix.
+ Wait(2)
+ 
+ StartCutSceneMode()
+ Wait(1)
+ StartCutScene("COCS0221") 
+END
+
+
+IF
+ Global("Kael_sacrifice_place","COM022",0)
+ Global("Kael_sacrifice","COM022",3)
+THEN
+ Response #100 
+ SetGlobal("Kael_sacrifice_place","COM022",1)
+ 
+ DisplayStringHead("COKAEL",@12) // Excellent choix.
+ Wait(2)
+ 
+ StartCutSceneMode()
+ Wait(1)
+ StartCutScene("COCS0222") 
+END
+
+IF
+ Global("Kael_sacrifice_place","COM022",0)
+ Global("Kael_sacrifice","COM022",4)
+THEN
+ Response #100 
+ SetGlobal("Kael_sacrifice_place","COM022",1)
+ 
+ DisplayStringHead("COKAEL",@12) // Excellent choix.
+ Wait(2)
+ 
+ StartCutSceneMode()
+ Wait(1)
+ StartCutScene("COCS0223") 
+END
+
+IF
+ Global("Kael_sacrifice_place","COM022",0)
+ Global("Kael_sacrifice","COM022",5)
+THEN
+ Response #100 
+ SetGlobal("Kael_sacrifice_place","COM022",1)
+ 
+ DisplayStringHead("COKAEL",@12) // Excellent choix.
+ Wait(2)
+ 
+ StartCutSceneMode()
+ Wait(1)
+ StartCutScene("COCS0224") 
+END
+
+IF
+ Global("Kael_sacrifice_place","COM022",0)
+ Global("Kael_sacrifice","COM022",6)
+THEN
+ Response #100 
+ SetGlobal("Kael_sacrifice_place","COM022",1)
+ 
+ DisplayStringHead("COKAEL",@12) // Excellent choix.
+ Wait(2)
+ 
+ StartCutSceneMode()
+ Wait(1)
+ StartCutScene("COCS0225") 
+END
+
+
+// Kael est vaincu: la grille s'ouvre
+IF
+ Global("Kael_vaincu","COM022",3) 
+ OpenState("Grille1",FALSE)
+THEN
+ Response #100 
+ Unlock("Grille1")
+ OpenDoor("Grille1")
+ 
+END
+*/

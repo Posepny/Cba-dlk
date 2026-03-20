@@ -1,0 +1,8 @@
+IF
+  Opened([0]) 
+  Global("COM017_door1","COM017",0)
+THEN
+  RESPONSE #100
+  SetGlobal("COM017_door1","COM017",1)
+  ForceSpell(Lasttrigger,TRAP_LIGHTNING_ORB1)
+END

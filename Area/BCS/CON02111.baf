@@ -1,0 +1,8 @@
+// réactivation du contrôle
+IF 
+ Opened([PC])
+THEN
+ Response #100
+ SetGlobal("Niche_sanction1","Com021",0)
+ //PlaySound("CAS_M02")
+END

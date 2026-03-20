@@ -1,0 +1,29 @@
+// Trop loin pour voir
+// Msg pour le player 1
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger,6)
+THEN
+  RESPONSE #100
+  DisplayStringHead(LastTrigger,@3)  
+END
+
+// assez près pour voir
+IF
+  Clicked([ANYONE])
+  InPartySlot(LastTrigger,0) // Player1 
+  Range(LastTrigger,6)
+THEN
+  RESPONSE #100
+  DisplayStringHead(LastTrigger,@1)  
+END
+
+// msg pour les membres du groupe
+IF
+  Clicked([ANYONE])
+  !InPartySlot(LastTrigger,0)
+  Range(LastTrigger,6)
+THEN
+  RESPONSE #100
+  DisplayStringHead(LastTrigger,@2)  
+END

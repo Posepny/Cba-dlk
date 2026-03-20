@@ -1,0 +1,155 @@
+IF
+ Global("com027_init","COM027",0)
+THEN
+ RESPONSE #100
+ SetGlobal("com027_init","COM027",1)
+  
+ CreateCreature("RAT",[400.661],6)   
+ CreateCreature("RAT",[245.710],6)  
+ CreateCreature("RAT",[594.604],6)  
+ CreateCreature("RAT",[780.350],6)  
+ CreateCreature("RAT",[890.300],6)   
+END
+
+// Le groupe parvient à ressortir du temple (Crâne de Kept placé dans la salle aux prières)
+IF
+ Global("Crane_place","GLOBAL",1)
+ Global("Fin_sortir_ici","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Fin_sortir_ici","GLOBAL",1)
+ 
+ AddJournalEntry(@105,QUEST_DONE)
+ AddexperienceParty(2000)
+ 
+ EraseJournalEntry(@101)
+ EraseJournalEntry(@102)
+ EraseJournalEntry(@103)
+ EraseJournalEntry(@104)
+ 
+ TriggerActivation("COT02702",TRUE) // Bruit de pas
+ TriggerActivation("COT02703",TRUE) // la trappe se referme
+END
+
+
+// Le groupe remonte à la surface + Allié de Bhaal (épreuves réalisées): Arrêt Top prière masque de mort COM017 + fermeture du PS
+IF
+ Global("Bhaal_allie","GLOBAL",1)
+ Global("Masque_M_priere","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Masque_M_priere","GLOBAL",0)
+ 
+ PlaySound("AMB_D04A")
+ CloseDoor("DOOR0001")
+ Lock("DOOR0001")
+END
+
+
+// Livre d'Ekilis en possession du groupe ou révelation d'Ekilis: evolution histoire du temple + trésors de Bhaal ******************************************************************************
+IF
+ Global("livre_ekilis","GLOBAL",0) 
+ PartyHasItemIdentified("BOKP07")
+THEN
+ RESPONSE #100
+ SetGlobal("livre_ekilis","GLOBAL",1)
+ SetGlobal("Q_tresor_bhaal","GLOBAL",1) 
+  
+ // Histoire de Bhaal
+ AddJournalEntry(@51,QUEST)   
+END
+
+IF
+ Global("Q_tresor_bhaal","GLOBAL",1) 
+THEN
+ RESPONSE #100
+ SetGlobal("Q_tresor_bhaal","GLOBAL",2) 
+
+ // Le trésor de Bhaal 
+ EraseJournalEntry(@60)
+ EraseJournalEntry(@61)
+ EraseJournalEntry(@62)
+ EraseJournalEntry(@63)
+  EraseJournalEntry(@64)
+ AddJournalEntry(@65,QUEST_DONE)   
+ AddXpObject(PLAYER1,500)
+END
+
+// Ekilis devient l'allié du groupe: il sera dans chaque carte où le PNJ qu'il suit prend une sortie
+IF
+  Global("ekilis_alliance","GLOBAL",1)
+  !AreaCheckObject("COM027","COEKILIS")
+  !Dead("COEKILIS")  
+  AreaCheckObject("COM027",PLAYER1)
+  Global("ekilis_follow","GLOBAL",1)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER1)
+  wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM027","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM027",PLAYER2)
+  Global("ekilis_follow","GLOBAL",2)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER2)
+  wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM027","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM027",PLAYER3)
+  Global("ekilis_follow","GLOBAL",3)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER3)
+  wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM027","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM027",PLAYER4)
+  Global("ekilis_follow","GLOBAL",4)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER4)
+  wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM027","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM027",PLAYER5)
+  Global("ekilis_follow","GLOBAL",5)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER5)
+  Wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM027","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM027",PLAYER6)
+  Global("ekilis_follow","GLOBAL",6)
+THEN
+  RESPONSE #100
+  MoveGlobalObject("COEKILIS",PLAYER6)
+  Wait(2)
+  SetGlobal("ekilis_follow","GLOBAL",0)
+END

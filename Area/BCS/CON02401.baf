@@ -1,0 +1,24 @@
+// Ouverture de la stèle et apparition de Cespenar
+IF
+ Opened([PC])
+ Global("Stele_init","COM024",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Stele_init","COM024",1)
+ 
+ // Fermeture de l'entrée à la salle
+ Wait(2)
+ CloseDoor("DOOR0002")
+ Lock("DOOR0002") 
+ Playsound("COM024D2")
+ Wait(3)
+ 
+ SetInterrupt(FALSE)
+ CreateVisualEffect("SPATTCK1",[990.910]) // cercle de téléportation
+ MoveViewPoint([990.910],INSTANT)
+ wait(3)
+ SetInterrupt(TRUE)
+ 
+ Createcreature("COMEUR",[990.910],15) 
+ ActionOverride("COMEUR",FaceObject(PLAYER1))
+END

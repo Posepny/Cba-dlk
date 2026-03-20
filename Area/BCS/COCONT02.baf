@@ -1,0 +1,7 @@
+// ouverture d'un container déjà visité
+IF
+  Opened([0])
+THEN
+  RESPONSE #100
+  DisplayString(Lasttrigger,@2)
+END

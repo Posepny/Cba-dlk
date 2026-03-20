@@ -1,0 +1,7 @@
+//la grille de la prison 1 se ferme
+IF
+ ENTERED([0])
+THEN
+ Response #100
+ OpenDoor("DOOR0005")
+END

@@ -1,0 +1,8 @@
+//la grille de la prison se ferme
+IF
+ ENTERED([0])
+THEN
+ Response #100
+ PlaySound("AM0301B3")
+ CLOSEDOOR("PRISON01")
+END

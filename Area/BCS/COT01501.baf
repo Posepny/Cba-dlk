@@ -1,0 +1,94 @@
+IF
+  Entered(PLAYER1)
+  Global("COT01501","COM015",1) 
+  OpenState("DOOR0001",TRUE)
+THEN
+  RESPONSE #100
+  SetGlobal("COT01501","COM015",2) 
+  
+  PlaySound("EFF_M33") 
+  CreateCreature("COSTAINV",[837.1318],5)
+  ActionOverride("COSTAINV",ApplySpellRES("BREATH01",PLAYER1))
+  SmallWait(10)
+  ActionOverride("COSTAINV",DestroySelf())
+END
+
+IF
+  Entered(PLAYER2)
+  Global("COT01501","COM015",1) 
+  OpenState("DOOR0001",TRUE)
+THEN
+  RESPONSE #100
+  SetGlobal("COT01501","COM015",2)   
+
+  PlaySound("EFF_M33")
+  CreateCreature("COSTAINV",[837.1318],5)
+  ActionOverride("COSTAINV",ApplySpellRES("BREATH01",PLAYER2))
+  SmallWait(10)
+  ActionOverride("COSTAINV",DestroySelf())
+END
+
+IF
+  Entered(PLAYER3)
+  Global("COT01501","COM015",1) 
+  OpenState("DOOR0001",TRUE)
+THEN
+  RESPONSE #100
+  SetGlobal("COT01501","COM015",2) 
+
+  PlaySound("EFF_M33")
+  CreateCreature("COSTAINV",[837.1318],5)
+  ActionOverride("COSTAINV",ApplySpellRES("BREATH01",PLAYER3))
+  SmallWait(10)
+  ActionOverride("COSTAINV",DestroySelf())
+END
+
+
+IF
+  Entered(PLAYER4)
+  Global("COT01501","COM015",1) 
+  OpenState("DOOR0001",TRUE)
+THEN
+  RESPONSE #100
+  SetGlobal("COT01501","COM015",2)  
+ 
+  PlaySound("EFF_M33")
+  CreateCreature("COSTAINV",[837.1318],5)
+  ActionOverride("COSTAINV",ApplySpellRES("BREATH01",PLAYER4))
+  SmallWait(10)
+  ActionOverride("COSTAINV",DestroySelf())
+END
+
+
+IF
+  Entered(PLAYER5)
+  Global("COT01501","COM015",1) 
+  OpenState("DOOR0001",TRUE)
+THEN
+  RESPONSE #100
+  SetGlobal("COT01501","COM015",2) 
+  
+  PlaySound("EFF_M33")
+  CreateCreature("COSTAINV",[837.1318],5)
+  ActionOverride("COSTAINV",ApplySpellRES("BREATH01",PLAYER5))
+  SmallWait(10)
+  ActionOverride("COSTAINV",DestroySelf())
+END
+
+
+IF
+  Entered(PLAYER6)
+  Global("COT01501","COM015",1) 
+  OpenState("DOOR0001",TRUE)
+THEN
+  RESPONSE #100
+  SetGlobal("COT01501","COM015",2) 
+  
+  PlaySound("EFF_M33")
+  CreateCreature("COSTAINV",[837.1318],5)
+  ActionOverride("COSTAINV",ApplySpellRES("BREATH01",PLAYER6))
+  SmallWait(10)
+  ActionOverride("COSTAINV",DestroySelf())
+END
+
+

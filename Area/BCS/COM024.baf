@@ -1,0 +1,191 @@
+IF
+ Global("COM024_init","COM024",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM024_init","COM024",1)
+  
+ // Minautore
+ Createcreature("COMINAU1",[1460.460],10)  
+ Createcreature("COMINAU1",[1460.460],10)   
+  
+ // Umber Hulk
+ Createcreature("coumber",[2180.720],10)  
+ Createcreature("coumber",[2180.720],10)  
+  
+ // Troll des glaces
+ Createcreature("troll01",[220.1320],10)  
+ Createcreature("troll01",[220.1320],10) 
+
+
+// Islendra
+ SetGlobal("COM020_Duel_combat","COM020",1)
+ SetGlobal("islendra_dial_antre","GLOBAL",1)
+ 
+/*
+// TEST
+ SetGlobal("Boss_salle1","GLOBAL",0) // Choix Cambion / démon
+ SetGlobal("CO_KAEL_ALLIE","GLOBAL",1)  // Choix Kael ennemis ou allié
+*/
+END  
+
+// début du combat: positionnement des archets squelettes ********************************************************************************************************
+IF
+ Global("Combat_init","COM024",0) 
+ Global("CS_COM024","COM024",4) 
+THEN
+ RESPONSE #100
+ SetGlobal("Combat_init","COM024",1)  
+   
+  // Nord Est
+  Createcreature("COSKE_1",[1250.470],10) 
+  Createcreature("COSKE_2",[1165.475],10)
+  
+  // Est Nord Est
+  Createcreature("COSKE_1",[1470.520],10) 
+  Createcreature("COSKE_2",[1660.600],10)
+  Createcreature("COSKE_3",[1760.660],10) 
+  
+  // Est Sud Est
+  Createcreature("COSKE_1",[1980.840],10) 
+  Createcreature("COSKE_1",[2000.900],10) 
+  Createcreature("COSKE_1",[2030.960],10) 
+   
+  // Ouest nord ouest
+  Createcreature("COSKE_1",[350.1090],10) 
+  Createcreature("COSKE_2",[370.1170],10) 
+  Createcreature("COSKE_3",[390.720],10) 
+  
+  // Nord ouest
+  Createcreature("COSKE_2",[850.580],10)
+  Createcreature("COSKE_3",[670.645],10) 
+END
+
+// Gestion de l'utilisation des larmes de sang ******************************************************************************************************************************
+// larme de sang du golem d'os
+IF
+ Contains("Miscp36","STELE01") 
+THEN
+ RESPONSE #100
+ ActionOverride("STELE01",DestroyItem("Miscp36"))
+ 
+ CreateVisualEffectObject("CODEATH","cogole01")
+ Deactivate("cogole01") 
+ IncrementGlobal("NB_boss_dead","COM024",1)
+END
+
+// larme de sang du Tanari ou Cambion
+IF
+ Contains("Miscp35","STELE01")
+THEN
+ RESPONSE #100
+ ActionOverride("STELE01",DestroyItem("Miscp35"))
+ 
+ CreateVisualEffectObject("CODEATH","cotanar1")
+ Deactivate("cotanar1")  
+ 
+ CreateVisualEffectObject("CODEATH","cocambi1")
+ Deactivate("cocambi1") 
+ 
+ IncrementGlobal("NB_boss_dead","COM024",1)
+END
+
+// larme de sang du Spectateur
+IF
+ Contains("Miscp37","STELE01")
+THEN
+ RESPONSE #100
+ ActionOverride("STELE01",DestroyItem("Miscp37"))
+ 
+ CreateVisualEffectObject("CODEATH","COSPEC1")
+ Deactivate("COSPEC1")  
+ Wait(2)
+ ActionOverride("COSPEC1",DestroySelf())
+ IncrementGlobal("NB_boss_dead","COM024",1)
+END
+
+// larme de sang de Islendra
+IF
+ Contains("Miscp38","STELE01")
+THEN
+ RESPONSE #100
+ ActionOverride("STELE01",DestroyItem("Miscp38"))
+ 
+ CreateVisualEffectObject("CODEATH","COISLEN")
+ Deactivate("COISLEN") 
+ IncrementGlobal("NB_boss_dead","COM024",1)
+END
+
+// larme de sang de Taguar
+IF
+ Contains("Miscp39","STELE01")
+THEN
+ RESPONSE #100
+ ActionOverride("STELE01",DestroyItem("Miscp39"))
+ 
+ CreateVisualEffectObject("CODEATH","COTAGUAR")
+ Deactivate("COTAGUAR")  
+ IncrementGlobal("NB_boss_dead","COM024",1)
+END
+
+// larme de sang de Kael
+IF
+ Contains("Miscp40","STELE01")
+THEN
+ RESPONSE #100
+ ActionOverride("STELE01",DestroyItem("Miscp40"))
+ 
+ CreateVisualEffectObject("CODEATH","COKAEL")
+ Deactivate("COKAEL")
+ IncrementGlobal("NB_boss_dead","COM024",1)  
+END
+
+// larme de sang de Maladie
+IF
+ Contains("Miscp41","STELE01")
+THEN
+ RESPONSE #100
+ ActionOverride("STELE01",DestroyItem("Miscp41"))
+ 
+ CreateVisualEffectObject("CODEATH","COMALAD")
+ Deactivate("COMALAD")   
+ 
+ CreateVisualEffectObject("CODEATH","cospidg")
+ Deactivate("cospidg")   
+
+ IncrementGlobal("NB_boss_dead","COM024",1)
+END
+
+// Les Boss sont éliminés: la porte du niveau suivant d'ouvre ****************************************************************************************************
+IF
+ Global("NB_boss_dead","COM024",7)
+THEN
+ RESPONSE #100
+ SetGlobal("NB_boss_dead","COM024",8)
+ 
+ //Createcreature("MINSC",[1400.720],10)  
+ 
+ wait(10)
+ Unlock("DOOR0001")
+ OpenDoor("DOOR0001")
+ PlaySound("COM024D2") 
+END
+
+
+// Kael allié
+IF
+ Global("KAEL_combat_allie","COM024",0)
+ Global("CO_KAEL_ALLIE","GLOBAL",1)
+ Exists("COKAEL")
+THEN 
+ RESPONSE #100
+ SetGlobal("KAEL_combat_allie","COM024",1)
+ ChangeEnemyAlly("COKAEL",ALLY)
+END
+
+
+
+
+
+
+
+  

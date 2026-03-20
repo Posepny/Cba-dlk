@@ -1,0 +1,25 @@
+// Gestion du compteur de coffres ouverts
+IF 
+ Opened([PC])
+ Global("COM021_CF2","COM021",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM021_CF2","COM021",1)
+ IncrementGlobal("nb_coffre_ouvert","COM021",1)
+ 
+ DisplayString(LastTrigger,@21)
+END
+
+
+/*
+IF 
+ Opened([PC])
+ OpenState("COFFRE2",TRUE)
+THEN
+ Response #100
+ IncrementGlobal("nb_coffre_ouvert","COM021",1)
+ 
+ DisplayString(lastTrigger,@21)
+END
+*/
+

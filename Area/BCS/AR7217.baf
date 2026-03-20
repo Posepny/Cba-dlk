@@ -1,0 +1,25 @@
+// Mod Protecteur de Baldur démarré: noble d'Amn supprimé + présence de marchands à la place du noble d'Amn
+IF
+ Global("Protecteur_baldur","GLOBAL",1)
+ Global("Marchands","AR7217",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Marchands","AR7217",1)
+ 
+ //FadeTOColor([20.0],0)
+ 
+ 
+ ActionOverride("NOBW7",destroyself())
+ 
+ DeActivate("HOUSG6")
+ ActionOverride("HOUSG6",destroyself())
+ SmallWait(10)
+ DeActivate("HOUSG6")
+ ActionOverride("HOUSG6",destroyself()) 
+ 
+ createcreature("COMER01",[524.434],6)   
+ createcreature("COMER02",[524.434],6)    
+ 
+ //FadeFromColor([20.0],0)
+END
+ 

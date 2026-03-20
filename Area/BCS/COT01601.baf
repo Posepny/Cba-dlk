@@ -1,0 +1,16 @@
+IF
+ Clicked([ANYONE])
+ !Range(LastTrigger,6)
+THEN
+  RESPONSE #100
+  DisplayString("Sarco2",@5)
+END
+
+// Le sacro est fermé suite à la dépose des restes de Massena
+IF
+ Clicked([ANYONE])
+ Range(LastTrigger,6)
+THEN
+  RESPONSE #100
+  DisplayString("Sarco2",@1)
+END

@@ -1,0 +1,78 @@
+// Ekilis devient l'allié du groupe: il sera dans chaque carte où le PNJ qu'il suit prend une sortie
+IF
+  Entered([PC])
+  Global("ekilis_alliance","GLOBAL",1)
+  !AreaCheckObject("COM015","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM015",PLAYER1)
+  Global("ekilis_follow","GLOBAL",1)
+THEN
+  RESPONSE #100
+  //Createcreature("MINSC",[870.1370],10)   
+  MoveGlobalObject("COEKILIS",PLAYER1)
+END
+
+IF
+  Entered([PC])
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM015","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM015",PLAYER2)
+  Global("ekilis_follow","GLOBAL",2)
+THEN
+  RESPONSE #100
+  //Createcreature("MINSC",[870.1370],10)   
+  MoveGlobalObject("COEKILIS",PLAYER2)
+END
+
+IF
+  Entered([PC])
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM015","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM015",PLAYER3)
+  Global("ekilis_follow","GLOBAL",3)
+THEN
+  RESPONSE #100
+  //Createcreature("MINSC",[870.1370],10)  
+  MoveGlobalObject("COEKILIS",PLAYER3)
+END
+
+IF
+  Entered([PC])
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM015","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM015",PLAYER4)
+  Global("ekilis_follow","GLOBAL",4)
+THEN
+  RESPONSE #100
+  //Createcreature("MINSC",[870.1370],10)  
+  MoveGlobalObject("COEKILIS",PLAYER4)
+END
+
+IF
+  Entered([PC])
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM015","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM015",PLAYER5)
+  Global("ekilis_follow","GLOBAL",5)
+THEN
+  RESPONSE #100
+  //Createcreature("MINSC",[870.1370],10)  
+  MoveGlobalObject("COEKILIS",PLAYER5)
+END
+
+IF
+  Entered([PC])
+  Global("ekilis_alliance","GLOBAL",1) 
+  !AreaCheckObject("COM015","COEKILIS")
+  !Dead("COEKILIS")
+  AreaCheckObject("COM015",PLAYER6)
+  Global("ekilis_follow","GLOBAL",6)
+THEN
+  RESPONSE #100
+  //Createcreature("MINSC",[870.1370],10)  
+  MoveGlobalObject("COEKILIS",PLAYER6)
+END

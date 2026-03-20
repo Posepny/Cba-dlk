@@ -1,0 +1,372 @@
+IF 
+ Global("com021_init","COM021",0)
+
+THEN
+ RESPONSE #100
+ SetGlobal("com021_init","COM021",1)
+
+ // Salle 2: squelettes 
+ SetGlobalTimer("T_piege_skelet","COM021",1) 
+ SetGlobalTimer("PS4_OUVERT","COM021",1)
+ SetGlobalTimer("PS5_OUVERT","COM021",1)
+
+ // Salle 3: Taguar
+ ContainerEnable("Cachecle",FALSE)
+
+ // Salle 4: cafard (init timer)
+ SetGlobalTimer("GRILLE1_OUVERT","COM021",1)
+ SetGlobalTimer("GRILLE2_OUVERT","COM021",1)
+ SetGlobalTimer("GRILLE3_OUVERT","COM021",1)
+ SetGlobalTimer("PS6_OUVERT","COM021",1)
+ 
+ // Salle 5: Urglite
+ CreateCreature("COURGLIT",[2790.1643],12)  
+ SetGlobalTimer("Lamentations","COM021",1)
+
+ Wait(2)
+ //MoveViewPoint([1271.101],STANDARD)
+ Activate("COCARIS")
+ ActionOverride("COCARIS",StartDialogueNoSet([PC])) 
+
+END
+
+
+// Salle 3: Taguar est mort, l'équipement est placé dans son Sarcophage ******************************************************************************************************************
+IF
+ Global("TAGUAR_equipement","COM021",0)
+ OR(2)
+  Global("TAGUAR_vaincu","COM021",1)
+  Global("TAGUAR_meurt","COM021",3)
+THEN
+ RESPONSE #100
+ SetGlobal("TAGUAR_equipement","COM021",1)
+ 
+ ActionOverride("S3cercueil1",CreateItem("CHAN03",0,0,0))
+ ActionOverride("S3cercueil1",CreateItem("BLUP03",0,0,0))
+ ActionOverride("S3cercueil1",CreateItem("AX1H03",0,0,0))
+ Unlock("S3cercueil1")
+END
+
+
+// Salle 3: cache à clé découverte *************************************************************************************************************************************************
+IF
+  OpenState("CACHE01",TRUE)		
+  Global("CACHE01","COM021",0)
+THEN
+  RESPONSE #100
+  SetGlobal("CACHE01","COM021",1)	
+  
+  ContainerEnable("Cachecle",TRUE)	// container accessible si le PS est découvert
+END
+
+
+// salle1: gestion des PS en fonction de la position du levier1 *******************************************************************************************************************
+IF
+ OpenState("LEVIER",TRUE)
+ Global("LEVIER_init","COM021",1)
+ Global("LEVIER","COM021",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("LEVIER","COM021",1)
+ 
+ CloseDoor("PS1")
+ OpenDoor("PS3") 
+END
+
+IF
+ OpenState("LEVIER",FALSE)
+ Global("LEVIER_init","COM021",1)
+ Global("LEVIER","COM021",1) 
+THEN
+ RESPONSE #100
+ SetGlobal("LEVIER","COM021",0)
+ 
+ OpenDoor("PS1")
+ CloseDoor("PS3")
+END
+
+// Taguar: Arrêt de la recherche du groupe: relance recherche *************************************************************************************************************
+IF
+ Global("TAGUAR_reveil","COM021",3)
+ GlobalTimerExpired("TAGUAR","COM021")
+ Global("TAGUAR_vaincu","COM021",0)
+ Global("TAGUAR_meurt","COM021",0)
+THEN
+ RESPONSE #100
+ ClearActions("COTAGUAR")
+ SetGlobal("TAGUAR_reveil","COM021",2)
+ 
+ //CreateCreature("COSTATE",[2600.1800],6) 
+END
+
+// Urglite et Taguar s'entretuent **************************************************************
+IF
+ Global("URGLIT_TAGUAR","COM021",2)  
+ Global("URGLI_TAGUA_combat","COM021",0)  
+THEN
+ RESPONSE #100 
+
+ SetInterrupt(FALSE)
+  SetGlobal("URGLI_TAGUA_combat","COM021",1) 
+  ActionOverride("COTAGUAR",ChangeAIScript("COTAGUA3",DEFAULT))
+  ActionOverride("COURGLIT",ChangeAIScript("COURGLI2",DEFAULT))
+  ActionOverride("COURGLIT",Enemy())
+  SmallWait(10)
+
+  //CreateCreature("MINSC",[2600.1800],6) 
+  //CreateCreature("MINSC",[2600.1800],6) 
+  //CreateCreature("MINSC",[2600.1800],6) 
+ SetInterrupt(TRUE)
+END
+
+
+// Gestion des niches ****************************************************************************************************************************************************
+// Niche1: Crâne magesteux **************************
+IF 
+ Contains("Miscp49","Niche1")
+ Global("niche1_OK","COM021",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Niche1_contenu","Com021",49)
+ SetGlobal("Niche1_objet","Com021",1)
+ SetGlobal("niche1_OK","COM021",1)
+ 
+ //PlaySound("GAM_21")
+END
+
+IF
+ Global("niche1_OK","COM021",0)
+ Global("Niche_sanction1","Com021",0)
+ OR(3)
+  Contains("Miscp46","Niche1")
+  Contains("Miscp47","Niche1")
+  Contains("Miscp48","Niche1")  
+THEN
+ RESPONSE #100
+ SetGlobal("Niche_sanction1","Com021",1)
+END
+
+/* NON UTILE
+// Réset objet bien placé qui ne l'est plus
+IF 
+ !Contains("Miscp49","Niche1")
+ Global("niche1_OK","COM021",1)
+THEN
+ RESPONSE #100
+ SetGlobal("niche1_OK","COM021",0)
+ SetGlobal("Niche_sanction1","Com021",0) 
+END
+
+// Niche 1: Objet mal placé = sanction
+IF
+ Global("niche1_OK","COM021",0)
+ Contains("Miscp46","Niche1")
+ !Global("Niche1_contenu","Com021",46)
+ Global("Niche_sanction1","Com021",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("Niche1_contenu","Com021",46)
+ SetGlobal("Niche1_objet","Com021",1)
+ SetGlobal("Niche_sanction1","Com021",1)
+END
+
+IF
+ Global("niche1_OK","COM021",0)
+ Contains("Miscp47","Niche1")
+ !Global("Niche1_contenu","Com021",47)
+ Global("Niche_sanction1","Com021",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("Niche1_contenu","Com021",47)
+ SetGlobal("Niche1_objet","Com021",1)
+ SetGlobal("Niche_sanction1","Com021",1)
+END
+
+IF
+ Global("niche1_OK","COM021",0)
+ Contains("Miscp48","Niche1")
+ !Global("Niche1_contenu","Com021",48)
+ Global("Niche_sanction1","Com021",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("Niche1_contenu","Com021",48)
+ SetGlobal("Niche1_objet","Com021",1)
+ SetGlobal("Niche_sanction1","Com021",1)
+END
+
+// objet mauvais retiré
+IF
+ Global("niche1_OK","COM021",0)
+ !Contains("Miscp46","Niche1")
+ !Contains("Miscp47","Niche1")
+ !Contains("Miscp48","Niche1") 
+ Global("Niche1_contenu","Com021",1)
+ Global("Niche_sanction1","Com021",0) 
+ Global("Niche1_objet","Com021",1)  
+THEN
+ RESPONSE #100
+ SetGlobal("Niche1_contenu","Com021",0)
+ SetGlobal("Niche1_objet","Com021",0) 
+ SetGlobal("Niche_sanction1","Com021",0)
+END
+*/
+
+// Niche2: Pierre de glace ***********
+IF 
+ Contains("Miscp47","Niche2")
+ Global("niche2_OK","COM021",0)
+THEN
+ RESPONSE #100
+ SetGlobal("niche2_OK","COM021",1) 
+ 
+ //PlaySound("GAM_21")
+END
+
+IF 
+ !Contains("Miscp47","Niche2")
+ Global("niche2_OK","COM021",1)
+THEN
+ RESPONSE #100
+ SetGlobal("niche2_OK","COM021",0)
+ SetGlobal("Niche_sanction2","Com021",0)
+END
+
+// Niche 2: Objets mal placés
+IF
+ Global("niche2_OK","COM021",0)
+ Global("Niche_sanction2","Com021",0)
+ OR(3)
+  Contains("Miscp46","Niche2")
+  Contains("Miscp48","Niche2")
+  Contains("Miscp49","Niche2")  
+THEN
+ RESPONSE #100
+ SetGlobal("Niche_sanction2","Com021",1)
+END
+
+// Niche3:  Heaume noir ************
+IF 
+ Contains("Miscp46","Niche3")
+ Global("niche3_OK","COM021",0)
+THEN
+ RESPONSE #100
+ SetGlobal("niche3_OK","COM021",1)
+ 
+ //PlaySound("GAM_21")
+END
+
+IF 
+ !Contains("Miscp46","Niche3")
+ Global("niche3_OK","COM021",1)
+THEN
+ RESPONSE #100
+ SetGlobal("niche3_OK","COM021",0)
+ SetGlobal("Niche_sanction4","Com021",0)
+END
+
+// Niche 3: Objets mal placés
+IF
+ Global("niche3_OK","COM021",0)
+ Global("Niche_sanction4","Com021",0)
+ OR(3)
+  Contains("Miscp47","Niche3")
+  Contains("Miscp48","Niche3")
+  Contains("Miscp49","Niche3")  
+THEN
+ RESPONSE #100
+ SetGlobal("Niche_sanction4","Com021",1)
+END
+
+// Niche4: anneau feu ************
+IF 
+ Contains("Miscp48","Niche4")
+ Global("niche4_OK","COM021",0)
+THEN
+ RESPONSE #100
+ SetGlobal("niche4_OK","COM021",1)
+ 
+ //PlaySound("GAM_21")
+END
+
+IF 
+ !Contains("Miscp48","Niche4")
+ Global("niche4_OK","COM021",1)
+THEN
+ RESPONSE #100
+ SetGlobal("niche4_OK","COM021",0)
+ SetGlobal("Niche_sanction4","Com021",0)
+END
+
+// Niche 4: Objets mal placés
+IF
+ Global("niche4_OK","COM021",0)
+ Global("Niche_sanction4","Com021",0)
+ OR(3)
+  Contains("Miscp46","Niche4")
+  Contains("Miscp47","Niche4")
+  Contains("Miscp49","Niche4")  
+THEN
+ RESPONSE #100
+ SetGlobal("Niche_sanction4","Com021",1)
+END
+
+
+// Les 4 objets ne sont plus en place dans les niches: les portes se referment 
+IF
+ OpenState("PS2",TRUE)
+ OR(4)
+  !Contains("Miscp49","Niche1")
+  !Contains("Miscp47","Niche2")
+  !Contains("Miscp46","Niche3")
+  !Contains("Miscp48","Niche4") 
+THEN
+ RESPONSE #100
+ PlaySound("CAS_M01")
+
+ CloseDoor("PS2")
+ 
+ /*
+ CloseDoor("GRILLE4")
+ Lock("GRILLE4")
+ */
+END
+
+/* NON UTILE remplacé par Gestion levier
+// Les 4 objets sont bien placés: ouverture du PS permettant de quitter le niveau
+IF 
+ OpenState("PS2",FALSE)
+ Contains("Miscp49","Niche1")
+ Contains("Miscp47","Niche2")
+ Contains("Miscp46","Niche3")
+ Contains("Miscp48","Niche4") 
+THEN
+ RESPONSE  #100
+ 
+ OpenDoor("PS2") 
+ UnLock("GRILLE4")
+ OpenDoor("GRILLE4")
+END
+*/
+
+
+
+/*
+// fermeture de l'entrée peu après l'arrivée du  groupe **************************************************************************************************************
+IF 
+  OpenState("GRILLE4",TRUE)		
+  Global("GRILLE4_fermee","COM021",0)
+THEN
+ RESPONSE #100
+ SetGlobal("GRILLE4_fermee","COM021",1)
+ 
+ Wait(2)
+ CloseDoor("GRILLE4") 
+ Lock("GRILLE4")
+ // son
+ 
+ Activate("COCARIS")
+ ActionOverride("COCARIS",StartDialogueNoSet([PC]))
+ 
+END
+*/
+

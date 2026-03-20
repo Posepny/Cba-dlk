@@ -1,0 +1,402 @@
+IF
+  Global("MINSC","COM019",0)
+THEN
+  RESPONSE #100 
+  SetGlobal("MINSC","COM019",1)
+  CreateCreature("COSTATE",[574.685],6)
+END
+
+
+// Islendra n'a pas le droit de monter à l'étage. ******************************************************************************************************************
+IF
+ AreaCheckObject("COM019","COISLEN") 
+THEN 
+ RESPONSE #100
+ DisplaystringHead("COISLEN",@3)
+ Deactivate("COISLEN")
+ ActionOverride("COISLEN",destroyself())
+ SetGlobal("COM020_COISLEN_DESC","GLOBAL",1)
+ 
+ Createcreature("MINSC",[574.685],6)  
+END
+
+
+// Accès au sous_sol KO *********************************************************************************************************************************************
+IF
+ Global("Acces_COM019","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Acces_COM019","GLOBAL",0)
+  
+ TriggerActivation("COM020",FALSE)
+ TriggerActivation("COM020_KO",TRUE)
+END
+
+// Accès au sous_sol OK
+IF
+ Global("Acces_COM019","GLOBAL",2)
+THEN
+ RESPONSE #100
+ SetGlobal("Acces_COM019","GLOBAL",0)
+  
+ TriggerActivation("COM020",TRUE)
+ TriggerActivation("COM020_KO",FALSE) 
+END
+
+
+
+// Pierre orange et chaude déposée dans l'effigie 3: ouverture Salle porte Kael ******************************************************************************************
+IF
+  OpenState("GRILLE2",FALSE)
+  Contains("MISCP30","EFFIGIE03")
+THEN
+  RESPONSE #100  
+  
+  Unlock("GRILLE2")  
+  OpenDoor("GRILLE2")   
+  
+  continue() 
+END
+
+// Pierre non déposée dans l'effigie 3
+IF
+  OpenState("GRILLE2",TRUE)
+  !Contains("MISCP30","EFFIGIE03")
+THEN
+  RESPONSE #100  
+  
+  CloseDoor("GRILLE2")
+  Lock("GRILLE2")
+  
+  continue() 
+END
+
+
+// Pierre bleu étoile déposée dans l'effigie 4: arrêt pièges élémentaux ***************************************************************************************************
+IF
+  Contains("MISCP34","EFFIGIE04")
+THEN
+  RESPONSE #100  
+  TriggerActivation("COT0198A",FALSE)  
+  TriggerActivation("COT0198B",FALSE)  
+  TriggerActivation("COT0198C",FALSE)    
+  TriggerActivation("COT0198D",FALSE)  
+  
+  continue() 
+END
+
+// Pierre non déposée dans l'effigie 4
+IF
+  !Contains("MISCP34","EFFIGIE04")
+THEN
+  RESPONSE #100  
+  TriggerActivation("COT0198A",TRUE)  
+  TriggerActivation("COT0198B",TRUE)  
+  TriggerActivation("COT0198C",TRUE)    
+  TriggerActivation("COT0198D",TRUE)  
+  
+  continue() 
+END
+
+
+// Pierre rouge sombre déposée dans l'effigie 7: ouverture salle des morts ************************************************************************************************
+IF
+  OpenState("GRILLE1",FALSE)
+  Contains("MISCP33","EFFIGIE07")
+THEN
+  RESPONSE #100  
+  Unlock("GRILLE1")  
+  OpenDoor("GRILLE1")   
+  
+  continue() 
+END
+
+// Pierre non déposée dans l'effigie 7
+IF  
+  OpenState("GRILLE1",TRUE)
+  !Contains("MISCP33","EFFIGIE07")
+THEN
+  RESPONSE #100  
+  CloseDoor("GRILLE1")
+  Lock("GRILLE1")
+  
+  continue() 
+END
+
+
+// Pierre grenat déposée dans l'effigie 8: arrêt piège crâne et rûnes ******************************************************************************************************
+IF
+  Contains("MISCP28","EFFIGIE08")
+THEN
+  RESPONSE #100  
+  TriggerActivation("COT0196A",FALSE)  
+  TriggerActivation("COT0196B",FALSE)  
+  TriggerActivation("COT0196C",FALSE)  
+  
+  TriggerActivation("COT0197A",FALSE)  
+  TriggerActivation("COT0197B",FALSE)  
+  TriggerActivation("COT0197C",FALSE)    
+  TriggerActivation("COT0197D",FALSE)  
+  
+  continue()  
+END
+
+// Pierre non déposée dans l'effigie 8
+IF
+  //Global("effigie08","COM019",1)
+  !Contains("MISCP28","EFFIGIE08")
+THEN
+  RESPONSE #100  
+  TriggerActivation("COT0196A",TRUE)  
+  TriggerActivation("COT0196B",TRUE)  
+  TriggerActivation("COT0196C",TRUE)  
+  
+  TriggerActivation("COT0197A",TRUE)  
+  TriggerActivation("COT0197B",TRUE)  
+  TriggerActivation("COT0197C",TRUE)    
+  TriggerActivation("COT0197D",TRUE)  
+  
+  continue() 
+END
+
+
+// Elvina est en colère. Galik apparait ************************************************************************************************************************************
+IF
+ Global("statue_elvina_Galik","COM019",1)
+THEN
+ RESPONSE #100
+ SetGlobal("statue_elvina_Galik","COM019",2)
+ //CreateCreature("MINSC",[574.685],6)
+ CreateCreature("COGalik",[1065.365],10)
+ CreateVisualEffectObject("gwshair7","COGalik")
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+IF
+ GlobalTimerExpired("T_COISLEN_chasse","GLOBAL")
+ Global("COISLEN_chasse","GLOBAL",1)
+ !AreaCheckObject("COM020",PLAYER1)
+ !AreaCheckObject("COM020",PLAYER2)
+ !AreaCheckObject("COM020",PLAYER3)
+ !AreaCheckObject("COM020",PLAYER4)
+ !AreaCheckObject("COM020",PLAYER5)
+ !AreaCheckObject("COM020",PLAYER6)
+THEN
+ RESPONSE #100
+ ClearActions("COISLEN")
+ 
+ 
+END
+
+
+// Islendra est en chasse et aucun player dans le sous-sol: les portes s'ouvrent à nouveau
+IF
+ Global("sous_sol_ferme","GLOBAL",1) 
+ !AreaCheckObject("COM020",PLAYER1)
+ !AreaCheckObject("COM020",PLAYER2)
+ !AreaCheckObject("COM020",PLAYER3)
+ !AreaCheckObject("COM020",PLAYER4)
+ !AreaCheckObject("COM020",PLAYER5)
+ !AreaCheckObject("COM020",PLAYER6)
+THEN 
+ RESPONSE #100
+ SetGlobal("sous_sol_ferme","GLOBAL",5)
+ 
+ TriggerActivation("COM020",TRUE)
+ TriggerActivation("COM020_KO",FALSE) 
+ 
+ Createcreature("MINSC",[574.685],6)
+ Createcreature("MINSC",[574.685],6)
+END
+
+
+// Téléportation duel Islendra ****************************************************************************************************************************************************
+IF
+ Global("COM020_PNJ_capture","GLOBAL",1)
+ AreaCheckObject("COM019","COISLEN") 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_capture","GLOBAL",2)
+ 
+ 
+ ActionOverride("COISLEN",DestroyItem("arop01"))
+ Wait(1)
+ ActionOvErride(Lastseenby("COISLEN"),LeaveAreaLUA("COM020","",[360.665],15)) // Téléportation de la cible  
+END
+
+// Arrivée de Islendra à son tour
+IF
+ Global("COM020_PNJ_capture","GLOBAL",2)
+ AreaCheckObject("COM019","COISLEN") 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_capture","GLOBAL",3)
+ 
+ Createcreature("MINSC",[574.685],6)
+ Createcreature("MINSC",[574.685],6)
+ Createcreature("MINSC",[574.685],6)
+ 
+ CreateVisualEffectObject("SPMAZE1","COISLEN")
+ Wait(1)
+ ActionOvErride("COISLEN",LeaveAreaLUA("COM020","",[250.825],1))
+END 
+
+// Glabuk apparait dans la zone de duel 
+IF
+ Global("Glabuk_apparition","GLOBAL",1)
+ AreaCheckObject("COM019","COISLEN") 
+THEN
+ RESPONSE #100
+ SetGlobal("Glabuk_apparition","GLOBAL",2)
+ 
+ ActionOverride("cobasil1",JumpToPoint([250.825]))
+ ForceSpell("cobasil1",GREY_MUSHROOM)
+END
+*/
+
+/*
+IF
+  Global("Chute_trou1","GLOBAL",1) 
+  Global("Active_corde1","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Active_corde1","GLOBAL",1)
+  
+  // Activation gestion de la corde
+  TriggerActivation("COT0191I",TRUE)
+
+  CreateCreature("MINSC",[574.685],6)  
+END
+
+IF
+  Global("Chute_trou2","GLOBAL",1) 
+  Global("Active_corde2","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Active_corde2","GLOBAL",1)
+  
+  // Activation gestion de la corde
+  TriggerActivation("COT0192I",TRUE)
+
+  CreateCreature("MINSC",[574.685],6) 
+END
+
+IF
+  Global("Chute_trou3","GLOBAL",1) 
+  Global("Active_corde3","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Active_corde3","GLOBAL",1)
+  
+  // Activation gestion de la corde
+  TriggerActivation("COT0193I",TRUE)
+
+  CreateCreature("MINSC",[574.685],6)  
+END
+
+IF
+  Global("Chute_trou4","GLOBAL",1) 
+  Global("Active_corde41","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Active_corde4","GLOBAL",1)
+  
+  // Activation gestion de la corde
+  TriggerActivation("COT0194I",TRUE)
+
+  CreateCreature("MINSC",[574.685],6) 
+END
+
+IF
+  Global("Chute_trou5","GLOBAL",1) 
+  Global("Active_corde5","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Active_corde5","GLOBAL",1)
+  
+  // Activation gestion de la corde
+  TriggerActivation("COT0195I",TRUE)
+
+  CreateCreature("MINSC",[574.685],6)  
+END
+*/
+
+/*
+// Pierre déposée dans l'effigie 1: arrêt piège éclair **********
+IF
+  //Global("effigie01","COM019",1)
+  Contains("MISCP27","EFFIGIE01")  
+THEN
+  RESPONSE #100  
+  //SetGlobal("effigie01","COM019",0)  
+  //CreateCreature("MINSC",[574.685],6) 
+  
+  TriggerActivation("COT019C",FALSE) 
+  
+  continue() 
+END
+
+// Pierre non déposée dans l'effigie 1
+IF
+  //Global("effigie01","COM019",1)
+  !Contains("MISCP27","EFFIGIE01")
+THEN
+  RESPONSE #100  
+  TriggerActivation("COT019C",TRUE) 
+  
+  continue() 
+END
+
+// Pierre violette déposée dans l'effigie 2: arrêt piège incinérateur **********
+IF
+  Contains("MISCP29","EFFIGIE02")
+THEN
+  RESPONSE #100      
+  TriggerActivation("COT019E",FALSE)  
+  CreateCreature("MINSC",[574.685],6) 
+  CreateCreature("MINSC",[574.685],6)  
+  
+  continue() 
+END
+
+// Pierre non déposée dans l'effigie 2
+IF
+  !Contains("MISCP29","EFFIGIE02")
+THEN
+  RESPONSE #100  
+  TriggerActivation("COT019E",TRUE)  
+  
+  continue() 
+END
+*/

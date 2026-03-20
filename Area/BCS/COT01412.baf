@@ -1,0 +1,39 @@
+IF
+  IsOverMe([ANYTHING])
+  Global("COT01412","GLOBAL",0)
+  //Global("Crane_place","GLOBAL",0)
+THEN
+  RESPONSE #3
+  SetGlobal("COT01412","GLOBAL",1)      
+  CreateCreature("COBATT",[-1.-1],0)
+  CreateVisualEffectObject("gwshair7","COBATT")
+  
+  RESPONSE #1
+  SetGlobal("COT01412","GLOBAL",1)
+  CreateCreature("COFANT4",[-1.-1],0)
+  CreateVisualEffectObject("gwshair7","COFANT4")
+  CreateCreature("COFANT3",[-1.-1],0)
+  CreateVisualEffectObject("gwshair7","COFANT3")
+  
+  RESPONSE #1
+  SetGlobal("COT01412","GLOBAL",1)
+  CreateCreature("COFANT1",[-1.-1],0) 
+  CreateVisualEffectObject("gwshair7","COFANT1")   
+  CreateCreature("COFANT2",[-1.-1],0)
+  CreateVisualEffectObject("gwshair7","COFANT2")
+  
+  RESPONSE #1
+  SetGlobal("COT01412","GLOBAL",1)
+  CreateCreature("COBATT",[-1.-1],0)
+  CreateVisualEffectObject("gwshair7","COBATT")
+  CreateCreature("COFANT2",[-1.-1],0)
+  CreateVisualEffectObject("gwshair7","COFANT2")  
+END
+
+IF
+ Global("COT01412","GLOBAL",1)
+THEN
+ RESPONSE #100
+ WAIT(100)
+ SetGlobal("COT01412","GLOBAL",0)
+END

@@ -1,0 +1,7 @@
+IF
+  Entered([0]) 
+  Global("Crane_place","GLOBAL",0)
+THEN
+  RESPONSE #100
+  ForceSpell(Lasttrigger,WIZARD_AGANNAZAR_SCORCHER)
+END

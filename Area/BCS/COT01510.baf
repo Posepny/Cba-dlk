@@ -1,0 +1,16 @@
+ // La porte se ferme après qu'un PNJ se trouve dans la salle aux Wyverns.
+IF
+  IsOverMe([0])  
+  OpenState("DOOR0001",TRUE)
+  OR(2)
+   Global("COT01501","COM015",1) 
+   Global("COT01501","COM015",2) 
+THEN
+  RESPONSE #100  
+  SetGlobal("COT01501","COM015",2) 
+  
+  CloseDoor("DOOR0001")
+  PlaySound("EFF_M15")
+  SetGlobalTimer("Com015_PS_ferme","COM015",15)
+END
+

@@ -1,0 +1,71 @@
+// Sarcophage ouvert
+// restes avec le groupe
+// Ekilis non allié OU Ekilis est mort (allié ou non): Massena explique pour le sarcophage
+IF
+  //Entered([PC]) 
+  ISOverMe([0])
+  GlobalLT("Massena_sarcophage","Global",2)
+  HasItem("Skelp01",LastTrigger)  
+  Global("Massena_sarcophage_demande","Global",0)
+  Global("ekilis_mort_demande","Global",0) 
+  OR(2)
+    Global("ekilis_alliance","Global",0)
+    Global("ekilis_mort","Global",1)
+THEN
+  RESPONSE #100
+  SetGlobal("Massena_sarcophage_demande","Global",1)
+    
+                                                                 // Createcreature("MINSC",[1960.790],10) 
+  Activate("COMASSE1") 
+  smallwait(10)
+  ActionOverride("COMASSE1",FaceObject([PC]))
+  wait(1)
+  ActionOverride("COMASSE1",StartDialogueNoSet(LastTrigger))   
+END
+
+
+// Sarcophage ouvert
+// restes avec le groupe
+// Ekilis allié et il est en vie, et dans le coin
+// Massena n'a pas encore demandé sa mort: Massena demande la mort de Ekilis 
+IF  
+  //Entered([PC]) 
+  ISOverMe([0])
+  GlobalLT("Massena_sarcophage","Global",2)
+  HasItem("Skelp01",LastTrigger)
+  Global("ekilis_alliance","Global",1)
+  Global("ekilis_mort","Global",0)
+  Global("ekilis_mort_demande","Global",0)
+  Range("COEKILIS",50)
+THEN
+  RESPONSE #100
+  SetGlobal("ekilis_mort_demande","Global",1)  
+                                                                   // Createcreature("MINSC",[1960.790],10) 
+  Activate("COMASSE1") 
+  smallwait(10)
+  ActionOverride("COMASSE1",FaceObject([PC]))
+  wait(1)
+  ActionOverride("COMASSE1",StartDialogueNoSet(LastTrigger))   
+END
+
+
+// Sarcophage ouvert
+// restes avec le groupe
+// Ekilis est mort à la demande de Massena: Ekilis est tué et Massena explique pour le sarcophage
+IF
+  //Entered([PC]) 
+  ISOverMe([0])
+  HasItem("Skelp01",LastTrigger)
+  GlobalLT("Massena_sarcophage","Global",2)
+  Global("ekilis_mort_demande","Global",2)
+  Global("ekilis_mort","Global",1)
+THEN
+  RESPONSE #100
+  SetGlobal("ekilis_mort_demande","Global",3)
+                                                               // Createcreature("MINSC",[1960.790],10) 
+  Activate("COMASSE1") 
+  smallwait(10)
+  ActionOverride("COMASSE1",FaceObject([PC]))
+  wait(1)
+  ActionOverride("COMASSE1",StartDialogueNoSet(LastTrigger))   
+END

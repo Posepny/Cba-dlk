@@ -1,0 +1,23 @@
+IF
+  Entered([0])
+  Global("TP013D","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("TP013D","GLOBAL",1)      
+  CreateCreature("COFANT2",[-1.-1],0)
+  CreateVisualEffectObject("gwshair7","COFANT2")
+  
+  RESPONSE #100
+  SetGlobal("TP013D","GLOBAL",1)      
+  CreateCreature("COFANT1",[-1.-1],0)  
+  CreateVisualEffectObject("gwshair7","COFANT1")
+END
+
+IF
+ Global("TP013D","GLOBAL",1)
+THEN
+ RESPONSE #100
+ WAIT(100)
+ SetGlobal("TP013D","GLOBAL",0)
+END
+

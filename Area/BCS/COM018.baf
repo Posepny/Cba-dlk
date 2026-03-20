@@ -1,0 +1,103 @@
+IF
+ Global("com018_init","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("com018_init","GLOBAL",1)
+ 
+ Createcreature("COTANAR1",[176.663],10) 
+ Createcreature("COCAMBI1",[1660.415],5)  
+ 
+ Createcreature("COSKE_1",[1660.1085],10) 
+ Createcreature("COSKE_2",[1985.925],10) 
+ Createcreature("COSKE_3",[2280.770],10) 
+ 
+ ContainerEnable("Coffre01",FALSE)	
+END
+
+// gestion de la grille1 en fonction de la position du levier **************************************************************************
+IF
+ OpenState("LEVIER1",TRUE)
+ OpenState("GRILLE1",FALSE)
+THEN
+ RESPONSE #100
+ 
+ OpenDoor("GRILLE1")
+END
+
+IF
+ OpenState("LEVIER1",FALSE)
+ OpenState("GRILLE1",TRUE)
+THEN
+ RESPONSE #100
+ 
+ CloseDoor("GRILLE1")  
+END
+
+// Piège: Fermeture de la grille et ouverture du PS
+IF
+ OpenState("LEVIER1",TRUE)
+ GlobalGT("Grille1Piege","COM018",1)
+THEN
+ RESPONSE #100 
+
+ PlaySound("AMB_D01A")
+ CloseDoor("GRILLE1")
+ CloseDoor("LEVIER1")
+
+ Lock("LEVIER1")
+ OpenDoor("PS1")
+  
+ Createcreature("SKELET_C",[1000.1000],10) 
+ Createcreature("SKELET_C",[1000.1000],10) 
+ Createcreature("SKELET_C",[1000.1000],10) 
+ 
+ Createcreature("GHOUL01",[1020.1050],15)  
+ Createcreature("GHAST",[1020.1050],15)  
+ Createcreature("GHOUL01",[1020.1050],15)  
+ Createcreature("GHAST",[1020.1050],15)   
+ 
+ OpenDoor("PS1")   
+END
+
+
+// gestion du PS coffre en fonction de la position du levier2 *******************************************************************************
+IF
+ OpenState("LEVIER2",TRUE)
+ OpenState("PS2",FALSE)
+THEN
+ RESPONSE #100
+ //Createcreature("minsc",[2178.546],10) 
+ 
+ opendoor("PS2")
+ Smallwait(10)
+ ContainerEnable("Coffre01",TRUE)	
+END
+
+IF
+ OpenState("LEVIER2",FALSE)
+ OpenState("PS2",TRUE)
+THEN
+ RESPONSE #100
+
+ //Createcreature("minsc",[2178.546],10) 
+ //Createcreature("minsc",[2178.546],10) 
+
+ CloseDoor("PS2")  
+ Smallwait(10)
+ ContainerEnable("Coffre01",FALSE)	
+END
+
+// Grille 3:  Si la porte est ouverte sur l'autre carte: elle s'ouvre sans bruit pour être cohérent sur les accès *******************************************************************************
+IF
+ Global("COM018_grille3","GLOBAL",1)
+ OpenState("GRILLE3",FALSE)
+THEN 
+ RESPONSE #100
+
+ // grille ouverte
+ Playsound("AM0301B3")
+ OpenDoor("GRILLE3")
+ //TriggerActivation("COM019A",TRUE)
+END
+
+

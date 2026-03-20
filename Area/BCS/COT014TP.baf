@@ -1,0 +1,212 @@
+// si le pnj possède le collier de perles de bhaal alors téléportation au niveau 1B
+IF
+  Isoverme(PLAYER1)
+  HasItem("AMUP02",PLAYER1)
+  Global("TimeTP","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",1)
+  SetGlobal("TimeTP_EKI","GLOBAL",1)
+
+/*
+  SetGlobal("CIBLE_TP","GLOBAL",1) 
+//createcreature("MINSC",[750.500],10) 
+  SetInterrupt(FALSE)  
+  PlaySound("CAS_P07")
+  ForceSpellRES("com014TP",PLAYER1)
+  SetInterrupt(TRUE)   
+*/ 
+
+  SetInterrupt(FALSE)
+   ForceSpellRES("COTPEND",PLAYER1) 
+   PlaySound("CAS_P07")
+   Wait(1)
+   ActionOverride(Player1,LeaveAreaLUA("COM015","",[3000.1784],10))  
+  SetInterrupt(TRUE)
+END
+
+IF
+  Isoverme(PLAYER2)
+  HasItem("AMUP02",PLAYER2)
+  Global("TimeTP","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",1)
+ 
+  SetInterrupt(FALSE)
+   ForceSpellRES("COTPEND",PLAYER2) 
+   PlaySound("CAS_P07")
+   Wait(1)
+   ActionOverride(PLAYER2,LeaveAreaLUA("COM015","",[3000.1784],10))  
+  SetInterrupt(TRUE)
+END
+
+IF
+  Isoverme(PLAYER3)
+  HasItem("AMUP02",PLAYER3)
+  Global("TimeTP","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",1)
+
+  SetInterrupt(FALSE)
+   ForceSpellRES("COTPEND",PLAYER3) 
+   PlaySound("CAS_P07")
+   Wait(1)
+   ActionOverride(PLAYER3,LeaveAreaLUA("COM015","",[3000.1784],10))  
+  SetInterrupt(TRUE)
+END
+
+IF
+  Isoverme(PLAYER4)
+  HasItem("AMUP02",PLAYER4)
+  Global("TimeTP","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",1)
+
+  SetInterrupt(FALSE)
+   ForceSpellRES("COTPEND",PLAYER4) 
+   PlaySound("CAS_P07")
+   Wait(1)
+   ActionOverride(PLAYER4,LeaveAreaLUA("COM015","",[3000.1784],10))  
+  SetInterrupt(TRUE)
+END
+
+IF
+  Isoverme(PLAYER5)
+  HasItem("AMUP02",PLAYER5)
+  Global("TimeTP","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",1)
+
+  SetInterrupt(FALSE)
+   ForceSpellRES("COTPEND",PLAYER5) 
+   PlaySound("CAS_P07")
+   Wait(1)
+   ActionOverride(PLAYER5,LeaveAreaLUA("COM015","",[3000.1784],10))  
+  SetInterrupt(TRUE)  
+END
+
+IF
+  Isoverme(PLAYER6)
+  HasItem("AMUP02",PLAYER6)
+  Global("TimeTP","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",1)
+  SetGlobal("TimeTP_EKI","GLOBAL",1)
+
+  SetInterrupt(FALSE)
+   ForceSpellRES("COTPEND",PLAYER6) 
+   PlaySound("CAS_P07")
+   Wait(1)
+   ActionOverride(PLAYER6,LeaveAreaLUA("COM015","",[3000.1784],10))  
+  SetInterrupt(TRUE)  
+END
+
+// Animation à l'arrivée *******************************************
+IF
+ Isoverme(PLAYER1)
+ HasItem("AMUP02",PLAYER1)
+ Global("TimeTP","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("TimeTP","GLOBAL",2)
+
+/*
+ SetInterrupt(FALSE)
+ PlaySound("CAS_P07")
+ ForceSpellRES("com014TP",PLAYER1)
+ SetInterrupt(TRUE)
+*/
+
+ SetInterrupt(FALSE)
+  ForceSpellRES("COTPEND",PLAYER1) 
+  PlaySound("CAS_P07")
+  Wait(6)
+  SetGlobal("TimeTP","GLOBAL",0) 
+ SetInterrupt(TRUE)
+END
+
+IF
+ Isoverme(PLAYER2)
+ HasItem("AMUP02",PLAYER2)
+ Global("TimeTP","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("TimeTP","GLOBAL",2)
+ 
+ SetInterrupt(FALSE)
+  ForceSpellRES("COTPEND",PLAYER2) 
+  PlaySound("CAS_P07")
+  Wait(6)
+  SetGlobal("TimeTP","GLOBAL",0) 
+ SetInterrupt(TRUE)
+END
+
+IF
+ Isoverme(PLAYER3)
+ HasItem("AMUP02",PLAYER3)
+ Global("TimeTP","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("TimeTP","GLOBAL",2)
+ 
+ SetInterrupt(FALSE)
+  ForceSpellRES("COTPEND",PLAYER3) 
+  PlaySound("CAS_P07")
+  Wait(6)
+  SetGlobal("TimeTP","GLOBAL",0) 
+ SetInterrupt(TRUE)
+END
+
+IF
+ Isoverme(PLAYER4)
+ HasItem("AMUP02",PLAYER4)
+ Global("TimeTP","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("TimeTP","GLOBAL",2)
+
+ SetInterrupt(FALSE)
+  ForceSpellRES("COTPEND",PLAYER4) 
+  PlaySound("CAS_P07")
+  Wait(6)
+  SetGlobal("TimeTP","GLOBAL",0) 
+ SetInterrupt(TRUE)
+END
+
+IF
+ Isoverme(PLAYER5)
+ HasItem("AMUP02",PLAYER5)
+ Global("TimeTP","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("TimeTP","GLOBAL",2)
+ 
+ SetInterrupt(FALSE)
+  ForceSpellRES("COTPEND",PLAYER5) 
+  PlaySound("CAS_P07")
+  Wait(6)
+  SetGlobal("TimeTP","GLOBAL",0) 
+ SetInterrupt(TRUE)
+END
+
+IF
+ Isoverme(PLAYER6)
+ HasItem("AMUP02",PLAYER6)
+ Global("TimeTP","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("TimeTP","GLOBAL",2)
+ 
+  SetInterrupt(FALSE)
+  ForceSpellRES("COTPEND",PLAYER6) 
+  PlaySound("CAS_P07")
+  Wait(6)
+  SetGlobal("TimeTP","GLOBAL",0) 
+ SetInterrupt(TRUE)
+END
+

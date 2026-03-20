@@ -1,0 +1,193 @@
+// Transition BG1 -> Mod Protecteur de Baldur si pas de sauvegarde
+IF
+  Global("Protecteur_baldur","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Chapter","GLOBAL",9)
+    SetGlobal("Invitation","GLOBAL",1)
+    SetGlobal("EnteredPalace","GLOBAL",1)
+    SetGlobal("ENDOFBG1","GLOBAL",2)
+
+    SetGlobal("MOD_PDB_acte","GLOBAL",1)
+    SetGlobal("MOD_PDB_chapitre","GLOBAL",1)
+    SetGlobal("PDB","GLOBAL",1)
+    SetGlobal("Protecteur_baldur","GLOBAL",1)
+    SetGlobal("Mod_CDB","GLOBAL",1)
+
+END
+
+IF
+  Global("PLAYER1_LVL1_UP","GLOBAL",0)
+  Level(Player1,1)
+THEN
+  RESPONSE #100
+    SetGlobal("PLAYER1_LVL1_UP","GLOBAL",1)
+    AddXPObject(Player1,125000)
+    GiveGoldForce(5000)
+END
+
+
+// arrivée carte
+IF
+  Global("int11","GLOBAL",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("int11","GLOBAL",1) 
+
+ // ActionOverride(Player1,LeaveAreaLUA("COM017","",[3648.550],10)) 
+END
+
+
+/*  
+//Arrivée CARTE ****************************************************************************************************************************************************
+
+
+// arrivée carte
+IF
+  Global("int11","GLOBAL",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("int11","GLOBAL",1) 
+
+ // Salle 5: la salle des morts
+ ActionOverride(Player1,LeaveAreaLUA("COM018","",[300.323],10)) 
+
+ // Niveau sarcophage:
+ //ActionOverride(Player1,LeaveAreaLUA("COM016","",[300.600],10)) 
+
+createcreature("GIBBER_A",[1500.565],10) 
+createcreature("JAHEIRP",[1500.565],10) 
+createcreature("dynahep",[1500.565],10) 
+createcreature("edwinp",[1500.565],10) 
+
+
+ // Combat Sarevok
+  ActionOverride(Player1,LeaveAreaLUA("AR7225","",[757.900],10)) 
+  SetGlobal("SarevokBehavior","GLOBAL",1)
+
+//Heaume et la cape
+ ActionOverride(Player1,LeaveAreaLUA("AR7216","",[757.493],10)) 
+
+
+  // Cave
+  
+  // souterrain
+
+ // Escalier en colimaçon 
+ ActionOverride(Player1,LeaveAreaLUA("COM012","",[143.206],10)) 
+ ActionOverride(Player2,LeaveAreaLUA("COM012","",[143.206],10))
+ ActionOverride(Player3,LeaveAreaLUA("COM012","",[143.206],10))
+ ActionOverride(Player4,LeaveAreaLUA("COM012","",[143.206],10))
+ ActionOverride(Player5,LeaveAreaLUA("COM012","",[143.206],10)) 
+ ActionOverride(Player6,LeaveAreaLUA("COM012","",[143.206],10)) 
+  
+ // Hall d'entrée
+ ActionOverride(Player1,LeaveAreaLUA("COM013","",[660.660],10))  
+ 
+ // Niveau 1A: herse
+ ActionOvErride(Player1,LeaveAreaLUA("COM014","",[3500.2530],10)) 
+ 
+ // Niveau 1A: EKILIS
+ ActionOvErride(Player1,LeaveAreaLUA("COM014","",[3800.1170],10)) 
+   
+ // Niveau 1A: teleport amulette
+ actionOvErride(Player1,LeaveAreaLUA("COM014","",[660.640],10))
+ 
+ // Niveau 1A:
+ ActionOverride(Player1,LeaveAreaLUA("COM014","",[1130.2130],10)) 
+ 
+ // Niveau 1B: entrée
+ ActionOverride(Player1,LeaveAreaLUA("COM015","",[732.1400],10)) 
+ 
+ // Niveau 1B: devant la grille
+ ActionOverride(Player1,LeaveAreaLUA("COM015","",[1700.700],10)) 
+
+ 
+ // Niveau sarcophage:
+ ActionOverride(Player1,LeaveAreaLUA("COM016","",[300.600],10)) 
+ 
+ // Niveau 2:
+ ActionOverride(Player1,LeaveAreaLUA("COM017","",[3648.550],10)) 
+ 
+ //Createcreature("MINSC",[3800.1170],10) 
+ 
+ // Niveau epreuves
+ // Salle 1 & 2
+ ActionOverride(Player1,LeaveAreaLUA("COM018","",[850.1250],10)) 
+ 
+ // Salle 3: damier
+ ActionOverride(Player1,LeaveAreaLUA("COM019","",[560.560],10)) 
+
+ // Salle 4: la salle sous-sol
+ ActionOverride(Player1,LeaveAreaLUA("COM020","",[400.450],10)) 
+ ActionOverride(Player1,LeaveAreaLUA("AR6560","",[100.100],10)) 
+
+ // Salle 5: la salle des morts
+ ActionOverride(Player1,LeaveAreaLUA("COM021","",[1168.323],10)) 
+ 
+ // Salle 6: la salle Kael
+ ActionOverride(Player1,LeaveAreaLUA("COM022","",[100.100],10)) 
+  
+ // Salle 7: Enigmes
+ ActionOverride(Player1,LeaveAreaLUA("COM023","",[1400.720],10)) 
+ ActionOverride(Player2,LeaveAreaLUA("COM023","",[1400.720],10)) 
+ 
+ // Salle 8: combat final
+ ActionOverride(Player1,LeaveAreaLUA("COM024","",[1000.1000],10)) 
+ 
+ // Salle 9: Cespenar
+ ActionOverride(Player1,LeaveAreaLUA("COM025","",[500.610],10)
+*/
+
+
+
+/*
+createcreature("JAHEIRP",[1500.565],10) 
+createcreature("dynahep",[1500.565],10) 
+createcreature("edwinp",[1500.565],10) 
+createcreature("YESLIC5",[1500.565],10) 
+wait(5)
+AddXPObject("YESLICK",100000) 
+Playsound("COM02101")
+
+wait(5)
+
+createcreature("COFANT1",[1500.565],10) 
+createcreature("COFANT1",[1500.565],10) 
+createcreature("COFANT1",[1500.565],10) 
+
+ 
+ createcreature("COBHAAL",[1400.565],10)
+ //createcreature("MINSC",[1500.565],10)
+ //ActionOverride("MINSC",ForceSpellRes("COBM","COBHAAL")) 
+ 
+ continue() 
+END
+*/
+
+/*
+IF
+ Dead("COBHAAL")
+ Global("a","GLOBAL",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("a","GLOBAL",1) 
+ 
+ //createcreature("MINSC",[1500.565],10)
+ //createcreature("MINSC",[1500.565],10) 
+END
+*/
+
+
+ /*
+ Global("int4","GLOBAL",0) 
+OR(8)
+ SpellCast("ANOMEN","CLERIC_CURE_LIGHT_WOUNDS") 
+ //SpellCast("MINSC","CLERIC_CURE_LIGHT_WOUNDS") 
+ //SpellCast("CLERIC_CURE_LIGHT_WOUNDS","anomen9") 
+ //SpellCast("CLERIC_CURE_LIGHT_WOUNDS","MINSC") 
+ SpellCastOnme("anomen9","CLERIC_CURE_LIGHT_WOUNDS")
+ //SpellCastOnme("MINSC","CLERIC_CURE_LIGHT_WOUNDS")
+ //SpellCastOnme("CLERIC_CURE_LIGHT_WOUNDS","anomen9") 
+ //SpellCastOnme("CLERIC_CURE_LIGHT_WOUNDS","MINSC")  
+ */

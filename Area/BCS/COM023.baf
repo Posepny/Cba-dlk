@@ -1,0 +1,229 @@
+IF
+ Global("COM023_init","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM023_init","COM023",1)
+  
+ // Coffre non visible
+ ContainerEnable("Coffre01",FALSE)  
+ 
+ // L'écran de feu 1 actif
+ AmbientActivate("Wall1",TRUE)
+ AmbientActivate("Wall2",TRUE)
+ SoundActivate("MURFLAM1",TRUE)
+ 
+ // le groupe découvre la carte
+ SetGlobaltimer("MSG_Sphinx","COM023",10)
+END
+
+// Le charname va dans la salle Kael: arrêt TS
+IF
+ Global("COM022_TS","GLOBAL",1) 
+ Global("COM022_TS_activ","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM022_TS_activ","COM023",1)
+  
+ //CreateCreature("MINSC",[1200.600],6) // Temoin
+ //CreateCreature("MINSC",[1200.600],6)
+ //CreateCreature("MINSC",[1200.600],6) 
+ 
+ Wait(1)
+ TriggerActivation("COM022",TRUE) // Travel pour tous
+ TriggerActivation("COT023TS",FALSE) // Travel pour Player1 
+END
+
+
+// DEBUT Gestion de la grille Salle Enigme - Salle Bassins ***************************************************************************************************************************
+// 1iere arrivée par TP sur la carte: info bruit ouverture de la grille vers COM022 KAEL
+IF
+ Global("COM022_grille","GLOBAL",0)
+ OR(6)
+  Global("P1_arrivee","COM023",1)
+  Global("P2_arrivee","COM023",1)
+  Global("P3_arrivee","COM023",1)
+  Global("P4_arrivee","COM023",1)
+  Global("P5_arrivee","COM023",1)
+  Global("P6_arrivee","COM023",1)
+THEN
+ RESPONSE #100
+ SetGlobal("COM022_grille","GLOBAL",1) // La grille Enigme - Kael est ouverte
+ Wait(1)
+  
+ PlaySound("AM0301B3")
+ Wait(1)
+ Createcreature("COSTAINV",[1630.860],10)
+ DisplayString("COSTAINV",@2) 
+ TriggerActivation("COM022",FALSE) // Travel pour tous
+ TriggerActivation("COT023TS",TRUE) // Travel pour Player1 par défaut 
+END
+
+// La grille s'ouvre dans la salle Kael et un PNJ passe la porte: activation passage sans info
+IF
+ Global("COM022_grille","GLOBAL",1)
+ Global("COM022_TS","GLOBAL",0)
+ Global("COM022_TS_inactiv","COM023",0)
+ THEN
+ RESPONSE #100
+ SetGlobal("COM022_TS_inactiv","COM023",1)
+ 
+ TriggerActivation("COM022",FALSE) // Travel pour tous
+ TriggerActivation("COT023TS",TRUE) // Travel pour Player1 par défaut
+ 
+ //PlaySound("COBOO1") // Temoin
+END
+// FIN Gestion de la grille Salle Enigme - Salle Bassins ***************************************************************************************************************************
+
+
+// TEST si le groupe est au complet ********************************************************************************************************************************************
+IF
+ GlobaltimerExpired("MSG_Sphinx","COM023")
+ NumInParty(1)
+ AreaCheckObject("COM023",PLAYER1)
+ Global("gpe_complet","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("gpe_complet","COM023",1)
+
+ //CreateCreature("MINSC",[1200.600],6) 
+END
+
+IF
+ GlobaltimerExpired("MSG_Sphinx","COM023")
+ NumInParty(2)
+ AreaCheckObject("COM023",PLAYER1)
+ AreaCheckObject("COM023",PLAYER2)
+ Global("gpe_complet","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("gpe_complet","COM023",1)
+END
+
+IF
+ GlobaltimerExpired("MSG_Sphinx","COM023")
+ NumInParty(3)
+ AreaCheckObject("COM023",PLAYER1)
+ AreaCheckObject("COM023",PLAYER2)
+ AreaCheckObject("COM023",PLAYER3)
+ Global("gpe_complet","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("gpe_complet","COM023",1)
+END
+
+IF
+ GlobaltimerExpired("MSG_Sphinx","COM023")
+ NumInParty(4)
+ AreaCheckObject("COM023",PLAYER1)
+ AreaCheckObject("COM023",PLAYER2)
+ AreaCheckObject("COM023",PLAYER3)
+ AreaCheckObject("COM023",PLAYER4)
+ Global("gpe_complet","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("gpe_complet","COM023",1)
+END
+
+IF
+ GlobaltimerExpired("MSG_Sphinx","COM023")
+ NumInParty(5)
+ AreaCheckObject("COM023",PLAYER1)
+ AreaCheckObject("COM023",PLAYER2)
+ AreaCheckObject("COM023",PLAYER3)
+ AreaCheckObject("COM023",PLAYER4)
+ AreaCheckObject("COM023",PLAYER5)
+ Global("gpe_complet","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("gpe_complet","COM023",1)
+END
+
+IF
+ GlobaltimerExpired("MSG_Sphinx","COM023")
+ NumInParty(6)
+ AreaCheckObject("COM023",PLAYER1)
+ AreaCheckObject("COM023",PLAYER2)
+ AreaCheckObject("COM023",PLAYER3)
+ AreaCheckObject("COM023",PLAYER4)
+ AreaCheckObject("COM023",PLAYER5)
+ AreaCheckObject("COM023",PLAYER6)
+ Global("gpe_complet","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("gpe_complet","COM023",1)
+END
+
+// Le groupe est au complet: le Sphinx se reveille et demande au groupe d'approcher **********************************************************************************
+IF
+ Global("gpe_complet","COM023",1)
+THEN
+ RESPONSE #100
+ 
+ // Le Sphinx se reveille et parle au groupe
+ OpenDoor("SPHOFF")
+ Wait(2)
+ CreateCreature("COSPHIN",[882.351],10) 
+ ActionOverride("COSPHIN",StartDialogueNoSet([PC])) 
+ 
+ // L'écran de feu 1 disparait
+ Wait(2)
+ PlaySound("EFF_E04")
+ SmallWait(10)
+ AmbientActivate("Wall1",FALSE)
+ AmbientActivate("Wall2",FALSE)
+ SoundActivate("MURFLAM1",FALSE)
+ OpenDoor("CHAMPF")
+ SetGlobal("wall_1_inactif","COM023",1)
+ 
+ // L'écran de feu 2 apparait
+ AmbientActivate("Wall3",TRUE)
+ AmbientActivate("Wall4",TRUE)
+ SoundActivate("MURFLAM2",TRUE)
+ CloseDoor("CHAMPF2")  
+END
+
+// Le groupe n'est pas au complet: Le sphinx demande au groupe d'être complet **************************************************************************************************************************************
+IF
+ Global("wall_1_inactif","COM023",0)
+ Global("gpe_complet","COM023",0)
+ Global("gpe_incomplet","COM023",0)
+THEN
+ RESPONSE #100 
+ SetGlobal("gpe_incomplet","COM023",1)
+ 
+ // Le Sphinx se reveille et parle au groupe
+ OpenDoor("SPHOFF")
+ Wait(2)
+ CreateCreature("COSPHIN",[882.351],10) 
+ ActionOverride("COSPHIN",StartDialogueNoSet([PC]))
+END 
+
+// Maladie: arrêt de la recherche du Player1: relance recherche *******************************************************************************************************************
+IF
+ GlobalTimerExpired("TIME_MALADIE_RECHERCHE","COM023")
+ Global("MALADIE_RECHERCHE","COM023",1)
+THEN
+ RESPONSE #100
+ SetGlobal("MALADIE_RECHERCHE","COM023",0)
+ 
+ ClearActions("COMALAD") 
+END
+
+// Maladie est vaincue: l'écran de feu 2 disparait *******************************************************************************************************************************
+IF
+ Global("MALADIE_MEURT","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("MALADIE_MEURT","GLOBAL",2)
+ 
+ // L'écran de feu 2 apparait
+ PlaySound("EFF_E04")
+ SmallWait(10)
+ AmbientActivate("Wall3",FALSE)
+ AmbientActivate("Wall4",FALSE)
+ SoundActivate("MURFLAM2",FALSE)
+ OpenDoor("CHAMPF2")  
+END
+
+
+
