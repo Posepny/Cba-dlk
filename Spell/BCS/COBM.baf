@@ -1,0 +1,13 @@
+// Sort piège à crane de Cyric lancé
+IF
+ True()
+THEN
+  RESPONSE #100
+  SetGlobal("Ekilis_incantation_Bhaal","GLOBAL",2)
+  
+   //  Createcreature("MINSC",[3700.600],10) 
+   //Createcreature("MINSC",[3700.600],10) 
+   //     Createcreature("MINSC",[3700.600],10) 
+   
+END
+

@@ -1,0 +1,37 @@
+// L'umberwalk ciblé devient l'allié du groupe
+/*
+IF 
+ Global("Command_WANP02","LOCALS",0)
+ Race(myself,130)
+THEN
+ RESPONSE #100
+ SetGlobal("Command_WANP02","LOCALS",1)
+ 
+ //Createcreature("Minsc",[990.560],10)
+ ChangeEnemyAlly(myself,CONTROLLED)
+END
+*/
+
+// deux essais successifs pour prendre le contrôle des créatures
+IF 
+ Race(myself,130)
+ Global("Command_WANP02","LOCALS",0)
+THEN
+ RESPONSE #100
+  
+ ChangeEnemyAlly(myself,CONTROLLED) 
+ SetGlobal("Command_WANP02","LOCALS",1)
+ Continue()
+END
+
+
+IF 
+ Global("Command_WANP02","LOCALS",1)
+ Race(myself,130)
+THEN
+ RESPONSE #100
+ SetGlobal("Command_WANP02","LOCALS",2)
+   
+ ChangeEnemyAlly(myself,CONTROLLED)
+ //Createcreature("Minsc",[990.560],10)
+END

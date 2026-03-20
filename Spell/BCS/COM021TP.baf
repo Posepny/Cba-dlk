@@ -1,0 +1,66 @@
+// TP vers la salle de l'énigme
+IF
+ Global("com021P1","GLOBAL",1)
+THEN
+  RESPONSE #100 
+  //CreateCreature("MINSC",[1650.1000],12)  
+  SetInterrupt(FALSE)  
+  //CreateCreature("MINSC",[1650.1000],12)  
+  //CreateCreature("MINSC",[1650.1000],12)  
+  
+  Wait(1)
+  ActionOverride(PLAYER1,LeaveAreaLUA("COM023","",[1405.720],10))
+  ActionOverride(PLAYER1,ChangeAIScript("",RACE))   
+  SetInterrupt(TRUE)  
+END
+
+IF
+ Global("com021P2","GLOBAL",1)
+THEN
+  RESPONSE #100  
+  SetInterrupt(FALSE)  
+   Wait(1)
+   ActionOverride(PLAYER2,LeaveAreaLUA("COM023","",[1405.720],10))
+   ActionOverride(PLAYER2,ChangeAIScript("",RACE))   
+  SetInterrupt(TRUE)  
+END
+
+IF
+ Global("com021P3","GLOBAL",1)
+THEN
+  RESPONSE #100  
+  SetGlobal("com021P3","GLOBAL",2)
+
+  ActionOverride(PLAYER3,LeaveAreaLUA("COM023","",[1405.720],10))
+  ActionOverride(PLAYER3,ChangeAIScript("",RACE)) 
+END
+
+IF
+ Global("com021P4","GLOBAL",1)
+THEN
+  RESPONSE #100    
+  SetGlobal("com021P4","GLOBAL",2)
+
+  ActionOverride(PLAYER4,LeaveAreaLUA("COM023","",[1405.720],10))
+  ActionOverride(PLAYER4,ChangeAIScript("",RACE)) 
+END
+
+IF
+ Global("com021P5","GLOBAL",1)
+THEN
+  RESPONSE #100  
+  SetGlobal("com021P5","GLOBAL",2)
+
+  ActionOverride(PLAYER5,LeaveAreaLUA("COM023","",[1405.720],10))
+  ActionOverride(PLAYER5,ChangeAIScript("",RACE)) 
+END
+
+IF
+ Global("com021P6","GLOBAL",1)
+THEN
+  RESPONSE #100  
+  SetGlobal("com021P6","GLOBAL",2)
+
+  ActionOverride(PLAYER6,LeaveAreaLUA("COM023","",[1405.720],10))
+  ActionOverride(PLAYER6,ChangeAIScript("",RACE)) 
+END

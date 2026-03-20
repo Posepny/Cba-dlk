@@ -1,0 +1,13 @@
+// Apparition de Maladie suite à une mauvaise réponse à l'énigme
+IF
+ Global("Maladie_apparition","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Maladie_apparition","COM023",1)
+ 
+ 
+ CreateVisualEffect("COGRWHRL",[1230.645])
+ Wait(1)
+ Deactivate("COSPHI1") 
+ Createcreature("COMALAD",[1230.645],10)  
+END

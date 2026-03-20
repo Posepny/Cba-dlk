@@ -1,0 +1,14 @@
+// Maladie se transforme en araignée géante
+IF
+ Global("transf_maladie","Global",0)
+THEN
+ RESPONSE #100
+ SetGlobal("transf_maladie","Global",1)  
+ 
+ Wait(1)
+ Deactivate("comalad")
+ Createcreature("COSPIDG",[-1.-1],10) 
+ CreateVisualEffect("COGRWHRL",[-1.-1])
+ //CreateVisualEffect("COGRWHRL",[1350.600])
+END
+

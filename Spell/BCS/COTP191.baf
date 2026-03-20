@@ -1,0 +1,16 @@
+IF
+ Global("Trou_019_1","GLOBAL",0)
+THEN  
+  RESPONSE #50
+  SetGlobal("Trou_019_1","GLOBAL",1)
+  
+  // Chute via le trou 1
+  //ActionOverride("MINSC",LeaveAreaLUA("COM020","",[131.665],10)) 
+  //ActionOverride("MINSC",LeaveAreaLUAPANIC("COM020","",[131.665],10)) 
+ // LeaveArea("COM020","",[131.665],10)  
+  //ACTIONOVERRIDE("MINSC",ChangeAIScript("",RACE))  
+  //CreateCreature("COSTATL",[574.685],6)  
+ // CreateCreature("COSTATL",[574.685],6)
+  
+  SetGlobal("Trou_019_1","GLOBAL",0)    
+END

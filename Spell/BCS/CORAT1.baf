@@ -1,0 +1,36 @@
+// Apparition de rats de la peste
+IF
+ Global("RAT_peste","LOCALS",0)
+ //GlobalLT("Vague_RAT","LOCALS",2)
+THEN
+ RESPONSE #100
+ SetGlobal("RAT_peste","LOCALS",1)
+//IncrementGlobal("Vague_RAT","LOCALS",1)
+  
+ Createcreature("CORAT1",[-1.-1],10) 
+ Createcreature("CORAT1",[-1.-1],10) 
+ Createcreature("CORAT1",[-1.-1],10) 
+ Createcreature("CORAT1",[-1.-1],10) 
+ Createcreature("CORAT1",[-1.-1],10) 
+ Createcreature("CORAT1",[-1.-1],10) 
+ Createcreature("CORAT1",[-1.-1],10) 
+ Createcreature("CORAT1",[-1.-1],10) 
+ 
+ Wait(1)
+ ActionOverride("COMALAD",ChangeAIScript("",DEFAULT))
+END
+
+/*
+// Apparition de rats de la peste: 4 vagues
+IF
+ GlobalLT("Vague_RAT","LOCALS",5)
+THEN
+ RESPONSE #100
+ IncrementGlobal("Vague_RAT","LOCALS",1)
+ 
+ Createcreature("CORAT1",[-1.-1],10) 
+ Createcreature("CORAT1",[-1.-1],10) 
+ Createcreature("CORAT1",[-1.-1],10) 
+ Wait(3)
+END
+*/

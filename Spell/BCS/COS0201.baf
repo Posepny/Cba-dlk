@@ -1,0 +1,50 @@
+// Téléportation déclenchée
+IF
+ Global("COM020_PNJ_capture","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_capture","GLOBAL",1)
+ //Createcreature("MINSC",[400.450],10) 
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+// Téléportation ennemis
+IF
+ Global("COM020_PNJ_capture","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_capture","GLOBAL",1)
+ 
+ ActionOverride("COISLEN",DestroyItem("arop01"))
+ Wait(1)
+ ActionOverride(Lastseenby("COISLEN"),JumpToPoint([360.665])) // Téléportation de la cible  
+END
+
+// Arrivée de Islendra à son tour
+IF
+ Global("COM020_PNJ_capture","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_capture","GLOBAL",3)
+ 
+ CreateVisualEffectObject("SPMAZE1","COISLEN")
+ Wait(1)
+ ActionOverride("COISLEN",JumpToPoint([250.825]))
+END 
+*/

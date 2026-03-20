@@ -1,0 +1,100 @@
+// Départ TP vers un niveau aléatoire
+IF
+ Global("TimeTP018","GLOBAL",1)
+ Global("CIBLE_TP018","GLOBAL",1)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP018","GLOBAL",2)
+  SetGlobalTimer("TIMER_init_TP018","GLOBAL",8)
+
+//createcreature("GIBBER_A",[750.500],10)  
+  ActionOverride(PLAYER1,LeaveAreaLUA("COM019","",[1027.928],0))
+  ActionOverride(PLAYER1,ChangeAIScript("",RACE)) 
+END
+
+IF
+ Global("TimeTP018","GLOBAL",1)
+ Global("CIBLE_TP018","GLOBAL",2)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP018","GLOBAL",2)
+  SetGlobalTimer("TIMER_init_TP018","GLOBAL",8)
+
+  ActionOverride(PLAYER2,LeaveAreaLUA("COM019","",[1027.928],0))
+  ACTIONOVERRIDE(PLAYER2,ChangeAIScript("",RACE))
+END
+
+IF
+ Global("TimeTP018","GLOBAL",1)
+ Global("CIBLE_TP018","GLOBAL",3)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP018","GLOBAL",2)
+  SetGlobalTimer("TIMER_init_TP018","GLOBAL",8)
+
+  ActionOverride(PLAYER3,LeaveAreaLUA("COM019","",[1027.928],0))
+  ActionOverride(PLAYER3,ChangeAIScript("",RACE)) 
+END
+
+IF
+ Global("TimeTP018","GLOBAL",1)
+ Global("CIBLE_TP018","GLOBAL",4)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP018","GLOBAL",2)
+  SetGlobalTimer("TIMER_init_TP018","GLOBAL",8)
+
+  ActionOverride(PLAYER4,LeaveAreaLUA("COM019","",[1027.928],0))
+  ActionOverride(PLAYER4,ChangeAIScript("",RACE)) 
+END
+
+IF
+ Global("TimeTP018","GLOBAL",1)
+ Global("CIBLE_TP018","GLOBAL",5)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP018","GLOBAL",2)
+  SetGlobalTimer("TIMER_init_TP018","GLOBAL",8)
+
+  ActionOverride(PLAYER5,LeaveAreaLUA("COM019","",[1027.928],0))
+  ActionOverride(PLAYER5,ChangeAIScript("",RACE))
+END
+
+IF
+ Global("TimeTP018","GLOBAL",1)
+ Global("CIBLE_TP018","GLOBAL",6)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP018","GLOBAL",2)
+  SetGlobalTimer("TIMER_init_TP018","GLOBAL",8)
+
+  ActionOverride(PLAYER6,LeaveAreaLUA("COM019","",[1027.928],0))
+  ActionOverride(PLAYER6,ChangeAIScript("",RACE))
+END
+
+
+// V1
+/*
+// Départ TP vers un niveau aléatoire
+IF
+ Global("TimeTP018","GLOBAL",1)
+THEN  
+  RESPONSE #50
+  SetGlobal("TimeTP018","GLOBAL",2)
+  
+  // Salle Damiers
+  ActionOverride(myself,LeaveAreaLUA("COM019","",[1027.928],0))
+  ACTIONOVERRIDE(myself,ChangeAIScript("",RACE))
+  
+  SetGlobal("TimeTP018","GLOBAL",0) 
+  
+  RESPONSE #80
+  SetGlobal("TimeTP018","GLOBAL",2)
+  
+  // Sous-sol
+  ActionOverride(myself,LeaveAreaLUA("COM020","",[1530.345],10))
+  ACTIONOVERRIDE(myself,ChangeAIScript("",RACE))
+  
+  SetGlobal("TimeTP018","GLOBAL",0)    
+END
+*/

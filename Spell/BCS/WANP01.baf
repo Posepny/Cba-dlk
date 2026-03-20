@@ -1,0 +1,42 @@
+// Le minautore ciblé est sous contrôle du groupe
+/*
+IF 
+ Global("Command_WANP01","LOCALS",0)
+ Race(myself,113)
+THEN
+ RESPONSE #100
+ SetGlobal("Command_WANP01","LOCALS",1)
+ 
+ //Createcreature("Minsc",[990.560],10)
+ ChangeEnemyAlly(myself,CONTROLLED)
+END
+*/
+
+IF 
+ Race(myself,113)
+ Global("Command_WANP01","LOCALS",0)
+THEN
+ RESPONSE #100
+  
+ ChangeEnemyAlly(myself,CONTROLLED) 
+ SetGlobal("Command_WANP01","LOCALS",1)
+ Continue()
+END
+
+
+IF 
+ Global("Command_WANP01","LOCALS",1)
+ Race(myself,113)
+THEN
+ RESPONSE #100
+ SetGlobal("Command_WANP01","LOCALS",2)
+   
+ ChangeEnemyAlly(myself,CONTROLLED)
+ //Createcreature("Minsc",[990.560],10)
+END
+
+
+
+
+
+  

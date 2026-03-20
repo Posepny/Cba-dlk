@@ -1,0 +1,22 @@
+// Départ TP vers un niveau aléatoire
+IF
+ Global("TimeTP018","GLOBAL",1)
+THEN  
+  RESPONSE #50
+  SetGlobal("TimeTP018","GLOBAL",2)
+  
+  // Salle Damiers
+  ActionOverride(myself,LeaveAreaLUA("COM019","",[1027.928],0))
+  ACTIONOVERRIDE(myself,ChangeAIScript("",RACE))
+  
+  SetGlobal("TimeTP018","GLOBAL",0) 
+  
+  RESPONSE #80
+  SetGlobal("TimeTP018","GLOBAL",2)
+  
+  // Sous-sol
+  ActionOverride(myself,LeaveAreaLUA("COM020","",[1530.345],10))
+  ACTIONOVERRIDE(myself,ChangeAIScript("",RACE))
+  
+  SetGlobal("TimeTP018","GLOBAL",0)    
+END
