@@ -1,0 +1,173 @@
+// Histoire du temple
+@1=~Histoire du temple de Bhaal
+
+J'en sais un peu plus sur les lieux. Le passage secret qui s'est ouvert devant moi, donne accès à un temple. Un temple de Bhaal, mon père! 
+
+Est-ce vraiment un hasard? Le mieux serait d'en savoir davantage sur cet endroit.
+
+Une chose est sure, il y a eu un combat entre les fidèles de Cyric et de Bhaal. Depuis, les esprits des morts rôdent dans le temple.~
+
+
+// livre d'Ekilis
+@2=~Histoire du temple de Bhaal
+
+Ekilis, alias Karl, a attaqué le temple avec les fidèles de Cyric. Il a failli tuer Systéra la gardienne du temple qui a réussi à se sauver en se téléportant via un cercle runique au sol.
+
+Mais lui même n'est pas parvenu à se téléporter. En lançant un sort de stase prolongée, il a réussi à rester en vie jusqu'à notre rencontre.~
+
+// Info de Massena
+@3=~Histoire du temple de Bhaal
+
+L'existence de ce temple était visiblement secrète et Systéra en était la gardienne. A la chûte de Bhaal, Systéra exhortait les fidèles à garder la foi et à préparer le retour de leur maître. Certains ont préréré la trahison et les fidèle de Cyric ont attaqué le temple. 
+
+Systèra a scellé les portes derrière eux. Le temple de Bhaal est devenu leur tombeau!~
+
+@4=~Histoire du temple de Bhaal
+
+C'est le crâne de Kept qui est à l'origine de la fermeture du temple. Placé dans la salle des prières, le temple s'ouvrira à nouveau.~
+
+// Systera
+@5=~Histoire du temple de Bhaal
+
+Systéra savait qu'ils seraient attaqués par les fidèles de Cyric et elle a préparé le temple pour les recevoir dans l'attendre de l'arrivée de l'élu, l'enfant de Bhaal. Visiblement, je ne correspond pas à sa vision.
+
+D'après elle, Bhaal ne serait pas mort mais en sommeil dans le temple!~
+
+// info simple
+@6=~Histoire du temple de Bhaal
+
+Systéra, la gardienne du temple, savait qu'ils seraient attaqués par les fidèles de Cyric et elle avait préparé le temple pour les recevoir. 
+
+D'après elle, Bhaal ne serait pas mort mais en sommeil dans le temple!~ 
+
+
+// Info de Candelas 
+@7=~Histoire du temple de Bhaal
+
+Karl est bel et bien un serviteur de Cyric! Il est venu pour détruire Bhaal au coeur du temple. D'après lui en éliminant Bhaal, sa descendance mourra avec lui. Je dois l'en empêcher!
+Son crâne violet ne m'inspire pas confiance.~
+
+
+// Fin de quête (épreuves réalisées)
+// Cas 1: Rencontre Massena + discut Systera Systéra Elu + discut Candelas + Champion de Bhaal
+// présence Ekilis
+@15=~Histoire du temple de Bhaal
+
+Je pense avoir fait le tour de son histoire. Voilà ce que j'ai compris.
+
+Bhaal n'est pas mort! Le temple secret a pour mission de protéger son sommeil et d'attendre l'arrivée d'un de ses enfants. L'enfant devait passer des épreuves et en cas de réussite, il devenait le Champion de Bhaal! 
+
+En réflechissant bien, je pense que Systéra, douée de vision, attendait Sarevok.
+
+Sachant qu'ils seraient attaqués par les fidèles de Cyric, Systéra a fait de son temple un piège mortel se refermant sur sa proie. Trompant la mort, elle finira par devenir un mort-vivant attendant l'arrivée de Sarevok.
+
+Quant à Ekilis alias Karl le chasseur de trésor, il était chargé de mener l'assault dans le temple. Ekilis survivra jusqu'à mon arrivée grâce à un sort de stase prolongée.
+
+Candelas s'est servi de moi pour ouvrir à nouveau la porte du temple. Il attendait patiemment son heure à l'extérieur du temple et je l'ai vaincu à mon retour dans l'auberge.
+
+Il reste une grande question. Quelle est la mission exacte du Champion de Bhaal? Je porte la marque de mon père. Que vat-il m'arriver?~
+
+
+// Cas 2: Rencontre Massena + discut Systera Systéra Elu + discut Candelas + pas Champion de Bhaal
+// présence Ekilis
+@16=~Histoire du temple de Bhaal
+
+Je pense avoir fait le tour de son histoire. Voilà ce que j'ai compris.
+
+Bhaal n'est pas mort! Le temple secret a pour mission de protéger son sommeil et d'attendre l'arrivée d'un de ses enfants.
+
+En réflechissant bien, je pense que Systéra, douée de vision, attendait Sarevok.
+
+Sachant qu'ils seraient attaqués par les fidèles de Cyric, Systéra a fait de son temple un piège mortel se refermant sur sa proie. Trompant la mort, elle finira par devenir un mort-vivant attendant l'arrivée de Sarevok.
+
+Quant à Ekilis alias Karl le chasseur de trésor, il était chargé de mener l'assault dans le temple. Ekilis survivra jusqu'à mon arrivée grâce à un sort de stase prolongée.
+
+Candelas s'est servi de moi pour ouvrir à nouveau la porte du temple. Il attendait patiemment son heure à l'extérieur du temple et je l'ai vaincu à mon retour dans l'auberge.~
+
+
+// Cas 3: Rencontre Massena + discut Systera Systéra Elu + discut Candelas  + Champion de Bhaal
+// absence Ekilis
+@17=~Histoire du temple de Bhaal
+
+Je pense avoir fait le tour de son histoire. Voilà ce que j'ai compris.
+
+Bhaal n'est pas mort! Le temple secret a pour mission de protéger son sommeil et d'attendre l'arrivée d'un de ses enfants. L'enfant devait passer des épreuves et en cas de réussite, il devenait le Champion de Bhaal! 
+
+En réflechissant bien, je pense que Systéra, douée de vision, attendait Sarevok.
+
+Sachant qu'ils seraient attaqués par les fidèles de Cyric, Systéra a fait de son temple un piège mortel se refermant sur sa proie. Trompant la mort, elle finira par devenir un mort-vivant attendant l'arrivée de Sarevok.
+
+Candelas s'est servi de moi pour ouvrir à nouveau la porte du temple. Il attendait patiemment son heure à l'extérieur du temple et je l'ai vaincu à mon retour dans l'auberge.
+
+Il reste une grande question. Quelle est la mission exacte du Champion de Bhaal? Je porte la marque de mon père. Que vat-il m'arriver?~
+
+
+// Cas 4: Rencontre Massena + discut Systera Systéra Elu + discut Candelas  + pas Champion de Bhaal
+// absence Ekilis
+@18=~Histoire du temple de Bhaal
+
+Je pense avoir fait le tour de son histoire. Voilà ce que j'ai compris.
+
+Bhaal n'est pas mort! Le temple secret a pour mission de protéger son sommeil et d'attendre l'arrivée d'un de ses enfants. 
+
+En réflechissant bien, je pense que Systéra, douée de vision, attendait Sarevok.
+
+Sachant qu'ils seraient attaqués par les fidèles de Cyric, Systéra a fait de son temple un piège mortel se refermant sur sa proie. Trompant la mort, elle finira par devenir un mort-vivant attendant l'arrivée de Sarevok.
+
+Candelas s'est servi de moi pour ouvrir à nouveau la porte du temple. Il attendait patiemment son heure à l'extérieur du temple et je l'ai vaincu à mon retour dans l'auberge.~
+
+
+
+
+// Quête trésor de Bhaal
+@50=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple. Nous avons conclu une alliance pour le trouver ensemble.~
+
+@51=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple.
+
+J'ai réfusé sa proposition d'alliance pour partager le trésor. Je le trouverai sans lui!~
+
+@52=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple.
+
+J'ai réfusé sa proposition d'alliance et j'ai décidé de me débarrasser de lui. Je trouverai le trésor sans lui.~
+
+@53=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple.
+
+J'ai décidé de me débarrasser de lui. On ne pille pas le temple de mon défunt père impunément!
+
+Ca l'a fait rire. Karl est en fait Ekilis le grand inquisiteur de cyric. Il se rejouit d'avance de prendre ma tête.
+
+Quand au trésor, je le trouverai sans lui.~
+
+@54=~Le trésor de Bhaal
+
+Massena a accusé mon nouveau compagnon Karl d'être un serviteur de Cyric. Karl dément formellement. Qui croire?~
+
+@55=~Le trésor de Bhaal
+
+Karl était en fait Ekilis un serviteur de cyric qui voulait simplement de servir de moi pour détruire le temple. Il n'y a pas vraiment de trésor ici à sa connaissance...~
+
+
+
+
+
+// Début du combat avec Candelas
+@100=~Tuez les tous! Cyric reconnaitra les siens.~
+@101=~Gloire à Cyric!~
+
+

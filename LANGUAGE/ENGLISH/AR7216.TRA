@@ -1,0 +1,35 @@
+@1=~Veuillez patienter~
+
+// Quête
+@100=~Une mystérieuse cave
+
+Barni le nouveau tavernier du Heaume et de la cape s'inquiète. Son défunt père avait accès, sous sa cave, à des cellules.
+
+Ne voulant pas avoir d'ennuis avec la justice, il demande mon aide. 
+
+Le mieux est d'explorer les lieux pour me faire une opinion.~
+
+
+@101=~Une mystérieuse cave
+
+Barni le nouveau tavernier du Heaume et de la cape s'inquiètait. Son défunt père avait accès, sous sa cave, à des cellules.
+
+En explorant les lieux, j'ai découvert un temple secret de Bhaal. J'ai demandé à Barni qu'il condamne l'accès à la trappe.~
+
+
+@102=~Une mystérieuse cave
+
+Barni le nouveau tavernier du Heaume et de la cape s'inquiètait. Son défunt père avait accès, sous sa cave, à des cellules.
+
+En explorant les lieux, j'ai découvert un temple secret de Bhaal. J'ai prétexté à Barni que le lieu était à surveiller. De ce fait, je garde la clé pour avoir un libre accès au temple.~
+
+// Info refus
+@103=~Une mystérieuse cave
+
+Barni le nouveau tavernier du Heaume et de la cape s'inquiète. Son défunt père avait accès, sous sa cave, à des cellules.
+
+Ne voulant pas avoir d'ennuis avec la justice, il demande mon aide. 
+
+Pour le moment, j'ai des tâches plus urgente. Je retournerai le voir plus tard.~
+
+

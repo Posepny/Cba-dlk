@@ -1,0 +1,113 @@
+@1=~A son contact, vous vous rendez compte qu'il est brulant. Vous ne parvenez pas à l'ouvrir.~
+@2=~Une chaleur intense émane de cet endroit. Son contact est brulant.~
+@3=~La satue est sans doute la représentation d'un clerc de Bhaal. Elle est sans visage. Elle semble veiller sur le sarcophage.~
+@4=~La chaleur a totalement disparu. Son contact est glacé.~
+@5=~Vous êtes trop loin.~
+
+
+@6=~Histoire du temple de Bhaal
+
+Ekilis, alias Karl, a attaqué le temple avec les fidèles de Cyric. Il a failli tuer Systéra la gardienne du temple qui a réussi à se sauver en se téléportant via un cercle runique au sol.
+
+Mais lui même n'est pas parvenu à se téléporter. En lançant un sort de stase prolongée, il a réussi à rester en vie jusqu'à notre rencontre.~
+
+
+// Quête trésor de Bhaal
+@50=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple. Nous avons conclu une alliance pour le trouver ensemble.~
+
+@51=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple.
+
+J'ai réfusé sa proposition d'alliance pour partager le trésor. Je le trouverai sans lui!~
+
+@52=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple.
+
+J'ai réfusé sa proposition d'alliance et j'ai décidé de me débarrasser de lui. Je trouverai le trésor sans lui.~
+
+@53=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple.
+
+J'ai décidé de me débarrasser de lui. On ne pille pas le temple de mon défunt père impunément!
+
+Ca l'a fait rire. Karl est en fait Ekilis le grand inquisiteur de cyric. Il se rejouit d'avance de prendre ma tête.
+
+Quand au trésor, je le trouverai sans lui.~
+
+
+@54=~Le trésor de Bhaal
+
+Massena a accusé mon nouveau compagnon Karl d'être un serviteur de Cyric. Karl dément formellement. Qui croire?~
+
+@55=~Le trésor de Bhaal
+
+Karl était en fait Ekilis un serviteur de cyric qui voulait simplement de servir de moi pour détruire le temple. Il n'y a pas vraiment de trésor ici à sa connaissance...~
+
+
+// Quête aider Massena
+
+// Quête
+@63=~Aider le fantôme Massena
+
+Un fantôme est apparu. Massena était au service de Bhaal et il prétend que je suis enfermé dans son temple. En résumé, il m'annonce que je vais mourir ici sans son aide.
+
+Si j'apporte ses restes près d'une grille circulaire, il m'aidera peut-être à sortir d'ici. Cette grille se trouverait derrière une grande herse. Massena a sous-entendu que je devrai trouver un moyen pour la franchir.~
+@64=~Aider le fantôme Massena
+
+Un phénomène étrange s'est produit. Lorsque j'ai mis les restes du fantôme Massena dans mon équipement, un collier rouge est apparu à son cou.~
+@65=~Aider le fantôme Massena
+
+Massena le fantôme désire que j'ouvre le passage secret près du mur. A l'intérieur, il y a un sarcophage où je dois mettre ses restes si je désire son aide.~
+
+@66=~Aider le fantôme Massena
+
+Massena le fantôme est en colère, il m'affirme que mon allié Karl, le chasseur de trésor est en fait un serviteur de Cyric! Si je ne l'élimine pas, je n'aurai pas son aide.~
+
+@67=~Aider le fantôme Massena
+
+Je me suis débarrassé d'Ekilis, Massena devrait accepter de m'aider à sortir d'ici.~
+
+@68=~Aider le fantôme Massena
+
+J'ai suivi les instructions du fantôme Massena en déposant ses restes dans le sarcophage d'une salle secrète. Grâce à ses informations, je sais comment sortir de ce temple!~
+
+
+
+@69=~Histoire du temple de Bhaal
+
+L'existence de ce temple était visiblement secrète et Systéra en était la gardienne. A la chûte de Bhaal, Systéra exhortait les fidèles à garder la foi et à préparer le retour de leur maître. Certains ont préréré la trahison et les fidèle de Cyric ont attaqué le temple. 
+
+Systèra a scellé les portes derrière eux. Le temple de Bhaal est devenu leur tombeau!~
+
+@70=~Histoire du temple de Bhaal
+
+J'ai demandé à Massena à quoi servait ce temple. Il m'a conseillé de ne pas être trop curieux et de partir rapidement... J'ai senti une menace dans ses propos.~
+
+
+
+@71=~Sortir d'ici
+
+D'après Massena, pour ouvrir les portes du temple, je dois trouver le crâne de Kept et le placer au centre de la salle des prières qui est au niveau inférieur. C'est Systéra, la gardienne du temple qui était responsable du crâne. Son cadavre traine quelque part dans le temple. Si je le trouve, je trouverai le crâne!
+
+Mais ce n'est pas tout! Pour descendre au niveau inférieur, il faut que je trouve un coffre contenant la rune ouvrant le passage secret. Massena m'a donné la clé ouvrant le coffre. A moi de trouver le coffre situé à ce niveau.~
+
+
+@80=~Aider le fantôme Massena
+
+J'ai suivi les instructions du fantôme Massena en déposant ses restes dans le sarcophage d'une salle secrète. Massena est apparu furieux car Karl est toujours mon allié. Il désire maintenant notre mort.~
+
+
+

@@ -1,0 +1,43 @@
+// gestion de la fontaine
+@1=~Sous le bassin vous distinguez une vanne. L'ouvrir devrait vider le bassin mais vous n'avez pas d'outil.~
+@2=~Sous le bassin vous distinguez une vanne. Avec l'outil, la tourner devrait vider le bassin.~
+@3=~La vanne résiste, vous manquez de force...~
+@4=~Vous bandez vos muscles et vous parvenez à ouvrir la vanne. Le bassin se vide rapidement.~
+
+
+/* NON UTILE
+// Sacrifice d'un membre du groupe
+@7=~Maître. Le meurtre appelle le sang! Ton enfant, te donne son serviteur en sacrifice.~ 
+@8=~Acceptes son offrande (il désigne votre compagnon) et montres la voie à ton digne représentant! ~
+@9=~Traitrise! Je compte bien me défendre!~ 
+@10=~Maaaisss, nooonnn AAaaaahhh!~
+@11=~Esprits du meurtre, nourrissez-vous!~
+@12=~Excellent choix.~
+*/
+
+
+// Bassin central
+@13=~Un liquide rougeatre est en ébullition dans le bassin. On peut imaginer que c'est du sang.~
+@14=~Au sol, deux canalisations partent en direction de l'est et de l'ouest.~
+
+// Sortie
+@20=~Vous distinguez,en face de vous, une porte vaguement dissimulée dans l'ombre.~
+
+// Commentaire de Kael pendant le combat
+@50=~Une attaque inutile. vous ne pouvez rien contre moi.~
+@51=~Vôtre lutte est vaine et pathétique.~ 
+@52=~Je suis invincible grâce à fontaine. Abandonnez!~
+
+
+// Gestion grille3 Bassins - Damiers au bou du couloir
+@100=~la grille au bou du couloir s'ouvre.~
+
+// Bassins et réaction de Kael
+// la fontaine se vide, Kael est furieux.
+@500=~VOUS osez toucher à mes bassins!~
+
+// Les bassins sont vidés
+@501=~Vaine tentative de vaincre, venez m'affronter!~
+
+// Kael vaincu
+@510=~Que le sang de Bhaal apprôche!~

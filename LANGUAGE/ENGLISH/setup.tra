@@ -1,0 +1,95 @@
+@1=~Vous désirez?
+[1] Activer le mod à la mort de Sarevok (suite de BG1).
+[2] Démarrer une partie avec le mod tout de suite.~
+@2=~Choix [1] effectué~
+@3=~choix [2] effectué~
+@4=~Installation du mod <Le champion de Bhaal>~
+@5=~*** Fin du chargement. L'installation de BGT est requise. ***~
+@6=~*** Fin du chargement. L'installation de TOB est requise. ***~ // non actif
+@7=~*** Mod Infinity Animation installé. Utilisation des animations optionnelles. ***~   
+@8=~*** Mod Infinity Animation absent. Utilisation des animations standards. ***~
+
+@9=~Le mod Infinity Animation n'est pas installé. Vous ne bénéficierez pas des ajouts d'animation. Vous désirez?
+[1] Arrêter l'installation et installer le mod IA avant.
+[2] Installer sans le mod IA.~
+@10=~~
+@11=~~
+@12=~~
+
+
+/*
+// TEXTSCREEN **************************************************************************************************************************************************
+// INTRO Mod
+@1 = ~~
+@2 = ~LE PROTECTEUR DE BALDUR - Acte 1 - L'ombre de la menace.
+
+~
+// TEXTESCREEN Cuisines du palais *************************************************************************************************************************************************************
+@15 = ~Accompagné par deux gardes, Alfredo, vous guide jusqu'aux cuisines où de nombreux plats ont été prévus à votre attention.~
+@16 = ~Vous vous délectez de ces mets parfumés et onctueux entourés de serviteurs affairés. De leur discussion, Vous comprenez qu'une soirée importante va avoir lieu dans le batiment du Trône de fer.~
+@17 = ~Repus et le ventre distendu, Alfredo vous conduit jusqu'aux portes du palais.~
+@18 = ~Précédé des ducs et de leur escorte, vous sortez. 
+
+La foule attirée par les crieurs est amassée à l'entrée. L'heure de votre sacré est arrivé.~
+
+// MF1 *************************************************************************************************************************************************************
+@19 = ~Mort Fatale n°1: l'attaque du palais des ducs~
+@20 = ~Les gardes alertés sortent leurs armes pour vous tailler en pièces. Vous avez beau faire face et éliminer la menace présente, d'autres arrivent, toujours et encore!~
+@21 = ~Affaibli et dépassé par le nombre, vous finissez pas succomber sous les coups...~
+@22 = ~Quelle idée suicidaire vous est passée par la tête? Vous attaquer au palais, Vous n'aviez pas l'ombre d'une chance! Une autre fois peut être...~
+
+// Essayage des tenues pour la soirée en l'honneur de la délégation d'Amn
+@45 = ~A nouveau, Alfredo vous précède et vous emboitez le pas suivi de près par deux gardes.~
+@46 = ~A nouveau, Alfredo vous précède et vous emboitez le pas suivi de près par deux gardes.~
+@47 = ~Vous traversez d'interminables couloirs jusqu'à ce que l'intendant s'arrête enfin devant une porte. Les deux gardes se placent de part et d'autre.~
+@48 = ~L'intendant vous regarde avec sourire narquois. "Protecteur, le tailleur des ducs vous attend. Je vous souhaite bon courage."~
+@49 = ~Tout celà n'augure rien de bon...~
+
+// Sortie du palais après essayage des tenues de sigmund *************************************************************************************************************************************************************
+@50 = ~A l'exterieur du salon, les deux gardes vous attendaient et vous raccompagne jusqu'aux portes du palais. Visiblement, Macros prend très au sérieux la sécurité des ducs.~
+
+// Proposition d'alliance de la guilde des ombres *************************************************************************************************************************************************************
+@78 = ~D'une allure féline Valéria vous enmêne, seul(e) au rendez-vous, vos compagnons retournant à l'auberge. Elle vérifie de nombreuses fois que personne n'est à vos basques.~
+@79 = ~Dans les égoûts, vous constatez sans surprise que la puanteur n'a pas vraiment changé depuis votre dernière visite.~
+@80 = ~Lorsque vous montez à l'échelle, vous savez que allez vous retrouver dans les caves du Trône de fer.~
+@81 = ~Arrivé en haut, vous êtes seul dans cette pièce sombre ou peut être pas finalement...~
+
+// Les gardes accompagnent le Protecteur dans un l'un des appartements des invités (Dremlon ou Clifangion) *************************************************************************************************************************************************************
+@82 = ~Deux gardent vous conduisent et Vous traversez à nouveau d'interminables couloirs jusqu'à arriver enfin devant une porte. Les deux gardes se placent de part et d'autre.~
+
+// Alfredo va demander aux ducs si ils peuvent revevoir le Protecteur. *************************************************************************************************************************************************************
+@127 = ~Alfredo vous laisse seul.
+
+En son abscence; vous constatez que les gardes ne sont pas enclins à discuter ou à vous laisser vous balader. Vous n'avez d'autre choix que d'attendre le retour d'Alfredo.
+
+Visiblement Macros ne fait confiance à personne...~
+
+// Altair d'Argol: le gamin propose de venir voir le duel *************************************************************************************************************************************************************
+@270 = ~Le mioche quitte aussitôt la rue principale pour vous enmêner dans les ruelles de Baldur. Un bruit de foule de plus en plus distinct se rapproche de vous au fur et à mesure de votre progression.~
+ // Version 1
+@271 = ~Vous finissez pas déboucher sur une place où une populace est rassemblée. Le petit n'a pas menti, on dirait bien qu'un combat va avoir lieu!~
+ // Version 2
+@272 = ~Vous finissez pas déboucher sur une place où une populace est rassemblée. Le gamin vous sourit avant de disparaitre dans la mêlée. Par réflèxe vous posez votre main sur votre bourse. Finalement deux pièces d'or n'était pas un si mauvais prix à payer...~
+
+*/
+// OBJETS **********************************************************************************************************************************************************************************************************************************
+
+// FIN OBJETS **********************************************************************************************************************************************************************************************************************************
+
+// SORTS **********************************************************************************************************************************************************************************************************************************
+@190 = ~Suis moi!~
+@191 = ~Restes ici!~
+@192 = ~Tues!~
+@193 = ~Protèges moi!~
+// FIN SORTS **********************************************************************************************************************************************************************************************************************************
+
+// SORTILEGES ******************************************************************************************************************************************
+@194 = ~Réparation Golem~
+
+// FIN SORTILEGES ******************************************************************************************************************************************
+
+// STORES ***************************************************************************************************************************************************
+@195 = ~Marchandises des Golems d'ambre~
+
+// FIN STORES ***************************************************************************************************************************************************
+

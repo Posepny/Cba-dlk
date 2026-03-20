@@ -1,0 +1,165 @@
+// TEXTSCREEN **************************************************************************************************************************************************
+// INTRO Mod
+@5001 = ~~
+@5002 = ~LE PROTECTEUR DE BALDUR - Acte 1 - L'ombre de la menace.~
+@5003 = ~
+
+Vous êtes un héros!
+
+Vous avez vaincu l'infame Sarevok et déjoué le complot visant à déclencher une guerre meurtrière entre Amn et la Porte de Baldur. 
+
+Les ducs Liia et Belt ont été soignés de leurs blessures. Grâce à eux, vous disposez gratuitement d'une chambre dans l'auberge du Heaume et de la cape.
+
+Ils vous ont demandé de rester discret sur la fin de Saverok. Officiellement, il a été tué dans la maison où vous l'avez poursuivi. En résumé, la cité souterraine décrépite n'existe pas. Les ducs ne veulent pas attirer la peur et la convoitise en ces lieux.
+
+Après la nuit de mon affrontement avec Sarevok, l'amiral a été retrouvé noyé dans les eaux du port et le duc Eltan a disparu. Entar étant mort, le conseil des ducs est donc réduit à deux.
+
+Dans la cité, il y a plus une seule trace d'un membre du Trône de fer. Leur batiment est tout simplement désert. Dans la cité, leur réputation est tombée au plus bas suite à l'annonce de leur participation au complot.
+
+Le pire a été évité de justesse. Cependant le climat d'une future guerre a grandement nui au commerce et à la sécurité au sein de la cité.
+
+Après deux semaines de repos et Sarevok éliminé, vous ignorez quoi faire de votre vie et de votre célébrité... 
+
+Vous songez à reprendre la route en quête de nouvelles aventures!
+
+Néanmoins, ce matin vous avez reçu une invitation des ducs à vous rendre au palais. Curieux, vous avez décidé d'y aller.~
+
+
+// le Protecteur se rend aux Cuisines du palais 
+@5004 = ~Accompagné par deux gardes, Alfredo, vous guide jusqu'aux cuisines où de nombreux plats ont été prévus à votre attention.~
+@5005 = ~Vous vous délectez de ces mets parfumés et onctueux entourés de serviteurs affairés. De leur discussion, Vous comprenez qu'une soirée importante va avoir lieu dans le batiment du Trône de fer.~
+@5006 = ~Repus et le ventre distendu, Alfredo vous conduit jusqu'aux portes du palais.~
+@5007 = ~Précédé des ducs et de leur escorte, vous sortez. 
+
+La foule attirée par les crieurs est amassée à l'entrée. L'heure de votre sacré est arrivé.~
+
+
+// MF1 
+@5008 = ~Mort Fatale n°1: l'attaque du palais des ducs~
+@5009 = ~Les gardes alertés sortent leurs armes pour vous tailler en pièces. Vous avez beau faire face et éliminer la menace présente, d'autres arrivent, toujours et encore!~
+@5010 = ~Affaibli et dépassé par le nombre, vous finissez pas succomber sous les coups...~
+@5011 = ~Quelle idée suicidaire vous est passée par la tête? Vous attaquer au palais rempli de gardes, Vous n'aviez pas l'ombre d'une chance!~
+@5012 = ~Oui, vous avez raison c'était très stupide...une autre fois peut être. :-)~
+
+
+// MF2 
+@5013 = ~Mort Fatale n°2: l'attaque des voleurs d'ombre~
+@5014 = ~.
+
+vous ressentez une intense brulure et rapidement votre vue se trouble. A terre, vous commencez à convulser pendant qu'un liquide chaud se répand dans votre gorge. Vous étouffez...~
+@5015 = ~Quelle idée suicidaire vous est passée par la tête? Vous attaquer seul(e) à la guilde des voleurs de l'ombre dans une petite cave. Vous avez bien résisté mais vous n'aviez pas l'ombre d'une chance!~
+ 
+
+// Essayage des tenues pour la soirée en l'honneur de la délégation d'Amn
+@5101 = ~A nouveau, Alfredo vous précède et vous emboitez le pas suivi de près par deux gardes.~
+@5102 = ~A nouveau, Alfredo vous précède et vous emboitez le pas suivi de près par deux gardes.~
+@5103= ~Vous traversez d'interminables couloirs jusqu'à ce que l'intendant s'arrête enfin devant une porte. Les deux gardes se placent de part et d'autre.~
+@5104 = ~L'intendant vous regarde avec sourire narquois. "Protecteur, le tailleur des ducs vous attend. Je vous souhaite bon courage."~
+@5105 = ~Tout celà n'augure rien de bon...~
+
+ 
+// Sortie du palais après essayage des tenues de sigmund 
+@5106 = ~A l'exterieur du salon, les deux gardes vous attendaient et vous raccompagne jusqu'aux portes du palais. Visiblement, Macros prend très au sérieux la sécurité des ducs.~
+
+// Proposition d'alliance de la guilde des ombres 
+@5107 = ~D'une allure féline Valéria vous conduit seul(e) dans les ruelles sombres de Baldur.~
+@5108 = ~.
+
+
+S'assurant que personne n'est à vos basques, elle pénètre dans les égouts où vous constatez sans surprise que la puanteur y est toujours présente. Certaines choses ne changeront jamais.~
+@5109 = ~Lorsque vous montez à l'échelle, vous savez déjà que allez vous retrouver dans les caves du Trône de fer. Arrivé(e) en haut, Valéria a tout simplement disparu.~
+@5110 = ~Visiblement vous êtes seul(e) ou peut être pas...~
+
+
+// Les gardes accompagnent le Protecteur dans l'un des appartements des invités (Dremlon ou Clifangion)
+@5111 = ~Deux gardent vous conduisent et Vous traversez à nouveau d'interminables couloirs jusqu'à arriver enfin devant une porte. Les deux gardes se placent de part et d'autre.~
+
+
+// Alfredo va demander aux ducs si ils peuvent revevoir le Protecteur. 
+@5112 = ~Alfredo vous laisse seul.
+
+En son abscence; vous constatez que les gardes ne sont pas enclins à discuter ou à vous laisser vous balader. Vous n'avez d'autre choix que d'attendre le retour d'Alfredo.
+
+Visiblement Macros ne fait confiance à personne...~
+
+
+// Altair d'Argol: le gamin propose de venir voir le duel (2 versions)
+@5113 = ~Le mioche quitte aussitôt la rue principale pour vous enmêner dans les ruelles de Baldur. Un bruit de foule de plus en plus distinct se rapproche de vous au fur et à mesure de votre progression.~
+@5114 = ~Vous finissez pas déboucher sur une place où une populace est rassemblée. Le petit n'a pas menti, on dirait bien qu'un combat va avoir lieu!~
+@5115 = ~Vous finissez pas déboucher sur une place où une populace est rassemblée. Le gamin vous sourit avant de disparaitre dans la mêlée. Par réflèxe vous posez votre main sur votre bourse. Finalement deux pièces d'or n'était pas un si mauvais prix à payer...~
+
+// Madame Irma: monter dans une chambre avec un courtisan/Courtisane
+// Carina
+@5116= ~Carina vous conduit dans sa chambre richement décorée. Sa silhouette exquise et son parfait déhanché sont plein de promesses.~
+@5117= ~Nu(e) sur le lit, elle masse, des ses mains expertes, vos muscles noués d'huile parfumée. Calme et détendu(e), ses caresses se font plus intenses et l'appel du désir prend le dessus!~
+@5118= ~Après ce délicieux moment d'extase, vous prenez congés de Carina frais et détendu, la bourse un peu plus légère. Vous êtes prêt(es) pour l'action!~
+
+// Alexandro
+@5119= ~alexandro vous conduit dans sa chambre richement décorée. Sa silhouette élancée et son parfait déhanché sont plein de promesses.~
+@5120= ~Nu(e) sur le lit, il masse, des ses mains expertes, vos muscles noués d'huile parfumée. Calme et détendu(e), ses caresses se font plus intenses et l'appel du désir prend le dessus!~
+@5121= ~Après ce délicieux moment d'extase, vous prenez congés de Alexandro frais et détendu, la bourse un peu plus légère. Vous êtes prêt(es) pour l'action!~
+
+
+
+// Quête secondaire: le Donjon de Bhaal *************************************************************************************************************************************************
+// Donjon de Bhaal: couloir menant au hall
+@6000= ~Après une descente interminable, vous poursuivez vôtre exploration dans ce long couloir lugubre.~
+@6001= ~Sa construction est ancienne et la stabilité des murs semble des plus précaires. Vous ne seriez pas surpris de voir le plafond vous tomber sur la tête. Au sol, il y a de nombreux squelettes en armures bouffées par la rouille. Certains crânes sont d'ailleurs fracassés. Il n'y a pas de doutes possibles, un combat a eu lieu dans ce couloir humide et nauséabond.~
+@6002= ~La présence de ces torches brulant d'une lumière surnaturelle signale clairement qu'une magie est à l'oeuvre...~
+
+// Combat au puit
+@6003=~Vous sentez une présence tapie au fond du grand trou. Elle s'insinué dans votre tête et vous pousse à faire couler le sang, à tuer tous vos compagnons sans la moindre hésitation!
+
+D'instinct, vous résistez à cette envie de meurtre, de les voir tous mort à vos pieds!~
+
+// Couloir menant à la salle du Sphinx
+@6005=~Prêt à combattre, vous progressez aux aguets dans ce couloir sombre et humide. Aussi étrange que celà puisse paraitre, une pluie de sang s'abbat sur vous depuis les nombreuses stalagtites.~
+
+@6006=~Sur le sol glissant, vous redoublez de prudence et d'attention. Cet endroit est proprice à une embuscade...~
+
+@6007=~Soudainement, de nombreuses questions vous assaillent. Ce sang est-il celui de vos victimes? L'enfant du seigneur du meutre est-il né pour tuer? La réponse est-elle vraiment IMPORTANTE?~ 
+
+@6008=~Vous sentez le poids de toutes ces interrogations devenir de plus en plus opressantes. Chaque pas vous demandant un effort plus important.~
+
+@6009=~Seul, la tête prête à exploser, vous parvenez titubant au bou du couloir guidé par votre détermination à résister.~
+
+
+// Récompense de Bhaal
+@6010=~L'attaque est d'une telle violence que vous tombez à terre. Vôtre corps n'est plus que douleur.~
+
+@6011=~La souffrance finit par laisser la place à une étrange sensation. Vous vous sentez meilleur sans savoir vraiment pourquoi. Seul la paume de votre main est encore douloureuse et en y regardant de plus prêt, vous constatez que le symbôle de Bhaal est gravé dans votre chair.~
+
+@6012=~Voilà donc la récompense de vôtre père.~
+
+
+// Rencontre avec Systéra
+@6013=~Vous pénétrez dans la pièce, l'odeur décomposition se mélange à celle du sang dont elle est entièrement tapissée.~
+@6014=~Dans le fond, une étrange créature se retourne à votre apprôche et pose son regard vide sur vous. Bien qu'elle n'ait plus rien à voir avec les vivants, elle iradie d'énergie.~
+@6015=~Ce lieu ne laisse présager rien de bon et cette créature non plus...~
+
+
+// Combat au puit: Ekilis a lancé le sort détruisant Bhaal
+@6016=~Le sol se met à trembler et vous êtes projetés au sol.
+
+Une étrange sentation vous parcours le corps et se mue rapidement en une douleur atroce. La souffrance est telle que vous perdez conscience.
+
+EKilis, le grand inquisiteur de Cyric, a trouvé le temple et vous l'avez conduit auprès de vôtre père. Considérablement affaibli, Bhaal n'était pas en mesure de faire face à cette attaque. Le dieu s'éteint et toute sa descendance avec.
+
+Vous ne vous réveillerez jamais...~
+
+// intro Champion de Bhaal (MOD sans le Protecteur de Baldur)
+@6020=~Sarevok est mort, vous l'avez vaincu!
+
+Son complot visant à déclencher une guerre meurtrière entre Amn et la Porte de Baldur a été déjoué. Les ducs reconnaissent en vous un héros et ils vous offrent le titre de Protecteur de Baldur, "celui qui sert et protège le peuple".
+
+Désormais, vous disposez d'une chambre confortable dans l'auberge du Heaume et de la cape. Barni, le nouvel aubergiste désire vous parler. Qui a dit que le statut de Protecteur serait reposant?~
+
+
+// Fin 1ière partie du mod et le 2nd en cours de réalisation
+@6030=~  Félicitations!
+Vous venez d'atteindre la seconde partie du mod "Le champion de Bhaal". Les redoutables épreuves de votre père vous attendent derrière cette grille.
+
+Cette partie est en cours de réalisation. Si ce n'est pas déjà fait, vous avez moyen de retourner voir Barni.
+
+A très bientôt
+Cocrane~

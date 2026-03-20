@@ -1,0 +1,94 @@
+@1=~cette pièce semble être une salle de réunion avec ses 9 sièges de pierre. Le trou au centre par contre c'est assez étrange...~
+@2=~La statue semble vous regarder prête à vous sauter à la gorge...~
+@3=~Le sarcophage est brulant et fermé. Il vous est impossible de l'ouvrir.~
+@4=~Le sarcophage est vide. Vous sentez comme une forte odeur de formol.~
+
+// infos Puits
+@5=~A la vue du trou. Vous rensentez quelque chose d'étrange. Comme une sorte de lien...~
+@11=~A la vue du trou énorme, vous ressentez une sorte de malaise.~
+
+
+// Bhaal communique avec le Charname pendant le combat du puit
+@6=~C'est quoi cette chose dans le trou? Elle veut que je tue tout le monde!~
+
+// statues
+@7=~Vous êtes trop loin.~
+@8=~La statue représente une personne des plus communes.~
+
+// Porte bloquée
+@9=~Une force invisible vous repousse. Vous ne parvenez pas à pénétrer dans le couloir.~
+
+// Info couloir
+@10=~Une odeur de mort embaume cette partie du couloir. Il doit y avoir un cadavre en décomposition dans les parages.~
+
+// info crâne de feu dans le container
+@12=~On dirait qu'il y a quelque chose dans les flammes.~
+@13=~Dans les flammes vous distinguez des crânes. C'est étrange ils devraient être carbonisés.~
+@14=~En plongeant la main dans le feu, vous vous exposez aux flammes...~
+@15=~J'ai vaincu Bhaal!~
+
+// Quête
+@50=~La récompense de Bhaal
+
+Massena m'annonce que je dois subir l'épreuve de Bhaal. Si je réussis, je recevrai la récompense d'un dieu. Son épreuve m'attend derrière la grille~
+
+@51=~Histoire du temple de Bhaal
+
+Ekilis, alias Karl, a attaqué le temple avec les fidèles de Cyric. Il a failli tuer Systéra la gardienne du temple qui a réussi à se sauver en se téléportant via un cercle runique au sol.
+
+Mais lui même n'est pas parvenu à se téléporter. En lançant un sort de stase prolongée, il a réussi à rester en vie jusqu'à notre rencontre.~
+
+@52=~Histoire du temple de Bhaal
+
+Karl est bel et bien un serviteur de Cyric! Il est venu pour détruire Bhaal au coeur du temple. D'après lui en éliminant Bhaal, sa descendance mourra avec lui. Je dois l'en empêcher!
+Son crâne violet ne m'inspire pas confiance.~
+
+
+
+// Quête trésor de Bhaal
+@53=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple. Nous avons conclu une alliance pour le trouver ensemble.~
+
+@54=~trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple.
+
+J'ai réfusé sa proposition d'alliance pour partager le trésor. Je le trouverai sans lui!~
+
+@55=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple.
+
+J'ai réfusé sa proposition d'alliance et j'ai décidé de me débarrasser de lui. Je trouverai le trésor sans lui.~
+
+@56=~Le trésor de Bhaal
+
+J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
+
+Karl affirme qu'un trésor est caché dans le temple.
+
+J'ai décidé de me débarrasser de lui. On ne pille pas le temple de mon défunt père impunément!
+
+Ca l'a fait rire. Karl est en fait Ekilis le grand inquisiteur de cyric. Il se rejouit d'avance de prendre ma tête.
+
+Quand au trésor, je le trouverai sans lui.~
+
+@57=~Le trésor de Bhaal
+
+Massena a accusé mon nouveau compagnon Karl d'être un serviteur de Cyric. Karl dément formellement. Qui croire?~
+
+@58=~Le trésor de Bhaal
+
+Karl était en fait Ekilis un serviteur de cyric qui voulait simplement de servir de moi pour détruire le temple. Il n'y a pas vraiment de trésor ici à sa connaissance...~
+
+
+@60=~Sortir d'ici
+
+j'ai enfin trouvé la salle des prières et placé le crâne de Kept. Normalement, l'entrée du temple est à nouveau ouverte. Je peux sortir d'ici!~
