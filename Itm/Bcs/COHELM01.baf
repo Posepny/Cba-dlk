@@ -1,0 +1,23 @@
+// Seul le Charname peut invoquer l'horreur guerrière + avoir la coupe de sang
+IF
+ HasItem("MISCP64",PLAYER1)
+ Global("CO_horreur_top","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("CO_horreur_top","GLOBAL",1)
+
+ ReallyForceSpellRES("cohelm01",PLAYER1)
+ ChangeAIScript("",OVERRIDE) 
+// ChangeAIScript("",RACE) 
+END
+
+
+// Cas d'un autre PLAYER cherchant à utiliser l'objet
+IF
+ !HasItem("MISCP64",PLAYER1)
+THEN
+ RESPONSE #100
+
+ ChangeAIScript("",OVERRIDE) 
+// ChangeAIScript("",RACE) 
+END
