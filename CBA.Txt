@@ -10,7 +10,7 @@ LANGUAGE ~Francais~
 BEGIN @4
 
 COMPILE ~CDB\CRE\BCS\COEKILI2.baf~ ~override~  USING ~CDB\DLG\COEKILIS.tra~ // gestion du combat
-COMPILE ~CDB\CRE\BCS\COEKILI3.baf~ ~override~  USING ~CDB\DLG\COEKILIS.tra~ // Ekilis allié du groupe
+COMPILE ~CDB\CRE\BCS\COEKILI3.baf~ ~override~  USING ~CDB\DLG\COEKILIS.tra~ // Ekilis alliÃ© du groupe
 
 COMPILE ~CDB\AREA\BCS\COT014TP.baf~ ~override~ // Activation TP COM014
 COMPILE ~CDB\AREA\BCS\COT015TP.baf~ ~override~ // Activation TP COM015
@@ -24,10 +24,10 @@ SAY NAME2 @5132
 SAY DESC @5133
 
 
-ADD_PROJECTILE ~CDB\PRO\COSKUF1.pro~ ~crâne de Feu~
+ADD_PROJECTILE ~CDB\PRO\COSKUF1.pro~ ~crÃ¢ne de Feu~
 COPY ~CDB\PRO\COSKUF1.pro~ ~override~
 
-// Crâne de feu
+// CrÃ¢ne de feu
 COPY ~CDB\ITM\MISCP57.itm~ ~override~
   LPF ALTER_SPELL_HEADER INT_VAR projectile = (IDS_OF_SYMBOL (projectl COSKUF1) + 1) END
   WRITE_SHORT 0x09C ~%COSKUF1%~
@@ -40,7 +40,7 @@ BUT_ONLY
 COMPILE ~CDB\CRE\BCS\COMASSE1.baf~ ~override~ USING ~CDB\DLG\COMASSE4.tra~ 
 
 
-COPY ~CDB\SPELL\COM017TP.spl~ ~override~ // Téléport épreuves
+COPY ~CDB\SPELL\COM017TP.spl~ ~override~ // TÃ©lÃ©port Ã©preuves
 
 EXTEND_TOP ~AR7216.bcs~ ~CDB\AREA\BCS\AR7216.baf~ USING ~CDB\LANGUAGE\FRENCH\AR7216.TRA~ // Auberge Heaume et la cape
 COMPILE ~AR7217.bcs~ ~CDB\AREA\BCS\AR7217.baf~ // Auberge Heaume et la cape: chambre double
@@ -204,17 +204,17 @@ UNLESS ~ALINEA~
 
 
 
-// Vérification installation *******************************************************************************************************************************************
-// Pré-requis: installation de BGT
+// VÃ©rification installation *******************************************************************************************************************************************
+// PrÃ©-requis: installation de BGT
 //REQUIRE_PREDICATE (GAME_IS ~bgt~) @5
 
 /*
-// Pré-requis: installation de TOB
+// PrÃ©-requis: installation de TOB
 REQUIRE_PREDICATE (FILE_EXISTS ~tobex.dll~) @6
 */
 
-// Vérification de l'installation de NI et chargement des créatures avec animations optionnelles
-// MOD IA installée
+// VÃ©rification de l'installation de NI et chargement des crÃ©atures avec animations optionnelles
+// MOD IA installÃ©e
 ACTION_IF (FILE_EXISTS_IN_GAME "setup-infinityanimations.tp2")  BEGIN
   PRINT @7
   LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
@@ -222,7 +222,7 @@ ACTION_IF (FILE_EXISTS_IN_GAME "setup-infinityanimations.tp2")  BEGIN
 
   // Partie 1 ***************
   // Animation Marchand -> Marchand Eau profonde (auberge du Heaume et de la cape) - AR7216 / 0xc800 -> 0x5d57
-  ACTION_IF (FILE_EXISTS_IN_GAME "µbag1.bam")  BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME "Âµbag1.bam")  BEGIN
 	  PRINT ~Marchand~
 	  COPY ~CDB\CRE\Animation\COMER01.cre~ ~override~ // Marchand 
 	  SAY NAME1 @6  
@@ -239,7 +239,7 @@ ACTION_IF (FILE_EXISTS_IN_GAME "setup-infinityanimations.tp2")  BEGIN
   END
 
   // Animation Momie> Harpie (Niveau 1B) - COM015 / x -> 0x5269
-  ACTION_IF (FILE_EXISTS_IN_GAME "µbsa1.bam")  BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME "Âµbsa1.bam")  BEGIN
   	  PRINT ~Harpie~
 	  COPY ~CDB\CRE\Animation\COHARP1.cre~ ~override~ // Harpie
 	  SAY NAME1 @303
@@ -258,24 +258,24 @@ ACTION_IF (FILE_EXISTS_IN_GAME "setup-infinityanimations.tp2")  BEGIN
 	  COPY ~CDB\CRE\COUMBER.cre~ ~override~ // UmberHulk
   END
 
-  // Animation Liche Systéra -> Liche Systéra ICEWIND (Niveau 2) - COM017 / 0x7f0d -> 0xe060 
+  // Animation Liche SystÃ©ra -> Liche SystÃ©ra ICEWIND (Niveau 2) - COM017 / 0x7f0d -> 0xe060 
   ACTION_IF (FILE_EXISTS_IN_GAME "")  BEGIN
   	  PRINT ~Liche~
-	  COPY ~CDB\CRE\Animation\COSYSTE.cre~ ~override~ // Systéra
+	  COPY ~CDB\CRE\Animation\COSYSTE.cre~ ~override~ // SystÃ©ra
 	  SAY NAME1 @298
 	  SAY NAME2 @298
 
   END ELSE BEGIN
-	  COPY ~CDB\CRE\COSYSTE.cre~ ~override~ // Systéra
+	  COPY ~CDB\CRE\COSYSTE.cre~ ~override~ // SystÃ©ra
 	  SAY NAME1 @298
 	  SAY NAME2 @298
   END
 
 
   // Partie 2 ***************
-  // Animation Sorcière Maladie -> socière Maladie ICEWIND  () - COM024 / x -> 0xe0f2 wailing_virgin
+  // Animation SorciÃ¨re Maladie -> sociÃ¨re Maladie ICEWIND  () - COM024 / x -> 0xe0f2 wailing_virgin
   ACTION_IF (FILE_EXISTS_IN_GAME "")  BEGIN
-         PRINT ~Sorcière~
+         PRINT ~SorciÃ¨re~
 	 COPY ~CDB\CRE\Animation\COMALAD.cre~ ~override~ // MALADIE
 	 SAY NAME1 @290
 	 SAY NAME2 @290
@@ -286,21 +286,21 @@ ACTION_IF (FILE_EXISTS_IN_GAME "setup-infinityanimations.tp2")  BEGIN
 	 SAY NAME2 @290
   END 
 
-  // Animation Araignée -> Araignée géante () - COM024 / x -> 0x5032 
-  ACTION_IF (FILE_EXISTS_IN_GAME "µbya1.bam")  BEGIN
-       	  PRINT ~Araignée géante~
-	  COPY ~CDB\CRE\Animation\COSPIDG.cre~ ~override~ // Araignée géante (Maladie transormée)
+  // Animation AraignÃ©e -> AraignÃ©e gÃ©ante () - COM024 / x -> 0x5032 
+  ACTION_IF (FILE_EXISTS_IN_GAME "Âµbya1.bam")  BEGIN
+       	  PRINT ~AraignÃ©e gÃ©ante~
+	  COPY ~CDB\CRE\Animation\COSPIDG.cre~ ~override~ // AraignÃ©e gÃ©ante (Maladie transormÃ©e)
 	  SAY NAME1 @290
 	  SAY NAME2 @290
 
   END ELSE BEGIN
-	  COPY ~CDB\CRE\COSPIDG.cre~ ~override~ // Araignée géante (Maladie transformée)
+	  COPY ~CDB\CRE\COSPIDG.cre~ ~override~ // AraignÃ©e gÃ©ante (Maladie transformÃ©e)
 	  SAY NAME1 @290
 	  SAY NAME2 @290
   END
 
   // Animation Basilik -> Basilik ICEWIND () - COM022 / 0x7101 basilisk_greater -> 0x557B 
-  ACTION_IF (FILE_EXISTS_IN_GAME "£jxg1.bam")  BEGIN
+  ACTION_IF (FILE_EXISTS_IN_GAME "Â£jxg1.bam")  BEGIN
 	  PRINT ~Basilik~
 	  COPY ~CDB\CRE\Animation\cobasil1.cre~ ~override~ // Basilik Glabuk
 	  SAY NAME1 @297
@@ -321,11 +321,11 @@ ACTION_IF (FILE_EXISTS_IN_GAME "setup-infinityanimations.tp2")  BEGIN
 	  SAY NAME1 @297
   END
  
- // Infinity animation non installée *********************************************************************************
+ // Infinity animation non installÃ©e *********************************************************************************
  END ELSE BEGIN
   PRINT @9 
-  //Le mod Infinity Animation n'est pas installé. Vous ne bénéficierez pas des ajouts d'animation. Vous désirez?
-  //[1] Arrêter l'installation et installer le mod IA avant.
+  //Le mod Infinity Animation n'est pas installÃ©. Vous ne bÃ©nÃ©ficierez pas des ajouts d'animation. Vous dÃ©sirez?
+  //[1] ArrÃªter l'installation et installer le mod IA avant.
   //[2] Installer sans le mod IA.
 
    ACTION_READLN ~reply2~
@@ -334,14 +334,14 @@ ACTION_IF (FILE_EXISTS_IN_GAME "setup-infinityanimations.tp2")  BEGIN
    ACTION_READLN ~reply2~
   END
 
-  // Choix [1] effectué
+  // Choix [1] effectuÃ©
   ACTION_IF (~%reply2%~ STRING_EQUAL_CASE ~1~ = 1) BEGIN
-   PRINT @2 // Choix [1] effectué
+   PRINT @2 // Choix [1] effectuÃ©
   END
 
-  // Choix [2] effectué
+  // Choix [2] effectuÃ©
  ACTION_IF (~%reply2%~ STRING_EQUAL_CASE ~2~ = 1) BEGIN
-  PRINT @3 // Choix [2] effectué
+  PRINT @3 // Choix [2] effectuÃ©
 
   PRINT @8
 
@@ -360,18 +360,18 @@ ACTION_IF (FILE_EXISTS_IN_GAME "setup-infinityanimations.tp2")  BEGIN
   // Animation Ombre Roche -> Ombre Roche ICEWIND  (Niveau 1B) - COM015 
   COPY ~CDB\CRE\COUMBER.cre~ ~override~ // UmberHulk
 
-  // Animation Liche Systéra -> Liche Systéra ICEWIND (Niveau 2) - COM016 
-  COPY ~CDB\CRE\COSYSTE.cre~ ~override~ // Systéra
+  // Animation Liche SystÃ©ra -> Liche SystÃ©ra ICEWIND (Niveau 2) - COM016 
+  COPY ~CDB\CRE\COSYSTE.cre~ ~override~ // SystÃ©ra
   SAY NAME1 @298
   SAY NAME2 @298
 
-  // Animation Sorcière Maladie -> socière Maladie ICEWIND  () - COM024 
+  // Animation SorciÃ¨re Maladie -> sociÃ¨re Maladie ICEWIND  () - COM024 
   COPY ~CDB\CRE\COMALAD.cre~ ~override~ // MALADIE
   SAY NAME1 @290
   SAY NAME2 @290
 
-  // Animation Araignée -> Araignée géante () - COM024 
-  COPY ~CDB\CRE\COSPIDG.cre~ ~override~ // Araignée géante (Maladie transformée)
+  // Animation AraignÃ©e -> AraignÃ©e gÃ©ante () - COM024 
+  COPY ~CDB\CRE\COSPIDG.cre~ ~override~ // AraignÃ©e gÃ©ante (Maladie transformÃ©e)
   SAY NAME1 @290
   SAY NAME2 @290
 
@@ -386,34 +386,34 @@ END
 
 
 
-// Choix de démarrage du mod ************************************************************************************************************************************************
+// Choix de dÃ©marrage du mod ************************************************************************************************************************************************
 LOAD_TRA ~CDB\LANGUAGE\French\Setup.tra~
 PRINT @1 
-//Vous désirez?
-//[1] Activer le mod à la mort de Sarevok (suite de BG1).
-//[2] Démarrer une partie avec le mod tout de suite.~
+//Vous dÃ©sirez?
+//[1] Activer le mod Ã  la mort de Sarevok (suite de BG1).
+//[2] DÃ©marrer une partie avec le mod tout de suite.~
 ACTION_READLN ~reply~
  OUTER_WHILE ((~%reply%~ STRING_EQUAL_CASE ~1~ = 0) AND (~%reply%~ STRING_EQUAL_CASE ~2~ = 0)) BEGIN
   PRINT @1  
   ACTION_READLN ~reply~
  END
 
-// Choix [1] effectué
+// Choix [1] effectuÃ©
 ACTION_IF (~%reply%~ STRING_EQUAL_CASE ~1~ = 1) BEGIN
- PRINT @2 // Choix [1] effectué
- EXTEND_TOP ~AR7225.bcs~ ~CDB\Setup\DEM_MOD1.baf~ // Ajout variable pour activer le mod à la mort de Sarevok.
+ PRINT @2 // Choix [1] effectuÃ©
+ EXTEND_TOP ~AR7225.bcs~ ~CDB\Setup\DEM_MOD1.baf~ // Ajout variable pour activer le mod Ã  la mort de Sarevok.
 END
 
-// Choix [2] effectué
+// Choix [2] effectuÃ©
 ACTION_IF (~%reply%~ STRING_EQUAL_CASE ~2~ = 1) BEGIN
   PRINT @3  
-  EXTEND_TOP ~BALDUR.bcs~ ~CDB\Setup\DEM_MOD2.baf~ // Ajout variable pour démarrer le mod aussitôt la partie BG2 lancée.
-  EXTEND_TOP ~BALDUR25.bcs~ ~CDB\Setup\DEM_MOD2.baf~ // Ajout variable pour démarrer le mod aussitôt la partie TOB lancée.
+  EXTEND_TOP ~BALDUR.bcs~ ~CDB\Setup\DEM_MOD2.baf~ // Ajout variable pour dÃ©marrer le mod aussitÃ´t la partie BG2 lancÃ©e.
+  EXTEND_TOP ~BALDUR25.bcs~ ~CDB\Setup\DEM_MOD2.baf~ // Ajout variable pour dÃ©marrer le mod aussitÃ´t la partie TOB lancÃ©e.
 END
 
 
 // ****************************************************************************************************************************************************
-/* STOP début
+/* STOP dÃ©but
 // ****************************************************************************************************************************************************
 
 
@@ -426,7 +426,7 @@ COPY ~CDB\ITM\BAM~ ~override~
 // Ajout des BAM de projectiles
 COPY ~CDB\PRO\BAM~ ~override~
 
-// Bam complémentaires
+// Bam complÃ©mentaires
 COPY ~CDB\BAM~ ~override~
 
 // Ajout des portraits
@@ -449,7 +449,7 @@ COPY ~CDB\WAV\COM01705.WAV~ ~override~
 COPY ~CDB\WAV\COM01706.WAV~ ~override~
 COPY ~CDB\WAV\COM01707.WAV~ ~override~
 COPY ~CDB\WAV\COM01708.WAV~ ~override~
-COPY ~CDB\WAV\COBOITMU.WAV~ ~override~ // boite à musique de urglite
+COPY ~CDB\WAV\COBOITMU.WAV~ ~override~ // boite Ã  musique de urglite
 COPY ~CDB\WAV\COM02101.WAV~ ~override~
 COPY ~CDB\WAV\COBOO1.WAV~ ~override~ // Boom boss mort
 //COPY ~CDB\WAV\COM02701.WAV~ ~override~
@@ -458,7 +458,7 @@ COPY ~CDB\WAV\COBOO1.WAV~ ~override~ // Boom boss mort
 COPY ~CDB\VVC~ ~override~ 
 
 // Creature de base
-COPY ~CDB\CRE\COSTAINV.cre~ ~override~ // creature invisible + invulnérable
+COPY ~CDB\CRE\COSTAINV.cre~ ~override~ // creature invisible + invulnÃ©rable
 
 // Script de base
 COMPILE ~CDB\CRE\BCS\COSHOUT.baf~ ~override~ // Alerte, poursuite, passage ennemis
@@ -466,7 +466,7 @@ COMPILE ~CDB\CRE\BCS\COSHOUT.baf~ ~override~ // Alerte, poursuite, passage ennem
 // Dialogue de base
 COMPILE ~CDB\DLG\CORUMOR.d~ ~override~ USING ~CDB\DLG\CORUMOR.tra~
 
-// TextScreen: fin 1ière partie, 2nd en cours de réalisation
+// TextScreen: fin 1iÃ¨re partie, 2nd en cours de rÃ©alisation
 //COPY ~CDB\2DA\MOS\TS001.mos~ ~override~
 
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\TEXTSCREEN.TRA~   // Intro Champion de Bhaal
@@ -478,7 +478,7 @@ REPLACE ~99998~ @6030
 
 
 // Introduction: Le charname apparait dans l'auberge du Heaume et de la cape ************************************************************************************************
-// Auberge Heaume et la cape: Ajout cave + porte d'entrée fermée
+// Auberge Heaume et la cape: Ajout cave + porte d'entrÃ©e fermÃ©e
 // Carte
 COPY ~CDB\area\AR7216.are~ ~override~ 
 COPY_LARGE ~CDB\area\AR7216.tis~ ~override~
@@ -486,9 +486,9 @@ COPY ~CDB\area\AR7216.wed~ ~override~
 COPY ~CDB\area\AR7218.are~ ~override~ 
 
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
-/* géré selon IA
+/* gÃ©rÃ© selon IA
 COPY ~CDB\CRE\COMER01.cre~ ~override~ // Marchand 
   SAY NAME1 @6
 COPY ~CDB\CRE\COMER02.cre~ ~override~ // Marchand 
@@ -511,7 +511,7 @@ COPY ~CDB\CRE\KIVANP.cre~ ~override~
 COPY ~CDB\CRE\KAGAINP.cre~ ~override~
 COPY ~CDB\CRE\MONTARP.cre~ ~override~
 COPY ~CDB\CRE\XZARP.cre~ ~override~
-//COPY ~CDB\CRE\TIAXP.cre~ ~override~ // Annulé
+//COPY ~CDB\CRE\TIAXP.cre~ ~override~ // AnnulÃ©
 COPY ~CDB\CRE\XANP.cre~ ~override~
 COPY ~CDB\CRE\EDWINP.cre~ ~override~
 COPY ~CDB\CRE\AJANTIP.cre~ ~override~
@@ -540,7 +540,7 @@ EXTEND_TOP ~AR7216.bcs~ ~CDB\AREA\BCS\AR7216.baf~ USING ~CDB\LANGUAGE\FRENCH\AR7
 COMPILE ~AR7217.bcs~ ~CDB\AREA\BCS\AR7217.baf~ // Auberge Heaume et la cape: chambre double
 EXTEND_TOP ~AR7218.bcs~ ~CDB\AREA\BCS\AR7218.baf~ USING ~CDB\LANGUAGE\FRENCH\AR0000.TRA~ //Auberge Heaume et la cape: chambre du Protecteur
 
-// Script créature
+// Script crÃ©ature
 //COMPILE ~CDB\CRE\BCS\GEOFFRO.baf~ ~override~
 COMPILE ~CDB\CRE\BCS\OSWALD.baf~ ~override~
 COMPILE ~CDB\CRE\BCS\ALINEA.baf~ ~override~
@@ -709,7 +709,7 @@ COPY ~CDB\ITM\leap01.itm~ ~override~  // Besantine d'Anxval
 SAY NAME2 @83
 SAY DESC @84
 
-COPY ~CDB\ITM\Miscp61.itm~ ~override~  // clé cave auberge
+COPY ~CDB\ITM\Miscp61.itm~ ~override~  // clÃ© cave auberge
 SAY NAME2 @5200
 SAY DESC @5201
 
@@ -720,7 +720,7 @@ COPY ~CDB\ITM\SHLD01B.itm~ ~override~
 
 // Sorts
 
-// Cutscène
+// CutscÃ¨ne
 
 // TextScreen
 //COPY ~CDB\2DA\MOS\TS001.mos~ ~override~
@@ -755,19 +755,19 @@ COPY ~CDB\area\COM026SR.bmp~ ~override~
 // Script carte  
 COMPILE ~CDB\AREA\BCS\COM026.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM026.TRA~ 
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
 COPY ~CDB\CRE\COCANDE.cre~ ~override~ // Candelas serviteur de Cyric
   SAY NAME1 @300
   SAY NAME1 @300
-COPY ~CDB\CRE\COCYRG1.cre~ ~override~ // guerrier fidèle de Cyric 
+COPY ~CDB\CRE\COCYRG1.cre~ ~override~ // guerrier fidÃ¨le de Cyric 
   SAY NAME1 @301
   SAY NAME1 @301
-COPY ~CDB\CRE\COCYRV1.cre~ ~override~ // voleur fidèle de Cyric  
+COPY ~CDB\CRE\COCYRV1.cre~ ~override~ // voleur fidÃ¨le de Cyric  
   SAY NAME1 @301
   SAY NAME2 @301
 
-// Script créature
+// Script crÃ©ature
 COMPILE ~CDB\CRE\BCS\COCANDE.baf~ ~override~ // Candelas
 COMPILE ~CDB\CRE\BCS\SHOUT111.baf~ ~override~ // Alerte ennemis
 COMPILE ~CDB\CRE\BCS\COCYRV1.baf~ ~override~ // Tueur Cyric potion INV
@@ -800,12 +800,12 @@ COPY ~CDB\area\COM027SR.bmp~ ~override~
 
 // Script carte  
 COMPILE ~CDB\AREA\BCS\COM027.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM027.TRA~ 
-COMPILE ~CDB\AREA\BCS\COT027I1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM027.TRA~ // info sur le mur écroulé
+COMPILE ~CDB\AREA\BCS\COT027I1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM027.TRA~ // info sur le mur Ã©croulÃ©
 COMPILE ~CDB\AREA\BCS\COT02701.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM027.TRA~ // info ouverture PS1
 COMPILE ~CDB\AREA\BCS\COT02702.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM027.TRA~ // bruit de pas
 COMPILE ~CDB\AREA\BCS\COT02703.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM027.TRA~ // la trappe se referme
 
-// Temple de Bhaal: Escalier en colimaçon *********************************************************************************************************************************************
+// Temple de Bhaal: Escalier en colimaÃ§on *********************************************************************************************************************************************
 // Carte
 COPY ~CDB\area\COM012.are~ ~override~ 
 COPY ~CDB\area\COM012.mos~ ~override~
@@ -819,7 +819,7 @@ COPY ~CDB\area\COM012SR.bmp~ ~override~
 COMPILE ~CDB\AREA\BCS\COM012.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM012.TRA~ 
 COMPILE ~CDB\AREA\BCS\COT012I1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM012.TRA~ // info sur les torches
 
-// Temple de Bhaal: Hall d'entrée *********************************************************************************************************************************************
+// Temple de Bhaal: Hall d'entrÃ©e *********************************************************************************************************************************************
 // Carte
 COPY ~CDB\area\COM013.are~ ~override~ 
 COPY ~CDB\area\COM013.mos~ ~override~
@@ -837,27 +837,27 @@ COMPILE ~CDB\AREA\BCS\COT013C.baf~ ~override~
 COMPILE ~CDB\AREA\BCS\COT013D.baf~ ~override~
 COMPILE ~CDB\AREA\BCS\COT013E.baf~ ~override~
 COMPILE ~CDB\AREA\BCS\COT013F.baf~ ~override~
-//COMPILE ~CDB\AREA\BCS\COT013IA.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM013.TRA~ // Info sur le plafond écroulé
+//COMPILE ~CDB\AREA\BCS\COT013IA.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM013.TRA~ // Info sur le plafond Ã©croulÃ©
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
-COPY ~CDB\CRE\COBATT.cre~ ~override~  // Guerrier Fantôme BG1 sans halo de mort rouge
-COPY ~CDB\CRE\COHELL.cre~ ~override~  // Horreur guerrière BG1 sans halo de mort rouge
-COPY ~CDB\CRE\COFANT1.cre~ ~override~ // fantôme  
+COPY ~CDB\CRE\COBATT.cre~ ~override~  // Guerrier FantÃ´me BG1 sans halo de mort rouge
+COPY ~CDB\CRE\COHELL.cre~ ~override~  // Horreur guerriÃ¨re BG1 sans halo de mort rouge
+COPY ~CDB\CRE\COFANT1.cre~ ~override~ // fantÃ´me  
 COPY ~CDB\CRE\COFANT2.cre~ ~override~ 
 COPY ~CDB\CRE\COFANT3.cre~ ~override~ 
 COPY ~CDB\CRE\COFANT4.cre~ ~override~ 
-COPY ~CDB\CRE\COMASSE1.cre~ ~override~ // Massena fantôme
+COPY ~CDB\CRE\COMASSE1.cre~ ~override~ // Massena fantÃ´me
   SAY NAME1 @275
-COPY ~CDB\CRE\battho.cre~ ~override~ // BG2 ajout nom script créature: corriger compatiblité
-COPY ~CDB\CRE\helmho.cre~ ~override~ // BG2 ajout nom script créature: corriger compatiblité
+COPY ~CDB\CRE\battho.cre~ ~override~ // BG2 ajout nom script crÃ©ature: corriger compatiblitÃ©
+COPY ~CDB\CRE\helmho.cre~ ~override~ // BG2 ajout nom script crÃ©ature: corriger compatiblitÃ©
 
-// Script créature
+// Script crÃ©ature
 COMPILE ~CDB\CRE\BCS\COMASSE1.baf~ ~override~ USING ~CDB\DLG\COMASSE4.tra~ 
 COMPILE ~CDB\CRE\BCS\COFANT1.baf~ ~override~ USING ~CDB\DLG\COFANT1.tra~
 
 // Dialogue
-COMPILE ~CDB\DLG\COMASSE1.d~ ~override~ USING ~CDB\DLG\COMASSE1.tra~ // 1iere rencontre avec Massena le fantôme
+COMPILE ~CDB\DLG\COMASSE1.d~ ~override~ USING ~CDB\DLG\COMASSE1.tra~ // 1iere rencontre avec Massena le fantÃ´me
 
 // Objet
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~
@@ -865,17 +865,17 @@ LOAD_TRA ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~
 // image floue fantome (amulette)
 COPY ~CDB\ITM\COGHOST.itm~ ~override~
 
-// Cadavre déesséché de Massena
+// Cadavre dÃ©essÃ©chÃ© de Massena
 COPY ~CDB\ITM\SKELP01.itm~ ~override~
 SAY NAME2 @5040
 SAY DESC @5041
 
-// Collier de Téléport temple de Bhaal
+// Collier de TÃ©lÃ©port temple de Bhaal
 COPY ~CDB\ITM\AMUP02.itm~ ~override~
 SAY NAME2 @5042
 SAY DESC @5043
 
-// Cadavre désséché d'un fidèle de Cyric
+// Cadavre dÃ©ssÃ©chÃ© d'un fidÃ¨le de Cyric
 COPY ~CDB\ITM\SKELP02.itm~ ~override~
 SAY NAME2 @5046
 SAY DESC @5047
@@ -885,17 +885,17 @@ COPY ~CDB\ITM\MISCP24.itm~ ~override~
 SAY NAME2 @5050
 SAY DESC @5051
 
-// bouclier rouillé
+// bouclier rouillÃ©
 COPY ~CDB\ITM\MISC57.itm~ ~override\SHLP11.itm~
 SAY NAME2 @5202
 SAY DESC @5203
 
-// armure rouillée
+// armure rouillÃ©e
 COPY ~CDB\ITM\MISC58.itm~ ~override\PLAP19.itm~
 SAY NAME2 @5204
 SAY DESC @5205
 
-// Epée rouillée
+// EpÃ©e rouillÃ©e
 COPY ~CDB\ITM\MISC56.itm~ ~override\SW1P12.itm~
 SAY NAME2 @5206
 SAY DESC @5207
@@ -903,7 +903,7 @@ SAY DESC @5207
 // Sorts
 
 // TEXTSCREEN
-LOAD_TRA ~CDB\LANGUAGE\FRENCH\TextScreen.TRA~   // Entrée du Hall
+LOAD_TRA ~CDB\LANGUAGE\FRENCH\TextScreen.TRA~   // EntrÃ©e du Hall
 COPY ~CDB\2DA\COTS006.2DA~ ~override~
 REPLACE ~99999~ @5001
 REPLACE ~99998~ @6000
@@ -922,29 +922,29 @@ COPY ~CDB\area\COM014SR.bmp~ ~override~
 
 // Script carte
 COMPILE ~CDB\AREA\BCS\COM014.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~ 
-COMPILE ~CDB\AREA\BCS\COCONT01.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~ // Sarcophage déjà visité
-COMPILE ~CDB\AREA\BCS\COCONT02.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~ // Coffre déjà visité
+COMPILE ~CDB\AREA\BCS\COCONT01.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~ // Sarcophage dÃ©jÃ  visitÃ©
+COMPILE ~CDB\AREA\BCS\COCONT02.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~ // Coffre dÃ©jÃ  visitÃ©
 COMPILE ~CDB\AREA\BCS\COCONT03.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~ // Jarre avec des restes
-COMPILE ~CDB\AREA\BCS\COT01401.baf~ ~override~ // piège boule de feu
-COMPILE ~CDB\AREA\BCS\COT01402.baf~ ~override~ // piège tempête de glace
-COMPILE ~CDB\AREA\BCS\COT01403.baf~ ~override~ // Piège incnérateur
+COMPILE ~CDB\AREA\BCS\COT01401.baf~ ~override~ // piÃ¨ge boule de feu
+COMPILE ~CDB\AREA\BCS\COT01402.baf~ ~override~ // piÃ¨ge tempÃªte de glace
+COMPILE ~CDB\AREA\BCS\COT01403.baf~ ~override~ // PiÃ¨ge incnÃ©rateur
 COMPILE ~CDB\AREA\BCS\COT01404.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~  // Apparition d'un groupe de squelettes.
-COMPILE ~CDB\AREA\BCS\COT01405.baf~ ~override~ // piège Immobilisation personne
+COMPILE ~CDB\AREA\BCS\COT01405.baf~ ~override~ // piÃ¨ge Immobilisation personne
 COMPILE ~CDB\AREA\BCS\COT01406.baf~ ~override~ // Dissipation fin stase Ekilis
-COMPILE ~CDB\AREA\BCS\COT01407.baf~ ~override~ // piège trappe flêche glace
-COMPILE ~CDB\AREA\BCS\COT01408.baf~ ~override~ // piège trappe flêche feu
+COMPILE ~CDB\AREA\BCS\COT01407.baf~ ~override~ // piÃ¨ge trappe flÃªche glace
+COMPILE ~CDB\AREA\BCS\COT01408.baf~ ~override~ // piÃ¨ge trappe flÃªche feu
 COMPILE ~CDB\AREA\BCS\COT01409.baf~ ~override~ // Cellule minautore ouverture/fermeture
 COMPILE ~CDB\AREA\BCS\COT01410.baf~ ~override~ // Cellule minautore ouverture/fermeture
-COMPILE ~CDB\AREA\BCS\COT01412.baf~ ~override~ // Apparition âmes érrantes
-COMPILE ~CDB\AREA\BCS\COT01413.baf~ ~override~ // piège trappe dissipation
-COMPILE ~CDB\AREA\BCS\COT01414.baf~ ~override~ // piège horreur
+COMPILE ~CDB\AREA\BCS\COT01412.baf~ ~override~ // Apparition Ã¢mes Ã©rrantes
+COMPILE ~CDB\AREA\BCS\COT01413.baf~ ~override~ // piÃ¨ge trappe dissipation
+COMPILE ~CDB\AREA\BCS\COT01414.baf~ ~override~ // piÃ¨ge horreur
 COMPILE ~CDB\AREA\BCS\COT014IA.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~ // Info sur les cages
-COMPILE ~CDB\AREA\BCS\COT014IB.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~ // Info sur le plafond écroulé
+COMPILE ~CDB\AREA\BCS\COT014IB.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~ // Info sur le plafond Ã©croulÃ©
 COMPILE ~CDB\AREA\BCS\COT014IC.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM014.TRA~ // Info sur les trous dans le sol
 COMPILE ~CDB\AREA\BCS\COT014TP.baf~ ~override~ // Activation TP COM014
 //COMPILE ~CDB\AREA\BCS\COTTP01.baf~ ~override~ // lancement TP Com014 ou Com015 NON UTILE
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
 COPY ~CDB\CRE\coekilis.cre~ ~override~ // Ekilis
   SAY NAME1 @277
@@ -953,16 +953,16 @@ COPY ~CDB\CRE\COMINAU1.cre~ ~override~ // Minautore prisonnier
 COPY ~CDB\CRE\COMINAU2.cre~ ~override~ // Minautore prisonnier
 COPY ~CDB\CRE\COMINAU3.cre~ ~override~ // Minautore prisonnier
 COPY ~CDB\CRE\pxbhombr.cre~ ~override~ 
-COPY ~CDB\CRE\COSKEL01.cre~ ~override~ // squelette générateur
+COPY ~CDB\CRE\COSKEL01.cre~ ~override~ // squelette gÃ©nÃ©rateur
 
-// Script créature
-COMPILE ~CDB\CRE\BCS\COEKILI1.baf~ ~override~  USING ~CDB\DLG\COEKILIS.tra~ // gestion des étapes
+// Script crÃ©ature
+COMPILE ~CDB\CRE\BCS\COEKILI1.baf~ ~override~  USING ~CDB\DLG\COEKILIS.tra~ // gestion des Ã©tapes
 COMPILE ~CDB\CRE\BCS\COEKILI2.baf~ ~override~  USING ~CDB\DLG\COEKILIS.tra~ // gestion du combat
-COMPILE ~CDB\CRE\BCS\COEKILI3.baf~ ~override~  USING ~CDB\DLG\COEKILIS.tra~ // Ekilis allié du groupe
+COMPILE ~CDB\CRE\BCS\COEKILI3.baf~ ~override~  USING ~CDB\DLG\COEKILIS.tra~ // Ekilis alliÃ© du groupe
 COMPILE ~CDB\CRE\BCS\COMASSE1.baf~ ~override~
-COMPILE ~CDB\CRE\BCS\COSKEL01.baf~ ~override~ // génération de squelettes
-COMPILE ~CDB\SPELL\BCS\WANP01.baf~ ~override~  // les créatures baguette 1 deviennent des alliés (minautores)
-//COMPILE ~CDB\CRE\BCS\CMDALLI.baf~ ~override~   // Comportement des créatures alliées NON UTILE
+COMPILE ~CDB\CRE\BCS\COSKEL01.baf~ ~override~ // gÃ©nÃ©ration de squelettes
+COMPILE ~CDB\SPELL\BCS\WANP01.baf~ ~override~  // les crÃ©atures baguette 1 deviennent des alliÃ©s (minautores)
+//COMPILE ~CDB\CRE\BCS\CMDALLI.baf~ ~override~   // Comportement des crÃ©atures alliÃ©es NON UTILE
 
 // Dialogue
 // dans le Heaume et la cape pour compile avec COCANDE
@@ -993,14 +993,14 @@ SAY NAME1 @5058
 SAY NAME2 @5058
 SAY DESC @5059
 
-// Crâne violet d'Ekilis
+// CrÃ¢ne violet d'Ekilis
 COPY ~CDB\ITM\MISCP56.itm~ ~override~
 SAY NAME1 @5112
 SAY DESC @5113
 
 // Sorts
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\Sorts.TRA~
-COPY ~CDB\SPELL\WANP01.spl~ ~override~ // commandement créatures baguette 1
+COPY ~CDB\SPELL\WANP01.spl~ ~override~ // commandement crÃ©atures baguette 1
 SAY NAME1 @19
 
 //COPY ~CDB\SPELL\com014TP.spl~ ~override~ // Tp vers niv0-B NON UTILE
@@ -1023,25 +1023,25 @@ COMPILE ~CDB\AREA\BCS\COT01503.baf~ ~override~
 COMPILE ~CDB\AREA\BCS\COT01504.baf~ ~override~
 COMPILE ~CDB\AREA\BCS\COT01505.baf~ ~override~
 COMPILE ~CDB\AREA\BCS\COT01506.baf~ ~override~ //
-COMPILE ~CDB\AREA\BCS\COT01507.baf~ ~override~ // Gestion ouverture fermeture PS accès niveau 2
+COMPILE ~CDB\AREA\BCS\COT01507.baf~ ~override~ // Gestion ouverture fermeture PS accÃ¨s niveau 2
 COMPILE ~CDB\AREA\BCS\COT01508.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM015.TRA~ // Msg info sur la grille
-COMPILE ~CDB\AREA\BCS\COT01509.baf~ ~override~ // Apparition Massena près de la grille
+COMPILE ~CDB\AREA\BCS\COT01509.baf~ ~override~ // Apparition Massena prÃ¨s de la grille
 COMPILE ~CDB\AREA\BCS\COT01510.baf~ ~override~ // Fermeture porte souffle
 COMPILE ~CDB\AREA\BCS\COT01511.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM015.TRA~// info trou dans le sol
 COMPILE ~CDB\AREA\BCS\CON01512.baf~ ~override~ // Coffre apparition Harpie
-COMPILE ~CDB\AREA\BCS\CON01513.baf~ ~override~ // Coffre piégé avec grouilleux
+COMPILE ~CDB\AREA\BCS\CON01513.baf~ ~override~ // Coffre piÃ©gÃ© avec grouilleux
 COMPILE ~CDB\AREA\BCS\COT01514.baf~ ~override~ // Sort horreur
-COMPILE ~CDB\AREA\BCS\COT01515.baf~ ~override~ // Sort chaine d'éclairs
+COMPILE ~CDB\AREA\BCS\COT01515.baf~ ~override~ // Sort chaine d'Ã©clairs
 //COMPILE ~CDB\AREA\BCS\COT015TP.baf~ ~override~ // Activation TP COM014 NON UTILE
 //COMPILE ~CDB\AREA\BCS\COTTP01.baf~ ~override~ // lancement TP Com014 ou Com015
-COMPILE ~CDB\SPELL\BCS\WANP02.baf~ ~override~  // les créatures baguette 2 deviennent des alliés (UmberHulk)
-COMPILE ~CDB\SPELL\BCS\WANP03.baf~ ~override~  // les créatures baguette 3 deviennent des alliés (Troll)
+COMPILE ~CDB\SPELL\BCS\WANP02.baf~ ~override~  // les crÃ©atures baguette 2 deviennent des alliÃ©s (UmberHulk)
+COMPILE ~CDB\SPELL\BCS\WANP03.baf~ ~override~  // les crÃ©atures baguette 3 deviennent des alliÃ©s (Troll)
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
 COPY ~CDB\CRE\Gibber_A.cre~ ~override~ // grouilleux de Bhaal - acide
 SAY NAME2 @307
-COPY ~CDB\CRE\Gibber_E.cre~ ~override~ // grouilleux de Bhaal - electricité
+COPY ~CDB\CRE\Gibber_E.cre~ ~override~ // grouilleux de Bhaal - electricitÃ©
 SAY NAME2 @307
 COPY ~CDB\CRE\Gibber_F.cre~ ~override~ // grouilleux de Bhaal - feu
 SAY NAME2 @307
@@ -1053,16 +1053,16 @@ COPY ~CDB\CRE\COBAT2.cre~ ~override~ // Chauve souris agressive
 //COPY ~CDB\CRE\COHARP1.cre~ ~override~ // Harpie
 //COPY ~CDB\CRE\COUMBER.cre~ ~override~ // UmberHulk
 
-// Script créature
+// Script crÃ©ature
 COMPILE ~CDB\CRE\BCS\COHARP1.baf~ ~override~  // Harpie
 COMPILE ~CDB\CRE\BCS\COBAT1.baf~ ~override~  // Chauve souris
-COMPILE ~CDB\SPELL\BCS\WANP02.baf~ ~override~  // les créatures baguette 2 deviennent des alliés ()
-COMPILE ~CDB\SPELL\BCS\WANP03.baf~ ~override~  // les créatures baguette 3 deviennent des alliés ()
-//COMPILE ~CDB\SPELL\BCS\SPCMD2.baf~ ~override~  // les créatures baguette 2 deviennent des alliés   NON UTILE
-//COMPILE ~CDB\SPELL\BCS\SPCMD3.baf~ ~override~  // les créatures baguette 3 deviennent des alliés   NON UTILE
+COMPILE ~CDB\SPELL\BCS\WANP02.baf~ ~override~  // les crÃ©atures baguette 2 deviennent des alliÃ©s ()
+COMPILE ~CDB\SPELL\BCS\WANP03.baf~ ~override~  // les crÃ©atures baguette 3 deviennent des alliÃ©s ()
+//COMPILE ~CDB\SPELL\BCS\SPCMD2.baf~ ~override~  // les crÃ©atures baguette 2 deviennent des alliÃ©s   NON UTILE
+//COMPILE ~CDB\SPELL\BCS\SPCMD3.baf~ ~override~  // les crÃ©atures baguette 3 deviennent des alliÃ©s   NON UTILE
 
 // Dialogue
-COMPILE ~CDB\DLG\COMASSE2.d~ ~override~ USING ~CDB\DLG\COMASSE2.tra~ // Mission Massena le fantôme
+COMPILE ~CDB\DLG\COMASSE2.d~ ~override~ USING ~CDB\DLG\COMASSE2.tra~ // Mission Massena le fantÃ´me
 COMPILE ~CDB\DLG\COHARP1.d~ ~override~ USING ~CDB\DLG\COHARP1.tra~ // Harpie
 
 // Objet
@@ -1085,7 +1085,7 @@ COPY ~CDB\ITM\WANP03.itm~ ~override~
 SAY NAME2 @5056
 SAY DESC @5057
 
-// clé pour ouvrir le coffre contenant la Rune
+// clÃ© pour ouvrir le coffre contenant la Rune
 COPY ~CDB\ITM\COKEY01.itm~ ~override~
 SAY NAME1 @5106
 SAY DESC @5107
@@ -1097,21 +1097,21 @@ SAY DESC @5109
 
 // Sorts
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\Sorts.TRA~
-COPY ~CDB\SPELL\WANP02.spl~ ~override~ // commandement créatures baguette 2
+COPY ~CDB\SPELL\WANP02.spl~ ~override~ // commandement crÃ©atures baguette 2
 SAY NAME1 @18
-COPY ~CDB\SPELL\WANP03.spl~ ~override~ // commandement créatures baguette 3
+COPY ~CDB\SPELL\WANP03.spl~ ~override~ // commandement crÃ©atures baguette 3
 SAY NAME1 @17
 // COPY ~CDB\SPELL\com015TP.spl~ ~override~ // Tp vers niv0-A NON UTILE
-COPY ~CDB\SPELL\BREATH01.spl~ ~override~ // piège souffle après ouverture du coffre
+COPY ~CDB\SPELL\BREATH01.spl~ ~override~ // piÃ¨ge souffle aprÃ¨s ouverture du coffre
 
-//COPY ~CDB\SPELL\spWI554.spl~ ~override~ // commandement créatures baguette 2
-//COPY ~CDB\SPELL\spWI555.spl~ ~override~ // commandement créatures baguette 3
-//COPY ~CDB\SPELL\SPPR225.spl~ ~override~ // piège coffre et souffle
+//COPY ~CDB\SPELL\spWI554.spl~ ~override~ // commandement crÃ©atures baguette 2
+//COPY ~CDB\SPELL\spWI555.spl~ ~override~ // commandement crÃ©atures baguette 3
+//COPY ~CDB\SPELL\SPPR225.spl~ ~override~ // piÃ¨ge coffre et souffle
 
-// Cutscène
+// CutscÃ¨ne
 COMPILE ~CDB\CUTSCENE\CSMASSE1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM015.TRA~ // Ekilis brule les os de Massena
 
-// Temple: salle sarcophage secrète ****************************************************************************************************************************************
+// Temple: salle sarcophage secrÃ¨te ****************************************************************************************************************************************
 // Carte
 COPY ~CDB\area\COM016.are~ ~override~ 
 COPY ~CDB\area\COM016.mos~ ~override~
@@ -1127,9 +1127,9 @@ COMPILE ~CDB\AREA\BCS\COT01601.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM016
 COMPILE ~CDB\AREA\BCS\COT01602.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM016.TRA~  // TXT zone de chaleur
 COMPILE ~CDB\AREA\BCS\COT01603.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM016.TRA~ 
 
-// Créature
+// CrÃ©ature
 
-// Script créature
+// Script crÃ©ature
 
 // Objet
 
@@ -1147,38 +1147,38 @@ COPY ~CDB\area\COM017SR.bmp~ ~override~
 
 // Script carte
 COMPILE ~CDB\AREA\BCS\COM017.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ 
-COMPILE ~CDB\AREA\BCS\COT01701.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // piège statue reptile
+COMPILE ~CDB\AREA\BCS\COT01701.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // piÃ¨ge statue reptile
 COMPILE ~CDB\AREA\BCS\COT01702.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info salle conseil
-COMPILE ~CDB\AREA\BCS\COT01703.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info tête reptile
-COMPILE ~CDB\AREA\BCS\COT01704.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info sarco fermé - sacro ouvert
-COMPILE ~CDB\AREA\BCS\COT01705.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Piège container éclair
-COMPILE ~CDB\AREA\BCS\COT01706.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Piège container livre
-COMPILE ~CDB\AREA\BCS\COT01707.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Piège salle puit
+COMPILE ~CDB\AREA\BCS\COT01703.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info tÃªte reptile
+COMPILE ~CDB\AREA\BCS\COT01704.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info sarco fermÃ© - sacro ouvert
+COMPILE ~CDB\AREA\BCS\COT01705.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // PiÃ¨ge container Ã©clair
+COMPILE ~CDB\AREA\BCS\COT01706.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // PiÃ¨ge container livre
+COMPILE ~CDB\AREA\BCS\COT01707.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // PiÃ¨ge salle puit
 //COMPILE ~CDB\AREA\BCS\COT01708.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Apparition Massena NON UTILE
-COMPILE ~CDB\AREA\BCS\COT01709.baf~ ~override~ // Piège salle puit: nuage poison
-COMPILE ~CDB\AREA\BCS\COT01710.baf~ ~override~ // Piège salle puit: Eclair
+COMPILE ~CDB\AREA\BCS\COT01709.baf~ ~override~ // PiÃ¨ge salle puit: nuage poison
+COMPILE ~CDB\AREA\BCS\COT01710.baf~ ~override~ // PiÃ¨ge salle puit: Eclair
 COMPILE ~CDB\AREA\BCS\COT01711.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info puit
-COMPILE ~CDB\AREA\BCS\COT01712.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Rencontre Systéra
+COMPILE ~CDB\AREA\BCS\COT01712.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Rencontre SystÃ©ra
 COMPILE ~CDB\AREA\BCS\COT01713.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info odeur couloir
-COMPILE ~CDB\AREA\BCS\COT01714.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Brûlure dans le feu pour prendre des crânes de feu
-//COMPILE ~CDB\AREA\BCS\COT01715.baf~ // ouverture de la grille des épreuves NON UTILE
-COMPILE ~CDB\AREA\BCS\COT01716.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info déclenchement évènement du puit
-COMPILE ~CDB\AREA\BCS\COT01717.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info feu avec crâne
+COMPILE ~CDB\AREA\BCS\COT01714.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // BrÃ»lure dans le feu pour prendre des crÃ¢nes de feu
+//COMPILE ~CDB\AREA\BCS\COT01715.baf~ // ouverture de la grille des Ã©preuves NON UTILE
+COMPILE ~CDB\AREA\BCS\COT01716.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info dÃ©clenchement Ã©vÃ¨nement du puit
+COMPILE ~CDB\AREA\BCS\COT01717.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info feu avec crÃ¢ne
 //COMPILE ~CDB\AREA\BCS\COT01718.baf~ ~override~ // Sort suppression des invocations dans la zone.  NON UTILE
-COMPILE ~CDB\AREA\BCS\COT01719.baf~ ~override~ // Sort TP retour des épreuves
-COMPILE ~CDB\AREA\BCS\COT017CF.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info champ de force bloquant l'accès
-COMPILE ~CDB\AREA\BCS\COT017TP.baf~ ~override~ // Activation Téléport COM018
-COMPILE ~CDB\AREA\BCS\COTTP02.baf~ ~override~ // Déplacement du groupe dans la salle n°1
+COMPILE ~CDB\AREA\BCS\COT01719.baf~ ~override~ // Sort TP retour des Ã©preuves
+COMPILE ~CDB\AREA\BCS\COT017CF.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info champ de force bloquant l'accÃ¨s
+COMPILE ~CDB\AREA\BCS\COT017TP.baf~ ~override~ // Activation TÃ©lÃ©port COM018
+COMPILE ~CDB\AREA\BCS\COTTP02.baf~ ~override~ // DÃ©placement du groupe dans la salle nÂ°1
 COMPILE ~CDB\AREA\BCS\COT017i1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.TRA~ // Info statues
-COMPILE ~CDB\CRE\BCS\CODEST.baf~ ~override~ // Disparition des créatures 
-COMPILE ~CDB\SPELL\BCS\COBM.baf~ ~override~ // Top sort piège à crane de Cyric lancé
+COMPILE ~CDB\CRE\BCS\CODEST.baf~ ~override~ // Disparition des crÃ©atures 
+COMPILE ~CDB\SPELL\BCS\COBM.baf~ ~override~ // Top sort piÃ¨ge Ã  crane de Cyric lancÃ©
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
-COPY ~CDB\CRE\COMASSE2.cre~ ~override~ // Massena réussité
+COPY ~CDB\CRE\COMASSE2.cre~ ~override~ // Massena rÃ©ussitÃ©
   SAY NAME1 @276
   SAY NAME2 @276  
-COPY ~CDB\CRE\COSYSTE.cre~ ~override~ // Systéra
+COPY ~CDB\CRE\COSYSTE.cre~ ~override~ // SystÃ©ra
   SAY NAME1 @298
   SAY NAME2 @298  
 COPY ~CDB\CRE\COBHAAL.cre~ ~override~ // Bhaal dans le puit
@@ -1188,23 +1188,23 @@ COPY ~CDB\CRE\COMASQM1.cre~ ~override~ // Masque de mort
   SAY NAME1 @306
   SAY NAME2 @306   
 
-// Script créature
+// Script crÃ©ature
 COMPILE ~CDB\CRE\BCS\COMASCOM.baf~ ~override~ // Combat Massena
-COMPILE ~CDB\CRE\BCS\COSYSTE.baf~ ~override~ USING ~CDB\DLG\COSYSTE.tra~ // Systéra
+COMPILE ~CDB\CRE\BCS\COSYSTE.baf~ ~override~ USING ~CDB\DLG\COSYSTE.tra~ // SystÃ©ra
 COMPILE ~CDB\CRE\BCS\COMASQM1.baf~ ~override~ // masque de mort combat
-COMPILE ~CDB\CRE\BCS\COMASQMP.baf~ ~override~ USING ~CDB\DLG\COMASQMP.tra~// masque de mort prière
+COMPILE ~CDB\CRE\BCS\COMASQMP.baf~ ~override~ USING ~CDB\DLG\COMASQMP.tra~// masque de mort priÃ¨re
 COMPILE ~CDB\CRE\BCS\COMASQME.baf~ ~override~ // masque de mort affectation equipement
 
 // Dialogue
-COMPILE ~CDB\DLG\COMASSE3.d~ ~override~ USING ~CDB\DLG\COMASSE3.tra~ // Massena réssucité
-COMPILE ~CDB\DLG\COMASSE4.d~ ~override~ USING ~CDB\DLG\COMASSE4.tra~ // Le groupe revient des épreuves
-COMPILE ~CDB\DLG\COSYSTE.d~ ~override~ USING ~CDB\DLG\COSYSTE.tra~ // Systéra
+COMPILE ~CDB\DLG\COMASSE3.d~ ~override~ USING ~CDB\DLG\COMASSE3.tra~ // Massena rÃ©ssucitÃ©
+COMPILE ~CDB\DLG\COMASSE4.d~ ~override~ USING ~CDB\DLG\COMASSE4.tra~ // Le groupe revient des Ã©preuves
+COMPILE ~CDB\DLG\COSYSTE.d~ ~override~ USING ~CDB\DLG\COSYSTE.tra~ // SystÃ©ra
 
 // Projectile
-ADD_PROJECTILE ~CDB\PRO\COSKUBM.pro~ ~Piège à crâne de Cyric~
+ADD_PROJECTILE ~CDB\PRO\COSKUBM.pro~ ~PiÃ¨ge Ã  crÃ¢ne de Cyric~
 COPY ~CDB\PRO\COSKUBM.pro~ ~override~ 
 
-ADD_PROJECTILE ~CDB\PRO\COSKUF1.pro~ ~crâne de Feu~
+ADD_PROJECTILE ~CDB\PRO\COSKUF1.pro~ ~crÃ¢ne de Feu~
 COPY ~CDB\PRO\COSKUF1.pro~ ~override~
 
 
@@ -1217,7 +1217,7 @@ SAY NAME1 @5110
 SAY NAME2 @5110
 SAY DESC @5111
 
-// Crâne de feu
+// CrÃ¢ne de feu
 COPY ~CDB\ITM\MISCP57.itm~ ~override~
   LPF ALTER_SPELL_HEADER INT_VAR projectile = (IDS_OF_SYMBOL (projectl COSKUF1) + 1) END
   WRITE_SHORT 0x09C ~%COSKUF1%~
@@ -1227,39 +1227,39 @@ COPY ~CDB\ITM\MISCP57.itm~ ~override~
   //SAY UNIDENTIFIED_DESC
 BUT_ONLY
 
-// Pierre gardienne de sang de Systéra (ouvre le PS de la salle de prière)
+// Pierre gardienne de sang de SystÃ©ra (ouvre le PS de la salle de priÃ¨re)
 COPY ~CDB\ITM\MISCP58.itm~ ~override~
 
-// Crâne de Kept (débloque les pièges)
+// CrÃ¢ne de Kept (dÃ©bloque les piÃ¨ges)
 COPY ~CDB\ITM\MISCP62.itm~ ~override~
   SAY NAME1 @5125
   SAY NAME2 @5125
   SAY DESC @5126
 
-// Couleur bleue la liche Systéra
+// Couleur bleue la liche SystÃ©ra
 COPY ~CDB\ITM\RingP13.itm~ ~override~
 
 // Sorts
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\SORTS.TRA~
 
-COPY ~CDB\SPELL\COBM.spl~	~override~ // Piège à crâne de Cyric, la mort de Bhaal
+COPY ~CDB\SPELL\COBM.spl~	~override~ // PiÃ¨ge Ã  crÃ¢ne de Cyric, la mort de Bhaal
   LPF ALTER_SPELL_HEADER INT_VAR projectile = (IDS_OF_SYMBOL (projectl COSKUBM) + 1) END
   SAY NAME1 @20
 BUT_ONLY
 
-COPY ~CDB\SPELL\CODESINV.spl~	~override~ // sort Désinvocation de créatures
+COPY ~CDB\SPELL\CODESINV.spl~	~override~ // sort DÃ©sinvocation de crÃ©atures
 SAY NAME1 @7
 COPY ~CDB\SPELL\COAIRPUR.spl~	~override~ // sort fin des gaz
-COPY ~CDB\SPELL\CON017CF.spl~ ~override~ // Brulures pour récupérer les Crânes de feu
+COPY ~CDB\SPELL\CON017CF.spl~ ~override~ // Brulures pour rÃ©cupÃ©rer les CrÃ¢nes de feu
 COPY ~CDB\SPELL\COM017TT.spl~ ~override~ // Fin de Bhaal et tremblement de terre
-COPY ~CDB\SPELL\COM017TP.spl~ ~override~ // Téléport épreuves
+COPY ~CDB\SPELL\COM017TP.spl~ ~override~ // TÃ©lÃ©port Ã©preuves
 
-// Cutscène
+// CutscÃ¨ne
 COMPILE ~CDB\CUTSCENE\CSMASSE2.baf~ ~override~ // Placement puit de Bhaal
 
 // TextScreen
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\TextScreen.TRA~   
-COPY ~CDB\2DA\COTS010.2DA~ ~override~          // Rencontre Systéra
+COPY ~CDB\2DA\COTS010.2DA~ ~override~          // Rencontre SystÃ©ra
 REPLACE ~99999~ @5001
 REPLACE ~99998~ @6013
 REPLACE ~99997~ @6014
@@ -1269,7 +1269,7 @@ COPY ~CDB\2DA\COTS007.2DA~ ~override~          // Appel du puit
 REPLACE ~99999~ @5001
 REPLACE ~99998~ @6003
 
-COPY ~CDB\2DA\COTS011.2DA~ ~override~          // Bhaal anéanti
+COPY ~CDB\2DA\COTS011.2DA~ ~override~          // Bhaal anÃ©anti
 REPLACE ~99999~ @5001
 REPLACE ~99998~ @6016
 
@@ -1290,15 +1290,15 @@ COPY ~CDB\area\COM018SR.bmp~ ~override~
 
 // Script carte
 COMPILE ~CDB\AREA\BCS\COM018.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM018.TRA~ 
-COMPILE ~CDB\AREA\BCS\COT01801.baf~ ~override~ // Piège grille1
-COMPILE ~CDB\AREA\BCS\COT01802.baf~ ~override~ // Piège dissipation magie
-COMPILE ~CDB\AREA\BCS\COT01805.baf~ ~override~ // arrivée Téléport COM018: début des épreuves
-//COMPILE ~CDB\AREA\BCS\COT018TP.baf~ ~override~ // lancement TP niveau aléatoire NON UTILE
-COMPILE ~CDB\AREA\BCS\COT018DA.baf~ ~override~ // ouverture grille 3 coté Com018
+COMPILE ~CDB\AREA\BCS\COT01801.baf~ ~override~ // PiÃ¨ge grille1
+COMPILE ~CDB\AREA\BCS\COT01802.baf~ ~override~ // PiÃ¨ge dissipation magie
+COMPILE ~CDB\AREA\BCS\COT01805.baf~ ~override~ // arrivÃ©e TÃ©lÃ©port COM018: dÃ©but des Ã©preuves
+//COMPILE ~CDB\AREA\BCS\COT018TP.baf~ ~override~ // lancement TP niveau alÃ©atoire NON UTILE
+COMPILE ~CDB\AREA\BCS\COT018DA.baf~ ~override~ // ouverture grille 3 cotÃ© Com018
 COMPILE ~CDB\AREA\BCS\CON01801.baf~ ~override~ // ouverture coffre - ouverture grille
-COMPILE ~CDB\AREA\BCS\CON01802.baf~ ~override~ // ouverture stèle
+COMPILE ~CDB\AREA\BCS\CON01802.baf~ ~override~ // ouverture stÃ¨le
 
-// Créature
+// CrÃ©ature
 COPY ~CDB\CRE\cotanar1.cre~ ~override~
 COPY ~CDB\CRE\cocambi1.cre~ ~override~
 COPY ~CDB\CRE\coSKE_1.cre~ ~override~
@@ -1306,13 +1306,13 @@ COPY ~CDB\CRE\coSKE_2.cre~ ~override~
 COPY ~CDB\CRE\coSKE_3.cre~ ~override~
 COPY ~CDB\CRE\cogole01.cre~ ~override~
 
-// Script créature
+// Script crÃ©ature
 COMPILE ~CDB\CRE\BCS\COBOSDIE.baf~ ~override~ // Animation mort du Boss + larme de sang
 COMPILE ~CDB\CRE\BCS\COTANAR1.baf~ ~override~ USING ~CDB\DLG\COTANAR1.tra~ 
 COMPILE ~CDB\CRE\BCS\COCAMBI1.baf~ ~override~ USING ~CDB\DLG\COCAMBI1.tra~
-COMPILE ~CDB\CRE\BCS\CO18DEA1.baf~ ~override~ // réapparition Squelette
-COMPILE ~CDB\CRE\BCS\CO18DEA2.baf~ ~override~ // réapparition Squelette
-COMPILE ~CDB\CRE\BCS\CO18DEA3.baf~ ~override~ // réapparition Squelette
+COMPILE ~CDB\CRE\BCS\CO18DEA1.baf~ ~override~ // rÃ©apparition Squelette
+COMPILE ~CDB\CRE\BCS\CO18DEA2.baf~ ~override~ // rÃ©apparition Squelette
+COMPILE ~CDB\CRE\BCS\CO18DEA3.baf~ ~override~ // rÃ©apparition Squelette
 
 // Dialogue
 COMPILE ~CDB\DLG\COTANAR1.d~ ~override~ USING ~CDB\DLG\COTANAR1.tra~ 
@@ -1321,7 +1321,7 @@ COMPILE ~CDB\DLG\COCAMBI1.d~ ~override~ USING ~CDB\DLG\COCAMBI1.tra~
 // Objet
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~
 
-// Larme de sang de Bhaal: BOSS Démon
+// Larme de sang de Bhaal: BOSS DÃ©mon
 COPY ~CDB\ITM\MISCP26.itm~ ~override\Miscp35.itm~
 SAY NAME1 @5060
 SAY NAME2 @5060
@@ -1340,8 +1340,8 @@ COPY ~CDB\ITM\MISCP31.itm~ ~override~
 SAY DESC @5131
 
 // Sorts
-COPY ~CDB\SPELL\coM018TP.spl~ ~override~ // Tp vers niveau aléatoire
-COMPILE ~CDB\SPELL\BCS\COTTP18.baf~ ~override~ // effet du sort TP niveau aléatoire
+COPY ~CDB\SPELL\coM018TP.spl~ ~override~ // Tp vers niveau alÃ©atoire
+COMPILE ~CDB\SPELL\BCS\COTTP18.baf~ ~override~ // effet du sort TP niveau alÃ©atoire
 
 
 // Epreuves du temple: salle 3 / Le damier / Spectateur ****************************************************************************************************************************************
@@ -1358,61 +1358,61 @@ COPY ~CDB\area\COM019SR.bmp~ ~override~
 // Script carte
 COMPILE ~CDB\AREA\BCS\COM019.baf~
 COMPILE ~CDB\AREA\BCS\COT019A6.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // apparition Monk1 ligne A case 6
-COMPILE ~CDB\AREA\BCS\COT019C.baf~ ~override~ // Piège éclair ligne C 
-COMPILE ~CDB\AREA\BCS\COT019E.baf~ ~override~ // Piège incinérateur AZ ligne E
+COMPILE ~CDB\AREA\BCS\COT019C.baf~ ~override~ // PiÃ¨ge Ã©clair ligne C 
+COMPILE ~CDB\AREA\BCS\COT019E.baf~ ~override~ // PiÃ¨ge incinÃ©rateur AZ ligne E
 
-//COMPILE ~CDB\AREA\BCS\CON019E1.baf~ ~override~ // Effigie01 arrêt foudre avec pierre blanche (coupole 1)  / Miscp27 
-//COMPILE ~CDB\AREA\BCS\CON019E2.baf~ ~override~ // Effigie02 arrêt incinerateur avec pierre jaune (coupole 2)  / Miscp28
-//COMPILE ~CDB\AREA\BCS\CON019E3.baf~ ~override~ // Effigie03 ouverture porte salle Kael avec pierre orange (donnée par Luncinda)  / Miscp30
+//COMPILE ~CDB\AREA\BCS\CON019E1.baf~ ~override~ // Effigie01 arrÃªt foudre avec pierre blanche (coupole 1)  / Miscp27 
+//COMPILE ~CDB\AREA\BCS\CON019E2.baf~ ~override~ // Effigie02 arrÃªt incinerateur avec pierre jaune (coupole 2)  / Miscp28
+//COMPILE ~CDB\AREA\BCS\CON019E3.baf~ ~override~ // Effigie03 ouverture porte salle Kael avec pierre orange (donnÃ©e par Luncinda)  / Miscp30
 //COMPILE ~CDB\AREA\BCS\CON019E5.baf~ ~override~ // Effigie05 rien
 //COMPILE ~CDB\AREA\BCS\CON019E6.baf~ ~override~ // Effigie06 rien
 //COMPILE ~CDB\AREA\BCS\CON019E7.baf~ ~override~ // Effigie07 ouverture porte salle des morts avec pierre rouge sombre (coupole 4) / Miscp33
-//COMPILE ~CDB\AREA\BCS\CON019E4.baf~ ~override~ // Effigie04 arrêt élémentaux avec pierre bleu étoile (coupole 7)  / Miscp34  NON UTILE
-//COMPILE ~CDB\AREA\BCS\CON019E8.baf~ ~override~ // Effigie08 arrêt crane et symbole avec pierre violette / Miscp29 NON UTILE
+//COMPILE ~CDB\AREA\BCS\CON019E4.baf~ ~override~ // Effigie04 arrÃªt Ã©lÃ©mentaux avec pierre bleu Ã©toile (coupole 7)  / Miscp34  NON UTILE
+//COMPILE ~CDB\AREA\BCS\CON019E8.baf~ ~override~ // Effigie08 arrÃªt crane et symbole avec pierre violette / Miscp29 NON UTILE
 
 COMPILE ~CDB\AREA\BCS\CON01901.baf~ ~override~ // ouverture coffre: apparition Spectateur
 
 //COMPILE ~CDB\AREA\BCS\COT01901.baf~ ~override~ // gestion apparition coffre KO - gestion avec la pierre grenat NON UTILE
 //COMPILE ~CDB\AREA\BCS\COT01902.baf~ ~override~ // gestion apparition coffre OK - gestion avec la pierre grenat NON UTILE
-COMPILE ~CDB\AREA\BCS\COT01903.baf~ ~override~ // Effigie cône de glace
-COMPILE ~CDB\AREA\BCS\COT01904.baf~ ~override~ // Effigie Chaôs
-COMPILE ~CDB\AREA\BCS\COT01905.baf~ ~override~ // charme néfaste
-COMPILE ~CDB\AREA\BCS\COT0196A.baf~ ~override~ // piège à crâne
-COMPILE ~CDB\AREA\BCS\COT0196B.baf~ ~override~ // piège à crâne
-COMPILE ~CDB\AREA\BCS\COT0196C.baf~ ~override~ // piège à crâne
+COMPILE ~CDB\AREA\BCS\COT01903.baf~ ~override~ // Effigie cÃ´ne de glace
+COMPILE ~CDB\AREA\BCS\COT01904.baf~ ~override~ // Effigie ChaÃ´s
+COMPILE ~CDB\AREA\BCS\COT01905.baf~ ~override~ // charme nÃ©faste
+COMPILE ~CDB\AREA\BCS\COT0196A.baf~ ~override~ // piÃ¨ge Ã  crÃ¢ne
+COMPILE ~CDB\AREA\BCS\COT0196B.baf~ ~override~ // piÃ¨ge Ã  crÃ¢ne
+COMPILE ~CDB\AREA\BCS\COT0196C.baf~ ~override~ // piÃ¨ge Ã  crÃ¢ne
 
-COMPILE ~CDB\AREA\BCS\COT0197A.baf~ ~override~ // Sort symbôle aléatoire
-COMPILE ~CDB\AREA\BCS\COT0197B.baf~ ~override~ // Sort symbôle aléatoire
-COMPILE ~CDB\AREA\BCS\COT0197C.baf~ ~override~ // Sort symbôle aléatoire
-COMPILE ~CDB\AREA\BCS\COT0197D.baf~ ~override~ // Sort symbôle aléatoire
+COMPILE ~CDB\AREA\BCS\COT0197A.baf~ ~override~ // Sort symbÃ´le alÃ©atoire
+COMPILE ~CDB\AREA\BCS\COT0197B.baf~ ~override~ // Sort symbÃ´le alÃ©atoire
+COMPILE ~CDB\AREA\BCS\COT0197C.baf~ ~override~ // Sort symbÃ´le alÃ©atoire
+COMPILE ~CDB\AREA\BCS\COT0197D.baf~ ~override~ // Sort symbÃ´le alÃ©atoire
 
-COMPILE ~CDB\AREA\BCS\COT0198A.baf~ ~override~ // Créatures élémentaires 
-COMPILE ~CDB\AREA\BCS\COT0198B.baf~ ~override~ // Créatures élémentaires 
-COMPILE ~CDB\AREA\BCS\COT0198C.baf~ ~override~ // Créatures élémentaires 
-COMPILE ~CDB\AREA\BCS\COT0198D.baf~ ~override~ // Créatures élémentaires 
-COMPILE ~CDB\AREA\BCS\COT019SE.baf~ ~override~ // Déclenchement dialogue Statue Elvina
+COMPILE ~CDB\AREA\BCS\COT0198A.baf~ ~override~ // CrÃ©atures Ã©lÃ©mentaires 
+COMPILE ~CDB\AREA\BCS\COT0198B.baf~ ~override~ // CrÃ©atures Ã©lÃ©mentaires 
+COMPILE ~CDB\AREA\BCS\COT0198C.baf~ ~override~ // CrÃ©atures Ã©lÃ©mentaires 
+COMPILE ~CDB\AREA\BCS\COT0198D.baf~ ~override~ // CrÃ©atures Ã©lÃ©mentaires 
+COMPILE ~CDB\AREA\BCS\COT019SE.baf~ ~override~ // DÃ©clenchement dialogue Statue Elvina
 
-COMPILE ~CDB\AREA\BCS\COT0191T.baf~ ~override~ // Trou N°1 et chûte dans la salle COM020 
-COMPILE ~CDB\AREA\BCS\COT0191I.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // Trou N°1 et gestion de la corde monter/descendre
-COMPILE ~CDB\AREA\BCS\COT0192T.baf~ ~override~ // Trou N°2 et chûte dans la salle COM020   
-COMPILE ~CDB\AREA\BCS\COT0192I.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // Trou N°2 et gestion de la corde monter/descendre
-COMPILE ~CDB\AREA\BCS\COT0193T.baf~ ~override~ // Trou N°3 et chûte dans la salle COM020   
-COMPILE ~CDB\AREA\BCS\COT0193I.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // Trou N°3 et gestion de la corde monter/descendre
-COMPILE ~CDB\AREA\BCS\COT0194T.baf~ ~override~ // Trou N°4 et chûte dans la salle COM020   
-COMPILE ~CDB\AREA\BCS\COT0194I.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // Trou N°4 et gestion de la corde monter/descendre
-COMPILE ~CDB\AREA\BCS\COT0195T.baf~ ~override~ // Trou N°5 et chûte dans la salle COM020   
-COMPILE ~CDB\AREA\BCS\COT0195I.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // Trou N°5 et gestion de la corde monter/descendre
-COMPILE ~CDB\AREA\BCS\Cot019S1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // gestion accès bassins KO si présence de la grille
+COMPILE ~CDB\AREA\BCS\COT0191T.baf~ ~override~ // Trou NÂ°1 et chÃ»te dans la salle COM020 
+COMPILE ~CDB\AREA\BCS\COT0191I.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // Trou NÂ°1 et gestion de la corde monter/descendre
+COMPILE ~CDB\AREA\BCS\COT0192T.baf~ ~override~ // Trou NÂ°2 et chÃ»te dans la salle COM020   
+COMPILE ~CDB\AREA\BCS\COT0192I.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // Trou NÂ°2 et gestion de la corde monter/descendre
+COMPILE ~CDB\AREA\BCS\COT0193T.baf~ ~override~ // Trou NÂ°3 et chÃ»te dans la salle COM020   
+COMPILE ~CDB\AREA\BCS\COT0193I.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // Trou NÂ°3 et gestion de la corde monter/descendre
+COMPILE ~CDB\AREA\BCS\COT0194T.baf~ ~override~ // Trou NÂ°4 et chÃ»te dans la salle COM020   
+COMPILE ~CDB\AREA\BCS\COT0194I.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // Trou NÂ°4 et gestion de la corde monter/descendre
+COMPILE ~CDB\AREA\BCS\COT0195T.baf~ ~override~ // Trou NÂ°5 et chÃ»te dans la salle COM020   
+COMPILE ~CDB\AREA\BCS\COT0195I.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // Trou NÂ°5 et gestion de la corde monter/descendre
+COMPILE ~CDB\AREA\BCS\Cot019S1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // gestion accÃ¨s bassins KO si prÃ©sence de la grille
 
-COMPILE ~CDB\AREA\BCS\COT019DA.baf~ ~override~ // ouverture grilleA du haut  coté Com019 <> Com018
+COMPILE ~CDB\AREA\BCS\COT019DA.baf~ ~override~ // ouverture grilleA du haut  cotÃ© Com019 <> Com018
 
-//COMPILE ~CDB\AREA\BCS\Cot019S2.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // gestion accès sous-sol KO si présence de la grille
+//COMPILE ~CDB\AREA\BCS\Cot019S2.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ // gestion accÃ¨s sous-sol KO si prÃ©sence de la grille
 
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
 COPY ~CDB\CRE\COMONK1.cre~ ~override~ 
-COPY ~CDB\CRE\COELWAT1.cre~ ~override~ // Elémentaires
+COPY ~CDB\CRE\COELWAT1.cre~ ~override~ // ElÃ©mentaires
 COPY ~CDB\CRE\ELEFEL01.cre~ ~override~ 
 COPY ~CDB\CRE\ELEARL01.cre~ ~override~ 
 COPY ~CDB\CRE\COELAIR1.cre~ ~override~ 
@@ -1422,16 +1422,16 @@ COPY ~CDB\CRE\COSTATL.cre~ ~override~  // Effigie Luncida et Elvina
 COPY ~CDB\CRE\COSTATE.cre~ ~override~ 
   SAY NAME1 @280
   SAY NAME2 @280
-COPY ~CDB\CRE\COGALIK.cre~ ~override~ // Serviteur Gaélik
+COPY ~CDB\CRE\COGALIK.cre~ ~override~ // Serviteur GaÃ©lik
   SAY NAME1 @281
   SAY NAME2 @281
 COPY ~CDB\CRE\COSPEC1.cre~ ~override~  // Boss spectateur
 
-// Script créature
+// Script crÃ©ature
 COMPILE ~CDB\CRE\BCS\COMONK1.baf~ ~override~  USING ~CDB\LANGUAGE\FRENCH\CRE_TXT.TRA~ // gestion sort Monk
-COMPILE ~CDB\CRE\BCS\ELEMDIE.baf~ ~override~  // apparition d'un objet à la destruction de l'élémentaire
+COMPILE ~CDB\CRE\BCS\ELEMDIE.baf~ ~override~  // apparition d'un objet Ã  la destruction de l'Ã©lÃ©mentaire
 COMPILE ~CDB\CRE\BCS\COGALIK.baf~ ~override~  
-//COMPILE ~CDB\CRE\BCS\COSNAK1.baf~ ~override~  // fichier manquant non utile à priori
+//COMPILE ~CDB\CRE\BCS\COSNAK1.baf~ ~override~  // fichier manquant non utile Ã  priori
 
 // Dialogue
 COMPILE ~CDB\DLG\COCORDE1.d~ ~override~ USING ~CDB\DLG\COCORDE1.tra~ // Gestion de la corde Trou 1
@@ -1452,7 +1452,7 @@ SAY NAME2 @5060
 SAY UNIDENTIFIED_DESC @5061
 SAY DESC @5064
 
-// pierres taillées
+// pierres taillÃ©es
 COPY ~CDB\ITM\MISCP27.itm~ ~override\Miscp27.itm~  // Blanche
 SAY NAME1 @5250
 SAY NAME2 @5250
@@ -1488,7 +1488,7 @@ COPY ~CDB\ITM\P8-2P.itm~ ~override~
 // Sorts
 //COPY ~CDB\SPELL\SPIN111.spl~ ~override~  // NON  UTILE
 
-// Cutscène
+// CutscÃ¨ne
 
 // TextScreen
 
@@ -1507,7 +1507,7 @@ COMPILE ~CDB\AREA\BCS\COM020.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM020.T
 COMPILE ~CDB\AREA\BCS\COT020E1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM020.TRA~ // Embuscade zone 1
 COMPILE ~CDB\AREA\BCS\COT020E2.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM020.TRA~ // Embuscade zone 2
 COMPILE ~CDB\AREA\BCS\COT020E3.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM020.TRA~ // Embuscade zone 3
-COMPILE ~CDB\AREA\BCS\COT020.baf~ ~override~  USING ~CDB\LANGUAGE\FRENCH\COM020.TRA~ // Proposition grimper à la corde (de la position 1 à 5)
+COMPILE ~CDB\AREA\BCS\COT020.baf~ ~override~  USING ~CDB\LANGUAGE\FRENCH\COM020.TRA~ // Proposition grimper Ã  la corde (de la position 1 Ã  5)
 COMPILE ~CDB\AREA\BCS\COT020F1.baf~ ~override~ // Gestion chute trappe salle damiers trou1
 COMPILE ~CDB\AREA\BCS\COT020F2.baf~ ~override~ // Gestion chute trappe salle damiers trou2
 COMPILE ~CDB\AREA\BCS\COT020F3.baf~ ~override~ // Gestion chute trappe salle damiers trou3
@@ -1515,12 +1515,12 @@ COMPILE ~CDB\AREA\BCS\COT020F4.baf~ ~override~ // Gestion chute trappe salle dam
 COMPILE ~CDB\AREA\BCS\COT020F5.baf~ ~override~ // Gestion chute trappe salle damiers trou5
 COMPILE ~CDB\AREA\BCS\COT020D.baf~ ~override~ //  gestion du duel avec Islendra
 COMPILE ~CDB\AREA\BCS\COT020I1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM020.TRA~  // traces de pas de Glabuk
-COMPILE ~CDB\AREA\BCS\COT020P1.baf~ ~override~ // Piège électrique
-COMPILE ~CDB\AREA\BCS\COT020G1.baf~ ~override~ // gestion état grille1 grotte COM020 - PS salle Bassin COM022
-// COMPILE ~CDB\AREA\BCS\Cot020g2.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM020.TRA~ // gestion accès grille 2 // NON UTILE
+COMPILE ~CDB\AREA\BCS\COT020P1.baf~ ~override~ // PiÃ¨ge Ã©lectrique
+COMPILE ~CDB\AREA\BCS\COT020G1.baf~ ~override~ // gestion Ã©tat grille1 grotte COM020 - PS salle Bassin COM022
+// COMPILE ~CDB\AREA\BCS\Cot020g2.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM020.TRA~ // gestion accÃ¨s grille 2 // NON UTILE
 
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
 COPY ~CDB\CRE\COISLEN.cre~ ~override~ // Boss Islendra
   SAY NAME1 @295
@@ -1530,14 +1530,14 @@ COPY ~CDB\CRE\COISLEN.cre~ ~override~ // Boss Islendra
 COPY ~CDB\CRE\cobatin.cre~ ~override~ // Chauve souris espionne
 COPY ~CDB\CRE\cocord.cre~ ~override~ // gestion corde pour monter
 
-// Script créature
+// Script crÃ©ature
 COMPILE ~CDB\CRE\BCS\COISLEN.baf~ ~override~ USING ~CDB\DLG\COISLEN.tra~
 COMPILE ~CDB\CRE\BCS\COISLE2.baf~ ~override~ USING ~CDB\DLG\COISLEN.tra~
 COMPILE ~CDB\CRE\BCS\COCHAS.baf~ ~override~ // Script Chauve-souris espion
 
 
 // Script sorts
-COMPILE ~CDB\SPELL\BCS\COS0201.baf~ ~override~  // Téléport du PNJ pour un duel
+COMPILE ~CDB\SPELL\BCS\COS0201.baf~ ~override~  // TÃ©lÃ©port du PNJ pour un duel
 
 // Dialogue
 COMPILE ~CDB\DLG\COISLEN.d~ ~override~ USING ~CDB\DLG\COISLEN.tra~ 
@@ -1546,7 +1546,7 @@ COMPILE ~CDB\DLG\COBCORD.d~ ~override~ USING ~CDB\DLG\COBCOR.tra~ // Dialogue po
 // Objet
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~
 
-// Flêche duel TP
+// FlÃªche duel TP
 COPY ~CDB\ITM\AROP01.itm~ ~override~
 
 // larme de Sang de Bhaal Boss Islendra
@@ -1570,9 +1570,9 @@ SAY DESC @5263
 
 // Sorts
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\SORTS.TRA~
-COPY ~CDB\SPELL\COCORD.SPL~ ~Override~ // Chute à la corte ou via la trappe
+COPY ~CDB\SPELL\COCORD.SPL~ ~Override~ // Chute Ã  la corte ou via la trappe
 
-// Cutscène
+// CutscÃ¨ne
 
 // TextScreen
 
@@ -1585,7 +1585,7 @@ COPY ~CDB\SPELL\COCORD.SPL~ ~Override~ // Chute à la corte ou via la trappe
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\COM021.TRA~ 
 COPY ~CDB\area\COM021.are~ ~override~ 
 
-  // ajout du message du cercueil bloqué
+  // ajout du message du cercueil bloquÃ©
 	SET Mon_Message	= RESOLVE_STR_REF (@6)
 
 	READ_LONG  0x70 "cont_off"		// Offset to containers
@@ -1610,25 +1610,25 @@ COPY ~CDB\area\COM021SR.bmp~ ~override~
 
 // Script carte
 COMPILE ~CDB\AREA\BCS\COM021.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ 
-COMPILE ~CDB\AREA\BCS\CON02101.baf~ ~override~ // gestion aléatoire de l'ouverture d'un cercueil de la salle 2
+COMPILE ~CDB\AREA\BCS\CON02101.baf~ ~override~ // gestion alÃ©atoire de l'ouverture d'un cercueil de la salle 2
 COMPILE ~CDB\AREA\BCS\CON02102.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ // Gestion compteur coffre1 ouvert
 COMPILE ~CDB\AREA\BCS\CON02103.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ // Gestion compteur coffre2 ouvert
 COMPILE ~CDB\AREA\BCS\CON02104.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ // Gestion compteur coffre3 ouvert
 COMPILE ~CDB\AREA\BCS\CON02105.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ // Gestion compteur coffre4 ouvert
 
 
-// Entrée
+// EntrÃ©e
 COMPILE ~CDB\AREA\BCS\COT02103.baf~ ~override~ // Le levier change de position
 //COMPILE ~CDB\AREA\BCS\COT02115.baf~ ~override~ // Gestion dialogue Caris
-//COMPILE ~CDB\AREA\BCS\COT02122.baf~ ~override~// nombre de Players arrivés sur cette carte
+//COMPILE ~CDB\AREA\BCS\COT02122.baf~ ~override~// nombre de Players arrivÃ©s sur cette carte
 COMPILE ~CDB\AREA\BCS\COT02123.baf~ ~override~// Gestion dialogue Caris
 
 COMPILE ~CDB\AREA\BCS\COT02127.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~  // info effigie de Caris
-COMPILE ~CDB\AREA\BCS\COT02128.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~  // Réveil Taguar
+COMPILE ~CDB\AREA\BCS\COT02128.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~  // RÃ©veil Taguar
 
 // Salle 1: salle feu
-COMPILE ~CDB\AREA\BCS\COT02101.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ // MSG odeur chair brulée
-COMPILE ~CDB\AREA\BCS\COT02102.baf~ ~override~ // Piège boule de feu de l'entrée
+COMPILE ~CDB\AREA\BCS\COT02101.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ // MSG odeur chair brulÃ©e
+COMPILE ~CDB\AREA\BCS\COT02102.baf~ ~override~ // PiÃ¨ge boule de feu de l'entrÃ©e
 
 // Salle 2: salle urglite
 COMPILE ~CDB\AREA\BCS\COT02112.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ // Salle 2 MSG courant d'air froid
@@ -1636,12 +1636,12 @@ COMPILE ~CDB\AREA\BCS\COT02113.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021
 
 
 // Salle 3: salle squelletes
-COMPILE ~CDB\AREA\BCS\COT02116.baf~ ~override~ // PS5 s'ouvre //  actionneur 1: Le PS mur bloquant l'accès à la salle 3/Niches s'ouvre 
-COMPILE ~CDB\AREA\BCS\COT02117.baf~ ~override~ // PS5 s'ouvre //  actionneur 2: Le PS mur bloquant l'accès à la salle 3/Niches s'ouvre 
-COMPILE ~CDB\AREA\BCS\COT02129.baf~ ~override~ // PS5 s'ouvre //  gestion de l'ouverture du PS mur bloquant l'accès à la salle 3/Niches s'ouvre 
+COMPILE ~CDB\AREA\BCS\COT02116.baf~ ~override~ // PS5 s'ouvre //  actionneur 1: Le PS mur bloquant l'accÃ¨s Ã  la salle 3/Niches s'ouvre 
+COMPILE ~CDB\AREA\BCS\COT02117.baf~ ~override~ // PS5 s'ouvre //  actionneur 2: Le PS mur bloquant l'accÃ¨s Ã  la salle 3/Niches s'ouvre 
+COMPILE ~CDB\AREA\BCS\COT02129.baf~ ~override~ // PS5 s'ouvre //  gestion de l'ouverture du PS mur bloquant l'accÃ¨s Ã  la salle 3/Niches s'ouvre 
 
 COMPILE ~CDB\AREA\BCS\COT021P5.baf~ ~override~ // Mouvement PC ou PNJ pour que le PS5 se ferme
-COMPILE ~CDB\AREA\BCS\COT02118.baf~ ~override~ // Apparitions créatures
+COMPILE ~CDB\AREA\BCS\COT02118.baf~ ~override~ // Apparitions crÃ©atures
 COMPILE ~CDB\AREA\BCS\COT02119.baf~ ~override~ // PS4 s'ouvre
 COMPILE ~CDB\AREA\BCS\COT021P4.baf~ ~override~ // Mouvement PC ou PNJ pour que le PS4 se ferme
 
@@ -1664,21 +1664,21 @@ COMPILE ~CDB\AREA\BCS\COT02125.baf~ ~override~ // ouverture PS6 (zone insecte ra
 COMPILE ~CDB\AREA\BCS\COT021G3.baf~ ~override~ // Mouvement PC ou PNJ pour que la grille 3 se ferme
 
 // Salle 5: niches
-COMPILE ~CDB\AREA\BCS\CON02111.baf~ ~override~ // niche1 ouverte, on contrôle
-COMPILE ~CDB\AREA\BCS\CON02112.baf~ ~override~ // niche2 ouverte, on contrôle
-COMPILE ~CDB\AREA\BCS\CON02113.baf~ ~override~ // niche3 ouverte, on contrôle
-COMPILE ~CDB\AREA\BCS\CON02114.baf~ ~override~ // niche4 ouverte, on contrôle
+COMPILE ~CDB\AREA\BCS\CON02111.baf~ ~override~ // niche1 ouverte, on contrÃ´le
+COMPILE ~CDB\AREA\BCS\CON02112.baf~ ~override~ // niche2 ouverte, on contrÃ´le
+COMPILE ~CDB\AREA\BCS\CON02113.baf~ ~override~ // niche3 ouverte, on contrÃ´le
+COMPILE ~CDB\AREA\BCS\CON02114.baf~ ~override~ // niche4 ouverte, on contrÃ´le
 
-COMPILE ~CDB\AREA\BCS\COT02124.baf~ ~override~// Contrôle du bon placement des objets dans les niches.
+COMPILE ~CDB\AREA\BCS\COT02124.baf~ ~override~// ContrÃ´le du bon placement des objets dans les niches.
 
 // Salle 6: sortie
-COMPILE ~CDB\AREA\BCS\COT02121.baf~ // Déclenchement sort téléport COM023
+COMPILE ~CDB\AREA\BCS\COT02121.baf~ // DÃ©clenchement sort tÃ©lÃ©port COM023
 
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
 
-COPY ~CDB\CRE\COURGLIT.cre~ ~override~ // Reine fantôme Urglite
+COPY ~CDB\CRE\COURGLIT.cre~ ~override~ // Reine fantÃ´me Urglite
   SAY NAME1 @283
   SAY NAME2 @283
   
@@ -1686,11 +1686,11 @@ COPY ~CDB\CRE\COTAGUAR.cre~ ~override~ // Taguar Champion de Bhaal
   SAY NAME1 @284
   SAY NAME2 @284
   
-COPY ~CDB\CRE\coelai01.cre~ ~override~ // Elémentair mineur glacé
+COPY ~CDB\CRE\coelai01.cre~ ~override~ // ElÃ©mentair mineur glacÃ©
   SAY NAME1 @285
   SAY NAME2 @285
 
-COPY ~CDB\CRE\coskel02.cre~ ~override~ // Combattant squelette glacé
+COPY ~CDB\CRE\coskel02.cre~ ~override~ // Combattant squelette glacÃ©
   SAY NAME1 @286
   SAY NAME2 @286
   
@@ -1701,7 +1701,7 @@ COPY ~CDB\CRE\COCARIS.cre~ ~override\COCARIS.CRE~  // Effigie Caris
 //COPY ~CDB\CRE\SKELET_C.cre~ ~override~ 
 //COPY ~CDB\CRE\COSW01.cre~ ~override~ 
 
-// Script créature
+// Script crÃ©ature
 COMPILE ~CDB\CRE\BCS\COURGLIT.baf~ ~override~ USING ~CDB\DLG\COURGLIT.tra~ // Combat VS groupe
 COMPILE ~CDB\CRE\BCS\COURGLI2.baf~ ~override~ USING ~CDB\DLG\COURGLIT.tra~ // Combat VS Taguar
 COMPILE ~CDB\CRE\BCS\COTAGUAR.baf~ ~override~ USING ~CDB\DLG\COURGLIT.tra~ // Recherche du groupe 
@@ -1739,27 +1739,27 @@ COPY ~CDB\ITM\MISCP47.itm~ ~override~
 SAY NAME2 @5070
 SAY DESC @5071
 
-// crâne pierre
+// crÃ¢ne pierre
 COPY ~CDB\ITM\MISCP49.itm~ ~override~
 SAY NAME2 @5076
 SAY DESC @5077
 
-// Clé coffre 1
+// ClÃ© coffre 1
 COPY ~CDB\ITM\MISCP42.itm~ ~override~
 SAY NAME2 @5078
 SAY DESC @5079
 
-// Clé coffre 2
+// ClÃ© coffre 2
 COPY ~CDB\ITM\MISCP43.itm~ ~override~
 SAY NAME2 @5080
 SAY DESC @5081
 
-// Clé coffre 3
+// ClÃ© coffre 3
 COPY ~CDB\ITM\MISCP44.itm~ ~override~
 SAY NAME2 @5084
 SAY DESC @5085
 
-// Clé coffre 4
+// ClÃ© coffre 4
 COPY ~CDB\ITM\MISCP45.itm~ ~override~
 SAY NAME2 @5082
 SAY DESC @5083
@@ -1790,17 +1790,17 @@ SAY NAME2 @5094
 SAY DESC @5095
 
 // Poing de glace d'Urglite
-COPY ~CDB\ITM\COICE1.itm~ ~override~ // 1d6 + 1d6 glace + 50% de chance réduction de 1 en force et dextérité
+COPY ~CDB\ITM\COICE1.itm~ ~override~ // 1d6 + 1d6 glace + 50% de chance rÃ©duction de 1 en force et dextÃ©ritÃ©
 
-// Epée à deux mains des glaces +1
+// EpÃ©e Ã  deux mains des glaces +1
 COPY ~CDB\ITM\SW2P05.itm~ ~override~ 
 SAY NAME2 @5096
 SAY DESC @5097
 
-// Elementaire d'air glacé: dégats de glace (+2)
+// Elementaire d'air glacÃ©: dÃ©gats de glace (+2)
 COPY ~CDB\ITM\B1-20M3G.itm~ ~override~ 
 
-// Anneau de Urglite: invocation élémental d'air glacé
+// Anneau de Urglite: invocation Ã©lÃ©mental d'air glacÃ©
 COPY ~CDB\ITM\RINGP11.itm~ ~override~ 
 SAY NAME1 @5098
 SAY DESC @5099
@@ -1824,41 +1824,41 @@ SAY DESC @5121
 
 
 // projectile
-ADD_PROJECTILE ~CDB\PRO\COBREC1.pro~ ~Souffle glacé~
+ADD_PROJECTILE ~CDB\PRO\COBREC1.pro~ ~Souffle glacÃ©~
 COPY ~CDB\PRO\COBREC1.pro~ ~override~ 
 
-ADD_PROJECTILE ~CDB\PRO\COSHAC1.pro~ ~Echarde glacée~
+ADD_PROJECTILE ~CDB\PRO\COSHAC1.pro~ ~Echarde glacÃ©e~
 COPY ~CDB\PRO\COSHAC1.pro~ ~override~ 
 
 // Sorts
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\Sorts.TRA~
 
-COPY ~CDB\SPELL\COBREC1.spl~ ~override~ // Souffle glacé 
+COPY ~CDB\SPELL\COBREC1.spl~ ~override~ // Souffle glacÃ© 
   LPF ALTER_SPELL_HEADER INT_VAR projectile = (IDS_OF_SYMBOL (projectl COBREC1) + 1) END
   SAY NAME1 @15
 BUT_ONLY
 
-COPY ~CDB\SPELL\COSHAC1.spl~ ~override~  // Echarde glacée
+COPY ~CDB\SPELL\COSHAC1.spl~ ~override~  // Echarde glacÃ©e
   LPF ALTER_SPELL_HEADER INT_VAR projectile = (IDS_OF_SYMBOL (projectl COSHAC1) + 1) END
   SAY NAME1 @16  
 BUT_ONLY
 
-COPY ~CDB\SPELL\COM021TP.spl~ ~override~ // Téléport départ de COM021      
-//COPY ~CDB\SPELL\SPCL230.spl~ ~override~ // Téléport départ de COM021
+COPY ~CDB\SPELL\COM021TP.spl~ ~override~ // TÃ©lÃ©port dÃ©part de COM021      
+//COPY ~CDB\SPELL\SPCL230.spl~ ~override~ // TÃ©lÃ©port dÃ©part de COM021
 //COPY ~CDB\SPELL\SPCL227.spl~ ~override~ // 
-//COPY ~CDB\SPELL\COMUSHG.spl~ ~override~ // Nuage fumée (apparition créature)
+//COPY ~CDB\SPELL\COMUSHG.spl~ ~override~ // Nuage fumÃ©e (apparition crÃ©ature)
 
 
-// Cutscène
-COMPILE ~CDB\CUTSCENE\CS02101.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ // Le PS pour sortir s'ouvre. Taguar se réveille.
+// CutscÃ¨ne
+COMPILE ~CDB\CUTSCENE\CS02101.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ // Le PS pour sortir s'ouvre. Taguar se rÃ©veille.
 
 
 // TextScreen
 
 
 // Script Sort
-// COMPILE ~CDB\SPELL\BCS\SPCL230.baf~ ~override~  // Téléport départ de COM021
-COMPILE ~CDB\SPELL\BCS\COM021TP.baf~ ~override~  // Téléport départ de COM021
+// COMPILE ~CDB\SPELL\BCS\SPCL230.baf~ ~override~  // TÃ©lÃ©port dÃ©part de COM021
+COMPILE ~CDB\SPELL\BCS\COM021TP.baf~ ~override~  // TÃ©lÃ©port dÃ©part de COM021
 //COPY ~CDB\SPELL\SPCL233.spl~ ~override~
 //COPY ~CDB\SPELL\SPCL230.spl~ ~override~
 
@@ -1881,37 +1881,37 @@ COPY ~CDB\area\COM022SR.bmp~ ~override~
 
 // Script carte
 COMPILE ~CDB\AREA\BCS\COM022.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ 
-COMPILE ~CDB\AREA\BCS\COT022B1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n°1
-COMPILE ~CDB\AREA\BCS\COT022B2.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n°2
-COMPILE ~CDB\AREA\BCS\COT022B3.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n°3
-COMPILE ~CDB\AREA\BCS\COT022B4.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n°4
-COMPILE ~CDB\AREA\BCS\COT022B5.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n°5
-COMPILE ~CDB\AREA\BCS\COT022B6.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n°6
-COMPILE ~CDB\AREA\BCS\COT022B7.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n°7
-COMPILE ~CDB\AREA\BCS\COT022B8.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n°8
-COMPILE ~CDB\AREA\BCS\COT022B9.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n°9
+COMPILE ~CDB\AREA\BCS\COT022B1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin nÂ°1
+COMPILE ~CDB\AREA\BCS\COT022B2.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin nÂ°2
+COMPILE ~CDB\AREA\BCS\COT022B3.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin nÂ°3
+COMPILE ~CDB\AREA\BCS\COT022B4.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin nÂ°4
+COMPILE ~CDB\AREA\BCS\COT022B5.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin nÂ°5
+COMPILE ~CDB\AREA\BCS\COT022B6.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin nÂ°6
+COMPILE ~CDB\AREA\BCS\COT022B7.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin nÂ°7
+COMPILE ~CDB\AREA\BCS\COT022B8.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin nÂ°8
+COMPILE ~CDB\AREA\BCS\COT022B9.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin nÂ°9
 
 COMPILE ~CDB\AREA\BCS\COT022TS.baf~ ~override~ // Textscreen couloir sombre en passant par la salle KAel lors du 1ier passage
 
 COMPILE ~CDB\AREA\BCS\COT022F.baf~ ~override~  USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // soin fontaine pour Kael
-COMPILE ~CDB\AREA\BCS\COT02201.baf~ ~override~ // apparition créature défendant les bassins zone 1
-COMPILE ~CDB\AREA\BCS\COT02202.baf~ ~override~ // apparition créature défendant les bassins zone 2
+COMPILE ~CDB\AREA\BCS\COT02201.baf~ ~override~ // apparition crÃ©ature dÃ©fendant les bassins zone 1
+COMPILE ~CDB\AREA\BCS\COT02202.baf~ ~override~ // apparition crÃ©ature dÃ©fendant les bassins zone 2
 COMPILE ~CDB\AREA\BCS\COT02203.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // info bassin central
-COMPILE ~CDB\AREA\BCS\COT02207.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Kaél revient près du Bassin
-COMPILE ~CDB\AREA\BCS\COT02208.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Kaél revient près du Bassin
-COMPILE ~CDB\AREA\BCS\COT02209.baf~ ~override~ // Apparition de démon dans la zone d'ombre du bassin
-COMPILE ~CDB\AREA\BCS\COT02211.baf~ ~override~  USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Porte accès Salle bassins - Grotte
+COMPILE ~CDB\AREA\BCS\COT02207.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // KaÃ©l revient prÃ¨s du Bassin
+COMPILE ~CDB\AREA\BCS\COT02208.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // KaÃ©l revient prÃ¨s du Bassin
+COMPILE ~CDB\AREA\BCS\COT02209.baf~ ~override~ // Apparition de dÃ©mon dans la zone d'ombre du bassin
+COMPILE ~CDB\AREA\BCS\COT02211.baf~ ~override~  USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Porte accÃ¨s Salle bassins - Grotte
 
-COMPILE ~CDB\AREA\BCS\COT022G2.baf~ ~override~ // gestion état PS grille2 COM022 - grille 1 Grotte COM020
-COMPILE ~CDB\AREA\BCS\COT022G3.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // gestion état grille3 COM022 - grille 2 salle Damiers COM019
+COMPILE ~CDB\AREA\BCS\COT022G2.baf~ ~override~ // gestion Ã©tat PS grille2 COM022 - grille 1 Grotte COM020
+COMPILE ~CDB\AREA\BCS\COT022G3.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // gestion Ã©tat grille3 COM022 - grille 2 salle Damiers COM019
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
 COPY ~CDB\CRE\COKAEL.cre~ ~override~ // KAEL
   SAY NAME1 @294
   SAY NAME2 @294
 
-COPY ~CDB\CRE\COKAEL2.cre~ ~override~ // KAEL fantôme
+COPY ~CDB\CRE\COKAEL2.cre~ ~override~ // KAEL fantÃ´me
   SAY NAME1 @294
   SAY NAME2 @294
 
@@ -1919,18 +1919,18 @@ COPY ~CDB\CRE\cohelm01.cre~ ~override~ // Horreur sanglante
   SAY NAME1 @305
   SAY NAME2 @305
 
-// Creature sans non script: corrigé
+// Creature sans non script: corrigÃ©
 COPY ~CDB\CRE\wrmons01.cre~ ~override~ 
 COPY ~CDB\CRE\amumber.cre~ ~override~ 
 COPY ~CDB\CRE\fgolem.cre~ ~override~ 
 COPY ~CDB\CRE\werewo.cre~ ~override~ 
 COPY ~CDB\CRE\djinnisu.cre~ ~override~ 
 
-// Script créature
-COMPILE ~CDB\CRE\BCS\COKAEL.baf~ ~override~ USING ~CDB\DLG\COKAEL.tra~  // dialogue & quête
+// Script crÃ©ature
+COMPILE ~CDB\CRE\BCS\COKAEL.baf~ ~override~ USING ~CDB\DLG\COKAEL.tra~  // dialogue & quÃªte
 //COMPILE ~CDB\CRE\BCS\COKAEL2.baf~ ~override~ // Combat NON UTILE
 COMPILE ~CDB\CRE\BCS\COKAEL3.baf~ ~override~ USING ~CDB\DLG\COKAEL.tra~ // Combat 
-COMPILE ~CDB\CRE\BCS\COHELM02.baf~ ~override~ // Ré-int script invocation Horreur sanglante
+COMPILE ~CDB\CRE\BCS\COHELM02.baf~ ~override~ // RÃ©-int script invocation Horreur sanglante
 
 // Dialogue
 COMPILE ~CDB\DLG\COKAEL.d~ ~override~ USING ~CDB\DLG\COKAEL.tra~  
@@ -1951,7 +1951,7 @@ COPY ~CDB\ITM\MISCP55.itm~ ~override~
 SAY NAME2 @5104
 SAY DESC @5105
 
-// Fléau de Kael
+// FlÃ©au de Kael
 COPY ~CDB\ITM\BLUP03.ITM~ ~override~
 SAY NAME2 @5267
 SAY DESC @5268
@@ -1966,7 +1966,7 @@ COPY ~CDB\ITM\HELP01.ITM~ ~override~
 SAY NAME2 @2571
 SAY DESC @2572
 
-// Coupe de sang de Kael - horreur guerrière
+// Coupe de sang de Kael - horreur guerriÃ¨re
 COPY ~CDB\ITM\MISCP64.itm~ ~override~ 
 SAY NAME1 @5262
 SAY NAME2 @5264
@@ -1992,7 +1992,7 @@ COPY ~CDB\PRO\COBREA1.pro~ ~override~
 // Sorts
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\Sorts.TRA~
 
-COPY ~CDB\SPELL\COCUREF1.SPL~ ~override~ // Kael soigné par la fontaine
+COPY ~CDB\SPELL\COCUREF1.SPL~ ~override~ // Kael soignÃ© par la fontaine
 
 ADD_SPELL ~CDB\SPELL\COBREA1.spl~ 2 3 ~BREATH_SOURCE_ACID~  // Souffle acide 
     SAY NAME1 @14
@@ -2003,10 +2003,10 @@ COPY ~CDB\SPELL\COBREA1.spl~ ~override~  // Souffle acide
   SAY NAME1 @14
 BUT_ONLY
 
-// Invocation créature guerrière
-COMPILE ~CDB\ITM\BCS\COHELM01.baf~ ~override~ // Incovation si le Charname possède l'objet
-COPY ~CDB\SPELL\EFFECT\cohelm01.eff~ ~override~  // Invocation Horreur guerrière
-COPY ~CDB\SPELL\cohelm01.spl~ ~override~  // Invocation Horreur guerrière
+// Invocation crÃ©ature guerriÃ¨re
+COMPILE ~CDB\ITM\BCS\COHELM01.baf~ ~override~ // Incovation si le Charname possÃ¨de l'objet
+COPY ~CDB\SPELL\EFFECT\cohelm01.eff~ ~override~  // Invocation Horreur guerriÃ¨re
+COPY ~CDB\SPELL\cohelm01.spl~ ~override~  // Invocation Horreur guerriÃ¨re
 SAY NAME1 @23
 
 COPY ~CDB\SPELL\EFFECT\COSHAD1.eff~ ~override~  // Appel des ombres
@@ -2025,10 +2025,10 @@ BUT_ONLY
 
 
 
-// Cutscène
-COMPILE ~CDB\CUTSCENE\COCS022A.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Création artefact
+// CutscÃ¨ne
+COMPILE ~CDB\CUTSCENE\COCS022A.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // CrÃ©ation artefact
 
-/* NON UTILE ancienne idée
+/* NON UTILE ancienne idÃ©e
 COMPILE ~CDB\CUTSCENE\COCS0221.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Sacrifice membre groupe
 COMPILE ~CDB\CUTSCENE\COCS0222.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Sacrifice membre groupe
 COMPILE ~CDB\CUTSCENE\COCS0223.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Sacrifice membre groupe
@@ -2052,19 +2052,19 @@ COPY ~CDB\area\COM023SR.bmp~ ~override~
 // Script carte
 COMPILE ~CDB\AREA\BCS\COM023.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM023.TRA~ 
 COMPILE ~CDB\AREA\BCS\COT02301.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM023.TRA~ // Champ de force autour du cercle
-COMPILE ~CDB\AREA\BCS\COT02302.baf~ ~override~ // Déclenchement dialogue avec le Sphinx
-COMPILE ~CDB\AREA\BCS\COT02303.baf~ ~override~ // Déclenchement Animation Téléport si arrivée du player de la salle des morts.
-COMPILE ~CDB\AREA\BCS\COT02304.baf~ ~override~ // Déclenchement dialogue Heras
+COMPILE ~CDB\AREA\BCS\COT02302.baf~ ~override~ // DÃ©clenchement dialogue avec le Sphinx
+COMPILE ~CDB\AREA\BCS\COT02303.baf~ ~override~ // DÃ©clenchement Animation TÃ©lÃ©port si arrivÃ©e du player de la salle des morts.
+COMPILE ~CDB\AREA\BCS\COT02304.baf~ ~override~ // DÃ©clenchement dialogue Heras
 
-COMPILE ~CDB\AREA\BCS\COT02306.baf~ ~override~ // Déclenchement sort apparition Maladie
+COMPILE ~CDB\AREA\BCS\COT02306.baf~ ~override~ // DÃ©clenchement sort apparition Maladie
 
 COMPILE ~CDB\AREA\BCS\COT023TS.baf~ ~override~ // TOP Textscreen couloir sombre en passant par la salle Enigme
 //COMPILE ~CDB\AREA\BCS\COT02308.baf~ ~override~ // Lancement Textscreen couloir sombre en passant par la salle KAel
 
-COMPILE ~CDB\AREA\BCS\CON02301.baf~ ~override~ // Coffre de Héras ouvert
+COMPILE ~CDB\AREA\BCS\CON02301.baf~ ~override~ // Coffre de HÃ©ras ouvert
 COMPILE ~CDB\AREA\BCS\COTR023.baf~ ~override~  // Activation travel et Textscreen
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
 COPY ~CDB\CRE\COSPHIN.cre~ ~override~ // Sphinx
   SAY NAME1 @288
@@ -2074,7 +2074,7 @@ COPY ~CDB\CRE\COSPHI1.cre~ ~override~ // Sphinx
   SAY NAME1 @290
   SAY NAME2 @290
   
-COPY ~CDB\CRE\COSPIDG.cre~ ~override~ // Araignée géante (Maladie transormée)
+COPY ~CDB\CRE\COSPIDG.cre~ ~override~ // AraignÃ©e gÃ©ante (Maladie transormÃ©e)
   SAY NAME1 @290
   SAY NAME2 @290
 
@@ -2089,7 +2089,7 @@ COPY ~CDB\CRE\COMALAD.cre~ ~override~ // MALADIE
 COPY ~CDB\CRE\CORAT1.cre~ ~override~ // Rat de la peste
   SAY NAME1 @299
 
-// Script créature
+// Script crÃ©ature
 COMPILE ~CDB\CRE\BCS\COSPHIN.baf~ ~override~
 COMPILE ~CDB\CRE\BCS\COHERAS.baf~ ~override~
 COMPILE ~CDB\CRE\BCS\COMALAD.baf~ ~override~
@@ -2125,13 +2125,13 @@ BUT_ONLY
 
 // sorts
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\Sorts.TRA~
-COPY ~CDB\SPELL\COEPID1.spl~ ~override~ // épidémie
+COPY ~CDB\SPELL\COEPID1.spl~ ~override~ // Ã©pidÃ©mie
 	SAY NAME1 @8
 	LPF ALTER_SPELL_HEADER INT_VAR projectile = (IDS_OF_SYMBOL (projectl COEPID1) + 1) END
 BUT_ONLY
 
 COMPILE ~CDB\SPELL\BCS\CORAT1.baf~ ~override~ // apparition rats
-COMPILE ~CDB\SPELL\BCS\COSPIDG.baf~ ~override~ // Apparition araignée géante
+COMPILE ~CDB\SPELL\BCS\COSPIDG.baf~ ~override~ // Apparition araignÃ©e gÃ©ante
 COMPILE ~CDB\SPELL\BCS\COMALAV.baf~ ~override~ // Apparition maladie 
 
 COPY ~CDB\SPELL\CORAT1.spl~ ~override~ // Rats de la peste
@@ -2143,16 +2143,16 @@ COPY ~CDB\SPELL\COMLD.spl~ ~override~ // Drain de vie de masse
 COPY ~CDB\SPELL\COCECIM.spl~ ~override~ // Aveuglement de masse
 SAY NAME1 @12
 
-COPY ~CDB\SPELL\COTPEND.spl~ ~override~ // Sort Téléport Com021 arrivé COM023
-COPY ~CDB\SPELL\COSPIDG.spl~ ~override~ // apparition araignée géante
-COPY ~CDB\SPELL\COSPID1.spl~ ~override~ // lancement sort Apparition araignée géante
+COPY ~CDB\SPELL\COTPEND.spl~ ~override~ // Sort TÃ©lÃ©port Com021 arrivÃ© COM023
+COPY ~CDB\SPELL\COSPIDG.spl~ ~override~ // apparition araignÃ©e gÃ©ante
+COPY ~CDB\SPELL\COSPID1.spl~ ~override~ // lancement sort Apparition araignÃ©e gÃ©ante
 COPY ~CDB\SPELL\COMALAV.spl~ ~override~ // lancement sort Apparition Maladie
 
 /*
 //COPY ~CDB\SPELL\SPCL231.spl~ ~override~
 
 //COPY ~CDB\SPELL\SPCL228.spl~ ~override~
-COPY ~CDB\SPELL\COMUSHG.spl~ ~override~ // Nuage fumée (apparition créature)
+COPY ~CDB\SPELL\COMUSHG.spl~ ~override~ // Nuage fumÃ©e (apparition crÃ©ature)
 
 //COPY ~CDB\SPELL\SPCL235.spl~ ~override~
 COPY ~CDB\SPELL\COCLOU1.spl~ ~override~ // Sort nuage poison 
@@ -2185,16 +2185,16 @@ COPY ~CDB\area\COM024SR.bmp~ ~override~
 
 // Script carte
 COMPILE ~CDB\AREA\BCS\COM024.baf~ ~override~
-COMPILE ~CDB\AREA\BCS\CON02401.baf~ ~override~ // Stèle et dépose des larmes de sang
+COMPILE ~CDB\AREA\BCS\CON02401.baf~ ~override~ // StÃ¨le et dÃ©pose des larmes de sang
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
-COPY ~CDB\CRE\COMEUR.cre~ ~override~ // Forme encapuchonnée
+COPY ~CDB\CRE\COMEUR.cre~ ~override~ // Forme encapuchonnÃ©e
   SAY NAME1 @291
   SAY NAME2 @291
 
-// Script créature
-COMPILE ~CDB\CRE\BCS\COMEUR.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM024.TRA~ // Forme encapuchonnée
+// Script crÃ©ature
+COMPILE ~CDB\CRE\BCS\COMEUR.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM024.TRA~ // Forme encapuchonnÃ©e
 
 // Dialogue
 COMPILE ~CDB\DLG\COMEUR.d~ ~override~ USING ~CDB\DLG\COMEUR.tra~  // Meurtre
@@ -2204,11 +2204,11 @@ LOAD_TRA ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~
 
 // Sorts
 
-// Cutscène
+// CutscÃ¨ne
 COMPILE ~CDB\CUTSCENE\COCS0241.baf~ ~override~ // Apparition combat final, Boss Tanari
 COMPILE ~CDB\CUTSCENE\COCS0242.baf~ ~override~ // Apparition combat final, Boss Cambion
 
-// Epreuves du temple: salle 9 / Récompense de Bhaal / Cespenar ****************************************************************************************************************************************
+// Epreuves du temple: salle 9 / RÃ©compense de Bhaal / Cespenar ****************************************************************************************************************************************
 // Carte
 COPY ~CDB\area\COM025.are~ ~override~ 
 COPY ~CDB\area\COM025.mos~ ~override~
@@ -2220,18 +2220,18 @@ COPY ~CDB\area\COM025SR.bmp~ ~override~
 
 // Script carte
 COMPILE ~CDB\AREA\BCS\COM025.baf~ ~override~ 
-COMPILE ~CDB\AREA\BCS\COT02501.baf~ ~override~ // Téléport à l'arrivée
-COMPILE ~CDB\AREA\BCS\COT02502.baf~ ~override~ // Arrivée de Cespenar
+COMPILE ~CDB\AREA\BCS\COT02501.baf~ ~override~ // TÃ©lÃ©port Ã  l'arrivÃ©e
+COMPILE ~CDB\AREA\BCS\COT02502.baf~ ~override~ // ArrivÃ©e de Cespenar
 COMPILE ~CDB\AREA\BCS\COT02503.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM025.TRA~ // Info statue
 COMPILE ~CDB\AREA\BCS\COT02504.baf~ ~override~ // Apparition du Meurtre
 
-// Créature
+// CrÃ©ature
 LOAD_TRA ~CDB\LANGUAGE\Noms.TRA~
 COPY ~CDB\CRE\COMEPH.cre~ ~override~ // Cespenar
   SAY NAME1 @292
   SAY NAME2 @292
 
-// Script créature
+// Script crÃ©ature
 COMPILE ~CDB\CRE\BCS\COMEUR2.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM025.TRA~ // Meurtre
 COMPILE ~CDB\CRE\BCS\COMEPH.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM025.TRA~ // Cespenar
 
@@ -2244,17 +2244,17 @@ COMPILE ~CDB\DLG\COMEUR2.d~ ~override~ USING ~CDB\DLG\COMEUR2.tra~  // Meurtre
 
 // Sorts
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\sorts.TRA~
-//COPY ~CDB\SPELL\SPCL236.spl~ ~override~ // Récompense de Bhaal
-//COPY ~CDB\SPELL\SPCL237.spl~ ~override~ // Récompense de Bhaal
-COPY ~CDB\SPELL\CORECOMP.spl~ ~override~ // Récompense de Bhaal
-COPY ~CDB\SPELL\COFOLM.spl~ ~override~ // Folie meurtrière
+//COPY ~CDB\SPELL\SPCL236.spl~ ~override~ // RÃ©compense de Bhaal
+//COPY ~CDB\SPELL\SPCL237.spl~ ~override~ // RÃ©compense de Bhaal
+COPY ~CDB\SPELL\CORECOMP.spl~ ~override~ // RÃ©compense de Bhaal
+COPY ~CDB\SPELL\COFOLM.spl~ ~override~ // Folie meurtriÃ¨re
   SAY NAME1 @21
   SAY DESC @22
 
-// Cutscène
+// CutscÃ¨ne
 
 // TextScreen
-LOAD_TRA ~CDB\LANGUAGE\FRENCH\TextScreen.TRA~   // Main gravée symbôle de Bhaal
+LOAD_TRA ~CDB\LANGUAGE\FRENCH\TextScreen.TRA~   // Main gravÃ©e symbÃ´le de Bhaal
 COPY ~CDB\2DA\COTS009.2DA~ ~override~
 REPLACE ~99999~ @5001
 REPLACE ~99998~ @6010
@@ -2285,7 +2285,7 @@ STOP fin */
 
 
 /*
-COMPILE ~CDB\AREA\BCS\COT01719.baf~ ~override~ // Sort TP retour des épreuves
+COMPILE ~CDB\AREA\BCS\COT01719.baf~ ~override~ // Sort TP retour des Ã©preuves
 
 
 EXTEND_BOTTOM ~BALDUR.bcs~ ~CDB\Setup\DEM_MOD2.baf~
@@ -2303,34 +2303,34 @@ COPY ~CDB\STORES\COBARNI.sto~ ~override~
   SAY NAME2 @2
 
 
-COMPILE ~CDB\AREA\BCS\COT022B1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n°1
-COMPILE ~CDB\CRE\BCS\COKAEL.baf~ ~override~ USING ~CDB\DLG\COKAEL.tra~  // dialogue & quête
+COMPILE ~CDB\AREA\BCS\COT022B1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin nÂ°1
+COMPILE ~CDB\CRE\BCS\COKAEL.baf~ ~override~ USING ~CDB\DLG\COKAEL.tra~  // dialogue & quÃªte
 COMPILE ~CDB\CRE\BCS\COKAEL3.baf~ ~override~ USING ~CDB\DLG\COKAEL.tra~
 
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\SORTS.TRA~
-COPY ~CDB\SPELL\cohelm01.spl~ ~override~  // Invocation Horreur guerrière
+COPY ~CDB\SPELL\cohelm01.spl~ ~override~  // Invocation Horreur guerriÃ¨re
 SAY NAME1 @23
 
 COPY ~CDB\SPELL\EFFECT\COSHAD1.eff~ ~override~  // Appel des ombres
-COPY ~CDB\SPELL\COSHAD1.spl~ ~override~  // Invocation Horreur guerrière
+COPY ~CDB\SPELL\COSHAD1.spl~ ~override~  // Invocation Horreur guerriÃ¨re
 SAY NAME1 @24
 
 
-COMPILE ~CDB\ITM\BCS\COHELM01.baf~ ~override~ // Incovation si le Charname possède l'objet
-COMPILE ~CDB\CRE\BCS\COHELM02.baf~ ~override~ // Ré-int script invocation Horreur sanglante
+COMPILE ~CDB\ITM\BCS\COHELM01.baf~ ~override~ // Incovation si le Charname possÃ¨de l'objet
+COMPILE ~CDB\CRE\BCS\COHELM02.baf~ ~override~ // RÃ©-int script invocation Horreur sanglante
 COMPILE ~CDB\DLG\COKAEL.d~ ~override~ USING ~CDB\DLG\COKAEL.tra~  
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~
-// Coupe de sang de Kael - horreur guerrière
+// Coupe de sang de Kael - horreur guerriÃ¨re
 COPY ~CDB\ITM\MISCP64.itm~ ~override~ 
 SAY NAME1 @5262
 SAY NAME2 @5264
 SAY UNIDENTIFIED_DESC @5263
 SAY DESC @5265
 
-COMPILE ~CDB\AREA\BCS\COT020G1.baf~ ~override~ // gestion état grille1 grotte COM020 - PS salle Bassin COM022
+COMPILE ~CDB\AREA\BCS\COT020G1.baf~ ~override~ // gestion Ã©tat grille1 grotte COM020 - PS salle Bassin COM022
 
-COMPILE ~CDB\AREA\BCS\COT022G2.baf~ ~override~ // gestion état PS grille2 COM022 - grille 1 Grotte COM020
-COMPILE ~CDB\AREA\BCS\COT022G3.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // gestion état grille3 COM022 - grille 2 salle Damiers COM019
+COMPILE ~CDB\AREA\BCS\COT022G2.baf~ ~override~ // gestion Ã©tat PS grille2 COM022 - grille 1 Grotte COM020
+COMPILE ~CDB\AREA\BCS\COT022G3.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // gestion Ã©tat grille3 COM022 - grille 2 salle Damiers COM019
 
 
 COMPILE ~CDB\AREA\BCS\COM019.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ 
@@ -2366,7 +2366,7 @@ COMPILE ~CDB\AREA\BCS\COM017.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM017.T
 COMPILE ~CDB\AREA\BCS\COM018.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM018.TRA~ 
 COMPILE ~CDB\AREA\BCS\COM026.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM026.TRA~ 
 COMPILE ~CDB\CRE\BCS\COCANDE.baf~ ~override~ // Candelas
-COMPILE ~CDB\DLG\COCANDE.d~ ~override~ USING ~CDB\DLG\COCANDE.tra~ // Script créature
+COMPILE ~CDB\DLG\COCANDE.d~ ~override~ USING ~CDB\DLG\COCANDE.tra~ // Script crÃ©ature
 COMPILE ~CDB\AREA\BCS\COT02702.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM027.TRA~ // bruit de pas
 COMPILE ~CDB\AREA\BCS\COT02703.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM027.TRA~ // la trappe se referme
 COMPILE ~CDB\AREA\BCS\COT017TP.baf~ ~override~
@@ -2375,14 +2375,14 @@ COMPILE ~CDB\AREA\BCS\COT01805.baf~ ~override~
 
 
 
-ADD_PROJECTILE ~CDB\PRO\COSKUF1.pro~ ~crâne de Feu~
+ADD_PROJECTILE ~CDB\PRO\COSKUF1.pro~ ~crÃ¢ne de Feu~
 COPY ~CDB\PRO\COSKUF1.pro~ ~override~
 
 // Objets
 LOAD_TRA ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~
 
 
-// Crâne de feu
+// CrÃ¢ne de feu
 COPY ~CDB\ITM\MISCP57.itm~ ~override~
   //LPF ALTER_SPELL_HEADER INT_VAR projectile = (IDS_OF_SYMBOL (projectl COSKUF1) + 1) END
   WRITE_SHORT 0x09C ~%COSKUF1%~
@@ -2394,7 +2394,7 @@ BUT_ONLY
 
 COMPILE ~CDB\CRE\BCS\COURGLIT.baf~ ~override~ USING ~CDB\DLG\COURGLIT.tra~ // Combat VS groupe
 COMPILE ~CDB\AREA\BCS\COM021.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM021.TRA~ 
-// Anneau de Urglite: invocation élémental d'air glacé
+// Anneau de Urglite: invocation Ã©lÃ©mental d'air glacÃ©
 COPY ~CDB\ITM\RINGP11.itm~ ~override~ 
 SAY NAME1 @5098
 SAY UNIDENTIFIED_DESC @5099
