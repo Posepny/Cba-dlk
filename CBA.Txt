@@ -1852,8 +1852,79 @@ COPY ~CDB\CRE\COSPIDG.cre~ ~override~ // Giant Spider (Disease transformed)
 
 
 
+SAY NAME2 @290
+  
+COPY ~CDB\CRE\COSPIDG.cre~ ~override~ // Araign�e g�ante (Maladie transorm�e)
+  SAY NAME1 @290
+  SAY NAME2 @290
+
+COPY ~CDB\CRE\COHERAS.cre~ ~override~ // Effigie COHERAS
+  SAY NAME1 @289
+  SAY NAME2 @289
+  
+COPY ~CDB\CRE\COMALAD.cre~ ~override~ // MALADIE
+  SAY NAME1 @290
+  SAY NAME2 @290
+  
+COPY ~CDB\CRE\CORAT1.cre~ ~override~ // Rat de la peste
+  SAY NAME1 @299
+
+// Script creature
+COMPILE ~CDB\CRE\BCS\COSPHIN.baf~ ~override~
+COMPILE ~CDB\CRE\BCS\COHERAS.baf~ ~override~
+COMPILE ~CDB\CRE\BCS\COMALAD.baf~ ~override~
+COMPILE ~CDB\CRE\BCS\COMALAD2.baf~ ~override~ USING ~CDB\DLG\COMALAD.tra~
+
+// Dialogue
+COMPILE ~CDB\DLG\COSPHIN.d~ ~override~ USING ~CDB\DLG\COSPHIN.tra~ // Sphinx
+COMPILE ~CDB\DLG\COHERAS.d~ ~override~ USING ~CDB\DLG\COHERAS.tra~ // Effigie
+COMPILE ~CDB\DLG\COMALAD.d~ ~override~ USING ~CDB\DLG\COMALAD.tra~ // Maladie
+
+// Object
+LOAD_TRA ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~
+// larme de Sang de Bhaal: Boss Maladie
+COPY ~CDB\ITM\MISCP26.itm~ ~override\MISCP41.itm~
+SAY NAME1 @5060
+SAY NAME2 @5060
+SAY UNIDENTIFIED_DESC @5061
+SAY DESC @5068
+
+COPY ~CDB\ITM\Rat1p.itm~ ~override~
+
+   
+// Projectile
+ADD_PROJECTILE ~CDB\PRO\COEPID2.pro~ ~maillon chaine epidemie~
+COPY ~CDB\PRO\COEPID2.pro~ ~override~ 
+
+ADD_PROJECTILE ~CDB\PRO\COEPID1.pro~ ~Chaine epidemie~
+COPY ~CDB\PRO\COEPID1.pro~ ~override~
+	SET proj = (IDS_OF_SYMBOL (projectl COEPID2) + 1)
+	WRITE_SHORT 0x21a proj
+BUT_ONLY
 
 
+// spells
+LOAD_TRA ~CDB\LANGUAGE\FRENCH\Sorts.TRA~
+COPY ~CDB\SPELL\COEPID1.spl~ ~override~ // �pid�mie
+	SAY NAME1 @8
+	LPF ALTER_SPELL_HEADER INT_VAR projectile = (IDS_OF_SYMBOL (projectl COEPID1) + 1) END
+BUT_ONLY
+
+COMPILE ~CDB\SPELL\BCS\CORAT1.baf~ ~override~ // apparition rats
+COMPILE ~CDB\SPELL\BCS\COSPIDG.baf~ ~override~ // Apparition araign�e g�ante
+COMPILE ~CDB\SPELL\BCS\COMALAV.baf~ ~override~ // Apparition maladie 
+
+COPY ~CDB\SPELL\CORAT1.spl~ ~override~ // Rats de la peste
+  SAY NAME1 @9
+COPY ~CDB\SPELL\cofaibm.spl~ ~override~ // Affaiblissement de masse
+  SAY NAME1 @10
+COPY ~CDB\SPELL\COMLD.spl~ ~override~ // Drain de vie de masse
+  SAY NAME1 @11 
+COPY ~CDB\SPELL\COCECIM.spl~ ~override~ // Aveuglement de masse
+SAY NAME1 @12
+
+COPY ~CDB\SPELL\COTPEND.spl~ ~override~ // Sort T�l�port Com021 arriv� COM023
+COPY ~CDB\SPELL\COSPIDG.spl~ ~override~ // apparition araign�e g�ante
 COPY ~CDB\SPELL\COSPID1.spl~ ~override~ // cast Spider Apparition spell 
 COPY ~CDB\SPELL\COMALAV.spl~ ~override~ // cast Disease Apparition spell 
 
@@ -1907,8 +1978,8 @@ COMPILE ~CDB\CRE\BCS\COMEUR.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM024.TR
 // Dialogue 
 COMPILE ~CDB\DLG\COMEUR.d~ ~override~ USING ~CDB\DLG\COMEUR.tra~ // Murder 
 
-// 
-LOAD_TRA object ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~ 
+// object
+LOAD_TRA  ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~ 
 
 // Spells 
 
@@ -2002,7 +2073,53 @@ REPLACE_TEXTUALLY ~GlobalLT("ENDOFBG1","GLOBAL",2)~ ~GlobalLT("ENDOFBG1","GLOBAL
 END 
 BUT_ONLY_IF_IT_CHANGES 
 
+COMPILE ~CDB\DLG\PNJ_heros\XZARP.d~ ~override~ USING ~CDB\DLG\PNJ_heros\XZARP.tra~
 
+COMPILE ~CDB\DLG\CORUMOR.d~ ~override~ USING ~CDB\DLG\CORUMOR.tra~
+
+COPY ~CDB\STORES\COBARNI.sto~ ~override~ 
+  SAY NAME2 @2
+
+
+COMPILE ~CDB\AREA\BCS\COT022B1.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // Vider le bassin n�1
+COMPILE ~CDB\CRE\BCS\COKAEL.baf~ ~override~ USING ~CDB\DLG\COKAEL.tra~  // dialogue & qu�te
+COMPILE ~CDB\CRE\BCS\COKAEL3.baf~ ~override~ USING ~CDB\DLG\COKAEL.tra~
+
+LOAD_TRA ~CDB\LANGUAGE\FRENCH\SORTS.TRA~
+COPY ~CDB\SPELL\cohelm01.spl~ ~override~  // Invocation Horreur guerri�re
+SAY NAME1 @23
+
+COPY ~CDB\SPELL\EFFECT\COSHAD1.eff~ ~override~  // Appel des ombres
+COPY ~CDB\SPELL\COSHAD1.spl~ ~override~  // Invocation Horreur guerri�re
+SAY NAME1 @24
+
+
+COMPILE ~CDB\ITM\BCS\COHELM01.baf~ ~override~ // Incovation si le Charname poss�de l'objet
+COMPILE ~CDB\CRE\BCS\COHELM02.baf~ ~override~ // R�-int script invocation Horreur sanglante
+COMPILE ~CDB\DLG\COKAEL.d~ ~override~ USING ~CDB\DLG\COKAEL.tra~  
+LOAD_TRA ~CDB\LANGUAGE\FRENCH\OBJETS.TRA~
+// Coupe de sang de Kael - horreur guerri�re
+COPY ~CDB\ITM\MISCP64.itm~ ~override~ 
+SAY NAME1 @5262
+SAY NAME2 @5264
+SAY UNIDENTIFIED_DESC @5263
+SAY DESC @5265
+
+COMPILE ~CDB\AREA\BCS\COT020G1.baf~ ~override~ // gestion �tat grille1 grotte COM020 - PS salle Bassin COM022
+
+COMPILE ~CDB\AREA\BCS\COT022G2.baf~ ~override~ // gestion �tat PS grille2 COM022 - grille 1 Grotte COM020
+COMPILE ~CDB\AREA\BCS\COT022G3.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ // gestion �tat grille3 COM022 - grille 2 salle Damiers COM019
+
+
+COMPILE ~CDB\AREA\BCS\COM019.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM019.TRA~ 
+COMPILE ~CDB\AREA\BCS\COM020.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM020.TRA~ 
+COMPILE ~CDB\AREA\BCS\COM022.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM022.TRA~ 
+COMPILE ~CDB\AREA\BCS\COM023.baf~ ~override~ USING ~CDB\LANGUAGE\FRENCH\COM023.TRA~ 
+COMPILE ~CDB\AREA\BCS\COT023TS.baf~ ~override~ // TOP Textscreen couloir sombre en passant par la salle Enigme
+COMPILE ~CDB\AREA\BCS\COT022TS.baf~ ~override~ // TOP Textscreen couloir sombre en passant par la salle Enigme
+COMPILE ~CDB\DLG\COHERAS.d~ ~override~ USING ~CDB\DLG\COHERAS.tra~ // Effigie
+COMPILE ~CDB\DLG\COMALAD.d~ ~override~ USING ~CDB\DLG\COMALAD.tra~ 
+COMPILE ~CDB\SPELL\BCS\COMALAV.baf~ ~override~
 
 
 
@@ -2067,7 +2184,7 @@ COPY ~CDB\ITM\RINGP11.itm~ ~override~
 SAY NAME1 @5098 
 SAY UNIDENTIFIED_DESC @5099 
 SAY NAME2 @5100 
-
+SAY DESC @5101
 */
 
 
