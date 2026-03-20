@@ -1,0 +1,40 @@
+// Activation du mod au lancement d'une partie (aussitôt)
+// avec une sauvegarde (n PNJ)
+IF
+ Global("Protecteur_baldur","GLOBAL",0) 
+THEN
+ RESPONSE #100 
+
+  SetGlobal("NewBG1","AR0015",5)  // Eviter l'intro BG1 sur l'AR0015
+
+ // BG1: initialisation de la transition BG1 -> Mod Protecteur de Baldur : chapitre 9 de BG1 suite
+ SetGlobal("Chapter","GLOBAL",9) // eviter des situations de jeu de BG1
+ SetGlobal("Invitation","GLOBAL",1)
+ SetGlobal("EnteredPalace","GLOBAL",1)
+ setGlobal("ENDOFBG1","GLOBAL",2)
+
+ SetGlobal("MOD_PDB_acte","GLOBAL",1)
+ SetGlobal("MOD_PDB_chapitre","GLOBAL",1)
+ SetGlobal("PDB","GLOBAL",1) // à verifier si utile
+ SetGlobal("Protecteur_baldur","GLOBAL",1) 
+ SetGlobal("Mod_CDB","GLOBAL",1)  // activation uniquement de la partie champion de Bhaal
+ 
+ // positionnement des anciens compagnons
+ ActionOverride(PLAYER2,LeaveAreaLUA("AR7216","",[565.1010],10)) 
+ ActionOverride(PLAYER3,LeaveAreaLUA("AR7216","",[565.1010],10))  
+ ActionOverride(PLAYER4,LeaveAreaLUA("AR7216","",[565.1010],10)) 
+ ActionOverride(PLAYER5,LeaveAreaLUA("AR7216","",[565.1010],10)) 
+ ActionOverride(PLAYER6,LeaveAreaLUA("AR7216","",[565.1010],10)) 
+ ActionOverride(PLAYER1,LeaveAreaLUA("AR7216","",[565.1010],10)) 
+END
+
+// nouvelle partie: PLAYER1 upgradé de 120 00 XP + 5 000 Po / LVL 8 en gros
+IF
+ Global("PLAYER1_LVL1_UP","GLOBAL",0)
+ LEVEL(PLAYER1,1) 
+THEN
+ RESPONSE #100
+ SetGlobal("PLAYER1_LVL1_UP","GLOBAL",1)
+ AddXPObject(PLAYER1,125000) 
+ GiveGoldForce(5000)
+END

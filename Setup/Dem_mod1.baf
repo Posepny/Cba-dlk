@@ -1,0 +1,66 @@
+// Activation du mod à la mort de Sarevok (suite partie BG1)
+// avec une sauvegarde (n PNJ)
+IF
+ Global("Protecteur_baldur","GLOBAL",0) 
+ GlobalGT("ENDOFBG1","GLOBAL",0)
+THEN
+ RESPONSE #100 
+ // BG1: initialisation de la transition BG1 -> Mod Protecteur de Baldur : chapitre 9 de BG1 suite
+ SetGlobal("Chapter","GLOBAL",9) // eviter des situations de jeu de BG1
+ SetGlobal("Invitation","GLOBAL",1)
+ SetGlobal("EnteredPalace","GLOBAL",1)
+ setGlobal("ENDOFBG1","GLOBAL",2)
+
+ SetGlobal("MOD_PDB_acte","GLOBAL",1)
+ SetGlobal("MOD_PDB_chapitre","GLOBAL",1)
+ SetGlobal("PDB","GLOBAL",1) // à verifier si utile
+ SetGlobal("Protecteur_baldur","GLOBAL",1) 
+ SetGlobal("Mod_CDB","GLOBAL",1)  // activation uniquement de la partie champion de Bhaal
+
+ 
+ 
+ Wait(10)
+ 
+ // positionnement des anciens compagnons
+ ActionOverride(PLAYER2,LeaveAreaLUA("AR7216","",[565.1010],10)) 
+ ActionOverride(PLAYER3,LeaveAreaLUA("AR7216","",[565.1010],10))  
+ ActionOverride(PLAYER4,LeaveAreaLUA("AR7216","",[565.1010],10)) 
+ ActionOverride(PLAYER5,LeaveAreaLUA("AR7216","",[565.1010],10)) 
+ ActionOverride(PLAYER6,LeaveAreaLUA("AR7216","",[565.1010],10))  
+ 
+ ActionOverride(Player1,LeaveAreaLUA("AR7216","",[757.493],10)) 
+END
+
+/* 
+Démarrage dans le hall du palais des ducs AR7208
+deplacement dans cette zone
+
+// Mod Protecteur de Baldur (intégral) ***********************************************************************************************************************************************
+// TextScreen d'intro
+IF 
+ Global("Protecteur_baldur","GLOBAL",1)
+ Global("Mod_CDB","GLOBAL",0)
+ Global("intro_TS","AR7216",0)
+THEN 
+ RESPONSE #100
+ SetGlobal("intro_TS","AR7216",1)
+ 
+ // Passage chapitre 9 BG1: initialisation de la transition BG1 -> Mod Protecteur de Baldur
+ SetGlobal("Chapter","GLOBAL",9)
+ TextScreen("CHPTXT-9") 
+ 
+ FadeTOColor([20.0],0)
+END
+
+// Nouvelle partie BG1: LVL1 avec 120 000 points ajoutés
+IF
+ Level(PLAYER1,1)
+ Global("LVL_1","AR7216",0)
+THEN
+ RESPONSE #100
+ SetGlobal("LVL_1","AR7216",1)
+ 
+ AddXPObject(PLAYER1,120000) 
+ GivePartyGold(5000) 
+END
+*/
