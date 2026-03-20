@@ -1,0 +1,56 @@
+// Démarrage de la cutscène
+// Tanari comme adversaire
+IF
+ Global("CS_com024","COM024",0) 
+ Global("Boss_salle1","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("CS_com024","COM024",1)
+ 
+ //PlaySound("COBOO1") // TEMOIN
+  
+ Wait(2)
+ DisplayStringHead("COMEUR",@1)
+ //PlaySound("COBOO1") // TEMOIN
+ //PlaySound("COBOO1") // TEMOIN
+ Wait(4)
+ ClearAllActions()
+ StartCutSceneMode()
+ Wait(1)
+ StartCutScene("COCS0241")   
+ //PlaySound("COBOO1") // TEMOIN
+ //PlaySound("COBOO1") // TEMOIN
+END
+
+ // Cambion comme adversaire
+IF
+ Global("CS_com024","COM024",0)
+ Global("Boss_salle1","GLOBAL",1)
+THEN
+ RESPONSE #100
+ 
+ //PlaySound("COBOO1") // TEMOIN
+ //PlaySound("COBOO1") // TEMOIN
+ 
+ SetGlobal("CS_COM024","COM024",1)
+ 
+ Wait(1)
+ DisplayStringHead("COMEUR",@1)
+ Wait(4)
+ ClearAllActions()
+ StartCutSceneMode()
+ Wait(1)
+ StartCutScene("COCS0242")   
+END
+
+// Le meurtre disparait
+IF
+ Global("CS_COM024","COM024",3) 
+THEN
+ RESPONSE #100
+ SetGlobal("CS_COM024","COM024",4) 
+ 
+ CreateVisualEffectObject("SPATTCK1","COMEUR")
+ Deactivate("COMEUR") 
+ Kill("COMEUR")
+END

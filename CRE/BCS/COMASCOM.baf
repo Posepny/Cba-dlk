@@ -1,0 +1,180 @@
+// Charname refuse d'être le Champion de Bhaal
+IF
+ Global("Bhaal_allie","GLOBAL",2)
+ Global("Charname_enemy","LOCALS",0)
+THEN 
+ RESPONSE #100
+ SetGlobal("Charname_enemy","LOCALS",1)
+ enemy()
+END
+
+// Ekilis fait parti du groupe
+IF
+  ActuallyInCombat()
+  See("COEKILIS")
+  Global("massena_VS_Ekilis","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("massena_VS_Ekilis","GLOBAL",1)
+  SpellNoDec("COEKILIS",CLERIC_FLAME_STRIKE)
+    
+  RESPONSE #100
+  SetGlobal("massena_VS_Ekilis","GLOBAL",1)
+  SpellNoDec("COEKILIS",CLERIC_CONFUSION)  
+END
+
+IF
+  ActuallyInCombat()
+  See("COEKILIS")
+  Global("massena_VS_Ekilis","GLOBAL",1)
+THEN
+  RESPONSE #100
+  SetGlobal("massena_VS_Ekilis","GLOBAL",2)
+  SpellNoDecRES("PXBHCONV","COEKILIS")
+  
+  RESPONSE #100
+  SetGlobal("massena_VS_Ekilis","GLOBAL",2)
+  SpellNoDec("COEKILIS",CLERIC_FIRE_STORM)  
+END
+
+
+// massena est blessé
+IF
+ Global("massena_heal","GLOBAL",0)
+ HPPercentLT(Myself,30)
+THEN
+  RESPONSE #100
+  setGlobal("massena_heal","GLOBAL",1)
+  SpellNoDec(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+        
+  RESPONSE #100
+  SetGlobal("massena_heal","GLOBAL",1)
+  SpellNoDec(Myself,CLERIC_HEAL)
+    
+  RESPONSE #100
+  SetGlobal("massena_heal","GLOBAL",1)
+  SpellNoDec(Myself,CLERIC_ARMOR_OF_FAITH)
+END
+
+// Choix stratégie de massena: réInit de la stratégie de combat
+IF
+ ActuallyInCombat()
+ GlobalTimerExpired("massena_choix","GLOBAL") 
+ Global("massena_timer","GLOBAL",1)
+THEN
+ Response #100
+ SetGlobal("massena_timer","GLOBAL",0)
+ SetGlobal("massena_choix_S","GLOBAL",0) 
+END
+
+// Choix stratégie de combat
+IF
+ !See("COEKILIS")
+ ActuallyInCombat()
+ Global("massena_choix_S","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("massena_choix_S","GLOBAL",1)
+ SetGlobal("massena_strat_peur","GLOBAL",0)
+ SetGlobal("massena_strat_faible","GLOBAL",0)
+ 
+ RESPONSE #100
+ SetGlobal("massena_choix_S","GLOBAL",2)
+ SetGlobal("massena_strat_peur","GLOBAL",0)
+ SetGlobal("massena_strat_faible","GLOBAL",0)
+END
+
+
+// 1- stratégie peur + combat 
+IF
+ Global("massena_choix_S","GLOBAL",1)
+ Global("massena_strat_peur","GLOBAL",0)
+THEN
+ RESPONSE #100 
+ SetGlobal("massena_strat_peur","GLOBAL",1)
+ SetGlobalTimer("massena_choix","GLOBAL",20)
+ SetGlobal("massena_timer","GLOBAL",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_CONFUSION)
+ 
+ RESPONSE #100
+ SetGlobal("massena_strat_peur","GLOBAL",1)
+ SetGlobalTimer("massena_choix","GLOBAL",20)
+ SetGlobal("massena_timer","GLOBAL",1)
+END
+
+// 2- stratégie peur + combat 
+IF
+ Global("massena_choix_S","GLOBAL",1)
+ Global("massena_strat_peur","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("massena_strat_peur","GLOBAL",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_FLAME_STRIKE)
+ 
+ RESPONSE #100
+ SetGlobal("massena_strat_peur","GLOBAL",2)
+ SpellNoDecRES("PXBHCONV",Nearestenemyof(Myself))
+ ActionOverride("pxbhombr",ChangeAIScript("CODEST",CLASS))
+ 
+ RESPONSE #100
+ SetGlobal("massena_strat_peur","GLOBAL",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_HOLD_PERSON)
+END
+
+
+// 1- Stratégie affaiblissement + combat jet sauvegarde
+IF
+ Global("massena_choix_S","GLOBAL",2)
+ Global("massena_strat_faible","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("massena_strat_faible","GLOBAL",1)
+ SetGlobalTimer("massena_choix","GLOBAL",20)
+ SetGlobal("massena_timer","GLOBAL",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_UNHOLY_BLIGHT)
+  
+ RESPONSE #100
+ SetGlobal("massena_strat_faible","GLOBAL",1) 
+ SetGlobalTimer("massena_choix","GLOBAL",20)
+ SetGlobal("massena_timer","GLOBAL",1)
+END
+
+// 2- Stratégie affaiblissement + combat jet sauvegarde
+IF
+ Global("massena_choix_S","GLOBAL",2)
+ Global("massena_strat_faible","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("massena_strat_faible","GLOBAL",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_DOOM)
+ 
+ RESPONSE #100
+ SetGlobal("massena_strat_faible","GLOBAL",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_RIGID_THINKING)
+ 
+ RESPONSE #100
+ SetGlobal("massena_strat_faible","GLOBAL",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_POISON)
+END
+
+IF
+  See("COEKILIS")
+THEN
+  RESPONSE #100
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  See(Nearestenemyof(Myself))
+  !See("COEKILIS")
+THEN
+  RESPONSE #100
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  AttackedBy([0],DEFAULT)
+THEN
+  RESPONSE #100
+  Attack(Lastattackerof(Myself))
+END

@@ -1,0 +1,155 @@
+IF
+ Global("Maladie_combat","COM023",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Maladie_combat","COM023",2)
+ ForceSpellRES("SPWI212",Myself) // image réfléchie
+ ForceSpellRES("CORAT1",Myself) // rats de la peste
+END
+
+// Blessé à 50%: drain de vie **********************************************************************************************************************************************
+IF
+ HPPercentLT("comalad",50)
+ Global("maladie_drain_vie","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("maladie_drain_vie","GLOBAL",1) 
+ SpellNoDecRES("COMLD",Myself) 
+END
+
+// Blessée à 70%: transformation en araignée géante *************************************************************************************************************************
+IF
+ HPPercentLT("comalad",30)
+ Global("maladie_transformation","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("maladie_transformation","GLOBAL",1)
+ 
+ DisplayStringHead(MySelf,@103)
+ 
+ Playsound("EFF_M110")
+ SpellNoDecRES("COSPIDG",Myself) 
+ Playsound("EFF_M11B")
+END
+
+// Combat corps à corps *****************************************************************************************************************************************************
+IF
+ HitBy([GOODCUTOFF],CRUSHING)
+ GlobalTimerExpired("maladie_SPELL","GLOBAL")
+ Range([ANYTHING],8)
+ GlobalLT("maladie_SPELL_range1","GLOBAL",8)
+THEN 
+ RESPONSE #100
+
+ // peau de pierre
+ REsPONSE #70
+ SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+ SpellNoDecRES("SPWI408",Myself)
+ IncrementGlobal("maladie_SPELL_range1","GLOBAL",1)
+
+ // manteau horreur
+ REsPONSE #80
+ SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+ SpellNoDecRES("SPPR416",Myself)
+ IncrementGlobal("maladie_SPELL_range1","GLOBAL",1)
+  
+ // porte d'ombre 
+ REsPONSE #100
+ SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+ SpellNoDecRES("SPWI505",Myself)
+ IncrementGlobal("maladie_SPELL_range1","GLOBAL",1)
+END
+
+IF
+ GlobalTimerExpired("maladie_SPELL","GLOBAL")
+ Range([ANYTHING],8)
+ GlobalLT("maladie_SPELL_range1","GLOBAL",8)
+THEN      
+  // cécité de masse
+  REsPONSE #70
+  SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+  SpellNoDecRES("COCECIM",NearestEnemyOf(Myself))
+  IncrementGlobal("maladie_SPELL_rangex","GLOBAL",1)
+  DisplayStringHead(MySelf,@102)
+  
+  // affaiblissement
+  REsPONSE #80
+  SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+  SpellNoDecRES("cofaibm",NearestEnemyOf(Myself))
+  IncrementGlobal("maladie_SPELL_rangex","GLOBAL",1)
+  
+  // charme néfaste
+  REsPONSE #100
+  SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+  SpellNoDecRES("SPWI316",NearestEnemyOf(Myself))
+  IncrementGlobal("maladie_SPELL_rangex","GLOBAL",1)
+END
+	
+
+// Combat à distance ****************************************************************************************************************************************
+IF
+ GlobalTimerExpired("maladie_SPELL","GLOBAL")
+ !Range([ANYTHING],9)
+ GlobalLT("maladie_SPELL_rangeX","GLOBAL",8)
+THEN
+  // épidémie
+  REsPONSE #100
+  SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+  SpellNoDecRES("COEPID1",NearestEnemyOf(Myself))
+  IncrementGlobal("maladie_SPELL_rangex","GLOBAL",1)
+  DisplayStringHead(MySelf,@101)  
+
+  // lenteur
+  REsPONSE #70
+  SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+  SpellNoDecRES("SPWI312",NearestEnemyOf(Myself))
+  IncrementGlobal("maladie_SPELL_rangeX","GLOBAL",1)
+  
+  // nuées d'insectes
+  REsPONSE #70
+  SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+  SpellNoDecRES("SPPR517",NearestEnemyOf(Myself))
+  IncrementGlobal("maladie_SPELL_rangeX","GLOBAL",1)
+  DisplayStringHead(MySelf,@100)
+  
+  // malédiction
+  REsPONSE #90
+  SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+  SpellNoDecRES("SPWI412",NearestEnemyOf(Myself))
+  IncrementGlobal("maladie_SPELL_rangeX","GLOBAL",1)
+    
+  // doigt de mort    
+  REsPONSE #100
+  SetGlobalTimer("maladie_SPELL","GLOBAL",5)
+  DisplayStringHead(MySelf,@104)
+  
+  SpellNoDecRES("SPWI713",NearestEnemyOf(Myself))
+  IncrementGlobal("maladie_SPELL_rangeX","GLOBAL",1)
+END
+
+// plus de sorts: transformation en araignée géante **********************************************************************************************************
+IF
+ OR(2)
+  GlobalGT("maladie_SPELL_rangeX","GLOBAL",8)
+  GlobalGT("maladie_SPELL_range1","GLOBAL",8) 
+THEN
+ RESPONSE #100
+  //ForceSpellRES("COSPIDG","comalad") 
+  SpellNoDecRES("COSPIDG","comalad") 
+END
+
+IF
+ !See([PC])
+ ActuallyInCombat()
+THEN
+ RESPONSE #100
+ RandomWalk()
+ Continue()
+END
+
+IF
+  See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END

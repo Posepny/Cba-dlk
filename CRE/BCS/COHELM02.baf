@@ -1,0 +1,81 @@
+// réInit pour invoquer Horreur sanglante
+IF
+ die()
+THEN
+ RESPONSE #100
+ SetGlobal("CO_horreur_top","GLOBAL",0)
+ ReallyForceSpellDead(Myself,RED_HOLY_MIGHT)
+END
+
+// Fin de convocation: être sur de pouvoir invoquer à nouveau
+IF 
+ Delay(50)
+THEN
+  RESPONSE #100
+  SetGlobal("CO_horreur_top","GLOBAL",0)
+  ReallyForceSpellDead(Myself,RED_HOLY_MIGHT)
+  Wait(2)
+  DestroySelf()    
+END
+
+
+/*
+
+IF
+ HasItem("cohelm01",PLAYER1)
+THEN
+ RESPONSE #100
+ ForceSpellRES("cohelm01",PLAYER1) 
+END
+
+
+  //createcreature("MINSC",[1145.850],10)
+  PlaySound("AMB_D04A")
+
+
+
+
+IF
+ Global("Top","LOCALS",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Top","LOCALS",1)
+
+//createcreature("MINSC",[-1.-1],10) 
+DisplayStringHead(PLAYER1,~Apparait!~)
+ //PlaySound("AMB_D04A")
+END
+
+
+IF
+ //HasItem("cohelm01",PLAYER1)
+True()
+THEN
+ RESPONSE #100
+ DisplayStringHead(PLAYER1,~Apparait!~)
+ PlaySound("AMB_D04A")
+ 
+END
+
+
+
+
+IF
+
+  HasItem("MISCP64",Player1)
+  Global("TimeTP1","GLOBAL",0)
+
+ True()
+THEN
+  RESPONSE #100
+
+    SetGlobal("TimeTP1","GLOBAL",1)
+
+    SetInterrupt(FALSE)
+    PlaySound("CAS_P07")
+    ForceSpellRES("cohelm01",Player1)
+    ForceSpellRES("cohelm01",Lasttrigger) 
+    SetInterrupt(TRUE)
+END
+*/
+

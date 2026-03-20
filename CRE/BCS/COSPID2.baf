@@ -1,0 +1,15 @@
+// Maladie est vaincue
+IF
+ Die()
+THEN
+ RESPONSE #100
+ ClearAllActions()
+ 
+ CreateVisualEffectObject("SPFDEATH","comalad") 
+ PlayDead(20)
+ CreateItem("Miscp41",0,0,0)
+ DropInventory() 
+ Deactivate("comalad")  
+ Wait(2)
+ ActionOverride("comalad",DestroySelf())
+END

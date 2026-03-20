@@ -1,0 +1,238 @@
+// Combat final: Relation avec le groupe *********************************************************************************************************************************************
+// Alliance
+IF
+ AreaCheck("COM024")
+ Global("CO_KAEL_ALLIE","GLOBAL",1)
+ PartyHasItem("MISCP60")
+THEN
+ RESPONSE #100
+ SetGlobal("CO_KAEL_ALLIE","GLOBAL",2)
+ SetGlobal("Kael_combat_base","GLOBAL",0)
+ 
+ ActionOverride("COKAEL",Ally())
+END
+
+// Ennemis
+IF
+ AreaCheck("COM024")
+ Global("CO_KAEL_ALLIE","GLOBAL",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("CO_KAEL_ALLIE","GLOBAL",2)
+ 
+ Enemy()
+ SetGlobalTimer("enemis_invisible","GLOBAL",1)
+ SetGlobalTimer("basique_distance","GLOBAL",1)
+ SetGlobalTimer("majeur_distance","GLOBAL",1)
+ SetGlobalTimer("corps_a_corps1","GLOBAL",1)
+ SetGlobalTimer("corps_a_corps2","GLOBAL",1)
+END
+
+// Bassins vidés, Kael se rend dans la zone sombre pour invoquer des esprits *************************************
+IF
+ Global("Fontaine_vide","COM022",1)
+ See(NearestEnemyOf(Myself))
+THEN 
+ RESPONSE #100
+ SetGlobal("Fontaine_vide","COM022",2)
+ ApplySpell(Myself,WIZARD_SHADOW_DOOR)
+ SetInterrupt(FALSE) 
+  MoveToPoint([1940.440])
+  Wait(3)
+  Face(15) 
+  DisplayStringHead(Myself,@500) // @500=~Esprits de la nuit, entendez mon appel!~
+  Wait(1)
+  ApplySpellRES("COSHAD1",Myself)  // Appel des ombres
+  Wait(5)
+ SetInterrupt(TRUE) 
+END
+
+// Début du combat ***********************************************************************************************
+IF
+ OR(2)
+  HitBy([0],CRUSHING)
+  AttackedBy([0],DEFAULT)
+  Global("KAEL_combat","COM022",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("KAEL_combat","COM022",1) 
+
+ Enemy()
+ SetGlobalTimer("enemis_invisible","GLOBAL",1)
+ SetGlobalTimer("basique_distance","GLOBAL",1)
+ SetGlobalTimer("majeur_distance","GLOBAL",1)
+ SetGlobalTimer("corps_a_corps1","GLOBAL",1)
+ SetGlobalTimer("corps_a_corps2","GLOBAL",1)
+
+ DisplayString(Myself,@600) // ~séquenceur de sorts~
+ ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+ SpellNoDec(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
+  
+ RESPONSE #100
+ SetGlobal("KAEL_combat","COM022",1) 
+
+ Enemy()
+ SetGlobalTimer("enemis_invisible","GLOBAL",1)
+ SetGlobalTimer("basique_distance","GLOBAL",1)
+ SetGlobalTimer("majeur_distance","GLOBAL",1)
+ SetGlobalTimer("corps_a_corps1","GLOBAL",1)
+ SetGlobalTimer("corps_a_corps2","GLOBAL",1)
+ 
+ DisplayString(Myself,@600) // ~séquenceur de sorts~
+ ApplySpell(Myself,WIZARD_STONE_SKIN) 
+ SpellNoDec(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)
+END
+
+IF
+  See(Nearestenemyof(Myself))
+  StateCheck(Myself,STATE_SILENCED)
+THEN
+  RESPONSE #100
+  ApplySpell(Myself,WIZARD_VOCALIZE)
+END
+
+//combat final
+IF
+ See(NearestEnemyOf(Myself))
+ Global("Kael_defense","LOCALS",0)
+ AreaCheckObject("COM024",myself)
+THEN
+  RESPONSE #100
+  SetGlobal("Kael_defense","LOCALS",1)
+  
+  DisplayString(Myself,@600) // ~séquenceur de sorts~
+  ApplySpell(Myself,WIZARD_STONE_SKIN)
+  ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+  ApplySpell(Myself,WIZARD_SPELL_TRAP)
+END
+
+
+// Ennemis invisibles proches ***********************************************************************************
+IF
+ !See(NearestEnemyOf(Myself))
+ GlobalTimerExpired("enemis_invisible","COM022")
+THEN
+ // Araignées 
+ RESPONSE #100
+ SpellNoDec(Myself,SPIDER_SUMMON)
+ SetGlobalTimer("enemis_invisible","GLOBAL",60)
+ 
+ // Chaos
+ RESPONSE #100
+ SpellNoDec(Myself,WIZARD_CHAOS)
+ SetGlobalTimer("enemis_invisible","GLOBAL",60)
+
+ // Vision véritable
+ RESPONSE #100 
+ SpellNoDec(Myself,WIZARD_TRUE_SIGHT)
+ SetGlobalTimer("enemis_invisible","GLOBAL",60)
+END
+
+
+// Attaque basique distance *************************************************************
+IF
+ See(NearestEnemyOf(Myself))
+ !Range(NearestEnemyOf(Myself),6)
+ GlobalTimerExpired("basique_distance","GLOBAL")
+THEN
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_MELF_ACID_ARROW)
+ SetGlobalTimer("basique_distance","GLOBAL",8)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_FLAME_ARROW)
+ SetGlobalTimer("basique_distance","GLOBAL",8)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_CONJURE_LESSER_AIR_ELEMENTAL)
+ SetGlobalTimer("basique_distance","GLOBAL",8)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_DOMINATION)
+ SetGlobalTimer("basique_distance","GLOBAL",8)
+END
+
+
+// Attaque majeure distance *************************************************************
+IF
+ See(NearestEnemyOf(Myself))
+ !Range(NearestEnemyOf(Myself),6)
+ GlobalTimerExpired("majeur_distance","GLOBAL")
+THEN
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_FINGER_OF_DEATH)
+ SetGlobalTimer("majeur_distance","GLOBAL",8)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_ICE_STORM)
+ SetGlobalTimer("majeur_distance","GLOBAL",8)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_NPC_SYMBOL_STUN)
+ SetGlobalTimer("majeur_distance","GLOBAL",8)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_CLOUDKILL)
+ SetGlobalTimer("majeur_distance","GLOBAL",8)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_CHAIN_LIGHTNING)
+ SetGlobalTimer("majeur_distance","GLOBAL",8)
+ 
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_ENERGY_BLADES)
+ SetGlobalTimer("majeur_distance","GLOBAL",8)
+END
+
+// Attaque au corps à corps *************************************************************
+IF
+ See(NearestEnemyOf(Myself))
+ Range(NearestEnemyOf(Myself),6)
+ GlobalTimerExpired("corps_a_corps1","COM022")
+THEN
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_CONE_OF_COLD)
+ SetGlobalTimer("corps_a_corps1","GLOBAL",8)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_DEATH_FOG)
+ SetGlobalTimer("corps_a_corps1","GLOBAL",8)
+
+ RESPONSE #100
+ SpellNoDec(Myself,BREATH_SOURCE_ACID)
+ SetGlobalTimer("corps_a_corps1","GLOBAL",8)
+
+ RESPONSE #100
+ SpellNoDec(Myself,WIZARD_FIRE_SHIELD_BLUE)
+ SetGlobalTimer("corps_a_corps1","GLOBAL",8)
+END
+
+IF
+ See(NearestEnemyOf(Myself))
+ Range(NearestEnemyOf(Myself),6)
+ GlobalTimerExpired("corps_a_corps2","GLOBAL")
+THEN
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_GREATER_MALISON)
+ Wait(3)
+ SpellNoDec(nearestenemyof(Myself),WIZARD_CHROMATIC_ORB)
+ SetGlobalTimer("corps_a_corps2","GLOBAL",8)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_MONSTER_SUMMONING_3)
+ SetGlobalTimer("corps_a_corps2","GLOBAL",8)
+
+ RESPONSE #100
+ SpellNoDec(Myself,WIZARD_MORDENKAINENS_SWORD)
+ SetGlobalTimer("corps_a_corps2","GLOBAL",8)
+END
+
+IF
+ See(NearestEnemyOf(Myself))
+THEN
+ RESPONSE #100
+ AttackReevaluate(Nearestenemyof(Myself),30)  
+END
+
+
+

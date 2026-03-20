@@ -1,0 +1,151 @@
+// Les chauve_souris guident Islendra vers le groupe ***********************************************************************************************************************
+IF
+  Heard([0],50)
+  !See([Pc])
+THEN
+  RESPONSE #100
+  MoveToObject(Lastheardby(Myself))
+  Continue()
+END
+
+IF
+  Heard([0],60)
+  !Heard([0],50)
+  !See([Pc])
+THEN
+  RESPONSE #100
+  MoveToObject(Lastheardby(Myself))
+  Continue()
+END
+
+/*
+// Islendra cherche le groupe ***************************************************************************************************************************************************
+IF
+  !See([PC])
+  !Heard([0],60)
+  !Heard([0],50)
+THEN
+  RESPONSE #100
+  RandomWalk()
+END
+*/
+
+// zone du duel: détermination du nombre de players présents ***********************************************************************************************************
+IF
+  Global("COM020_Duel_combat","COM020",0)
+  Global("COM020_PNJ_duel_ISLE","COM020",1)
+  Global("PLAYER1","COM020",0)  
+  See(PLAYER1)
+THEN
+  RESPONSE #100
+  SetGlobal("PLAYER1","COM020",1)
+  IncrementGlobal("NB_PLAYER","COM020",1)
+END
+
+IF
+  Global("COM020_Duel_combat","COM020",0)
+  Global("COM020_PNJ_duel_ISLE","COM020",1)
+  Global("PLAYER2","COM020",0)  
+  See(PLAYER2)
+THEN
+  RESPONSE #100
+  SetGlobal("PLAYER2","COM020",1)
+  IncrementGlobal("NB_PLAYER","COM020",1)
+END
+
+IF
+  Global("COM020_Duel_combat","COM020",0)
+  Global("COM020_PNJ_duel_ISLE","COM020",1)
+  Global("PLAYER3","COM020",0)   
+  See(PLAYER3)
+THEN
+  RESPONSE #100
+  SetGlobal("PLAYER3","COM020",1)
+  IncrementGlobal("NB_PLAYER","COM020",1)
+END
+
+IF
+  Global("COM020_Duel_combat","COM020",0)
+  Global("COM020_PNJ_duel_ISLE","COM020",1)
+  Global("PLAYER4","COM020",0)  
+  See(PLAYER4)
+THEN
+  RESPONSE #100
+  SetGlobal("PLAYER4","COM020",1)
+  IncrementGlobal("NB_PLAYER","COM020",1)
+END
+
+IF
+  Global("COM020_Duel_combat","COM020",0)
+  Global("COM020_PNJ_duel_ISLE","COM020",1)
+  Global("PLAYER5","COM020",0)  
+  See(PLAYER5)
+THEN
+  RESPONSE #100
+  SetGlobal("PLAYER5","COM020",1)
+  IncrementGlobal("NB_PLAYER","COM020",1)
+END
+
+IF
+  Global("COM020_Duel_combat","COM020",0)
+  Global("COM020_PNJ_duel_ISLE","COM020",1)
+  Global("PLAYER6","COM020",0)    
+  See(PLAYER6)
+THEN
+  RESPONSE #100
+  SetGlobal("PLAYER6","COM020",1)
+  IncrementGlobal("NB_PLAYER","COM020",1)
+END
+
+IF
+ Global("COM020_Duel_combat","COM020",0)
+ Global("COM020_PNJ_duel_ISLE","COM020",1)
+ GlobalGT("NB_PLAYER","COM020",0)
+THEN
+  RESPONSE #100
+  Wait(1)
+  DestroyItem("arop01")
+  continue()
+END
+
+IF
+ Global("NB_PLAYER","COM020",1)
+ Global("COM020_Duel_combat","COM020",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_Duel_combat","COM020",1) 
+END
+
+IF
+ GlobalGT("NB_PLAYER","COM020",1)
+ OR(2)
+   Global("COM020_Duel_combat","COM020",0) 
+   Global("COM020_Duel_combat","COM020",1) 
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_Duel_combat","COM020",2) 
+END
+
+
+//  Téléportation Duel effectué: lancement d'un dialogue ********************************************************************************************************************
+IF
+  GlobalGT("COM020_Duel_combat","COM020",0)
+  Global("COM020_PNJ_capture","GLOBAL",3)  
+THEN
+  RESPONSE #100
+  SetGlobal("COM020_PNJ_capture","GLOBAL",4)
+  
+  FaceObject([PC])
+  Smallwait(10)
+  StartDialogueNoset([PC])  
+END
+
+
+// Pause téléportation (pas de mouvement)
+IF
+  Global("COM020_PNJ_capture","GLOBAL",2)
+THEN
+ RESPONSE #100
+ ClearActions("COISLEN")
+ NoAction()
+END

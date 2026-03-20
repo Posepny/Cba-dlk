@@ -1,0 +1,177 @@
+// lancement du dialogue
+IF
+ Global("Systera_rencontre","GLOBAL",0)
+ Range([PC],25)
+THEN
+ RESPONSE #100 
+ SetGlobal("Systera_rencontre","GLOBAL",1) 
+ TEXTSCREEN("COTS010")
+ Wait(1)
+ SetGlobalTimer("systera_tp","LOCALS",1) 
+ ActionOverride("COSYSTE",StartDialogNoSet([PC])) 
+END
+
+// Le groupe est à distance: Systera se téléporte / 2 fois
+IF
+  Global("Systera_rencontre","GLOBAL",2)
+  !Range(Nearestenemyof(Myself),15)
+  GlobalLT("Systera_TP","GLOBAL",4)
+  GlobalTimerExpired("systera_tp","LOCALS") 
+THEN
+  RESPONSE #100
+  IncrementGlobal("Systera_TP","GLOBAL",1)  
+  SpellNoDec(Nearestenemyof(Myself),PHASE_SPIDER_TELEPORT)
+  DisplayStringHead(MySelf,@100) // Vous ne m'échapperez pas!
+  SetGlobalTimer("systera_tp","LOCALS",10)   
+END
+
+// Systéra ne voit pas ses ennemis: sort vision / 1 fois
+IF
+  !See(Nearestenemyof(Myself))
+  Global("Systera_rencontre","GLOBAL",2) 
+  Global("Systera_vision","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Systera_vision","GLOBAL",1)
+  SpellNoDec(Myself,CLERIC_TRUE_SIGHT)
+  DisplayStringHead(MySelf,@101) // Vous ne vous cacherez pas longtemps  
+  MoveToObject(Nearestenemyof(Myself))
+END
+
+// Systéra ne voit pas ses ennemis: marche en aveugle
+IF
+  !See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+  RandomWalk()
+END
+
+
+// stratégie de combat: réInit
+IF
+ GlobalTimerExpired("systera_choix","GLOBAL") 
+ GlobalLT("sys_nb_sort","GLOBAL",3)
+THEN
+ Response #100
+ IncrementGlobal("sys_nb_sort","GLOBAL",10)
+ 
+ SetGlobal("systera_choix_S","GLOBAL",0) 
+END
+   
+// systera est blessé: drain de vie sur l'ennemis le plus proche / 1 fois
+IF
+ Global("systera_drain","GLOBAL",0)
+ HPPercentLT(Myself,30)
+THEN
+ RESPONSE #100
+ SetGlobal("systera_drain","GLOBAL",1)
+ 
+ SpellNoDec(Nearestenemyof(Myself),WIZARD_VAMPIRIC_TOUCH)
+END
+
+
+// stratégie de combat: choix
+IF
+ Global("systera_choix_S","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("systera_choix_S","GLOBAL",1) 
+ SetGlobal("systera_strat_peur","GLOBAL",0)
+ SetGlobal("systera_strat_faible","GLOBAL",0)
+  
+ RESPONSE #100
+ SetGlobal("systera_choix_S","GLOBAL",2) 
+ SetGlobal("systera_strat_peur","GLOBAL",0)
+ SetGlobal("systera_strat_faible","GLOBAL",0)
+END
+
+
+// 1- stratégie: peur + combat 
+IF
+ See(Nearestenemyof(Myself))
+ Global("systera_choix_S","GLOBAL",1)
+ Global("systera_strat_peur","GLOBAL",0)
+THEN
+ RESPONSE #100 
+ SetGlobal("systera_strat_peur","GLOBAL",1)
+ SetGlobalTimer("systera_choix","GLOBAL",20)
+ SpellNoDec(Myself,CLERIC_CLOAK_OF_FEAR) // manteau de peur
+ 
+ RESPONSE #100
+ SetGlobal("systera_strat_peur","GLOBAL",1)
+ SetGlobalTimer("systera_choix","GLOBAL",20) 
+END
+
+IF
+ See(Nearestenemyof(Myself))
+ Global("systera_choix_S","GLOBAL",1)
+ Global("systera_strat_peur","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("systera_strat_peur","GLOBAL",2)
+ SpellNoDec(Myself,CLERIC_HOLY_POWER) // puissance sacrée
+ 
+ RESPONSE #100
+ SetGlobal("systera_strat_peur","GLOBAL",2)
+ SpellNoDec(Myself,CLERIC_CAUSE_SERIOUS_WOUNDS)  //  Blessure majeure
+END
+
+
+// 2- Stratégie: affaiblissement + combat jet sauvegarde
+IF
+ See(Nearestenemyof(Myself))
+ Global("systera_choix_S","GLOBAL",2)
+ Global("systera_strat_faible","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("systera_strat_faible","GLOBAL",1)
+ SetGlobalTimer("systera_choix","GLOBAL",20) 
+ SetGlobal("systera_timer","GLOBAL",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_UNHOLY_BLIGHT) // influence maléfique
+  
+ RESPONSE #100
+ SetGlobal("systera_strat_faible","GLOBAL",1) 
+ SetGlobalTimer("systera_choix","GLOBAL",20) 
+END
+
+IF
+ See(Nearestenemyof(Myself))
+ Global("systera_choix_S","GLOBAL",2)
+ Global("systera_strat_faible","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("systera_strat_faible","GLOBAL",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_SLAY_LIVING)  // Mise à mort
+ 
+ RESPONSE #100
+ SetGlobal("systera_strat_faible","GLOBAL",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_DOLOROUS_DECAY) // dégénérescence
+ 
+ RESPONSE #100
+ SetGlobal("systera_strat_faible","GLOBAL",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_CREEPING_DOOM) // Fatalité rampante 
+END
+
+
+// Combat corps à corps
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  !Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+    AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  AttackedBy([0],DEFAULT)
+THEN
+  RESPONSE #100
+    Attack(Lastattackerof(Myself))
+END

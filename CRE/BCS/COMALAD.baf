@@ -1,0 +1,25 @@
+// Gestion de l'arrêt de la recherche du player1: Maladie parle! *************************************************************************************************************
+IF
+ GlobalTimerExpired("TIME_MALADIE_RECHERCHE","COM023")
+ Global("MALADIE_RECHERCHE","COM023",0)
+ See(PLAYER1)
+THEN
+ RESPONSE #100
+ SetGlobal("MALADIE_RECHERCHE","COM023",2)
+ 
+ FaceObject(PLAYER1)
+ Wait(1)
+ StartDialogueNoSet(PLAYER1)  
+ SetGlobalTimer("maladie_SPELL","GLOBAL",1)
+END
+
+IF
+ Global("MALADIE_RECHERCHE","COM023",0)
+ !See(PLAYER1)
+THEN
+  RESPONSE #100
+  SetGlobal("MALADIE_RECHERCHE","COM023",1) 
+   
+  SetGlobalTimer("TIME_MALADIE_RECHERCHE","COM023",2)
+  ActionOverride("COMALAD",MoveToObjectFollow(PLAYER1)
+END

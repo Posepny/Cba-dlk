@@ -1,0 +1,32 @@
+// Dialogue antre et 1ière rencontre *********************************************************************************************************************************
+IF 
+  See([PC])
+  Global("COM020_PNJ_capture","GLOBAL",0)
+  Global("islendra_dial_antre","GLOBAL",0)
+THEN
+  RESPONSE #100
+  FaceObject([PC])
+  Smallwait(50)
+  StartDialogueNoSet([PC])
+END
+
+// Combat classique ***************************************************************************************************************************************************
+// Corps à corps
+IF
+  See(Nearestenemyof(Myself))
+  Range(Nearestenemyof(Myself),7)
+THEN
+  RESPONSE #100
+  EquipMostDamagingMelee()
+  AttackReevaluate(Nearestenemyof(Myself),30)  
+END
+
+// A distance
+IF
+  See(Nearestenemyof(Myself))
+  !Range(Nearestenemyof(Myself),7)
+THEN
+  RESPONSE #100
+  EquipRanged()
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END

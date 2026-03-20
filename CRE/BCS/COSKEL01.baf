@@ -1,0 +1,20 @@
+IF
+  Global("COM014_crea_squel1","LOCALS",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM014_crea_squel1","LOCALS",1)
+ StartTimer("COM014_crea_squel",1)
+END
+
+
+IF
+  TimerExpired("COM014_crea_squel")
+THEN
+  RESPONSE #100
+  StartTimer("COM014_crea_squel",15)
+  SpellNoDec(Myself,CLERIC_ANIMATE_DEAD)
+END
+
+
+
+

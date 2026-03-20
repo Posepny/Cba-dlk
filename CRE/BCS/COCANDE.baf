@@ -1,0 +1,125 @@
+// Le groupe a débloqué la porte du temple et remonte à l'auberge: Candelas les attends dans la cave.
+IF
+ Global("candelas_DIAL","COM026",0)
+ Global("candelas_init","COM026",1)
+ Global("Crane_place","GLOBAL",1)
+ See(PLAYER1)
+THEN
+ RESPONSE #100
+ SetGlobal("candelas_DIAL","COM026",1)
+ 
+ Wait(2)
+ FaceObject(PLAYER1)
+ StartDialogNoSet(PLAYER1)
+END
+
+
+// Candelas attaqué: il se protège
+IF
+ See(NearestEnemyOf(Myself))
+ GLOBAL("Candelas_armure","LOCALS",0)
+ OR(2)
+  HitBy([0],CRUSHING)
+  AttackedBy([0],DEFAULT)
+THEN
+ RESPONSE #100
+ SetGLOBAL("Candelas_armure","LOCALS",1)
+ SpellNoDec(Myself,CLERIC_ARMOR_OF_FAITH) // armure de la foi SPPR111
+END
+
+
+// Candelas très blessé: il se met à l'abris et se prépare
+// Candelas blessé: il se soigne
+IF
+ GLOBALLT("Candelas_soins","LOCALS",2)
+ HPPercentLT(Myself,60)
+THEN
+ RESPONSE #100
+ IncrementGLOBAL("Candelas_soins","LOCALS",1)
+ SpellNoDec(Myself,CLERIC_CURE_MEDIUM_WOUNDS) // soins moyens SPPR315
+ 
+END
+
+IF
+ GLOBALLT("Candelas_soins2","LOCALS",1)
+ HPPercentLT(Myself,30)
+THEN
+ RESPONSE #100
+ SetGLOBAL("Candelas_soins2","LOCALS",1)
+ SpellNoDec(Myself,CLERIC_SANCTUARY) // santuaire SPPR109
+
+ RESPONSE #100
+ SetGLOBAL("Candelas_soins2","LOCALS",1)
+ SpellNoDec(Myself,CLERIC_CURE_MEDIUM_WOUNDS) // soins moyens SPPR315
+ 
+ RESPONSE #100
+ SetGLOBAL("Candelas_soins2","LOCALS",1)
+ SpellNoDec(Myself,CLERIC_HOLD_PERSON) // immobilisation SPPR208
+
+END
+
+// Candelas pas ou peu blessé: il attaque 
+IF
+ See(Nearestenemyof(Myself))
+ HPPercentGT(Myself,80)
+ GLOBALLT("Candelas_attaque1","LOCALS",1)  
+THEN
+ RESPONSE #100
+ IncrementGLOBAL("Candelas_attaque1","LOCALS",1)
+ SpellNoDecRES("pxbhconv",Myself) // ombre 
+ 
+ RESPONSE #100
+ IncrementGLOBAL("Candelas_attaque1","LOCALS",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_FLAME_STRIKE) // Colonne de feu
+ 
+ RESPONSE #100
+ AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+
+// Candelas blessé: il attaque 
+IF
+ See(Nearestenemyof(Myself))
+ HPPercentGT(Myself,50)
+ GLOBALLT("Candelas_attaque2","LOCALS",2)  
+THEN
+ RESPONSE #100
+ IncrementGLOBAL("Candelas_attaque2","LOCALS",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_GREATER_COMMAND) // ordre majeur sPPR512
+ 
+ RESPONSE #100
+ IncrementGLOBAL("Candelas_attaque1","LOCALS",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_UNHOLY_BLIGHT) // influence maléfique SPPR314
+ 
+ RESPONSE #100
+ IncrementGLOBAL("Candelas_attaque2","LOCALS",1) 
+ SpellNoDecRES("PXCYCHAO",Nearestenemyof(Myself)) // Chaos 
+ 
+ RESPONSE #100
+ AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  AttackedBy([0],DEFAULT)
+  GLOBAL("Candelas_puissance","LOCALS",0)
+THEN
+  RESPONSE #100
+  SetGLOBAL("Candelas_puissance","LOCALS",1)
+  SpellNoDec(Myself,CLERIC_DRAW_UPON_HOLY_MIGHT) // puissance divine SPPR214
+  Attack(Lastattackerof(Myself))
+END
+
+// Combat classique
+IF 
+  See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  AttackedBy([0],DEFAULT)
+THEN
+  RESPONSE #100
+  Attack(Lastattackerof(Myself))
+END

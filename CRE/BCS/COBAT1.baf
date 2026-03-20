@@ -1,0 +1,28 @@
+IF
+  Heard([0],99)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+  shout(99)
+  Enemy()   
+END
+
+// Ennemi non visible mais alerte entendue: je me rapproche de la source de l'alerte
+IF
+  !See(Nearestenemyof(Myself))
+  Heard([0],99)
+THEN
+  RESPONSE #100
+  shout(99)
+  MoveToObject(Lastheardby(Myself)) 
+  continue()
+END
+
+// Corps à corps
+IF
+  See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+  shout(99)
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END

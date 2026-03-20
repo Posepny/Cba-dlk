@@ -1,0 +1,53 @@
+// invisible si l'ennemis est à distance ou dague empoisonnée
+IF
+ AreaCheckObject("COM026",MySelf) 
+ HasItem("POTN10",Myself)
+ !HasItem("DAGG16",Myself)
+ !Range(Nearestenemyof(Myself),10)
+THEN
+ RESPONSE #100
+ UseItem("potn10",MySelf)
+ MoveToObject(Nearestenemyof(Myself))
+END
+
+IF
+  Heard([0],111)
+THEN
+  RESPONSE #100
+    MoveToObject(Nearestenemyof(Myself))
+    Continue()
+END
+
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  See(Nearestenemyof(Myself))
+  !Range(Nearestenemyof(Myself),5)
+THEN
+  RESPONSE #100
+    EquipRanged()
+    AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  See(Nearestenemyof(Myself))
+  Range(Nearestenemyof(Myself),5)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  AttackedBy([0],DEFAULT)
+THEN
+  RESPONSE #100
+    AttackReevaluate(Lastattackerof(Myself),30)
+END
+

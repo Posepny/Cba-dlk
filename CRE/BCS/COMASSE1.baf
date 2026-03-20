@@ -1,0 +1,160 @@
+IF
+ die()
+THEN
+ RESPONSE #100
+ SetGlobal("massena_mort","Global",1)
+ 
+  //Createcreature("MINSC",[3700.600],10)  
+END
+
+// 1ière recontre dans le Hall
+IF
+ Global("MASSENA_DLG","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("MASSENA_DLG","GLOBAL",1)
+ StartDialogNoSet([PC]) 
+END
+
+// Massena est brulé
+IF
+ Global("ekilis_deactivate","Global",1)
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_deactivate","Global",0)
+ Deactivate("COMASSE1")
+END
+
+// Massena comprend que Bhaal communique avec le Charname: il stoppe le combat "Cessez le combat!"
+IF
+ Global("Puit_combat","GLOBAL",2) 
+ See(PLAYER1)
+ OR(2)
+  Global("ekilis_mort","Global",1)
+  Global("ekilis_alliance","Global",0)
+THEN
+ RESPONSE #100
+ ChangeEnemyAlly("COMASSE2",NEUTRAL)
+ SmallWait(10)
+ 
+ PlaySound("EFF_E01")
+ UnLock("DOOR0006")
+ OpenDoor("DOOR0006")
+ TriggerActivation("COT017C2",FALSE)
+ SmallWait(10)
+ 
+ ActionOverride("COMASSE2",StartDialogueNoSet(PLAYER1))
+END
+  
+// Cutscene Massena devant le puit
+IF
+ Global("Puit_combat","GLOBAL",3)
+THEN
+ RESPONSE #100
+ 
+ ClearAllActions()
+ smallwait(20)
+ StartCutSceneMode()
+ Wait(1) 
+ SetInterrupt(FALSE)
+  StartCutScene("CSMASSE2")  
+ SetInterrupt(FALSE)
+END  
+
+// Massena découvre que le Charname est l'enfant de Bhaal
+IF
+ Global("Puit_combat","GLOBAL",4)
+THEN
+ RESPONSE #100
+ ActionOverride("COMASSE2",StartDialogueNoSet(PLAYER1))
+END
+
+/*
+// Charname accepte les épreuves: désinvocation des créatures ***********************************************************************************************************
+IF
+ !Global("Bhaal_epreuves","GLOBAL",0)
+ Global("Com017_desinv","COM017",0)
+ See("pxbhombr")
+THEN
+ RESPONSE #100
+ SetGlobal("Com017_desinv","COM017",1)
+  
+ ActionOverride("COMASSE2",ForceSpellRES("CODESINV","COMASSE2"))
+END
+*/
+
+
+// Le groupe revient victorieux des épreuves: Massena l'attend ************************************************************************************************************
+IF
+ Global("Bhaal_epreuves","GLOBAL",3)
+THEN
+ RESPONSE #100
+ SetGlobal("Bhaal_epreuves","GLOBAL",4)
+  
+ ActionOverride("COMASSE2",SetDialogue("COMASSE4")) 
+ ActionOverride("COMASSE2",StartDialogueNoSet(PLAYER1))
+END
+
+// Le charname accepte d'être le Champion: démarrage de la prière.
+IF
+  Global("Bhaal_allie","GLOBAL",1)
+  Global("Masque_M_priere","GLOBAL",0) 
+THEN
+ RESPONSE #100
+
+ // Massena se déplace
+ MoveToPoint([3707.636])
+ Wait(2)
+ 
+ // Début prière
+ Createcreature("COBHAAL",[3720.720],10)
+ SetGlobal("Masque_M_priere","GLOBAL",1) 
+END
+
+// Quête épreuve de Bhaal réalisée: allié à Bhaal
+IF
+  Global("Bhaal_allie","GLOBAL",1)
+  Global("Q_bhaal_epreuve","COM017",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("Q_bhaal_epreuve","COM017",1)
+ 
+  // mise à jour journal
+  EraseJournalEntry(@200)
+  EraseJournalEntry(@201)
+  AddJournalEntry(@202,QUEST_DONE)
+  AddexperienceParty(2000) 
+END
+
+// Quête épreuve de Bhaal réalisée: pas allié à Bhaal
+IF
+  Global("Bhaal_allie","GLOBAL",2)
+  Global("Q_bhaal_epreuve","COM017",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("Q_bhaal_epreuve","COM017",1)
+ 
+  // mise à jour journal
+  EraseJournalEntry(@200)
+  EraseJournalEntry(@201)
+  AddJournalEntry(@203,QUEST_DONE)
+  AddexperienceParty(2000) 
+END
+
+// Quête épreuve de Bhaal réalisée: attaque pendant la prière (trahison)
+IF
+  Global("priere_trahison","GLOBAL",1) 
+THEN
+ RESPONSE #100
+ SetGlobal("priere_trahison","GLOBAL",2) 
+ 
+  // mise à jour journal
+  EraseJournalEntry(@200)
+  EraseJournalEntry(@201)
+  EraseJournalEntry(@202)
+  AddJournalEntry(@203,QUEST_DONE)  
+END
+
+ 
+
+

@@ -1,0 +1,11 @@
+IF
+ die()
+ GlobalLT("SKE_1","COM018",5)
+ AreaCheck("COM018")
+THEN
+ RESPONSE #100
+ IncrementGLobal("SKE_1","COM018",1)
+
+ Createcreature("COSKE_1",[1640.1090],10)  
+ Createcreature("COSKE_1",[1640.1090],10) 
+END

@@ -1,0 +1,8 @@
+// à recruter
+IF 
+ !Inparty(Myself)
+ Global("Recrut","LOCALS",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Recrut","LOCALS",0)
+END

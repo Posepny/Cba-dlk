@@ -1,0 +1,18 @@
+// Ajantis recruté
+IF
+	inparty(Myself)
+	Global("AJANTISRecrut","GLOBAL",1)
+THEN
+	RESPONSE #100	
+	SetGlobal("AJANTISRecrut","GLOBAL",2)
+END
+
+// Ajantis congédié du groupe: dialogue de départ
+IF
+	!inparty(Myself)
+	Global("AJANTISRecrut","GLOBAL",2)
+THEN
+	RESPONSE #100		
+	SetDialog("AJANTIP")
+	Dialogue(Player1)
+END

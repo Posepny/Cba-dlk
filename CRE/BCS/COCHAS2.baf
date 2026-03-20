@@ -1,0 +1,32 @@
+// Si la chauve souris meurt, une autre apparait
+IF
+ Die()
+THEN
+ RESPONSE #70
+ Createcreature("COBATIN",[200.240],10) 
+ 
+ RESPONSE #70
+ Createcreature("COBATIN",[160.235],10) 
+ 
+ RESPONSE #80
+ Createcreature("COBATIN",[1530.350],10) 
+ 
+ RESPONSE #80
+ Createcreature("COBATIN",[1380.920],10) 
+ 
+ RESPONSE #90
+ Createcreature("COBATIN",[900.640],10) 
+ 
+ RESPONSE #90
+ Createcreature("COBATIN",[340.680],10) 
+ 
+ RESPONSE #100
+ Createcreature("COBATIN",[460.990],10) 
+ 
+ RESPONSE #100
+ Createcreature("COBATIN",[1300.280],10) 
+ 
+ RESPONSE #100
+ Createcreature("COBATIN",[750.1200],10) 
+
+END
