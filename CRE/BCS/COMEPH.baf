@@ -1,0 +1,12 @@
+// Cespenar a parlé: il s'en va
+IF
+ Global("CESPENAR_init","COM025",2)
+THEN
+ RESPONSE #100
+ SetGlobal("CESPENAR_init","COM025",3)
+ 
+ CreateVisualEffect("SPDIMNDR",[765.765]) // cercle de téléportation
+ wait(2)
+ Deactivate("COMEPH") 
+END
+

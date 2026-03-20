@@ -1,0 +1,37 @@
+// Récompense de Bhaal
+IF
+ Global("MEURTRE2_recomp_Bhaal","COM025",1)
+THEN
+ RESPONSE #100
+ ForceSpellRES("CORECOMP",PLAYER1)
+ ActionOverride(PLAYER1,AddSpecialAbility("COFOLM"))
+ 
+ Wait(3) 
+ TextScreen("COTS009")
+ Wait(1)
+ DisplayStringNoName(PLAYER1,@2)
+ Wait(1)
+ SetGlobal("MEURTRE2_recomp_Bhaal","COM025",2)
+END
+
+
+// après la récompense
+IF
+ Global("MEURTRE2_recomp_Bhaal","COM025",2)
+THEN
+ RESPONSE #100
+ Wait(3) 
+ StartDialogueNoSet(PLAYER1) 
+END
+
+// Le meurtre disparait
+IF
+ Global("MEURTRE2_recomp_Bhaal","COM025",3)
+THEN
+ RESPONSE #100
+ SetGlobal("MEURTRE2_recomp_Bhaal","COM025",4)
+
+ CreateVisualEffectObject("SPATTCK1","COMEUR")
+ wait(1)
+ Deactivate("COMEUR") 
+END

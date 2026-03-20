@@ -1,0 +1,45 @@
+// Quete acceptée
+IF 
+ Global("Quete_cambion_epee_OK","COM018",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Quete_cambion_epee_OK","COM018",2)
+ AddJournalEntry(@100,QUEST)
+
+END
+
+// Quete réussie
+IF 
+ Global("Quete_cambion_epee","COM018",2)
+THEN
+ RESPONSE #100
+ SetGlobal("Quete_cambion_epee","COM018",10)
+
+ TakePartyItem("SW1H02") 
+ AddexperienceParty(200)
+ EraseJournalEntry(@100)
+ AddJournalEntry(@101,QUEST_DONE)
+END
+
+// Quete réussie
+IF 
+ Global("Quete_cambion_epee","COM018",3)
+THEN
+ RESPONSE #100
+ SetGlobal("Quete_cambion_epee","COM018",10)
+ TakePartyItem("SW1H02")
+
+ AddexperienceParty(200)
+ EraseJournalEntry(@100)
+ AddJournalEntry(@102,QUEST_DONE)
+END
+
+// Tanari attaqué
+IF 
+ AttackedBy([GOODCUTOFF],DEFAULT)
+ Allegiance(Myself,NEUTRAL)
+THEN
+ RESPONSE #100
+ ChangeAIScript("TANARI",OVERRIDE)
+ Enemy()
+END

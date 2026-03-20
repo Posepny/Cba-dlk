@@ -1,0 +1,7 @@
+IF
+ die()  
+THEN
+ RESPONSE #100
+ SetGlobal("Galik_vaincu","COM019",1)
+END
+

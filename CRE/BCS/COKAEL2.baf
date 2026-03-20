@@ -1,0 +1,142 @@
+// Combat final: Relation avec le groupe *********************************************************************************************************************************************
+// Alliance
+IF
+ AreaCheck("COM024")
+ Global("CO_KAEL_ALLIE","GLOBAL",1)
+ PartyHasItem("MISCP60")
+THEN
+ RESPONSE #100
+ SetGlobal("CO_KAEL_ALLIE","GLOBAL",2)
+ SetGlobal("Kael_combat_base","GLOBAL",0)
+ 
+ ActionOverride("COKAEL",Ally())
+END
+
+// Ennemis
+IF
+ AreaCheck("COM024")
+ Global("CO_KAEL_ALLIE","GLOBAL",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("CO_KAEL_ALLIE","GLOBAL",2)
+ 
+ ActionOverride("COKAEL",Enemy())
+END
+
+// Début du combat ***********************************************************************************************
+IF
+ OR(2)
+  HitBy([0],CRUSHING)
+  AttackedBy([0],DEFAULT)
+THEN
+ RESPONSE #100
+ Enemy()
+END
+
+IF
+  See(nearestenemyof(Myself))
+  Global("Kael_combat_base","GLOBAL",0)
+THEN
+  RESPONSE #60
+  SetGlobal("Kael_combat_base","GLOBAL",1)
+  
+  ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+  ReallyForceSpell(Myself,WIZARD_GLOBE_OF_INVULNERABILITY)  
+
+  SetGlobalTimer("Kael_distance","GLOBAL",1)
+  SetGlobalTimer("Kael_seul","GLOBAL",1)
+  SetGlobalTimer("Kael_corps_a_corps","GLOBAL",1)
+
+  RESPONSE #60
+  SetGlobal("Kael_combat_base","GLOBAL",1)
+  
+  ReallyForceSpell(Myself,WIZARD_IMPROVED_INVISIBILITY)
+  ReallyForceSpell(Myself,WIZARD_MINOR_GLOBE_OF_INVULNERABILITY)  
+    
+  SetGlobalTimer("Kael_distance","GLOBAL",1)
+  SetGlobalTimer("Kael_seul","GLOBAL",1)
+  SetGlobalTimer("Kael_corps_a_corps","GLOBAL",1)
+
+  RESPONSE #100
+  SetGlobal("Kael_combat_base","GLOBAL",1)
+  
+  ReallyForceSpell(Myself,WIZARD_BLUR)
+  ReallyForceSpell(Myself,WIZARD_GLOBE_OF_INVULNERABILITY)  
+  
+    SetGlobalTimer("Kael_distance","GLOBAL",1)
+  SetGlobalTimer("Kael_seul","GLOBAL",1)
+  SetGlobalTimer("Kael_corps_a_corps","GLOBAL",1)   
+END
+
+// Ennemis tous à distance ************************************************************************************************************************
+IF
+ See(nearestenemyof(Myself))
+ GlobalTimerExpired("Kael_distance","GLOBAL")
+ !Range(nearestenemyof(Myself),12)
+THEN
+ RESPONSE #90
+ SpellNoDec(nearestenemyof(Myself),WIZARD_SUN_FIRE)
+ SetGlobalTimer("Kael_distance","GLOBAL",2)
+
+ RESPONSE #90
+ SpellNoDec(nearestenemyof(Myself),WIZARD_CHAIN_LIGHTNING)
+ SetGlobalTimer("Kael_distance","GLOBAL",2)
+ 
+ RESPONSE #90 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_GREATER_MALISON)
+ SpellNoDec(nearestenemyof(Myself),WIZARD_CHROMATIC_ORB)
+ SetGlobalTimer("Kael_distance","GLOBAL",2)
+ 
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_MELF_ACID_ARROW)
+ SetGlobalTimer("Kael_distance","GLOBAL",2)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_FLAME_ARROW)
+ SetGlobalTimer("Kael_distance","GLOBAL",2)
+
+ RESPONSE #100 
+ SpellNoDec(nearestenemyof(Myself),WIZARD_SHOCKING_GRASP)
+ SetGlobalTimer("Kael_distance","GLOBAL",2)
+END 
+
+// Ennemis au corps à corps ************************************************************************************************************************
+IF
+ Range(nearestenemyof(Myself),10)
+ GlobalTimerExpired("Kael_corps_a_corps","GLOBAL")
+THEN
+ RESPONSE #90
+ SpellNoDec(Myself,WIZARD_PROTECTION_FROM_ACID) 
+ SpellNoDec(Myself,WIZARD_DEATH_FOG)
+ SetGlobalTimer("Kael_corps_a_corps","GLOBAL",2)
+
+ RESPONSE #90
+ SpellNoDec(Myself,WIZARD_GHOUL_TOUCH)
+ SetGlobalTimer("Kael_corps_a_corps","GLOBAL",2) 
+
+ RESPONSE #90
+ SpellNoDec(Myself,BREATH_SOURCE_ACID)
+ SetGlobalTimer("Kael_corps_a_corps","GLOBAL",2)
+
+ RESPONSE #100
+ SpellNoDec(Myself,WIZARD_FIRE_SHIELD_BLUE)
+ SetGlobalTimer("Kael_corps_a_corps","GLOBAL",2)
+
+ RESPONSE #100
+ SpellNoDec(nearestenemyof(Myself),WIZARD_CHAOS)
+ SetGlobalTimer("Kael_corps_a_corps","GLOBAL",2)
+END
+
+// Pas d'ennemis en vue
+// Ennemis tous à distance ************************************************************************************************************************
+IF
+ !See(nearestenemyof(Myself))
+ GlobalTimerExpired("Kael_seul","GLOBAL")
+THEN
+ Response #100
+ SpellNoDec(Myself,WIZARD_DETECT_ILLUSION)
+ SetGlobalTimer("Kael_seul","GLOBAL",50)
+END
+ 
+ 
+ 

@@ -1,0 +1,113 @@
+// Chasse en cours et le groupe n'est pas en vue ***************************************************************************************************************************
+IF
+ Global("COISLEN_chasse","GLOBAL",2)
+ Global("COISLEN_chasse_P","GLOBAL",1)
+ !See(PLAYER1)
+THEN
+ RESPONSE #100
+ setGlobal("COISLEN_chasse","GLOBAL",1)
+ 
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",3)
+ Actionoverride("COISLEN",MoveToObject(PLAYER1))
+ DisplayStringHead("COISLEN",@2)
+END
+
+IF
+ Global("COISLEN_chasse","GLOBAL",2)
+ Global("COISLEN_chasse_P","GLOBAL",2)
+ !See(PLAYER2)
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1)
+ 
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",3)
+ Actionoverride("COISLEN",MoveToObject(PLAYER2))
+ DisplayStringHead("COISLEN",@2)
+END
+
+IF
+ Global("COISLEN_chasse","GLOBAL",2)
+ Global("COISLEN_chasse_P","GLOBAL",3)
+ !See(PLAYER3)
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1)
+ 
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",3)
+ Actionoverride("COISLEN",MoveToObjectFollow(PLAYER3)
+ DisplayStringHead("COISLEN",@2)
+END
+
+IF
+ Global("COISLEN_chasse","GLOBAL",2)
+ Global("COISLEN_chasse_P","GLOBAL",4)
+ !See(PLAYER4)
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1)
+ 
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",3)
+ Actionoverride("COISLEN",MoveToObjectFollow(PLAYER4)
+ DisplayStringHead("COISLEN",@2)
+END
+
+IF
+ Global("COISLEN_chasse","GLOBAL",2)
+ Global("COISLEN_chasse_P","GLOBAL",5)
+ !See(PLAYER5)
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1)
+ 
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",3)
+ Actionoverride("COISLEN",MoveToObjectFollow(PLAYER5)
+ DisplayStringHead("COISLEN",@2)
+END
+
+IF
+ Global("COISLEN_chasse","GLOBAL",2)
+ Global("COISLEN_chasse_P","GLOBAL",6)
+ !See(PLAYER6)
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1)
+ 
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",3)
+ Actionoverride("COISLEN",MoveToObjectFollow(PLAYER6)
+ DisplayStringHead("COISLEN",@2)
+END
+
+
+
+
+
+
+
+
+
+
+
+
+
+IF
+  !See([PC])
+THEN
+  RESPONSE #100
+  RandomWalk()
+END
+
+
+/*
+// Chasse en cours et le groupe est en vue ***************************************************************************************************************************
+IF
+ Global("COISLEN_chasse","GLOBAL",2)
+ See([PC])
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",2)
+ 
+ DisplayStringHead("COISLEN",@2)
+ ClearActions("COISLEN")
+ Actionoverride("COISLEN",NoAction())
+END
+*/

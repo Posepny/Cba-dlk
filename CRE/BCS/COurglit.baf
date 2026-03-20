@@ -1,0 +1,222 @@
+// Urglite attaquée
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    Shout(98)
+    Enemy()
+
+  // fin des lamtentations et Urglite repousse les intrus
+  SetGlobal("Urglite_lamentations","COM021",1)
+END
+
+IF
+ !See([PC])
+THEN
+  RESPONSE #100
+  RandomWalk()
+END
+
+
+// Taguar est proche, elle entame le dialogue  ***********************************************************************************************************************
+IF
+ See("COTAGUAR")
+ Global("URGLIT_TAGUAR","COM021",0) 
+THEN
+ RESPONSE #100
+ SetGlobal("URGLIT_TAGUAR","COM021",1) 
+ 
+ //CreateCreature("MINSC",[1200.460],6) 
+ 
+ FaceObject([PC])
+ StartDialogueNoSet([PC]) 
+ Enemy()
+ ActionOverride("COTAGUAR",Enemy())   
+END
+
+
+// Le groupe est proche, elle entame le dialogue  **********************************************************************************************************************
+IF
+ Range([PC],12)
+ See([PC])
+ Global("Urglite_lamentations","COM021",0)
+ Global("URGLIT_TAGUAR","COM021",0) 
+THEN
+  RESPONSE #100
+  
+  // fin des lamtentations et Urglite repousse les intrus
+  SetGlobal("Urglite_lamentations","COM021",1)
+
+  ActionOverride("COURGLIT",StartDialogueNoSet([PC]))  
+END
+
+// Combat ***************************************************************************************************************************************************************
+// Urglite va être vaincue et Taguar est absent
+IF
+ HPPercentLT("COURGLIT",25)
+ Global("COURGLIT_meurt","COM021",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COURGLIT_meurt","COM021",1)
+ ClearAllActions()
+  
+  DisplayStringHead("COURGLIT",@21)  // Soyez tous maudits!
+  ReallyForceSpell(Myself,WIZARD_GREATER_MALISON) 
+  CreateVisualEffectObject("SPCLOUD1","COURGLIT")  
+ 
+/*
+ SmallWait(50)
+  CreateVisualEffectObject("SPFDEATH","COURGLIT") 
+  PlayDead(5)
+ 
+  DropInventory() 
+  Deactivate("COURGLIT")  
+  Wait(1)
+  ActionOverride("COURGLIT",DestroySelf())
+*/
+ 
+/* 
+ CreateItem("RINGP11",0,0,0)
+ 
+ //Setinterrupt(FALSE)
+  DisplayStringHead("COURGLIT",@21)  // Soyez tous maudits!
+  ReallyForceSpell(Myself,WIZARD_GREATER_MALISON) 
+  CreateVisualEffectObject("SPFDEATH","COURGLIT") 
+  
+ //SetInterrupt(TRUE)
+ 
+ PlayDead(20)
+ //CreateVisualEffectObject("SPFDEATH","COURGLIT")  
+ CreateVisualEffectObject("SPCLOUD1","COURGLIT")   
+ DropInventory() 
+ SmallWait(20)
+ Deactivate("COURGLIT") 
+*/
+END
+
+
+// Urglit est vaincue par le feu (4 dégats)
+IF
+ Global("Urglit_dmg_fire","COM021",4)
+THEN
+ RESPONSE #13
+ DisplayStringHead(myself,@100)
+ 
+ //CreateCreature("MINSC",[2700.1790],12) 
+ StartDialogueNoSet([PC])
+ Kill("COURGLIT")
+END
+
+// Si dégats de feu, elle jubile.
+IF
+ See(Nearestenemyof(Myself))
+ Global("Urglit_dmg_fire","COM021",1)
+ OR(2)
+  HitBy([ANYONE],MAGICFIRE)
+  HitBy([ANYONE],FIRE)
+THEN
+ RESPONSE #12
+ IncrementGlobal("Urglit_dmg_fire","COM021",1)
+ DisplayStringHead(myself,@12)
+END
+
+// Nième dégâts de feu
+IF
+ See(Nearestenemyof(Myself))
+ GlobalGT("Urglit_dmg_fire","COM021",0)
+ GlobalLT("Urglit_dmg_fire","COM021",4)
+ OR(2)
+  HitBy([ANYONE],MAGICFIRE)
+  HitBy([ANYONE],FIRE)
+THEN
+ RESPONSE #24
+ IncrementGlobal("Urglit_dmg_fire","COM021",1)
+ DisplayStringHead(myself,@24)
+END
+
+// le groupe attaque Urglite
+IF
+  OR(2)
+   HitBy([PC],CRUSHING)
+   AttackedBy([PC],DEFAULT)
+THEN
+  RESPONSE #100
+  Enemy()
+  continue()
+END
+
+// Renouvellement des sorts
+IF
+  See(NearestEnemyOf(Myself))
+  GLOBAL("Urglit_range1","LOCALS",0)
+THEN
+  RESPONSE #100
+  SETGLOBAL("Urglit_range1","LOCALS",1)
+  SetGlobalTimer("Urglit_SPELL","LOCALS",1)
+END
+
+// Combat corps à corps
+IF
+ See(NearestEnemyOf(Myself))
+ GlobalTimerExpired("Urglit_SPELL","LOCALS")
+ Range(NearestEnemyOf(Myself),5)
+ GlobalLT("Urglit_SPELL_range1","LOCALS",5)
+THEN
+
+  // Cône de glace
+  REsPONSE #100
+  SetGlobalTimer("Urglit_SPELL","LOCALS",6)
+  SpellNoDec(NearestEnemyOf(Myself),WIZARD_CONE_OF_COLD)
+  IncrementGlobal("Urglit_SPELL_range1","LOCALS",1)
+  
+  // Toucher glacial
+  REsPONSE #100
+  SetGlobalTimer("Urglit_SPELL","LOCALS",6)
+  SpellNoDec(Myself,WIZARD_CHILL_TOUCH)
+  IncrementGlobal("Urglit_SPELL_range1","LOCALS",1)
+  AttackOneRound(NearestEnemyOf(Myself))
+  
+  // Souffle glacial  
+  RESPONSE #100
+  SetGlobalTimer("Urglit_SPELL","LOCALS",6)
+  SpellNoDecRes("COBREC1",NearestEnemyOf(Myself))
+  IncrementGlobal("Urglit_SPELL_range1","LOCALS",1)
+  
+  // Tempête de glace
+  REsPONSE #100
+  SetGlobalTimer("Urglit_SPELL","LOCALS",6)
+  SpellNoDec(NearestEnemyOf(Myself),WIZARD_ICE_STORM)
+  IncrementGlobal("Urglit_SPELL_rangeX","LOCALS",1)
+END
+
+// Combat à distance
+IF
+ See(NearestEnemyOf(Myself))
+ GlobalTimerExpired("Urglit_SPELL","LOCALS")
+ !Range(NearestEnemyOf(Myself),5)
+ GlobalLT("Urglit_SPELL_rangeX","LOCALS",5)
+ !StateCheck(myself,STATE_HASTED)
+THEN
+  // Projectile de glace
+  REsPONSE #100
+  SetGlobalTimer("Urglit_SPELL","LOCALS",6)
+  SpellNoDecRes("COSHAC1",NearestEnemyOf(Myself)) 
+  IncrementGlobal("Urglit_SPELL_rangeX","LOCALS",1)
+  
+  // Rapidité et attaque
+  REsPONSE #100
+  SetGlobalTimer("Urglit_SPELL","LOCALS",6)
+  SpellNoDec(Myself,WIZARD_HASTE)
+  IncrementGlobal("Urglit_SPELL_rangeX","LOCALS",1)
+  //MoveViewObject(NearestEnemyOf(Myself),STANDARD)
+END
+
+// plus de sorts:corps à corps
+IF
+ See(Nearestenemyof(Myself))
+THEN
+ RESPONSE #100
+ Attack(Nearestenemyof(Myself)) 
+END
+

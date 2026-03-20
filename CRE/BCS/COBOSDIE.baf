@@ -1,0 +1,270 @@
+// Combat final: compteur boss mort pour ouvrir la grille + animation mort
+IF
+ Die()
+ AreaCheck("COM024") 
+THEN
+ RESPONSE #100
+ IncrementGlobal("NB_boss_dead","COM024",1) 
+ CreateVisualEffectObject("CODEATH",myself) 
+ smallWait(10)
+ 
+ PlaySound("COBOO1")
+ Deactivate(myself)
+ Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+END
+
+
+
+// Epreuve salle 1 & mort démon: ajout larme de sang et coeur
+IF
+ Die()
+ AreaCheck("COM018")
+ HasItem("miscp35",myself)
+THEN
+ RESPONSE #100
+
+ Setinterrupt(FALSE)
+ CreateVisualEffectObject("CODEATH",myself) 
+ smallWait(10)
+ CreateItem("miscp35",0,0,0)
+ DropInventory() 
+ Setinterrupt(TRUE) 
+
+ PlaySound("COBOO1")
+ Deactivate(myself)
+ Wait(1)
+ ActionOverride(myself,DestroySelf())
+END
+
+// Epreuve salle 1 & mort Cambion et quête coeur réussie: animation boss
+IF
+ Die()
+ AreaCheck("COM018")
+ //HasItem("SW1H02","COCAMBI1")
+ Global("Boss_salle1","GLOBAL",1)
+THEN
+ RESPONSE #100
+
+ Setinterrupt(FALSE)
+ CreateVisualEffectObject("CODEATH","COCAMBI1") 
+ smallWait(10)
+ Setinterrupt(TRUE) 
+
+ PlaySound("COBOO1")
+ Deactivate(myself)
+ Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+END
+
+// Epreuve salle 2 & mort Golem os: ajout larme de sang 
+IF
+ Die()
+ AreaCheck("COM018")
+ HasItem("miscp36",myself)
+THEN
+ RESPONSE #100
+
+ Setinterrupt(FALSE)
+ CreateVisualEffectObject("CODEATH",myself) 
+ smallWait(10)
+ CreateItem("miscp36",0,0,0)
+ DropInventory() 
+ Setinterrupt(TRUE)
+ 
+ PlaySound("COBOO1")
+ Deactivate(myself)
+ Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+END
+
+// Epreuve salle 3 & mort Spectateur: ajout larme de sang 
+IF
+ Die()
+ AreaCheck("COM019")
+ HasItem("Miscp37",myself)
+THEN
+ RESPONSE #100
+
+ Setinterrupt(FALSE)
+ // larme de sang
+ CreateItem("MISCP37",0,0,0)
+ DropInventory() 
+
+ CreateVisualEffectObject("CODEATH",myself) 
+ smallWait(10)
+ Setinterrupt(TRUE)
+ 
+ PlaySound("COBOO1")
+ Deactivate(myself)
+ Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+END
+
+// Epreuve salle 4 & mort Islendra: ajout larme de sang 
+IF
+ Die()
+ AreaCheck("COM020")
+ HasItem("MISCP38",myself)
+THEN
+ RESPONSE #100
+
+ Setinterrupt(FALSE)
+ // larme de sang
+ CreateItem("MISCP38",0,0,0)
+ DropInventory() 
+
+ CreateVisualEffectObject("CODEATH",myself) 
+ smallWait(10)
+ Setinterrupt(TRUE)
+ 
+ PlaySound("COBOO1")
+ Deactivate(myself)
+ Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+END
+
+// Epreuve salle 5 & mort Taguar: ajout larme de sang 
+IF
+ Die()
+ AreaCheck("COM021")
+ HasItem("Miscp39",myself)
+THEN
+ RESPONSE #100
+
+/*
+  DestroyAllEquipment()
+  DestroyItem("AX1H02")
+  DestroyItem("AX1H03")
+
+  GiveItemCreate("B1-2",myself,1,0,0) 
+  ActionOverride(myself,FillSlot(SLOT_WEAPON)) 
+  EquipMostDamagingMelee()
+ 
+  GiveItemCreate("B1-2",myself,1,0,0) 
+  ActionOverride(myself,FillSlot(SLOT_SHIELD)) 
+  EquipMostDamagingMelee()
+
+
+*/
+
+/* géré dans les scripts taguar
+ Setinterrupt(FALSE)
+ // larme de sang
+ CreateItem("MISCP39",0,0,0)
+ DropInventory() 
+
+ CreateVisualEffectObject("CODEATH",myself) 
+ smallWait(10)
+ Setinterrupt(TRUE)
+ 
+ PlaySound("COBOO1")
+ Deactivate(myself)
+ Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+*/
+END
+
+// Epreuve salle 5 & mort Urglite
+IF
+ Die()
+ AreaCheck("COM021")
+ HasItem("RINGP11",myself) // Anneau air glacé
+THEN
+ RESPONSE #100 
+ Setinterrupt(FALSE)
+  DropInventory() 
+  CreateVisualEffectObject("SPFDEATH","COURGLIT") 
+  smallWait(10)
+ Setinterrupt(TRUE)
+ 
+ Deactivate(myself)
+ Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+END
+
+// Epreuve salle 6 & mort Kael
+IF
+ Die()
+ AreaCheck("COM022")
+ HasItem("MISCP40",myself)
+THEN
+ RESPONSE #100
+ 
+ Setinterrupt(FALSE)
+  SetGlobal("Kael_vaincu","COM022",1)
+ 
+  // larme de sang
+  CreateItem("Miscp40",0,0,0)
+  DropInventory() 
+ 
+  //CreateVisualEffectObject("CODEATH",myself) 
+  smallWait(10)
+ Setinterrupt(TRUE)
+ 
+ PlaySound("COBOO1") 
+ Deactivate(myself)
+ Createcreature("COKAEL2",[-1.-1],10)
+ //Deactivate("COKAEL2")
+ Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+END
+
+
+// Epreuve salle 7 & mort Maladie: ajout larme de sang **********************************************************************************
+IF
+ Die()
+ AreaCheck("COM023")
+ HasItem("Miscp41",myself)
+THEN
+ RESPONSE #100
+
+ Setinterrupt(FALSE)
+ SetGlobal("MALADIE_MEURT","GLOBAL",1)
+ 
+ // larme de sang
+ CreateItem("Miscp41",0,0,0)
+ DropInventory() 
+
+ CreateVisualEffectObject("CODEATH",myself) 
+ smallWait(10)
+ Setinterrupt(TRUE)
+
+ PlaySound("COBOO1") 
+ Deactivate(myself)
+ Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+END
+
+// Ultime combat salle 8 + Kael allié + Boss mort
+IF
+ Global("KAEL_FIN","COM024",2)
+ AreaCheck("COM024")
+THEN
+ RESPONSE #100
+ SetGlobal("KAEL_FIN","GLOBAL",3)
+ IncrementGlobal("NB_boss_dead","COM024",1)
+ 
+ Setinterrupt(FALSE)
+  DropInventory() 
+  CreateVisualEffectObject("SPFDEATH",myself) 
+  smallWait(10)
+ Setinterrupt(TRUE)
+ 
+ PlaySound("COBOO1")
+ Deactivate(myself)
+ Wait(1)
+
+ ActionOverride(myself,DestroySelf())
+END
+
+

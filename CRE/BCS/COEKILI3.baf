@@ -1,0 +1,367 @@
+// Ekilis est l'allié du groupe ********************************************************************************************************************************************
+IF 
+ Global("ekilis_alliance","GLOBAL",1)
+ Global("ekil_alli_follow_init","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("ekil_alli_follow_init","GLOBAL",1)
+ ChangeEnemyAlly("COEKILIS",ALLY)
+ MakeGlobal()
+ SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+/*
+// Redemarrage d'une sauvegarde
+IF
+ Global("ekilis_follow","GLOBAL",1)
+ //!Range(PLAYER1,60)
+ !ActuallyInCombat()
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0)   
+ //createcreature("MINSC",[3050.850],10) 
+ Wait(3)
+END
+*/
+
+// Pas de combat: Ekilis suit le groupe ***************************************************************************************************************************************
+// pas sur les cartes de téléportation: il suit le Charname
+IF 
+ !AreaCheckObject("COM014","COEKILIS")
+ !AreaCheckObject("COM015","COEKILIS")
+ Global("ekilis_alliance","GLOBAL",1)
+ Global("ekilis_follow","GLOBAL",0)
+ !See(Nearestenemyof(Myself))
+ Detect(PLAYER1)
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",1)
+ //Createcreature("MINSC",[3600.1366],10)
+END
+
+IF
+ !See(Nearestenemyof(Myself))
+ Global("ekilis_follow","GLOBAL",1)
+THEN
+RESPONSE #100
+ MoveToObjectFollow(PLAYER1)
+ SmallWait(30)
+END 
+
+// sur les cartes de téléportation: il suit de PLAYER1 à 6
+IF 
+ Global("ekilis_follow","GLOBAL",0)
+ Global("ekilis_alliance","GLOBAL",1)
+ !See(Nearestenemyof(Myself))
+ Detect(PLAYER1)
+ OR(2)
+  AreaCheckObject("COM014","COEKILIS")
+  AreaCheckObject("COM015","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",1)
+END
+
+IF
+ !See(Nearestenemyof(Myself))
+ Global("ekilis_follow","GLOBAL",1)
+THEN
+RESPONSE #100
+ MoveToObjectFollow(PLAYER1)
+ SmallWait(30)
+END 
+
+IF 
+ Global("ekilis_follow","GLOBAL",0)
+ Global("ekilis_alliance","GLOBAL",1)
+ !See(Nearestenemyof(Myself))
+ Detect(PLAYER2)
+ OR(2)
+  AreaCheckObject("COM014","COEKILIS")
+  AreaCheckObject("COM015","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",2)
+END
+
+IF
+ !See(Nearestenemyof(Myself))
+ Global("ekilis_follow","GLOBAL",2)
+THEN
+RESPONSE #100
+ MoveToObjectFollow(PLAYER2)
+ SmallWait(30)
+END 
+
+IF 
+ Global("ekilis_follow","GLOBAL",0)
+ Global("ekilis_alliance","GLOBAL",1)
+ !See(Nearestenemyof(Myself))
+ Detect(PLAYER3)
+ OR(2)
+  AreaCheckObject("COM014","COEKILIS")
+  AreaCheckObject("COM015","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",3)
+END
+
+IF
+ !See(Nearestenemyof(Myself))
+ Global("ekilis_follow","GLOBAL",3)
+THEN
+RESPONSE #100
+ MoveToObjectFollow(PLAYER3)
+ SmallWait(30)
+END 
+
+IF 
+ Global("ekilis_follow","GLOBAL",0)
+ Global("ekilis_alliance","GLOBAL",1)
+ !See(Nearestenemyof(Myself))
+ Detect(PLAYER4)
+ OR(2)
+  AreaCheckObject("COM014","COEKILIS")
+  AreaCheckObject("COM015","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",4)
+END
+
+IF
+ !See(Nearestenemyof(Myself))
+ Global("ekilis_follow","GLOBAL",4)
+THEN
+RESPONSE #100
+ MoveToObjectFollow(PLAYER4)
+ SmallWait(30)
+END 
+
+IF 
+ Global("ekilis_follow","GLOBAL",0)
+ Global("ekilis_alliance","GLOBAL",1)
+ !See(Nearestenemyof(Myself))
+ Detect(PLAYER5)
+ OR(2)
+  AreaCheckObject("COM014","COEKILIS")
+  AreaCheckObject("COM015","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",5)
+END
+
+IF
+ !See(Nearestenemyof(Myself))
+ Global("ekilis_follow","GLOBAL",5)
+THEN
+RESPONSE #100
+ MoveToObjectFollow(PLAYER5)
+ SmallWait(30)
+END 
+
+IF 
+ Global("ekilis_follow","GLOBAL",0)
+ Global("ekilis_alliance","GLOBAL",1)
+ !See(Nearestenemyof(Myself))
+ Detect(PLAYER6)
+ OR(2)
+  AreaCheckObject("COM014","COEKILIS")
+  AreaCheckObject("COM015","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",6)
+END
+ 
+IF
+ !See(Nearestenemyof(Myself))
+ Global("ekilis_follow","GLOBAL",6)
+THEN
+RESPONSE #100
+ MoveToObjectFollow(PLAYER6)
+ SmallWait(30)
+END 
+
+// Le PLAYER suivi s'est téléporté sur l'autre carte: Ekilis ne suit plus le PNJ. Il en suivra un autre.
+IF 
+ AreaCheckObject("COM014","COEKILIS")
+ Global("collier_TP_PLAYER","GLOBAL",1)
+ Global("ekilis_follow","GLOBAL",1) 
+ !Global("TimeTP","GLOBAL",0)   
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0) 
+END
+
+IF 
+ AreaCheckObject("COM014","COEKILIS")
+ Global("collier_TP_PLAYER","GLOBAL",2)
+ Global("ekilis_follow","GLOBAL",2) 
+ !Global("TimeTP","GLOBAL",0)   
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0) 
+END
+
+IF 
+ AreaCheckObject("COM014","COEKILIS")
+ Global("collier_TP_PLAYER","GLOBAL",2)
+ Global("ekilis_follow","GLOBAL",2) 
+ !Global("TimeTP","GLOBAL",0)   
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0) 
+END
+
+IF 
+ AreaCheckObject("COM014","COEKILIS")
+ Global("collier_TP_PLAYER","GLOBAL",3)
+ Global("ekilis_follow","GLOBAL",3) 
+ !Global("TimeTP","GLOBAL",0)   
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0) 
+END
+
+IF 
+ AreaCheckObject("COM014","COEKILIS")
+ Global("collier_TP_PLAYER","GLOBAL",4)
+ Global("ekilis_follow","GLOBAL",4) 
+ !Global("TimeTP","GLOBAL",0)   
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0) 
+END
+
+IF 
+ AreaCheckObject("COM014","COEKILIS")
+ Global("collier_TP_PLAYER","GLOBAL",5)
+ Global("ekilis_follow","GLOBAL",5) 
+ !Global("TimeTP","GLOBAL",0)   
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0) 
+END
+
+IF 
+ AreaCheckObject("COM014","COEKILIS")
+ Global("collier_TP_PLAYER","GLOBAL",6)
+ Global("ekilis_follow","GLOBAL",6) 
+ !Global("TimeTP","GLOBAL",0)   
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0) 
+END
+
+
+
+
+
+
+
+
+
+
+
+/*
+// Sur la carte de rencontre, Ekilis suit n'importe quel membre du groupe. Ensuite il suit le Charname exclusivement.
+IF 
+ !AreaCheckObject("COM014","COEKILIS")
+ Global("ekilis_alliance","GLOBAL",1)
+ Global("ekilis_follow","GLOBAL",1)
+ !See(Nearestenemyof(Myself))
+ //!Range(PLAYER1,30)
+ //!See(PLAYER1)
+ !Detect(PLAYER1)
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF 
+ Global("ekilis_alliance","GLOBAL",1)
+ Global("ekilis_follow","GLOBAL",2)
+ !See(Nearestenemyof(Myself))
+ //!See(PLAYER2)
+ //!Range(PLAYER2,15)
+ !Detect(PLAYER2)
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF 
+ Global("ekilis_alliance","GLOBAL",1)
+ Global("ekilis_follow","GLOBAL",3)
+ !See(Nearestenemyof(Myself))
+ //!See(PLAYER3)
+ //!Range(PLAYER3,15)
+ !Detect(PLAYER3)
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF 
+ Global("ekilis_alliance","GLOBAL",1)
+ Global("ekilis_follow","GLOBAL",4)
+ !See(Nearestenemyof(Myself))
+ //!See(PLAYER4)
+ //!Range(PLAYER4,15)
+ !Detect(PLAYER4)
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF 
+ Global("ekilis_alliance","GLOBAL",1)
+ Global("ekilis_follow","GLOBAL",5)
+ !See(Nearestenemyof(Myself))
+ //!See(PLAYER5)
+ //!Range(PLAYER5,15)
+ !Detect(PLAYER5)
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+IF 
+ Global("ekilis_alliance","GLOBAL",1)
+ Global("ekilis_follow","GLOBAL",6)
+ !See(Nearestenemyof(Myself))
+ //!See(PLAYER6)
+ //!Range(PLAYER6,15)
+ !Detect(PLAYER6)
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0)
+END
+*/
+
+
+
+/*
+// combat: Préparation de la fin de combat
+IF 
+ !Global("ekilis_follow","GLOBAL",0)
+ Global("ekilis_alliance","GLOBAL",1)
+ See(Nearestenemyof(Myself))
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0)
+END
+*/
+
+/*
+// Ekilis met en garde le groupe sur le coffre du milieu
+IF
+ Global("ekilis_alliance","GLOBAL",1)
+ AreaCheckObject("COM015","COEKILIS")
+ Global("Coffre_mise_en_garde","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Coffre_mise_en_garde","GLOBAL",1)
+ DisplayStringHead("COEKILIS",@500)
+ SetGlobal("ekilis_follow","GLOBAL",0)
+END
+*/

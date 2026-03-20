@@ -1,0 +1,92 @@
+// La chauve souris voit le groupe, elle alerte Islendra qui part en chasse!
+IF
+ See(PLAYER1)
+ GlobalTimerExpired("T_COISLEN_chasse","GLOBAL")
+ //Global("COM020_PNJ_capture","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1)
+ SetGlobal("COISLEN_chasse_P","GLOBAL",1)
+
+ DisplayStringHead(Myself,@1)
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",3)
+ Actionoverride("COISLEN",MoveToObject(PLAYER1)
+ DisplayStringHead("COISLEN",@2)
+END
+
+IF
+ See(PLAYER2)
+ GlobalTimerExpired("T_COISLEN_chasse","GLOBAL")
+ //Global("COM020_PNJ_capture","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1)
+ SetGlobal("COISLEN_chasse_P","GLOBAL",2)
+ 
+ ClearActions("COISLEN")
+ DisplayStringHead(Myself,@1)
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",3)
+ Actionoverride("COISLEN",MoveToObject(PLAYER2)
+ DisplayStringHead("COISLEN",@2)
+END
+
+IF
+ See(PLAYER3)
+ GlobalTimerExpired("T_COISLEN_chasse","GLOBAL")
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1) 
+ SetGlobal("COISLEN_chasse_P","GLOBAL",3)
+ 
+ ClearActions("COISLEN") 
+ DisplayStringHead(Myself,@1)
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",4)
+ Actionoverride("COISLEN",MoveToObject(PLAYER3)
+ DisplayStringHead("COISLEN",@2)
+END
+
+IF
+ See(PLAYER4)
+ GlobalTimerExpired("T_COISLEN_chasse","GLOBAL")
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1)
+ SetGlobal("COISLEN_chasse_P","GLOBAL",4)
+ 
+ ClearActions("COISLEN")
+ DisplayStringHead(Myself,@1)
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",4)
+ Actionoverride("COISLEN",MoveToObject(PLAYER4)
+ DisplayStringHead("COISLEN",@2)
+END
+
+IF
+ See(PLAYER5)
+ GlobalTimerExpired("T_COISLEN_chasse","GLOBAL")
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1)
+ SetGlobal("COISLEN_chasse_P","GLOBAL",5)
+ 
+ ClearActions("COISLEN")
+ DisplayStringHead(Myself,@1)
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",4)
+ Actionoverride("COISLEN",MoveToObject(PLAYER5)
+ DisplayStringHead("COISLEN",@2)
+END
+
+IF
+ See(PLAYER6)
+ GlobalTimerExpired("T_COISLEN_chasse","GLOBAL")
+THEN
+ RESPONSE #100
+ SetGlobal("COISLEN_chasse","GLOBAL",1)
+ SetGlobal("COISLEN_chasse_P","GLOBAL",6)
+ 
+ ClearActions("COISLEN")
+ DisplayStringHead(Myself,@1)
+ SetGlobalTimer("T_COISLEN_chasse","GLOBAL",4)
+ Actionoverride("COISLEN",MoveToObject(PLAYER6)
+ DisplayStringHead("COISLEN",@2)
+END
+

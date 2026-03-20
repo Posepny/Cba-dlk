@@ -1,0 +1,20 @@
+// Suppression des gardes du corps
+IF
+ Global("Protecteur_baldur","GLOBAL",1)
+  OR(2)
+   AreaCheck("AR0015")
+   AreaCheck("AR7217")
+THEN
+ RESPONSE #100 
+ DestroySelf()
+END
+
+// suppression des créatures si discussion Massena et groupe
+IF
+ Global("Protecteur_baldur","GLOBAL",1)
+ AreaCheck("COM017")
+ GlobalGT("Puit_combat","GLOBAL",3)
+THEN
+ RESPONSE #100
+ DestroySelf()
+END

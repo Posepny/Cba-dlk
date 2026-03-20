@@ -1,0 +1,48 @@
+// Taguar est presque vaincu
+IF
+ HPPercentLT("COTAGUAR",20)
+ Global("TAGUAR_meurt","COM021",0)
+THEN
+ RESPONSE #100
+ ClearAllActions() 
+ SetGlobal("TAGUAR_meurt","COM021",1)
+ 
+ FaceObject([PC])
+ StartDialogue("COTAGUAR",[PC])
+END
+
+IF
+ Global("TAGUAR_meurt","COM021",2)
+THEN
+ RESPONSE #100
+ SetGlobal("TAGUAR_meurt","COM021",3)
+ ClearAllActions()
+ 
+ ActionOverride("COURGLIT",ChangeAIScript("COURGLIT",DEFAULT))
+ DisplayStringHead("COTAGUAR",@200)
+ PlayDead(20)
+
+ Setinterrupt(FALSE)
+  // larme de sang
+  CreateItem("MISCP39",0,0,0)
+  DropInventory() 
+
+  CreateVisualEffectObject("CODEATH",myself) 
+  smallWait(10)
+  Setinterrupt(TRUE)
+ 
+  //PlaySound("COBOO1")
+  Deactivate(myself)
+  Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+
+END
+
+// Combat contre Urglite
+IF
+  See("COURGLIT")
+THEN
+  RESPONSE #100
+  AttackReevaluate("COURGLIT",15)
+END

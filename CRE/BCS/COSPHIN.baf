@@ -1,0 +1,9 @@
+IF
+ Global("Sphinx_destroy","COM023",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Sphinx_destroy","COM023",0)
+ 
+ CloseDoor("SPHOFF")
+ DestroySelf()
+END

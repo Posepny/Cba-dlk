@@ -1,0 +1,111 @@
+IF
+ die()
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_mort","Global",1)
+END
+
+// Ekilis est sorti de stase suite au dispel: il entame le dialogue
+IF
+  See([PC])
+  Global("COT01406","GLOBAL",1)  
+THEN
+  RESPONSE #100
+  SetGlobal("COT01406","GLOBAL",2) 
+  ActionOverride("COEKILIS",DIALOGUE([PC])
+END
+
+// Charname refuse l'alliance avec Ekilis et le laisse partir
+IF 
+  Global("ekilis_partir","GLOBAL",1)
+  Global("ekilis_escape_init","GLOBAL",0)  
+THEN
+  RESPONSE #100
+  SetGlobal("ekilis_escape_init","GLOBAL",1)  
+  MoveToPoint([1200.2000])
+  EscapeArea()
+END
+
+// Massena veut la mort d'Ekilis
+IF
+ Global("ekilis_mort_demande","Global",2)
+ Global("ekilis_mort_demande2","Global",0)
+ AreaCheckObject("COM015","COEKILIS")
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_mort_demande2","Global",1)
+                                                                  //Createcreature("MINSC",[1960.790],10) 
+ Dialogue([PC])
+ AddJournalEntry(@39,QUEST)
+END
+
+
+
+// Ekilis va bruler les restes de Massena
+IF
+ Global("Massena_reste_brule","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Massena_reste_brule","GLOBAL",2) 
+ 
+ StartCutSceneMode()
+ WAIT(1)
+ StartCutScene("CSMASSE1")  
+END
+
+// Ekilis est au puit et Massena absent
+IF
+ Global("COEKILIS_PUIT_INIT","GLOBAL",0)
+ Global("COEKILIS_PUIT_DIAL","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COEKILIS_PUIT_DIAL","GLOBAL",1)
+  
+ ActionOverride("COEKILIS",FaceObject(PLAYER1)) 
+ SmallWait(10)
+ ActionOverride("COEKILIS",StartDialogNoSet(PLAYER1))
+END
+
+// Massena est brulé / Ekilis a annoncé la fin de Bhaal: il incante pour le détruire ***************************************************************************************
+IF
+ Global("Ekilis_incantation_Bhaal","GLOBAL",1)
+THEN
+ RESPONSE #100
+ 
+ SetInterrupt(FALSE)
+ createcreature("COBHAAL",[3720.720],10)
+ Wait(1) 
+ ForceSpellRes("COBM","COBHAAL") 
+ Wait(5)
+ //SetGlobal("Ekilis_incantation_Bhaal","GLOBAL",2) 
+ SetInterrupt(TRUE)
+ 
+END
+
+// Ekilis rencontre Systéra
+IF 
+ See("COSYSTE")
+ Global("Ekilis_dlg_syste","COM017",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Ekilis_dlg_syste","COM017",1)
+ 
+ DisplayStringHead("COEKILIS",@67) // Je vais te démembrer morceau par morceau. SYSTERA!
+ Wait(1)
+ DisplayStringHead("COSYSTE",@68) // Tu aurais dû accepter cette mort lente!
+END
+
+
+
+/*
+// Commentaire après la mort de Massena au puit
+IF 
+ Global("Puit_combat","GLOBAL",6)
+ Global("massena_mort","GLOBAL",1)
+ Global("Ekilis_massena_mort","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Ekilis_massena_mort","GLOBAL",1)
+  Dialogue([PC])
+END
+*/

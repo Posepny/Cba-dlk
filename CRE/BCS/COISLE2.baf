@@ -1,0 +1,55 @@
+// Islendra a trouvé le groupe: 1ière rencontre *******************************************************************************************************************************************
+IF 
+  See([PC])
+  Global("COM020_PNJ_capture","GLOBAL",0)
+  Global("islendra_dial_antre","GLOBAL",0)
+THEN
+  RESPONSE #100
+  //SetGlobal("islendra_dial_antre","GLOBAL",1)
+  
+  FaceObject([PC])
+  Smallwait(10)
+  StartDialogueNoSet([PC])
+END
+
+
+// Mode combat ******************************************************************************************************************************************************************
+IF
+ OR(2)
+   HitBy([GOODCUTOFF],CRUSHING)
+   AttackedBy([GOODCUTOFF],DEFAULT)
+THEN
+  RESPONSE #100
+  Enemy() 
+END
+ 
+ 
+// Corps à corps
+IF
+  AreaCheck("COM024")
+  See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+  EquipMostDamagingMelee()
+  AttackReevaluate(Nearestenemyof(Myself),30)  
+END
+
+// Corps à corps
+IF
+  See(Nearestenemyof(Myself))
+  Range(Nearestenemyof(Myself),7)
+THEN
+  RESPONSE #100
+  EquipMostDamagingMelee()
+  AttackReevaluate(Nearestenemyof(Myself),30)  
+END
+
+// A distance
+IF
+  See(Nearestenemyof(Myself))
+  !Range(Nearestenemyof(Myself),7)
+THEN
+  RESPONSE #100
+  EquipRanged()
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END

@@ -1,0 +1,7 @@
+// Départ TP vers la salle n°1 de l'épreuve
+IF
+ Global("Puit_combat","GLOBAL",4)
+THEN
+  RESPONSE #100
+  Destroyself()
+END

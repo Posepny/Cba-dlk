@@ -1,0 +1,64 @@
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    Shout(98)
+    Enemy()
+END
+
+IF
+  HitBy([GOODCUTOFF],CRUSHING)
+THEN
+  RESPONSE #100
+    Shout(98)
+    Continue()
+END
+
+IF
+  Heard(MySelf,98)
+  Allegiance(Myself,NEUTRAL)
+  !Class(Myself,INNOCENT)
+THEN
+  RESPONSE #100
+    Shout(57)
+    Enemy()
+    MoveToObject(Lastheardby(Myself))
+END
+
+IF
+  Heard(MySelf,98)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  Heard(MySelf,57)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  Heard(MySelf,98)
+  !Class(Myself,INNOCENT)
+  !See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+    MoveToObject(Lastheardby(Myself))
+    Continue()
+END
+
+IF
+  Heard(MySelf,57)
+  !Class(Myself,INNOCENT)
+  !See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+    MoveToObject(Lastheardby(Myself))
+    Continue()
+END
+

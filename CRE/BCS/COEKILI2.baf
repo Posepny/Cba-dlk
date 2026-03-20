@@ -1,0 +1,137 @@
+// Un membre du groupe se téléporte: Ekilis suit dorénavent le plus proche
+IF
+ Global("TimeTP_EKI","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("TimeTP_EKI","GLOBAL",0) 
+ ClearActions("COEKILIS")
+ SetGlobal("ekilis_follow","GLOBAL",0) 
+ 
+ //Playsound("COBOO1") // TEMOIN
+END
+
+// le groupe attaque Ekilis
+IF
+  OR(2)
+   HitBy([PC],CRUSHING)
+   AttackedBy([PC],DEFAULT)
+THEN
+  RESPONSE #100
+  ChangeEnemyAlly("COEKILIS",ENEMY)
+END
+
+// Ekilis allié: Pas de suivi pendant un combat
+IF
+ Global("ekilis_alliance","GLOBAL",1)
+ See(NearestEnemyOf(Myself))
+ //actuallyincombat()
+ !Global("ekilis_follow","GLOBAL",0)
+THEN
+ RESPONSE #100
+ SetGlobal("ekilis_follow","GLOBAL",0)
+END
+
+
+// Ekilis attaqué: il se protège
+IF
+ See(NearestEnemyOf(Myself))
+ Global("Ekilis_armure","GLOBAL",0)
+ OR(2)
+  HitBy([0],CRUSHING)
+  AttackedBy([0],DEFAULT)
+THEN
+ RESPONSE #100
+ SetGlobal("Ekilis_armure","GLOBAL",1)
+ SpellNoDec(Myself,CLERIC_ARMOR_OF_FAITH) // armure de la foi SPPR111
+END
+
+
+// Ekilis très blessé: il se met à l'abris et se prépare
+// Ekilis blessé: il se soigne
+IF
+ GlobalLT("Ekilis_soins","GLOBAL",2)
+ HPPercentLT(Myself,60)
+THEN
+ RESPONSE #100
+ IncrementGlobal("Ekilis_soins","GLOBAL",1)
+ SpellNoDec(Myself,CLERIC_CURE_MEDIUM_WOUNDS) // soins moyens SPPR315
+ SetGlobal("ekilis_follow","GLOBAL",0)
+ 
+ RESPONSE #100
+ SetGlobal("Ekilis_soins2","GLOBAL",1)
+ 
+ SetInterrupt(FALSE)
+ SpellNoDec(Myself,CLERIC_SANCTUARY) // santuaire SPPR109
+ Wait(3)
+ SpellNoDec(Myself,CLERIC_CURE_MEDIUM_WOUNDS) // soins moyens SPPR315
+ Wait(3)
+ SpellNoDec(Myself,CLERIC_HOLD_PERSON) // immobilisation SPPR208 
+ SetGlobal("ekilis_follow","GLOBAL",0) 
+ SetInterrupt(TRUE) 
+END
+
+
+// Ekilis pas ou peu blessé: il attaque 
+IF
+ See(Nearestenemyof(Myself))
+ GlobalLT("Ekilis_attaque1","GLOBAL",1)  
+THEN
+ RESPONSE #100
+ IncrementGlobal("Ekilis_attaque1","GLOBAL",1)
+ SpellNoDecRES("pxbhconv",Myself) // ombre 
+ 
+ RESPONSE #100
+ IncrementGlobal("Ekilis_attaque1","GLOBAL",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_FLAME_STRIKE) // Colonne de feu
+ 
+ RESPONSE #100
+ AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+
+// Ekilis blessé: il attaque 
+IF
+ See(Nearestenemyof(Myself))
+ HPPercentGT(Myself,50)
+ GlobalLT("Ekilis_attaque2","GLOBAL",2)  
+THEN
+ RESPONSE #100
+ IncrementGlobal("Ekilis_attaque2","GLOBAL",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_GREATER_COMMAND) // ordre majeur sPPR512
+ 
+ RESPONSE #100
+ IncrementGlobal("Ekilis_attaque1","GLOBAL",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_UNHOLY_BLIGHT) // influence maléfique SPPR314
+ 
+ RESPONSE #100
+ IncrementGlobal("Ekilis_attaque2","GLOBAL",1) 
+ SpellNoDecRES("PXCYCHAO",Nearestenemyof(Myself)) // Chaos 
+ 
+ RESPONSE #100
+ AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  AttackedBy([0],DEFAULT)
+  Global("Ekilis_puissance","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Ekilis_puissance","GLOBAL",1)
+  SpellNoDec(Myself,CLERIC_DRAW_UPON_HOLY_MIGHT) // puissance divine SPPR214
+  Attack(Lastattackerof(Myself))
+END
+
+// Combat classique
+IF 
+  See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  AttackedBy([0],DEFAULT)
+THEN
+  RESPONSE #100
+  Attack(Lastattackerof(Myself))
+END

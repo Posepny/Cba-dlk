@@ -1,0 +1,130 @@
+// Masque de mort blessé
+IF
+ Global("MM_heal","LOCALS",0)
+ HPPercentLT(Myself,30)
+THEN
+  RESPONSE #100
+  SetGlobal("MM_heal","LOCALS",1)
+  SpellNoDec(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+        
+  RESPONSE #100
+  SetGlobal("MM_heal","LOCALS",1)
+  SpellNoDec(Myself,CLERIC_HEAL)
+    
+  RESPONSE #100
+  SetGlobal("MM_heal","LOCALS",1)
+  SpellNoDec(Myself,CLERIC_ARMOR_OF_FAITH)
+END
+
+// Choix stratégie: réInit de la stratégie de combat
+IF
+ ActuallyInCombat()
+ GlobalTimerExpired("MM_choix","LOCALS") 
+ Global("MM_timer","LOCALS",1)
+THEN
+ Response #100
+ SetGlobal("MM_timer","LOCALS",0)
+ SetGlobal("MM_choix_S","LOCALS",0) 
+END
+
+// Choix stratégie de combat
+IF
+ ActuallyInCombat()
+ Global("MM_choix_S","LOCALS",0)
+THEN
+ RESPONSE #100
+ SetGlobal("MM_choix_S","LOCALS",1)
+ SetGlobal("MM_strat_peur","LOCALS",0)
+ SetGlobal("MM_strat_faible","LOCALS",0)
+ 
+ RESPONSE #100
+ SetGlobal("MM_choix_S","LOCALS",2)
+ SetGlobal("MM_strat_peur","LOCALS",0)
+ SetGlobal("MM_strat_faible","LOCALS",0)
+END
+
+// 1- stratégie peur + combat 
+IF
+ Global("MM_choix_S","LOCALS",1)
+ Global("MM_strat_peur","LOCALS",0)
+THEN
+ RESPONSE #100 
+ SetGlobal("MM_strat_peur","LOCALS",1)
+ SetGlobalTimer("MM_choix","LOCALS",10)
+ SetGlobal("MM_timer","LOCALS",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_CONFUSION)
+ 
+ RESPONSE #100
+ SetGlobal("MM_strat_peur","LOCALS",1)
+ SetGlobalTimer("MM_choix","LOCALS",10)
+ SetGlobal("MM_timer","LOCALS",1)
+END
+
+// 2- stratégie peur + combat 
+IF
+ Global("MM_choix_S","LOCALS",1)
+ Global("MM_strat_peur","LOCALS",1)
+THEN
+ RESPONSE #100
+ SetGlobal("MM_strat_peur","LOCALS",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_FLAME_STRIKE)
+ 
+ RESPONSE #100
+ SetGlobal("MM_strat_peur","LOCALS",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_HOLD_PERSON)
+ 
+ RESPONSE #10
+ SetGlobal("MM_strat_peur","LOCALS",2)
+ SpellNoDecRES("PXBHCONV",Nearestenemyof(Myself))
+ ActionOverride("pxbhombr",ChangeAIScript("CODEST",CLASS)) 
+END
+
+// 1- Stratégie affaiblissement + combat jet sauvegarde
+IF
+ Global("MM_choix_S","LOCALS",2)
+ Global("MM_strat_faible","LOCALS",0)
+THEN
+ RESPONSE #100
+ SetGlobal("MM_strat_faible","LOCALS",1)
+ SetGlobalTimer("MM_choix","LOCALS",10)
+ SetGlobal("MM_timer","LOCALS",1)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_UNHOLY_BLIGHT)
+  
+ RESPONSE #100
+ SetGlobal("MM_strat_faible","LOCALS",1) 
+ SetGlobalTimer("MM_choix","LOCALS",10)
+ SetGlobal("MM_timer","LOCALS",1)
+END
+
+// 2- Stratégie affaiblissement + combat jet sauvegarde
+IF
+ Global("MM_choix_S","LOCALS",2)
+ Global("MM_strat_faible","LOCALS",1)
+THEN
+ RESPONSE #100
+ SetGlobal("MM_strat_faible","LOCALS",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_DOOM)
+ 
+ RESPONSE #100
+ SetGlobal("MM_strat_faible","LOCALS",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_RIGID_THINKING)
+ 
+ RESPONSE #100
+ SetGlobal("MM_strat_faible","LOCALS",2)
+ SpellNoDec(Nearestenemyof(Myself),CLERIC_POISON)
+END
+
+//3- Corps à corps
+IF
+  See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  AttackedBy([0],DEFAULT)
+THEN
+  RESPONSE #100
+  Attack(Lastattackerof(Myself))
+END

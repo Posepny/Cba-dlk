@@ -1,0 +1,114 @@
+// Taguar rencontre le Charname
+IF
+ GlobalTimerExpired("TAGUAR","COM021")
+ Global("TAGUAR_cutscene","COM021",0)
+ Global("URGLIT_TAGUAR","COM021",0) 
+ See([PC])
+THEN
+ RESPONSE #100
+ SetGlobal("TAGUAR_cutscene","COM021",1)
+ SetGlobal("TAGUAR_reveil","COM021",4)
+ ClearActions("COTAGUAR")
+
+ StartCutSceneMode()
+ StartCutScene("CS02101") 
+END
+
+
+// Gestion de la recherche du player ******************************************************************************************************************************
+IF
+  Global("TAGUAR_reveil","COM021",2)
+  AreaCheckObject("COM021",PLAYER1)
+THEN
+  RESPONSE #100
+  SetGlobal("TAGUAR_reveil","COM021",3)  
+  SetGlobalTimer("TAGUAR","COM021",3)
+  ActionOverride("COTAGUAR",MoveToObjectFollow(PLAYER1)
+  
+  Continue()
+END
+
+IF
+  Global("TAGUAR_reveil","COM021",2)
+  AreaCheckObject("COM021",PLAYER2)
+THEN
+  RESPONSE #100
+  SetGlobal("TAGUAR_reveil","COM021",3)  
+  SetGlobalTimer("TAGUAR","COM021",3)
+  ActionOverride("COTAGUAR",MoveToObjectFollow(PLAYER2)
+  
+  Continue()
+END
+
+IF
+  Global("TAGUAR_reveil","COM021",2)
+  AreaCheckObject("COM021",PLAYER3)
+THEN
+  RESPONSE #100
+  SetGlobal("TAGUAR_reveil","COM021",3)  
+  SetGlobalTimer("TAGUAR","COM021",3)
+  ActionOverride("COTAGUAR",MoveToObjectFollow(PLAYER3)
+  
+  Continue()
+END
+
+IF
+  Global("TAGUAR_reveil","COM021",2)
+  AreaCheckObject("COM021",PLAYER4)
+ !See([PC])
+ !See("COURGLIT")
+THEN
+  RESPONSE #100
+  SetGlobal("TAGUAR_reveil","COM021",3)  
+  SetGlobalTimer("TAGUAR","COM021",3)
+  ActionOverride("COTAGUAR",MoveToObjectFollow(PLAYER4)
+  
+  Continue()
+END
+
+IF
+  Global("TAGUAR_reveil","COM021",2)
+  AreaCheckObject("COM021",PLAYER5)
+THEN
+  RESPONSE #100
+  SetGlobal("TAGUAR_reveil","COM021",3)  
+  SetGlobalTimer("TAGUAR","COM021",3)
+  ActionOverride("COTAGUAR",MoveToObjectFollow(PLAYER5)
+  
+  Continue()
+END
+
+IF
+  Global("TAGUAR_reveil","COM021",2)
+  AreaCheckObject("COM021",PLAYER6)
+THEN
+  RESPONSE #100
+  SetGlobal("TAGUAR_reveil","COM021",3)  
+  SetGlobalTimer("TAGUAR","COM021",3)
+  ActionOverride("COTAGUAR",MoveToObjectFollow(PLAYER6)
+  
+  Continue()
+END
+
+// Pas de combat après la rencontre: relance recherche ************************************************************
+IF
+ Allegiance(Myself,ENEMY)
+ !See([PC])
+ !Global("TAGUAR_reveil","COM021",3)  
+// !See("COURGLIT")
+THEN
+  RESPONSE #100
+  SetGlobal("TAGUAR_reveil","COM021",3)  
+
+END
+
+IF
+ Allegiance(Myself,ENEMY)
+ See([PC])
+ !Global("TAGUAR_reveil","COM021",4)  
+THEN
+  RESPONSE #100
+  SetGlobal("TAGUAR_reveil","COM021",4)  
+  ClearActions("COTAGUAR")
+
+END

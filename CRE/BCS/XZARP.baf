@@ -1,0 +1,20 @@
+// Pas de le groupe à l'origine de la save utilisée. 120 000 XP pour remise à niveau
+IF
+	inparty(Myself)
+	Global("XZARRecrut","GLOBAL",2)
+THEN
+	RESPONSE #100	
+	SETGlobal("XZARRecrut","GLOBAL",3)
+		
+	AddXPObject(Myself,120000)
+	ACTIONOVERRIDE("MONTARON",JOINPARTY()) 	
+END
+
+IF  
+  inparty(Myself)
+	!inparty("MONTARON") 
+	Global("MONTARON","GLOBAL",3) // remercié par le charname, Xzar s'en va aussi.
+THEN
+	RESPONSE #100	
+	leaveparty()
+END

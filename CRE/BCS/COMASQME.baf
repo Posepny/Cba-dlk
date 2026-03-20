@@ -1,0 +1,88 @@
+// affectation alétoire de l'équipement des masques de mort
+// Armure
+IF
+ Global("Masque_mort1","LOCALS",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Masque_mort1","LOCALS",1)
+  GiveItemCreate("LEAT04",myself,1,0,0) 
+  ActionOverride(myself,FillSlot(SLOT_ARMOR))
+
+  RESPONSE #100
+  SetGlobal("Masque_mort1","LOCALS",1)
+  GiveItemCreate("CHAN04",myself,1,0,0) 
+  ActionOverride(myself,FillSlot(SLOT_ARMOR))
+
+  RESPONSE #100
+  SetGlobal("Masque_mort1","LOCALS",1)
+  GiveItemCreate("PLAT01",myself,1,0,0) 
+  ActionOverride(myself,FillSlot(SLOT_ARMOR))
+  
+  RESPONSE #100
+  SetGlobal("Masque_mort1","LOCALS",1)
+  GiveItemCreate("CHAN02",myself,1,0,0) 
+  ActionOverride(myself,FillSlot(SLOT_ARMOR))
+END
+
+// Arme 
+IF
+ Global("Masque_mort2","LOCALS",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Masque_mort2","LOCALS",1)
+  GiveItemCreate("BLUN04",myself,1,0,0) 
+  FillSlot(SLOT_WEAPON0)
+  EquipMostDamagingMelee()
+  
+  RESPONSE #100
+  SetGlobal("Masque_mort2","LOCALS",1)
+  GiveItemCreate("BLUN06",myself,1,0,0) 
+  FillSlot(SLOT_WEAPON0)
+  EquipMostDamagingMelee()
+  
+  RESPONSE #100
+  SetGlobal("Masque_mort2","LOCALS",1)
+  GiveItemCreate("BLUN05",myself,1,0,0) 
+  FillSlot(SLOT_WEAPON0)
+  EquipMostDamagingMelee()
+  
+  RESPONSE #100
+  SetGlobal("Masque_mort2","LOCALS",1)
+  GiveItemCreate("BLUN07",myself,1,0,0) 
+  FillSlot(SLOT_WEAPON0)
+  EquipMostDamagingMelee()
+END
+  
+  
+// Equipement
+IF
+ Global("Masque_mort3","LOCALS",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Masque_mort3","LOCALS",1)
+  GiveItemCreate("AMUL06",myself,1,0,0)   
+  GiveItemCreate("Potn08",myself,5,0,0)   
+  GiveItemCreate("RING21",myself,1,0,0)   
+  
+  RESPONSE #100
+  SetGlobal("Masque_mort3","LOCALS",1)
+  GiveItemCreate("AMUL06",myself,1,0,0) 
+  GiveItemCreate("CLCK01",myself,1,0,0) 
+  ActionOverride(myself,FillSlot(SLOT_CLOAK))  
+  GiveItemCreate("MISC43",myself,1,0,0) 
+  
+  RESPONSE #100
+  SetGlobal("Masque_mort3","LOCALS",1)
+  GiveItemCreate("AMUL13",myself,1,0,0) 
+  GiveItemCreate("POTN011",myself,1,0,0) 
+  GiveItemCreate("BOOT04",myself,1,0,0) 
+  ActionOverride(myself,FillSlot(SLOT_BOOTS))  
+  
+  RESPONSE #100
+  SetGlobal("Masque_mort3","LOCALS",1)
+  GiveItemCreate("AMUL14",myself,1,0,0) 
+  ActionOverride(myself,FillSlot(SLOT_AMULET))  
+  GiveItemCreate("POTN017",myself,1,0,0) 
+  GiveItemCreate("RING13",myself,1,0,0) 
+END
+  

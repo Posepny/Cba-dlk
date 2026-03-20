@@ -1,0 +1,88 @@
+// Taguar est presque vaincu
+// Remplace script COBOSSDIE
+IF
+ Die()
+  AreaCheckObject("COM021",MySelf)
+THEN
+ RESPONSE #100
+ //ClearActions("COTAGUAR")
+ SetGlobal("TAGUAR_vaincu","COM021",1)
+
+ DisplayStringHead("COTAGUAR",@200)
+ PlayDead(20)
+ 
+ Setinterrupt(FALSE)
+  // larme de sang
+  CreateItem("MISCP39",0,0,0)
+  DropInventory() 
+
+  CreateVisualEffectObject("CODEATH",myself) 
+  smallWait(10)
+ Setinterrupt(TRUE)
+ 
+  //PlaySound("COBOO1")
+  Deactivate(myself)
+  Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+END
+
+// Taguar est au corps à corps: il lance tornade de fer
+IF
+ see(Nearestenemyof(Myself))
+ Range(Nearestenemyof(Myself),4)
+ HPPercentLT("COTAGUAR",75)
+ Global("TAGUAR_tornade","COM021",0)
+THEN
+ RESPONSE #100
+ SetGlobal("TAGUAR_tornade","COM021",1)
+ 
+ // Voyons voir si vous resisterez à ça!
+ DisplayStringHead("COTAGUAR",@201)
+ ForceSpell("COTAGUAR",WARRIOR_HARDINESS)
+END
+
+// Taguar est blessé: il lance résistance de fer
+IF
+ see(Nearestenemyof(Myself))
+ HPPercentLT("COTAGUAR",50)
+ Global("TAGUAR_resistance","COM021",0)
+THEN
+ RESPONSE #100
+ SetGlobal("TAGUAR_resistance","COM021",1)
+ 
+ // Ce combat devient intéressant!
+ DisplayStringHead("COTAGUAR",@202)
+ ForceSpell("COTAGUAR",WARRIOR_WHIRLWIND)
+END
+
+/*
+IF
+  Heard([0],111)
+THEN
+  RESPONSE #100
+  MoveToObject(Nearestenemyof(Myself))
+END
+
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  !Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+  Enemy()
+END
+*/
+
+IF
+  See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  AttackedBy([0],DEFAULT)
+THEN
+  RESPONSE #100
+  Attack(Lastattackerof(Myself))
+END

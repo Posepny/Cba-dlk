@@ -1,0 +1,11 @@
+// Pas de le groupe à l'origine de la save utilisée. 120 000 XP pour remise à niveau
+IF
+	inparty(Myself)
+	Global("IMOENRecrut","GLOBAL",2)
+THEN
+	RESPONSE #100	
+	SETGlobal("IMOENRecrut","GLOBAL",3)
+		
+	AddXPObject(Myself,120000) 
+END
+

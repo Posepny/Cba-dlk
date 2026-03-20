@@ -1,0 +1,36 @@
+// Gestion du texte
+IF
+ Global("FANT01_texte","LOCALS",0)
+THEN
+  RESPONSE #100
+  SetGlobal("FANT01_texte","LOCALS",1)
+  DisplayStringHead(MySelf,@1)
+
+  RESPONSE #100
+  SetGlobal("FANT01_texte","LOCALS",1)
+  DisplayStringHead(MySelf,@2)
+  
+  RESPONSE #100
+  SetGlobal("FANT01_texte","LOCALS",1)
+  DisplayStringHead(MySelf,@3)  
+  
+  RESPONSE #100
+  SetGlobal("FANT01_texte","LOCALS",1)
+  DisplayStringHead(MySelf,@4)
+  
+  RESPONSE #100
+  SetGlobal("FANT01_texte","LOCALS",1)
+  DisplayStringHead(MySelf,@5)
+
+  RESPONSE #100
+  SetGlobal("FANT01_texte","LOCALS",1)
+  DisplayStringHead(MySelf,@6)
+
+  RESPONSE #100
+  SetGlobal("FANT01_texte","LOCALS",1)
+  DisplayStringHead(MySelf,@7)
+
+  RESPONSE #100
+  SetGlobal("FANT01_texte","LOCALS",1)
+  DisplayStringHead(MySelf,@8)
+END

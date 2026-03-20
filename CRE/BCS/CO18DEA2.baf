@@ -1,0 +1,13 @@
+IF
+ die()
+ GlobalLT("SKE_2","COM018",5)
+ AreaCheck("COM018")
+THEN
+ RESPONSE #100
+ IncrementGLobal("SKE_2","COM018",1)
+
+ Createcreature("COSKE_2",[1959.939],10)  
+ CreateVisualEffectObject("gwshair7","COSKE_2")  
+ Createcreature("COSKE_2",[1959.939],10)  
+ CreateVisualEffectObject("gwshair7","COSKE_2")  
+END

@@ -1,0 +1,31 @@
+IF
+ oncreation()
+THEN
+  RESPONSE #100
+  // fleches acides
+  GiveItemCreate("arow04",myself,1,0,0) 
+  
+  RESPONSE #100
+  // Carreaux de foudre
+  GiveItemCreate("BLOT03",myself,1,0,0) 
+  
+  RESPONSE #100
+  // Potion protection feu
+  GiveItemCreate("POTN02",myself,1,0,0) 
+  
+  RESPONSE #100
+  // Potion
+  GiveItemCreate("POTN14",myself,1,0,0) 
+  
+  RESPONSE #100
+  // Parchemin nuage poison
+  GiveItemCreate("SCRL2E",myself,1,0,0) 
+  
+  RESPONSE #100
+  // Baguette de foudre
+  GiveItemCreate("WAND07",myself,1,0,0) 
+  
+  RESPONSE #100
+  // Parchemin foudre
+  GiveItemCreate("SCRL5C",myself,1,0,0) 
+END

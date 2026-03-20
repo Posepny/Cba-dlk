@@ -1,0 +1,39 @@
+// Jaheira est recrutée: Khalid la rejoint
+IF
+	Global("JaheiraRecrut","GLOBAL",2)
+	Global("KhalidJoin","GLOBAL",0)
+THEN
+	RESPONSE #100	
+	SetGlobal("KhalidJoin","GLOBAL",1)
+  
+	ActionOverride("KHALID",JoinParty())
+END
+
+
+// Jaheira et Khalid sont congédiés du groupe et reste à l'auberge du Heaume et de la cape
+IF
+	Global("JaheiraMove","GLOBAL",1)
+THEN
+	RESPONSE #100	
+	SetGlobal("JaheiraMove","AR7216",0)
+	SetGlobal("JaheiraRecrut","GLOBAL",1)
+  SetGlobal("KhalidJoin","GLOBAL",0)
+
+  MoveToPoint([965.487])
+  
+	ActionOverride("KHALID",LeaveParty()) 
+	ActionOverride("KHALID",MoveToPoint([965.487]))
+END
+
+IF
+	Global("JaheiraRecrut","GLOBAL",4)
+THEN
+	RESPONSE #100	
+	SetGlobal("JaheiraRecrut","GLOBAL",5)
+	SetGlobal("KhalidJoin","GLOBAL",0)
+
+  EscapeArea()
+  
+	ActionOverride("KHALID",LeaveParty()) 
+	ActionOverride("KHALID",EscapeArea())
+END

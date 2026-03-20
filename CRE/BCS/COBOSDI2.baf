@@ -1,0 +1,25 @@
+// Epreuve salle 4 & mort Islendra: ajout larme de sang 
+IF
+ Die()
+ AreaCheck("AR0015")
+ HasItem("MISCP38",myself)
+THEN
+ RESPONSE #100
+
+ //createcreature("MINSC",[1500.565],10)
+
+ Setinterrupt(FALSE)
+ // larme de sang
+ CreateItem("MISCP38",0,0,0)
+ DropInventory() 
+
+ CreateVisualEffectObject("CODEATH",myself) 
+ smallWait(10)
+ Setinterrupt(TRUE)
+ 
+ Deactivate(myself)
+ Wait(1)
+ 
+ ActionOverride(myself,DestroySelf())
+END
+

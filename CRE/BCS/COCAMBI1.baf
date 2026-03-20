@@ -1,0 +1,58 @@
+// Quete annoncée
+IF 
+ Global("Quete_demon_coeur_OK","COM018",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Quete_demon_coeur_OK","COM018",2)
+ AddJournalEntry(@100,QUEST)
+
+END
+
+// Quête réussie
+IF 
+ Global("Quete_demon_coeur","COM018",2)
+THEN
+ RESPONSE #100
+ SetGlobal("Quete_demon_coeur","COM018",3)
+ SetGlobal("Boss_salle1","GLOBAL",1) // Boss final
+
+ TakePartyItem("MISC6M")
+ AddexperienceParty(200)
+ EraseJournalEntry(@100)
+ AddJournalEntry(@101,QUEST_DONE)
+END
+
+
+//  Le Cambion interpelle le groupe
+IF
+ See([PC])
+ Global("cambion_DLG","COM018",0)
+THEN
+ RESPONSE #100
+ SetGlobal("cambion_DLG","COM018",1)
+ 
+ FaceObject([PC])
+ SmallWait(50)
+ StartDialogueNoSet([PC])
+ 
+END
+
+/*
+// Quete non réalisée et ouverture de la grille
+IF 
+ GlobalLT("Quete_demon_coeur","COM018",3)
+ Global("COM018_grille3","COM018",1)
+THEN
+ RESPONSE #100
+ SetGlobal("COM018_grille3","COM018",2)
+ 
+ EraseJournalEntry(@100)
+ AddJournalEntry(@102,QUEST_DONE)
+ SmallWait(50)
+ 
+ FaceObject([PC])
+ SmallWait(50)
+ StartDialogueNoSet([PC])
+ 
+END
+*/

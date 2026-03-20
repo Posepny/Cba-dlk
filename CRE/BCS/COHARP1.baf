@@ -1,0 +1,29 @@
+IF
+ GLOBAL("COM015_Harpy_dial","GLOBAL",0)
+ see([PC])
+THEN
+ RESPONSE #100
+ SetGlobal("COM015_Harpy_dial","GLOBAL",1)
+ Dialogue([PC])
+END
+
+// Gestion du combat
+// les chauves souris participent au combat
+IF
+  Global("harpie_combat","COM015",1)
+THEN
+ RESPONSE #100
+ SetGlobal("harpie_combat","COM015",2)
+ SetGlobal("COM015_chauve_combat","GLOBAL",1)
+ 
+ Enemy() 
+ Shout(99)
+END
+
+IF
+  See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+  Shout(99)
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END

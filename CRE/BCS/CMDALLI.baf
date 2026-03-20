@@ -1,0 +1,231 @@
+// Baguette 1 de commandement **********************************************************************************************************************************
+IF
+  Global("Command_WANP01","LOCALS",1)
+  See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  Global("Command_WANP01","LOCALS",1)
+  HasItem("WANP01",PLAYER1)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER1)
+END
+
+IF
+  Global("Command_WANP01","LOCALS",1)
+  HasItem("WANP01",PLAYER2)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER2)
+END
+
+IF
+  Global("Command_WANP01","LOCALS",1)
+  HasItem("WANP01",PLAYER3)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER3)
+END
+
+IF
+  Global("Command_WANP01","LOCALS",1)
+  HasItem("WANP01",PLAYER4)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER4)
+END
+
+IF
+  Global("Command_WANP01","LOCALS",1)
+  HasItem("WANP01",PLAYER5)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER5)
+END
+
+IF
+  Global("Command_WANP01","LOCALS",1)
+  HasItem("WANP01",PLAYER6)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER6)
+END
+
+IF
+  Global("Command_WANP01","LOCALS",1)
+  OR(6)
+   !HasItem("WANP01",PLAYER1)  
+   !HasItem("WANP01",PLAYER2)
+   !HasItem("WANP01",PLAYER3)
+   !HasItem("WANP01",PLAYER4)
+   !HasItem("WANP01",PLAYER5)
+   !HasItem("WANP01",PLAYER6)
+THEN
+  RESPONSE #100
+  RandomWalk()
+END
+
+// Baguette 2 de commandement **********************************************************************************************************************************
+IF
+  Global("Command_WANP02","LOCALS",1)
+  See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  Global("Command_WANP02","LOCALS",1)
+  HasItem("WANP02",PLAYER1)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER1)
+END
+
+IF
+  Global("Command_WANP02","LOCALS",1)
+  HasItem("WANP02",PLAYER2)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER2)
+END
+
+IF
+  Global("Command_WANP02","LOCALS",1)
+  HasItem("WANP02",PLAYER3)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER3)
+END
+
+IF
+  Global("Command_WANP02","LOCALS",1)
+  HasItem("WANP02",PLAYER4)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER4)
+END
+
+IF
+  Global("Command_WANP02","LOCALS",1)
+  HasItem("WANP02",PLAYER5)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER5)
+END
+
+IF
+  Global("Command_WANP02","LOCALS",1)
+  HasItem("WANP02",PLAYER6)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER6)
+END
+
+IF
+  Global("Command_WANP02","LOCALS",1)
+  OR(6)
+   !HasItem("WANP02",PLAYER1)  
+   !HasItem("WANP02",PLAYER2)
+   !HasItem("WANP02",PLAYER3)
+   !HasItem("WANP02",PLAYER4)
+   !HasItem("WANP02",PLAYER5)
+   !HasItem("WANP02",PLAYER6)
+THEN
+  RESPONSE #100
+  RandomWalk()
+END
+
+// Baguette 3 de commandement **********************************************************************************************************************************
+IF
+  Global("Command_WANP03","LOCALS",1)
+  See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  AttackReevaluate(Nearestenemyof(Myself),30)
+END
+
+IF
+  Global("Command_WANP03","LOCALS",1)
+  HasItem("WANP03",PLAYER1)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER1)
+END
+
+IF
+  Global("Command_WANP03","LOCALS",1)
+  HasItem("WANP03",PLAYER2)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER2)
+END
+
+IF
+  Global("Command_WANP03","LOCALS",1)
+  HasItem("WANP03",PLAYER3)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER3)
+END
+
+IF
+  Global("Command_WANP03","LOCALS",1)
+  HasItem("WANP03",PLAYER4)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER4)
+END
+
+IF
+  Global("Command_WANP03","LOCALS",1)
+  HasItem("WANP03",PLAYER5)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER5)
+END
+
+IF
+  Global("Command_WANP03","LOCALS",1)
+  HasItem("WANP03",PLAYER6)
+  !See(Nearestenemyof(Myself))  
+THEN
+  RESPONSE #100
+  MoveToObjectFollow(PLAYER6)
+END
+
+IF
+  Global("Command_WANP03","LOCALS",1)
+  OR(6)
+   !HasItem("WANP03",PLAYER1)  
+   !HasItem("WANP03",PLAYER2)
+   !HasItem("WANP03",PLAYER3)
+   !HasItem("WANP03",PLAYER4)
+   !HasItem("WANP03",PLAYER5)
+   !HasItem("WANP03",PLAYER6)
+THEN
+  RESPONSE #100
+  RandomWalk()
+END
+

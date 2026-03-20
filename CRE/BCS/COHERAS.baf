@@ -1,0 +1,98 @@
+// Gestion du nombre de larmes de Bhaal en leur possession
+IF
+ PartyHasItem("MISCP35")
+ Global("larmes_1","com023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("larmes_1","com023",1)
+ IncrementGlobal("NB_larmes_sang","com023",1)
+END
+
+IF
+ PartyHasItem("MISCP36")
+ Global("larmes_2","com023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("larmes_2","com023",1)
+ IncrementGlobal("NB_larmes_sang","com023",1)
+END
+
+IF
+ PartyHasItem("MISCP37")
+ Global("larmes_3","com023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("larmes_3","com023",1)
+ IncrementGlobal("NB_larmes_sang","com023",1)
+END
+
+IF
+ PartyHasItem("MISCP38")
+ Global("larmes_4","com023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("larmes_4","com023",1)
+ IncrementGlobal("NB_larmes_sang","com023",1)
+END
+
+IF
+ PartyHasItem("MISCP39")
+ Global("larmes_5","com023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("larmes_5","com023",1)
+ IncrementGlobal("NB_larmes_sang","com023",1)
+END
+
+IF
+ PartyHasItem("MISCP40")
+ Global("larmes_6","com023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("larmes_6","com023",1)
+ IncrementGlobal("NB_larmes_sang","com023",1)
+END
+
+IF
+ PartyHasItem("MISCP41")
+ Global("larmes_7","com023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("larmes_7","com023",1)
+ IncrementGlobal("NB_larmes_sang","com023",1)
+END
+
+// Départ dialogue
+IF
+ Global("Heras_dialogue","COM023",0)
+THEN
+ Response #100 
+ SetGlobal("Heras_dialogue","COM023",1)
+ StartDialogueNoSet(PLAYER1)
+END
+
+// Apparition du coffre
+IF
+ Global("Heras_coffre","COM023",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Heras_coffre","COM023",2)
+ 
+ CloseDoor("DCoffre1")
+ ContainerEnable("Coffre01",TRUE)
+ PlaySound("EFF_E02")
+ 
+ SetGlobal("Heras_destroy","COM023",1)
+ 
+ Continue() 
+END
+
+IF
+ Global("Heras_destroy","COM023",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Heras_destroy","COM023",0)
+ DestroySelf()
+END
+
+
