@@ -1,0 +1,22 @@
+// Lamentations d'Urglite 
+IF
+ IsOverMe([PC])
+ GlobalTimerExpired("Lamentations","COM021")
+ Global("URGLIT_meurt","COM021",0)
+ Global("URGLIT_TAGUAR","COM021",0) 
+ Global("Urglite_lamentations","COM021",0) 
+THEN
+ RESPONSE  #80
+  SetGlobalTimer("Lamentations","COM021",9)
+
+  PlaySound("COBOIMU")
+  DisplayString("COURGLIT",@4)
+
+ RESPONSE  #100
+  SetGlobalTimer("Lamentations","COM021",9)
+
+  PlaySound("COBOIMU")
+  DisplayString("COURGLIT",@5)
+END
+
+

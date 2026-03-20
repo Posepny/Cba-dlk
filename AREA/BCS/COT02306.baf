@@ -1,0 +1,40 @@
+// Gestion de l'enigme
+// Mauvaise réponse à l'énigme: Maladie apparait ***************************************************************************************************************************
+IF
+ Global("Sphinx_enigme","COM023",2)
+ Global("Maladie_apparait","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Maladie_apparait","COM023",1) 
+
+ // Lancement sort d'apparition de maladie
+ //Createcreature("COSPHI1",[1409.724],10) // statue pour recevoir le sort
+ Createcreature("COSPHI1",[1230.645],10) // statue pour recevoir le sort
+ SetGlobalTimer("TIME_MALADIE_RECHERCHE","COM023",2)
+ ForceSpellRES("COMALAV","COSPHI1")
+
+ // Le Sphinx s'endort
+ Wait(1)
+ SetGlobal("Sphinx_destroy","COM023",1)
+END
+
+// Bonne réponse à l'énigme: le champ de force disparait *****************************************************************************************************************************
+IF 
+ Global("Sphinx_enigme","COM023",1)
+ Global("wall_2_inactif","COM023",0)
+THEN
+ RESPONSE  #100
+ SetGlobal("wall_2_inactif","COM023",1)
+ 
+ // Ecran feu 2 disparait
+ PlaySound("EFF_E04")
+ SmallWait(10)
+ AmbientActivate("Wall3",FALSE)
+ AmbientActivate("Wall4",FALSE)
+ SoundActivate("MURFLAM2",FALSE)
+ OpenDoor("CHAMPF2")
+ 
+ // Le Sphinx s'endort
+ SetGlobal("Sphinx_destroy","COM023",1) 
+END
+

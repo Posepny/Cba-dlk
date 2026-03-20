@@ -1,0 +1,14 @@
+// Gestion de la chute trappe4
+IF
+ IsOverMe([PC])
+ Global("Chute_trou4","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_trou4","GLOBAL",0)
+ 
+ 
+ ForceSpellRES("COCORD",LastTrigger) 
+ ActionOverride(LastTrigger,PlayDead(50))
+ 
+ //CreateCreature("MINSC",[140.655],10) 
+END

@@ -1,0 +1,16 @@
+IF
+ Entered([PC])
+ Global("CESPENAR_init","COM025",0)
+THEN
+ RESPONSE #100
+ SetGlobal("CESPENAR_init","COM025",1)
+ 
+ CreateVisualEffect("SPDIMNDR",[775.775]) // cercle de téléportation
+ wait(4)
+ Createcreature("COMEPH",[775.775],5) 
+ Wait(2)
+ ActionOverride("COMEPH",FaceObject(Player1))
+ Wait(1)
+ ActionOverride("COMEPH",StartDialogueNoSet(PLAYER1))
+END
+

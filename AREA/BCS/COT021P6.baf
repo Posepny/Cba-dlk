@@ -1,0 +1,33 @@
+IF
+  OpenState("PS6A",TRUE)
+  Global("PS6_FERME","COM021",1)
+  IsOverMe([ANYONE])
+THEN
+  RESPONSE #100
+  
+  ClearActions(LastTrigger)
+  ActionOverride(LastTrigger,JumpToPoint([1055.2285]))
+  
+  SmallWait(5)
+  CloseDoor("PS6A")
+  CloseDoor("PS6B")
+  PlaySound("AMB_D04A")
+
+  SetGlobal("PS6_FERME","COM021",0)
+END
+
+IF
+  OpenState("PS6A",TRUE)
+  Global("PS6_FERME","COM021",1)
+  !IsOverMe([ANYONE])
+THEN
+  RESPONSE #100
+
+  CloseDoor("PS6A")
+  CloseDoor("PS6B")
+  PlaySound("AMB_D04A")
+  
+  SetGlobal("PS6_FERME","COM021",0)
+END
+
+

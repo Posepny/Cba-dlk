@@ -1,0 +1,61 @@
+// Déclenchement de l'embuscade 2
+IF
+ Entered([PC])
+ Global("COM020_embuscade_Zone","COM020",0)
+THEN
+ // Type araignée ****
+ RESPONSE #50
+ SetGlobal("COM020_embuscade_Zone","COM020",1)
+ 
+ // suivi du groupe par la chauve souris espion 
+ Createcreature("COBATIN",[1590.570],10)
+ PlaySound("EFF_M03")
+ 
+ Createcreature("SPIDGI",[1590.570],10) 
+ CreateVisualEffectObject("gwshair7","SPIDPH")
+ 
+ Createcreature("SPIDPH",[1720.670],10) 
+ CreateVisualEffectObject("gwshair7","SPIDPH")
+ 
+ Createcreature("SPIDSw",[1430.640],10) 
+ CreateVisualEffectObject("gwshair7","SPIDPH")
+
+ // Piège toile d'araignée
+ ForceSpellPoint([1580.640],"WIZARD_WEB")
+  
+  
+ // type Fouisseurs ****
+ RESPONSE #50
+ SetGlobal("COM020_embuscade_Zone","COM020",1)
+ 
+ // suivi du groupe par la chauve souris espion
+ Createcreature("COBATIN",[1590.570],10) 
+ PlaySound("EFF_M03")
+ 
+ Createcreature("ANKHEG",[1590.570],10) 
+ Createcreature("ANKHEG",[1720.670],10) 
+ Createcreature("ANKHEG",[1430.640],10) 
+ 
+ // Lenteur
+ ForceSpellPoint([1580.640],"WIZARD_SLOW")
+ 
+ // Type Ver ***
+ RESPONSE #50
+ SetGlobal("COM020_embuscade_Zone","COM020",1)
+ 
+ // suivi du groupe par la chauve souris espion 
+ Createcreature("COBATIN",[1590.570],10) 
+ PlaySound("EFF_M03")
+ 
+ Createcreature("CARRIO",[1590.570],10) 
+ CreateVisualEffectObject("gwshair7","SPIDPH")
+ 
+ Createcreature("CARRIO",[1720.670],10) 
+ CreateVisualEffectObject("gwshair7","SPIDPH")
+ 
+ Createcreature("CARRIO",[1430.640],10) 
+ CreateVisualEffectObject("gwshair7","SPIDPH")
+ 
+ Createcreature("CARRIO",[1435.735],10) 
+ CreateVisualEffectObject("gwshair7","SPIDPH") 
+END

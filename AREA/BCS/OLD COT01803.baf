@@ -1,0 +1,17 @@
+// si la porte n'est pas ouverte sur COM018 ou COM019, elle s'ouvre automatiquement avec du son.
+IF
+ Entered([0])
+ Global("COM018_grille3","GLOBAL",0)
+THEN
+ Response #100
+ SetGlobal("COM018_grille3","GLOBAL",1)
+ 
+ Playsound("AM0301B3")
+ OpenDoor("Grille3")
+  
+ ActionOverride("COCAMBI1",FaceObject(LastTrigger))
+ SmallWait(50)
+ ActionOverride("COCAMBI1",StartDialogueNoSet(LastTrigger))
+END
+ 
+ 

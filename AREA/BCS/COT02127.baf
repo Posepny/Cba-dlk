@@ -1,0 +1,17 @@
+// si une creature est dans la zone: le PS doit être ouvert
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger,6)
+THEN
+  RESPONSE #100
+  DisplayStringHead(Myself,@12) 
+END
+
+IF
+  Clicked([ANYONE])
+  Range(Myself,6)
+THEN
+  RESPONSE #100
+  DisplayStringHead(LastTrigger,@11) 
+END
+

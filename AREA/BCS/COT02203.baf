@@ -1,0 +1,32 @@
+IF
+ Clicked([ANYONE])
+ !Range(lasttrigger,7)
+THEN
+ RESPONSE #100 
+ ActionOverride(lasttrigger,MoveToObject("Cot022b9"))
+END
+
+IF
+ Clicked([ANYONE])
+ Global("bassin0_click","COM022",0)
+ Range(lasttrigger,7)
+THEN
+ RESPONSE #100
+ SetGlobal("bassin0_click","COM022",1)
+ // @13=~Un liquide rougeatre est en ébullition dans le bassin. On peut imaginer que c'est du sang.~
+ DisplayStringHead(LastTrigger,@13)
+END
+
+IF
+ Clicked([ANYONE])
+ Global("bassin0_click","COM022",1)
+ Range(lasttrigger,7)
+THEN
+ RESPONSE #100
+ SetGlobal("bassin0_click","COM022",1)
+ // @14=~Au sol, deux canalisations partent en direction du nord-est et du sud-ouest.
+ DisplayStringHead(LastTrigger,@14)
+END
+
+
+

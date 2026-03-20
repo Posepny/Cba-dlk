@@ -1,0 +1,91 @@
+// TP salle énigme
+IF
+  IsOverMe(PLAYER1)
+  //Global("com021P1","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("P1_arrivee","COM023",0)
+  SetGlobal("com021P1","GLOBAL",1)
+
+  PlaySound("CAS_P07")
+  ForceSpellRES("com021TP",PLAYER1)
+  Wait(1)
+  ActionOverride(PLAYER1,LeaveAreaLUA("COM023","",[1405.720],10))
+END
+
+IF
+  IsOverMe(PLAYER2)
+  //Global("com021P2","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("P2_arrivee","COM023",0)
+  SetGlobal("com021P2","GLOBAL",1)
+
+  PlaySound("CAS_P07")
+  ForceSpellRES("com021TP",PLAYER2)
+  Wait(1)
+  ActionOverride(PLAYER2,LeaveAreaLUA("COM023","",[1405.720],10))
+END
+
+IF
+  IsOverMe(PLAYER3)
+  Global("com021P3","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("P3_arrivee","COM023",0)
+  SetGlobal("com021P3","GLOBAL",1)
+
+  PlaySound("CAS_P07")
+  ForceSpellRES("com021TP",PLAYER3)
+  Wait(1)
+  ActionOverride(PLAYER3,LeaveAreaLUA("COM023","",[1405.720],10))
+END
+
+IF
+  IsOverMe(PLAYER4)
+  //Global("com021P4","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("P4_arrivee","COM023",0)
+  SetGlobal("com021P4","GLOBAL",1)
+
+  PlaySound("CAS_P07")
+  ForceSpellRES("com021TP",PLAYER4)
+  Wait(1)
+  ActionOverride(PLAYER4,LeaveAreaLUA("COM023","",[1405.720],10))
+END
+
+IF
+  IsOverMe(PLAYER5)
+  //Global("com021P5","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("P5_arrivee","COM023",0)
+  SetGlobal("com021P5","GLOBAL",1)
+
+  PlaySound("CAS_P07")
+  ForceSpellRES("com021TP",PLAYER5)
+  Wait(1)
+  ActionOverride(PLAYER5,LeaveAreaLUA("COM023","",[1405.720],10)) 
+END
+
+IF
+  IsOverMe(PLAYER6)
+  //Global("com021P6","GLOBAL",0)
+THEN
+  RESPONSE #100
+  SetGlobal("P6_arrivee","COM023",0)
+  SetGlobal("com021P6","GLOBAL",1)
+
+  PlaySound("CAS_P07")
+  ForceSpellRES("com021TP",PLAYER6)
+  Wait(1)
+  ActionOverride(PLAYER6,LeaveAreaLUA("COM023","",[1405.720],10))  
+END
+
+
+
+
+
+
+

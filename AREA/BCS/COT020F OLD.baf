@@ -1,0 +1,76 @@
+// Gestion de la chute trappe1
+IF
+ IsOverMe([PC])
+ Global("Chute_trou1","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_trou1","GLOBAL",0)
+ 
+ 
+ ForceSpellRES("COCORD",LastTrigger) 
+ ActionOverride(LastTrigger,PlayDead(50))
+ 
+ CreateCreature("MINSC",[140.655],10) 
+END
+
+// Gestion de la chute trappe2
+IF
+ IsOverMe([PC])
+ Global("Chute_trou2","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_trou2","GLOBAL",0)
+ 
+ 
+ ForceSpellRES("COCORD",LastTrigger) 
+ ActionOverride(LastTrigger,PlayDead(50))
+ 
+ CreateCreature("MINSC",[140.655],10) 
+END
+
+// Gestion de la chute trappe3
+IF
+ IsOverMe([PC])
+ Global("Chute_trou3","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_trou3","GLOBAL",0)
+ 
+ 
+ ForceSpellRES("COCORD",LastTrigger) 
+ ActionOverride(LastTrigger,PlayDead(50))
+ 
+ CreateCreature("MINSC",[140.655],10) 
+END
+
+// Gestion de la chute trappe4
+IF
+ IsOverMe([PC])
+ Global("Chute_trou4","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_trou4","GLOBAL",0)
+ 
+ 
+ ForceSpellRES("COCORD",LastTrigger) 
+ ActionOverride(LastTrigger,PlayDead(50))
+ 
+ CreateCreature("MINSC",[140.655],10) 
+END
+
+
+// Gestion de la chute trappe5
+IF
+ IsOverMe([PC])
+ Global("Chute_trou5","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("Chute_trou5","GLOBAL",0)
+ 
+ 
+ ForceSpellRES("COCORD",LastTrigger) 
+ ActionOverride(LastTrigger,PlayDead(50))
+ 
+ CreateCreature("MINSC",[140.655],10) 
+END
+

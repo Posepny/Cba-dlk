@@ -1,0 +1,12 @@
+// ouverture GRILLE1 si qqu'un dessus
+IF
+ OpenState("GRILLE1",FALSE)
+ Entered([0])
+THEN
+ RESPONSE #50  
+ PlaySound("GAM_21")
+ 
+ OpenDoor("GRILLE1")
+ PlaySound("AM0301B3")
+END
+

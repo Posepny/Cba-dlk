@@ -1,0 +1,27 @@
+// La statue Caris souffle une boule de feu!
+IF
+  Entered([PC])
+  Global("boule_feu_init","Com021",0)
+THEN
+  RESPONSE #100
+  SetGlobal("boule_feu_init","Com021",1)
+  SetGlobal("salle_feu","COM021",1)
+  SetGlobalTimer("boule_feu","Com021",8)
+  ForceSpellPoint([2426.733],WIZARD_FIREBALL)  
+    
+  Wait(3)
+  CreateCreature("ELFIRL01",[2350.800],6)
+  ActionOverride("ELFIRL01",ChangeAIScript("ELEMDIE",CLASS))    
+  CreateCreature("ELFIRL01",[2580.750],6)
+  ActionOverride("ELFIRL01",ChangeAIScript("ELEMDIE",CLASS))  
+END
+
+IF
+ GlobalTimerExpired("boule_feu","COM021")
+ Global("boule_feu_init","Com021",1)
+THEN
+ Response #100
+ SetGlobal("boule_feu_init","Com021",0) 
+END
+
+ 
