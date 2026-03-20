@@ -1,0 +1,422 @@
+
+// Mod Champion de Bhaal (partie du mod Protecteur de Baldur sans le mod principal) ***********************************************************************************************************************************************
+// TextScreen d'intro
+IF 
+ Global("Protecteur_baldur","GLOBAL",1)
+ Global("Mod_CDB","GLOBAL",1)
+ Global("intro_TS","AR7216",0)
+THEN 
+ RESPONSE #100
+ SetGlobal("intro_TS","AR7216",1)
+ 
+ FadeTOColor([30.0],0)
+ 
+ // Passage chapitre 9 BG1: initialisation de la transition BG1 -> Mod Protecteur de Baldur
+ SetGlobal("Chapter","GLOBAL",9)
+ TextScreen("COTSCDB")   
+ DisplayString("Veuillez patienter")
+ 
+ Global("Recrut_fin","AR7216",0)
+END
+
+
+// Impossibilité de quitter de l'auberge dans le cadre du Mod
+IF
+ Global("Mod_CDB","GLOBAL",1)
+ Global("entree_fermee","AR7216",0)
+THEN
+ RESPONSE #100
+ SetGlobal("entree_fermee","AR7216",1)
+ 
+ TriggerActivation("Door7200",FALSE)   
+END
+
+
+// Suppression du groupe au bar remplacé par les nouveaux pnj à recruter ************************************************************************************
+IF
+ Global("AR7216_1","AR7216",0)
+ Global("Protecteur_baldur","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("AR7216_1","AR7216",1)
+
+
+ ActionOverride("Gorpel",destroyself())
+ ActionOverride("Farluck",destroyself())
+ ActionOverride("Turpin",destroyself())
+ ActionOverride("Nelik",destroyself())
+ ActionOverride("BART12",destroyself())
+
+ CreateCreature("COBARNI",[620.620],6)  
+ CreateCreature("geoffro",[679.676],6)   
+ CreateCreature("alinea",[657.712],6)    
+ CreateCreature("OSWALD",[707.636],6) 
+ CreateCreature("FLAMHC",[690.485],11)
+END
+
+// Quête barni: condamner la cave et reprise de la clé.
+IF
+ Global("Barni_quete","GLOBAL",2)  
+THEN
+ RESPONSE #100
+ SetGlobal("Barni_quete","GLOBAL",5) 
+ 
+ TakePartyItem("Miscp61") 
+END
+
+// Préparation au recrutement dans l'auberge du heaume et de la cape *******************************************************************************************
+// PNJ de BG1
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("EDWINRecrut","Global",0)
+  !InParty("EDWIN") 
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("EDWINRecrut","Global",1)
+ 
+  CreateCreature("EDWINP",[340.807],13) 
+END
+
+IF  
+ Global("Protecteur_baldur","GLOBAL",1)
+ Global("AjantisRecrut","Global",0)
+ !InParty("AJANTIS")
+ Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("AjantisRecrut","Global",1)
+ 
+  CreateCreature("AJANTIP",[773.1116],10) 
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("SharteelRecrut","Global",0)
+  !InParty("SHARTEEL")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("SharteelRecrut","Global",1)
+ 
+  CreateCreature("SHARTP",[369.1047],13) 
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("CORANRecrut","Global",0)
+  !InParty("CORAN")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("CORANRecrut","Global",1)
+ 
+  CreateCreature("CORANP",[145.866],12) 
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("YESLICKRecrut","Global",0)
+  !InParty("YESLICK")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("YESLICKRecrut","Global",1)
+ 
+  CreateCreature("YESLICP",[152.896],10) 
+  AddXPObject("YESLICK",100000) 
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("ImoenRecrut","Global",0)
+  !InParty("IMOEN")
+   !InParty("IMOEN2")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("ImoenRecrut","Global",1)
+ 
+  CreateCreature("IMOENP",[190.905],7) 
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("XANRecrut","Global",0)
+  !InParty("XAN")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("XANRecrut","Global",1)
+ 
+  CreateCreature("XANP",[195.871],2) 
+END
+
+IF 
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("JaheiraRecrut","Global",0)
+  !InParty("JAHEIRA")
+  Global("Recrut_fin","AR7216",0)
+THEN
+ RESPONSE #100
+ SetGlobal("JaheiraRecrut","Global",1)
+ 
+ CreateCreature("JAHEIRP",[850.440],2)
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("KHALIDrecrut","Global",0)
+  !InParty("KHALID")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("KHALIDRecrut","Global",1)
+  
+  CreateCreature("KHALIP",[850.440],13) 
+END
+  
+IF
+  Global("Protecteur_baldur","GLOBAL",1)  
+  Global("MinscRecrut","Global",0)
+  !InParty("MINSC")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("MinscRecrut","Global",1)
+ 
+  CreateCreature("MINSCP",[850.440],10) 
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("DYNAHEIRRecrut","Global",0)
+  !InParty("DYNAHEIR")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("DYNAHEIRRecrut","Global",1)
+ 
+  CreateCreature("DYNAHEP",[850.440],6) 
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("KivanRecrut","Global",0)
+  !InParty("KIVAN")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("KivanRecrut","Global",1)
+ 
+  CreateCreature("KIVANP",[850.440],6) 
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("VICONIARecrut","Global",0)
+  !InParty("VICONIA")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("VICONIARecrut","Global",1)
+  
+  CreateCreature("VICONIP",[595.335],13) 
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("KagainRecrut","Global",0)
+  !InParty("KAGAIN")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("KagainRecrut","Global",1)
+ 
+  CreateCreature("KAGAINP",[685.215],10) 
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("MONTARONRecrut","Global",0)
+  !InParty("MONTARON")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("MONTARONRecrut","Global",1)
+ 
+  CreateCreature("MONTARP",[697.215],5)
+END
+
+IF  
+  Global("Protecteur_baldur","GLOBAL",1)
+  Global("XZARRecrut","Global",0)
+  !InParty("XZAR")
+  Global("Recrut_fin","AR7216",0)
+THEN
+  RESPONSE #100
+  SetGlobal("XZARRecrut","Global",1)
+ 
+  CreateCreature("XZARP",[718.185],2)
+END
+
+IF
+ Global("Protecteur_baldur","GLOBAL",1)
+ Global("Recrut_fin","AR7216",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Recrut_fin","AR7216",1)
+         
+ 
+ ActionOverride("XZARP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("XZARP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("MONTARP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("MONTARP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("KAGAINP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("KAGAINP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("VICONIP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("VICONIP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("KIVANP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("KIVANP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("DYNAHEP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("DYNAHEP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("MINSCP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("MINSCP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("KHALIP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("KHALIP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("JAHEIRP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("JAHEIRP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("XANP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("XANP",SetGlobal("recrut_init","LOCALS",0))
+
+ ActionOverride("IMOENP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("IMOENP",SetGlobal("recrut_init","LOCALS",0)) 
+ 
+ ActionOverride("YESLICP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("YESLICP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("CORANP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("CORANP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("SHARTP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("SHARTP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("EDWINP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("EDWINP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ ActionOverride("AJANTIP",SetGlobal("IWasKickedOut","LOCALS",0))
+ ActionOverride("AJANTIP",SetGlobal("recrut_init","LOCALS",0))
+ 
+ Playsound("COBOO1")
+ FadeFromColor([30.0],0) 
+END
+
+
+
+/*  Mod Protecteur de Baldur **********************************************************************************************************************************************
+// Livraison tête du marchand de Davos
+IF
+ Global("MAGASINIER_DAVOS_TETE","Global",1)
+ AreaCheckObject("AR7216","PROTAGONIST")
+THEN
+ RESPONSE #100
+ SetGlobal("MAGASINIER_DAVOS_TETE","Global",2) 
+  
+ // Changement de dialogue
+ ActionOverride("WAITER",SetDialog("TETEP"))
+ ActionOverride("WAITER",Dialogue(PROTAGONIST))
+END
+
+IF
+ Global("LIVRAISON_TETE","Global",1)
+ Global("MAGASINIER_DAVOS_TETE","Global",2) 
+THEN
+ RESPONSE #100
+ SetGlobal("MAGASINIER_DAVOS_TETE","Global",3) 
+ 
+ GiveItemCreate("MISCP18",PROTAGONIST,0,0,0) 
+ continue()
+END
+
+// Livraison tête de Davos
+IF
+ Global("DAVOS_TETE","Global",1) 
+THEN
+ RESPONSE #100
+ SetGlobal("DAVOS_TETE","Global",2) 
+ 
+ // Changement de dialogue
+ ActionOverride("WAITER",SetDialog("TETEP"))
+ ActionOverride("WAITER",Dialogue(PROTAGONIST))
+END
+
+IF
+ Global("LIVRAISON_TETE","Global",1)
+ Global("DAVOS_TETE","Global",2) 
+THEN
+ RESPONSE #100
+ SetGlobal("DAVOS_TETE","Global",3) 
+ 
+ GiveItemCreate("MISCP19",PROTAGONIST,0,0,0)
+ continue()
+END
+
+// Livraison tête de Irma
+IF
+ Global("IRMA_TETE","Global",1) 
+THEN
+ RESPONSE #100
+ SetGlobal("IRMA_TETE","Global",2) 
+ 
+ // Changement de dialogue
+ ActionOverride("WAITER",SetDialog("TETEP"))
+ ActionOverride("WAITER",Dialogue(PROTAGONIST))
+END
+
+IF
+ Global("LIVRAISON_TETE","Global",1)
+ Global("IRMA_TETE","Global",2) 
+THEN
+ RESPONSE #100
+ SetGlobal("IRMA_TETE","Global",3) 
+ 
+ GiveItemCreate("MISCP20",PROTAGONIST,0,0,0) 
+ continue()
+END
+
+// Réinit livraison tête
+IF
+ Global("LIVRAISON_TETE","Global",1) 
+THEN
+ RESPONSE #100
+ SetGlobal("LIVRAISON_TETE","Global",0)
+ 
+ DisplayString("WAITER",@3) 
+ ActionOverride("WAITER",SetDialog("WAITER"))
+END
+
+// Quête recrutement Compagnon pour le Protecteur: si au moins deux compagnons: quête réussie
+IF
+ Global("quete_equipe_protecteur","Global",0)
+ NumInPartyGT(3)
+THEN
+ RESPONSE #100
+ SetGlobal("quete_equipe_protecteur","Global",1)
+ 
+ 
+ SetGlobal("Msg_mission_nettoyage","Global",1) // Activation du messager des ducs pour la mission 
+ // Journal quête résolue
+ AddexperienceParty(600)
+ EraseJournalEntry(@1)
+ AddJournalEntry(@2,QUEST_DONE) 
+END
+*/
