@@ -1,0 +1,122 @@
+IF
+ True()
+THEN
+ RESPONSE #100
+ CutSceneId(Player1)
+ FadeTOColor([20.0],0)
+ WAIT(1)
+
+  // Placement du groupe du Protecteur autour
+  JumpToPoint([1150.1060])
+  FaceObject("COMEUR")
+  
+  ActionOverride(player2,JumpToPoint([1230.1045]))
+  ActionOverride(player2,FaceObject("COMEUR")) 
+  
+  ActionOverride(player3,JumpToPoint([1325.1110]))
+  ActionOverride(player3,FaceObject("COMEUR")) 
+  
+  ActionOverride(player4,JumpToPoint([1305.1160]))
+  ActionOverride(player4,FaceObject("COMEUR")) 
+
+  ActionOverride(player5,JumpToPoint([1120.1195]))
+  ActionOverride(player5,FaceObject("COMEUR")) 
+
+  ActionOverride(player6,JumpToPoint([1115.1135]))
+  ActionOverride(player6,FaceObject("COMEUR")) 
+
+  MultiPlayerSync()  
+  
+
+ 
+  WAIT(1)
+  FadeFromColor([20.0],0)
+ 
+  SetInterrupt(FALSE)
+  SmallWait(5)
+ 
+  // position 1: Golem d'os
+  MoveViewPoint([1275.865],INSTANT)
+  CreateVisualEffect("COCOLR1",[1275.865])
+  Wait(2)
+  Createcreature("cogole01",[1275.865],15) 
+  Wait(1)
+  
+  // position 2: Cambion
+  MoveViewPoint([1545.965],INSTANT)
+  CreateVisualEffect("COCOLR1",[1545.965])
+  Wait(2)
+    
+  Createcreature("cocambi1",[1545.965],15) 
+  ActionOverride("cocambi1",FaceObject(PLAYER1))
+  ActionOverride("cocambi1",SetDialog(""))
+  ActionOverride("cocambi1",enemy())
+  Wait(1)
+  
+  // position 3: Spectateur
+  MoveViewPoint([1645.1160],INSTANT)
+  CreateVisualEffect("COCOLR1",[1645.1160])
+  Wait(2)
+  Createcreature("COSPEC1",[1675.1160],15) 
+  ActionOverride("COSPEC1",FaceObject(PLAYER1)
+  ActionOverride("COSPEC1",SetDialog(""))
+  ActionOverride("COSPEC1",enemy())
+  Wait(1)
+ 
+     // position 4: Islendra
+  MoveViewPoint([1460.1390],INSTANT)
+  CreateVisualEffect("COCOLR1",[1460.1390])
+  Wait(2)
+  Createcreature("COISLEN",[1460.1390],15) 
+  ActionOverride("COISLEN",FaceObject(PLAYER1))
+  ActionOverride("COISLEN",SetDialog("")) 
+  ActionOverride("COISLEN",DestroyItem("arop01"))
+  ActionOverride("COISLEN",ChangeAIScript("",CLASS))
+  ActionOverride("COISLEN",ChangeAIScript("",GENERAL))  
+  ActionOverride("COISLEN",ChangeAIScript("WDARSGT",DEFAULT))  
+  ActionOverride("COISLEN",enemy())
+  Wait(1)
+  
+   // position 5: Kael
+  MoveViewPoint([1180.1420],INSTANT)
+  CreateVisualEffect("COCOLR1",[1180.1420])
+  Wait(2)
+  
+  Createcreature("COKAEL",[1180.1420],15) 
+  ActionOverride("COKAEL",FaceObject(PLAYER1))
+  CreateVisualEffectObject("gwshair7","CARRIO")
+
+  //ActionOverride("COKAEL",SetDialog("COKAE2"))
+  SetGlobal("Kael_combat","GLOBAL",1) 
+  ActionOverride("COKAEL",enemy())
+  Wait(1)
+  
+  // position 6: Taguar
+  MoveViewPoint([920.1310],INSTANT)
+  CreateVisualEffect("COCOLR1",[920.1310])
+  Wait(2)
+  Createcreature("COTAGUAR",[920.1310],15) 
+  ActionOverride("COTAGUAR",FaceObject(PLAYER1))
+  ActionOverride("COTAGUAR",SetDialog("")) 
+  ActionOverride("COTAGUAR",enemy())
+  Wait(1)
+
+  // position 7: Maladie
+  MoveViewPoint([810.1110],INSTANT)
+  CreateVisualEffect("COCOLR1",[810.1110])
+  Wait(2)
+  Createcreature("COMALAD",[810.1110],15) 
+  ActionOverride("COMALAD",FaceObject(PLAYER1))
+  ActionOverride("COMALAD",SetDialog("")) 
+  SetGlobalTimer("maladie_SPELL","GLOBAL",1)
+  Wait(1)
+
+  SetGlobal("CS_COM024","COM024",2) // Lancement du dialogue COMEUR
+  
+  SetInterrupt(TRUE)
+  EndCutSceneMode() 
+  
+  ActionOverride("COMEUR",StartDialogueNoSet(PLAYER1))
+END
+
+

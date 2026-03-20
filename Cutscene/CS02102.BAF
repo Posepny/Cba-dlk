@@ -1,0 +1,12 @@
+IF
+  Range([PC],3)
+THEN
+  RESPONSE #100
+
+  SetInterrupt(FALSE)
+  ForceSpell(LastTrigger,TRIGGER_TELEPORT) 
+  SetInterrupt(TRUE)
+  Wait(3)    
+END
+
+

@@ -1,0 +1,21 @@
+// Le groupe rencontre Taguar
+IF
+  True()
+THEN
+  RESPONSE #100
+  CutSceneId([PC])
+  MoveViewObject("COTAGUAR",INSTANT)
+  
+  ActionOverride("COTAGUAR",FaceObject([PC]) 
+   
+  DisplayStringHead("COTAGUAR",@8)  // C'est donc vous qui êtes venu troubler mon repos éternel.
+  Wait(3)
+
+  SetGlobal("TAGUAR_reveil","COM021",2)
+  ActionOverride("COTAGUAR",Enemy()) 
+
+
+  EndCutSceneMode()   
+END
+
+

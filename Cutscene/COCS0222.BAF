@@ -1,0 +1,70 @@
+//Sacrifice du membre du groupe désigné par le Charname
+// Player2
+IF
+  Global("Kael_sacrifice_place","COM022",1)
+THEN
+ RESPONSE #100
+ CutSceneId(Player1)
+  
+ FadeTOColor([20.0],0)
+ WAIT(1)
+ 
+ SetInterrupt(FALSE)
+
+ MoveViewPoint([2100.800],INSTANT)
+ ActionOverride("COKAEL",JumpToPoint([2080.590]))
+ 
+ ActionOverride(player3,JumpToPoint([2200.740])
+ ActionOverride(player3,FaceObject("COKAEL")) 
+ ActionOverride("COKAEL",FaceObject(Player3)) 
+
+ JumpToPoint([2080.735])
+ FaceObject("COKAEL")
+   
+ ActionOverride(player2,JumpToPoint([2210.610]))
+ ActionOverride(player2,FaceObject("COKAEL")) 
+  
+ ActionOverride(player4,JumpToPoint([2220.610]))
+ ActionOverride(player4,FaceObject("COKAEL")) 
+
+ ActionOverride(player5,JumpToPoint([2220.610]))
+ ActionOverride(player5,FaceObject("COKAEL")) 
+
+ ActionOverride(player6,JumpToPoint([2220.610]))
+ ActionOverride(player6,FaceObject("COKAEL"))
+ 
+ MultiPlayerSync()  
+ FadeFromColor([20.0],0)
+
+ Wait(1)
+  
+ DisplayStringHead("COKAEL",@7) // Maître. Le meurtre appelle le sang! Ton enfant, te donne son serviteur en sacrifice.
+ Wait(3)
+ 
+ DisplayStringHead("COKAEL",@8) // Acceptes son offrande (il désigne votre compagnon) et montres la voie à ton digne représentant! 
+ Wait(2)
+ 
+ DisplayStringHead(Player3,@9) // Traitrise! Je compte bien me défendre!
+ Wait(2)
+ 
+ CreateCreature("MISTWA01",[2230.715],0)
+ CreateCreature("MISTWA01",[2180.750],0)
+ DisplayStringHead(Player3,@10) // Maaaisss qu''est ce que... nooonnn AAaaaahhh!
+ Wait(1)
+ 
+ DisplayStringHead("COKAEL",@11) // Esprits du meurtre, nourrissez-vous!
+ Wait(1)
+ 
+ ActionOverride("COKAEL",ReallyForceSpell(Player3,BHAAL_SACRIFICE))
+ //ActionOverride("COKAEL",ReallyForceSpellRES("COSACRI",Player3)
+ Wait(1)
+ 
+ Kill(Player3)
+ Wait(4)
+ 
+ SetInterrupt(TRUE)
+ EndCutSceneMode() 
+ 
+ SetGlobal("Kael_sacrifice","COM022",7) 
+ ActionOverride("COKAEL",StartDialogueNoSet(Player1))
+END

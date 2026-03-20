@@ -1,0 +1,44 @@
+// Bhaal a parlé au Charname: Massena stoppe le combat
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    FadeToColor([20.0],0)
+    Wait(1)
+ 
+    MoveViewPoint([3745.610],INSTANT)
+
+    Deactivate("COMASSE2")
+    Wait(1)
+    Createcreature("COMASSE2",[3745.610],3) 
+   
+    ActionOverride("COMASSE2",ForceSpellPointRES("COAIRPUR",[3714.700]))
+    ActionOverride("COMASSE2",ForceSpellPointRES("CLERIC_DISPEL_MAGIC",[3714.700]))
+	ActionOverride("COMASSE2",ForceSpellPointRES("CODESINV",[3714.700]))
+	
+	// désactivation des pièges du puit
+	TriggerActivation("COT01707",FALSE)
+	TriggerActivation("COT0177B",FALSE)
+	TriggerActivation("COT0177C",FALSE)	
+	TriggerActivation("COT01709",FALSE)
+	TriggerActivation("COT0179B",FALSE)	
+	TriggerActivation("COT01710",FALSE)
+	TriggerActivation("COT0171B",FALSE)
+	    
+    Wait(7)
+    JumpToPoint([3630.610])
+    ActionOverride(Player2,JumpToPoint([3650.620]))
+    ActionOverride(Player3,JumpToPoint([3650.620]))
+    ActionOverride(Player4,JumpToPoint([3650.620]))
+    ActionOverride(Player5,JumpToPoint([3650.620]))
+    ActionOverride(Player6,JumpToPoint([3650.620]))
+    ActionOverride("COMASSE2",FaceObject(Player1))
+    
+    ClearAllActions()    
+ 
+    //FadeFromColor([20.0],0)
+    SetGlobal("Puit_combat","GLOBAL",4)
+    EndCutSceneMode()
+END
+

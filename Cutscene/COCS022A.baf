@@ -1,0 +1,25 @@
+// CUTSCENE création de l'artéfact Horreur guerrière.
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(PLAYER1)
+    //Createcreature("MINSc",[2040.745],10)
+
+    ClearAllActions()
+    MoveViewPoint([2040.745],INSTANT)
+
+    //FadeToColor([30.0],0)
+    Wait(1)
+    ActionOverride("COKAEL",CreateVisualEffect("SPCRTWPN",[2040.745]))
+
+    Wait(2)
+    ActionOverride("COKAEL",CreateVisualEffect("COCOLR1",[2040.745]))
+    Wait(5)
+
+    //FadeFromColor([30.0],0)
+
+    SetGlobal("KAEL_artefact_creation","COM022",4)
+    EndCutSceneMode()
+END
