@@ -1,0 +1,31 @@
+// Le groupe a vu Cespenar et discuté avec le Meurtre: fin du mod
+IF
+ Global("CESPENAR_init","COM025",3)
+ Global("MEURTRE2_recomp_Bhaal","COM025",4)
+THEN
+ RESPONSE #100
+ SetGlobal("MEURTRE2_recomp_Bhaal","COM025",5)
+ 
+ Wait(10)
+ 
+ /*
+ ForceSpell(PLAYER1,TRIGGER_TELEPORT_END) 
+ ForceSpell(PLAYER2,TRIGGER_TELEPORT_END) 
+ ForceSpell(PLAYER3,TRIGGER_TELEPORT_END) 
+ ForceSpell(PLAYER4,TRIGGER_TELEPORT_END) 
+ ForceSpell(PLAYER5,TRIGGER_TELEPORT_END) 
+ ForceSpell(PLAYER6,TRIGGER_TELEPORT_END) 
+ */
+ 
+ ForceSpellRES("COTPEND",PLAYER1) 
+ ForceSpellRES("COTPEND",PLAYER2) 
+ ForceSpellRES("COTPEND",PLAYER3) 
+ ForceSpellRES("COTPEND",PLAYER4) 
+ ForceSpellRES("COTPEND",PLAYER5) 
+ ForceSpellRES("COTPEND",PLAYER6)
+  
+ Wait(4)
+ 
+ // Retour à la carte Puit de Bhaal
+
+END

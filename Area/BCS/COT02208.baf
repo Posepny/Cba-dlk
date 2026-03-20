@@ -1,0 +1,8 @@
+// Kael s'est trop éloignée, il retourne près de la fontaine
+IF
+ Entered("COKAEL") 
+THEN
+ RESPONSE #100
+
+ ActionOverride("COKAEL",MoveToPointNoInterrupt([2300.725])) 
+END

@@ -1,0 +1,9 @@
+IF
+ Entered(PLAYER1)
+ Global("Heras_discut","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("Heras_discut","COM023",1)
+ CreateCreature("COHERAS",[360.360],10) 
+END
+ 

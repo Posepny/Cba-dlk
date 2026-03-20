@@ -1,0 +1,16 @@
+// si une creature est dans la zone: le PS doit être ouvert
+IF
+ Entered([ANYONE])
+ Global("TAGUAR_init","COM021",0)
+THEN
+ RESPONSE #100
+ SetGlobal("TAGUAR_init","COM021",1)
+
+ // Réveil de Ragnar
+ SetGlobal("TAGUAR_reveil","COM021",2) 
+
+ CreateCreature("COTAGUAR",[590.1310],12) 
+ DisplayStringHead("COTAGUAR",@7)
+END
+
+

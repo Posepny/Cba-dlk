@@ -1,0 +1,24 @@
+// PS fermé si personne sur le COT02104
+IF
+ GlobalTimerExpired("PS6_OUVERT","COM021")
+ OpenState("PS6A",TRUE)
+ Entered([0]) 
+THEN
+ RESPONSE #50  
+ SetGlobal("PS6_ferme","COM021",1) 
+   
+ // Relance vérification 
+ SetGlobalTimer("PS6_OUVERT","COM021",2) 
+END
+
+
+/*
+IF
+ Entered([0])
+THEN
+ RESPONSE #100
+ CloseDoor("PS6A") 
+ CloseDoor("PS6B") 
+END
+
+*/

@@ -1,0 +1,31 @@
+// Si pnj approche la grille de la salle aux Damiers, elle s'ouvrira d'elle même
+// Grille2 ouverte côté salle : elle doit être ouverte aussi de ce côté
+IF
+  IsoverMe([0])
+  //WalkedToTrigger([0])
+  OpenState("GRILLE3",FALSE)
+  Global("ordre_GR_19-22","GLOBAL",0)
+  GlobalTimerExpired("Tordre_GR_19-22","GLOBAL")
+THEN
+ RESPONSE #100
+ //PlaySound("COBOO1") // TEMOIN
+
+ Unlock("GRILLE3")
+ OpenDoor("GRILLE3")
+ TriggerActivation("COM019",TRUE)  
+ 
+ SetGlobal("ordre_GR_19-22","GLOBAL",1) 
+ SetGlobal("COM019_grille2","GLOBAL",1)
+ SetGlobalTimer("Tordre_GR_19-22","GLOBAL",10) // Ouverture à durée limitée si pas la Gemme dans l'effigie dans la salle Damiers
+
+ DisplayStringHead(LastTrigger(),@100)
+END
+
+/*
+IF
+  Entered([0])
+  OpenState("GRILLE3",TRUE)
+THEN
+ // Purge file d'attente si condition du dessus non remplie.
+END
+*/

@@ -1,0 +1,131 @@
+// initialisation au 1ier passage: le PS6 va se fermer si personne sur la zone
+IF
+ Entered([0])
+ Global("PS6_init","COM021",0)   
+THEN
+ RESPONSE #100
+ SetGlobal("PS6_init","COM021",1) 
+ 
+ SetGlobalTimer("PS6_OUVERT","COM021",2) 
+END
+
+// si creature dans la zone: le PS est ouvert 
+IF
+ Global("PS6_init","COM021",1) 
+ GlobalTimerExpired("PS6_OUVERT","COM021")
+ OpenState("PS6A",FALSE)
+ Range([0],2)
+THEN
+ RESPONSE #100   
+ PlaySound("GAM_21")
+
+ OpenDoor("PS6A")
+ OpenDoor("PS6B")
+ PlaySound("AMB_D04A")
+   
+ // Relance vérification 
+ SetGlobalTimer("PS6_OUVERT","COM021",2) 
+END
+
+// si creature dans la zone:  PS maintenu ouvert
+IF
+ Global("PS6_init","COM021",1) 
+ GlobalTimerExpired("PS6_OUVERT","COM021")
+ OpenState("PS6A",TRUE)
+ Range([0],2)
+THEN
+ RESPONSE #50  
+ PlaySound("GAM_21")
+ 
+ // Relance vérification 
+ SetGlobalTimer("PS6_OUVERT","COM021",2) 
+END
+
+// si pas creature  dans la zone: le PS est fermé
+IF
+ Global("PS6_init","COM021",1) 
+ GlobalTimerExpired("PS6_OUVERT","COM021")
+ OpenState("PS6A",TRUE)
+ !Range([0],2)
+THEN
+ RESPONSE #100 
+ PlaySound("GAM_21") 
+
+ PlaySound("AMB_D04A")
+ CloseDoor("PS6A")
+ CloseDoor("PS6B")
+ PlaySound("AMB_D04A")
+
+ // Relance vérification 
+ SetGlobalTimer("PS6_OUVERT","COM021",2) 
+END
+
+
+
+
+/*
+// PS6 fermé si personne sur la zone COT021T05
+IF
+ GlobalTimerExpired("PS6_OUVERT","COM021")
+ OpenState("PS6A",TRUE)
+ !Range([0],5) 
+ //!IsOverme([PC])
+ //
+THEN
+ RESPONSE #50  
+ SetGlobal("PS6_ferme","COM021",1) 
+   
+ // Relance vérification 
+ SetGlobalTimer("PS6_OUVERT","COM021",2) 
+END
+
+// ouverture du PS6 si qqu'un dessus
+IF
+ GlobalTimerExpired("PS6_OUVERT","COM021")
+ OpenState("PS6A",FALSE)
+ IsOverme([PC])
+ //Range([0],5)
+THEN
+ RESPONSE #50  
+ PlaySound("GAM_21")
+ 
+ //Wait(1)
+ SmallWait(50)
+ OpenDoor("PS6A")
+ OpenDoor("PS6B")
+ PlaySound("AMB_D04A")
+   
+ // Relance vérification 
+ SetGlobalTimer("PS6_OUVERT","COM021",2) 
+END
+
+// PS maintenu ouvert
+IF
+ GlobalTimerExpired("PS6_OUVERT","COM021")
+ OpenState("PS6A",TRUE)
+ IsOverme([PC])
+ //Range([0],5)
+THEN
+ RESPONSE #50  
+ PlaySound("GAM_21")
+ 
+ // Relance vérification 
+ SetGlobalTimer("PS6_OUVERT","COM021",2) 
+END
+
+*/
+
+
+
+
+
+/*
+IF
+ Entered([0])
+THEN
+ RESPONSE #100
+ OpenDoor("PS6A") 
+ OpenDoor("PS6B") 
+ PlaySound("GAM_21")
+END
+*/

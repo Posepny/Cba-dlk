@@ -1,0 +1,30 @@
+// Déclenche l'apparition d'une créature
+IF
+ IsOverMe([PC])
+ GlobalTimerExpired("com022_bassin2","COM022")
+THEN
+ RESPONSE #100
+ SetGlobalTimer("com022_bassin2","COM022",10)
+ Createcreature("EYEEGL01",[-1.-1],10)
+ PlaySound("EFF_E04")
+ CreateVisualEffectObject("gwshair2","EYEEGL01")
+ 
+ RESPONSE #100
+ SetGlobalTimer("com022_bassin2","COM022",10)
+ Createcreature("FGOLEM",[-1.-1],10)
+ PlaySound("EFF_E04")
+ CreateVisualEffectObject("gwshair2","FGOLEM")
+ 
+ RESPONSE #100
+ SetGlobalTimer("com022_bassin2","COM022",10)
+ Createcreature("AMUMBER",[-1.-1],10)
+ PlaySound("EFF_E04")
+ CreateVisualEffectObject("gwshair2","AMUMBER")
+ 
+ RESPONSE #100
+ SetGlobalTimer("com022_bassin2","COM022",10)
+ Createcreature("DJINNISU",[-1.-1],10)
+ PlaySound("EFF_E04")
+ CreateVisualEffectObject("gwshair2","DJINNISU")
+END
+

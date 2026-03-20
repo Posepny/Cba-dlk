@@ -1,0 +1,127 @@
+// Trop loin
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger,8)
+THEN
+  RESPONSE #100
+  DisplayStringHead(LastTrigger,@3)  
+END
+
+// assez près 
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,8)
+  Global("Corde_lancee1","GLOBAL",1)
+THEN
+  RESPONSE #100
+  Createcreature("COCORD",[165.611],10)
+  ActionOverride(LastTrigger,StartDialog("COBCORD",LastTrigger)) 
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,8)
+  Global("Corde_lancee2","GLOBAL",1)
+THEN
+  RESPONSE #100
+  Createcreature("COCORD",[480.359],10)
+  ActionOverride(LastTrigger,StartDialog("COBCORD",LastTrigger)) 
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,8)
+  Global("Corde_lancee3","GLOBAL",1)
+THEN
+  RESPONSE #100
+  Createcreature("COCORD",[309.453],10)
+  ActionOverride(LastTrigger,StartDialog("COBCORD",LastTrigger)) 
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,8)
+  Global("Corde_lancee4","GLOBAL",1)
+THEN
+  RESPONSE #100
+  Createcreature("COCORD",[1049.601],10)
+  ActionOverride(LastTrigger,StartDialog("COBCORD",LastTrigger)) 
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,8)
+  Global("Corde_lancee5","GLOBAL",1)
+THEN
+  RESPONSE #100
+  Createcreature("COCORD",[470.965],10)
+  ActionOverride(LastTrigger,StartDialog("COBCORD",LastTrigger)) 
+END
+
+
+
+
+
+
+/*
+// info signalant qu'une corde est présente. Elle permettrait de remonter au niveau supp.
+IF
+  Entered([PC]) 
+  InPartySlot(LastTrigger,0) // Player1 
+THEN
+  RESPONSE #100
+  
+  Createcreature("COCORD",[165.611],10)
+  ActionOverride("COCORD",StartDialog("COBCOR1",PLAYER1)
+END
+
+IF
+  Entered([PC])   
+  InPartySlot(LastTrigger,1) // Player2
+THEN
+  RESPONSE #100
+  
+  Createcreature("COCORD",[165.611],10)
+  ActionOverride("COCORD",StartDialog("COBCOR1",PLAYER2)
+END
+
+IF
+  Entered([PC])   
+  InPartySlot(LastTrigger,2) // Player3
+THEN
+  RESPONSE #100
+  
+  Createcreature("COCORD",[165.611],10)
+  ActionOverride("COCORD",StartDialog("COBCOR1",PLAYER3)
+END
+
+IF
+  Entered([PC])   
+  InPartySlot(LastTrigger,3) // Player4
+THEN
+  RESPONSE #100
+  
+  Createcreature("COCORD",[165.611],10)
+  ActionOverride("COCORD",StartDialog("COBCOR1",PLAYER4)
+END
+
+IF
+  Entered([PC])   
+  InPartySlot(LastTrigger,4) // Player5
+THEN
+  RESPONSE #100
+  
+  Createcreature("COCORD",[165.611],10)
+  ActionOverride("COCORD",StartDialog("COBCOR1",PLAYER5)
+END
+
+IF
+  Entered([PC])   
+  InPartySlot(LastTrigger,5) // Player6
+THEN
+  RESPONSE #100
+  
+  Createcreature("COCORD",[165.611],10)
+  ActionOverride("COCORD",StartDialog("COBCOR1",PLAYER6)
+END
+*/

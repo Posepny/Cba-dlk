@@ -1,0 +1,26 @@
+IF 
+ Entered([PC])
+ Global("COM020_PNJ_capture","GLOBAL",3)
+ Global("COM020_PNJ_duel_PC","COM020",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_duel_PC","COM020",1)
+
+ ActionOverride("COISLEN",DestroyItem("arop01"))
+ CreateVisualEffectObject("SPMAZE2",LastTrigger)
+ Actionoverride(LastTrigger,NoAction())
+ ClearActions(LastTrigger)
+END
+
+IF 
+ ISOverme("COISLEN")
+ Global("COM020_PNJ_capture","GLOBAL",3)
+ Global("COM020_PNJ_duel_ISLE","COM020",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COM020_PNJ_duel_ISLE","COM020",1)
+ 
+ ActionOverride("COISLEN",DestroyItem("arop01"))
+ CreateVisualEffectObject("SPMAZE2","COISLEN")
+END
+

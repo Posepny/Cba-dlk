@@ -1,0 +1,15 @@
+// ouverture PS6: zone insectes rampants
+IF
+ IsOverMe([0])
+ OpenState("PS6A",FALSE)
+THEN
+ RESPONSE #100   
+ SetGlobal("PS6_init","COM021",0) 
+
+ PlaySound("COM02102")
+ Wait(2)
+ OpenDoor("PS6A")
+ OpenDoor("PS6B")
+ PlaySound("AMB_D04A")
+END
+

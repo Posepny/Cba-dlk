@@ -1,0 +1,78 @@
+// Arrivée du groupe dans la carte via TP
+IF
+ IsOverMe(PLAYER1)
+ Global("COT02501_P1","COM025",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COT02501_P1","COM025",1)
+
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER1)  
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER2)  
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER3)  
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER4)  
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER5)  
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER6)    
+END
+
+/*
+IF
+ IsOverMe(PLAYER2)
+ Global("COT02501_P2","COM025",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COT02501_P2","COM025",1)
+ 
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER2)  
+END
+
+IF
+ IsOverMe(PLAYER3)
+ Global("COT02501_P3","COM025",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COT02501_P3","COM025",1)
+
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER3)  
+END
+
+IF
+ IsOverMe(PLAYER4)
+ Global("COT02501_P4","COM025",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COT02501_P4","COM025",1)
+
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER4)  
+END
+
+IF
+ IsOverMe(PLAYER5)
+ Global("COT02501_P5","COM025",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COT02501_P5","COM025",1)
+
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER5)  
+END
+
+IF
+ IsOverMe(PLAYER6)
+ Global("COT02501_P6","COM025",0)
+THEN
+ RESPONSE #100
+ SetGlobal("COT02501_P6","COM025",1)
+
+ PlaySound("CAS_P07")
+ ForceSpellRES("COTPEND",PLAYER6)  
+END
+*/

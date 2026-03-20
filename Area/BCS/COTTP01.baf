@@ -1,0 +1,188 @@
+// Départ TP vers le niv0 - B: COM015, animation à l'arrivée
+IF
+ Global("TimeTP","GLOBAL",1) 
+ Global("CIBLE_TP","GLOBAL",1)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+//createcreature("GIBBER_A",[750.500],10)  
+
+  
+  ActionOverride(PLAYER1,LeaveAreaLUA("COM015","",[3000.1784],10))
+  ActionOverride(PLAYER1,ChangeAIScript("",RACE)) 
+  SetGlobal("CIBLE_TP","GLOBAL",0)  
+END
+
+IF
+ Global("TimeTP","GLOBAL",1)
+ Global("CIBLE_TP","GLOBAL",2)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER2,LeaveAreaLUA("COM015","",[3000.1784],10))
+  ACTIONOVERRIDE(PLAYER2,ChangeAIScript("",RACE))
+  SetGlobal("CIBLE_TP","GLOBAL",0) 
+END
+
+IF
+ Global("TimeTP","GLOBAL",1)
+ Global("CIBLE_TP","GLOBAL",3)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER3,LeaveAreaLUA("COM015","",[3000.1784],10))
+  ActionOverride(PLAYER3,ChangeAIScript("",RACE)) 
+  SetGlobal("CIBLE_TP","GLOBAL",0)
+END
+
+IF
+ Global("TimeTP","GLOBAL",1)
+ Global("CIBLE_TP","GLOBAL",4)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER4,LeaveAreaLUA("COM015","",[3000.1784],10))
+  ActionOverride(PLAYER4,ChangeAIScript("",RACE)) 
+  SetGlobal("CIBLE_TP","GLOBAL",0)
+END
+
+IF
+ Global("TimeTP","GLOBAL",1)
+ Global("CIBLE_TP","GLOBAL",5)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER5,LeaveAreaLUA("COM015","",[3000.1784],10))
+  ActionOverride(PLAYER5,ChangeAIScript("",RACE))
+  SetGlobal("CIBLE_TP","GLOBAL",0) 
+END
+
+IF
+ Global("TimeTP","GLOBAL",1)
+ Global("CIBLE_TP","GLOBAL",6)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER6,LeaveAreaLUA("COM015","",[3000.1784],10))
+  ActionOverride(PLAYER6,ChangeAIScript("",RACE))
+  SetGlobal("CIBLE_TP","GLOBAL",0) 
+END
+
+// Départ TP vers le niv0 - A: COM014
+IF
+ Global("TimeTP","GLOBAL",2) 
+ Global("CIBLE_TP","GLOBAL",1)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER1,LeaveAreaLUA("COM014","",[640.450],10))
+  ActionOverride(PLAYER1,ChangeAIScript("",RACE))
+  SetGlobal("CIBLE_TP","GLOBAL",0) 
+END
+
+IF
+ Global("TimeTP","GLOBAL",2) 
+ Global("CIBLE_TP","GLOBAL",2)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER2,LeaveAreaLUA("COM014","",[640.450],10))
+  ACTIONOVERRIDE(PLAYER2,ChangeAIScript("",RACE))
+  SetGlobal("CIBLE_TP","GLOBAL",0) 
+END
+
+IF
+ Global("TimeTP","GLOBAL",2) 
+ Global("CIBLE_TP","GLOBAL",3)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER3,LeaveAreaLUA("COM014","",[640.450],10))
+  ActionOverride(PLAYER3,ChangeAIScript("",RACE)) 
+  SetGlobal("CIBLE_TP","GLOBAL",0)
+END
+
+IF
+ Global("TimeTP","GLOBAL",2) 
+ Global("CIBLE_TP","GLOBAL",4)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER4,LeaveAreaLUA("COM014","",[640.450],10))
+  ActionOverride(PLAYER4,ChangeAIScript("",RACE)) 
+  SetGlobal("CIBLE_TP","GLOBAL",0)
+END
+
+IF
+ Global("TimeTP","GLOBAL",2) 
+ Global("CIBLE_TP","GLOBAL",5)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER5,LeaveAreaLUA("COM014","",[640.450],10))
+  ActionOverride(PLAYER5,ChangeAIScript("",RACE)) 
+  SetGlobal("CIBLE_TP","GLOBAL",0)
+END
+
+IF
+ Global("TimeTP","GLOBAL",2) 
+ Global("CIBLE_TP","GLOBAL",6)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  SetGlobalTimer("TIMER_init_TP","GLOBAL",8)
+
+  ActionOverride(PLAYER6,LeaveAreaLUA("COM014","",[640.450],10))
+  ActionOverride(PLAYER6,ChangeAIScript("",RACE)) 
+  SetGlobal("CIBLE_TP","GLOBAL",0)
+END
+
+
+
+
+/* pas fiable, parfois c'est une autre créature qui se TP
+// Départ TP vers le niv0 - B: COM015, animation à l'arrivée
+IF
+ Global("TimeTP","GLOBAL",1)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+  
+
+  ActionOverride(myself,LeaveAreaLUA("COM015","",[3000.1784],10))
+  ActionOverride(myself,ChangeAIScript("",RACE)) 
+END
+
+// Départ TP vers le niv0 - A: COM014
+IF
+ Global("TimeTP","GLOBAL",2)
+THEN
+  RESPONSE #100
+  SetGlobal("TimeTP","GLOBAL",3)
+
+  ActionOverride(myself,LeaveAreaLUA("COM014","",[640.450],10))
+  ACTIONOVERRIDE(myself,ChangeAIScript("",RACE)) 
+END
+*/

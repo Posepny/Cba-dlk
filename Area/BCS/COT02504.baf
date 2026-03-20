@@ -1,0 +1,35 @@
+// Le meurtre apparait
+IF
+ Global("meurtre_appa","COM025",0)
+ Entered(PLAYER1)
+THEN
+ RESPONSE #100
+ SetGlobal("meurtre_appa","COM025",1)
+ 
+ CreateVisualEffect("SPATTCK1",[830.400]) // cercle de téléportation
+ wait(3)
+ Createcreature("COMEUR",[830.400],1) 
+ ActionOverride("COMEUR",SetDialogue("COMEUR2")) 
+ ActionOverride("COMEUR",ChangeAIScript("COMEUR2",DEFAULT))
+ Wait(2)
+ ActionOverride("COMEUR",FaceObject(Player1))
+ Wait(1)
+ ActionOverride("COMEUR",StartDialogueNoSet(PLAYER1))
+END
+ 
+
+ /*
+ Createcreature("COSTAINV",[830.400],10)  
+ CreateVisualEffectObject("SPATTCK1","COSTAINV")
+  MoveViewPoint([830.400],INSTANT)
+ Wait(3)
+ Deactivate("COSTAINV")
+ Createcreature("COMEUR",[830.400],10) 
+ ActionOverride("COMEUR",FaceObject(PLAYER1))
+ Wait(1)
+ ActionOverride("COMEUR",SetDialogue("COMEUR2")) 
+ ActionOverride("COMEUR",ChangeAIScript("COMEUR2",DEFAULT))
+ ActionOverride("COSTAINV",DestroySelf())
+ SmallWait(10)
+ ActionOverride("COMEUR",StartDialogueNoSet(PLAYER1))
+ */

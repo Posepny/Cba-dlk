@@ -1,0 +1,60 @@
+IF
+  OpenState("PS5",TRUE)
+  Global("PS5_FERME","COM021",1)
+  IsOverMe([ANYONE])
+THEN
+  RESPONSE #100
+  PlaySound("GAM_11")
+  
+  ClearActions(LastTrigger)
+  ActionOverride(LastTrigger,JumpToPoint([1095.1195]))
+  //SmallWait(1)
+  CloseDoor("PS5")
+  PlaySound("AMB_D04A")
+  SmallWait(2)
+  //ActionOverride(LastTrigger,JumpToPoint([1110.1210]))
+
+  //SmallWait(1)
+
+
+  SetGlobal("PS5_FERME","COM021",0)
+END
+
+
+
+IF
+  OpenState("PS5",TRUE)
+  Global("PS5_FERME","COM021",1)
+  !IsOverMe([ANYONE])
+THEN
+  RESPONSE #100
+  PlaySound("GAM_10")
+
+  CloseDoor("PS5")
+  PlaySound("AMB_D04A")
+  
+  SetGlobal("PS5_FERME","COM021",0)
+END
+
+
+
+
+/*
+
+MoveToPoint([526.1193])
+//ForceSpellRES("COBREA02",LastTrigger)
+
+IF
+  OpenState("PS5",TRUE)
+  Global("PS5_ferme","COM021",1) 
+THEN
+  RESPONSE #100
+  PlaySound("GAM_20")
+  PlaySound("GAM_20")
+  ForceSpellPointRES("BREATH01",[1040.1180])
+  
+  Wait(1)
+  CloseDoor("PS5")
+  PlaySound("AMB_D04A")  
+END
+*/

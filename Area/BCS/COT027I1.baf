@@ -1,0 +1,7 @@
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,20)
+THEN
+  RESPONSE #100
+  DisplayStringHead(Myself,@1) 
+END

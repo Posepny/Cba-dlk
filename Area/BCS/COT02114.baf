@@ -1,0 +1,12 @@
+// Activation des lamentations d'Urglite
+IF
+  Range([PC],50)
+  Global("Urglite_lamentations","COM021",0)
+THEN
+  RESPONSE #100
+  SetGlobal("Urglite_lamentations","COM021",1)
+  SetGlobal("salle_glace","COM021",1)
+  SetGlobalTimer("Lamentations","COM021",8)
+  
+  //CreateCreature("MINSC",[2700.1790],12)   
+END

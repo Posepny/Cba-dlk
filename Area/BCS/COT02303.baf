@@ -1,0 +1,149 @@
+IF
+ IsOverMe(PLAYER1)
+ Global("P1_arrivee","COM023",0)
+ Global("com021P1","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("P1_arrivee","COM023",1)
+ SetGlobal("com021P1","GLOBAL",0)
+ 
+ //CreateCreature("MINSC",[1200.600],6) // TEMOIN
+ SetInterrupt(FALSE)
+  //ForceSpell(PLAYER1,TRIGGER_TELEPORT_END) 
+  ForceSpellRES("COTPEND",PLAYER1) 
+ SetInterrupt(TRUE)
+ WAIT(3) 
+END
+
+IF
+ IsOverMe(PLAYER2)
+ Global("P2_arrivee","COM023",0)
+ Global("com021P2","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("P2_arrivee","COM023",1) 
+ //SetGlobal("com021P2","GLOBAL",0) 
+ SetInterrupt(FALSE)
+  //ForceSpell(PLAYER2,TRIGGER_TELEPORT_END) 
+  ForceSpellRES("COTPEND",PLAYER2) 
+ SetInterrupt(TRUE)
+ WAIT(3) 
+END
+
+IF
+ IsOverMe(PLAYER3)
+ Global("P3_arrivee","COM023",0)
+ Global("com021P3","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("P3_arrivee","COM023",1) 
+ SetGlobal("com021P3","GLOBAL",0) 
+ SetInterrupt(FALSE)
+  //ForceSpell(PLAYER3,TRIGGER_TELEPORT_END) 
+  ForceSpellRES("COTPEND",PLAYER3) 
+ SetInterrupt(TRUE)
+ WAIT(3) 
+END
+
+IF
+ IsOverMe(PLAYER4)
+ Global("P4_arrivee","COM023",0)
+ Global("com021P4","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("P4_arrivee","COM023",1)
+ SetGlobal("com021P4","GLOBAL",0) 
+ SetInterrupt(FALSE)
+  //ForceSpell(PLAYER4,TRIGGER_TELEPORT_END) 
+  ForceSpellRES("COTPEND",PLAYER4) 
+ SetInterrupt(TRUE)
+ WAIT(3) 
+END
+
+IF
+ IsOverMe(PLAYER5)
+ Global("P5_arrivee","COM023",0)
+ Global("com021P5","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("P5_arrivee","COM023",1) 
+ SetGlobal("com021P5","GLOBAL",0)
+ SetInterrupt(FALSE)
+  //ForceSpell(PLAYER5,TRIGGER_TELEPORT_END) 
+  ForceSpellRES("COTPEND",PLAYER5) 
+ SetInterrupt(TRUE)
+ WAIT(3) 
+END
+
+IF
+ IsOverMe(PLAYER6)
+ Global("P6_arrivee","COM023",0)
+ Global("com021P6","GLOBAL",1)
+THEN
+ RESPONSE #100
+ SetGlobal("P6_arrivee","COM023",1)
+ SetGlobal("com021P6","GLOBAL",0) 
+ SetInterrupt(FALSE)
+  //ForceSpell(PLAYER6,TRIGGER_TELEPORT_END) 
+  ForceSpellRES("COTPEND",PLAYER6) 
+ SetInterrupt(TRUE)
+ WAIT(3) 
+END
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+/*
+IF
+ //RANGE([PC],5)
+ //Entered([PC])
+ IsOverMe([PC])
+THEN
+ RESPONSE #100
+ 	SetInterrupt(FALSE)
+  ForceSpell(LastTrigger,TRIGGER_TELEPORT_END) 
+  SetInterrupt(TRUE)
+  WAIT(3) 
+END
+*/
+
+
+
+
+IF
+ RANGE(PLAYER4,8)
+ Global("P4_arrivee","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("P4_arrivee","COM023",1)  
+ CreateVisualEffectObject("SPDIMNDR",PLAYER4) 
+END
+
+IF
+ RANGE(PLAYER5,8)
+ Global("P5_arrivee","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("P5_arrivee","COM023",1)  
+ CreateVisualEffectObject("SPDIMNDR",PLAYER5) 
+END
+
+IF
+ RANGE(PLAYER6,8)
+ Global("P6_arrivee","COM023",0)
+THEN
+ RESPONSE #100
+ SetGlobal("P6_arrivee","COM023",1)  
+ CreateVisualEffectObject("SPDIMNDR",PLAYER6) 
+END
+*/
