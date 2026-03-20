@@ -1,7 +1,0 @@
-IF
- IsOVerMe(PLAYER1)
- Global("gpe_complet","COM023",2)
-THEN
- RESPONSE #100
- ActionOverride("COSPHIN",StartDialogueNoSet(PLAYER1))
-END

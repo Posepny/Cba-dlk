@@ -1,7 +1,0 @@
-// Un courant d'air froid vous glace l'échine. 
-IF
-  Entered([PC])
-THEN
-  RESPONSE #100
-  DisplayStringHead(LastTrigger,@2)  
-END

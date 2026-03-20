@@ -1,7 +1,0 @@
-// odeur chair brulée
-IF
-  Entered([PC])
-THEN
-  RESPONSE #100
-  DisplayStringHead(LastTrigger,@1)  
-END

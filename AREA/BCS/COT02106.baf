@@ -1,9 +1,0 @@
-// Grille1 fermée
-IF
- Entered([0])
-THEN
- RESPONSE #100
- 
- CloseDoor("GRILLE1") 
- PlaySound("AM0301B3")
-END

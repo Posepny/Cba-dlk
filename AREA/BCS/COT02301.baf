@@ -1,8 +1,0 @@
-IF
- Entered([PC])
- Global("Champ_force_ouvert","COM023",0)
- THEN
- RESPONSE #100  
- 
- DisplayStringHead(lastTrigger,@1)
-END

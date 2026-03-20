@@ -1,6 +1,0 @@
-IF
- Entered([PC])
-THEN
- RESPONSE #100
- DisplayStringHead(LastTrigger,@20)  // Vous distinguez,en face de vous, une porte vaguement dissimulée dans l'ombre.
-END

@@ -1,7 +1,0 @@
-IF
- ENTERED(PLAYER1)
-THEN
- RESPONSE #100
- CreateCreature("COHERAS",[400.400],10) 
-END
- 
