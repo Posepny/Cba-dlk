@@ -20,7 +20,7 @@ THEN
 END
 
 
-// Impossibilité de quitter de l'auberge dans le cadre du Mod
+// ImpossibilitÃ© de quitter de l'auberge dans le cadre du Mod
 IF
  Global("Mod_CDB","GLOBAL",1)
  Global("entree_fermee","AR7216",0)
@@ -32,7 +32,7 @@ THEN
 END
 
 
-// Suppression du groupe au bar remplacé par les nouveaux pnj à recruter ************************************************************************************
+// Suppression du groupe au bar remplacÃ© par les nouveaux pnj Ã  recruter ************************************************************************************
 IF
  Global("AR7216_1","AR7216",0)
  Global("Protecteur_baldur","GLOBAL",1)
@@ -54,7 +54,7 @@ THEN
  CreateCreature("FLAMHC",[690.485],11)
 END
 
-// Quête barni: condamner la cave et reprise de la clé.
+// QuÃªte barni: condamner la cave et reprise de la clÃ©.
 IF
  Global("Barni_quete","GLOBAL",2)  
 THEN
@@ -64,7 +64,7 @@ THEN
  TakePartyItem("Miscp61") 
 END
 
-// Préparation au recrutement dans l'auberge du heaume et de la cape *******************************************************************************************
+// PrÃ©paration au recrutement dans l'auberge du heaume et de la cape *******************************************************************************************
 // PNJ de BG1
 IF  
   Global("Protecteur_baldur","GLOBAL",1)
@@ -323,7 +323,7 @@ END
 
 
 /*  Mod Protecteur de Baldur **********************************************************************************************************************************************
-// Livraison tête du marchand de Davos
+// Livraison tÃªte du marchand de Davos
 IF
  Global("MAGASINIER_DAVOS_TETE","Global",1)
  AreaCheckObject("AR7216","PROTAGONIST")
@@ -347,7 +347,7 @@ THEN
  continue()
 END
 
-// Livraison tête de Davos
+// Livraison tÃªte de Davos
 IF
  Global("DAVOS_TETE","Global",1) 
 THEN
@@ -370,7 +370,7 @@ THEN
  continue()
 END
 
-// Livraison tête de Irma
+// Livraison tÃªte de Irma
 IF
  Global("IRMA_TETE","Global",1) 
 THEN
@@ -393,7 +393,7 @@ THEN
  continue()
 END
 
-// Réinit livraison tête
+// RÃ©init livraison tÃªte
 IF
  Global("LIVRAISON_TETE","Global",1) 
 THEN
@@ -404,7 +404,7 @@ THEN
  ActionOverride("WAITER",SetDialog("WAITER"))
 END
 
-// Quête recrutement Compagnon pour le Protecteur: si au moins deux compagnons: quête réussie
+// QuÃªte recrutement Compagnon pour le Protecteur: si au moins deux compagnons: quÃªte rÃ©ussie
 IF
  Global("quete_equipe_protecteur","Global",0)
  NumInPartyGT(3)
@@ -414,9 +414,9 @@ THEN
  
  
  SetGlobal("Msg_mission_nettoyage","Global",1) // Activation du messager des ducs pour la mission 
- // Journal quête résolue
+ // Journal quÃªte rÃ©solue
  AddexperienceParty(600)
  EraseJournalEntry(@1)
  AddJournalEntry(@2,QUEST_DONE) 
 END
-*/
+*//
