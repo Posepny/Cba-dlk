@@ -1,35 +1,34 @@
-@1=~Veuillez patienter~
+@1=~Please wait~
 
-// Quête
-@100=~Une mystérieuse cave
+// Quest
+@100=~A mysterious cellar
 
-Barni le nouveau tavernier du Heaume et de la cape s'inquiète. Son défunt père avait accès, sous sa cave, à des cellules.
+Barni, the new tavern keeper of the Helm and the Cape, is worried. His late father had access to cells under his cellar.
 
-Ne voulant pas avoir d'ennuis avec la justice, il demande mon aide. 
+Not wanting to get into trouble with the law, he asks for my help.
 
-Le mieux est d'explorer les lieux pour me faire une opinion.~
-
-
-@101=~Une mystérieuse cave
-
-Barni le nouveau tavernier du Heaume et de la cape s'inquiètait. Son défunt père avait accès, sous sa cave, à des cellules.
-
-En explorant les lieux, j'ai découvert un temple secret de Bhaal. J'ai demandé à Barni qu'il condamne l'accès à la trappe.~
+The best thing to do is explore the place myself to form an opinion.
 
 
-@102=~Une mystérieuse cave
+@101=~A mysterious cellar
 
-Barni le nouveau tavernier du Heaume et de la cape s'inquiètait. Son défunt père avait accès, sous sa cave, à des cellules.
+Barni, the new tavern keeper of the Helm and the Cloak, was worried. His late father had access to cells beneath his cellar.
 
-En explorant les lieux, j'ai découvert un temple secret de Bhaal. J'ai prétexté à Barni que le lieu était à surveiller. De ce fait, je garde la clé pour avoir un libre accès au temple.~
+While exploring the area, I discovered a secret temple of Bhaal. I asked Barni to seal off the access to the trapdoor.
 
-// Info refus
-@103=~Une mystérieuse cave
 
-Barni le nouveau tavernier du Heaume et de la cape s'inquiète. Son défunt père avait accès, sous sa cave, à des cellules.
+@102=~A mysterious cellar
 
-Ne voulant pas avoir d'ennuis avec la justice, il demande mon aide. 
+Barni, the new tavern keeper of the Helm and the Cloak, was worried. His late father had access to cells beneath his cellar.
 
-Pour le moment, j'ai des tâches plus urgente. Je retournerai le voir plus tard.~
+While exploring the area, I discovered a secret temple of Bhaal. I told Barni that the place needed surveillance. Therefore, I'm keeping the key so I have free access to the temple.
 
+// Refusal information
+@103=~A mysterious cellar
+
+Barni, the new tavern keeper of the Helm and the Cape, is worried. His late father had access to cells under his cellar.
+
+Not wanting to get into trouble with the law, he asks for my help.
+
+For now, I have more urgent tasks. I'll go back to see him later.
 
