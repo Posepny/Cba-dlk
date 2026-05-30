@@ -1,65 +1,39 @@
-// 1iere rencontre
-@1=~Ahhh Protecteur, merci de m'accorder de votre précieux temps. Voilà ce qui me tracasse.~ 
-@2=~Je viens d'hériter de cette taverne. Dans la cave, il y a une trappe que j'ai ouverte. J'ai descendu l'échelle et voilà que je me retrouve dans une salle avec pleins de cellules!~
-@3=~Protecteur, je vous jure que j'ignore tout des activités de mon défunt père et je ne veux pas d'ennuis avec la justice. Accepteriez-vous de m'aider?~  
-@4=~En tant que Protecteur de Baldur, je suis toujours prêt à aider un honnête citadin. Je vais tirer cette affaire au clair.~ 
-@5=~Il y a des cellules sous la taverne. Effectivement tout celà m'a l'air bien louche... Le mieux est que j'aille jeter un oeil à vôtre cave.~ 
-@6=~Oh merci, je me sens beaucoup mieux! Voici la clé de la trappe. Si vous avez besoin d'équipement, j'ai en ce moment deux marchands dans la chambre double à l'étage.~
-@7=~Avez-vous visité la cave? (l'air inquiet)~ 
 
-// galerie non explorée
-@8=~Je reviendrai vers vous dès que ce sera fait.~
+// First Meeting 
+@1=~Ahhh Protector, thank you for giving me your precious time. Here's what's been bothering me.~ 
+@2=~I just inherited this tavern. In the cellar, there's a trapdoor that I opened. I went down the ladder and found myself in a room full of cells!~ 
+@3=~Protector, I swear I know nothing of my late father's activities and I don't want any trouble with the law. Would you be willing to help me?~ 
+@4=~As Protector of Baldur, I'm always ready to help an honest citizen. I'll get to the bottom of this.~ 
+@5=~There are cells under the tavern. Indeed, this all seems very suspicious... It would be best if I went to take a look in your cellar.~ 
+@6=~Oh, thank you, I feel much better! Here's the key to the trapdoor. If you need equipment, I currently have two merchants in the double room upstairs.~ 
+@7=~Have you visited the cellar? (looking worried)~ 
 
-// Porte ouverte à nouveau / Mod terminé
-@9= ~Le lieu est effectivement malsain, il faut condamner la trappe.~ 
-@10= ~Le lieu est malsain et dangeureux. Je vais garder la clé pour m'assurer régulièrement que tout va bien.~ 
-@11= ~Vous avez raison, je vais suivre votre conseil. Merci pour votre aide Protecteur.~ 
-@12= ~ Vous feriez ça pour moi. Grâce à vous, je suis soulagé. J'avais peur de finir en prison. Merci pour votre aide Protecteur.~   
- 
-@13=~Je n'ai pas le temps pour cette affaire en ce moment.~
-@14=~Je suis désolé mais cette cave me fait peur...~
-@15=~Je reviendrai plus tard m'occuper de votre problème.~
-@16=~Non, j'ai besoin de vos services.~
-@17=~Oui, je vais explorer les lieux.~
+// unexplored gallery 
+@8=~I'll get back to you as soon as it's done.~ 
 
-// Quête cave terminée
-@18=~Vous avez besoin de mes services?~
-@19=~Oui, montrez-moi.~
-@20=~Non, je ne fais que passer.~	
-@21=~Vous êtes revenu pour la cave? (plein d'espoir)~
+// Door open again / Mod complete 
+@9= ~The place is indeed unhealthy; the trapdoor needs to be sealed.~ 
+@10= ~The place is unhealthy and dangerous. I'll keep the key to regularly check that everything is alright.~ 
+@11= ~You're right, I'll follow your advice. Thank you for your help, Protector.~ 
+@12= ~You would do that for me. Thanks to you, I'm relieved. I was afraid I'd end up in prison. Thank you for your help, Protector.~ 
+@13=~I don't have time for this matter right now.~ 
+@14=~I'm sorry, but this cellar frightens me...~ 
+@15=~I'll come back later to deal with your problem.~ 
+@16=~No, I need your services.~ 
+@17=~Yes, I'll explore the place.~ 
 
+// Cellar Quest Completed 
+@18=~You need my services?~ 
+@19=~Yes, show me.~ 
+@20=~No, I'm just passing through.~ 
+@21=~You've come back for the cellar? (hopefully)~ 
 
+// Quest 
+@100=~A mysterious cellar. Barni, the new tavern keeper of the Helm and Cloak, is worried. His late father had access to cells beneath his cellar. Not wanting to get into trouble with the law, he asks for my help. The best thing to do is explore the place to form an opinion.~ 
+@101=~A mysterious cellar. Barni, the new tavern keeper of the Helm and Cloak, was worried. His late father had access to cells beneath his cellar. While exploring, I discovered a secret temple of Bhaal. I asked Barni to seal off the trapdoor.~ 
+@102=~A mysterious cellar. Barni, the new tavern keeper of the Helm and Cloak, was worried. His late father had access to cells beneath his cellar. While exploring, I discovered a secret temple of Bhaal. I told Barni that the place needed to be monitored. Therefore, I'm keeping the key to have free access to the temple.~ 
 
-// Quête
-@100=~Une mystérieuse cave
-
-Barni le nouveau tavernier du Heaume et de la cape s'inquiète. Son défunt père avait accès, sous sa cave, à des cellules.
-
-Ne voulant pas avoir d'ennuis avec la justice, il demande mon aide. 
-
-Le mieux est d'explorer les lieux pour me faire une opinion.~
-
-
-@101=~Une mystérieuse cave
-
-Barni le nouveau tavernier du Heaume et de la cape s'inquiètait. Son défunt père avait accès, sous sa cave, à des cellules.
-
-En explorant les lieux, j'ai découvert un temple secret de Bhaal. J'ai demandé à Barni qu'il condamne l'accès à la trappe.~
-
-
-@102=~Une mystérieuse cave
-
-Barni le nouveau tavernier du Heaume et de la cape s'inquiètait. Son défunt père avait accès, sous sa cave, à des cellules.
-
-En explorant les lieux, j'ai découvert un temple secret de Bhaal. J'ai prétexté à Barni que le lieu était à surveiller. De ce fait, je garde la clé pour avoir un libre accès au temple.~
-
-// Info refus
-@103=~Une mystérieuse cave
-
-Barni le nouveau tavernier du Heaume et de la cape s'inquiète. Son défunt père avait accès, sous sa cave, à des cellules.
-
-Ne voulant pas avoir d'ennuis avec la justice, il demande mon aide. 
-
-Pour le moment, j'ai des tâches plus urgente. Je retournerai le voir plus tard.~
+// Info refus 
+@103=~A mysterious cellar. Barni, the new tavern keeper of the Helm and Cloak, is worried. His late father had access to cells beneath his cellar. Not wanting to get into trouble with the law, he asks for my help. For the moment, I have more urgent tasks. I will return to see him later.~
 
 
