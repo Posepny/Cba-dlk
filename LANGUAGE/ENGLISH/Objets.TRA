@@ -400,1695 +400,636 @@ Typ umiejętności: Włócznia
 Typ: Broń dwuręczna
 Wymagana siła: 5 
 Nie może używać: Kapłan Mag Złodziej~
+
 // Łuk //@ = //@ = @
+
+
  158 = ~Długi łuk +1~
- @159 = ~Długi łuk +1 celność Ulepszony długi łuk, który pozwala na oddawanie celnych strzałów. PARAMETRY: Umiejętność: Celny strzał raz dziennie (czas trwania 30 sekund) TraK0 +4 TraK0: +2 Obrażenia: +1 Waga: 3 Współczynnik szybkości: 5 Typ umiejętności: Długi łuk Typ: Broń dwuręczna Wymagana siła: 6 Nie może używać: Druid Kapłan Mag Łotrzyk~ // KONIEC Ebony Unicorn Company ******************************************************************************************************************************************** // Wiadomość od Książąt ************************************************************************************************************************************
+ @159 = ~Długi łuk +1 celność Ulepszony długi łuk, który pozwala na oddawanie celnych strzałów. 
+
+PARAMETRY:
+Umiejętność: Celny strzał raz dziennie (czas trwania 30 sekund) 
+TraK0 +4 TraK0: +2 
+Obrażenia: +1 
+Waga: 3 
+Współczynnik szybkości: 5
+Typ umiejętności: Długi łuk 
+Typ: Broń dwuręczna
+Wymagana siła: 6 
+Nie może używać: Druid Kapłan Mag Łotrzyk~
+
+// KONIEC Ebony Unicorn Company ********************************************************************************************************************************************
+// Wiadomość od Książąt ************************************************************************************************************************************
  @125 =~Wiadomość od Książąt~
- @126 =~Obrońco, mamy do powierzenia Ci misję najwyższej wagi. Prosimy o udanie się do pałacu tak szybko, jak to możliwe. Pozdrawiam, Belt, Książę Baldura~ // Wiadomość od Lii do Lady Srebrnej Tarczy
+ @126 =~Obrońco, mamy do powierzenia Ci misję najwyższej wagi. Prosimy o udanie się do pałacu tak szybko, jak to możliwe. Pozdrawiam, Belt, Książę Baldura~
+
+// Wiadomość od Lii do Lady Srebrnej Tarczy
  @161 =~Wiadomość od Lii~
- @162Pani Srebrna Tarczo, słyszałem, że źle się czujesz. Proszę, wiedz, że z przyjemnością wyślę ci mojego osobistego uzdrowiciela. Z poważaniem, Liia, Księżna Baldura. // KONIEC Wiadomość od Książąt ************************************************************************************************************************************ // BURSZTYNOWE GOLEMY ***************************************************************************************************************************************** // Bursztynowa Laska Emilii
+ @162Pani Srebrna Tarczo, słyszałem, że źle się czujesz. Proszę, wiedz, że z przyjemnością wyślę ci mojego osobistego uzdrowiciela. Z poważaniem, Liia, Księżna Baldura. 
+// KONIEC Wiadomość od Książąt ************************************************************************************************************************************
+// BURSZTYNOWE GOLEMY ***************************************************************************************************************************************** 
+// Bursztynowa Laska Emilii
+
  @163 = ~Laska +2~
- @164 = ~Bursztynowa Laska Emilii Laska wykonana z przeplatających się żył bursztynu, na końcu której znajduje się niebieski kulisty kamień. PARAMETRY: Umiejętność: Bursztynowy Ogień (odpowiednik Podpalacza Aznaraza) / 1 raz dziennie TraK0: +2 Obrażenia: +2 Waga: 6 Współczynnik szybkości: 3 Typ umiejętności: Laska Wymagana siła: 5 Nie może używać: Druid Kapłan Wojownik Łotrzyk Paladyn~ //Pierścień Bursztynowy
+ @164 = ~Bursztynowa Laska Emilii Laska wykonana z przeplatających się żył bursztynu, na końcu której znajduje się niebieski kulisty kamień. 
+
+PARAMETRY: 
+Umiejętność: Bursztynowy Ogień (odpowiednik Podpalacza Aznaraza) / 1 raz dziennie 
+TraK0: +2 
+Obrażenia: +2
+Waga: 6 
+Współczynnik szybkości: 3 
+Typ umiejętności: Laska 
+Wymagana siła: 5 
+Nie może używać: Druid Kapłan Wojownik Łotrzyk Paladyn~ 
+
+//Pierścień Bursztynowy
+
  @165 = ~Pierścień Bursztynowy~
- @166 = ~Pierścień Bursztynowy Emilii Pierścień otoczony złotem i bursztynem zawierający kilka osadzonych rubinów. PARAMETRY: Umiejętność: Zapamiętuje dodatkowe zaklęcie 3. i 4. poziomu. Nie może używać: Druid Kapłan Wojownik Łotrzyk Paladyn~ // Szata Niezniszczalności
+ @166 = ~Pierścień Bursztynowy Emilii Pierścień otoczony złotem i bursztynem zawierający kilka osadzonych rubinów. 
+
+PARAMETRY:
+Umiejętność: Zapamiętuje dodatkowe zaklęcie 3. i 4. poziomu. 
+Nie może używać: Druid Kapłan Wojownik Łotrzyk Paladyn~
+
+// Szata Niezniszczalności
  @167 = ~Szata Niezniszczalności~
- @168 = ~Szata Niezniszczalności Emilii Szata maga w kolorach firmy (pomarańczowy i niebieski). PARAMETRY: Umiejętność: 10% odporności na magię Niewielka niewrażliwość na czar kuli / raz dziennie Waga: 3 Nie mogą używać: Druid Kapłan Wojownik Łotrzyk Paladyn~ // Płaszcz Emilii
+ @168 = ~Szata Niezniszczalności Emilii Szata maga w kolorach firmy (pomarańczowy i niebieski). 
+
+PARAMETRY: 
+Umiejętność: 10% odporności na magię 
+Niewielka niewrażliwość na czar kuli / raz dziennie
+Waga: 3 
+Nie mogą używać: Druid Kapłan Wojownik Łotrzyk Paladyn~
+
+// Płaszcz Emilii
  @169 = ~Płaszcz Ocalenia~
- @170 = ~Płaszcz Ocalenia Emilii Duży płaszcz w kolorach firmy (pomarańczowy i niebieski). PARAMETRY: Umiejętność: +2 do rzutów obronnych +1 do KP Waga: 3 Nie mogą używać:~ // Księga Badań Bursztynu
+ @170 = ~Płaszcz Ocalenia Emilii Duży płaszcz w kolorach firmy (pomarańczowy i niebieski).
+
+PARAMETRY: 
+
+Umiejętność: +2 do rzutów obronnych 
++1 do KP
+Waga: 3 Nie mogą używać:~
+
+// Księga Badań Bursztynu
  @171 = ~Książka Badań~
- @172 = ~Księga Badań Bursztynu Golem Ta księga najwyraźniej zawiera próby i wyniki badań firmy nad właściwościami bursztynu. Wskazuje, jak używać bursztynu do tworzenia artefaktów, ale notatki są dla ciebie bardzo skomplikowane i niezrozumiałe. Ta księga jest niewątpliwie bardzo cenna dla maga doświadczonego w tworzeniu artefaktów. Waga: 5 Nie nadaje się do użycia przez: ~ // Bursztynowa Szata Maga Golema
+ @172 = ~Księga Badań Bursztynu Golem Ta księga najwyraźniej zawiera próby i wyniki badań firmy nad właściwościami bursztynu. Wskazuje, jak używać bursztynu do tworzenia artefaktów, ale notatki są dla ciebie bardzo skomplikowane i niezrozumiałe. Ta księga jest niewątpliwie bardzo cenna dla maga doświadczonego w tworzeniu artefaktów. 
+
+Waga: 5 
+Nie nadaje się do użycia przez: ~
+
+// Bursztynowa Szata Maga Golema
  @173 = ~Bursztynowa Szata Maga Golema~
- @174 = ~Bursztynowa Szata Maga Golema Szata maga w kolorach firmy (pomarańczowy i niebieski). PARAMETRY: Umiejętność: +1 do wszystkich rzutów obronnych Waga: 5 Nie nadaje się do użycia przez:
-Druid, Kapłan, Wojownik, Łotrzyk, Paladyn~ // Mały cedrowy kostur Bursztynowych Golemów @175= ~Laska +1~
- @176 = ~Mała Laska Cedrowa Bursztynowych Golemów Laska wykonana z białego drewna cedrowego z bursztynową kulą na czubku. PARAMETRY: Umiejętność: Zaklęcie Magiczny Pocisk / 1 raz dziennie (liczba pocisków zależy od poziomu rzucającego) TraK0: +1 Obrażenia: +1 Waga: 4 Współczynnik szybkości: 3 Typ umiejętności: Laska Wymagana Siła: 5 Nie może używać: Druid Kapłan Wojownik Łotrzyk Paladyn~ // Duża Laska Cedrowa Bursztynowych Golemów
+ @174 = ~Bursztynowa Szata Maga Golema Szata maga w kolorach firmy (pomarańczowy i niebieski). 
+
+PARAMETRY: 
+Umiejętność: +1 do wszystkich rzutów obronnych 
+Waga: 5 
+Niezdatne do użycia przez:
+Druid, Kapłan, Wojownik, Łotrzyk, Paladyn~
+
+// Mały cedrowy kostur Bursztynowych Golemów
+
+@175= ~Laska +1~
+ @176 = ~Mała Laska Cedrowa Bursztynowych Golemów Laska wykonana z białego drewna cedrowego z bursztynową kulą na czubku.
+
+PARAMETRY: 
+Umiejętność: Zaklęcie Magiczny Pocisk / 1 raz dziennie (liczba pocisków zależy od poziomu rzucającego) 
+TraK0: +1 
+Obrażenia: +1 
+Waga: 4 
+Współczynnik szybkości: 3
+Typ umiejętności: Laska 
+Wymagana Siła: 5
+Nie może używać: Druid Kapłan Wojownik Łotrzyk Paladyn~ 
+
+// Duża Laska Cedrowa Bursztynowych Golemów
  @177 = ~Laska +2~
- @178 = ~Major Cedar Staff of the Amber Golems Laska wykonana z białego drewna cedrowego z żyłkami bursztynu z bursztynową kulą na czubku. PARAMETRY: Umiejętność: Zaklęcie Magiczny Pocisk / 2 razy dziennie (liczba pocisków zależy od poziomu rzucającego) TraK0: +2 Obrażenia: +2 Waga: 4 Współczynnik szybkości: 3 Typ umiejętności: Laska Wymagana siła: 5 Nie mogą używać: Druid Kapłan Wojownik Łotrzyk Paladyn~ // Zwój Naprawy Bursztynowego Golema
+ @178 = ~Major Cedar Staff of the Amber Golems Laska wykonana z białego drewna cedrowego z żyłkami bursztynu z bursztynową kulą na czubku. 
+
+PARAMETRY: 
+Umiejętność: Zaklęcie Magiczny Pocisk / 2 razy dziennie (liczba pocisków zależy od poziomu rzucającego) 
+TraK0: +2 
+Obrażenia: +2 
+Waga: 4 
+Współczynnik szybkości: 3
+Typ umiejętności: Laska 
+Wymagana siła: 5 
+Nie mogą używać: Druid Kapłan Wojownik Łotrzyk Paladyn~ 
+
+// Zwój Naprawy Bursztynowego Golema
  @179 = ~Zwój~
- @180 = ~Naprawa Bursztynowego Golema (Przemiana) Poziom: 5 Zasięg: 20 m Czas trwania: 3 sekundy Czas rzucania: 3 Obszar działania: Rzut obronny: Nie Magiczna wiązka leci w kierunku docelowego stworzenia. Jeśli stworzenie jest Bursztynowym Golemem, naprawia się z szybkością 10 punktów na sekundę przez 3 sekundy. Nie mogą używać: Druid, Kapłan, Wojownik, Łotrzyk, Paladyn~ // Niebieski Kaptur 
+ @180 = ~Naprawa Bursztynowego Golema (Przemiana) 
+Poziom: 5 
+Zasięg: 20 m 
+Czas trwania: 3 sekundy 
+Czas rzucania: 3
+Obszar działania: 
+Rzut obronny: Nie
+Magiczna wiązka leci w kierunku docelowego stworzenia. Jeśli stworzenie jest Bursztynowym Golemem, naprawia się z szybkością 10 punktów na sekundę przez 3 sekundy. 
+Nie mogą używać: Druid, Kapłan, Wojownik, Łotrzyk, Paladyn~
+
+// Niebieski Kaptur 
  @181 = ~Niebieski Kaptur~
- @182 = ~Niebieski Kaptur Arkana Niebieski kaptur osadzony bursztynowymi klejnotami. PARAMETRY: Klasa pancerza Bonus: brak Specjalne: chroni przed trafieniami krytycznymi Umiejętność: +2 rzuty obronne przeciwko czarom +2 rzuty obronne przeciwko różdżkom Waga: 1 Nie może używać:~ // Płaszcz Arkana
+ @182 = ~Niebieski Kaptur Arkana Niebieski kaptur osadzony bursztynowymi klejnotami. 
+
+PARAMETRY: 
+Klasa pancerza Bonus: brak 
+Specjalne: chroni przed trafieniami krytycznymi 
+Umiejętność: +2 rzuty obronne przeciwko czarom +2 rzuty obronne przeciwko różdżkom 
+Waga: 1
+Nie może używać:~
+
+// Płaszcz Arkana
  @183 = ~Płaszcz Odbicia~
- @184 = ~Płaszcz Odbicia Arkana Duży płaszcz w kolorach firmy (pomarańczowy i niebieski). PARAMETRY: Umiejętność: Mniejsze Odbicie Czaru Zaklęcie / 1 na dzień Waga: 2 Nie może używać: Druid Kapłan Wojownik Łotrzyk Paladyn~ // Sztabki Bursztynu
+ @184 = ~Płaszcz Odbicia Arkana Duży płaszcz w kolorach firmy (pomarańczowy i niebieski).
+
+PARAMETRY: 
+Umiejętność: Mniejsze Odbicie Czaru Zaklęcie / 1 na dzień 
+Waga: 2 
+Nie może używać: Druid Kapłan Wojownik Łotrzyk Paladyn~ 
+
+// Sztabki Bursztynu
  @196 = ~Sztabki Bursztynu~
- @197 = ~Te sztabki wyglądają dokładnie jak duże sztabki złota, z wyjątkiem ciemnopomarańczowego koloru. Jest duża szansa, że ​​te sztabki są cenne. Teraz pozostało tylko znaleźć dla nich kupca lub zastosowanie. Jedno jest pewne, są strasznie ciężkie! PARAMETRY: brak Waga: 50 Nie może być użyte przez:~ // Bursztynowe szczątki golema
+ @197 = ~Te sztabki wyglądają dokładnie jak duże sztabki złota, z wyjątkiem ciemnopomarańczowego koloru. Jest duża szansa, że ​​te sztabki są cenne. Teraz pozostało tylko znaleźć dla nich kupca lub zastosowanie. Jedno jest pewne, są strasznie ciężkie!
+
+PARAMETRY: brak
+Waga: 50 
+Nie może być użyte przez:~
+
+// Bursztynowe szczątki golema
  @198 = ~Bursztynowe szczątki~
- @199Pozostałości bursztynowego golema tworzą stertę kamieni o różnych rozmiarach. Przy odrobinie szczęścia będzie sposób na wykorzystanie tych szczątków lub ich sprzedaż. PARAMETRY: brak Waga: 25 Nie można użyć przez: Dziennik Emilii
- @200 Dziennik Emilii
- @201 Czytałeś raczej nieciekawą książkę aż do ostatnich kilku fragmentów: 5. dnia Eleinte, 1370: Wojna z Amn nie dojdzie do skutku, a książęta nie dotrzymają umowy. Nic w tym zaskakującego; obietnice zawsze składa się, gdy jest się w potrzebie. Powinienem być zły, ale tak naprawdę nie jestem. Ta wojna wydawała się kompletnym wymysłem i miałem rację! Czas, aby bractwo znów ruszyło w drogę. Faktoria handlowa w Melfin wydaje się dobrym celem podróży. Karawaningowcy zawsze potrzebują ochrony. 8. dnia Eleinte, 1370: Macros, szef ochrony książąt, złożył nam wizytę. Zamówił u nas kilka Kamiennych Golemów, aby zapewnić bezpieczeństwo pałacu. Przyjąłem jego ofertę i dlatego zostaniemy tu na jakiś czas. Zaintrygowany naszym wykorzystaniem bursztynu, pragnie dowiedzieć się więcej o tym materiale. 18 stycznia 1370: Macros okazuje się być bardzo dobrym uczniem, pomimo swojej zadufanej miny. Pragnie władzy, jak wielu magów... Podejrzewam, że chce nauczyć się, jak tworzyć nasze słynne Bursztynowe Golemy i trochę za bardzo interesuje się moją książką, w której gromadzę wiedzę naszego bractwa. Będę miał na niego oko. Sytuacja może się zaostrzyć...~ // PRZEDMIOTY Z BURSZTYNOWEGO GOLEMA **************************************************************************************************************************************** // PRZEDMIOTY Z OBSYDIANOWEGO BARANU ************************************************************************************************************************************************
+ @199 = ~ Pozostałości bursztynowego golema tworzą stertę kamieni o różnych rozmiarach. Przy odrobinie szczęścia będzie sposób na wykorzystanie tych szczątków lub ich sprzedaż. 
+
+PARAMETRY: brak 
+Waga: 25 
+Nie można użyć przez: Dziennik Emilii
+
+ @200 = ~ Dziennik Emilii
+ @201 = ~Czytałeś raczej nieciekawą książkę aż do ostatnich kilku fragmentów: 5. dnia Eleinte, 1370: Wojna z Amn nie dojdzie do skutku, a książęta nie dotrzymają umowy. Nic w tym zaskakującego; obietnice zawsze składa się, gdy jest się w potrzebie. Powinienem być zły, ale tak naprawdę nie jestem. Ta wojna wydawała się kompletnym wymysłem i miałem rację! Czas, aby bractwo znów ruszyło w drogę. Faktoria handlowa w Melfin wydaje się dobrym celem podróży. Karawaningowcy zawsze potrzebują ochrony. 8. dnia Eleinte, 1370: Macros, szef ochrony książąt, złożył nam wizytę. Zamówił u nas kilka Kamiennych Golemów, aby zapewnić bezpieczeństwo pałacu. Przyjąłem jego ofertę i dlatego zostaniemy tu na jakiś czas. Zaintrygowany naszym wykorzystaniem bursztynu, pragnie dowiedzieć się więcej o tym materiale. 18 stycznia 1370: Macros okazuje się być bardzo dobrym uczniem, pomimo swojej zadufanej miny. Pragnie władzy, jak wielu magów... Podejrzewam, że chce nauczyć się, jak tworzyć nasze słynne Bursztynowe Golemy i trochę za bardzo interesuje się moją książką, w której gromadzę wiedzę naszego bractwa. Będę miał na niego oko. Sytuacja może się zaostrzyć...~ // PRZEDMIOTY Z BURSZTYNOWEGO GOLEMA **************************************************************************************************************************************** // PRZEDMIOTY Z OBSYDIANOWEGO BARANU ************************************************************************************************************************************************
  @203 = ~Tarcza Włóczni +1~
- @204 = ~Tarcza Nazatha. Tarcza wykonana z obsydianu przedstawiająca liczne cierpiące twarze. Wpatrując się w tarczę, w końcu zauważa się, że twarze się poruszają. PARAMETRY: Klasa Pancerza Premia: 2 Specjalna: +2 przeciwko broni dystansowej Wymagana siła: 15 Umiejętność: Czar Horroru raz dziennie. Waga: 10 Nie może być użyty przez: Mag Druid Łotrzyk Łowca Charakter DOBRY lub NEUTRALNY~
+ @204 = ~Tarcza Nazatha. Tarcza wykonana z obsydianu przedstawiająca liczne cierpiące twarze. Wpatrując się w tarczę, w końcu zauważa się, że twarze się poruszają. 
+
+PARAMETRY: 
+Klasa Pancerza Premia: 2 
+Specjalna: +2 przeciwko broni dystansowej 
+Wymagana siła: 15 
+Umiejętność: Czar Horroru raz dziennie.
+Waga: 10 
+Nie może być użyty przez: Mag Druid Łotrzyk Łowca 
+Charakter DOBRY lub NEUTRALNY~
 
  @206 = ~Buława +2~
- @207 = ~Buława Nazath. Obsydianowa buława, której koniec przedstawia głowę z dwoma zakrzywionymi rogami. PARAMETRY: THc0: +2 Obrażenia: 1K6+3 i +2 od ognia Typ obrażeń: obuchowe Waga: 8 Współczynnik szybkości: 6 Typ umiejętności: Buława Typ: broń jednoręczna Wymagana siła: 10 Nie może być użyty przez: Mag Druid Łotrzyk Charakter DOBRY lub NEUTRALNY~
+ @207 = ~Buława Nazath. Obsydianowa buława, której koniec przedstawia głowę z dwoma zakrzywionymi rogami.
+
+PARAMETRY: 
+THac0: +2 
+Obrażenia: 1K6+3 i +2 od ognia 
+Typ obrażeń: obuchowe
+Waga: 8 
+Współczynnik szybkości: 6 
+Typ umiejętności: Buława
+Typ: broń jednoręczna 
+Wymagana siła: 10 
+Nie może być użyty przez: Mag Druid Łotrzyk 
+Charakter DOBRY lub NEUTRALNY~
 
  @208 = ~Buława +1~
- @209= ~Buława Czempiona. Obsydianowa buława, której koniec ma kształt głowy ze złowieszczym uśmiechem. PARAMETRY: Specjalne umiejętności: Czar: Niezdrowy Urok 1 dziennie. THc0: +1 Obrażenia: 1k6+2 Rodzaj obrażeń: Tępe Waga: 8 Współczynnik szybkości: 6 Rodzaj umiejętności: Buława Typ: Broń jednoręczna Wymagana siła: 10 Nie może używać: Mag Druid Łotrzyk Charakter DOBRY lub NEUTRALNY~
+ @209= ~Buława Czempiona. Obsydianowa buława, której koniec ma kształt głowy ze złowieszczym uśmiechem. 
+
+PARAMETRY: 
+Specjalne umiejętności: Czar: Niezdrowy Urok 1 dziennie. 
+THac0: +1 
+Obrażenia: 1k6+2 
+Rodzaj obrażeń: Tępe 
+Waga: 8 
+Współczynnik szybkości: 6
+Rodzaj umiejętności: Buława 
+Typ: Broń jednoręczna Wymagana siła: 10 
+Nie może używać: Mag Druid Łotrzyk 
+Charakter DOBRY lub NEUTRALNY~
 
  @210 = ~Kula +2~
- @211 = ~Kula Obsydianowego Barana. Kula wyrzeźbiona z obsydianowego kamienia, poddanego magicznemu efektowi. PARAMETRY: Obrażenia: 1K4 +2 Typ obrażeń: Pocisk (Przebijające) Waga: 0 Broń miotana: Proca Nie można używać przez: Dobre lub Neutralne Nastawienie~
+ @211 = ~Kula Obsydianowego Barana. Kula wyrzeźbiona z obsydianowego kamienia, poddanego magicznemu efektowi. 
+
+PARAMETRY:
+Obrażenia: 1K4 +2 
+Typ obrażeń: Pocisk (Przebijające) 
+Waga: 0 
+Broń miotana: Proca
+Nie można używać przez: Charakter Dobry lub Neutralne~
 
  @212 = ~Włócznie +1~
- @213 = ~Tarcza Obsydianowych Baranów Ciemna tarcza przedstawiająca ludzką czaszkę z dwoma zakrzywionymi rogami. PARAMETRY: Premia do klasy pancerza: 2 Specjalne: +2 przeciwko broni dystansowej Wymagana siła: 15 Waga: 10 Nie można używać przez: Mag Druid Łotrzyk Łowca Dobre lub Neutralne Nastawienie~
+ @213 = ~Tarcza Obsydianowych Baranów Ciemna tarcza przedstawiająca ludzką czaszkę z dwoma zakrzywionymi rogami. 
+
+PARAMETRY: 
+Premia do klasy pancerza: 2
+Specjalne: +2 przeciwko broni dystansowej
+Wymagana siła: 15 
+Waga: 10 
+Nie można używać przez: Mag Druid Łotrzyk Łowca 
+Charakter Dobry lub Neutralny~
 
 
  @214 = ~Miecz Bękarci +3~
- @215 = ~Miecz Bękarci Obsydianowych Baranów To bez wątpienia miecz wykonany z obsydianu i Altaira z Argolu. Dla takiego czempiona to bez wątpienia stosowny koniec. PARAMETRY: Umiejętność: Prędkość: +1 do ataku przez 30 sekund raz dziennie. THac0: +3 Obrażenia: 2K4 +3 Typ obrażeń: Cięte Waga: 7 Współczynnik szybkości: 6 Typ umiejętności: Miecz bękarci Typ: Broń jednoręczna Wymagana siła: 5 Nie może użyć: Mag Druid Łotrzyk Kapłan Charakter DOBRY lub NEUTRALNY~
+ @215 = ~Miecz Bękarci Obsydianowych Baranów To bez wątpienia miecz wykonany z obsydianu i Altaira z Argolu. Dla takiego czempiona to bez wątpienia stosowny koniec. 
+
+PARAMETRY: 
+Umiejętność: Prędkość: +1 do ataku przez 30 sekund raz dziennie. 
+THac0: +3 
+Obrażenia: 2K4 +3 
+Typ obrażeń: Cięte
+Waga: 7
+Współczynnik szybkości: 6 
+Typ umiejętności: Miecz bękarci
+Typ: Broń jednoręczna 
+Wymagana siła: 5 
+Nie może użyć: Mag Druid Łotrzyk Kapłan
+Charakter DOBRY lub NEUTRALNY~
 
 
  @216 = ~Kamień~
- @217 = ~Obsydianowa skała. Lśniąca, czarna skała, najwyraźniej używana do wytwarzania artefaktów Obsydianowego barana. W obecnej formie brakuje ci wiedzy, aby jej użyć. Być może znajdziesz kogoś, kto potrafi ją wykonać lub od ciebie kupić. Nie może użyć:~
+ @217 = ~Obsydianowa skała. Lśniąca, czarna skała, najwyraźniej używana do wytwarzania artefaktów Obsydianowego barana. W obecnej formie brakuje ci wiedzy, aby jej użyć. Być może znajdziesz kogoś, kto potrafi ją wykonać lub od ciebie kupić. 
+Nie może użyć:~
 
 
  @218 = ~Słoik~
- @219 = ~Słoik z krwią Obsydianowego barana. Słoik zawierający organy wyraźnie pobrane od ofiar. Można założyć, że te organy są zjadane lub wykorzystywane do tworzenia artefaktów. Niedostępne dla: ~
+ @219 = ~Słoik z krwią Obsydianowego barana. Słoik zawierający organy wyraźnie pobrane od ofiar. Można założyć, że te organy są zjadane lub wykorzystywane do tworzenia artefaktów. 
+
+Niedostępne dla: ~
 
 
  @220 = ~Czarna Zbroja Płytowa~
- @221 = ~Zbroja Płytowa Obsydianowego Barana Klasyczna zbroja płytowa, z tą różnicą, że została całkowicie pokryta czernią. Każdy członek kompanii posiada zbroję tego typu. PARAMETRY: Klasa Pancerza: 2 Waga: 50 Wymagana Siła: 12 Niedostępne dla: Bard Druid Mag Łotrzyk~
+ @221 = ~Zbroja Płytowa Obsydianowego Barana Klasyczna zbroja płytowa, z tą różnicą, że została całkowicie pokryta czernią. Każdy członek kompanii posiada zbroję tego typu. 
+
+PARAMETRY: 
+Klasa Pancerza: 2 
+Waga: 50
+Wymagana Siła: 12
+Niedostępne dla: Bard Druid Mag Łotrzyk~
 
  @222 = ~Skrzynia~
- @223 = ~Skrzynia Nazatha Obsydianowa skrzynia używana przez Nazatha. Niedostępne dla:
+ @223 = ~Skrzynia Nazatha Obsydianowa skrzynia używana przez Nazatha.
+Niedostępne dla:
 
 ~ @224 = ~Mikstura Krwi~
-@225 = ~Mikstura Krwi Obsydianowych Baranów Kolor, konsystencja, a nawet smak nie pozostawiają wątpliwości. Ta mikstura została sporządzona z ofiar Obsydianowych Baranów. PARAMETRY: Siła: +2 Rzut obronny: +2 Nie może użyć: Bard Mag Kapłan Druid Łotrzyk~
+@225 = ~Mikstura Krwi Obsydianowych Baranów Kolor, konsystencja, a nawet smak nie pozostawiają wątpliwości. Ta mikstura została sporządzona z ofiar Obsydianowych Baranów.
+
+PARAMETRY: 
+Siła: +2 
+Rzut obronny: +2
+Nie może użyć: Bard Mag Kapłan Druid Łotrzyk~
 
 
  @226 = ~Sfera~
- @227 = ~Sfera Sin Carny Przedmiot przedstawia czarnego smoka wykonanego z obsydianu, w którym osadzona jest krwistoczerwona kryształowa kula. Nazath niewątpliwie otrzymał rozkazy od Sin Carny za pośrednictwem tej kuli. Możliwe, że uda się skontaktować z samą Sin Carną. Nie może użyć: Dobry lub Neutralny Charakter~
+ @227 = ~Sfera Sin Carny Przedmiot przedstawia czarnego smoka wykonanego z obsydianu, w którym osadzona jest krwistoczerwona kryształowa kula. Nazath niewątpliwie otrzymał rozkazy od Sin Carny za pośrednictwem tej kuli. Możliwe, że uda się skontaktować z samą Sin Carną.
+
+Nie może użyć: Charakter Dobry lub Neutralny ~
  
  @228 = ~Księga~
- @229 = ~Księga Obsydianowych Baranów Ta księga zawiera różne „przepisy” na wytwarzanie artefaktów Obsydianowych Baranów. Dla nowicjusza takiego jak ty, wytwarzanie tych przedmiotów jest niemożliwe. Być może znajdziesz kogoś, kto potrafi. Niemożliwy do użycia przez: Dobre lub Neutralne Nastawienie~
+ @229 = ~Księga Obsydianowych Baranów Ta księga zawiera różne „przepisy” na wytwarzanie artefaktów Obsydianowych Baranów. Dla nowicjusza takiego jak ty, wytwarzanie tych przedmiotów jest niemożliwe. Być może znajdziesz kogoś, kto potrafi. 
+
+Niemożliwy do użycia przez: Charaktery Dobre lub Neutralne ~
  
  
  @230 = ~Horned Helmet~
- @231 = ~Nazath's Helmet Hełm przypomina ludzką czaszkę z dwoma zakrzywionymi rogami. W przeciwieństwie do klasycznego hełmu metal został zastąpiony obsydianem, z którego emanuje wysoka koncentracja magii. Jego wygląd jest odpychający. Parametry: Klasa pancerza Bonus: brak Specjalny: chroni przed trafieniami krytycznymi Charyzma -2 odporność na strach Waga: 2 Niemożliwy do użycia przez: Mag Bard Łotrzyk Dobre lub Neutralne Nastawienie~
+ @231 = ~Nazath's Helmet Hełm przypomina ludzką czaszkę z dwoma zakrzywionymi rogami. W przeciwieństwie do klasycznego hełmu metal został zastąpiony obsydianem, z którego emanuje wysoka koncentracja magii. Jego wygląd jest odpychający.
+
+Parametry: 
+Klasa pancerza Bonus: brak
+Specjalny: chroni przed trafieniami krytycznymi Charyzma -2 odporność na strach 
+Waga: 2 
+Niemożliwy do użycia przez: Mag Bard Łotrzyk 
+Charaktery Dobre lub Neutralne ~
  
  
  @232 = ~Horned Helmet~
- @233 = ~Obsydianowy Baran Hełm Czempiona Hełm przypomina ludzką czaszkę z dwoma zakrzywionymi rogami. Liczne grawerowane runy nadają hełmowi magiczną aurę. Parametry: Klasa pancerza Bonus: Brak Specjalny: Chroni przed trafieniami krytycznymi Charyzma -2 Siła +1 Waga: 2 Nie może używać: Mag Bard Łotrzyk Charakter DOBRY lub NEUTRALNY~
+ @233 = ~Obsydianowy Baran Hełm Czempiona Hełm przypomina ludzką czaszkę z dwoma zakrzywionymi rogami. Liczne grawerowane runy nadają hełmowi magiczną aurę. 
+
+Parametry: 
+Klasa pancerza Bonus: Brak 
+Specjalny: Chroni przed trafieniami krytycznymi
+Charyzma -2
+Siła +1 
+Waga: 2 
+Nie może używać: Mag Bard Łotrzyk 
+Charakter DOBRY lub NEUTRALNY~
 
 
  @234 = ~Zbroja płytowa +1~
- @235 = ~Zbroja płytowa Nazath Zbroja płytowa wykonana z kości wzmocnionej obsydianem, zapewniająca pancerzowi wysoką odporność na ciosy i odrażający wygląd. PARAMETRY: Klasa pancerza: 2 Odporność na ciosy -20% (cięcie, obuch, przebicie i zmiażdżenie) Charyzma -1 Waga: 40 Wymagana siła: 12 Nie może używać: Bard Druid Mag Łotrzyk Charakter DOBRY lub NEUTRALNY~
+ @235 = ~Zbroja płytowa Nazath Zbroja płytowa wykonana z kości wzmocnionej obsydianem, zapewniająca pancerzowi wysoką odporność na ciosy i odrażający wygląd. 
+
+PARAMETRY: 
+Klasa pancerza: 2
+Odporność na ciosy -20% (cięcie, obuch, przebicie i zmiażdżenie) 
+Charyzma -1 
+Waga: 40 
+Wymagana siła: 12
+Nie może używać: Bard Druid Mag Łotrzyk
+Charakter DOBRY lub NEUTRALNY~
 
 
  @236 = ~Zbroja płytowa +1~
- @237= ~Obsydianowy Baran Czempiona Płytowa Zbroja wykonana z kości wzmocnionych obsydianem, nasączonych krwawą kąpielą, co daje pancerzowi dużą odporność na ciosy i odpychający wygląd. PARAMETRY: Klasa Zbroi: 2 Odporność na ciosy +15% (cięcie, obuch, przebicie i zmiażdżenie) Odporność na ogień +15 Charyzma -2 Waga: 40 Wymagana siła: 12 Nie może używać: Bard Druid Mag Łotrzyk Charakter DOBRY lub NEUTRALNY~ // Mercenary Helmet
- @257 = ~Horned Helmet~
- @258 = ~Obsydianowy Baran Hełm ??? Parametry: Klasa Zbroi Bonus: brak Specjalny: chroni przed trafieniami krytycznymi Waga: 2 Nie może używać: Mag Bard Łotrzyk~ // Child's Body @263= ~Corpse~ @264= ~Child's Corpse. Ciało nosi ślady gwałtownej śmierci. Zostało pozbawione krwi.~ // Butelka Krwi @267=~Butelka~ @268=~Butelka Krwi Wszystko wygląda jak butelka wina, ale smak jest inny...~ // KONIEC PRZEDMIOTÓW OBSIDIAN RAM ********************************************************************************************************************************************** // PRZEDMIOTY ALTAIRA ARGOL ****************************************************************************************************************************************** // Hełm
+ @237= ~Obsydianowy Baran Czempiona Płytowa Zbroja wykonana z kości wzmocnionych obsydianem, nasączonych krwawą kąpielą, co daje pancerzowi dużą odporność na ciosy i odpychający wygląd.
+
+PARAMETRY: 
+Klasa Zbroi: 2
+Odporność na ciosy +15% (cięcie, obuch, przebicie i zmiażdżenie) 
+Odporność na ogień +15
+Charyzma -2 
+Waga: 40 
+Wymagana siła: 12
+Nie może używać: Bard Druid Mag Łotrzyk 
+Charakter DOBRY lub NEUTRALNY~
+
+// Mercenary Helmet
+
+@257 = ~Horned Helmet~
+ @258 = ~Obsydianowy Baran Hełm ??? 
+
+Parametry:
+Klasa Zbroi Bonus: brak
+Specjalny: chroni przed trafieniami krytycznymi 
+Waga: 2
+Nie może używać: Mag Bard Łotrzyk~ 
+
+
+// KONIEC PRZEDMIOTÓW OBSIDIAN RAM **********************************************************************************************************************************************
+
+// PRZEDMIOTY ALTAIRA ARGOL ****************************************************************************************************************************************** 
+
+// Hełm
  @245 =~Hełm~
- @246 = ~Hełm Ichtara Władca Ichtara, stawiając czoła regularnym atakom najeźdźców, zamówił specjalną zbroję dla swojego maga. Po jej wykonaniu wyruszył na kampanię i wyzwał niesławnego przywódcę najeźdźców. Jego broń była ostra... Hełm jest jedną z części wspomnianej zbroi. PARAMETRY: Klasa pancerza Bonus: brak Specjalne: chroni przed trafieniami krytycznymi Odporność na cięcia 10% Waga: Nie może używać: Bard Druid Mag Łotrzyk Praworządne usposobienie~ // Zbroja
+ @246 = ~Hełm Ichtara Władca Ichtara, stawiając czoła regularnym atakom najeźdźców, zamówił specjalną zbroję dla swojego maga. Po jej wykonaniu wyruszył na kampanię i wyzwał niesławnego przywódcę najeźdźców. Jego broń była ostra... Hełm jest jedną z części wspomnianej zbroi. 
+
+PARAMETRY: 
+Klasa pancerza Bonus: brak 
+Specjalne: chroni przed trafieniami krytycznymi Odporność na cięcia 10% 
+Waga: 
+Nie może używać: Bard Druid Mag Łotrzyk 
+Praworządne charaktery~ 
+
+// Zbroja
  @247 = ~Pełna zbroja płytowa +1~
- @248 = ~Zbroja Ichtara Władca stawiający czoła regularnym atakom najeźdźców zamówił u swojego maga pełną zbroję. Po jej wykonaniu wyruszył na kampanię i wyzwał przywódcę najeźdźców. Jego broń była ostra... Zbroja jest jednym z omawianych elementów. PARAMETRY: Klasa pancerza: 0 Odporność na cięcia +10% Waga: 60 Wymagana siła: 12 Nie może używać: Bard Druid Mag Łotrzyk Praworządne usposobienie~ // Buty
+ @248 = ~Zbroja Ichtara Władca stawiający czoła regularnym atakom najeźdźców zamówił u swojego maga pełną zbroję. Po jej wykonaniu wyruszył na kampanię i wyzwał przywódcę najeźdźców. Jego broń była ostra... Zbroja jest jednym z omawianych elementów. 
+
+PARAMETRY: 
+Klasa pancerza: 0 
+Odporność na cięcia +10%
+Waga: 60 
+Wymagana siła: 12 
+Nie może używać: Bard Druid Mag Łotrzyk
+Praworządne charaktery~ 
+
+// Buty
  @249 =~Buty~
- @250= ~Buty Ichtara Władca Ichtara, stawiając czoła regularnym atakom najeźdźców, zamówił u swojego maga pełną zbroję. Po jej wykonaniu wyruszył na kampanię i wyzwał przywódcę najeźdźców. Jego broń była ostra... Buty to tylko jeden z elementów omawianej zbroi. PARAMETRY: Odporność na cięcie +5% KP przeciwko pociskom +2 Waga: Nie może używać: Bard Druid Mag Łotrzyk Praworządny charakter~ // Naramienniki
+ @250= ~Buty Ichtara Władca Ichtara, stawiając czoła regularnym atakom najeźdźców, zamówił u swojego maga pełną zbroję. Po jej wykonaniu wyruszył na kampanię i wyzwał przywódcę najeźdźców. Jego broń była ostra... Buty to tylko jeden z elementów omawianej zbroi.
+
+PARAMETRY:
+Odporność na cięcie +5%
+KP przeciwko pociskom +2 
+Waga:
+Nie może używać: Bard Druid Mag Łotrzyk
+Praworządny charakter~ 
+
+// Naramienniki
  @251 = ~Naramienniki~
- @252 = ~Naramienniki Altaira Altair kazał wykonać te rękawice specjalnie dla siebie, przygotowując się do pojedynków. PARAMETRY: Thaco +2 Obrażenia +2 Waga: Nie może używać: Siła mniej niż 16 Zręczność mniej niż 16 Bard Druid Mag Łotrzyk Praworządny charakter~ // Miecz długi
+ @252 = ~Naramienniki Altaira Altair kazał wykonać te rękawice specjalnie dla siebie, przygotowując się do pojedynków. 
+
+PARAMETRY: 
+Thaco +2 
+Obrażenia +2 
+Waga: 
+Nie może używać: 
+Siła mniej niż 16 
+Zręczność mniej niż 16
+Bard Druid Mag Łotrzyk 
+Praworządny charakter~ 
+
+// Miecz długi
  @253 = ~Miecz długi +2~
- @254 = ~Cios śmiertelny Ten miecz długi pozwala swemu użytkownikowi instynktownie wyczuć punkty witalne przeciwnika i tym samym zadać cios śmiertelny. PARAMETRY: Umiejętność: Trafienie krytyczne +2 THac0: +2 Obrażenia: 1k8+2 Typ obrażeń: Cięte Waga: 7 Współczynnik szybkości: 6 Typ umiejętności: Miecz długi Typ: Broń jednoręczna Wymagana siła: 5 Nie może używać: Mag Druid Łotrzyk Kleryk~ // Miecz krótki
+ @254 = ~Cios śmiertelny Ten miecz długi pozwala swemu użytkownikowi instynktownie wyczuć punkty witalne przeciwnika i tym samym zadać cios śmiertelny. 
+
+PARAMETRY:
+Umiejętność:
+Trafienie krytyczne +2
+THac0: +2 
+Obrażenia: 1k8+2 
+Typ obrażeń: Cięte 
+Waga: 7
+Współczynnik szybkości: 6 
+Typ umiejętności: Miecz długi 
+Typ: Broń jednoręczna 
+Wymagana siła: 5
+Nie może używać: Mag Druid Łotrzyk Kleryk~ 
+
+// Miecz krótki
  @255 = ~Miecz krótki +3~
- @256 = ~Miecz szczęścia ??? PARAMETRY: Specjalne: Zaklęcie szczęścia 1 dziennie przez 60 sekund. TAc0: +3 Obrażenia: 1k6+3 Typ obrażeń: Cięte Waga: 3 Współczynnik szybkości: 2 Typ umiejętności: Krótki miecz Typ: Broń jednoręczna Wymagana siła: 5 Nie może używać: Mag Druid Kleryk~ // Ciało Altaira @259= ~Ciało~ @260= ~Ciało Altaira. Oszołomione ciało Altaira z Argolu z paskudnym guzem na głowie. Może znajdziesz dla niego jakieś zastosowanie.~ // Ciało Silvii @261= ~Ciało~ @262= ~Ciało Silvii. Oszołomione ciało Silvii z paskudnym guzem na głowie. Może znajdziesz dla niego zastosowanie.~ // KONIEC PRZEDMIOTÓW ALTAIRA ARGOLA **************************************************************************************************************************************** // Przedmiot zadania Gavina ********************************************************************************************************************************************* // Ciało Żebraka @265= ~Trup~ @266= ~Trup Żebraka. Ciało nosi ślady gwałtownej śmierci. Zostało pozbawione krwi. Prawdopodobnie jeden z przyjaciół Gavina.~ // KONIEC Przedmiot zadania Gavina ************************************************************************************************************************************************ // Kompania Czarnych Toporów ************************************************************************************************************************************ // Hełm Bratacka
- @5011 =~hełm~
- @5012Hełm Bratacka: Typowy hełm plemienia, z którego pochodzi. Szaman nasycił go swoją magią ochronną. Premia do klasy pancerza: Brak. Specjalny: Chroni przed trafieniami krytycznymi. Odporność na magię: 3%. Odporność na obrażenia magiczne: 3%. Waga: 4. Nie może używać: Bard, Druid, Mag, Łotrzyk, Paladyn. Praworządny LUB Neutralny charakter. // Zbroja warstwowa Bratacka +2
+ @256 = ~Miecz szczęścia ??? 
+
+PARAMETRY: 
+Specjalne: Zaklęcie szczęścia 1 dziennie przez 60 sekund. 
+TAck0: +3 
+Obrażenia: 1k6+3 
+Typ obrażeń: Cięte 
+Waga: 3 
+Współczynnik szybkości: 2 
+Typ umiejętności: Krótki miecz
+Typ: Broń jednoręczna 
+Wymagana siła: 5 
+Nie może używać: Mag Druid Kleryk~
+
+// Ciało Altaira 
+
+@259= ~Ciało~ 
+@260= ~Ciało Altaira. Oszołomione ciało Altaira z Argolu z paskudnym guzem na głowie. Może znajdziesz dla niego jakieś zastosowanie.~ 
+
+// Ciało Silvii
+@261= ~Ciało~
+@262= ~Ciało Silvii. Oszołomione ciało Silvii z paskudnym guzem na głowie. Może znajdziesz dla niego zastosowanie.~ 
+
+// KONIEC PRZEDMIOTÓW ALTAIRA ARGOLA **************************************************************************************************************************************** 
+
+// Przedmiot zadania Gavina *********************************************************************************************************************************************
+// Ciało Żebraka 
+
+@265= ~Trup~ 
+@266= ~Trup Żebraka. Ciało nosi ślady gwałtownej śmierci. Zostało pozbawione krwi. Prawdopodobnie jeden z przyjaciół Gavina.~ 
+/ Child's Body
+@263= ~Corpse~ 
+@264= ~Child's Corpse. Ciało nosi ślady gwałtownej śmierci. Zostało pozbawione krwi.~
+
+// Butelka Krwi 
+@267=~Butelka~
+@268=~Butelka Krwi Wszystko wygląda jak butelka wina, ale smak jest inny...~ 
+
+// KONIEC Przedmiot zadania Gavina ************************************************************************************************************************************************ // Kompania Czarnych Toporów ************************************************************************************************************************************ // Hełm Bratacka
+ 
+@5011 =~hełm~
+ @5012 Hełm Bratacka: Typowy hełm plemienia, z którego pochodzi. Szaman nasycił go swoją magią ochronną. 
+
+Premia do klasy pancerza: Brak. 
+Specjalny: Chroni przed trafieniami krytycznymi.
+Odporność na magię: 3%. 
+Odporność na obrażenia magiczne: 3%.
+Waga: 4. 
+Nie może używać: Bard, Druid, Mag, Łotrzyk, Paladyn. 
+Praworządny LUB Neutralny charakter.
+
+// Zbroja warstwowa Bratacka +2
  @5001 = Zbroja warstwowa +2
- @5002 = Zbroja Bratacka: Dość egzotyczna zbroja stworzona przez szamana. Składa się z bezantium, do którego przymocowane są małe metalowe płytki, zapewniające zarówno elastyczność, jak i odporność. PARAMETRY: Klasa pancerza: 2 Odporność na potępiające ciosy +20% Waga: 30 Wymagana siła: 10 Nie może używać: Bard Druid Mag Łotrzyk~ // Czarny topór bojowy +2: Snaga the Bloody
+ @5002 = Zbroja Bratacka: Dość egzotyczna zbroja stworzona przez szamana. Składa się z bezantium, do którego przymocowane są małe metalowe płytki, zapewniające zarówno elastyczność, jak i odporność. 
+
+PARAMETRY: 
+Klasa pancerza: 2 
+Odporność na potępiające ciosy +20% 
+Waga: 30 
+Wymagana siła: 10 
+Nie może używać: Bard Druid Mag Łotrzyk~ 
+
+// Czarny topór bojowy +2: Snaga the Bloody
  @5003 =~Topór bojowy +2~
- @5004 =~Snaga the Bloody Czarny topór bojowy, którego ostrze emanuje czerwonym blaskiem. Ten topór łaknie krwi. Gdy wróg zostaje trafiony, Snaga stara się pożywić, a gdy jej się to udaje, jej ofiara doznaje krwotoku. PARAMETRY: Umiejętność: 20% szans na wystąpienie krwotoku przy trafieniu. (Rzut obronny na truciznę -2) THc0: +2 Obrażenia: 1k8+2 Typ obrażeń: sieczne Waga: 7 Współczynnik szybkości: 6 Typ umiejętności: topór Typ: broń dwuręczna Wymagana siła: 15 Nie może używać: mag Druid Łotrzyk Kapłan Paladyn Praworządny lub neutralny Charakter~ // Czarny topór do rzucania +2
+ @5004 =~Snaga the Bloody Czarny topór bojowy, którego ostrze emanuje czerwonym blaskiem. Ten topór łaknie krwi. Gdy wróg zostaje trafiony, Snaga stara się pożywić, a gdy jej się to udaje, jej ofiara doznaje krwotoku. 
+
+PARAMETRY: 
+Umiejętność: 20% szans na wystąpienie krwotoku przy trafieniu. (Rzut obronny na truciznę -2) 
+THac0: +2 
+Obrażenia: 1k8+2 
+Typ obrażeń: sieczne 
+Waga: 7 
+Współczynnik szybkości: 6 
+Typ umiejętności: topór 
+Typ: broń dwuręczna
+Wymagana siła: 15
+Nie może używać: mag Druid Łotrzyk Kapłan Paladyn 
+Praworządny lub neutralny Charakter~
+
+// Czarny topór do rzucania +2
  @5005 =~Topór do rzucania +2~
- @5006 =~Oś Czarnych Toporów Całkowicie czarny topór, który dał nazwę firmie. Wykonany przez samą firmę, jest szczególnie śmiercionośny. PARAMETRY: Thac0: 0 Obrażenia: 1k6+3 Typ obrażeń: Cięte Waga: 3 Współczynnik szybkości: 4 Typ umiejętności: Topór Typ: Broń jednoręczna Wymagana siła: 5 Nie może użyć: Mag Druid Kapłan Łotrzyk~ // Pas pośpiechu
+ @5006 =~Oś Czarnych Toporów Całkowicie czarny topór, który dał nazwę firmie. Wykonany przez samą firmę, jest szczególnie śmiercionośny. 
+
+PARAMETRY: 
+Thac0: 0 
+Obrażenia: 1k6+3
+Typ obrażeń: Cięte
+Waga: 3 
+Współczynnik szybkości: 4 
+Typ umiejętności: Topór 
+Typ: Broń jednoręczna 
+Wymagana siła: 5 
+Nie może użyć: Mag Druid Kapłan Łotrzyk~ 
+
+// Pas pośpiechu
  @5007 =~Pas~
- @5008 =~Pas pośpiechu Pas wykonany ze skórzanych pasków przeplatanych końskim włosiem. Te konie były rasowymi ogierami i były bardzo szybkie. PARAMETRY: Zaklęcie pośpiechu raz dziennie; Waga: 2 Nie może użyć:~ // Figurka Briski
+ @5008 =~Pas pośpiechu Pas wykonany ze skórzanych pasków przeplatanych końskim włosiem. Te konie były rasowymi ogierami i były bardzo szybkie. 
+
+PARAMETRY: Zaklęcie pośpiechu raz dziennie; 
+Waga: 2 
+Nie może użyć:~ 
+
+// Figurka Briski
  @5009 =~Figurka niedźwiedzia~
- @5010 =~Figurka Briski Ta figurka pozwala noszącemu przywołać planarnego niedźwiedzia, który zaatakuje wrogów. PARAMETRY: Wcielenie Briski na x sekund. Ograniczona liczba ładunków. Waga: 2 Nie można używać: ~ // Topór bojowy
+ @5010 =~Figurka Briski Ta figurka pozwala noszącemu przywołać planarnego niedźwiedzia, który zaatakuje wrogów.
+
+PARAMETRY: Wcielenie Briski na x sekund.
+Ograniczona liczba ładunków.
+Waga: 2 
+Nie można używać: ~ 
+
+// Topór bojowy
  @5011 =~Topór bojowy~
- @5012Topór bojowy Topór bojowy jest większą wersją topora bojowego z dużym trzonkiem o długości około 1,5 metra i dwoma ostrzami tnącymi. Jest to potencjalnie niszczycielska broń, która wymaga dwóch wolnych rąk. PARAMETRY: Obrażenia: 1K10 Typ obrażeń: Cięte Waga: 12 Współczynnik szybkości: 9 Typ umiejętności: Topór Typ: Broń dwuręczna Wymagana siła: 14 Nie może używać: Druid Kapłan Mag Łotrzyk~ // Kontrakt na Czarny Topór
+ @5012Topór bojowy Topór bojowy jest większą wersją topora bojowego z dużym trzonkiem o długości około 1,5 metra i dwoma ostrzami tnącymi. Jest to potencjalnie niszczycielska broń, która wymaga dwóch wolnych rąk. 
+
+PARAMETRY:
+Obrażenia: 1K10 
+Typ obrażeń: Cięte 
+Waga: 12 
+Współczynnik szybkości: 9 
+Typ umiejętności: Topór 
+Typ: Broń dwuręczna
+Wymagana siła: 14
+Nie może używać: Druid Kapłan Mag Łotrzyk~
+
+// Kontrakt na Czarny Topór
  @5013 =~Kontrakt~
- @5014 =~Kontrakt na Czarny Topór Ten zwój jest podpisany przez Księcia Eltana i Bratacka. Mówi on, że kompania jest na służbie książąt za sumę 10 000 sztuk złota. Usługa, o której mowa, polega na walce z armią Amn pod dowództwem armii Baldura przez okres 1 miesiąca.~ // KONIEC Kompania Czarnych Toporów ************************************************************************************************************************************ // Gildia Basiliusa **************************************************************************************************************************************************** @5015= ~Ciało~ @5016= ~Ciało kupca. Kupiec z Davos jest oszołomiony i ma wielkiego guza na głowie.~ @5017= ~Ciało~ @5018= ~Ciało Davos. Oszołomione ciało Davosa z dużym guzem na głowie.~ @5020= ~Kontrakt~ @5021= ​​​​~Kontrakt Srebrnych Orłów Ten kontrakt stanowi, że Kompania Srebrnych Orłów będzie chronić kupca z Davos i jego rodzinę. W zamian Protektor jest zobowiązany płacić 200 sztuk złota tygodniowo. Niezapłacenie spowoduje utratę ochrony.~ @5022= ~Kontrakt~ @5023= ~Kontrakt Srebrnych Orłów Ten kontrakt stanowi, że Kompania Srebrnych Orłów będzie chronić Davos. W zamian Protektor jest zobowiązany płacić 200 sztuk złota tygodniowo. W przypadku braku zapłaty ochrona nie jest już gwarantowana i Davos będzie mógł swobodnie się poruszać. ~ @5024= ~Kontrakt~ @5025= ~Kontrakt Srebrnych Orłów Ten kontrakt stanowi, że Kompania Srebrnych Orłów zapewnia ochronę dla zakładu Madame Irmy. W zamian Protektor jest zobowiązany płacić 300 sztuk złota tygodniowo. W przypadku braku płatności ochrona nie jest już gwarantowana.~ @5026= ~Kontrakt~ @5027= ~Kontrakt Srebrnych Orłów Ten kontrakt stanowi, że Kompania Srebrnych Orłów zapewnia ochronę Madame Irmie. W zamian Protektor jest zobowiązany do zapłaty 200 sztuk złota tygodniowo. W przypadku braku płatności ochrona nie jest już gwarantowana, a Madame Irma będzie mogła swobodnie się poruszać.~
+ @5014 =~Kontrakt na Czarny Topór Ten zwój jest podpisany przez Księcia Eltana i Bratacka. Mówi on, że kompania jest na służbie książąt za sumę 10 000 sztuk złota. Usługa, o której mowa, polega na walce z armią Amn pod dowództwem armii Baldura przez okres 1 miesiąca.~ 
+
+// KONIEC Kompania Czarnych Toporów ************************************************************************************************************************************ 
+// Gildia Basiliusa **************************************************************************************************************************************************** 
+@5015= ~Ciało~
+@5016= ~Ciało kupca. Kupiec z Davos jest oszołomiony i ma wielkiego guza na głowie.~ 
+@5017= ~Ciało~ 
+@5018= ~Ciało Davos. Oszołomione ciało Davosa z dużym guzem na głowie.~ 
+@5020= ~Kontrakt~ 
+@5021= ​​​​~Kontrakt Srebrnych Orłów Ten kontrakt stanowi, że Kompania Srebrnych Orłów będzie chronić kupca z Davos i jego rodzinę. W zamian Protektor jest zobowiązany płacić 200 sztuk złota tygodniowo. Niezapłacenie spowoduje utratę ochrony.~ 
+@5022= ~Kontrakt~ 
+@5023= ~Kontrakt Srebrnych Orłów Ten kontrakt stanowi, że Kompania Srebrnych Orłów będzie chronić Davos. W zamian Protektor jest zobowiązany płacić 200 sztuk złota tygodniowo. W przypadku braku zapłaty ochrona nie jest już gwarantowana i Davos będzie mógł swobodnie się poruszać. ~ 
+@5024= ~Kontrakt~ 
+
+@5025= ~Kontrakt Srebrnych Orłów Ten kontrakt stanowi, że Kompania Srebrnych Orłów zapewnia ochronę dla zakładu Madame Irmy. W zamian Protektor jest zobowiązany płacić 300 sztuk złota tygodniowo. W przypadku braku płatności ochrona nie jest już gwarantowana.~
+@5026= ~Kontrakt~ 
+@5027= ~Kontrakt Srebrnych Orłów Ten kontrakt stanowi, że Kompania Srebrnych Orłów zapewnia ochronę Madame Irmie. W zamian Protektor jest zobowiązany do zapłaty 200 sztuk złota tygodniowo. W przypadku braku płatności ochrona nie jest już gwarantowana, a Madame Irma będzie mogła swobodnie się poruszać.~
 
  @5028 = ~Niebieska Skrzynka~
- @5029 = ~Niebieska Skrzynka Kupca W tej skrzyni znajdziesz głowę kupca z Davos z wyłupiastymi oczami.
+ @5029 = ~Niebieska Skrzynka Kupca 
+W tej skrzyni znajdziesz głowę kupca z Davos z wyłupiastymi oczami.
 
-Rana jest czysta, a widać, że język został wyrwany z ust. Wiadomość jest jasna...~ @5030= ~Niebieskie Pudełko~
+Rana jest czysta, a widać, że język został wyrwany z ust. Wiadomość jest jasna...~ 
+
+@5030= ~Niebieskie Pudełko~
  @5031 = ~Niebieskie Pudełko Davosa W tym pudełku znajdziesz głowę Davosa z wydłubanymi oczami. Cięcie jest czyste, a jego oczy znajdziesz w ustach. Przesłanie jest jasne...~
 
  @5032 = ~Niebieskie Pudełko~
- @5033= ~Niebieskie Pudełko Madame Irmy W tym pudełku znajdziesz głowę Madame Irmy z zamkniętymi oczami. Cięcie jest czyste, a jej usta, otoczone szminką, zostały powiększone nożem. Wiadomość jest jasna...~ @5034= ~Ciało~ @5035= ~Ciało Madame Irmy Oszołomione ciało Madame Irmy z widocznym guzem na głowie.~ @5036= ~Klucz~ @5037= ~Klucz Madame Irmy Ten kuty żelazny klucz jest mały. Możemy założyć, że zamek nie jest bardzo duży.~ @5038= ~Książka~ @5039= ~Książka Madame Irmy Ta książka zawiera bogactwo informacji o klienteli domu publicznego. W rękach ekspertów ta księga mogłaby posłużyć do szantażowania znacznej liczby notabli miasta.~ // KONIEC Gildia Basiliusa ************************************************************************************************************************************************* // Mod Czempion Bhaala **************************************************************************************************************************************************************************************** @5040= ~Wysuszone zwłoki Masseny~ @5041= ~Kości są nadal połączone z kawałkami wysuszonego mięsa i ścięgien. Sytuacja jest dość dziwna, biorąc pod uwagę, że ich właściciel nie żyje od dawna. Powinny być tylko kości.~ @5042= ~Naszyjnik~ @5043= ~Czerwony naszyjnik z koralików. Wykonany z 13 koralików, ten naszyjnik jest niezwykle ciężki. Centralny koralik jest wygrawerowany symbolem Bhaala.~ @5044= ~Wysuszone zwłoki~ @5045= ~Kości są nadal połączone z kawałkami wysuszonego ciała i ścięgien. Sytuacja jest dość dziwna, biorąc pod uwagę, że ich właściciel nie żyje od dawna. Powinny być tylko kości.~ @5046= ~Wysuszone zwłoki~ @5047= ~Kości są nadal połączone z kawałkami wysuszonego ciała i ścięgien. Sytuacja jest dość dziwna, biorąc pod uwagę, że ich właściciel nie żyje od dawna. Powinny być tylko kości.~ @5048= ~Zwój~ @5049= ~Ty, który oglądasz tę scenę. Tutaj znajdziesz szczątki wyznawców Cyrica, którzy zginęli i zostali uwięzieni w tej świątyni. Zostaną pomszczeni krwią heretyków Bhaala! Ekilis, Wielki Inkwizytor Cyrica~ @5050= ~Święty Symbol~ @5051= ~Święty Symbol Cyrica Na tej kamiennej płycie przedstawiony jest symbol Cyrica, szalonego boga. W niektórych miejscach zauważysz, że jest splamiony krwią.~ @5052= ~Różdżka~ @5053= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić minotaury. Będą one pod rozkazami właściciela różdżki. Czasami konieczne jest rzucenie zaklęcia kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~ @5054= ~Różdżka~ @5055= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić cienie skał. Będą one pod rozkazami właściciela różdżki.Czasami trzeba rzucić zaklęcie kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~ @5056= ~Różdżka~ @5057= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić trolle. Będą pod rozkazami właściciela różdżki. Czasami trzeba rzucić zaklęcie kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~ @5058= ~Dziennik~ @5059= ~Dziennik Ekilisa Ekilis, Wielki Inkwizytor Cyrica, opowiada o swoich wyczynach w polowaniu na zwolenników Bhaala i o tym, jak pozbył się towarzyszy, którzy stanęli mu na drodze do władzy i łaski jego pana. Te ostatnie zapiski są bardzo interesujące; odnoszą się do świątyni. Dzień 1: W przeciwieństwie do innych wiem, że słudzy Bhaala nie są godni służyć Cyricowi i najprostszym rozwiązaniem jest ich wszystkich wytępić. Bhaal nie żyje; mogą po prostu za nim podążać. Systera zdołała uciec, mimo śmiertelnego ciosu, jaki jej zadałem! Ustawiła się na glifach na ziemi i zniknęła. Prawdopodobnie potrzebujesz specjalnego przedmiotu, aby aktywować teleport. Dzień 3: Zamykając drzwi, bez wątpienia ma nadzieję uczynić tę świątynię moim grobowcem... Ośmiela się kwestionować moją wielką wyższość, a ja sprawię, że zapłaci za ten afront! Zacznę od oderwania jej palców... Dzień 5: Wysłałem grupę na niższe poziomy świątyni z linami. Bestie pożarły ich w ciągu kilku sekund i nie można było nic zobaczyć. Nie ma tam drogi ucieczki... Ta nędzna świątynia nie zwycięży Ekilisa, Wielkiego Inkwizytora cudownego Cyrica! Dzień 6: Zabiłem ich wszystkich. Zaczynali walczyć o jedzenie. Jedzenie jest moje! Tylko ja jestem ważny! Jestem wybrańcem Cyrica. Zgromadziłem ich bogactwa w dobrze ukrytym, sekretnym miejscu. Nie odejdę z pustymi rękami. Cyric będzie dumny z mojego zwycięstwa, a ja będę miał jeszcze więcej mocy! Dzień 11: Nie ma już jedzenia, a Systera nie wie, że mogę wprowadzić się w długotrwały stan hibernacji. Za kilka dni, kiedy wróci z uśmiechem na twarzy, wyrwę jej kończyny jedną po drugiej, a ona wyjawi mi wszystkie swoje paskudne małe sekrety! Zachowam jej głowę jako pamiątkę. Ważne jest, aby móc pamiętać przeszłe zwycięstwa. Mam ich tak wiele...~ // Pokój 1 @5060= ~Łza~ @5061= ~Kryształowa Łza Łza jest wyrzeźbiona z czerwonego kryształu. Po kontakcie, twoje ręce stają się lepkie od substancji, która może być tylko krwią.~ @5062= ~Krwawa Łza Bhaala Łza jest wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Po kontakcie, twoje ręce stają się lepkie od substancji, która może być tylko krwią. Ta łza należała do demona.~ // Pokój 2 @5063= ~Krwawa Łza Bhaala Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Po kontakcie,Twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do golema z kości.~ // Pokój 3 @5064= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do widza.~ // Pokój 4 @5065= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do Islendry.~ // Pokój 5 @5066= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do Taguara, czempiona Bhaala.~ // Pokój 6 @5067= ~Krwawa Łza Bhaala Ta łza została wyrzeźbiona z białego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Przy kontakcie twoje dłonie stają się lodowato zimne. Ta łza należała do Kaela.~ // Pokój 7 @5068= ~Krwawa Łza Bhaala Ta łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Przy kontakcie twoje dłonie stają się lepkie od substancji, która może być tylko krwią. Ta łza należała do Malady.~ @5069=~Nieczytelna Księga Zaklęcie chroni tę księgę przed ciekawskimi. Litery poruszają się we wszystkich kierunkach, a tekst jest nieczytelny. Aby rozszyfrować tekst, należy rzucić zaklęcie identyfikacyjne.~ // Lodowy Kamień @5070= ~Niebieski Kamień~ @5071= ~Lodowe opary wydobywają się z tego zadziwiającego kamienia. W kontakcie zimno parzy, a dłonie robią się wilgotne.~ // Czarny Hełm @5072= ~Czarny Hełm~ @5073= ~Ten hełm emanuje czymś wrogim. Uczucie niepokoju ogarnia twoje dłonie.~ // Pierścień Ognia @5074= ~Pierścień Ognia~ @5075= ~Z tego pierścienia emanuje intensywne ciepło. Jest po prostu parzący. Obserwując jego powierzchnię, masz wrażenie, że widzisz poruszające się płomienie.~ // Kamienna Czaszka @5076= ~Czaszka Ludzka~ @5077= ~Ta ludzka czaszka nie wyróżnia się niczym szczególnym, poza inkrustowanym niebieskim kamieniem, który nadaje jej majestatyczny wygląd. Musiał należeć do ważnej osoby.~ // Klucz do skrzyni 1 - MISCP42: Pierścień ognia (MISCP48) @5078= ~Klucz~ @5079= ~Klucz znaleziony w kościach w południowym pomieszczeniu.~ // Klucz do skrzyni 2 - MISCP43: Czarny hełm (MISCP46) @5080= ~Klucz~ @5081= ~Klucz znaleziony w skrytce w zachodnim pomieszczeniu.~ // Klucz do skrzyni 3 - MISCP45: Lodowy kamień (MISCP47) @5082= ~Klucz~ @5083= ~Klucz znaleziony w spalonym ciele w północnym pomieszczeniu.~ // Klucz do skrzyni 4 - MISCP44: Kamienna czaszka (MISCP49) @5084= ~Klucz~ @5085= ~Klucz znaleziony w trumnie w południowo-wschodnim pomieszczeniu.~ // Księga Osiągnięć @5086= ~Książka~ @5087= ~Ta księga odnosi się do osiągnięć uczniów Bhaala, którzy posługiwali się bronią w czasie jego dawnej chwały. Autor szczegółowo opisuje, kto był celem i w jaki delikatny sposób spotkał ich upadek.Zabijanie zostało wyraźnie podniesione do rangi sztuki. Patrząc na wszystkie te książki, ten pokój to istna biblioteka morderstw!~ // Zagadka Ognistego Pierścienia @5088= ~4. Zwój Niszy~ @5089= ~Zrodzony z ciemności, tańczę śmierć.~ // Zagadka Czarnego Hełmu @5090= ~3. Zwój Niszy~ @5091= ~Twardy jak kamień, stoję niezachwiany.~ // Zagadka Lodowego Kamienia @5092= ~2. Zwój Niszy~ @5093= ~Złapany w moje imadło, serca moich wrogów zamarzają.~ // Zagadka Kamiennej Czaszki @5094= ~1. Zwój Niszy~ @5095= ~Zakończony, prowadzę krwawy atak.~ // Lodowy Miecz Dwuręczny +1 @5096= ~Miecz Dwuręczny +1~ @5097= ~Lodowy Miecz Dwuręczny +1 Wielki Miecz Jakość, której ostrze Przeszywa cię do szpiku kości. Parametry: Thaco +1 Obrażenia 1K10 +1, +1 obrażenia od lodu. Nie może użyć: Mag Druid Kapłan Łotrzyk~ // Pierścień Urglitu: przywołanie żywiołaka lodowatego powietrza @5098= ~Pierścień Urglitu~ @5099= ~Lodowy w dotyku, zawartość niebieskiego kamienia wydaje się być w ciągłym ruchu.~ @5100= ~Lodowy Pierścień Powietrza~ @5101= ~Lodowy Pierścień Powietrza Urglitu Lodowaty w dotyku, zawartość niebieskiego kamienia wydaje się być w ciągłym ruchu. Parametry: Specjalne umiejętności: Przywołuje pomniejszego żywiołaka lodu raz dziennie. Jego zdolności bojowe są następujące: PW: 64 KP: 2 TraK0: 13 Ataki/rundę: 1 Obrażenia: 2K8 obrażeń od zimna. Można go używać tylko przez: ~ // Narzędzie Poziomowania Kaela @5104= ~Narzędzie~ @5105= ~Narzędzie Kaela. To narzędzie musi mieć specjalne zastosowanie, skoro jest jedynym przedmiotem w skrzyni...~2k8 obrażeń od zimna. Można używać tylko za pomocą:~ // Narzędzie poziomu Kaela @5104= ~Narzędzie~ @5105= ~Narzędzie Kaela. To narzędzie musi mieć specjalne zastosowanie, skoro to jedyny przedmiot w skrzyni...~2k8 obrażeń od zimna. Można używać tylko za pomocą:~ // Narzędzie poziomu Kaela @5104= ~Narzędzie~ @5105= ~Narzędzie Kaela. To narzędzie musi mieć specjalne zastosowanie, skoro to jedyny przedmiot w skrzyni...~
+ @5033= ~Niebieskie Pudełko Madame Irmy W tym pudełku znajdziesz głowę Madame Irmy z zamkniętymi oczami. Cięcie jest czyste, a jej usta, otoczone szminką, zostały powiększone nożem. Wiadomość jest jasna...~ 
+
+@5034= ~Ciało~
+@5035= ~Ciało Madame Irmy Oszołomione ciało Madame Irmy z widocznym guzem na głowie.~ 
+
+@5036= ~Klucz~
+@5037= ~Klucz Madame Irmy Ten kuty żelazny klucz jest mały. Możemy założyć, że zamek nie jest bardzo duży.~ 
+@5038= ~Książka~
+@5039= ~Książka Madame Irmy Ta książka zawiera bogactwo informacji o klienteli domu publicznego. W rękach ekspertów ta księga mogłaby posłużyć do szantażowania znacznej liczby notabli miasta.~
+
+// KONIEC Gildia Basiliusa ************************************************************************************************************************************************* 
+// Mod Czempion Bhaala **************************************************************************************************************************************************************************************** 
+@5040= ~Wysuszone zwłoki Masseny~ 
+@5041= ~Kości są nadal połączone z kawałkami wysuszonego mięsa i ścięgien. Sytuacja jest dość dziwna, biorąc pod uwagę, że ich właściciel nie żyje od dawna. Powinny być tylko kości.~ 
+
+@5042= ~Naszyjnik~ 
+@5043= ~Czerwony naszyjnik z koralików. Wykonany z 13 koralików, ten naszyjnik jest niezwykle ciężki. Centralny koralik jest wygrawerowany symbolem Bhaala.~ 
+@5044= ~Wysuszone zwłoki~
+@5045= ~Kości są nadal połączone z kawałkami wysuszonego ciała i ścięgien. Sytuacja jest dość dziwna, biorąc pod uwagę, że ich właściciel nie żyje od dawna. Powinny być tylko kości.~ 
+
+@5046= ~Wysuszone zwłoki~ 
+@5047= ~Kości są nadal połączone z kawałkami wysuszonego ciała i ścięgien. Sytuacja jest dość dziwna, biorąc pod uwagę, że ich właściciel nie żyje od dawna. Powinny być tylko kości.~
+
+@5048= ~Zwój~ 
+@5049= ~Ty, który oglądasz tę scenę. Tutaj znajdziesz szczątki wyznawców Cyrica, którzy zginęli i zostali uwięzieni w tej świątyni. Zostaną pomszczeni krwią heretyków Bhaala! Ekilis, Wielki Inkwizytor Cyrica~ 
+@5050= ~Święty Symbol~ 
+@5051= ~Święty Symbol Cyrica Na tej kamiennej płycie przedstawiony jest symbol Cyrica, szalonego boga. W niektórych miejscach zauważysz, że jest splamiony krwią.~
+@5052= ~Różdżka~ 
+
+@5053= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić minotaury. Będą one pod rozkazami właściciela różdżki. Czasami konieczne jest rzucenie zaklęcia kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~
+
+@5054= ~Różdżka~ 
+@5055= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić cienie skał. Będą one pod rozkazami właściciela różdżki.Czasami trzeba rzucić zaklęcie kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~ @5056= ~Różdżka~ @5057= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić trolle. Będą pod rozkazami właściciela różdżki. Czasami trzeba rzucić zaklęcie kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~ @5058= ~Dziennik~ @5059= ~Dziennik Ekilisa Ekilis, Wielki Inkwizytor Cyrica, opowiada o swoich wyczynach w polowaniu na zwolenników Bhaala i o tym, jak pozbył się towarzyszy, którzy stanęli mu na drodze do władzy i łaski jego pana. Te ostatnie zapiski są bardzo interesujące; odnoszą się do świątyni. Dzień 1: W przeciwieństwie do innych wiem, że słudzy Bhaala nie są godni służyć Cyricowi i najprostszym rozwiązaniem jest ich wszystkich wytępić. Bhaal nie żyje; mogą po prostu za nim podążać. Systera zdołała uciec, mimo śmiertelnego ciosu, jaki jej zadałem! Ustawiła się na glifach na ziemi i zniknęła. Prawdopodobnie potrzebujesz specjalnego przedmiotu, aby aktywować teleport. Dzień 3: Zamykając drzwi, bez wątpienia ma nadzieję uczynić tę świątynię moim grobowcem... Ośmiela się kwestionować moją wielką wyższość, a ja sprawię, że zapłaci za ten afront! Zacznę od oderwania jej palców... Dzień 5: Wysłałem grupę na niższe poziomy świątyni z linami. Bestie pożarły ich w ciągu kilku sekund i nie można było nic zobaczyć. Nie ma tam drogi ucieczki... Ta nędzna świątynia nie zwycięży Ekilisa, Wielkiego Inkwizytora cudownego Cyrica! Dzień 6: Zabiłem ich wszystkich. Zaczynali walczyć o jedzenie. Jedzenie jest moje! Tylko ja jestem ważny! Jestem wybrańcem Cyrica. Zgromadziłem ich bogactwa w dobrze ukrytym, sekretnym miejscu. Nie odejdę z pustymi rękami. Cyric będzie dumny z mojego zwycięstwa, a ja będę miał jeszcze więcej mocy! Dzień 11: Nie ma już jedzenia, a Systera nie wie, że mogę wprowadzić się w długotrwały stan hibernacji. Za kilka dni, kiedy wróci z uśmiechem na twarzy, wyrwę jej kończyny jedną po drugiej, a ona wyjawi mi wszystkie swoje paskudne małe sekrety! Zachowam jej głowę jako pamiątkę. Ważne jest, aby móc pamiętać przeszłe zwycięstwa. Mam ich tak wiele...~ // Pokój 1 @5060= ~Łza~ @5061= ~Kryształowa Łza Łza jest wyrzeźbiona z czerwonego kryształu. Po kontakcie, twoje ręce stają się lepkie od substancji, która może być tylko krwią.~ @5062= ~Krwawa Łza Bhaala Łza jest wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Po kontakcie, twoje ręce stają się lepkie od substancji, która może być tylko krwią. Ta łza należała do demona.~ // Pokój 2 @5063= ~Krwawa Łza Bhaala Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Po kontakcie,Twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do golema z kości.~ // Pokój 3 @5064= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do widza.~ // Pokój 4 @5065= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do Islendry.~ // Pokój 5 @5066= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do Taguara, czempiona Bhaala.~ // Pokój 6 @5067= ~Krwawa Łza Bhaala Ta łza została wyrzeźbiona z białego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Przy kontakcie twoje dłonie stają się lodowato zimne. Ta łza należała do Kaela.~ // Pokój 7 @5068= ~Krwawa Łza Bhaala Ta łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Przy kontakcie twoje dłonie stają się lepkie od substancji, która może być tylko krwią. Ta łza należała do Malady.~ @5069=~Nieczytelna Księga Zaklęcie chroni tę księgę przed ciekawskimi. Litery poruszają się we wszystkich kierunkach, a tekst jest nieczytelny. Aby rozszyfrować tekst, należy rzucić zaklęcie identyfikacyjne.~ // Lodowy Kamień @5070= ~Niebieski Kamień~ @5071= ~Lodowe opary wydobywają się z tego zadziwiającego kamienia. W kontakcie zimno parzy, a dłonie robią się wilgotne.~ // Czarny Hełm @5072= ~Czarny Hełm~ @5073= ~Ten hełm emanuje czymś wrogim. Uczucie niepokoju ogarnia twoje dłonie.~ // Pierścień Ognia @5074= ~Pierścień Ognia~ @5075= ~Z tego pierścienia emanuje intensywne ciepło. Jest po prostu parzący. Obserwując jego powierzchnię, masz wrażenie, że widzisz poruszające się płomienie.~ // Kamienna Czaszka @5076= ~Czaszka Ludzka~ @5077= ~Ta ludzka czaszka nie wyróżnia się niczym szczególnym, poza inkrustowanym niebieskim kamieniem, który nadaje jej majestatyczny wygląd. Musiał należeć do ważnej osoby.~ // Klucz do skrzyni 1 - MISCP42: Pierścień ognia (MISCP48) @5078= ~Klucz~ @5079= ~Klucz znaleziony w kościach w południowym pomieszczeniu.~ // Klucz do skrzyni 2 - MISCP43: Czarny hełm (MISCP46) @5080= ~Klucz~ @5081= ~Klucz znaleziony w skrytce w zachodnim pomieszczeniu.~ // Klucz do skrzyni 3 - MISCP45: Lodowy kamień (MISCP47) @5082= ~Klucz~ @5083= ~Klucz znaleziony w spalonym ciele w północnym pomieszczeniu.~ // Klucz do skrzyni 4 - MISCP44: Kamienna czaszka (MISCP49) @5084= ~Klucz~ @5085= ~Klucz znaleziony w trumnie w południowo-wschodnim pomieszczeniu.~ // Księga Osiągnięć @5086= ~Książka~ @5087= ~Ta księga odnosi się do osiągnięć uczniów Bhaala, którzy posługiwali się bronią w czasie jego dawnej chwały. Autor szczegółowo opisuje, kto był celem i w jaki delikatny sposób spotkał ich upadek.Zabijanie zostało wyraźnie podniesione do rangi sztuki. Patrząc na wszystkie te książki, ten pokój to istna biblioteka morderstw!~ // Zagadka Ognistego Pierścienia @5088= ~4. Zwój Niszy~ @5089= ~Zrodzony z ciemności, tańczę śmierć.~ // Zagadka Czarnego Hełmu @5090= ~3. Zwój Niszy~ @5091= ~Twardy jak kamień, stoję niezachwiany.~ // Zagadka Lodowego Kamienia @5092= ~2. Zwój Niszy~ @5093= ~Złapany w moje imadło, serca moich wrogów zamarzają.~ // Zagadka Kamiennej Czaszki @5094= ~1. Zwój Niszy~ @5095= ~Zakończony, prowadzę krwawy atak.~ // Lodowy Miecz Dwuręczny +1 @5096= ~Miecz Dwuręczny +1~ @5097= ~Lodowy Miecz Dwuręczny +1 Wielki Miecz Jakość, której ostrze Przeszywa cię do szpiku kości. Parametry: Thaco +1 Obrażenia 1K10 +1, +1 obrażenia od lodu. Nie może użyć: Mag Druid Kapłan Łotrzyk~ // Pierścień Urglitu: przywołanie żywiołaka lodowatego powietrza @5098= ~Pierścień Urglitu~ @5099= ~Lodowy w dotyku, zawartość niebieskiego kamienia wydaje się być w ciągłym ruchu.~ @5100= ~Lodowy Pierścień Powietrza~ @5101= ~Lodowy Pierścień Powietrza Urglitu Lodowaty w dotyku, zawartość niebieskiego kamienia wydaje się być w ciągłym ruchu. Parametry: Specjalne umiejętności: Przywołuje pomniejszego żywiołaka lodu raz dziennie. Jego zdolności bojowe są następujące: PW: 64 KP: 2 TraK0: 13 Ataki/rundę: 1 Obrażenia: 2K8 obrażeń od zimna. Można go używać tylko przez: ~ // Narzędzie Poziomowania Kaela @5104= ~Narzędzie~ @5105= ~Narzędzie Kaela. To narzędzie musi mieć specjalne zastosowanie, skoro jest jedynym przedmiotem w skrzyni...~2k8 obrażeń od zimna. Można używać tylko za pomocą:~ // Narzędzie poziomu Kaela @5104= ~Narzędzie~ @5105= ~Narzędzie Kaela. To narzędzie musi mieć specjalne zastosowanie, skoro to jedyny przedmiot w skrzyni...~2k8 obrażeń od zimna. Można używać tylko za pomocą:~ // Narzędzie poziomu Kaela @5104= ~Narzędzie~ @5105= ~Narzędzie Kaela. To narzędzie musi mieć specjalne zastosowanie, skoro to jedyny przedmiot w skrzyni...~
 
 @5106 =~Klucz~
  @5107 =~Klucz do Świątyni Bhaala Ten klucz został zdobyty w świątyni. Teraz pozostaje tylko dowiedzieć się, co otwiera.~
 
  @5108 =~Runa~
- @5109Runa Skrzyni Ta runa znajdowała się w skrzyni. Niewątpliwie pełniła jakąś funkcję w świątyni. // Księga Maski Śmierci @5110=~Dziennik~ @5111=~Ten dziennik opisuje życie w świątyni w oczekiwaniu na przebudzenie Bhaala. Ostatni fragment jest najciekawszy. „Systera wezwała nas, dziewięć Masek Śmierci. Przypuszczam, że ta szalona kobieta ma dla nas kolejną misję. Z jej opowieści wynika, że ​​Bhaal wkrótce się obudzi i zemści się na Cyricu. Mam już dość! Pomogę Cyricowi znaleźć naszą świątynię. Sam zlikwiduję Systerę, gdy nadejdzie właściwy czas. Może i jest potężna, ale znam jej największą słabość. Moje ogniste czaszki ją pokonają. Jaki sens tkwić po przegranej stronie? Zwycięstwo jest dla mnie słodsze. Cyric mnie nagrodzi.”~ // Fioletowa Czaszka Ekilisa @5112=~Fioletowa Czaszka~ @5113=~Fioletowa Czaszka Ekilisa Ta czaszka wydaje się zupełnie normalna, z wyjątkiem tego, że jest fioletowa.~ // Ognista Czaszka @5114=~Czaszka~ @5115=~Ognista Czaszka Ta czaszka, wyłaniająca się z płomieni, płonie gorącem. Powinna zostać obrócona w popiół. Rzucony na wroga, wynik powinien być interesujący.~ @5116=~Opowieść Taguara~ @5117=~Taguar był wojownikiem, który błagał wszystkich bogów, aby pomogli mu zaspokoić pragnienie władzy i bogactwa swojej żony Urglite. Bhaal, rozbawiony, postanowił uczynić go swoim czempionem. Ogarnięta krwawym i morderczym szałem, armia Taguara niszczyła wszystko na swojej drodze. Jego generałowie, pragnąc pozbyć się szaleńca bez konfrontacji, wybrali truciznę. Urglite ze swojej strony została zamurowana żywcem, podczas gdy ona przeklinała Taguar za porzucenie jej. Zawarcie paktu z Bhaalem ma cenę, którą śmiertelnicy zawsze muszą zapłacić.~ @5118=~Opowieść Islendry~ @5119=~Islendra „lekkomyślna” nie bała się nikogo. Zawsze rozstrzygała swoje konflikty pojedynkiem i wychodziła z niego zwycięsko. Jej rosnąca reputacja wyprzedzała ją, gdziekolwiek się udała, i ostatecznie nikt nie odważył się jej sprzeciwić. Pewnego dnia pojawił się Bhaal, a Islendra rzuciła wyzwanie bogu. Od tamtej pory, jak głosi legenda, przemierza ciemne, wilgotne jaskinie, czyhając na ofiarę, którą upoluje na rozkaz swojego nowego pana… Sprzeciwienie się Bhaalowi zawsze prowadzi do jednej prawdy: śmiertelnicy są zmuszeni podporządkować się jego woli. ~ @5120=~Historia Kaela~ @5121=~Kael był nadętym magiem, biegłym w sztuce tworzenia artefaktów. Jego wielki talent zwrócił uwagę Bhaala, który postanowił przyjąć go na swoją służbę. Kael, którego ego wzrosło, powierzył pewne podstawowe zadania Cespenarowi, swojemu uczniowi. Niestety dla niego, artefakt – nie wiadomo który – nie spodobał się Bhaalowi i Cespenar został nowym mistrzem artefaktów. Rozczarowanie Bhaala ma konsekwencje, których żaden śmiertelnik nie chciałby poznać… ~ @5122=~Pas Kaela~ @5123=~Pas jest dość dziwny. Jest zrobiony z metalu z czerwonym klejnotem pośrodku, którego wnętrze wydaje się płynne. Kiedy dotyka twoich bioder,Pas idealnie dopasowuje się do kształtu ciała.~ @5124=~Pas jest dość dziwny. Jest wykonany z metalu z czerwonym klejnotem pośrodku, którego wnętrze wydaje się płynne. W kontakcie z biodrami pas idealnie dopasowuje się do kształtu ciała. Pozwala użytkownikowi zapamiętać więcej zaklęć niż zwykle. Ten przedmiot rozsławił Kaela, zanim wstąpił na służbę do Bhaala. Niektórzy twierdzą, że metal pochodził z meteorytu. PARAMETRY: Zaklęcia: Przyznaje jedno dodatkowe zaklęcie piątego poziomu, jedno dodatkowe zaklęcie szóstego poziomu i jedno dodatkowe zaklęcie siódmego poziomu. Wymagana inteligencja: 17. Może używać tylko: Mag~ // Czaszka Utrzymana @5125=~Czaszka~ @5126=~Ta czaszka pokryta dziwnymi symbolami została znaleziona na ciele Systery. Po zetknięciu z nim, uczucie gniewu cię ogarnia.~ // Kamień Pokoju w Kratkę @5127=~Rzeźbiony Kamień~ @5128=~Rzeźbiony Kamień znaleziony w pokoju w kratkę.~ // Kamień do otwierania bram piwnicy @5129=~Kamień Strażnika~ @5130=~Ten kamień pozwala ci otwierać bramy na tym poziomie.~ // Lina @5131=~Ta gładka, złota lina, spleciona w miniaturowe podkowy, może ci pomóc...~ @5132=~Notatki Entar~ @5133=~Systera zniknęła po tym, jak nastąpiła na glif na ziemi w pobliżu minotaurów. Poinformowałem Ekilisa i nawet sprecyzowałem, że zdobyła czerwony naszyjnik, ale on mnie nie słucha. Jest przekonany, że wie wszystko. Żywność wkrótce się kończy, a Ekilis nie może znaleźć wyjścia... Będę musiał go zastąpić; nie jest w stanie podołać zadaniu. Ja też. Entar, wierny sługo Cyrica~ // Karczma @5200=~Klucz Barniego~ @5201=~Ten klucz powierzył ci Barni, nowy karczmarz Hełmu i Płaszcza. Otwiera on zapadnię w jego piwnicy.~ // Zardzewiała Tarcza @5202=~Złamana Tarcza~ @5203=~Ta złamana tarcza została zżarta przez rdzę. Nie nadaje się do użytku.~ // Zardzewiała Zbroja @5204=~Wgnieciona Zbroja~ @5205=~Ta wgnieciona zbroja została zżarta przez rdzę. Nie nadaje się do użytku.~ // Zardzewiały Miecz @5206=~Złamany Miecz~ @5207=~Ten złamany miecz został zżarty przez rdzę. Jest bezużyteczny.~ // Wiadomość od Cersitis do Candelas @5208=~Wiadomość od Cersitis~ @5209=~Candelas, obarczam cię odpowiedzialnością za śmierć Sarevoka. Odszukaj jego kontakty; chcę mieć kolejne dziecko Bhaala, tym razem żywe... Otwarcie świątyni od tego zależy. Cersitis~ @5210=~Święty Symbol~ @5211=~Święty Symbol Cyrica. Ta kamienna tablica przedstawia symbol Cyrica, szalonego boga.~ // Kamień Pokoju w Kratkę //Zimny ​​biały kamień: dezaktywuje pułapkę błyskową @5250=~Cięty Kamień~ @5251=~Ten szarobiały kamień trzeszczy w dotyku.~ //Żółty kamień: dezaktywuje pułapkę spalającą @5252=~Cięty Kamień~ @5253=~Ten żółty kamień jest ciepły w dotyku.~ //Kamień Granatowy:Wyłącza pułapkę czaszki i runy @5254=~Rzeźbiony kamień~ @5255=~Rzeźbiony kamień znaleziony w pokoju szachownicy.~ //Czerwony kamień: otwiera drzwi Kaela @5256=~Rzeźbiony kamień~ @5257=~Czerwony kamień podarowany przez Lucindę.~ //Niebiesko-biały kamień: wyłącza pułapkę w kształcie stożka lodowego @5258=~Rzeźbiony kamień~ @5259=~Ten niebiesko-biały kamień jest zimny w dotyku.~ //Lina: prowadzi do pokoju w piwnicy @5260=~Złota lina~ @5261=~Ta lina jest zrobiona ze złotej nici. Gdy za nią pociągniesz, lina wydaje się rozciągać w nieskończoność.~ //Kielich krwi @5262=~Kielich krwi~ @5263=~Ten puchar został wykonany z ludzkiej czaszki i zestawu kości. Islendra prawdopodobnie używała go podczas rytualnych ofiar.~ // Puchar Krwi Kaela @5264=~Kielich Krwi Kaela~ @5265=~Kielich Krwi pozwala ci przywołać krwawego potwora. Kiedy go przywołasz, puchar wypełni się twoją krwią i pojawi się potwor. Tracisz 30% swojego maksymalnego zdrowia. Jeśli spadniesz poniżej tego progu, giniesz. Jeśli potwora pokonasz, wróci on do swojego planu, aby oczekiwać na ponowne przywołanie. Potwora będzie wykonywał każdy twój rozkaz podczas przywoływania; jest ci oddany. Kael stworzył niezwykle skuteczną broń wojenną! Jego możliwości bojowe są następujące: PW: 70 KP: -1 TraK0: 9 Ataki/runda: 2 Obrażenia: 1k6+2 (broń miażdżąca / magiczna +1) Może używać tylko: dziecko Bhaala~ @5267=~Klepak Kaela~ @5268=~Klepak składa się z solidnego drewnianego trzonka przymocowanego do żelaznego pręta, drewnianego pręta nabijanego kolcami lub metalowej kuli najeżonej kolcami. Pomiędzy trzonkiem a częścią uderzającą znajduje się prosty zawias lub łańcuch. Ten cep został ulepszony przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona poświata. PARAMETRY: TRAK0: +1 Obrażenia: 1K6 + 2 Typ obrażeń: Tępe Waga: 12 Współczynnik szybkości: 6 Typ umiejętności: Cep/Gwiazda Poranna Typ: Broń jednoręczna Wymagana siła: 13 Nie może używać: Druid, Mag, Łotrzyk~ @5269=~Tarcza Kaela~ @5270=~Tarcza jest masywną metalową lub drewnianą tarczą zakrywającą wojownika praktycznie od brody do palców u stóp. Musi być solidnie przymocowana do przedramienia i mocno trzymana. Oczywiście, zajęta ręka może być używana tylko do trzymania tarczy na miejscu. Ta tarcza została wykonana przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona aureola. PARAMETRY: Premia do klasy pancerza: 2 Specjalne: +1 przeciwko pociskom Waga: 12 Wymagana siła: 15 Nie może używać: Bard Druid Mag Łotrzyk~ @2571=~Hełm Kaela~ @2572=~Ten rodzaj peleryny, wykonany ze skóry lub wzmocnionego metalu, zakrywa prawie całą głowę, z wyjątkiem twarzy i szyi. Te hełmy zapewniają dobrą ochronę nosa.Ta tarcza została wykonana przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona aureola. PARAMETRY: Premia do klasy pancerza: 1 Specjalna: Chroni przed trafieniami krytycznymi Waga: 2 Nie może używać: Mag, Bard, Łotrzyk~ // END Temple
+ @5109Runa Skrzyni Ta runa znajdowała się w skrzyni. Niewątpliwie pełniła jakąś funkcję w świątyni.
 
+// Księga Maski Śmierci 
+@5110=~Dziennik~ 
+@5111=~Ten dziennik opisuje życie w świątyni w oczekiwaniu na przebudzenie Bhaala. Ostatni fragment jest najciekawszy. „Systera wezwała nas, dziewięć Masek Śmierci. Przypuszczam, że ta szalona kobieta ma dla nas kolejną misję. Z jej opowieści wynika, że ​​Bhaal wkrótce się obudzi i zemści się na Cyricu. Mam już dość! Pomogę Cyricowi znaleźć naszą świątynię. Sam zlikwiduję Systerę, gdy nadejdzie właściwy czas. Może i jest potężna, ale znam jej największą słabość. Moje ogniste czaszki ją pokonają. Jaki sens tkwić po przegranej stronie? Zwycięstwo jest dla mnie słodsze. Cyric mnie nagrodzi.”~ // Fioletowa Czaszka Ekilisa @5112=~Fioletowa Czaszka~ @5113=~Fioletowa Czaszka Ekilisa Ta czaszka wydaje się zupełnie normalna, z wyjątkiem tego, że jest fioletowa.~ // Ognista Czaszka @5114=~Czaszka~ @5115=~Ognista Czaszka Ta czaszka, wyłaniająca się z płomieni, płonie gorącem. Powinna zostać obrócona w popiół. Rzucony na wroga, wynik powinien być interesujący.~ @5116=~Opowieść Taguara~ @5117=~Taguar był wojownikiem, który błagał wszystkich bogów, aby pomogli mu zaspokoić pragnienie władzy i bogactwa swojej żony Urglite. Bhaal, rozbawiony, postanowił uczynić go swoim czempionem. Ogarnięta krwawym i morderczym szałem, armia Taguara niszczyła wszystko na swojej drodze. Jego generałowie, pragnąc pozbyć się szaleńca bez konfrontacji, wybrali truciznę. Urglite ze swojej strony została zamurowana żywcem, podczas gdy ona przeklinała Taguar za porzucenie jej. Zawarcie paktu z Bhaalem ma cenę, którą śmiertelnicy zawsze muszą zapłacić.~ @5118=~Opowieść Islendry~ @5119=~Islendra „lekkomyślna” nie bała się nikogo. Zawsze rozstrzygała swoje konflikty pojedynkiem i wychodziła z niego zwycięsko. Jej rosnąca reputacja wyprzedzała ją, gdziekolwiek się udała, i ostatecznie nikt nie odważył się jej sprzeciwić. Pewnego dnia pojawił się Bhaal, a Islendra rzuciła wyzwanie bogu. Od tamtej pory, jak głosi legenda, przemierza ciemne, wilgotne jaskinie, czyhając na ofiarę, którą upoluje na rozkaz swojego nowego pana… Sprzeciwienie się Bhaalowi zawsze prowadzi do jednej prawdy: śmiertelnicy są zmuszeni podporządkować się jego woli. ~ @5120=~Historia Kaela~ @5121=~Kael był nadętym magiem, biegłym w sztuce tworzenia artefaktów. Jego wielki talent zwrócił uwagę Bhaala, który postanowił przyjąć go na swoją służbę. Kael, którego ego wzrosło, powierzył pewne podstawowe zadania Cespenarowi, swojemu uczniowi. Niestety dla niego, artefakt – nie wiadomo który – nie spodobał się Bhaalowi i Cespenar został nowym mistrzem artefaktów. Rozczarowanie Bhaala ma konsekwencje, których żaden śmiertelnik nie chciałby poznać… ~ @5122=~Pas Kaela~ @5123=~Pas jest dość dziwny. Jest zrobiony z metalu z czerwonym klejnotem pośrodku, którego wnętrze wydaje się płynne. Kiedy dotyka twoich bioder,Pas idealnie dopasowuje się do kształtu ciała.~ @5124=~Pas jest dość dziwny. Jest wykonany z metalu z czerwonym klejnotem pośrodku, którego wnętrze wydaje się płynne. W kontakcie z biodrami pas idealnie dopasowuje się do kształtu ciała. Pozwala użytkownikowi zapamiętać więcej zaklęć niż zwykle. Ten przedmiot rozsławił Kaela, zanim wstąpił na służbę do Bhaala. Niektórzy twierdzą, że metal pochodził z meteorytu. PARAMETRY: Zaklęcia: Przyznaje jedno dodatkowe zaklęcie piątego poziomu, jedno dodatkowe zaklęcie szóstego poziomu i jedno dodatkowe zaklęcie siódmego poziomu. Wymagana inteligencja: 17. Może używać tylko: Mag~ // Czaszka Utrzymana @5125=~Czaszka~ @5126=~Ta czaszka pokryta dziwnymi symbolami została znaleziona na ciele Systery. Po zetknięciu z nim, uczucie gniewu cię ogarnia.~ // Kamień Pokoju w Kratkę @5127=~Rzeźbiony Kamień~ @5128=~Rzeźbiony Kamień znaleziony w pokoju w kratkę.~ // Kamień do otwierania bram piwnicy @5129=~Kamień Strażnika~ @5130=~Ten kamień pozwala ci otwierać bramy na tym poziomie.~ // Lina @5131=~Ta gładka, złota lina, spleciona w miniaturowe podkowy, może ci pomóc...~ @5132=~Notatki Entar~ @5133=~Systera zniknęła po tym, jak nastąpiła na glif na ziemi w pobliżu minotaurów. Poinformowałem Ekilisa i nawet sprecyzowałem, że zdobyła czerwony naszyjnik, ale on mnie nie słucha. Jest przekonany, że wie wszystko. Żywność wkrótce się kończy, a Ekilis nie może znaleźć wyjścia... Będę musiał go zastąpić; nie jest w stanie podołać zadaniu. Ja też. Entar, wierny sługo Cyrica~ // Karczma @5200=~Klucz Barniego~ @5201=~Ten klucz powierzył ci Barni, nowy karczmarz Hełmu i Płaszcza. Otwiera on zapadnię w jego piwnicy.~ // Zardzewiała Tarcza @5202=~Złamana Tarcza~ @5203=~Ta złamana tarcza została zżarta przez rdzę. Nie nadaje się do użytku.~ // Zardzewiała Zbroja @5204=~Wgnieciona Zbroja~ @5205=~Ta wgnieciona zbroja została zżarta przez rdzę. Nie nadaje się do użytku.~ // Zardzewiały Miecz @5206=~Złamany Miecz~ @5207=~Ten złamany miecz został zżarty przez rdzę. Jest bezużyteczny.~ // Wiadomość od Cersitis do Candelas @5208=~Wiadomość od Cersitis~ @5209=~Candelas, obarczam cię odpowiedzialnością za śmierć Sarevoka. Odszukaj jego kontakty; chcę mieć kolejne dziecko Bhaala, tym razem żywe... Otwarcie świątyni od tego zależy. Cersitis~ @5210=~Święty Symbol~ @5211=~Święty Symbol Cyrica. Ta kamienna tablica przedstawia symbol Cyrica, szalonego boga.~ // Kamień Pokoju w Kratkę //Zimny ​​biały kamień: dezaktywuje pułapkę błyskową @5250=~Cięty Kamień~ @5251=~Ten szarobiały kamień trzeszczy w dotyku.~ //Żółty kamień: dezaktywuje pułapkę spalającą @5252=~Cięty Kamień~ @5253=~Ten żółty kamień jest ciepły w dotyku.~ //Kamień Granatowy:Wyłącza pułapkę czaszki i runy @5254=~Rzeźbiony kamień~ @5255=~Rzeźbiony kamień znaleziony w pokoju szachownicy.~ //Czerwony kamień: otwiera drzwi Kaela @5256=~Rzeźbiony kamień~ @5257=~Czerwony kamień podarowany przez Lucindę.~ //Niebiesko-biały kamień: wyłącza pułapkę w kształcie stożka lodowego @5258=~Rzeźbiony kamień~ @5259=~Ten niebiesko-biały kamień jest zimny w dotyku.~ //Lina: prowadzi do pokoju w piwnicy @5260=~Złota lina~ @5261=~Ta lina jest zrobiona ze złotej nici. Gdy za nią pociągniesz, lina wydaje się rozciągać w nieskończoność.~ //Kielich krwi @5262=~Kielich krwi~ @5263=~Ten puchar został wykonany z ludzkiej czaszki i zestawu kości. Islendra prawdopodobnie używała go podczas rytualnych ofiar.~ // Puchar Krwi Kaela @5264=~Kielich Krwi Kaela~ @5265=~Kielich Krwi pozwala ci przywołać krwawego potwora. Kiedy go przywołasz, puchar wypełni się twoją krwią i pojawi się potwor. Tracisz 30% swojego maksymalnego zdrowia. Jeśli spadniesz poniżej tego progu, giniesz. Jeśli potwora pokonasz, wróci on do swojego planu, aby oczekiwać na ponowne przywołanie. Potwora będzie wykonywał każdy twój rozkaz podczas przywoływania; jest ci oddany. Kael stworzył niezwykle skuteczną broń wojenną! Jego możliwości bojowe są następujące: PW: 70 KP: -1 TraK0: 9 Ataki/runda: 2 Obrażenia: 1k6+2 (broń miażdżąca / magiczna +1) Może używać tylko: dziecko Bhaala~ @5267=~Klepak Kaela~ @5268=~Klepak składa się z solidnego drewnianego trzonka przymocowanego do żelaznego pręta, drewnianego pręta nabijanego kolcami lub metalowej kuli najeżonej kolcami. Pomiędzy trzonkiem a częścią uderzającą znajduje się prosty zawias lub łańcuch. Ten cep został ulepszony przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona poświata. PARAMETRY: TRAK0: +1 Obrażenia: 1K6 + 2 Typ obrażeń: Tępe Waga: 12 Współczynnik szybkości: 6 Typ umiejętności: Cep/Gwiazda Poranna Typ: Broń jednoręczna Wymagana siła: 13 Nie może używać: Druid, Mag, Łotrzyk~ @5269=~Tarcza Kaela~ @5270=~Tarcza jest masywną metalową lub drewnianą tarczą zakrywającą wojownika praktycznie od brody do palców u stóp. Musi być solidnie przymocowana do przedramienia i mocno trzymana. Oczywiście, zajęta ręka może być używana tylko do trzymania tarczy na miejscu. Ta tarcza została wykonana przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona aureola. PARAMETRY: Premia do klasy pancerza: 2 Specjalne: +1 przeciwko pociskom Waga: 12 Wymagana siła: 15 Nie może używać: Bard Druid Mag Łotrzyk~ @2571=~Hełm Kaela~ @2572=~Ten rodzaj peleryny, wykonany ze skóry lub wzmocnionego metalu, zakrywa prawie całą głowę, z wyjątkiem twarzy i szyi. Te hełmy zapewniają dobrą ochronę nosa.Ta tarcza została wykonana przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona aureola. PARAMETRY: Premia do klasy pancerza: 1 Specjalna: Chroni przed trafieniami krytycznymi Waga: 2 Nie może używać: Mag, Bard, Łotrzyk~ // END Temple
 
 
 
 
-// Macros le noir ************************************************************************************************************************************************
-// Baton +1 séquenceur mineur
-@29 = ~Baton +1~
-@30 = ~Baton de duel
 
-Ce baton était autrefois utilisé pour les duels de mage. La rapidité était le maitre mot pour déployer ses sorts avant son adversaire et remporter ainsi la victoire!
 
-Paramètres:
-Capacité:
-Sort séquenceur mineur une fois par jour
-
-TAc0: +2
-Dégâts: 1D6+2
-Type de dégâts: perforant
-Poids: 5
-Facteur de vitesse: 3
-Type de compétence: Baton
-Type: arme à 2 mains
-Force nécessaire: 5 
-
-Inutilisable par:
- Moine~
-
-// Robe de défense
-@31 = ~Robe~
-@32 = ~Robe de défense
-
-Cette robe a été fabriquée par Macros afin d'assurer sa protection physique et magique.
-
-Paramètres:
-Sort image miroir une fois par jour
-Sort globe mineur d'invulnérabilité une fois par jour
-
-Intelligence nécessaire: 16
-
-Inutilisable par:
- Guerrier
- Rodeur
- Paladin
- Barde
- Voleur
- Druide
- Clerc~
- 
-// Livre de macros
-
-// FIN Macros le noir ************************************************************************************************************************************************
-
-// PNJ recrutables ***********************************************************************************************************************************************
-
-// Geoffroy d'Anxval *********************************************************************************************************************************************
-// Besantine d'Anxval
-@83 = ~Besantine d'Anxval~
-@84 = ~Besantine +2
-
-Besantine renforcée d'une épaulette en argent dont le cuir a été traité magiquement avec une poudre de Keria lui conférant ainsi une teinte rouge sombre et une résistance accrue aux coups.
-
-A la demande du seigneur d'Anxval, le mage Merkel vivant dans l'une des tours du chateau a conçu cette armure. Elle est utilisable uniquement par un membre de la famille d'Anxval.
-
-Paramètres:
-CA 5 (besantine +2)
-+2 aux jets de sauvegarde
-20% de résistance aux dégats tranchants
-
-Inutilisable par:
- Une personne autre qu'un membre de la famille d'Anxval~
-// FIN Geoffroy d'Anxval *********************************************************************************************************************************************
-
-// Tenues de soirée du Protecteur *********************************************************************************************************************************
-// Essayage tenue pour la réception en l'honneur de l'émissaire d'Amn
-@89 = ~Robe de Sigmund~
-@90 = ~Robe brodée en fil doré ayant pour unique intérêt d'être jolie.
-
-Paramètres:
-
-Inutilisable par:
- Guerrier
- Voleur
- Clerc
- Druide
- Rodeur
- Moine~ 
-
-@85 = ~Armure de plate de Sigmund~
-@86 = ~Armure d'aparat dorée ayant pour unique intéret d'être jolie.
-
-Paramètres:
-
-Inutilisable par:
- Voleur
- Mage
- Rodeur
- Moine~
-
-@87 = ~Armure de cuir de Sigmund~
-@88 = ~Armure d'aparat dorée ayant pour unique intérêt d'être jolie.
-
-Paramètres:
-
-Inutilisable par:
- Mage~
-//  FIN Tenues de soirée du Protecteur *********************************************************************************************************************************
-
-// Compagnie des Aigles d'argents ****************************************************************************************************************************************
-@91 = ~Annales~
-@92 = ~Annales de la compagnie des Aigles d'argent
-
-Ce livre est visiblement l'annale de la compagnie des Aigles d'argent. Il y est décri les différentes campagnes effectuées par ces derniers. A sa lecture vous constatez que cette compagnie agit avec honneur et courage. 
-
-Actuellement, Backus a un contrat avec les marchands des 3 soleils. La compagnie devant assurer la protection de leurs marchandises contre les voleurs qui pullulent dans la cité.
-
-De plus, vous apprenez que Backus et le Duc Eltan sont amis. C'est à la demande du duc Eltan que Backus est venu à Baldur combattre Amn.
-
-Backus est inquiet.
-D'une part, Eltan a disparu et certaines rumeurs disent qu'il aurait été enlevé et enmené hors de la cité. Backus a envoyé un groupe dans les campagnes à la recherche d'Eltan.
-D'autre part, les compagnies de mercenaires restent à Baldur sans avoir de contrat officiel sur place et dépensent beaucoup d'or. D'où provient tout cet or?
-Il se passe quelque chose de pas net et Eltan n'est pas là pour y remedier...
-
-Paramètres:
-
-Inutilisable par:~
-
-// Casque de Backus 
-@93 = ~Casque ailé~
-@94 = ~Casque ailé de la compagnie des aigles d'argent
-
-Casque avec des reflets argentés avec des ailes sur le coté.
-
-Paramètres:
-Bonus à la Classe d'Armure: aucun
-Spécial: protège contre les coups critiques
-Poids: 2
-Non utilisable par :
- Mage
- Barde
- Voleur~
-
-// Armure feuilletée de Backus
-@95 = ~Armure feuillettée~
-//@96 =~manque~
-@97 = ~Armure feuilletée +2~
-@98 = ~Armure feuilletée +2 des Aigles d'argent
-
-Armure feuillettée améliorée avec une toile en tissu bleu azur où est représenté un aigle.
-
-Paramètres:
-Classe d'Armure: 2
-Poids: 40
-Force nécessaire: 8
-Non utilisable par :
- Barde
- Druide
- Mage
- Voleur~
-
-// Ceinture de force humaine
-@99 =~Ceinture~
-//@100 =~manque~
-@101 =~Ceinture de force humaine~
-@102 =~Ceinture de force humaine
-
-Cette ceinture est faite des poils d'homme forts. Celui qui la porte, voit sa force passée à 18.
-
-Paramètres:
-Force portée à 18/00
-
-Inutilisable par:
- aucun~
-
-// L'aigle d'or
-@103 =~Hache de combat~
-//@104 =~manque~
-@105 =~Hache de combat +2~
-@106 =~Hache de combat +2 de MontDeFer 
-
-Hache de combat fabriquée par les nains de MontDeFer suite à une commande passée par le père Backus fondateur des aigles d'argent.
-
-Cette hache aux ailes d'argents accérées provoque des dégats éléctriques à chaque impact.
-
-Paramètres:
-Arme à deux mains
-Thaco +2
-Dégats 1D10+2 \ +2 électrique
- 30% de chance de recevoir une décharge éléctrique supplémentaire de 10 points dégats (sauvegarde contre X)
-
-Inutilisable par:
- Mage
- Druide
- Clerc
- Voleur
- Paladin
- Alignement LOYAL nécéssaire~
-
-// Amulette argentée
-@107 =~Amulette~
-@108 =~Amulette de la compagnie des Aigles d'argent
-
-Amulette d'argent décorative représentant un aigle symbole de la compagnie des Aigles d'argent. Chaque membre en possède une.
-
-Paramètres:
-aucun
-
-Inutilisable par:
-aucun~
-
-// Epée du 2nd des mercenaires Aigle d'argent
-@109 =~Epée batarde~
-//@110 =~manque~
-@111 =~Epée batarde +2~
-@112 =~Epée batarde +2 Vif éclair
-
-Comme son nom l'indique, cette épée accélère de manière significative la vitesse du bras du porteur et lui confère une certaine aisance au combat.
-
-Paramètres:
-Thaco +2
-Dégats +2
-vitesse accélérée
-
-Inutilisable par:
- Mage
- Druide
- Clerc
- Voleur
- Paladin~
-
-// Ecu du 2nd des mercenaires Aigle d'argent
-@113 =~Ecu~
-//@114 =~manque~
-@115 =~Ecu +2~
-@116 =~Ecu +2 de la compagnie des Aigles d'Argent
-
-L'écu a été forgé par les nains de MontDeFer pour les services apportés par la compagnie des Aigles d'argent dans un contrat à l'époque où le père de Backus était le chef de la compagnie.
-
-Paramètres:
-Bonus à la classe d'armure: 3
-Poids: 7
-Force nécessaire: 12
-
-Non utilisable par :
- Barde
- Druide
- Mage
- Voleur~
-
-// Casque des mercenaires Aigle d'argent
-@117 =~Casque~
-@118 =~Casque de la compagnie des Aigles d'argent
-
-Casque avec des reflets argentés et des ailes sur le coté. Chaque membre de la compagnie des Aigles d'argent en possède un.
-
-Paramètres:
-Bonus à la Classe d'Armure: aucun
-Spécial: protège contre les coups critiques
-Poids: 2
-Non utilisable par :
- Mage
- Barde
- Voleur~
-
-// Armure de plates argentée des mercenaires Aigle d'argent
-@119 =~Armure de plates~
-@120 =~Armure de plates de la compagnie des Aigles d'argent
-
-Armure de plates classique mis à part qu'elle a été traitée pour avoir des reflets argentés.
-
-Paramètres:
-Classe d'Armure: 3
-Poids: 50
-Force nécessaire: 12
-Non utilisable par :
- Barde 
- Druide
- Mage
- Voleur~
-
-// Pavois des mercenaires Aigle d'argent
-@121 =~Grand bouclier~
-@122 =~Pavois de la compagnie des Aigles d'Argent
-
-Pavois avec une tête d'aigle incrustée en son centre. Chaque membre de la compagnie en possède un.
-
-Paramètres:
-Bonus à la classe d'armure: 1
-Spécial: +1 contre les armes à projectile
-Poids: 15
-Force nécessaire: 15
-Non utilisable par :
- Barde
- Druide
- Mage
- Voleur~
-// FIN Compagnie des Aigles d'argents ****************************************************************************************************************************************
-
-// Compagnie des Licornes d'ébène ****************************************************************************************************************************************
-// Casque licorne du chef
-@128 = ~Casque d'or~
-@129 = ~Casque d'or des Licornes d'ébène
-
-Casque de Trace tout en or avec une pointe noire. Pointe faisant référence à la corne d'une licorne d'ébène.~
-@130 = ~Casque d'or des Licornes d'ébène
-
-Casque avec une pointe noire conçue à partir d'une corne de licorne. Son porteur hérite du pouvoir légendaire des Licornes: la téléportation.
-
-PARAMETRES :
-Bonus Classe d'Armure:  aucun
-Spécial: 
- Protège contre les coups critiques 
- Téléportation 1 fois par jour
-Poids: 2
-
-Inutilisable par :
- Mage
- Barde
- Voleur~
-
-// Casque bleu licorne
-@131 = ~Casque bleu~
-@132 = ~Casque bleu des Licornes d'ébène
-
-Ce casque a été fabriqué à l'image du casque d'or de Trace mais il n'a aucun pouvoir particulier. Chaque membre de la compagnie possède un casque de ce type.
-
-PARAMETRES :
-Bonus Classe d'Armure:  aucun
-Spécial: 
- Protège contre les coups critiques 
-Poids: 2
-
-Inutilisable par :
- Mage
- Barde
- Voleur~
- 
-// Armure de plates de la Licorne d'ébène
-@133 = ~Armure d'or~
-@134 = ~Armure d'or des LicorneS d'ébène
-
-Armure de plate d'or faite aux armoiries de la Licorne d'ébène
-
-PARAMETRES :
-Classe d'Armure: 3
-Poids: 50
-Force nécessaire: 12
-
-Non utilisable par :
- Barde 
- Druide
- Mage
- Voleur~
-@135 = ~Armure de plates +1~
-@136 = ~Armure de plates +1 des Licornes d'ébène
-
-Armure de plates améliorée faite aux armoiries de la Licorne d'ébène. Le porteur est immunisé à tout ce qui, magique ou non, pourrait affecter sa mobilité, y compris les sorts de rapidité et de ralentissement.
-
-PARAMETRES :
-Spécial:  porteur immunisé à la modification de sa capacité de déplacement
-Classe d'Armure: 1
-Poids: 50
-Force nécessaire: 12
-
-Non utilisable par :
- Barde 
- Druide
- Mage
- Voleur~
-
-// Armure de plates bleu de la Licorne d'ébène
-@137 = ~Armure de plates bleu~
-@138 = ~Armure de plates bleu des Licornes d'ébène
-
-Armure de plates classique mis à part qu'elle a été traitée pour avoir des reflets bleutés. Chaque membre de la compagnie possède une armure de ce type.
-
-PARAMETRES :
-Classe d'Armure: 2
-Poids: 50
-Force nécessaire: 12
-
-Inutilisable par:
- Barde 
- Druide
- Mage
- Voleur~
-
-// Ecu d'or de la Licorne d'ébène
-@139 = ~Ecu d'or.~
-@140 = ~Ecu d'or des Licornes d'ébène.
-
-Ecu classique fait aux armoiries de la Licorne d'ébène
-
-PARAMETRES :
-Classe d'Armure: 2
-Spécial:
-Sort protection contre les projectiles non magiques une fois par jour (durée 30 secondes).
-Bonus à la classe d'armure: 1
-Poids: 7
-Force nécessaire: 12
-
-Non utilisable par :
- Barde
- Druide
- Mage
- Voleur~
- 
-@141 = ~Ecu +1~
-@142 = ~Ecu d'or des Licornes d'ébène.
-
-Ecu amélioré fait aux armoiries des Licornes d'ébène. Il confère à son porteur une grande résistance aux projectiles.
-
-PARAMETRES :
-Classe d'Armure: 2
-Spécial:
-Sort protection contre les projectiles non magiques une fois par jour (durée 30 secondes).
-Bonus à la classe d'armure: 2
-Poids: 7
-Force nécessaire: 12
-
-Non utilisable par :
- Barde
- Druide
- Mage
- Voleur~
-
-// Ecu bleu de la Licorne d'ébène
-@143 = ~Ecu bleu~
-@144 = ~Ecu bleu des Licornes d'ébène
-
-Cet écu a été fabriqué à l'image de l'écu d'or de Trace mais il n'a aucun pouvoir particulier.Chaque membre de la compagnie possède un écu de ce type.
-
-PARAMETRES :
-Bonus à la classe d'armure: 1
-Poids: 7
-Force nécessaire: 12
-
-Non utilisable par :
- Barde
- Druide
- Mage
- Voleur~
-
-// gandelet d'or de la Licorne d'ébène
-@145 = ~Gandelet d'or~
-@146 = ~Gandelet d'or des Licornes d'ébène
-
-Gandelets classique fait aux armoiries des Licornes d'ébène.
-
-PARAMETRES :
-
-Non utilisable par :
- Mage
- Voleur~ 
-
-@147 = ~Gandelet d'or des Licornes d'ébène
-
-Gandelets fait aux armoiries des Licornes d'ébène. Telle la ruade d'une licorne, son porteur voit sa capacité à porter un coup puissant augmentée.
-
-PARAMETRES :
-TAC0 + 1
-
-Capacité:
-TAc0 +4 / 1 fois par jour (durée 30 secondes) 
-Dégats +3
-
-Inutilisable par:
-Mage
-Voleur~
-
-// Epée de longue vie
-//@ =
-//@ =
-@148 = ~Epée longue +2~
-@149 = ~Epée de longue vie
-
-Epée longue améliorée conférant à son porteur la capacité d'absorber des points de vie de son ennemi à chaque coup porté.
-
-PARAMETRES :
-TAcO +2
-Dégats +2
-?
-
-Capacité:
-à chaque coup porté, son porteur gagne 1 points de vie.
-
-Non utilisable par:
-Mage
-Voleur~
-
-// Besantine +1
-@150 = ~Armure de cuir bleue~
-@151 = ~Armure de cuir des Licornes d'ébènes
-
-Armure de cuir classique aux reflets bleutés. Chaque archet de la compagnie en possède une.
-
-PARAMETRES :
-Classe d'armure: 8
-
-Poids: 15
-Force nécessaire: 6
-
-Non utilisable par :
- Mage~
-@152 = ~Armure de cuir +1~
-@153 = ~Armure de cuir +1 des Licornes d'ébène.
-
-Armure de cuir améliorée permettant de créer des images miroirs de son porteur.
-
-PARAMETRES :
-Classe d'armure: 7
-Capacité:
-Image miroir une fois par jour (durée de 60 secondes).
-Poids: 15
-Force nécessaire: 6
-
-Non utilisable par :
- Mage~
-
-// Besantine 
-@154 = ~Armure de cuir bleue~
-@155 = ~Armure de cuir des Licornes d'ébènes
-
-Armure de cuir classique aux reflets bleutés. Chaque archet de la compagnie en possède une.
-
-PARAMETRES :
-Classe d'armure: 8
-Poids: 15
-Force nécessaire: 6
-
-Non utilisable par :
- Mage~
- 
-// Lance de la licorne
-//@ = ~Lance des Licornes d'ébène.~
-//@ =
-@156 = ~Lance +3~
-@157 = ~Lance +3 des Licorne d'ébène.
-
-Lance améliorée ayant le pouvoir d'envoyer son ennemi dans un autre monde labyrinthique lorsqu'un coup est porté.
-
-PARAMETRES :
-Capacité:
-sur un coup porté, 15% de chance que l'ennemi subisse le sort Labyrinthe.
-
-TAc0: +3
-Dégâts: 1D6+3
-Type de dégâts: perforant
-Poids: 5
-Facteur de vitesse: 4
-Type de compétence: Lance
-Type: arme à 2 mains
-Force nécessaire: 5 
-
-Non utilisable par :
- Clerc
- Mage
- Voleur~
-
-// Arc
-//@ =
-//@ =
-@158 = ~Arc long +1~
-@159 = ~Arc long +1 de précision
-
-Arc long amélioré ayant le pouvoir d'envoyer des tirs précis.
-
-PARAMETRES :
-Capacité:
-Tir précis une fois par jour (durée 30 secondes)
- TAC0 +4
-
-TAC0: +2
-Dégâts: +1
-Poids: 3
-Facteur de vitesse: 5
-Type de compétence: Arc long
-Type: Arme à 2 mains
-Force nécessaire: 6
-
-Non utilisable par :
- Druide
- Clerc
- Mage
- Voleur~
- 
-// FIN Compagnie des Licornes d'ébène ****************************************************************************************************************************************
-
-// Message des ducs ****************************************************************************************************************************************
-@125 =~Message des ducs~
-@126 =~Protecteur,
-nous avons une mission de haute importance à vous confier.
-
-Je vous prie de vous rendre au palais au plus tôt.
-
-Cordialement
- Belt, Duc de Baldur~
-
-
-// Message de Liia à l'intention de dame Ecu d'argent
-@161 =~Message de Liia~
-@162 =~Dame Ecu d'argent,
-
-j'ai appris que vous étiez souffrante. Sachez que je serai ravi de vous envoyez mon guerrisseur personnel.
-
-Cordialement
- Liia, Duchesse de Baldur~
-// FIN Message des ducs ****************************************************************************************************************************************
-
-// OBJETS GOLEMs D'AMBRE ********************************************************************************************************************************************
-// Baton d'ambre d'Emilia
-@163 = ~Baton +2~
-@164 = ~Baton d'ambre d'Emilia
-
-Baton constitué d'un entrelat de veines d'ambre dont l'extrémité contient une pierre sphérique bleue. 
-
-PARAMETRES :
-Capacité:
- Feu d'ambre (équivalent à l'incinérateur d'Aznaraz) / 1 fois par jour
-
-TAC0: +2
-Dégâts: +2
-Poids: 6
-Facteur de vitesse: 3
-Type de compétence: Baton
-Force nécessaire: 5
-
-Non utilisable par :
- Druide
- Clerc
- Guerrier
- Voleur
- Paladin~
-
-//Anneau d'ambre
-@165 = ~Anneau d'ambre~
-@166 = ~Anneau d'ambre d'Emilia
-
-Anneau cerclé d'or et d'ambre contenant plusieurs rubis sertis.
-
-PARAMETRES :
-Capacité:
-mémorisation d'un sort supplémentaire de niveau 3 et 4.
-
-Non utilisable par :
- Druide
- Clerc
- Guerrier
- Voleur
- Paladin~
-
-// Robe d'invulnérabilité
-@167 = ~Robe d'invulnérabilité~
-@168 = ~Robe d'invulnérabilité d'Emilia
-
-Robe de mage aux couleurs de la compagnie (orange et bleu).
-
-PARAMETRES :
-Capacité:
-10% de résistance magique
-Sort globe d'invulnérabilité mineur / une fois par jour
-
-Poids: 3
-
-Non utilisable par :
- Druide
- Clerc
- Guerrier
- Voleur
- Paladin~
-
-// Cape d'Emilia
-@169 = ~Cape de sauvegarde~
-@170 = ~Cape de sauvegarde d'Emila
-
-Grande cape aux couleurs de la compagnie (orange et bleu).
-
-PARAMETRES :
-Capacité:
-+2 aux jets de sauvegarde
-+1 à la CA
-
-Poids: 3
-
-Non utilisable par :~
-
-// Livre de recherche sur l'ambre
-@171 = ~Livre de recherche~
-@172 = ~Livre de recherche des Golems d'ambre
-
-Ce livre contient visiblement les essais et les résultats des recherches de la compagnie sur les propriétés de l'ambre.
-
-Il indique comment utiliser l'ambre dans la fabrication d'artéfacts mais les notes sont très complexes et incompréhensibles pour vous. 
-
-ce livre a sans doute beaucoup de valeur pour un mage expérimenté dans la fabrication d'artéfacts.
-
-Poids: 5
-
-Non utilisable par :~
-
-// Robe de mage des Golems d'ambre
-@173 = ~Robe des Golems d'ambre~
-@174 = ~Robe de mage des Golems d'ambre
-
-Robe de mage aux couleurs de la compagnie (orange et bleu).
-
-PARAMETRES :
-Capacité:
-+1 à tous les jets de sauvegarde
-
-Poids: 5
-
-Non utilisable par :
- Druide
- Clerc
- Guerrier
- Voleur
- Paladin~
-
-// Baton de cèdre mineur des Golems d'ambre
-@175 = ~Baton +1~
-@176 = ~Baton de cèdre mineur des Golems d'ambre
-
-Baton fabriqué à partir de bois de cèdre blanc dont l'extrémité contient une sphère d'ambre.
-
-PARAMETRES :
-Capacité:
-sort projectile magique / 1 fois par jour (nb projectiles selon le niveau du lanceur)
-
-TAC0: +1
-Dégâts: +1
-Poids: 4
-Facteur de vitesse: 3
-Type de compétence: Baton
-Force nécessaire:  5
-
-Non utilisable par :
- Druide
- Clerc
- Guerrier
- Voleur
- Paladin~
-
-// Baton de cèdre majeur des Golems d'ambre
-@177 = ~Baton +2~
-@178 = ~Baton de cèdre majeur des Golems d'ambre
-
-Baton fabriqué à partir de bois de cèdre blanc strié d'Ambre dont l'extrémité contient une sphère d'ambre.
-
-PARAMETRES :
-Capacité:
-sort projectile magique / 2 fois par jour (nb projectiles selon le niveau du lanceur)
-
-TAC0: +2
-Dégâts: +2
-Poids: 4
-Facteur de vitesse: 3
-Type de compétence: Baton
-Force nécessaire: 5
-
-Non utilisable par :
- Druide
- Clerc
- Guerrier
- Voleur
- Paladin~
-
-// Parchemin de réparation des golems d'ambre
-@179 = ~Parchemin~
-@180 = ~Réparation des golems d'ambre (Altération)
-
-Niveau: 5
-Portée: 20 m  
-Durée: 3 secondes
-Temps d'incantation: 3 
-Zone d'effet: 
-Jet de sauvegarde: non 
-
-Un rayon magique se dirige vers la créature ciblée. Si cette dernière est un Golem d'ambre, la créature se répare à raison de 10 de points par seconde pour une durée de 3 secondes.
-
-Non utilisable par :
- Druide
- Clerc
- Guerrier
- Voleur
- Paladin~
-
-// Cagoule bleue 
-@181 = ~Cagoule bleue ~
-@182 = ~Cagoule bleue d'Arkan
-
-Cagoule bleue sertie de gemmes d'ambre.
-
-PARAMETRES :
-Bonus à la Classe d'Armure: aucun
-Spécial: protège contre les coups critiques
-Capacité:
-+ 2 jets de sauvegarde contre les sorts
-+ 2 jets de sauvegarde contre les baguettes
-
-Poids: 1
-
-Non utilisable par :~
-
-// Cape d'Arkan
-@183 = ~Cape de déflexion~
-@184 = ~Cape de déflexion d'Arkan
-
-Grande cape aux couleurs de la compagnie (orange et bleu).
-
-PARAMETRES :
-Capacité:
-sort de déviation de sorts mineurs / 1 fois par jour
-
-Poids: 2
-
-Non utilisable par :
- Druide
- Clerc
- Guerrier
- Voleur
- Paladin~
- 
- 
-// Lingots d'ambre
-@196 = ~Lingots d'ambre~
-@197 = ~Ces barres ressemblent à s'y méprendre à de grands lingots d'or mis à part leur couleur orange sombre. 
- 
-Il y a de fortes chances pour que ces lingots aient de la valeur. 
-
-Il ne reste plus qu'à trouver un acheteur ou une utilité.
-
-Une chose est sur, ça pèse horriblement lourd!
-
-PARAMETRES :
-aucuns
-
-Poids: 50
-
-Non utilisable par :~
-
-// Débris de golem d'ambre
-@198 = ~Débris d'ambre~
-@199 = ~Les restes du golem d'ambre forment un amas de roches de tailles diverses.
-
-Avec un peu de chance, il y aura moyen d'utiliser ces débrits ou de les vendre.
-
-PARAMETRES :
-aucuns
-
-Poids: 25
-
-Non utilisable par :~
-
-// Journal D'Emilia
-@200 = ~Journal d'Emilia~
-@201 = ~Vous lisiez un livre sans grand intérêt jusqu'aux derniers passages:
-
-Le 5 Eleinte 1370: La guerre avec Amn n'aura pas lieu et les ducs ne vont pas honnorer leur contrat. Rien de surprenant à celà, on promet toujours lorsque l'on est dans le besoin. Je devrais être en colère mais en fait non. Cette guerre me semblait montée de toutes pièces et j'avais vu juste! Il est temps pour la confrérie de reprendre la route. Le comptoir de Melfin me semble une bonne destination. 
-Les caravaniers ont toujours besoin de protection.
-
-Le 8 Eleinte 1370: Macros, le responsable de la sécurité des ducs, nous a rendu visite. Il nous a commandé plusieurs Golems de pierre pour assurer la sécurité du palais. J'accepté son offre et nous allons donc rester un peu. 
-Intrigué par notre utilisation de l'ambre, il désire en apprendre plus sur cette matière.
-
-Le 18 Eleinte 1370: Macros se révèle être un très bon élève derrière son air suffisant. Il a soif de pouvoir comme beaucoup de magiciens... Je le soupçonne de vouloir apprendre à fabriquer nos fameux golems d'ambre et de s'intéresser d'un peu trop près à mon livre rassamblant les connaissances de notre confrérie. Je vais garder un oeil sur lui. La situation pourrait dégénérer...~
-// FIN OBJETS GOLEMs D'AMBRE ****************************************************************************************************************************************
-
-// OBJETS BELIERS D'OBSIDIENNE ****************************************************************************************************************************************
-@203 = ~Pavois +1~
-@204 = ~Pavois de Nazath. 
-
-
-Bouclier fait d'obsidienne où est représenté de nombreux visages en souffrance. En fixant le bouclier, on finit par constater que les visages
-bougent. 
-
-PARAMETRES :
-Bonus à la classe d'armure: 2
-Spécial: +2 contre les armes à projectile
-
-Force nécessaire: 15
-
-Capacité:
-Sort d'horreur une fois par jour.
-
-Poids: 10
-
-Inutilisable par:
- Mage
- Druide
- Voleur
- Rodeur
- Alignement BON ou NEUTRE~
-
-@206 = ~Masse +2~
-@207 = ~Masse de Nazath. 
-
-Masse d'obsidienne dont l'extrémité représente une tête avec avec deux cornes incurvées.
-
-PARAMETRES :
-TAc0: +2
-Dégâts: 1D6+3 et +2 de feu
-Type de dégâts: contondant
-Poids: 8
-Facteur de vitesse: 6
-Type de compétence: Masse
-Type: arme à 1 mains
-Force nécessaire: 10
-
-Inutilisable par:
- Mage
- Druide
- Voleur
- Alignement BON ou NEUTRE~
-
-@208 = ~Masse +1~
-@209 = ~Masse du champion. 
-
-Masse d'obsidienne dont l'extrémité représente une tête avec un rictus mauvais.
-
-PARAMETRES :
-Capacité spéciales:
-Sort Charme néfaste 1 fois par jour.
-TAc0: +1
-Dégâts: 1D6+2
-Type de dégâts: contondant
-Poids: 8
-Facteur de vitesse: 6
-Type de compétence: Masse
-Type: arme à 1 mains
-Force nécessaire: 10
-
-Inutilisable par:
- Mage
- Druide
- Voleur
- Alignement BON ou NEUTRE~
-
-@210 = ~Bille +2~
-@211 = ~Bille des Béliers d'obsidienne. 
-
-Bille taillée dans de la pierre d'obsidienne ayant subit un effet magique.
-
-PARAMETRES :
-Dégâts: 1D4 +2
-Type de dégâts: projectile (perforant)
-Poids: 0
-Arme de jet: fronde
-
-Inutilisable par:
- Alignement BON ou NEUTRE~
-
-@212 = ~Pavois +1~
-@213 = ~Pavois des Béliers d'Obsidienne
-
-Bouclier sombre où est représenté un crâne humain avec deux cornes incurvées.
-
-PARAMETRES :
-Bonus à la classe d'armure: 2
-Spécial: +2 contre les armes à projectile
-Force nécessaire: 15
-Poids: 10
-
-Inutilisable par:
- Mage
- Druide
- Voleur
- Rodeur
- Alignement BON ou NEUTRE~
-
-
-@214 = ~Epée batarde +3~
-@215 = ~Epée batarde des Béliers d'Obsidiennedes Béliers d'Obsidienne
-
-Voici sans doute l'épée qui a été fabriquée à partir d'obsidienne et d'Altair d'Argol. Pour un tel champion, c'est sans doute une belle fin.
-
-PARAMETRES :
-Capacité:
-Vélocité: +1 attaque pendant 30 sec une fois par jour.
-
-TAc0: +3
-Dégâts: 2D4 +3
-Type de dégâts: tranchant
-Poids: 7
-Facteur de vitesse: 6
-Type de compétence: épée batarde
-Type: arme à 1 mains
-Force nécessaire: 5 
-
-Inutilisable par:
- Mage
- Druide
- Voleur
- Clerc
- Alignement BON ou NEUTRE~
-
-
-@216 = ~Pierre~
-@217 = ~Roche d'obsidienne.
-
-
-Roche noire et brillante qui sert visiblement à la fabrication des artéfacts des Béliers d'obsidienne.
-
-En l'état, vous n'avez pas les connaissances pour l'utiliser. Peut être trouverez vous quelqu'un en mesure de le faire ou de vous l'acheter.
-
-Inutilisable par:~
-
-
-@218 = ~Jarre~
-@219 = ~Jarre de sang des Béliers d'obsidienne.
-
-Jarre contenant des organes visiblement prélévés sur leurs victimes. On peut supposer que ces organes sont mangés ou utilisés à la fabrication d'artéfacts.
-
-Inutilisable par:~
-
-
-@220 = ~Armure de plates noire~
-@221 = ~Armure de plates des Béliers d'obsidienne
-
-Armure de plates classique mis à part qu'elle a été traitée pour être totalement noire. Chaque membre de la compagnie possède une armure de ce type.
-
-PARAMETRES :
-Classe d'Armure: 2
-Poids: 50
-Force nécessaire: 12
-
-Inutilisable par:
- Barde 
- Druide
- Mage
- Voleur~
-
-@222 = ~Coffre~
-@223 = ~Coffre de Nazath
-
-Coffre d'obsidienne utilisé par Nazath.
-
-Inutilisable par:~
-
-@224 = ~Potion de sang~
-@225 = ~Potion de sang des Béliers d'obsidienne
-
-La couleur, la texture et même le gout ne laisse aucuns doutes. Cette potion a été faite à partir des victimes des Béliers d'obsidienne.
-
-PARAMETRES :
-Force :+2
-Jet de sauvegarde: +2
-
-Inutilisable par:
-Bard
-Mage
-Clerc
-Druide
-Voleur~
-
-
-@226 = ~Sphère~
-@227 = ~Sphère de Sin carna
-
-L'objet représente un dragon noir fait d'obsidienne où est lové une sphère de cristal rouge sang. Nazath recevait sans doute ses ordres de Sin carna par le bias de cette sphère.
-
-Il peut être possible d'entrer en contact avec Sin Carna elle même.
-
-Inutilisable par:
- Alignement BON ou NEUTRE~
- 
-@228 = ~Livre~
-@229 = ~Livre des Béliers d'obsidienne
-
-Ce livre contient les différentes "recettes" permettant de fabriquer les artéfacts des béliers d'Obsidiennes. Pour un néophyte tel que vous, il vous est impossible de fabriquer ces objets.
-
-Peut-être trouverez vous une personne qui en est capable.
-
-Inutilisable par:
- Alignement BON ou NEUTRE~
- 
- 
-@230 = ~Casque cornu~
-@231 = ~Casque de Nazath
-
-Le casque ressemble à un crâne humain avec deux cornes incurvées. Contrairement à un casque classique, le métal a été remplacé par de l'Obsidienne d'où émane 
-une forte concentration de magie. Son aspect est repoussant.
-
-Paramètres:
-Bonus à la Classe d'Armure: aucun
-Spécial: 
- protège contre les coups critiques
- Charisme -2
- immunité à la peur
-
-Poids: 2
-Non utilisable par :
- Mage
- Barde
- Voleur
- Alignement BON ou NEUTRE~
- 
- 
-@232 = ~Casque cornu~
-@233 = ~Casque du champion des Béliers d'obsidienne
-
-Le casque ressemble a un crane humain avec deux cornes incurvées. De nombreuses runes gravées confèrent une aura magique au casque.
-
-Paramètres:
-Bonus à la Classe d'Armure: aucun
-Spécial: 
- protège contre les coups critiques
- Charisme -2
- Force +1
-
-Poids: 2
-Non utilisable par :
- Mage
- Barde
- Voleur
- Alignement BON ou NEUTRE~
-
-
-@234 = ~Armure de plates +1~
-@235 = ~Armure de plates de Nazath
-
-Armure de plates faite d'os renforcés d'obsidienne conférant à l'armure une grande résistance aux coups et un aspect répugnant.
-
-PARAMETRES:
-Classe d'Armure: 2
-Résistance aux coups -20% (tranchant, contendant, perforant et écrasant)
-Charisme -1
-Poids: 40
-Force nécessaire: 12
-Non utilisable par :
- Barde 
- Druide
- Mage
- Voleur
- Alignement BON ou NEUTRE~
-
-
-@236 = ~Armure de plates +1~
-@237 = ~Armure de plates du champion des Béliers d'obsidienne
-
-Armure de plates faite d'os renforcés d'obsidienne trempés dans un bain de sang conférant à l'armure une grande résistance aux coups et un aspect répugnant.
-
-PARAMETRES:
-Classe d'Armure: 2
-Résistance aux coups +15% (tranchant, contendant, perforant et écrasant)
-Résistance au feu +15
-Charisme -2
-Poids: 40
-Force nécessaire: 12
-Non utilisable par :
- Barde 
- Druide
- Mage
- Voleur
- Alignement BON ou NEUTRE~
- 
-// Casque mercenaire
-@257 = ~Casque cornu~
-@258 = ~Casque des Béliers d'obsidienne
-
-???
-
-Paramètres:
-Bonus à la Classe d'Armure: aucun
-Spécial: 
- protège contre les coups critiques
-
-Poids: 2
-Non utilisable par :
- Mage
- Barde
- Voleur~ 
- 
- // Corps d'enfant
-@263= ~Cadavre~
-@264= ~Cadavre d'enfant.
-
-
-Le corps porte des marques de mort violente. Il a été vidé de son sang.~
-
-// Bouteille de sang
-@267=~Bouteille~
-@268=~Bouteille de sang
-
-Tout ressemble à une bouteille de vin mais au gout c'est différent...~
-
-// FIN OBJETS BELIERS D'OBSIDIENNE ****************************************************************************************************************************************
-
-// OBJETS ALTAIR D'ARGOL ****************************************************************************************************************************************
-// Casque
-@245 =~Casque~
-@246 = ~Casque d'Ichtar
-
-
-Le seigneur d'Ichtar confronté a des attaques régulières de pillards avait commandé une amure particulière à son mage. Une fois fabriqué, il partit en campagne et
-défiat le célèbre chef des pillards. Son arme était tranchante...
-
-Le casque est l'une des pièces de l'armure en question.
-
-PARAMETRES:
-Bonus à la Classe d'Armure: aucun
-Spécial: 
- protège contre les coups critiques
-Résistance aux coups tranchants 10% 
-Poids: 
-Non utilisable par :
- Barde 
- Druide
- Mage
- Voleur
- Alignement Loyal~
-
-// Armure
-@247 = ~Armure de plate complete +1~
-@248 = ~Armure d'Ichtar
-
-
-Un seigneur confronté a des attaques régulières de pillards avait commandé une amure complète à son mage. Une fois fabriqué, il partit en campagne et
-Défiat le chef des pillards. Son arme était tranchante...
-
-L'armure est l'une des pièces en question.
-
-PARAMETRES:
-Classe d'Armure: 0
-Résistance aux coups tranchants +10% 
-Poids: 60
-Force nécessaire: 12
-Non utilisable par :
- Barde 
- Druide
- Mage
- Voleur
- Alignement Loyal~
-
-// Bottes
-@249 =~Bottes~
-@250 = ~Bottes d'Ichtar
-
-
-Le seigneur d'Ichtar confronté a des attaques régulières de pillards avait commandé une amure complète à son mage. Une fois fabriqué, il partit en campagne et
-défiat le chef des pillards. Son arme était tranchante...
-
-Les bottes est l'une des pièces de l'armure en question.
-
-PARAMETRES:
-Résistance aux coups tranchants +5% 
-CA contre les projectiles +2
-Poids: 
-Non utilisable par :
- Barde 
- Druide
- Mage
- Voleur
- Alignement Loyal~
-
-// Brassard
-@251 = ~Brassard~
-@252 = ~Brassard d'Altair
-
-Altair a fait frabriqué ces gands spécialement pour lui en vue de ses duels.
-
-PARAMETRES:
-Thaco +2
-Dégat +2
-Poids: 
-Non utilisable par :
- Force inférieure à 16
- Dextérité inférieure à 16
- Barde 
- Druide
- Mage
- Voleur
- Alignement Loyal~
-
-// Epée longue
-@253 = ~Epée longue +2~
-@254 = ~Coup fatal
-
-Cette épée longue permet à son combattant de sentir de manière instinctive les points vitaux de ses adversaires et donc de porter un coup fatal.
-
-PARAMETRES :
-Capacité:
-coup critique +2
-
-TAc0: +2
-Dégâts: 1d8+2
-Type de dégâts: tranchant
-Poids: 7
-Facteur de vitesse: 6
-Type de compétence: épée longue
-Type: arme à 1 mains
-Force nécessaire: 5 
-
-Inutilisable par:
- Mage
- Druide
- Voleur
- Clerc~
-
-// Epée courte
-@255 = ~Epée courte +3~
-@256 = ~Epée de la chance
-
-???
-
-PARAMETRES :
-Spécial: Sort de chance 1 fois par jour pendant 60 secondes.
-
-TAc0: +3
-Dégâts: 1d6+3
-Type de dégâts: tranchant
-Poids: 3
-Facteur de vitesse: 2
-Type de compétence: épée courte
-Type: arme à 1 mains
-Force nécessaire: 5 
-
-Inutilisable par:
- Mage
- Druide
- Clerc~
-
-// Corps Altair
-@259= ~Corps~
-@260= ~Corps d'Altair.
-
-Corps assomé d'Altair d'Argol avec une belle bosse sur la tête. 
-
-Peut-être lui trouverez vous une utilité.~
-
-// Corps Silvia
-@261= ~Corps~
-@262= ~Corps de Silvia.
-
-Corps assomé de Silvia avec une belle bosse sur la tête. 
-
-Peut-être lui trouverez vous une utilité.~
-// FIN OBJETS ALTAIR D'ARGOL ****************************************************************************************************************************************
-
-// Objet quête Gavin ************************************************************************************************************************************************
-// Corps de mendiant
-@265= ~Cadavre~
-@266= ~Cadavre de mendiant. 
-
-Le corps porte des marques de mort violente. Il a été vidé de son sang.
-
-Sans doute, un des amis de Gavin.~
-// FIN Objet quête Gavin ************************************************************************************************************************************************
-
-// Compagnie des Haches Noires ***********************************************************************************************************************************
-// Casque de Bratack
-@5011 =~casque~
-@5012 =~Casque de Bratack
-
-Casque typique de la tribu dont il est issue. Le chaman y a insuflé sa magie protectrice.
-
-Bonus à la Classe d'Armure: aucun
-Spécial: 
- protège contre les coups critiques
- Résistance à la magie 3%
- Résistance aux dégats magiques 3% 
-Poids:  4
-Non utilisable par :
- Barde 
- Druide
- Mage
- Voleur
- Paladin
- Alignement Loyal OU neutre~
-
-// Armure Feuilletée +2 de Bratack
-@5001 =~Armure Feuilletée +2~
-@5002 =~Armure de Bratack
-
-Armure, quelque peu exotique a été créée par un Chaman.
-
-Elle est constituée d'une besantine où sont fixées des petites plaques de métal conférant ainsi souplesse et résistance.
-
-PARAMETRES:
-Classe d'Armure: 2
-Résistance aux coups condandants +20% 
-Poids: 30
-Force nécessaire: 10
-Non utilisable par :
- Barde 
- Druide
- Mage
- Voleur~
-
-// Hache noire de combat +2: Snaga la sanglante
-@5003 =~Hache de combat +2~
-@5004 =~Snaga la sanglante
-
-Hache de combat noire dont la lame iradie d'une lueur rouge.
-
-Cette hache a soif de sang. Lorsqu'un ennemi est touché, Snaga cherche a se nourrir et lorsque elle parvient à ses fins sa victimes subit une hémoragie.
-
-PARAMETRES :
-Capacité:
-20% chance de subir une hémorragie lorsqu'un coup est porté. (jet de sauvegarde contre les poisons à -2)
-
-TAc0: +2
-Dégâts: 1d8+2
-Type de dégâts: tranchant
-Poids: 7
-Facteur de vitesse: 6
-Type de compétence: hache
-Type: arme à 2 mains
-Force nécessaire: 15 
-
-Inutilisable par:
- Mage
- Druide
- Voleur
- Clerc
- Paladin
- Alignement Loyal ou neutre~
-
-// Hache de jet noire +2
-@5005 =~Hache de jet +2~
-@5006 =~Hache des Haches noires
-
-Hache complètement noire qui a donné son nom à la compagnie. Fabriquées par la compagnie elle même, elle est particulièrement meutrière.
-
-PARAMETRES :
-Thac0: 0
-Dégâts: 1d6+3
-Type de dégâts: tranchant
-Poids: 3
-Facteur de vitesse: 4
-Type de compétence: Hache
-Type: arme à 1 mains
-Force nécessaire: 5 
-
-Inutilisable par:
- Mage
- Druide
- Clerc
- Voleur~
-
-// Ceinture de hate
-@5007 =~Ceinture~
-@5008 =~Ceinture de Hate
-
-Ceinture faite de bandes de cuir entrelacées à des poils de crinières de chevaux.
-
-Ces cheveaux étaient des étalons de pur race et très rapide.
-
-PARAMETRES:
-Sort de hâte une fois par jour;
-Poids: 2
-Non utilisable par:~
-
-// figurine de Briska
-@5009 =~Figurine d'ours~
-@5010 =~figurine de Briska
-
-Cette figurine permet d'invoquer un ours planaire qui s'attaquera aux ennemis du porteur.
-
-PARAMETRES:
-Incovation de Briska pendant une durée de x secondes.
-Nombre de charges limités.
-Poids: 2
-Non utilisable par:~
-
-// Hache de combat
-@5011 =~Hache de combat~
-@5012 =~Hache de combat
-
-La hache de combat est une version plus grande de la hache d'armes avec une grande hampe d'environ 1,50 mètre comportant deux tranchants. C'est une arme pouvant se révéler devastatrice qui nécessite deux mains libres.
-
-PARAMETRES :
-Dégâts : 1D10
-Type de dégâts : tranchant
-Poids : 12
-Facteur de vitesse : 9
-Type de compétence : Hache
-Type : Arme à 2 mainS
-Force nécessaire : 14
-Non utilisable par :
- Druide
- Clerc
- Mage 
- Voleur~
- 
-// Contrat des Haches noires
-@5013 =~Contrat~
-@5014 =~Contrat des haches noires
-
-Ce parchemin est signé par le duc Eltan et Bratack. Il signale que la compagnie est au service des ducs contre la somme de 10 000 pièces d'or.
-
-Le service en question étant de combattre l'armée d'Amn sous les ordres de l'armée de Baldur pendant une durée de 1 mois.~
-// FIN Compagnie des Haches Noires ***********************************************************************************************************************************
-
-// Guilde de Basilius ********************************************************************************************************************************************
-
-@5015= ~Corps~
-@5016= ~Corps du marchand
-
-Corps assomé du marchand de Davos avec une belle bosse sur la tête.~
-
-@5017= ~Corps~
-@5018= ~Corps de Davos.
-
-Corps assomé de Davos avec une belle bosse sur la tête.~
-
-@5020= ~Contrat~
-@5021= ~Contrat des Aigles d'argent
-
-Ce contrat mentionne que la compagnie des aigles d'argent assure la protection du marchand de Davos et de sa famille. En contrepartie, le Protecteur est tenu de payer 200 pièces d'or par semaine.
-En cas de non paiement, la protection n'est plus assurée.~
-@5022= ~Contrat~
-@5023= ~Contrat des Aigles d'argent
-
-Ce contrat mentionne que la compagnie des aigles d'argent assure la protection de Davos. En contrepartie, le Protecteur est tenu de payer 200 pièces d'or par semaine.
-En cas de non paiement, la protection n'est plus assurée et Davos sera libre de ses mouvements.~
-
-@5024= ~Contrat~
-@5025= ~Contrat des Aigles d'argent
-
-Ce contrat mentionne que la compagnie des aigles d'argent assure la protection de l'établissement de madame Irma. En contrepartie, le Protecteur est tenu de payer 300 pièces d'or par semaine.
-En cas de non paiement, la protection n'est plus assurée.~
-
-@5026= ~Contrat~
-@5027= ~Contrat des Aigles d'argent
-
-Ce contrat mentionne que la compagnie des aigles d'argent assure la protection de madame Irma. En contrepartie, le Protecteur est tenu de payer 200 pièces d'or par semaine.
-En cas de non paiement, la protection n'est plus assurée et madame Irma sera libre de ses mouvements.~
-
-@5028 = ~Boite bleue~
-@5029 = ~Boite bleue du marchand
-
-A l'intérieur de cette boite, vous trouver la tête du marchand de Davos les yeux exhorbités. La coupure est nette et vous retrouvez sa langue a été arrachée dans sa bouche.
-Le message est clair...~
-
-@5030 = ~Boite bleue~
-@5031 = ~Boite bleue de Davos
-
-A l'intérieur de cette boite, vous trouver la tête de Davos les yeux arrachés. La coupure est nette et vous retrouvez ses yeux dans sa bouche.
-Le message est clair...~
-
-@5032 = ~Boite bleue~
-@5033 = ~Boite bleue de madame Irma
-
-A l'intérieur de cette boite, vous trouver la tête de madame Irma les yeux fermés. La coupure est nette et sa bouche, entourée de rouge à lèvres a été agrandie au couteau.
-Le message est clair...~
-
-@5034= ~Corps~
-@5035= ~Corps de madame Irma
-
-Corps assomé de madame Irma avec une belle bosse sur la tête.~
 
 @5036= ~Clé~
 @5037= ~clé de madame Irma
