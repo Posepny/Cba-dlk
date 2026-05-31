@@ -1013,509 +1013,270 @@ Rana jest czysta, a widać, że język został wyrwany z ust. Wiadomość jest j
 @5053= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić minotaury. Będą one pod rozkazami właściciela różdżki. Czasami konieczne jest rzucenie zaklęcia kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~
 
 @5054= ~Różdżka~ 
-@5055= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić cienie skał. Będą one pod rozkazami właściciela różdżki.Czasami trzeba rzucić zaklęcie kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~ @5056= ~Różdżka~ @5057= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić trolle. Będą pod rozkazami właściciela różdżki. Czasami trzeba rzucić zaklęcie kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~ @5058= ~Dziennik~ @5059= ~Dziennik Ekilisa Ekilis, Wielki Inkwizytor Cyrica, opowiada o swoich wyczynach w polowaniu na zwolenników Bhaala i o tym, jak pozbył się towarzyszy, którzy stanęli mu na drodze do władzy i łaski jego pana. Te ostatnie zapiski są bardzo interesujące; odnoszą się do świątyni. Dzień 1: W przeciwieństwie do innych wiem, że słudzy Bhaala nie są godni służyć Cyricowi i najprostszym rozwiązaniem jest ich wszystkich wytępić. Bhaal nie żyje; mogą po prostu za nim podążać. Systera zdołała uciec, mimo śmiertelnego ciosu, jaki jej zadałem! Ustawiła się na glifach na ziemi i zniknęła. Prawdopodobnie potrzebujesz specjalnego przedmiotu, aby aktywować teleport. Dzień 3: Zamykając drzwi, bez wątpienia ma nadzieję uczynić tę świątynię moim grobowcem... Ośmiela się kwestionować moją wielką wyższość, a ja sprawię, że zapłaci za ten afront! Zacznę od oderwania jej palców... Dzień 5: Wysłałem grupę na niższe poziomy świątyni z linami. Bestie pożarły ich w ciągu kilku sekund i nie można było nic zobaczyć. Nie ma tam drogi ucieczki... Ta nędzna świątynia nie zwycięży Ekilisa, Wielkiego Inkwizytora cudownego Cyrica! Dzień 6: Zabiłem ich wszystkich. Zaczynali walczyć o jedzenie. Jedzenie jest moje! Tylko ja jestem ważny! Jestem wybrańcem Cyrica. Zgromadziłem ich bogactwa w dobrze ukrytym, sekretnym miejscu. Nie odejdę z pustymi rękami. Cyric będzie dumny z mojego zwycięstwa, a ja będę miał jeszcze więcej mocy! Dzień 11: Nie ma już jedzenia, a Systera nie wie, że mogę wprowadzić się w długotrwały stan hibernacji. Za kilka dni, kiedy wróci z uśmiechem na twarzy, wyrwę jej kończyny jedną po drugiej, a ona wyjawi mi wszystkie swoje paskudne małe sekrety! Zachowam jej głowę jako pamiątkę. Ważne jest, aby móc pamiętać przeszłe zwycięstwa. Mam ich tak wiele...~ // Pokój 1 @5060= ~Łza~ @5061= ~Kryształowa Łza Łza jest wyrzeźbiona z czerwonego kryształu. Po kontakcie, twoje ręce stają się lepkie od substancji, która może być tylko krwią.~ @5062= ~Krwawa Łza Bhaala Łza jest wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Po kontakcie, twoje ręce stają się lepkie od substancji, która może być tylko krwią. Ta łza należała do demona.~ // Pokój 2 @5063= ~Krwawa Łza Bhaala Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Po kontakcie,Twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do golema z kości.~ // Pokój 3 @5064= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do widza.~ // Pokój 4 @5065= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do Islendry.~ // Pokój 5 @5066= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do Taguara, czempiona Bhaala.~ // Pokój 6 @5067= ~Krwawa Łza Bhaala Ta łza została wyrzeźbiona z białego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Przy kontakcie twoje dłonie stają się lodowato zimne. Ta łza należała do Kaela.~ // Pokój 7 @5068= ~Krwawa Łza Bhaala Ta łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Przy kontakcie twoje dłonie stają się lepkie od substancji, która może być tylko krwią. Ta łza należała do Malady.~ @5069=~Nieczytelna Księga Zaklęcie chroni tę księgę przed ciekawskimi. Litery poruszają się we wszystkich kierunkach, a tekst jest nieczytelny. Aby rozszyfrować tekst, należy rzucić zaklęcie identyfikacyjne.~ // Lodowy Kamień @5070= ~Niebieski Kamień~ @5071= ~Lodowe opary wydobywają się z tego zadziwiającego kamienia. W kontakcie zimno parzy, a dłonie robią się wilgotne.~ // Czarny Hełm @5072= ~Czarny Hełm~ @5073= ~Ten hełm emanuje czymś wrogim. Uczucie niepokoju ogarnia twoje dłonie.~ // Pierścień Ognia @5074= ~Pierścień Ognia~ @5075= ~Z tego pierścienia emanuje intensywne ciepło. Jest po prostu parzący. Obserwując jego powierzchnię, masz wrażenie, że widzisz poruszające się płomienie.~ // Kamienna Czaszka @5076= ~Czaszka Ludzka~ @5077= ~Ta ludzka czaszka nie wyróżnia się niczym szczególnym, poza inkrustowanym niebieskim kamieniem, który nadaje jej majestatyczny wygląd. Musiał należeć do ważnej osoby.~ // Klucz do skrzyni 1 - MISCP42: Pierścień ognia (MISCP48) @5078= ~Klucz~ @5079= ~Klucz znaleziony w kościach w południowym pomieszczeniu.~ // Klucz do skrzyni 2 - MISCP43: Czarny hełm (MISCP46) @5080= ~Klucz~ @5081= ~Klucz znaleziony w skrytce w zachodnim pomieszczeniu.~ // Klucz do skrzyni 3 - MISCP45: Lodowy kamień (MISCP47) @5082= ~Klucz~ @5083= ~Klucz znaleziony w spalonym ciele w północnym pomieszczeniu.~ // Klucz do skrzyni 4 - MISCP44: Kamienna czaszka (MISCP49) @5084= ~Klucz~ @5085= ~Klucz znaleziony w trumnie w południowo-wschodnim pomieszczeniu.~ // Księga Osiągnięć @5086= ~Książka~ @5087= ~Ta księga odnosi się do osiągnięć uczniów Bhaala, którzy posługiwali się bronią w czasie jego dawnej chwały. Autor szczegółowo opisuje, kto był celem i w jaki delikatny sposób spotkał ich upadek.Zabijanie zostało wyraźnie podniesione do rangi sztuki. Patrząc na wszystkie te książki, ten pokój to istna biblioteka morderstw!~ // Zagadka Ognistego Pierścienia @5088= ~4. Zwój Niszy~ @5089= ~Zrodzony z ciemności, tańczę śmierć.~ // Zagadka Czarnego Hełmu @5090= ~3. Zwój Niszy~ @5091= ~Twardy jak kamień, stoję niezachwiany.~ // Zagadka Lodowego Kamienia @5092= ~2. Zwój Niszy~ @5093= ~Złapany w moje imadło, serca moich wrogów zamarzają.~ // Zagadka Kamiennej Czaszki @5094= ~1. Zwój Niszy~ @5095= ~Zakończony, prowadzę krwawy atak.~ // Lodowy Miecz Dwuręczny +1 @5096= ~Miecz Dwuręczny +1~ @5097= ~Lodowy Miecz Dwuręczny +1 Wielki Miecz Jakość, której ostrze Przeszywa cię do szpiku kości. Parametry: Thaco +1 Obrażenia 1K10 +1, +1 obrażenia od lodu. Nie może użyć: Mag Druid Kapłan Łotrzyk~ // Pierścień Urglitu: przywołanie żywiołaka lodowatego powietrza @5098= ~Pierścień Urglitu~ @5099= ~Lodowy w dotyku, zawartość niebieskiego kamienia wydaje się być w ciągłym ruchu.~ @5100= ~Lodowy Pierścień Powietrza~ @5101= ~Lodowy Pierścień Powietrza Urglitu Lodowaty w dotyku, zawartość niebieskiego kamienia wydaje się być w ciągłym ruchu. Parametry: Specjalne umiejętności: Przywołuje pomniejszego żywiołaka lodu raz dziennie. Jego zdolności bojowe są następujące: PW: 64 KP: 2 TraK0: 13 Ataki/rundę: 1 Obrażenia: 2K8 obrażeń od zimna. Można go używać tylko przez: ~ // Narzędzie Poziomowania Kaela @5104= ~Narzędzie~ @5105= ~Narzędzie Kaela. To narzędzie musi mieć specjalne zastosowanie, skoro jest jedynym przedmiotem w skrzyni...~2k8 obrażeń od zimna. Można używać tylko za pomocą:~ // Narzędzie poziomu Kaela @5104= ~Narzędzie~ @5105= ~Narzędzie Kaela. To narzędzie musi mieć specjalne zastosowanie, skoro to jedyny przedmiot w skrzyni...~2k8 obrażeń od zimna. Można używać tylko za pomocą:~ // Narzędzie poziomu Kaela @5104= ~Narzędzie~ @5105= ~Narzędzie Kaela. To narzędzie musi mieć specjalne zastosowanie, skoro to jedyny przedmiot w skrzyni...~
+@5055= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić cienie skał. Będą one pod rozkazami właściciela różdżki.Czasami trzeba rzucić zaklęcie kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~ 
+@5056= ~Różdżka~ 
+@5057= ~Różdżka Rozkazu Ta różdżka została stworzona przez Systerę, strażniczkę świątyni, aby zniewolić trolle. Będą pod rozkazami właściciela różdżki. Czasami trzeba rzucić zaklęcie kilka razy, aby uzyskać całkowitą kontrolę nad stworzeniem.~ 
+@5058= ~Dziennik~
+@5059= ~Dziennik Ekilisa Ekilis, Wielki Inkwizytor Cyrica, opowiada o swoich wyczynach w polowaniu na zwolenników Bhaala i o tym, jak pozbył się towarzyszy, którzy stanęli mu na drodze do władzy i łaski jego pana. Te ostatnie zapiski są bardzo interesujące; odnoszą się do świątyni.
+
+Dzień 1: W przeciwieństwie do innych wiem, że słudzy Bhaala nie są godni służyć Cyricowi i najprostszym rozwiązaniem jest ich wszystkich wytępić. Bhaal nie żyje; mogą po prostu za nim podążać. Systera zdołała uciec, mimo śmiertelnego ciosu, jaki jej zadałem! Ustawiła się na glifach na ziemi i zniknęła. Prawdopodobnie potrzebujesz specjalnego przedmiotu, aby aktywować teleport. 
+
+Dzień 3: Zamykając drzwi, bez wątpienia ma nadzieję uczynić tę świątynię moim grobowcem... Ośmiela się kwestionować moją wielką wyższość, a ja sprawię, że zapłaci za ten afront! Zacznę od oderwania jej palców... 
+
+Dzień 5: Wysłałem grupę na niższe poziomy świątyni z linami. Bestie pożarły ich w ciągu kilku sekund i nie można było nic zobaczyć. Nie ma tam drogi ucieczki... Ta nędzna świątynia nie zwycięży Ekilisa, Wielkiego Inkwizytora cudownego Cyrica!
+
+Dzień 6: Zabiłem ich wszystkich. Zaczynali walczyć o jedzenie. Jedzenie jest moje! Tylko ja jestem ważny! Jestem wybrańcem Cyrica. Zgromadziłem ich bogactwa w dobrze ukrytym, sekretnym miejscu. Nie odejdę z pustymi rękami. Cyric będzie dumny z mojego zwycięstwa, a ja będę miał jeszcze więcej mocy!
+
+Dzień 11: Nie ma już jedzenia, a Systera nie wie, że mogę wprowadzić się w długotrwały stan hibernacji. Za kilka dni, kiedy wróci z uśmiechem na twarzy, wyrwę jej kończyny jedną po drugiej, a ona wyjawi mi wszystkie swoje paskudne małe sekrety! Zachowam jej głowę jako pamiątkę. Ważne jest, aby móc pamiętać przeszłe zwycięstwa. Mam ich tak wiele...~
+
+// Pokój 1
+@5060= ~Łza~
+@5061= ~Kryształowa Łza Łza jest wyrzeźbiona z czerwonego kryształu. Po kontakcie, twoje ręce stają się lepkie od substancji, która może być tylko krwią.~
+@5062= ~Krwawa Łza Bhaala Łza jest wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Po kontakcie, twoje ręce stają się lepkie od substancji, która może być tylko krwią. Ta łza należała do demona.~
+// Pokój 2 
+@5063= ~Krwawa Łza Bhaala Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Po kontakcie,Twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do golema z kości.~ // Pokój 3 @5064= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do widza.~ 
+// Pokój 4 
+@5065= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do Islendry.~
+
+// Pokój 5 
+@5066= ~Bhaal's Blood Tear Łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. W kontakcie twoje ręce są lepkie od substancji, która może być tylko krwią. Ta łza należała do Taguara, czempiona Bhaala.~ 
+
+// Pokój 6 
+@5067= ~Krwawa Łza Bhaala Ta łza została wyrzeźbiona z białego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Przy kontakcie twoje dłonie stają się lodowato zimne. Ta łza należała do Kaela.~
+// Pokój 7 
+@5068= ~Krwawa Łza Bhaala Ta łza została wyrzeźbiona z czerwonego kryształu przez mistrzowskiego artefakt Bhaala, Kaela. Przy kontakcie twoje dłonie stają się lepkie od substancji, która może być tylko krwią. Ta łza należała do Malady.~ 
+@5069=~Nieczytelna Księga Zaklęcie chroni tę księgę przed ciekawskimi. Litery poruszają się we wszystkich kierunkach, a tekst jest nieczytelny. Aby rozszyfrować tekst, należy rzucić zaklęcie identyfikacyjne.~
+// Lodowy Kamień
+@5070= ~Niebieski Kamień~ 
+@5071= ~Lodowe opary wydobywają się z tego zadziwiającego kamienia. W kontakcie zimno parzy, a dłonie robią się wilgotne.~ 
+// Czarny Hełm 
+@5072= ~Czarny Hełm~
+@5073= ~Ten hełm emanuje czymś wrogim. Uczucie niepokoju ogarnia twoje dłonie.~
+
+// Pierścień Ognia
+@5074= ~Pierścień Ognia~ 
+@5075= ~Z tego pierścienia emanuje intensywne ciepło. Jest po prostu parzący. Obserwując jego powierzchnię, masz wrażenie, że widzisz poruszające się płomienie.~ 
+
+// Kamienna Czaszka 
+
+@5076= ~Czaszka Ludzka~ 
+@5077= ~Ta ludzka czaszka nie wyróżnia się niczym szczególnym, poza inkrustowanym niebieskim kamieniem, który nadaje jej majestatyczny wygląd. Musiał należeć do ważnej osoby.~
+
+// Klucz do skrzyni 1 - MISCP42: Pierścień ognia (MISCP48)
+@5078= ~Klucz~ 
+@5079= ~Klucz znaleziony w kościach w południowym pomieszczeniu.~ // Klucz do skrzyni 2 - MISCP43: Czarny hełm (MISCP46) 
+@5080= ~Klucz~
+@5081= ~Klucz znaleziony w skrytce w zachodnim pomieszczeniu.~ // Klucz do skrzyni 3 - MISCP45: Lodowy kamień (MISCP47) 
+@5082= ~Klucz~
+@5083= ~Klucz znaleziony w spalonym ciele w północnym pomieszczeniu.~ // Klucz do skrzyni 4 - MISCP44: Kamienna czaszka (MISCP49) 
+@5084= ~Klucz~ 
+@5085= ~Klucz znaleziony w trumnie w południowo-wschodnim pomieszczeniu.~ 
+
+// Księga Osiągnięć
+@5086= ~Książka~ 
+@5087= ~Ta księga odnosi się do osiągnięć uczniów Bhaala, którzy posługiwali się bronią w czasie jego dawnej chwały. Autor szczegółowo opisuje, kto był celem i w jaki delikatny sposób spotkał ich upadek.Zabijanie zostało wyraźnie podniesione do rangi sztuki. Patrząc na wszystkie te książki, ten pokój to istna biblioteka morderstw!~
+
+// Zagadka Ognistego Pierścienia
+@5088= ~4. Zwój Niszy~ 
+@5089= ~Zrodzony z ciemności, tańczę śmierć.~
+
+// Zagadka Czarnego Hełmu
+
+@5090= ~3. Zwój Niszy~
+@5091= ~Twardy jak kamień, stoję niezachwiany.~ 
+
+// Zagadka Lodowego Kamienia
+
+@5092= ~2. Zwój Niszy~ 
+@5093= ~Złapany w moje imadło, serca moich wrogów zamarzają.~ // Zagadka Kamiennej Czaszki
+@5094= ~1. Zwój Niszy~
+@5095= ~Zakończony, prowadzę krwawy atak.~ 
+
+// Lodowy Miecz Dwuręczny +1
+@5096= ~Miecz Dwuręczny +1~ 
+@5097= ~Lodowy Miecz Dwuręczny +1 Wielki Miecz Jakość, której ostrze Przeszywa cię do szpiku kości. Parametry: Thaco +1 Obrażenia 1K10 +1, +1 obrażenia od lodu. Nie może użyć: Mag Druid Kapłan Łotrzyk~ 
+
+// Pierścień Urglitu: przywołanie żywiołaka lodowatego powietrza 
+@5098= ~Pierścień Urglitu~ 
+@5099= ~Lodowy w dotyku, zawartość niebieskiego kamienia wydaje się być w ciągłym ruchu.~
+@5100= ~Lodowy Pierścień Powietrza~ 
+@5101= ~Lodowy Pierścień Powietrza Urglitu Lodowaty w dotyku, zawartość niebieskiego kamienia wydaje się być w ciągłym ruchu. Parametry: Specjalne umiejętności: Przywołuje pomniejszego żywiołaka lodu raz dziennie. 
+Jego zdolności bojowe są następujące: 
+PW: 64 
+KP: 2 
+TraK0: 1
+3 Ataki/rundę: 1 
+Obrażenia: 2K8 obrażeń od zimna. 
+Można go używać tylko przez: ~ 
+
+
+
+// Narzędzie poziomu Kaela
+@5104= ~Narzędzie~ 
+@5105= ~Narzędzie Kaela. To narzędzie musi mieć specjalne zastosowanie, skoro to jedyny przedmiot w skrzyni...~
 
 @5106 =~Klucz~
  @5107 =~Klucz do Świątyni Bhaala Ten klucz został zdobyty w świątyni. Teraz pozostaje tylko dowiedzieć się, co otwiera.~
 
  @5108 =~Runa~
- @5109Runa Skrzyni Ta runa znajdowała się w skrzyni. Niewątpliwie pełniła jakąś funkcję w świątyni.
+ @5109 =~Runa Skrzyni Ta runa znajdowała się w skrzyni. Niewątpliwie pełniła jakąś funkcję w świątyni.
 
 // Księga Maski Śmierci 
 @5110=~Dziennik~ 
-@5111=~Ten dziennik opisuje życie w świątyni w oczekiwaniu na przebudzenie Bhaala. Ostatni fragment jest najciekawszy. „Systera wezwała nas, dziewięć Masek Śmierci. Przypuszczam, że ta szalona kobieta ma dla nas kolejną misję. Z jej opowieści wynika, że ​​Bhaal wkrótce się obudzi i zemści się na Cyricu. Mam już dość! Pomogę Cyricowi znaleźć naszą świątynię. Sam zlikwiduję Systerę, gdy nadejdzie właściwy czas. Może i jest potężna, ale znam jej największą słabość. Moje ogniste czaszki ją pokonają. Jaki sens tkwić po przegranej stronie? Zwycięstwo jest dla mnie słodsze. Cyric mnie nagrodzi.”~ // Fioletowa Czaszka Ekilisa @5112=~Fioletowa Czaszka~ @5113=~Fioletowa Czaszka Ekilisa Ta czaszka wydaje się zupełnie normalna, z wyjątkiem tego, że jest fioletowa.~ // Ognista Czaszka @5114=~Czaszka~ @5115=~Ognista Czaszka Ta czaszka, wyłaniająca się z płomieni, płonie gorącem. Powinna zostać obrócona w popiół. Rzucony na wroga, wynik powinien być interesujący.~ @5116=~Opowieść Taguara~ @5117=~Taguar był wojownikiem, który błagał wszystkich bogów, aby pomogli mu zaspokoić pragnienie władzy i bogactwa swojej żony Urglite. Bhaal, rozbawiony, postanowił uczynić go swoim czempionem. Ogarnięta krwawym i morderczym szałem, armia Taguara niszczyła wszystko na swojej drodze. Jego generałowie, pragnąc pozbyć się szaleńca bez konfrontacji, wybrali truciznę. Urglite ze swojej strony została zamurowana żywcem, podczas gdy ona przeklinała Taguar za porzucenie jej. Zawarcie paktu z Bhaalem ma cenę, którą śmiertelnicy zawsze muszą zapłacić.~ @5118=~Opowieść Islendry~ @5119=~Islendra „lekkomyślna” nie bała się nikogo. Zawsze rozstrzygała swoje konflikty pojedynkiem i wychodziła z niego zwycięsko. Jej rosnąca reputacja wyprzedzała ją, gdziekolwiek się udała, i ostatecznie nikt nie odważył się jej sprzeciwić. Pewnego dnia pojawił się Bhaal, a Islendra rzuciła wyzwanie bogu. Od tamtej pory, jak głosi legenda, przemierza ciemne, wilgotne jaskinie, czyhając na ofiarę, którą upoluje na rozkaz swojego nowego pana… Sprzeciwienie się Bhaalowi zawsze prowadzi do jednej prawdy: śmiertelnicy są zmuszeni podporządkować się jego woli. ~ @5120=~Historia Kaela~ @5121=~Kael był nadętym magiem, biegłym w sztuce tworzenia artefaktów. Jego wielki talent zwrócił uwagę Bhaala, który postanowił przyjąć go na swoją służbę. Kael, którego ego wzrosło, powierzył pewne podstawowe zadania Cespenarowi, swojemu uczniowi. Niestety dla niego, artefakt – nie wiadomo który – nie spodobał się Bhaalowi i Cespenar został nowym mistrzem artefaktów. Rozczarowanie Bhaala ma konsekwencje, których żaden śmiertelnik nie chciałby poznać… ~ @5122=~Pas Kaela~ @5123=~Pas jest dość dziwny. Jest zrobiony z metalu z czerwonym klejnotem pośrodku, którego wnętrze wydaje się płynne. Kiedy dotyka twoich bioder,Pas idealnie dopasowuje się do kształtu ciała.~ @5124=~Pas jest dość dziwny. Jest wykonany z metalu z czerwonym klejnotem pośrodku, którego wnętrze wydaje się płynne. W kontakcie z biodrami pas idealnie dopasowuje się do kształtu ciała. Pozwala użytkownikowi zapamiętać więcej zaklęć niż zwykle. Ten przedmiot rozsławił Kaela, zanim wstąpił na służbę do Bhaala. Niektórzy twierdzą, że metal pochodził z meteorytu. PARAMETRY: Zaklęcia: Przyznaje jedno dodatkowe zaklęcie piątego poziomu, jedno dodatkowe zaklęcie szóstego poziomu i jedno dodatkowe zaklęcie siódmego poziomu. Wymagana inteligencja: 17. Może używać tylko: Mag~ // Czaszka Utrzymana @5125=~Czaszka~ @5126=~Ta czaszka pokryta dziwnymi symbolami została znaleziona na ciele Systery. Po zetknięciu z nim, uczucie gniewu cię ogarnia.~ // Kamień Pokoju w Kratkę @5127=~Rzeźbiony Kamień~ @5128=~Rzeźbiony Kamień znaleziony w pokoju w kratkę.~ // Kamień do otwierania bram piwnicy @5129=~Kamień Strażnika~ @5130=~Ten kamień pozwala ci otwierać bramy na tym poziomie.~ // Lina @5131=~Ta gładka, złota lina, spleciona w miniaturowe podkowy, może ci pomóc...~ @5132=~Notatki Entar~ @5133=~Systera zniknęła po tym, jak nastąpiła na glif na ziemi w pobliżu minotaurów. Poinformowałem Ekilisa i nawet sprecyzowałem, że zdobyła czerwony naszyjnik, ale on mnie nie słucha. Jest przekonany, że wie wszystko. Żywność wkrótce się kończy, a Ekilis nie może znaleźć wyjścia... Będę musiał go zastąpić; nie jest w stanie podołać zadaniu. Ja też. Entar, wierny sługo Cyrica~ // Karczma @5200=~Klucz Barniego~ @5201=~Ten klucz powierzył ci Barni, nowy karczmarz Hełmu i Płaszcza. Otwiera on zapadnię w jego piwnicy.~ // Zardzewiała Tarcza @5202=~Złamana Tarcza~ @5203=~Ta złamana tarcza została zżarta przez rdzę. Nie nadaje się do użytku.~ // Zardzewiała Zbroja @5204=~Wgnieciona Zbroja~ @5205=~Ta wgnieciona zbroja została zżarta przez rdzę. Nie nadaje się do użytku.~ // Zardzewiały Miecz @5206=~Złamany Miecz~ @5207=~Ten złamany miecz został zżarty przez rdzę. Jest bezużyteczny.~ // Wiadomość od Cersitis do Candelas @5208=~Wiadomość od Cersitis~ @5209=~Candelas, obarczam cię odpowiedzialnością za śmierć Sarevoka. Odszukaj jego kontakty; chcę mieć kolejne dziecko Bhaala, tym razem żywe... Otwarcie świątyni od tego zależy. Cersitis~ @5210=~Święty Symbol~ @5211=~Święty Symbol Cyrica. Ta kamienna tablica przedstawia symbol Cyrica, szalonego boga.~ // Kamień Pokoju w Kratkę //Zimny ​​biały kamień: dezaktywuje pułapkę błyskową @5250=~Cięty Kamień~ @5251=~Ten szarobiały kamień trzeszczy w dotyku.~ //Żółty kamień: dezaktywuje pułapkę spalającą @5252=~Cięty Kamień~ @5253=~Ten żółty kamień jest ciepły w dotyku.~ //Kamień Granatowy:Wyłącza pułapkę czaszki i runy @5254=~Rzeźbiony kamień~ @5255=~Rzeźbiony kamień znaleziony w pokoju szachownicy.~ //Czerwony kamień: otwiera drzwi Kaela @5256=~Rzeźbiony kamień~ @5257=~Czerwony kamień podarowany przez Lucindę.~ //Niebiesko-biały kamień: wyłącza pułapkę w kształcie stożka lodowego @5258=~Rzeźbiony kamień~ @5259=~Ten niebiesko-biały kamień jest zimny w dotyku.~ //Lina: prowadzi do pokoju w piwnicy @5260=~Złota lina~ @5261=~Ta lina jest zrobiona ze złotej nici. Gdy za nią pociągniesz, lina wydaje się rozciągać w nieskończoność.~ //Kielich krwi @5262=~Kielich krwi~ @5263=~Ten puchar został wykonany z ludzkiej czaszki i zestawu kości. Islendra prawdopodobnie używała go podczas rytualnych ofiar.~ // Puchar Krwi Kaela @5264=~Kielich Krwi Kaela~ @5265=~Kielich Krwi pozwala ci przywołać krwawego potwora. Kiedy go przywołasz, puchar wypełni się twoją krwią i pojawi się potwor. Tracisz 30% swojego maksymalnego zdrowia. Jeśli spadniesz poniżej tego progu, giniesz. Jeśli potwora pokonasz, wróci on do swojego planu, aby oczekiwać na ponowne przywołanie. Potwora będzie wykonywał każdy twój rozkaz podczas przywoływania; jest ci oddany. Kael stworzył niezwykle skuteczną broń wojenną! Jego możliwości bojowe są następujące: PW: 70 KP: -1 TraK0: 9 Ataki/runda: 2 Obrażenia: 1k6+2 (broń miażdżąca / magiczna +1) Może używać tylko: dziecko Bhaala~ @5267=~Klepak Kaela~ @5268=~Klepak składa się z solidnego drewnianego trzonka przymocowanego do żelaznego pręta, drewnianego pręta nabijanego kolcami lub metalowej kuli najeżonej kolcami. Pomiędzy trzonkiem a częścią uderzającą znajduje się prosty zawias lub łańcuch. Ten cep został ulepszony przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona poświata. PARAMETRY: TRAK0: +1 Obrażenia: 1K6 + 2 Typ obrażeń: Tępe Waga: 12 Współczynnik szybkości: 6 Typ umiejętności: Cep/Gwiazda Poranna Typ: Broń jednoręczna Wymagana siła: 13 Nie może używać: Druid, Mag, Łotrzyk~ @5269=~Tarcza Kaela~ @5270=~Tarcza jest masywną metalową lub drewnianą tarczą zakrywającą wojownika praktycznie od brody do palców u stóp. Musi być solidnie przymocowana do przedramienia i mocno trzymana. Oczywiście, zajęta ręka może być używana tylko do trzymania tarczy na miejscu. Ta tarcza została wykonana przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona aureola. PARAMETRY: Premia do klasy pancerza: 2 Specjalne: +1 przeciwko pociskom Waga: 12 Wymagana siła: 15 Nie może używać: Bard Druid Mag Łotrzyk~ @2571=~Hełm Kaela~ @2572=~Ten rodzaj peleryny, wykonany ze skóry lub wzmocnionego metalu, zakrywa prawie całą głowę, z wyjątkiem twarzy i szyi. Te hełmy zapewniają dobrą ochronę nosa.Ta tarcza została wykonana przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona aureola. PARAMETRY: Premia do klasy pancerza: 1 Specjalna: Chroni przed trafieniami krytycznymi Waga: 2 Nie może używać: Mag, Bard, Łotrzyk~ // END Temple
+@5111=~Ten dziennik opisuje życie w świątyni w oczekiwaniu na przebudzenie Bhaala. Ostatni fragment jest najciekawszy. „Systera wezwała nas, dziewięć Masek Śmierci. Przypuszczam, że ta szalona kobieta ma dla nas kolejną misję. Z jej opowieści wynika, że ​​Bhaal wkrótce się obudzi i zemści się na Cyricu. Mam już dość! Pomogę Cyricowi znaleźć naszą świątynię. Sam zlikwiduję Systerę, gdy nadejdzie właściwy czas. Może i jest potężna, ale znam jej największą słabość. Moje ogniste czaszki ją pokonają. Jaki sens tkwić po przegranej stronie? Zwycięstwo jest dla mnie słodsze. Cyric mnie nagrodzi.”~
 
+// Fioletowa Czaszka Ekilisa 
 
+@5112=~Fioletowa Czaszka~
+@5113=~Fioletowa Czaszka Ekilisa Ta czaszka wydaje się zupełnie normalna, z wyjątkiem tego, że jest fioletowa.~
 
+// Ognista Czaszka
 
+@5114=~Czaszka~ 
+@5115=~Ognista Czaszka Ta czaszka, wyłaniająca się z płomieni, płonie gorącem. Powinna zostać obrócona w popiół. Rzucony na wroga, wynik powinien być interesujący.~ 
+@5116=~Opowieść Taguara~ 
+@5117=~Taguar był wojownikiem, który błagał wszystkich bogów, aby pomogli mu zaspokoić pragnienie władzy i bogactwa swojej żony Urglite. Bhaal, rozbawiony, postanowił uczynić go swoim czempionem. Ogarnięta krwawym i morderczym szałem, armia Taguara niszczyła wszystko na swojej drodze. Jego generałowie, pragnąc pozbyć się szaleńca bez konfrontacji, wybrali truciznę. Urglite ze swojej strony została zamurowana żywcem, podczas gdy ona przeklinała Taguar za porzucenie jej. Zawarcie paktu z Bhaalem ma cenę, którą śmiertelnicy zawsze muszą zapłacić.~
+@5118=~Opowieść Islendry~
+@5119=~Islendra „lekkomyślna” nie bała się nikogo. Zawsze rozstrzygała swoje konflikty pojedynkiem i wychodziła z niego zwycięsko. Jej rosnąca reputacja wyprzedzała ją, gdziekolwiek się udała, i ostatecznie nikt nie odważył się jej sprzeciwić. Pewnego dnia pojawił się Bhaal, a Islendra rzuciła wyzwanie bogu. Od tamtej pory, jak głosi legenda, przemierza ciemne, wilgotne jaskinie, czyhając na ofiarę, którą upoluje na rozkaz swojego nowego pana… Sprzeciwienie się Bhaalowi zawsze prowadzi do jednej prawdy: śmiertelnicy są zmuszeni podporządkować się jego woli. ~
+@5120=~Historia Kaela~
+@5121=~Kael był nadętym magiem, biegłym w sztuce tworzenia artefaktów. Jego wielki talent zwrócił uwagę Bhaala, który postanowił przyjąć go na swoją służbę. Kael, którego ego wzrosło, powierzył pewne podstawowe zadania Cespenarowi, swojemu uczniowi. Niestety dla niego, artefakt – nie wiadomo który – nie spodobał się Bhaalowi i Cespenar został nowym mistrzem artefaktów. Rozczarowanie Bhaala ma konsekwencje, których żaden śmiertelnik nie chciałby poznać… ~ 
+@5122=~Pas Kaela~ 
+@5123=~Pas jest dość dziwny. Jest zrobiony z metalu z czerwonym klejnotem pośrodku, którego wnętrze wydaje się płynne. Kiedy dotyka twoich bioder,Pas idealnie dopasowuje się do kształtu ciała.~ 
+@5124=~Pas jest dość dziwny. Jest wykonany z metalu z czerwonym klejnotem pośrodku, którego wnętrze wydaje się płynne. W kontakcie z biodrami pas idealnie dopasowuje się do kształtu ciała. Pozwala użytkownikowi zapamiętać więcej zaklęć niż zwykle. Ten przedmiot rozsławił Kaela, zanim wstąpił na służbę do Bhaala. Niektórzy twierdzą, że metal pochodził z meteorytu. 
 
+PARAMETRY: 
+Zaklęcia: Przyznaje jedno dodatkowe zaklęcie piątego poziomu, jedno dodatkowe zaklęcie szóstego poziomu i jedno dodatkowe zaklęcie siódmego poziomu.
+Wymagana inteligencja: 17
+Może używać tylko: 
+Mag~ 
 
+// Czaszka Utrzymana
+@5125=~Czaszka~ 
+@5126=~Ta czaszka pokryta dziwnymi symbolami została znaleziona na ciele Systery. Po zetknięciu z nim, uczucie gniewu cię ogarnia.~ 
 
-@5036= ~Clé~
-@5037= ~clé de madame Irma
+// Kamień Pokoju w Kratkę
 
-Cette clé en fer forgé est de petite taille. On peut supposer que la serrure ne doit pas être bien grande.~
+@5127=~Rzeźbiony Kamień~ 
+@5128=~Rzeźbiony Kamień znaleziony w pokoju w kratkę.~ 
 
-@5038= ~Livre~
-@5039= ~Livre de madame Irma
+// Kamień do otwierania bram piwnicy
+@5129=~Kamień Strażnika~
+@5130=~Ten kamień pozwala ci otwierać bramy na tym poziomie.~ 
 
-Ce livre contient un tas de renseignements sur la clientèle de la maison close. Entre des mains expertes, ce livre permettrait de faire chanter un nombre intéressant de notables de la cité.~
-// FIN Guilde de Basilius ********************************************************************************************************************************************
+// Lina 
 
+@5131=~Ta gładka, złota lina, spleciona w miniaturowe podkowy, może ci pomóc...~
+@5132=~Notatki Entar~ 
+@5133=~Systera zniknęła po tym, jak nastąpiła na glif na ziemi w pobliżu minotaurów. Poinformowałem Ekilisa i nawet sprecyzowałem, że zdobyła czerwony naszyjnik, ale on mnie nie słucha. Jest przekonany, że wie wszystko. Żywność wkrótce się kończy, a Ekilis nie może znaleźć wyjścia... Będę musiał go zastąpić; nie jest w stanie podołać zadaniu. Ja też. Entar, wierny sługo Cyrica~
+
+// Karczma 
+@5200=~Klucz Barniego~ 
+@5201=~Ten klucz powierzył ci Barni, nowy karczmarz Hełmu i Płaszcza. Otwiera on zapadnię w jego piwnicy.~ 
 
+// Zardzewiała Tarcza 
+@5202=~Złamana Tarcza~ 
+@5203=~Ta złamana tarcza została zżarta przez rdzę. Nie nadaje się do użytku.~
 
+// Zardzewiała Zbroja 
 
+@5204=~Wgnieciona Zbroja~ 
+@5205=~Ta wgnieciona zbroja została zżarta przez rdzę. Nie nadaje się do użytku.~ 
 
+// Zardzewiały Miecz 
 
-// Mod Champion de Bhaal ******************************************************************************************************************************************************************
-@5040= ~Cadavre désséché de Massena~
-@5041= ~Les os sont encore liés à des morceaux de chair et de tendons desséchés. La situation est assez étrange si on suppose que son propiétaire est mort depuis longtemps. Il devrait y avoir que les os.~
+@5206=~Złamany Miecz~ 
+@5207=~Ten złamany miecz został zżarty przez rdzę. Jest bezużyteczny.~ 
 
-@5042= ~Collier~
-@5043= ~Collier de perles rouges
+// Wiadomość od Cersitis do Candelas
+@5208=~Wiadomość od Cersitis~
+@5209=~Candelas, obarczam cię odpowiedzialnością za śmierć Sarevoka. Odszukaj jego kontakty; chcę mieć kolejne dziecko Bhaala, tym razem żywe... Otwarcie świątyni od tego zależy. Cersitis~ 
 
-Constitué de 13 perles, ce collier est anormalement lourd. La perle au centre est gravée du symbôle de Bhaal.~
+@5210=~Święty Symbol~
+@5211=~Święty Symbol Cyrica. Ta kamienna tablica przedstawia symbol Cyrica, szalonego boga.~ 
 
-@5044= ~Cadavre désséché~
-@5045= ~Les os sont encore liés à des morceaux de chair et de tendons desséchés. La situation est assez étrange si on suppose que son propiétaire est mort depuis longtemps. Il devrait y avoir que les os.~
+// Kamień Pokoju w Kratkę 
+//Zimny ​​biały kamień: dezaktywuje pułapkę błyskową 
 
-@5046= ~Cadavre désséché~
-@5047= ~Les os sont encore liés à des morceaux de chair et de tendons desséchés. La situation est assez étrange si on suppose que son propiétaire est mort depuis longtemps. Il devrait y avoir que les os.~
+@5250=~Cięty Kamień~ 
+@5251=~Ten szarobiały kamień trzeszczy w dotyku.~ 
 
-@5048= ~Parchemin~
-@5049= ~vous qui contemplez cette scène.
+//Żółty kamień: dezaktywuje pułapkę spalającą
 
-Vous trouverez ici les restes des fidèles de Cyric morts et enfermés dans ce temple. Ils seront vengés dans le sang des hérétiques de Bhaal!
+@5252=~Cięty Kamień~
+@5253=~Ten żółty kamień jest ciepły w dotyku.~ 
 
-Ekilis
- Le grand inquisiteur de Cyric~
- 
-@5050= ~Symbole sacré~
-@5051= ~Symbole sacré de Cyric 
+//Kamień Granatowy:Wyłącza pułapkę czaszki i runy 
+@5254=~Rzeźbiony kamień~
+@5255=~Rzeźbiony kamień znaleziony w pokoju szachownicy.~ 
 
-Sur cette plaque en pierre est représenté le symbôle de Cyric, le dieu fou. A certains endoits, vous constatez qu'il est taché de sang.~
+//Czerwony kamień: otwiera drzwi Kaela 
+@5256=~Rzeźbiony kamień~ 
+@5257=~Czerwony kamień podarowany przez Lucindę.~ 
 
-@5052= ~Baguette~
-@5053= ~Baguette de commandement
+//Niebiesko-biały kamień: wyłącza pułapkę w kształcie stożka lodowego
 
-Cette baguette a été créée par Systéra, la gardienne du temple afin d'asservir les minautores. Ces derniers seront aux ordres du propriétaire de la baguette. Il est parfois nécessaire de lancer plusieurs fois le sort pour avoir le total contrôle d'une créature.~
+@5258=~Rzeźbiony kamień~ 
+@5259=~Ten niebiesko-biały kamień jest zimny w dotyku.~ 
+//Lina: prowadzi do pokoju w piwnicy 
 
-@5054= ~Baguette~
-@5055= ~Baguette de commandement
+@5260=~Złota lina~ 
+@5261=~Ta lina jest zrobiona ze złotej nici. Gdy za nią pociągniesz, lina wydaje się rozciągać w nieskończoność.~ 
 
-Cette baguette a été créée par Systéra, la gardienne du temple afin d'asservir les ombres des roches. Ces derniers seront aux ordres du propriétaire de la baguette. Il est parfois nécessaire de lancer plusieurs fois le sort pour avoir le total contrôle d'une créature.~
+//Kielich krwi
+@5262=~Kielich krwi~ 
+@5263=~Ten puchar został wykonany z ludzkiej czaszki i zestawu kości. Islendra prawdopodobnie używała go podczas rytualnych ofiar.~ 
 
-@5056= ~Baguette~
-@5057= ~Baguette de commandement
+// Puchar Krwi Kaela 
+@5264=~Kielich Krwi Kaela~ 
+@5265=~Kielich Krwi pozwala ci przywołać krwawego potwora. Kiedy go przywołasz, puchar wypełni się twoją krwią i pojawi się potwor. 
+Tracisz 30% swojego maksymalnego zdrowia. Jeśli spadniesz poniżej tego progu, giniesz. Jeśli potwora pokonasz, wróci on do swojego planu, aby oczekiwać na ponowne przywołanie. Potwora będzie wykonywał każdy twój rozkaz podczas przywoływania; jest ci oddany. Kael stworzył niezwykle skuteczną broń wojenną! Jego możliwości bojowe są następujące:
+PW: 70 
+KP: -1 
+TraK0: 9 
+Ataki/runda: 2 
+Obrażenia: 1k6+2 (broń miażdżąca / magiczna +1) 
+Może używać tylko: dziecko Bhaala~ 
 
-Cette baguette a été créée par Systéra, la gardienne du temple afin d'asservir les trolls. Ces derniers seront aux ordres du propriétaire de la baguette.  Il est parfois nécessaire de lancer plusieurs fois le sort pour avoir le total contrôle d'une créature.~
+@5267=~Klepak Kaela~
+@5268=~Klepak składa się z solidnego drewnianego trzonka przymocowanego do żelaznego pręta, drewnianego pręta nabijanego kolcami lub metalowej kuli najeżonej kolcami. Pomiędzy trzonkiem a częścią uderzającą znajduje się prosty zawias lub łańcuch. Ten cep został ulepszony przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona poświata.
 
-@5058= ~Journal~
-@5059= ~Journal d'Ekilis
+PARAMETRY: 
+TRAK0: +1
+Obrażenia: 1K6 + 2 
+Typ obrażeń: Tępe
+Waga: 12 
+Współczynnik szybkości: 6 
+Typ umiejętności: Cep/Gwiazda Poranna 
+Typ: Broń jednoręczna 
+Wymagana siła: 13 
+Nie może używać: Druid, Mag, Łotrzyk~
 
-Ekilis, grand inquisiteur de Cyric, raconte ses exploits dans sa chasse aux fidèles de Bhaal et comment il s'est débarrassé de ses confrères qui le génaient sur route du pouvoir et des bonnes grâces de son maître.
-Ces derniers écrits sont très intéressants, ils sont liés au temple.
+@5269=~Tarcza Kaela~ 
+@5270=~Tarcza jest masywną metalową lub drewnianą tarczą zakrywającą wojownika praktycznie od brody do palców u stóp. Musi być solidnie przymocowana do przedramienia i mocno trzymana. Oczywiście, zajęta ręka może być używana tylko do trzymania tarczy na miejscu. Ta tarcza została wykonana przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona aureola. 
 
+PARAMETRY: 
+Premia do klasy pancerza: 2 
+Specjalne: +1 przeciwko pociskom
+Waga: 12 
+Wymagana siła: 15 
+Nie może używać: Bard Druid Mag Łotrzyk~ 
 
-Jour 1: Contrairement à d'autres, je sais que les serviteurs de Bhaal sont indignes de servir Cyric et le plus simple est de tous les exterminer. Bhaal est mort, ils n'ont qu'à le rejoindre. 
-Systéra s'est parvenue à s'enfuir malgré le coup fatal que je lui ai porté! Elle s'est positionnée sur des glyphes au sol et elle a disparue. Il faut sans doute avoir un objet particulier pour activer le téléporteur.
+@2571=~Hełm Kaela~ 
+@2572=~Ten rodzaj peleryny, wykonany ze skóry lub wzmocnionego metalu, zakrywa prawie całą głowę, z wyjątkiem twarzy i szyi. Te hełmy zapewniają dobrą ochronę nosa.Ta tarcza została wykonana przez Kaela, byłego mistrza artefaktów w służbie Bhaala. Z broni emanuje czerwona aureola. 
 
+PARAMETRY: 
+Premia do klasy pancerza: 1
+Specjalna: Chroni przed trafieniami krytycznymi 
+Waga: 2 
+Nie może używać: Mag, Bard, Łotrzyk~ 
+// END Temple
 
-Jour 3: En scellant les portes, elle espère sans doute faire de ce temple mon tombeau... Elle ose mettre en doute ma grande supériorité et je lui ferai payer cette affront! Je commencerai par lui arracher les doigts...
 
 
-Jour 5: J'ai envoyé un groupe dans les bas-fonds du temple avec des cordes. Les bêtes les ont dévorés en quelques secondes et impossible de voir quelque chose. Pas d'issue de ce côté-làCe misérable temple n'aura pas raison de Ekilis grand inquisiteur du merveilleux Cyric!
 
 
-Jour 6: je les ai tous tué. Ils commençaient à se battre pour la nourriture. La nourriture est à moi! Moi seul est important! Je suis l'élu de Cyric. J'ai accumulé leurs richesses dans une bonne cachette. Je ne repartirai pas les mains vides. Cyric sera fier de ma victoire et j'aurai encore plus de pouvoir!
 
-Jour 11: Il n'y a plus de nourriture et Systéra ignore que je peux me mettre en stase prolongée. Dans quelques jours, lorsqu'elle reviendra le sourire aux lèvres, je lui arracherai les membres un par un 
-et elle me dira tous ses vilains petits secrets! Je garderai sa tête comme souvenir. Il est important de pouvoir se rappeler de ses victoires passées. J'en ai tellement...~
 
-// Salle 1
-@5060= ~Larme~
-@5061= ~Larme de cristal
 
-La larme est taillée dans cristal rouge. A son contact, vos mains sont poisseuses d'une substance qui ne peut être que du sang.~
 
-@5062= ~Larme de sang de Bhaal
 
-La larme est taillée dans cristal rouge par le maître artéfact de Bhaal, Kael. A son contact, vos mains sont poisseuses d'une substance qui ne peut être que du sang.
-
-Cette larme appartenait au démon.~
-
-// Salle 2
-@5063= ~Larme de sang de Bhaal
-
-La larme est taillée dans cristal rouge par le maître artéfact de Bhaal, Kael. A son contact, vos mains sont poisseuses d'une substance qui ne peut être que du sang.
-
-Cette larme appartenait au golem d'os.~
-
-// Salle 3
-@5064= ~Larme de sang de Bhaal
-
-La larme est taillée dans cristal rouge par le maître artéfact de Bhaal, Kael. A son contact, vos mains sont poisseuses d'une substance qui ne peut être que du sang.
-
-Cette larme appartenait au spectateur.~
-
-// Salle 4
-@5065= ~Larme de sang de Bhaal
-
-La larme est taillée dans cristal rouge par le maître artéfact de Bhaal, Kael. A son contact, vos mains sont poisseuses d'une substance qui ne peut être que du sang.
-
-Cette larme appartenait à Islendra.~
-
-// Salle 5
-@5066= ~Larme de sang de Bhaal
-
-La larme est taillée dans cristal rouge par le maître artéfact de Bhaal, Kael. A son contact, vos mains sont poisseuses d'une substance qui ne peut être que du sang.
-
-Cette larme appartenait à Taguar, le champion de Bhaal.~
-
-// Salle 6
-@5067= ~Larme de sang de Bhaal
-
-La larme est taillée dans cristal blanc par le maître artéfact de Bhaal, Kael. A son contact, vos mains sont glacées.
-
-Cette larme appartenait à Kael.~
-
-// Salle 7
-@5068= ~Larme de sang de Bhaal
-
-La larme est taillée dans cristal rouge par le maître artéfact de Bhaal, Kael. A son contact, vos mains sont poisseuses d'une substance qui ne peut être que du sang.
-
-Cette larme appartenait à Maladie.~
-
-
-@5069=~Livre indéchiffrable
-
-Un sort protège ce livre des curieux. Les lettres bougent dans tous les sens et le texte est illible.
-
-Il faut lancer un sort d'identification pour déchiffrer le texte.~
-
-
-// pierre glace
-@5070= ~Pierre bleue~
-@5071= ~Des vapeurs glacées émanent de cette pierre étonnante. A son contact, le froid vous brule et vos mains sont humides.~
-
-// heaume noir
-@5072= ~Heaume noir~
-@5073= ~Ce casque dégage quelque chose de hostile. Dans vos mains, un sentiment de malaise vous envahit.~
-
-// anneau feu
-@5074= ~Anneau de feu~
-@5075= ~Une forte chaleur dégage de cet anneau. Il est tout simplement brulant. 
-
-En observant sa surface, vous avez l'impression de voir des flammes en mouvement.~
-
-// crane pierre
-@5076= ~Crâne humain~
-@5077= ~Ce crâne humain n'a rien de particulier mis à part cette pierre bleu inscrustée lui donnant un air majestueux. Il devait appartenir à une personne importante.~
-
-// Clé coffre 1 - MISCP42 : anneau feu (MISCP48)
-@5078= ~Clé~
-@5079= ~Clé trouvée dans les ossements de la salle sud.~
-
-// Clé coffre 2 - MISCP43 :  heaume noir (MISCP46)
-@5080= ~Clé~
-@5081= ~Clé trouvée dans une cache de la salle ouest.~
-
-// Clé coffre 3 - MISCP45 : pierre glace (MISCP47)
-@5082= ~Clé~
-@5083= ~Clé trouvée dans un cadavre brulé de la salle nord.~
-
-// Clé coffre 4 - MISCP44 : crane pierre (MISP49)
-@5084= ~Clé~
-@5085= ~Clé trouvée dans un cercueil de la salle sud-est~
-
-
-// livre haut fait
-@5086= ~Livre~
-@5087= ~Ce livre fait référence aux hauts faits d'armes des disciples de Bhaal durant sa gloire passée. Il détaille qui était la cible et de quelle manière délicate il rencontrait leur trépas.
-
-Tuer était clairement élévé au rang d'art.
-
-A la vue de tous ces livres, cette salle est une véritable bibliothèque du meurtre!~
-
-// Enigme anneau feu
-@5088= ~Parchemin de la 4ième niche~
-@5089= ~Nait de l'obscurité, je danse la mort.~
-
-// Enigme heaume noir
-@5090= ~Parchemin de la 3ième niche~
-@5091= ~Dure comme la pierre, je me dresse inébranlable.~
-
-// Enigme pierre glace
-@5092= ~Parchemin de la 2nd niche~
-@5093= ~Pris dans mon étau, le coeur de mes ennemis se fige.~
-
-// Enigme crane pierre
-@5094= ~Parchemin de la 1iere niche~
-@5095= ~Coiffé, je mêne la charge sanglante.~
-
-// Epée à deux mains des glaces +1
-@5096= ~Epée à deux mains +1~
-@5097= ~Epée à deux mains +1 glacée
-
-Epée de grande qualité dont la lame au toucher vous glace le sang.
-
-Paramètres:
-Thaco +1
-Dégats 1D10 +1, +1 dégât de glace.
-
-Inutilisable par:
- Mage
- Druide
- Clerc
- Voleur~
- 
-// Anneau de Urglite: invocation élémental d'air glacé
-@5098= ~Anneau d'urglite~
-@5099= ~Glacé au toucher, le contenu de la pierre bleue semble être en mouvement constant.~
-@5100= ~Anneau d'air glacé~ 
-@5101= ~Anneau d'air glacé d'Urglite
-
-Glacé au toucher, le contenu de la pierre bleue semble être en mouvement constant.
-
-Paramètres:
-
-Capacités spéciales: Invoquer un élémentaire glacé mineur une fois par jour
-
-Ses capacités de combat sont les suivantes:
-HP: 64
-CA: 2
-TAC0: 13
-Attaques/round: 1
-Dégats: 2D8 dégâts de froid
-
-Utilisable uniquement par:~
-
- 
-// outil niveau Kael
-@5104= ~Outil~
-@5105= ~Outil de Kael
-
-Cet outil doit avoir un rôle particulier compte tenu que c'est le seul objet du coffre...~
-
-@5106 =~Clé~
-@5107 =~Clé du temple de Bhaal
-
-Cette clé a été obtenue dans le temple. Il ne reste plus qu'à trouver ce qu'elle ouvre.~
-
-@5108 =~Rune~
-@5109 =~Rune du coffre
-
-Cette rune était dans un coffre. Elle a sans doute une fonction à remplir dans le temple.~
-
-// Livre masque de mort
-@5110=~Journal~
-@5111=~Ce journal relate la vie au temple dans l'attente du réveil de Bhaal. Le dernier passage est dés plus intéressant.
-
-"Systéra nous a convoqué, nous les 9 masques de mort. Je suppose que cette folle a encore une mission à nous confier. A l'écouter, Bhaal va bientôt se réveiller et prendre sa revanche sur Cyric. J'en ai assez!
-
-Je vais aider Cyric à trouver notre temple. J'éliminerai moi même Systéra le moment opportun. Elle a beau être puissante, je connais sa grande faiblesse. Mes crânes de feu auront raison d'elle.
-
-Quel intérêt à rester du côté des perdants? La victoire m'est plus douce. Cyric me récompensera."~
-
-// Crâne violet d'Ekilis
-@5112=~Crâne violet~
-@5113=~Crâne violet d'Ekilis
-
-Ce crâne semble tout à fait normal mis à part qui est violet.~
-
-// Crâne de feu
-@5114=~Crâne~
-@5115=~Crâne de feu
-
-Ce crâne sorti des flâmmes est brulant. Il devrait être réduit en cendres. Lancé sur une ennemis, le résultat devrait être intéressant.~
-
-
-@5116=~Histoire de Taguar~
-@5117=~Taguar était un guerrier qui supplia tous les dieux de laider à assouvir la soif de pouvoir et de richesse de sa femme Urglite. Bhaal, amusé, décida den faire son champion.
-
-Pris de folies sanglantes et meurtrières, larmée conquérante de Taguar détruisait tout sur son passage. Ses généraux désireux de se débarrasser de ce forcené sans laffronter optèrent pour le poison. Urglite, quand à elle, fût emmurée vivante pendant quelle maudissait Taguar de lavoir abandonnée.
-
-Pactiser avec Bhaal a un prix que les mortels finissent toujours par payer.~
-
-
-@5118=~Histoire de Islendra~
-@5119=~Islendra « la téméraire » ne craignait personne. Elle réglait toujours ses conflits par un duel et en sortait vainqueur. Sa réputation croissante la précédait où quelle aille et au final plus personne nosait sopposer à elle. 
-
-Un jour Bhaal se présentât et Islendra défia le dieu. Depuis, on raconte quelle rôderait dans des grottes obscures et humides à laffût dune proie à chasser à la demande de son nouveau maître
-
-Défier Bhaal conduit toujours à une seule et unique vérité. Les mortels sont faits pour se soumettre à sa volonté.~
-
-
-@5120=~Histoire de Kael~
-@5121=~Kaél était un magicien pompeux versé dans lart de concevoir des artéfacts. Son grand talent vint à la connaissance de Bhaal qui décida de le prendre à son service. 
-
-Kael dont légo avait grandit, confiait certaines tâches basiques à Cespenar, son apprenti. Malheureusement pour lui, un artéfact, on ignore lequel, déplu à Bhaal et Cespenar devint le nouveau maître artefact.
-
-Décevoir Bhaal entraîne des conséquences que nul mortel aimerait connaître~
-
-@5122=~Ceinture de Kael~
-@5123=~La ceinture est assez étrange. Elle est faite de métal avec au centre un joyau rouge dont l'intérieur semble liquide. Au contact de vos hanches, la ceinture s'adapte parfaitement à votre morphologie.~
-@5124=~La ceinture est assez étrange. Elle est faite de métal avec au centre un joyau rouge dont l'intérieur semble liquide. Au contact de vos hanches, la ceinture s'adapte parfaitement à votre morphologie.
-
-Elle permet à son porteur de mémoriser plus de sorts que la normale. Cet objet a rendu célèbre Kael avant son entrée au service de Bhaal. Certains disent que le métal provient d'une météorite.
-
-PARAMETRES :
-
-Sorts: Confère un sort de cinquième niveau, un sort de sixième niveau et un sort de septième niveau de plus.
-
-Intelligence nécessaire: 17
-Utilisable uniquement par :
-Mage~
-
-// Crâne de Kept
-@5125=~Crâne~
-@5126=~Ce crâne couvert d'étranges symbôles a été trouvé sur le corps de Systéra. A son contact, une sensation de colère vous envahit.~
-
-// Pierre de la salle au damier
-@5127=~Pierre taillée~
-@5128=~Pierre taillée trouvée dans la salle au damier.~
-
-// Pierre pour ouvrir les grilles du sous-sol
-@5129=~Pierre gardienne~
-@5130=~Cette pierre permet de provoquer l'ouverture des grilles de ce niveau.~
-
-// Corde
-@5131=~Cette corde lisse et dorée, tressée en forme de fers miniatures vous aidera peut être...~
-
-@5132=~Notes Entar~
-@5133=~Systéra a disparu en marchant sur la glyphe au sol près des minotaures.
-
-J'ai informé Ekilis et j'ai même précisé qu'elle avait mis la main sur collier rouge mais il ne m'écoute pas. Il est persuadé de tout savoir.
-
-La nourriture va bientôt manquer et Ekilis ne trouve pas de sortie.... 
-
-Je vais devoir le remplacer, il n'est pas l'homme de la situation.
-
-Moi si.
-
-Entar
- fidèle serviteur de Cyric~
-
-
-// Auberge
-@5200=~Clé de Barni~
-@5201=~Cette clé vous a été confiée par Barni, le nouvel aubergiste du Heaume et de la cape. Elle ouvre la trappe qui est dans sa cave.~
-
-// Bouclier rouillé
-@5202=~Bouclier brisé~
-@5203=~Ce bouclier brisé a été bouffé par la rouille. Il est inutilisable.~
-
-// Armure rouillé
-@5204=~Armure cabossée~
-@5205=~Cette armure cabossée a été bouffée par la rouille. Elle est inutilisable.~
-
-// Epée rouillée
-@5206=~Epée brisée~
-@5207=~Cette épée brisée a été bouffée par la rouille. Elle est inutilisable.~
-
-// Message Cersitis à Candelas
-@5208=~Message de Cersitis~
-@5209=~Candelas,
-je vous tiens pour responsable de la mort de Sarevok.
-
-Remontez la piste de ses contacts, je veux un autre enfant de Bhaal et en vie cette fois ci...
-
-L'ouverture du temple en dépend. 
-
- Cersitis~
- 
-  
-@5210=~Symbole sacré~
-@5211=~Symbole sacré de Cyric 
-
-Sur cette plaque en pierre est représenté le symbôle de Cyric, le dieu fou.~ 
-
-// Pierre de la salle au damier
-//pierre blanche et froide: désactivation piège éclair
-@5250=~Pierre taillée~
-@5251=~Cette pierre d'une couleur gris-blanc crépite au toucher.~
-
-//pierre jaune: désactive piege incinerateur
-@5252=~Pierre taillée~
-@5253=~Cette pierre jaune est chaude au toucher.~
-
-//pierre grenat: désactive piege crane et runes
-@5254=~Pierre taillée~
-@5255=~Pierre taillée trouvée dans la salle au damier.~
-
-//pierre rouge: ouvre la porte de Kael
-@5256=~Pierre taillée~
-@5257=~Pierre rouge donnée par Lucinda.~
-
-//pierre bleu et blanche: désactiver le piège cône de glace
-@5258=~Pierre taillée~
-@5259=~Cette pierre bleu et blanche est froide au toucher.~
-
-//corde: pour aller dans la salle sous-sol
-@5260=~Corde dorée~
-@5261=~Cette corde faite de fil dorée. Lorsque vous tirez dessus, la corde semble s'allonger à l'infini.~
-
-// coupe de sang
-@5262=~Coupe de sang~
-@5263=~Cette coupe a été faite à partir d'un crâne humain et d'un assemblage d'os. 
-
-Islendra s'en servait sans doute lors de sacrifice rituel.~
-
-// coupe de sang de Kael
-@5264=~Coupe de sang de Kael~
-@5265=~La coupe de sang permet d'invoquer une horreur sanglante.
-
-Lorsque vous l'appelez, la coupe se remplit de votre sang et l'horreur apparaît. 
-
-Vous perdez 30% HP de vos points de vie maximum. Si vous êtes en dessous de ce seuil, vous mourrez.
-
-Si l'horreur est vaincu, elle retournera dans son plan dans l'attente d'être à nouveau appelée.
-
-L'horreur répondra au moindre de vos ordres durant son temps d'invocation, elle vous est dévouée.
-
-Kael a créé une arme de guerre redoutablement efficace!
-
-Ses capacités de combat sont les suivantes:
-HP: 70
-CA: -1
-TAC0: 9
-Attaques/round: 2
-Dégats: 1D6+2  (écrasant / arme magique +1)
-
-Utilisable uniquement par:
-un enfant de Bhaal~
-
-@5267=~Fléau de Kael~
-@5268=~Le fléau est constitué d'un solide manche de bois attaché à une barre de fer, à une barre de bois garnie de piquants, ou à une boule de métal hérissée de pointes. Entre le manche et la partie blessante se trouve une simple charnière ou une chaîne. 
-
-Ce fléau a été amélioré par Kael ancien maître artéfact au service de Bhaal. Un halo rouge émane de l'arme.
-
-PARAMETRES :
-
-TAC0 : +1
-Dégâts : 1D6 + 2
-Type de dégât : contondant
-Poids : 12
-Facteur de vitesse : 6
-Type de compétence : Fléau/Etoile du matin
-Type : arme à 1 main
-Force nécessaire : 13
-Inutilisable par :
- Druide
- Mage
- Voleur~
-
-@5269=~Pavois de Kael~
-@5270=~Le pavois est un bouclier massif en métal ou en bois couvrant le guerrier pratiquement du menton jusqu'aux doigts de pied. Il doit être bien attaché sur l'avant-bras et maintenu solidement. Naturellement, la main prise ne peut servir qu'à maintenir le pavois en place. 
-
-Ce pavois a été fabriqué par Kael ancien maître artéfact au service de Bhaal. Un halo rouge émane de l'arme.
-
-PARAMETRES :
-
-Bonus à la classe d'armure : 2
-Spécial : +1 contre les projectiles
-Poids : 12
-Force nécessaire : 15
-Non utilisable par :
-Barde
-Druide
-Mage
-Voleur~
-
-@2571=~Casque de Kael~
-@2572=~Cette catégorie de cabasset, fabriquée en cuir ou en métal renforcé, couvre presque l'ensemble de la tête, à l'exception du visage et du cou. Ces casques protègent bien le nez. 
-
-Ce pavois a été fabriqué par Kael ancien maître artéfact au service de Bhaal. Un halo rouge émane de l'arme.
-
-PARAMETRES :
-
-Bonus à la Classe d'Armure : 1
-Spécial : protège contre les coups critiques
-Poids : 2
-Non utilisable par :
-Mage
-Barde
-Voleur~
-
-
-// FIN Temple **************************************************************************************************************************************************************
