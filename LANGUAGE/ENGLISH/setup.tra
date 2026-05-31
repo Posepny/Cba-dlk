@@ -1,95 +1,76 @@
-@1=~Vous désirez?
-[1] Activer le mod à la mort de Sarevok (suite de BG1).
-[2] Démarrer une partie avec le mod tout de suite.~
-@2=~Choix [1] effectué~
-@3=~choix [2] effectué~
-@4=~Installation du mod <Le champion de Bhaal>~
-@5=~*** Fin du chargement. L'installation de BGT est requise. ***~
-@6=~*** Fin du chargement. L'installation de TOB est requise. ***~ // non actif
-@7=~*** Mod Infinity Animation installé. Utilisation des animations optionnelles. ***~   
-@8=~*** Mod Infinity Animation absent. Utilisation des animations standards. ***~
 
-@9=~Le mod Infinity Animation n'est pas installé. Vous ne bénéficierez pas des ajouts d'animation. Vous désirez?
-[1] Arrêter l'installation et installer le mod IA avant.
-[2] Installer sans le mod IA.~
-@10=~~
-@11=~~
-@12=~~
+@1=~Would you like?
+[1] Activate the mod upon Sarevok's death (BG1 sequel).
+[2] Start a game with the mod immediately.~ 
+@2=~Choice [1] made~ 
+@3=~Choice [2] made~ 
+@4=~Installing the <Bhaal's Champion> mod~ 
+@5=~*** Loading complete. BGT installation required. ***~ 
+@6=~*** Loading complete. TOB installation required. ***~ 
 
+// not active 
+@7=~*** Infinity Animation mod installed. Using optional animations. ***~ 
+@8=~*** Infinity Animation mod not installed. Using standard animations. ***~ 
+@9=~The Infinity Animation mod is not installed. You will not benefit from the animation additions. Would you like? [1] Stop the installation and install the AI â€‹â€‹mod first. [2] Install without the AI â€‹â€‹mod.~ 
+@10=~~ 
+@11=~~ 
+@12=~~ /*
 
-/*
-// TEXTSCREEN **************************************************************************************************************************************************
+// TEXTSCREEN *****************************************************************************************************************************************************
 // INTRO Mod
-@1 = ~~
-@2 = ~LE PROTECTEUR DE BALDUR - Acte 1 - L'ombre de la menace.
+ @1 = ~~
+ @2 = ~BALDUR'S PROTECTOR - Act 1 - The Shadow of the Threat. ~ 
 
-~
-// TEXTESCREEN Cuisines du palais *************************************************************************************************************************************************************
-@15 = ~Accompagné par deux gardes, Alfredo, vous guide jusqu'aux cuisines où de nombreux plats ont été prévus à votre attention.~
-@16 = ~Vous vous délectez de ces mets parfumés et onctueux entourés de serviteurs affairés. De leur discussion, Vous comprenez qu'une soirée importante va avoir lieu dans le batiment du Trône de fer.~
-@17 = ~Repus et le ventre distendu, Alfredo vous conduit jusqu'aux portes du palais.~
-@18 = ~Précédé des ducs et de leur escorte, vous sortez. 
-
-La foule attirée par les crieurs est amassée à l'entrée. L'heure de votre sacré est arrivé.~
+// SCREEN TEXT Palace Kitchens *************************************************************************************************************************************************************
+ @15 = ~Accompanied by two guards, Alfredo guides you to the kitchens where numerous dishes have been prepared for you.~
+ @16 = ~You savor these fragrant and creamy dishes surrounded by busy servants. From their conversation, you understand that an important evening is about to take place in the Iron Throne building.~
+ @17 = ~Satiated and with a full stomach, Alfredo leads you to the palace gates.~
+ @18 = ~Preceded by the dukes and their escort, you exit. The crowd, drawn by the criers, is gathered at the entrance. Your sacred hour has arrived.~ 
 
 // MF1 *************************************************************************************************************************************************************
-@19 = ~Mort Fatale n°1: l'attaque du palais des ducs~
-@20 = ~Les gardes alertés sortent leurs armes pour vous tailler en pièces. Vous avez beau faire face et éliminer la menace présente, d'autres arrivent, toujours et encore!~
-@21 = ~Affaibli et dépassé par le nombre, vous finissez pas succomber sous les coups...~
-@22 = ~Quelle idée suicidaire vous est passée par la tête? Vous attaquer au palais, Vous n'aviez pas l'ombre d'une chance! Une autre fois peut être...~
+ @19 = ~Fatal Death #1: The Attack on the Dukes' Palace~
+ @20 = ~The alerted guards draw their weapons to cut you to pieces. Despite your efforts to confront and eliminate the current threat, others arrive, again and again!~
+ @21 = ~Weakened and overwhelmed by numbers, you finally succumb to the blows...~
+ @22 = ~What suicidal idea possessed you? Attacking the palace! You didn't stand a chance! Maybe another time...~
 
-// Essayage des tenues pour la soirée en l'honneur de la délégation d'Amn
-@45 = ~A nouveau, Alfredo vous précède et vous emboitez le pas suivi de près par deux gardes.~
-@46 = ~A nouveau, Alfredo vous précède et vous emboitez le pas suivi de près par deux gardes.~
-@47 = ~Vous traversez d'interminables couloirs jusqu'à ce que l'intendant s'arrête enfin devant une porte. Les deux gardes se placent de part et d'autre.~
-@48 = ~L'intendant vous regarde avec sourire narquois. "Protecteur, le tailleur des ducs vous attend. Je vous souhaite bon courage."~
-@49 = ~Tout celà n'augure rien de bon...~
+// Fitting outfits for the evening in honor of the Amn delegation
+ @45 = ~Again, Alfredo goes ahead of you and you follow closely behind, accompanied by two guards.~
+ @46= ~Again, Alfredo precedes you, and you follow closely behind, accompanied by two guards.~
+ @47 = ~You walk through endless corridors until the steward finally stops in front of a door. The two guards position themselves on either side.~
+ @48 = ~The steward looks at you with a mocking smile. "Protector, the Dukes' tailor awaits you. I wish you good luck."~
+ @49 = ~This doesn't bode well...~ 
 
-// Sortie du palais après essayage des tenues de sigmund *************************************************************************************************************************************************************
-@50 = ~A l'exterieur du salon, les deux gardes vous attendaient et vous raccompagne jusqu'aux portes du palais. Visiblement, Macros prend très au sérieux la sécurité des ducs.~
+// Exit from the palace after trying on Sigmund's outfits *******************************************************************************************************************************************************************
+ @50 = ~Outside the drawing room, the two guards were waiting for you and escorted you back to the palace gates. Clearly, Macros takes the dukes' safety very seriously.~
 
-// Proposition d'alliance de la guilde des ombres *************************************************************************************************************************************************************
-@78 = ~D'une allure féline Valéria vous enmêne, seul(e) au rendez-vous, vos compagnons retournant à l'auberge. Elle vérifie de nombreuses fois que personne n'est à vos basques.~
-@79 = ~Dans les égoûts, vous constatez sans surprise que la puanteur n'a pas vraiment changé depuis votre dernière visite.~
-@80 = ~Lorsque vous montez à l'échelle, vous savez que allez vous retrouver dans les caves du Trône de fer.~
-@81 = ~Arrivé en haut, vous êtes seul dans cette pièce sombre ou peut être pas finalement...~
+// Shadow Guild Alliance Proposal *************************************************************************************************************************************************************
+ @78 = ~With a feline grace, Valeria leads you, alone to the meeting, your companions returning to the inn. She checks many times that no one is following you.~
+ @79 = ~In the sewers, you find, unsurprisingly, that the stench hasn't really changed since your last visit.~
+ @80 = ~When you climb the ladder, you know you're going to find yourself in the cellars of the Iron Throne.~
+ @81 = ~At the top, you're alone in this dark room, or maybe not after all...~
 
-// Les gardes accompagnent le Protecteur dans un l'un des appartements des invités (Dremlon ou Clifangion) *************************************************************************************************************************************************************
-@82 = ~Deux gardent vous conduisent et Vous traversez à nouveau d'interminables couloirs jusqu'à arriver enfin devant une porte. Les deux gardes se placent de part et d'autre.~
+// The guards escort the Protector to one of the guest apartments (Dremlon or Clifangion) **********************************************************************************************************************************************************************
+ @82 = ~Two guards lead you, and you once again cross endless corridors until you finally arrive in front of a door. The two guards position themselves on either side.~ 
 
-// Alfredo va demander aux ducs si ils peuvent revevoir le Protecteur. *************************************************************************************************************************************************************
-@127 = ~Alfredo vous laisse seul.
+// Alfredo goes to ask the dukes if they can receive the Protector. *************************************************************************************************************************************************************
+ @127 = ~Alfredo leaves you alone. In his absence, you notice that the guards are not inclined to talk or let you wander around. You have no choice but to wait for Alfredo's return. Clearly, Macros doesn't trust anyone...~ 
 
-En son abscence; vous constatez que les gardes ne sont pas enclins à discuter ou à vous laisser vous balader. Vous n'avez d'autre choix que d'attendre le retour d'Alfredo.
+// Altair of Argol:
+The kid suggests coming to watch the duel ********************************************************************************************************************************************************** @270The kid immediately leaves the main street to lead you into the alleys of Baldur. A crowd noise grows increasingly distinct as you progress. You eventually emerge into a square
+ where a mob has gathered. The kid wasn't lying; it looks like a fight is about to break out! You eventually emerge into a square where a mob has
+ gathered. The kid smiles at you before disappearing into the fray. Instinctively , you put your hand on your purse. In the end, two gold pieces wasn't such a bad price to pay...~ */ 
 
-Visiblement Macros ne fait confiance à personne...~
+// ITEMS ********************************************************************************************************************************************************************************************************************************** // END OF ITEMS **************************************************************************************************************************************************************************************************************************** // SPELLS **********************************************************************************************************************************************************************************************************************************
+ @190 = ~Follow me!~
+ @191 = ~Stay here!~
+ @192 = ~Kill!~
+ @193 = ~Protect me!~
 
-// Altair d'Argol: le gamin propose de venir voir le duel *************************************************************************************************************************************************************
-@270 = ~Le mioche quitte aussitôt la rue principale pour vous enmêner dans les ruelles de Baldur. Un bruit de foule de plus en plus distinct se rapproche de vous au fur et à mesure de votre progression.~
- // Version 1
-@271 = ~Vous finissez pas déboucher sur une place où une populace est rassemblée. Le petit n'a pas menti, on dirait bien qu'un combat va avoir lieu!~
- // Version 2
-@272 = ~Vous finissez pas déboucher sur une place où une populace est rassemblée. Le gamin vous sourit avant de disparaitre dans la mêlée. Par réflèxe vous posez votre main sur votre bourse. Finalement deux pièces d'or n'était pas un si mauvais prix à payer...~
+// END SPELLS ********************************************************************************************************************************************************************************************************************************** // SPELLS *********************************************************************************************************************************************
+ @194 = ~Golem Repair~ 
 
-*/
-// OBJETS **********************************************************************************************************************************************************************************************************************************
+// END OF SPELLS ****************************************************************************************************************************************** 
+// BLINDS *********************************************************************************************************************************************************
+ @195 = ~Amber Golem Goods~ 
 
-// FIN OBJETS **********************************************************************************************************************************************************************************************************************************
-
-// SORTS **********************************************************************************************************************************************************************************************************************************
-@190 = ~Suis moi!~
-@191 = ~Restes ici!~
-@192 = ~Tues!~
-@193 = ~Protèges moi!~
-// FIN SORTS **********************************************************************************************************************************************************************************************************************************
-
-// SORTILEGES ******************************************************************************************************************************************
-@194 = ~Réparation Golem~
-
-// FIN SORTILEGES ******************************************************************************************************************************************
-
-// STORES ***************************************************************************************************************************************************
-@195 = ~Marchandises des Golems d'ambre~
-
-// FIN STORES ***************************************************************************************************************************************************
-
+// END OF BLINDS ***************************************************************************************************************************************************
