@@ -3,27 +3,35 @@
  @34 = ~Precyzyjnie rzeźbiony pierścień ozdobiony licznymi runami. Emanuje z niego delikatne ciepło; jest niewątpliwie magiczny.~
  @35 = ~Pierścień boga Amaunatora~
  @36 = ~Pierścień wykonany z precyzyjnie rzeźbionego złota i ozdobiony licznymi runami. Po założeniu pierścień automatycznie dopasowuje się do rozmiaru palca noszącego i nie można go zdjąć. Noszący i pierścień są jednością, dopóki śmierć ich nie rozłączy. Jego runy wskazują, że został stworzony przez wyznawców Amaunatora (zaginionego boga), a także przez magów. 
+
 PARAMETRY: 
 +30% Odporność na Ogień Przywołuje Żywiołaka Ognia / Raz dziennie (60 sekund) 
-+1 Siła Nie można użyć przez:~ 
++1 Siła 
+Nie można użyć przez:~ 
 
 //2 Pierścień Wody
  @37 = ~Pierścień wykonany z drobno rzeźbionego złota i ozdobiony licznymi runami. Po założeniu pierścień automatycznie dopasowuje się do rozmiaru palca noszącego i nie można go zdjąć. Noszący i pierścień są jednością, dopóki śmierć ich nie rozłączy. Jego runy wskazują, że został stworzony przez wyznawców Amaunatora (zaginionego boga), a także przez magów.
+
 PARAMETRY:
 +30% Odporność na Zimno Przywołuje Zimną Salamandrę / Raz dziennie (60 sekund) 
-+1 Charyzma Nie można użyć przez:~ //3 Pierścień Powietrza
++1 Charyzma 
+Nie można użyć przez:~ //3 Pierścień Powietrza
  
 @38 = ~Pierścień wykonany z drobno rzeźbionego złota i ozdobiony licznymi runami. Po założeniu pierścień automatycznie dopasowuje się do rozmiaru palca noszącego i nie można go zdjąć. Noszący i pierścień są jednością, dopóki śmierć ich nie rozłączy. Jego runy wskazują, że został stworzony przez wyznawców Amaunatora (zaginionego boga), a także przez magów.
+
 PARAMETRY: 
 +4 Odporność na Oddech Przywołanie Żywiołaka Powietrza / 1 dziennie (60 sekund) 
-+1 Zręczność Nie można użyć przez: ~
++1 Zręczność 
+Nie można użyć przez: ~
 
 //4 Pierścień Ziemi
  
 @39 = ~Pierścień wykonany z drobno rzeźbionego złota i ozdobiony licznymi runami. Po założeniu pierścień automatycznie dopasowuje się do rozmiaru palca noszącego i nie można go zdjąć. Noszący i pierścień są jednością, dopóki śmierć ich nie rozłączy. Jego runy wskazują, że został stworzony przez wyznawców Amaunatora (zaginionego boga), a także przez magów. 
+
 PARAMETRY: 
 +20% odporności na obrażenia cięte, kłute i pociski. Przywołanie żywiołaka ziemi / raz dziennie (60 sekund). 
-+1 Kondycja. Nie można użyć przez: ~
++1 Kondycja. 
+Nie można użyć przez: ~
 
 //5 Pierścień Magii 
  
@@ -36,31 +44,38 @@ Zaklęcie Rozproszenia magii / 1 raz dziennie. Nie można go użyć przez: 6 //6
 @41 = Pierścień wykonany z drobno rzeźbionego złota i ozdobiony licznymi runami. Po założeniu pierścień automatycznie dopasowuje się do rozmiaru palca noszącego i nie można go zdjąć. Noszący i pierścień są jednością, dopóki śmierć ich nie rozłączy. Runy wskazują, że został on stworzony przez wyznawców Amaunatora (znikniętego boga), a także przez magów. 
 
 PARAMETRY: 
-Przywołanie +1 Inteligencja, zaklęcie strachu -2 odporność psychiczna. Nie można użyć przez:~ 
+Przywołanie +1 Inteligencja, zaklęcie strachu -2 odporność psychiczna. 
+Nie można użyć przez:~ 
 
 //7 Pierścień Trucizny
  @42 = ~Pierścień wykonany z drobno rzeźbionego złota i ozdobiony licznymi runami. Po założeniu pierścień automatycznie dopasowuje się do rozmiaru palca noszącego i nie można go zdjąć. Noszący i pierścień są jednością, dopóki śmierć ich nie rozłączy. Runy wskazują, że został stworzony przez wyznawców Amaunatora (znikniętego boga), a także przez magów. 
 
 PARAMETRY: 
-+4 do rzutu obronnego przeciwko truciźnie, premia zabójczej chmury? Nie można użyć przez:~ 
++4 do rzutu obronnego przeciwko truciźnie, premia zabójczej chmury? 
+Nie można użyć przez:~ 
 
 //8 Pierścień Elektryczności
  @43 = ~Pierścień wykonany z drobno rzeźbionego złota i ozdobiony licznymi runami. Po założeniu pierścień automatycznie dopasowuje się do rozmiaru palca noszącego i nie można go zdjąć. Noszący i pierścień są jednością, dopóki śmierć ich nie rozłączy. Runy wskazują, że został stworzony przez wyznawców Amaunatora (znikniętego boga), a także przez magów. 
 
 PARAMETRY: 
-+30% odporności na elektryczność, +1 do Thaco od błyskawic. Nie można użyć przez: ~ 
++30% odporności na elektryczność, +1 do Thaco od błyskawic. 
+Nie można użyć przez: ~ 
 
 //9 Pierścień Życia
  
 @44 = ~Pierścień wykonany z precyzyjnie rzeźbionego złota, ozdobiony licznymi runami. Po założeniu pierścień automatycznie dopasowuje się do rozmiaru palca noszącego i nie można go zdjąć. Noszący i pierścień stanowią jedność, dopóki śmierć ich nie rozłączy. Runy wskazują, że pierścień został stworzony przez wyznawców Amaunatora (zaginionego boga), a także przez magów. 
+
 PARAMETRY:
-+4 do rzutu obronnego przed śmiercią zaklęcie Palec Śmierci / 1 dziennie +15 punktów zdrowia Nie można użyć przez: ~ 
++4 do rzutu obronnego przed śmiercią zaklęcie Palec Śmierci / 1 dziennie 
++15 punktów zdrowia 
+Nie można użyć przez: ~ 
 
 // KONIEC Pierścień Obrońcy:
 9 możliwych ********************************************************************************************************************************** // Makra czarne ************************************************************************************************************************************************** // Baton +1 minor sekwencer @29 = ~Baton +1~
 @30 = ~Laska Pojedynkowa Ta laska była kiedyś używana w pojedynkach magów. Szybkość była kluczowa, aby rzucać zaklęcia przed przeciwnikiem i tym samym zapewnić sobie zwycięstwo! 
 
-Parametry: Umiejętność: Pomniejszy czar sekwencera raz dziennie 
+Parametry:
+Umiejętność: Pomniejszy czar sekwencera raz dziennie 
 THc0: +2 
 Obrażenia: 1K6+2 
 Rodzaj obrażeń: Przebijające 
@@ -77,8 +92,10 @@ Nie może jej używać: Mnich~
 
 Ustawienia: Zaklęcie Lustrzanego Odbicia raz dziennie Niewielka Niewrażliwość Zaklęcie Kuli raz dziennie 
 Wymagana Inteligencja: 16 
-Nie może być użyte przez: Wojownika Łowcę Paladyna 
-Barda Łotrzyka Druida Kapłana~ 
+Nie może być użyte przez: Wojownika 
+Łowcę Paladyna 
+Barda Łotrzyka 
+Druida Kapłana~ 
 
 // Księga Makr // KONIEC Makra Czarnego ****************************************************************************************************************************************************** // Rekrutowalne NPC ********************************************************************************************************************************************** // Geoffroy d'Anxval ******************************************************************************************************************************************************** // Besantine d'Anxval
  @83 = ~Besantine d'Anxval~
@@ -98,6 +115,7 @@ Niedostępne dla: Wojownika, Łotrzyka, Kapłana, Druida, Łowcy, Mnicha~
 
  @85 = ~Zbroja Płytowa Zygmunta~
  @86 = ~Złota zbroja ceremonialna, której jedynym celem jest estetyka.
+
 Parametry: 
 Niedostępne dla:
 
@@ -156,7 +174,7 @@ Thaco +2
 Obrażenia 1k10+2 +2 elektryczność 
 30% szans na dodatkowe porażenie prądem o 10 punktów obrażeń (rzut obronny przeciwko X) 
 Nie może używać: Mag Druid Kapłan Łotrzyk Paladyn 
-Charakter: Wymagane PRAWO~ 
+Charakter: Wymaganena PRAWORZĄDNOŚĆ
 
 // Srebrny Amulet
  @107 =~Amulet~
@@ -196,18 +214,55 @@ Nie może używać: Bard Druid Mag Łotrzyk~
 Parametry: 
 Klasa pancerza Bonus: brak 
 Specjalny: chroni przed trafieniami krytycznymi 
-Waga: 2 Nie może używać: Mag Bard Łotrzyk~ // Srebrny Orzeł Najemnik Srebrna Zbroja Płytowa
+Waga: 2 Nie może używać: Mag Bard Łotrzyk~ 
+
+// Srebrny Orzeł Najemnik Srebrna Zbroja Płytowa
  @119 =~Zbroja Płytowa~
- @120 =~Zbroja Płytowa Kompanii Srebrnego Orła Klasyczna zbroja płytowa z tą różnicą, że została wzbogacona o srebrne refleksy. Parametry: Klasa pancerza: 3 Waga: 50 Wymagana siła: 12 Nie może używać: Bard Druid Mag Łotrzyk~ 
+ @120 =~Zbroja Płytowa Kompanii Srebrnego Orła Klasyczna zbroja płytowa z tą różnicą, że została wzbogacona o srebrne refleksy.
+
+Parametry: 
+Klasa pancerza: 3
+Waga: 50 
+Wymagana siła: 12 
+Nie może używać: Bard Druid Mag Łotrzyk~ 
 
 // Srebrny Orzeł Najemnik Tarcza
  @121 =~Wielka Tarcza~
- @122 Tarcza Kompanii Srebrnych Orłów. Tarcza z inkrustowaną głową orła pośrodku. Każdy członek kompanii posiada taką tarczę. Parametry: Klasa pancerza Bonus: 1 Specjalny: +1 przeciwko broni dystansowej Waga: 15 Wymagana siła: 15 Nie może używać: Bard Druid Mag Łotrzyk~ // KONIEC Kompanii Srebrnych Orłów ************************************************************************************************************************************************ // Kompania Ebony Unicorn ******************************************************************************************************************************************** // Hełm Przywódcy Jednorożców
+ @122 Tarcza Kompanii Srebrnych Orłów. Tarcza z inkrustowaną głową orła pośrodku. Każdy członek kompanii posiada taką tarczę. 
+
+Parametry: 
+Klasa pancerza Bonus: 1 
+Specjalny: +1 przeciwko broni dystansowej 
+Waga: 15
+Wymagana siła: 15 
+Nie może używać: Bard Druid Mag Łotrzyk~ 
+
+// KONIEC Kompanii Srebrnych Orłów ************************************************************************************************************************************************ 
+
+// Kompania Ebony Unicorn ******************************************************************************************************************************************** 
+
+// Hełm Przywódcy Jednorożców
  @128 = ~Złoty Hełm~
  @129 = ~Ebony Jednorożec Złoty Hełm Trace'a, cały ze złota, z czarnym kolcem. Kolec nawiązuje do rogu hebanowego jednorożca. ~
- @130 = ~Hełm hebanowego jednorożca ze złota Hełm z czarnym kolcem wykonanym z rogu jednorożca. Jego właściciel dziedziczy legendarną moc jednorożców: teleportację. PARAMETRY: Premia do klasy pancerza: brak Specjalna: Chroni przed trafieniami krytycznymi Teleportuje się 1 raz dziennie Waga: 2 Nie może używać: Mag Bard Łotrzyk~ // Hełm jednorożca niebieski
+ @130 = ~Hełm hebanowego jednorożca ze złota Hełm z czarnym kolcem wykonanym z rogu jednorożca. Jego właściciel dziedziczy legendarną moc jednorożców: teleportację.
+
+PARAMETRY: 
+Premia do klasy pancerza: brak
+Specjalna: Chroni przed trafieniami krytycznymi Teleportuje się 1 raz dziennie 
+Waga: 2 
+Nie może używać: Mag Bard Łotrzyk~
+
+// Hełm jednorożca niebieski
  @131 = ~Hełm niebieski~
- @132 = ~Hełm hebanowego jednorożca niebieski Ten hełm został wykonany na wzór złotego hełmu Trace'a, ale nie posiada żadnych specjalnych mocy. Każdy członek kompanii posiada hełm tego typu. PARAMETRY: Klasa pancerza Bonus: Brak Specjalny: Chroni przed trafieniami krytycznymi Waga: 2 Nie może używać: Mag Bard Łotrzyk~ // Ebony Unicorn Plate Armor
+ @132 = ~Hełm hebanowego jednorożca niebieski Ten hełm został wykonany na wzór złotego hełmu Trace'a, ale nie posiada żadnych specjalnych mocy. Każdy członek kompanii posiada hełm tego typu. 
+
+PARAMETRY: 
+Klasa pancerza Bonus: Brak 
+Specjalny: Chroni przed trafieniami krytycznymi 
+Waga: 2 
+Nie może używać: Mag Bard Łotrzyk~ 
+
+// Ebony Unicorn Plate Armor
  @133 = ~Gold Armor~
  @134 = ~Ebony Unicorn Gold Armor Złota zbroja płytowa wykonana z herbem Ebony Unicorn PARAMETRY: Klasa pancerza: 3 Waga: 50 Wymagana siła: 12 Nie może używać: Bard Druid Mag Łotrzyk~
  @135 = ~Plate Armor +1~
