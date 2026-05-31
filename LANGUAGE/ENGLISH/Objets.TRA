@@ -84,7 +84,7 @@ Współczynnik szybkości: 3
 Rodzaj umiejętności: Laska 
 Typ: Broń dwuręczna 
 Wymagana siła: 5 
-Nie może jej używać: Mnich~ 
+Nie może używać: Mnich~ 
 
 // Szata Obrony
  @31 = ~Szata~
@@ -264,32 +264,143 @@ Nie może używać: Mag Bard Łotrzyk~
 
 // Ebony Unicorn Plate Armor
  @133 = ~Gold Armor~
- @134 = ~Ebony Unicorn Gold Armor Złota zbroja płytowa wykonana z herbem Ebony Unicorn PARAMETRY: Klasa pancerza: 3 Waga: 50 Wymagana siła: 12 Nie może używać: Bard Druid Mag Łotrzyk~
- @135 = ~Plate Armor +1~
- @136 = ~Ebony Unicorn Plate Armor +1 Ulepszona zbroja płytowa wykonana z herbem Ebony Unicorn. Noszący jest odporny na wszystko, magiczne lub inne, co mogłoby wpłynąć na jego mobilność, w tym zaklęcia przyspieszające i spowalniające. PARAMETRY: Specjalne: Noszący odporny na modyfikacje zdolności ruchu Klasa pancerza: 1 Waga: 50 Wymagana siła: 12 Nie może używać: Bard Druid Mag Łotrzyk~ // Ebony Jednorożec Niebieska zbroja płytowa
- @137 = ~Niebieska zbroja płytowa~
- @138= ~Niebieska zbroja płytowa Ebony Jednorożców. Klasyczna zbroja płytowa z tą różnicą, że została poddana obróbce, aby uzyskać niebieskawe refleksy. Każdy członek kompanii posiada zbroję tego typu. PARAMETRY: Klasa pancerza: 2 Waga: 50 Wymagana siła: 12 Nie może użyć: Bard Druid Mag Łotrzyk~ // Złota tarcza Ebony Jednorożca
+ @134 = ~Ebony Unicorn Gold Armor Złota zbroja płytowa wykonana z herbem Ebony Unicorn 
+
+PARAMETRY: 
+Klasa pancerza: 3
+Waga: 50 
+Wymagana siła: 12 
+Nie może używać: Bard Druid Mag Łotrzyk~
+
+@135 = ~Plate Armor +1~
+ @136 = ~Ebony Unicorn Plate Armor +1 Ulepszona zbroja płytowa wykonana z herbem Ebony Unicorn. Noszący jest odporny na wszystko, magiczne lub inne, co mogłoby wpłynąć na jego mobilność, w tym zaklęcia przyspieszające i spowalniające. 
+
+PARAMETRY: 
+Specjalne: Noszący odporny na modyfikacje zdolności ruchu
+Klasa pancerza: 1
+Waga: 50
+Wymagana siła: 12 
+Nie może używać: Bard Druid Mag Łotrzyk~
+// Ebony Jednorożec Niebieska zbroja płytowa
+ 
+@137 = ~Niebieska zbroja płytowa~
+ @138= ~Niebieska zbroja płytowa Ebony Jednorożców. Klasyczna zbroja płytowa z tą różnicą, że została poddana obróbce, aby uzyskać niebieskawe refleksy. Każdy członek kompanii posiada zbroję tego typu. 
+
+PARAMETRY: 
+Klasa pancerza: 2 
+Waga: 50 
+Wymagana siła: 12 
+Nie może użyć: Bard Druid Mag Łotrzyk~ 
+
+// Złota tarcza Ebony Jednorożca
  @139 = ~Złota tarcza.~
- @140 = ~Złota tarcza Ebony Jednorożców. Klasyczna tarcza wykonana z herbu Ebony Jednorożca. PARAMETRY: Klasa pancerza: 2 Specjalne: Ochrona przed czarami przeciwko niemagicznym pociskom raz dziennie (czas trwania 30 sekund). Premia do klasy pancerza: 1 Waga: 7 Wymagana siła: 12 Nie może użyć: Bard Druid Mag Łotrzyk~
+ @140 = ~Złota tarcza Ebony Jednorożców. Klasyczna tarcza wykonana z herbu Ebony Jednorożca. 
+
+PARAMETRY: 
+Klasa pancerza: 2 
+Specjalne: Ochrona przed czarami przeciwko niemagicznym pociskom raz dziennie (czas trwania 30 sekund). 
+Premia do klasy pancerza: 1 
+Waga: 7 
+Wymagana siła: 12 
+Nie może użyć: Bard Druid Mag Łotrzyk~
  
  @141 = ~Tarcza +1~
- @142 = ~Złota tarcza Ebony Jednorożca. Ulepszona tarcza wykonana z herbem Ebony Unicorn. Zapewnia użytkownikowi dużą odporność na pociski. PARAMETRY: Klasa Pancerza: 2 Specjalna: Zaklęcie chroni przed niemagicznymi pociskami raz dziennie (czas trwania 30 sekund). Premia do Klasy Pancerza: 2 Waga: 7 Wymagana Siła: 12 Nie może używać: Bard Druid Mag Łotrzyk~ // Ebony Unicorn Blue Shield
- @143 = ~Blue Shield~
- @144 = ~Ebony Unicorn Blue Shield Ta tarcza została wykonana na wzór złotej tarczy Trace'a, ale nie posiada żadnych specjalnych mocy. Każdy członek kompanii posiada tarczę tego typu. PARAMETRY: Premia do klasy pancerza: 1 Waga: 7 Wymagana siła: 12 Nie może używać: Bard Druid Mag Łotrzyk~ // Ebony Jednorożec Złota Rękawica
- @145 = ~Złota Rękawica~
- @146 = ~Ebony Jednorożec Złota Rękawica Klasyczne rękawice wykonane z herbem Ebony Jednorożców. PARAMETRY: Nie może używać: Mag Łotrzyk~ 
+ @142 = ~Złota tarcza Ebony Jednorożca. Ulepszona tarcza wykonana z herbem Ebony Unicorn. Zapewnia użytkownikowi dużą odporność na pociski. 
 
- @147 = ~Złota Rękawica Ebony Jednorożców Rękawice wykonane z herbem Ebony Jednorożców. Podobnie jak kopnięcie jednorożca, zdolność noszącego je do zadania potężnego ciosu jest zwiększona. PARAMETRY: TRAK0 +1 Zdolność: TRAK0 +4 / 1 raz dziennie (czas trwania 30 sekund) Obrażenia +3 Nie może użyć: Mag Łotrzyk~ // Miecz Długiego Życia //@ = //@ =
+PARAMETRY: 
+Klasa Pancerza: 2 
+Specjalna: Zaklęcie chroni przed niemagicznymi pociskami raz dziennie (czas trwania 30 sekund). 
+Premia do Klasy Pancerza: 2 
+Waga: 7 
+Wymagana Siła: 12 
+Nie może używać: Bard Druid Mag Łotrzyk~ 
+
+// Ebony Unicorn Blue Shield
+
+ @143 = ~Blue Shield~
+ @144 = ~Ebony Unicorn Blue Shield Ta tarcza została wykonana na wzór złotej tarczy Trace'a, ale nie posiada żadnych specjalnych mocy. Każdy członek kompanii posiada tarczę tego typu. 
+
+PARAMETRY: 
+Premia do klasy pancerza: 1 
+Waga: 7 
+Wymagana siła: 12
+Nie może używać: Bard Druid Mag Łotrzyk~
+
+// Ebony Jednorożec Złota Rękawica
+
+ @145 = ~Złota Rękawica~
+ @146 = ~Ebony Jednorożec Złota Rękawica Klasyczne rękawice wykonane z herbem Ebony Jednorożców.
+
+PARAMETRY: 
+Nie może używać: Mag Łotrzyk~ 
+
+ @147 = ~Złota Rękawica Ebony Jednorożców Rękawice wykonane z herbem Ebony Jednorożców. Podobnie jak kopnięcie jednorożca, zdolność noszącego je do zadania potężnego ciosu jest zwiększona. 
+
+PARAMETRY:
+TRAK0 +1 
+Zdolność: TRAK0 +4 / 1 raz dziennie (czas trwania 30 sekund) 
+Obrażenia +3
+Nie może użyć: Mag Łotrzyk~ 
+
+// Miecz Długiego Życia //
+
+@ = //@ =
  @148 = ~Długi Miecz +2~
- @149 = ~Miecz Długiego Życia Ulepszony długi miecz, który daje swemu właścicielowi możliwość absorbowania punktów życia od wroga z każdym uderzeniem. PARAMETRY: TRAK0 +2 Obrażenia +2 ? Zdolność: Z każdym uderzeniem jego właściciel zyskuje 1 punkt życia. Nie może użyć: Mag Złodziej~ // Besantine +1
+ @149 = ~Miecz Długiego Życia Ulepszony długi miecz, który daje swemu właścicielowi możliwość absorbowania punktów życia od wroga z każdym uderzeniem. 
+
+PARAMETRY:
+TRAK0 +2
+Obrażenia +2 ? 
+Zdolność: Z każdym uderzeniem jego właściciel zyskuje 1 punkt życia. 
+Nie może użyć: Mag Złodziej~ 
+
+// Besantine +1
  @150 = ~Niebieska Skórzana Zbroja~
- @151= ~Zbroja skórzana Ebony Jednorożca Klasyczna skórzana zbroja z niebieskawymi refleksami. Każdy łucznik w kompanii posiada jeden. PARAMETRY: Klasa pancerza: 8 Waga: 15 Wymagana siła: 6 Nie może używać: Mag~
+ @151= ~Zbroja skórzana Ebony Jednorożca Klasyczna skórzana zbroja z niebieskawymi refleksami. Każdy łucznik w kompanii posiada jeden. 
+
+PARAMETRY:
+Klasa pancerza: 8 
+Waga: 15
+Wymagana siła: 6 
+Nie może używać: Mag~
+
  @152 = ~Zbroja skórzana +1~
- @153 = ~Zbroja skórzana Ebony Jednorożca +1. Ulepszona skórzana zbroja, która tworzy lustrzane odbicie noszącego. PARAMETRY: Klasa pancerza: 7 Umiejętność: Odbicie lustrzane raz dziennie (czas trwania 60 sekund). Waga: 15 Wymagana siła: 6 Nie może używać: Mag~ // Besantine 
+ @153 = ~Zbroja skórzana Ebony Jednorożca +1. Ulepszona skórzana zbroja, która tworzy lustrzane odbicie noszącego. 
+
+PARAMETRY: 
+Klasa pancerza: 7 
+Umiejętność: Odbicie lustrzane raz dziennie (czas trwania 60 sekund). 
+Waga: 15 
+Wymagana siła: 6
+Nie może używać: Mag~
+
+// Besantine 
  @154 = ~Zbroja skórzana Blue~
- @155 = ~Zbroja skórzana Ebony Jednorożca Klasyczna skórzana zbroja z niebieskawymi refleksami. Każdy łucznik w kompanii posiada jeden. PARAMETRY: Klasa pancerza: 8 Waga: 15 Wymagana siła: 6 Nie może używać: Mag~ // Włócznia Jednorożca //@ = ~Ebonitowa Włócznia Jednorożca.~ //@ =
+ @155 = ~Zbroja skórzana Ebony Jednorożca Klasyczna skórzana zbroja z niebieskawymi refleksami. Każdy łucznik w kompanii posiada jeden.
+
+PARAMETRY: 
+Klasa pancerza: 8
+Waga: 15 
+Wymagana siła: 6
+Nie może używać: Mag~ 
+
+// Włócznia Jednorożca //
+
  @156 = ~Włócznia +3~
- @157 = ~Ebonitowa Włócznia Jednorożca +3. Ulepszona włócznia, która po trafieniu wysyła wroga do innego labiryntowego świata. PARAMETRY: Umiejętność: Przy trafieniu istnieje 15% szans, że wróg padnie ofiarą zaklęcia Labirynt. TAc0: +3 Obrażenia: 1K6+3 Typ obrażeń: Przebijające Waga: 5 Współczynnik szybkości: 4 Typ umiejętności: Włócznia Typ: Broń dwuręczna Wymagana siła: 5 Nie może używać: Kapłan Mag Złodziej~ // Łuk //@ = //@ = @
+ @157 = ~Ebonitowa Włócznia Jednorożca +3. Ulepszona włócznia, która po trafieniu wysyła wroga do innego labiryntowego świata.
+
+PARAMETRY: 
+Umiejętność: Przy trafieniu istnieje 15% szans, że wróg padnie ofiarą zaklęcia Labirynt. 
+TAck0: +3 
+Obrażenia: 1K6+3 
+Typ obrażeń: Przebijające 
+Waga: 5 
+Współczynnik szybkości: 4 
+Typ umiejętności: Włócznia
+Typ: Broń dwuręczna
+Wymagana siła: 5 
+Nie może używać: Kapłan Mag Złodziej~
+// Łuk //@ = //@ = @
  158 = ~Długi łuk +1~
  @159 = ~Długi łuk +1 celność Ulepszony długi łuk, który pozwala na oddawanie celnych strzałów. PARAMETRY: Umiejętność: Celny strzał raz dziennie (czas trwania 30 sekund) TraK0 +4 TraK0: +2 Obrażenia: +1 Waga: 3 Współczynnik szybkości: 5 Typ umiejętności: Długi łuk Typ: Broń dwuręczna Wymagana siła: 6 Nie może używać: Druid Kapłan Mag Łotrzyk~ // KONIEC Ebony Unicorn Company ******************************************************************************************************************************************** // Wiadomość od Książąt ************************************************************************************************************************************
  @125 =~Wiadomość od Książąt~
