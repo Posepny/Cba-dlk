@@ -1,6 +1,6 @@
 The champion of Bhaal
-A mod developed on The Copper Crown for Baldur's Gate II: Baldur's Gate Trilogy
-The Copper Crown
+A mod developed on The Copper Coronet for Baldur's Gate II: Baldur's Gate Trilogy
+The Copper Coronet
 
 
 Author: Cocrane
