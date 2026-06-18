@@ -7,7 +7,7 @@ THEN
   //Createcreature("MINSC",[3700.600],10)  
 END
 
-// 1ière recontre dans le Hall
+//   1iÃ¨re recontre dans le Hall
 IF
  Global("MASSENA_DLG","GLOBAL",0)
 THEN
@@ -16,7 +16,7 @@ THEN
  StartDialogNoSet([PC]) 
 END
 
-// Massena est brulé
+// Massena est brulÃ©
 IF
  Global("ekilis_deactivate","Global",1)
 THEN
@@ -61,7 +61,7 @@ THEN
  SetInterrupt(FALSE)
 END  
 
-// Massena découvre que le Charname est l'enfant de Bhaal
+// Massena dÃ©couvre que le Charname est l'enfant de Bhaal
 IF
  Global("Puit_combat","GLOBAL",4)
 THEN
@@ -70,7 +70,7 @@ THEN
 END
 
 /*
-// Charname accepte les épreuves: désinvocation des créatures ***********************************************************************************************************
+// Charname accepte les Ã©preuves: dÃ©sinvocation des crÃ©atures ***********************************************************************************************************
 IF
  !Global("Bhaal_epreuves","GLOBAL",0)
  Global("Com017_desinv","COM017",0)
@@ -84,7 +84,7 @@ END
 */
 
 
-// Le groupe revient victorieux des épreuves: Massena l'attend ************************************************************************************************************
+// Le groupe revient victorieux des Ã©preuves: Massena l'attend ************************************************************************************************************
 IF
  Global("Bhaal_epreuves","GLOBAL",3)
 THEN
@@ -95,23 +95,23 @@ THEN
  ActionOverride("COMASSE2",StartDialogueNoSet(PLAYER1))
 END
 
-// Le charname accepte d'être le Champion: démarrage de la prière.
+// Le charname accepte d'Ãªtre le Champion: dÃ©marrage de la priÃ¨re.
 IF
   Global("Bhaal_allie","GLOBAL",1)
   Global("Masque_M_priere","GLOBAL",0) 
 THEN
  RESPONSE #100
 
- // Massena se déplace
+ // Massena se dÃ©place
  MoveToPoint([3707.636])
  Wait(2)
  
- // Début prière
+ // DÃ©but priÃ¨re
  Createcreature("COBHAAL",[3720.720],10)
  SetGlobal("Masque_M_priere","GLOBAL",1) 
 END
 
-// Quête épreuve de Bhaal réalisée: allié à Bhaal
+// QuÃªte Ã©preuve de Bhaal rÃ©alisÃ©e: alliÃ© Ã  Bhaal
 IF
   Global("Bhaal_allie","GLOBAL",1)
   Global("Q_bhaal_epreuve","COM017",0) 
@@ -119,14 +119,14 @@ THEN
  RESPONSE #100
  SetGlobal("Q_bhaal_epreuve","COM017",1)
  
-  // mise à jour journal
+  // mise Ã  jour journal
   EraseJournalEntry(@200)
   EraseJournalEntry(@201)
   AddJournalEntry(@202,QUEST_DONE)
   AddexperienceParty(2000) 
 END
 
-// Quête épreuve de Bhaal réalisée: pas allié à Bhaal
+// QuÃªte Ã©preuve de Bhaal rÃ©alisÃ©e: pas alliÃ© Ã  Bhaal
 IF
   Global("Bhaal_allie","GLOBAL",2)
   Global("Q_bhaal_epreuve","COM017",0) 
@@ -134,21 +134,21 @@ THEN
  RESPONSE #100
  SetGlobal("Q_bhaal_epreuve","COM017",1)
  
-  // mise à jour journal
+  // mise Ã  jour journal
   EraseJournalEntry(@200)
   EraseJournalEntry(@201)
   AddJournalEntry(@203,QUEST_DONE)
   AddexperienceParty(2000) 
 END
 
-// Quête épreuve de Bhaal réalisée: attaque pendant la prière (trahison)
+// QuÃªte Ã©preuve de Bhaal rÃ©alisÃ©e: attaque pendant la priÃ¨re (trahison)
 IF
   Global("priere_trahison","GLOBAL",1) 
 THEN
  RESPONSE #100
  SetGlobal("priere_trahison","GLOBAL",2) 
  
-  // mise à jour journal
+  // mise Ã  jour journal
   EraseJournalEntry(@200)
   EraseJournalEntry(@201)
   EraseJournalEntry(@202)
