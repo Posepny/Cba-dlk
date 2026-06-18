@@ -7,7 +7,7 @@ THEN
   //Createcreature("MINSC",[3700.600],10)  
 END
 
-//   1ière recontre dans le Hall
+//  1ière recontre dans le Hall
 IF
  Global("MASSENA_DLG","GLOBAL",0)
 THEN
