@@ -84,7 +84,7 @@ END
 */
 
 
-// Le groupe revient victorieux des épreuves: Massena l'attend ************************************************************************************************************
+// The group revient victorieux des épreuves: Massena l'attend ************************************************************************************************************
 IF
  Global("Bhaal_epreuves","GLOBAL",3)
 THEN
