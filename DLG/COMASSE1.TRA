@@ -1,38 +1,38 @@
-@1=~La porte étant scellée, celà fait bien longtemps que je n'avais pas vu âme qui vive...~
-@2=~Qui êtes-vous?~
+@1=~La porte Ã©tant scellÃ©e, celÃ  fait bien longtemps que je n'avais pas vu Ã¢me qui vive...~
+@2=~Who are you?~
 @3=~Il y a bien un moyen de sortir d'ici!~
 @4=~A quoi sert ce temple?~
-@5=~Je suis <CHARNAME> et mon père est Bhaal. Ce qui fait de toi mon serviteur!~
-@6=~Excellente question. Hummm comment y répondre.~
-@7=~J'étais Massena, serviteur de Bhaal avant sa chûte et aujourd'hui, je suis une âme errante qui n'a pas encore sombré dans la folie.~
-@8=~La portes étant scellée, il y a bien longtemps que nous n'avons pas eu de visiteurs.~
-@9=~Je n'ai pas l'intention de mourir ici fantôme!~
-@10=~Scellée? Je suis entré il me semble.~
-@11=~Comme toutes les âmes errantes qui ont été enfermées et qui rôdent en ces lieux. Libre à vous d'attendre ici vôtre mort ou d'aller au devant d'elle.~
-@12=~Que vous soyez entré(e)s est une énigme pour moi. Mais je sens que la porte est à nouveau fermée et la mort rôde. Elle vous attend.~
-@13=~Oh il existe toujours une solution à un problème mais pas toujours celle qu'on espère.~
+@5=~Je suis <CHARNAME> et mon pÃ¨re est Bhaal. Ce qui fait de toi mon serviteur!~
+@6=~Excellente question. Hummm comment y rÃ©pondre.~
+@7=~J'Ã©tais Massena, serviteur de Bhaal avant sa chÃ»te et aujourd'hui, je suis une Ã¢me errante qui n'a pas encore sombrÃ© dans la folie.~
+@8=~La portes Ã©tant scellÃ©e, il y a bien longtemps que nous n'avons pas eu de visiteurs.~
+@9=~Je n'ai pas l'intention de mourir ici fantÃ´me!~
+@10=~ScellÃ©e? Je suis entrÃ© il me semble.~
+@11=~Comme toutes les Ã¢mes errantes qui ont Ã©tÃ© enfermÃ©es et qui rÃ´dent en ces lieux. Libre Ã  vous d'attendre ici vÃ´tre mort ou d'aller au devant d'elle.~
+@12=~Que vous soyez entrÃ©(e)s est une Ã©nigme pour moi. Mais je sens que la porte est Ã  nouveau fermÃ©e et la mort rÃ´de. Elle vous attend.~
+@13=~Oh il existe toujours une solution Ã  un problÃ¨me mais pas toujours celle qu'on espÃ¨re.~
 @14=~Prenez mes os et trouvez "un moyen" de passer la grande herse. Ensuite, vous arriverez devant une grille circulaire au sol.~
-@15=~Si vous parvenez jusque là, je vous aiderai peut-être. Pour tout vous dire, je n'ai pas encore décidé en fait. Mais on dirait bien que je suis votre seul espoir de survie. Je vous souhaite une belle promenade dans le temple de mon défunt maître.~
-@16=~J'ai autre chose à faire que de me balader avec vos restes!~
-@17=~Faites comme bon vous semble, j'ai tout mon temps. Vous par contre le vôtre est compté.~
+@15=~Si vous parvenez jusque lÃ , je vous aiderai peut-Ãªtre. Pour tout vous dire, je n'ai pas encore dÃ©cidÃ© en fait. Mais on dirait bien que je suis votre seul espoir de survie. Je vous souhaite une belle promenade dans le temple de mon dÃ©funt maÃ®tre.~
+@16=~J'ai autre chose Ã  faire que de me balader avec vos restes!~
+@17=~Faites comme bon vous semble, j'ai tout mon temps. Vous par contre le vÃ´tre est comptÃ©.~
 @18=~Allons y!~
-@19=~Vous êtes un étranger et par conséquent vous n'avez pas à le savoir.~
-@20=~Un enfant de Bhaal! Rien de moins! Mon maître en train de forniquer avec des mortels, en voilà une idée amusante.~
-@21=~Bien essayé mais il va falloir trouver autre chose.~
-@22=~N'ayez pas d'inquiétudes, ce temple vous accompagnera dans vôtre dernier voyage.~
-@23=~Aider le fantôme Massena
+@19=~Vous Ãªtes un Ã©tranger et par consÃ©quent vous n'avez pas Ã  le savoir.~
+@20=~Un enfant de Bhaal! Rien de moins! Mon maÃ®tre en train de forniquer avec des mortels, en voilÃ  une idÃ©e amusante.~
+@21=~Bien essayÃ© mais il va falloir trouver autre chose.~
+@22=~N'ayez pas d'inquiÃ©tudes, ce temple vous accompagnera dans vÃ´tre dernier voyage.~
+@23=~Aider le fantÃ´me Massena
 
-Un fantôme est apparu. Massena était au service de Bhaal et il prétend que je suis enfermé dans son temple. En résumé, il m'annonce que je vais mourir ici sans son aide.
+Un fantÃ´me est apparu. Massena Ã©tait au service de Bhaal et il prÃ©tend que je suis enfermÃ© dans son temple. En rÃ©sumÃ©, il m'annonce que je vais mourir ici sans son aide.
 
-Si j'apporte ses restes près d'une grille circulaire, il m'aidera peut-être à sortir d'ici. Cette grille se trouverait derrière une grande herse. Massena a sous-entendu que je devrai trouver un moyen pour la franchir.~
+Si j'apporte ses restes prÃ¨s d'une grille circulaire, il m'aidera peut-Ãªtre Ã  sortir d'ici. Cette grille se trouverait derriÃ¨re une grande herse. Massena a sous-entendu que je devrai trouver un moyen pour la franchir.~
 @24=~Histoire du temple de Bhaal
 
-J'en sais un peu plus sur les lieux. Le passage secret qui s'est ouvert devant moi, donne accès à un temple. Un temple de Bhaal, mon père! 
+J'en sais un peu plus sur les lieux. Le passage secret qui s'est ouvert devant moi, donne accÃ¨s Ã  un temple. Un temple de Bhaal, mon pÃ¨re! 
 
 Est-ce vraiment un hasard? Le mieux serait d'en savoir davantage sur cet endroit.
 
-Une chose est sure, il y a eu un combat entre les fidèles de Cyric et de Bhaal. Depuis, les esprits des morts rôdent dans le temple.~  
+Une chose est sure, il y a eu un combat entre les fidÃ¨les de Cyric et de Bhaal. Depuis, les esprits des morts rÃ´dent dans le temple.~  
 @25=~Sortir d'ici
 
-Massena le fantôme propose de m'aider à sortir du temple. Pour cela, je dois d'abord l'aider.~
+Massena le fantÃ´me propose de m'aider Ã  sortir du temple. Pour cela, je dois d'abord l'aider.~
 
