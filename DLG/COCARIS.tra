@@ -1,32 +1,19 @@
-@1=~Bienvenu parmis les morts, sang de Bhaal.~ 
-@2=~Qui êtes vous?~ 
-@3=~Caris, j'étais l'embaumeur personnel du maître.~ 
-@4=~En ces lieux, je m'assure de trouver une place pour chacun de nos invités. 
 
-Néanmoins, il existe quatre coffres dans ce niveau réservés aux morts. Trouvez les quatres clés et les coffres s'ouvriront sur un objet particulier. 
-
-Bien placés dans les quatre niches, ces objets ouvriront un accès vers une autre mort. 
-
-A mon avis, bien moins plaisante qu'ici. Je vous assure qu'aucuns de nos clients s'est plaint jusqu'à présent! (grand sourire)~
-@5=~Bienvenu parmis les morts, serviteur du sang de Bhaal.~ 
-@6=~Qui êtes vous?~ 
-@7=~Caris, j'étais l'embaumeur personnel du maître.~ 
-
-@9=~Je vois avec regrets que les cercueils de feu ne vous ont pas plus. Il y en a qui préfèrent rester à même le sol. Personnelement, je pense qu'il est important d'être à son aise pour son trépas éternel.~ 
-@10=~Les cercueils d'Urglite n'ont pas retenu vôtre attention. Un peu trop glacé peut-être?~ 
-@11=~N'ayez pas d'inquiétudes, vous trouverez le vôtre. Nous avons encore pleins de cercueils à vous proposer.~ 
-@12=~Vous avez un drôle d'humour...~ 
-
-@15=~Je suis des plus sérieux. Un meurtre se traite avec le plus grand soin.~ 
-@16=~Soyez un peu patient, nous allons vous trouver un beau meurtre, avec du sang et de la douleur.~ 
-
-@18=~Hey bien, je constate avec grand plaisir qui nous avons à faire à des hôtes de qualité. Vôtre meurtre ne vous à pas encore trouvé.~ 
-
-@24=~Votre départ m'atriste, nous n'avons pas trouvé la mort qui vous convient... Rares sont ceux que nous n'avons pas pu satisfaire. Armez vous de sagesse, vous en aurez besoin pour vôtre prochaine épreuve.~ 
-@25=~Ce fût un réel plaisir de vous voir jouer avec le meurtre. (l'effigie ferme les yeux le sourire aux lèvres)~ 
-@26=~(Ne rien répondre)~
-@27=~Info de Caris
-
-Caris, l'embaumeur de Bhaal, m'informe que pour passer à l'épreuve suivante, je dois placer quatre objets dans des niches.
-
-Le hic est que je dois trouver les quatres coffres et clés pour trouver les objets. Ensuite je dois les placer correctement les niches...~
+@1=~Welcome among the dead, Blood of Bhaal.~
+@2=~Who are you?~ 
+@3=~Caris, I was the master's personal embalmer.~
+@4=~In this place, I make sure to find a place for each of our guests. However, there are four chests on this level reserved for the dead. Find the four keys, and the chests will open to reveal a special item. Placed correctly in the four niches, these items will open a gateway to another death. In my opinion, much less pleasant than this one. I assure you, none of our clients have complained so far! (big smile)~
+@5=~Welcome among the dead, servant of the Blood of Bhaal.~
+@6=~Who are you?~ 
+@7=~Caris, I was the master's personal embalmer.~
+@9=~I see with regret that the fire coffins did not please you. Some prefer to remain on the bare ground. Personally, I think it's important to be comfortable in one's eternal demise.~ 
+@10=~Urglite's coffins didn't catch your eye. A little too icy perhaps?~
+@11=~Don't worry, you'll find yours. We still have plenty of coffins to offer you.~
+@12=~You have a strange sense of humor...~
+@15=~I'm quite serious. Murder is handled with the utmost care.~
+@16=~Be a little patient, we'll find you a fine murder, with blood and pain.~ 
+@18=~Well, I note with great pleasure that we are dealing with fine guests. Your murder hasn't found you yet.~
+@24=~Your departure saddens me; we haven't found the death that suits you... There are few we haven't been able to satisfy. Arm yourself with wisdom; you will need it for your next trial.~ 
+@25=~It was a real pleasure to see you toying with murder. (The effigy closes its eyes, a smile on its lips)~
+@26=~(No response)~ 
+@27=~Caris's Info: Caris, Bhaal's embalmer, informs me that to proceed to the next trial, I must place four objects in niches. The catch is that I must find the four chests and keys to locate the objects. Then I must place them correctly in the niches...~
