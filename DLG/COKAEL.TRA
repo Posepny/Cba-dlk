@@ -1,191 +1,186 @@
-/*
-accueil
 
-proposition de fabrication d'un artefact
+/* Welcome, offer to craft an artifact, search for an item, craft an item, fight to open the gate and retrieve the tear of blood. DEFEATED, hand over your tear of blood to the death masks. */ 
+@1=~(The man stares at you) It is always an honor for me to receive Bhaal's blood in my home.~ 
+@2=~Did you know that I am the one who designed this place and the tears of blood?~
+@3=~This is a long story.~
+@4=~You talk too much! Let's get this over with!~ 
+@5=~What are the tears of blood used for?~ 
+@6=~Who is this Cespernar?~ 
+@7=~What is your name?~ 
+@8=~What are you doing here?~ 
+@9=~(annoyed) Well then, I will explain what brings you here.~
+@10=~Well, you will soon make use of them if you are capable of reason. To believe you could win without facing the ultimate test would be pure folly.~
+@11=~He's a miserable runt with wings. He manipulated me to take my place with the master.~ 
+@12=~My name was taken from me when I fell from grace because of Cespenar. Since then, my mission is clear: to rot here for eternity...~ 
+@13=~I obey the master's wishes. Bhaal is testing his child. You, in this case.~ 
+@34=~Only Bhaal's blood is worthy of my interest.~ 
+// Additional Information
+@30=~You were Kael, Bhaal's master artifact; I read it in a book.~ 
+@31=~(smiles) My past is no longer mine. Let's talk about your future.~ 
+@32=~(No response)~
+@52=~Magnificent! All the pieces are in your possession. I can create the artifact right now!~
+@53=~Raaahhhh, there you are! My bloody horror! One of my finest creations! (He looks at the blood cup and hands you the item). You now possess a powerful combat artifact, and only you can use it, Blood of Bhaal!~
+@200=~The final battle approaches, Blood of Bhaal.~
+@201=~From the items you must have found, I am able to craft a powerful combat artifact.~ 
+@202=~I need the shield guarded by the bone golem, the heart of the demon, the flail of Taguar, the blood cup of Islendra, and finally, the spectator's helmet.~ 
+@203=~May I see your equipment?~
+@204=~Please do.~ 
+@205=~Let's see if you have these items. (Kael starts searching through your equipment)~ @206=~The shield guarded by the bone golem is missing.~
+@207=~The demon's heart is missing.~ 
+@208=~Taguar's flail is missing.~
+@209=~Islendra's blood cup is missing.~ 
+@210=~The spectator's helmet is missing.~ 
+@211=~The shield guarded by the bone golem and the demon's heart are missing.~ 
+@212=~The shield guarded by the bone golem and Taguar's flail are missing.~
+@213=~The shield guarded by the bone golem and Islendra's blood cup are missing.~ 
+@214=~The shield guarded by the bone golem and the spectator's helmet are missing.~
+@215=~The demon's heart and Taguar's flail are missing.~ 
+@216=~The demon's heart and Islendra's blood cup are missing.~
+@217=~The demon's heart and the spectator's helmet are missing.~ 
+@218=~Taguar's flail and Islendra's blood cup are missing.~
+@219=~Taguar's flail and the spectator's helmet are missing.~ 
+@220=~Islendra's blood cup and the spectator's helmet are missing.~
+@221=~The shield guarded by the bone golem, the demon's heart, and Taguar's flail are missing.~ 
+@222=~The shield guarded by the bone golem, the demon's heart, and Islendra's blood cup are missing.~ 
+@223=~The shield guarded by the bone golem, the demon's heart, and the spectator's helmet are missing.~ 
+@224=~The shield guarded by the bone golem, Taguar's flail, and Islendra's blood cup are missing.~
+@225=~Missing: the shield guarded by the bone golem, Taguar's flail, and the spectator's helmet.~ 
+@226=~Missing: the shield guarded by the bone golem, Islendra's blood cup, and the spectator's helmet.~ 
+@227=~Missing: the demon's heart, Taguar's flail, and Islendra's blood cup.~
+@228=~Missing: the demon's heart, Taguar's flail, and the spectator's helmet.~
+@229=~Missing: the demon's heart, Islendra's blood cup, and the spectator's helmet.~
+@230=~Missing: the Taguar's flail, Islendra's blood cup, and the spectator's helmet.~
+@231=~Missing: the shield guarded by the bone golem, the demon's heart, Taguar's flail, and the blood cup of Islendra.~ 
+@232=~Missing: the shield guarded by the bone golem, the demon's heart, Taguar's flail, and the spectator's helmet.~
+@233=~Missing: the shield guarded by the bone golem, the demon's heart, Islendra's blood cup, and the spectator's helmet.~ 
+@234=~Missing: the shield guarded by the bone golem, Taguar's flail, Islendra's blood cup, and the spectator's helmet.~
+@235=~Missing: the demon's heart, Taguar's flail, Islendra's blood cup, and the spectator's helmet.~ 
+@236=~Missing: the shield guarded by the bone golem, the demon's heart, Taguar's flail, Islendra's blood cup, and the spectator's helmet.~ 
+@237=~Return when you have all the pieces of the artifact.~
+@238=~I don't need your artifact, old man.~
+@239=~(annoyed) You're wrong to think you're all-powerful.~ 
+@240=~Now you can leave or fight me to obtain my Blood Tear. The choice is yours, Blood of Bhaal.~ 
+// umpteenth discussion with Blood of Bhaal 
+@244=~What do you desire, Blood of Bhaal?~ 
+@245=~I want the artifact.~
+@246=~Let's see if you've found all the items.~ 
+@247=~I want the Blood Tear of this level.~
+@248=~There is only one way to fulfill this request. You must defeat me to obtain it. Something I doubt, seeing you...~ 
+@249=~How do I lower the portcullis blocking the passage?~
+@250=~The portcullis will lower if I am defeated. Something I doubt, seeing you...~ 
+// End of the final battle: Kael leaves too. 
+@251=~Bhaal's blood, it's my turn to disappear.Your reward is near.~
+@252=~Don't forget our deal.~ 
+// End of Battle with Kael 
+@260=~Finally, you might have a chance...~ 
+@261=~I have a deal to offer you, Blood of Bhaal. Don't use my tear during the final battle, and I will help you. In exchange, you will give my tear to the temple master upon your return. Tell them it belongs to Kael, the former master of artifacts.~ 
+@262=~Do you accept this deal, Blood of Bhaal?~ 
+@263=~Deal.~ @264=~Disappear! I don't need you.~ 
+@265=~Find the other six tears, and you will win!~ 
+@266=~I should have known what you'd say. You lack intelligence...~ 
+@267=~Kael's Deal Kael offered to help me during the final battle if I don't use his tear. In exchange, I must give his tear to the temple master upon my return. I accepted his deal.~ 
+@268=~Kael's Deal Kael offered to help me during the final battle if I don't use his tear. In exchange, I must give his tear to the temple master upon my return. I don't need this clown to win!~ 
+// Artifact Creation Quest 
+@300=~The Combat Artifact! The stranger, who appears to be a magician, offers to create a powerful combat artifact for me. He will be able to create the artifact if I bring him the shield guarded by the bone golem, the demon's heart, Taguar's flail, Islendra's blood cup, and the spectator's helmet.~ 
+@301=~The Combat Artifact! I brought all the items requested by the magician and I was able to obtain the artifact! I can now summon a powerful war horror that will answer my commands.~ 
+@302=~The Combat Artifact! Kael, Bhaal's former artifact master, offers to create a powerful combat artifact for me. He will be able to create the artifact if I bring him the shield guarded by the bone golem, the demon's heart, Taguar's flail, Islendra's blood cup, and the spectator's helmet.~ 
+@303=~The Combat Artifact! I brought all the items requested by Kael, Bhaal's former artifact master, and I obtained the combat artifact! I can now summon a powerful war horror that will answer my commands.~ 
+// Kael goes to the shadow zone 
+@500=~Spirits of the night, hear my call!~
+//Kael defeated @510=~Let the blood of Bhaal approach!~
+@600=~Spell sequencer~ /* 
+@14=~Be worthy of your origins and you will be rewarded. I'll let you guess the other option.~
+@15=~Your father expects a gift from you. Which companion do you wish to offer the Lord of Murder?~ 
+@16=~Sacrifice one of my allies? That's a good one.~
+@17=~I'll offer him, hmmm, your head! If you're rotting here, it's because Bhaal got tired of seeing her!~ 
+@18=~Humor has never been my strong suit. My fountain of blood awaits its due. Designate your choice.~ 
+@19=~My answer is still no.~ 
+@20=~Let's sacrifice, <PLAYER2>, I've had enough of him.~
+@21=~Let's sacrifice, <PLAYER3>, I've had enough of him.~ 
+@22=~Let's sacrifice, <PLAYER4>, I've had enough of him.~
+@23=~Let's sacrifice, <PLAYER5>, I've had enough of him.~
+@24=~Let's sacrifice, <PLAYER6>, I've had enough of him.~
+@25=~You are opposing your father's wish. A very interesting reaction. Now let's see if you have the power!~ 
+@26=~That doesn't make me laugh at all! Your own blood will feed my fountain!~ 
+// Kael sacrifices a member of the group ******************************************************************************************************************************************* 
+@27=~My master! The hour of sacrifice has struck, and murder calls for blood! Accept this offering and show the way to your worthy representative!~ 
+// The Charname refuses the sacrifice, and Kael is defeated ************************************************************************************************************************************** 
+@28=~You have defeated me. From the moment you arrived, I knew you were the blood of Bhaal I had been waiting for.~ 
+@29=~Take my tear of blood, but refrain from using it. I will be by your side during the final battle.~ 
+@30=~(He offers you his ring). Tell your Cleric (he whispers and you can barely hear) "This is Kael's ring; he would be honored to serve it."~ 
+@31=~Arm yourself with wisdom for your next trial. You are nearing your goal.~ 
+@32=~You have just obeyed this dying god lurking in the shadows, and I regret to inform you that you are not the one I expected...~
+// The Charname is alone, and Kael needs a sacrifice **************************************************************************************************************************************
+@33=~Your father expects an offering from you. Since you are alone, I see only one way out. You are the ones who will feed my fountain of blood!~
+// During the fight *******************************************************************************************************************************************
+@100=~Here I had the opportunity to learn the power of the flesh. You will experience its cruel consequences!~ 
+@101=~You cannot defeat me, I am Immortal!~ 
+// The Charname accepts the sacrifice and Kael is defeated ***************************************************************************************************************************************************************** 
+@120=~This pathetic child of~
+@25=~You oppose your father's wish. A very interesting reaction. Now let's see if you have the power!~ 
+@26=~That doesn't make me laugh at all! Your own blood will feed my fountain!~ 
+// Kael sacrifices a member of the group *********************************************************************************************************************************************** 
+@27=~My master! The hour of sacrifice has struck, and murder calls for blood! Accept this offering and show the way to your worthy representative!~ 
+// The Charname refuses the sacrifice, and Kael is defeated ***************************************************************************************************************************************** 
+@28=~You have defeated me. From the moment you arrived, I knew you were the blood of Bhaal I had been waiting for.~
+@29=~Take my tear of blood, but refrain from using it. I will be by your side during the final battle.~ 
+@30=~(He hands you his ring). Tell your Cleric (he whispers, and you can barely hear) "This is Kael's ring; he would be honored to serve."~ 
+@31=~Arm yourself with wisdom for your next trial. You are close to your goal.~
+@32=~You have just obeyed this dying god lurking in the shadows, and I regret to inform you that you are not the one I expected...~ 
+// The Charname is alone, and Kael needs a sacrifice ************************************************************************************************************************************** 
+@33=~Your father awaits an offering from you. Since you are alone, I see only one possible solution. You will feed my fountain of blood!~ 
+// During the fight *********************************************************************************************************************************************** 
+@100=~Here I had the opportunity to learn the power of the flesh. You're about to learn that the hard way!~
+@101=~You cannot defeat me, I am Immortal!~ // The Charname accepts the sacrifice and Kael is defeated ************************************************************************************************************************************************************** 
+@120=~This pathetic child of~
+@25=~You oppose your father's wish. A very interesting reaction. Now let's see if you have the power!~ 
+@26=~That doesn't make me laugh at all! Your own blood will feed my fountain!~ 
+// Kael sacrifices a member of the group *********************************************************************************************************************************************** 
+@27=~My master! The hour of sacrifice has struck, and murder calls for blood! Accept this offering and show the way to your worthy representative!~ 
+// The Charname refuses the sacrifice, and Kael is defeated ***************************************************************************************************************************************** 
+@28=~You have defeated me. From the moment you arrived, I knew you were the blood of Bhaal I had been waiting for.~
+@29=~Take my tear of blood, but refrain from using it. I will be by your side during the final battle.~
+@30=~(He hands you his ring). Tell your Cleric (he whispers, and you can barely hear) "This is Kael's ring; he would be honored to serve."~
+@31=~Arm yourself with wisdom for your next trial. You are close to your goal.~ 
+@32=~You have just obeyed this dying god lurking in the shadows, and I regret to inform you that you are not the one I expected...~
+// The Charname is alone, and Kael needs a sacrifice **************************************************************************************************************************************
+@33=~Your father awaits an offering from you. Since you are alone, I see only one possible solution. You will feed my fountain of blood!~ 
+// During the fight ***********************************************************************************************************************************************
+@100=~Here I had the opportunity to learn the power of the flesh. You're about to learn that the hard way!~
+@101=~You cannot defeat me, I am Immortal!~ 
+// The Charname accepts the sacrifice and Kael is defeated ************************************************************************************************************************************************************** 
+@120=~This pathetic child of~ 
+// The Charname refuses the sacrifice and Kael is defeated **********************************************************************************************************************************
+@28=~You have defeated me. From the moment you arrived, I knew you were the blood of Bhaal I had been waiting for.~ 
+@29=~Take my tear of blood, but refrain from using it. I will be by your side during the final battle.~
+@30=~(He hands you his ring). Tell your Cleric (he begins to whisper, and you can barely hear) "This is Kael's ring; he would be honored to serve."~
+@31=~Arm yourself with wisdom for your next trial. You are close to your goal.~
+@32=~You have just obeyed this dying god lurking in the shadows, and I regret to inform you that you are not the one I expected...~ 
+// The Charname is alone, and Kael needs a sacrifice ************************************************************************************************************************************** 
+@33=~Your father awaits an offering from you. Since you are alone, I see only one possible solution. You will feed my fountain of blood!~ 
+// During the fight *********************************************************************************************************************************************** 
+@100=~Here I had the opportunity to learn the power of the flesh. You're about to learn that the hard way!~
+@101=~You cannot defeat me, I am Immortal!~
+// The Charname accepts the sacrifice and Kael is defeated ************************************************************************************************************************************************************** 
+@120=~This pathetic child of~ // The Charname refuses the sacrifice and Kael is defeated **********************************************************************************************************************************
 
-recherche objet
-
-fabrication objet
-
-combat pour ouvrir la grille et récupérer la larme de sang
-
-VAINCU remettre sa larme de sang aux masques de mort.
-*/
-
-@1=~(L'homme vous fixe) C'est toujours un honneur pour moi de recevoir un sang de Bhaal dans ma demeure.~ 
-@2=~Saviez-vous que je suis celui qui a conçu ces lieux et les larmes de sang.~ 
-@3=~Tout ceci est une longue histoire.~ 
-@4=~Tu parles trop! Qu'on en finisse!~ 
-@5=~A quoi servent les larmes de sang?~ 
-@6=~Qui est ce Cespernar?~ 
-@7=~Quel est votre nom?~ 
-@8=~Que faites vous ici?~ 
-@9=~(vexé) Bien dans ce cas, je vais vous exposer ce qui vous amène ici.~ 
-@10=~Ma foi, vous en ferez bientôt usage si vous êtes doués de raison. Croire que vous pourriez vaincre sans pendant l'ultime épreuve serait pure folie.~ 
-@11=~C'est un misérable avorton avec des ailes. Il m'a manipulé pour prendre ma place auprès du maître.~ 
-@12=~Mon nom m'a été retiré lorsque je suis tombé en disgrâce à cause de Cespenar. Depuis ma mission est claire. Moisir ici pour l'éternité...~ 
-@13=~J'obéis aux désirs du maître. Bhaal met son enfant à l'épreuve. Vous en l'occurence.~ 
-@34=~Seul le sang de Bhaal est digne de mon intérêt.~
-
-// Complément 
-@30=~Vous êtiez Kael le maître artefact de Bhaal, je l'ai lu dans un livre.~
-@31=~(sourire) Mon passé ne m'appartient plus. Parlons de vôtre avenir.~
-@32=~(Ne rien répondre)~
-
-
-@52=~Magnifique! Toutes les pièces sont en votre possession. Je vais pouvoir créer l'artefact dès maintenant!~
-@53=~Raaahhhh, te voilà!  mon horreur sanglante! Une de mes plus belles créations! (il regarde la coupe de sang et vous tend l'objet). Vous disposez désormais d'un puissant artefact de combat et vous seul pourrait l'utiliser sang de Bhaal!~
-
-
-@200=~L'ultime combat approche, sang de Bhaal.~
-@201=~A partir des objets que vous avez dû trouvé, je suis en mesure de fabriquer un puissant artéfact de combat.~
-@202=~J'ai besoin du pavois gardé par le golem d'os, du coeur du démon, du fléau de Taguar, de la coupe de sang d'Islendra et enfin du casque du spectateur.~
-@203=~Puis je voir votre équipement?~
-@204=~Faites.~
-@205=~Voyons si vous avez ces objets. (Kael se met à fouiller dans votre équipement)~
-@206=~Il manque le pavois gardé par le golem d'os.~
-@207=~Il manque le coeur du démon.~
-@208=~Il manque le fléau de Taguar.~
-@209=~Il manque la coupe de sang d'Islendra.~
-@210=~Il manque le casque du spectateur.~
-@211=~IL manque le pavois gardé par le golem d'os et le coeur du démon.~
-@212=~IL manque le pavois gardé par le golem d'os et le fléau de Taguar.~
-@213=~IL manque le pavois gardé par le golem d'os et la coupe de sang d'Islendra.~
-@214=~IL manque le pavois gardé par le golem d'os et le casque du spectateur.~
-@215=~IL manque le coeur du démon et le fléau de Taguar.~ 
-@216=~IL manque le coeur du démon et la coupe de sang d'Islendra.~
-@217=~IL manque le coeur du démon et le casque du spectateur.~
-@218=~IL manque le fléau de Taguar et la coupe de sang d'Islendra.~
-@219=~IL manque le fléau de Taguar et le casque du spectateur.~
-@220=~IL manque la coupe de sang d'Islendra et le casque du spectateur.~
-@221=~IL manque le pavois gardé par le golem d'os, le coeur du démon et le fléau de Taguar.~
-@222=~IL manque le pavois gardé par le golem d'os, le coeur du démon et la coupe de sang d'Islendra.~
-@223=~IL manque le pavois gardé par le golem d'os, le coeur du démon et le casque du spectateur.~
-@224=~IL manque le pavois gardé par le golem d'os, le fléau de Taguar et la coupe de sang d'Islendra.~
-@225=~IL manque le pavois gardé par le golem d'os, le fléau de Taguar et le casque du spectateur.~
-@226=~IL manque le pavois gardé par le golem d'os, la coupe de sang d'Islendra et le casque du spectateur.~
-@227=~IL manque le coeur du démon, le fléau de Taguar, la coupe de sang d'Islendra.~
-@228=~IL manque le coeur du démon, le fléau de Taguar, le casque du spectateur.~
-@229=~IL manque le coeur du démon, la coupe de sang d'Islendra et le casque du spectateur.~
-@230=~Il manque le fléau de Taguar, la coupe de sang d'Islendra et le casque du spectateur.~
-@231=~IL manque le pavois gardé par le golem d'os, le coeur du démon, le fléau de Taguar et la coupe de sang d'Islendra.~
-@232=~IL manque le pavois gardé par le golem d'os, le coeur du démon, le fléau de Taguar et le casque du spectateur.~
-@233=~IL manque le pavois gardé par le golem d'os, le coeur du démon, la coupe de sang d'Islendra et le casque du spectateur.~
-@234=~IL manque le pavois gardé par le golem d'os, le fléau de Taguar, la coupe de sang d'Islendra et le casque du spectateur.~
-@235=~IL manque le coeur du démon, le fléau de Taguar, la coupe de sang d'Islendra et le casque du spectateur.~
-@236=~IL manque le pavois gardé par le golem d'os, le coeur du démon, le fléau de Taguar, la coupe de sang d'Islendra et le casque du spectateur.~
-@237=~Revenez lorsque vous aurez toutes les pièces de l'artefact.~
-@238=~Je n'ai pas besoin ton artefact vieillard.~
-@239=~(vexé) Vous avez tord de vous croire tout puissant.~
-@240=~Désormais, vous pouvez quittez les lieux ou me combattre pour obtenir ma larme de sang. Ce choix vous appartient sang de Bhaal.~
-
-
-// nième discussion avec le sang de Bhaal
-@244=~Que désirez vous sang de Bhaal?~
-@245=~Je veux l'artéfact.~
-@246=~Voyons si vous les avez trouvé tous les objets.~
-@247=~Je veux la larme de sang de ce niveau.~
-@248=~Il y a une seule issue à cette demande. Vous devez me vaincre pour l'obtenir. Chose dont je doute en vous voyant...~
-@249=~Comment abaisser la herse qui bloque le passage?~
-@250=~La herse s'abaissera si je suis vaincu. Chose dont je doute en vous voyant...~
-
-// Fin de l'ultime combat: Kael s'en va aussi.
-@251=~Sang de Bhaal, c'est à mon tour de disparaître. Vôtre récompense est prôche.~
-@252=~N'oubliez pas nôtre marché.~
-
-
-// Fin Combat avec Kael
-@260=~Finalement, vous avez peut être une chance...~ 
-@261=~J'ai un marché à vous proposer Sang de Bhaal. 
-
-N'utilisez pas ma larme pendant le combat ultime et je vous aiderai. 
-
-En échange, vous confierez ma larme au maître du temple à votre retour. Dites leurs qu'elle appartient à Kael, l'ancien maître des artéfacts.~
-@262=~Acceptez-vous ce marché Sang de Bhaal?~
-@263=~Marché conclu.~
-@264=~Disparais! Je n'ai pas besoin de toi.~
-@265=~Trouvez les six autres larmes et vous vaincrez!~
-@266=~J'aurai dû me douter de votre réponse. L'intelligence vous fait défaut...~
-
-@267=~Le marché de Kael
-Kael a proposé de m'aider durant l'ultime combat si je n'utilise pas sa larme.
-
-En échange, je dois donner sa larme au maître du temple à mon retour.
-
-J'ai accepté son marché.~
-
-@268=~Le marché de Kael
-Kael a proposé de m'aider durant l'ultime combat si je n'utilise pas sa larme.
-
-En échange, je dois donner sa larme au maître du temple à mon retour.
-
-Je n'ai pas besoin de ce guignol pour vaincre!~
-
-// Quête de la création de l'artefact
-@300=~L'Artefact de combat!
-L'inconnu qui semble être un magicien, me propose de créer un puissant artéfact de combat. 
-Il sera en mesure de créer l'artefact si je lui apporte le pavois gardé par le golem d'os, le coeur du démon, le fléau de Taguar, la coupe de sang d'Islendra et le casque du spectateur.~
-@301=~L'Artefact de combat!
-J'ai apporté tous les objets demandés par le magicien et j'ai pu obtenu l'artefact!
-Je peux désormais invoquer une puissante horreur guerrière qui répondra à mes ordres.~
-@302=~L'Artefact de combat!
-Kael, l'ancien maître artefact de Bhaal, me propose de créer un puissant artéfact de combat. 
-Il sera en mesure de créer l'artefact si je lui apporte le pavois gardé par le golem d'os, le coeur du démon, le fléau de Taguar, la coupe de sang d'Islendra et le casque du spectateur.~
-@303=~L'Artefact de combat!
-J'ai apporté tous les objets demandés par Kael, l'ancien maître artefact de Bhaal et j'ai pu obtenu l'artefact de combat!
-Je peux désormais invoquer une puissante horreur guerrière qui répondra à mes ordres.~
-
-
-// Kael se rend à la zone d'ombre
-@500=~Esprits de la nuit, entendez mon appel!~
-
-
-// Kael vaincu
-@510=~Que le sang de Bhaal apprôche!~
-
-@600=~séquenceur de sorts~
-
-
-
-
-
-
-
-/*
-@14=~Soyez digne de vos origines et vous serez récompensés. Je vous laisse deviner l'autre option.~ 
-@15=~Votre père attend un présent de votre part. Quel compagnon désirez-vous offrir au seigneur du meurtre?~ 
-@16=~Sacrifier un de mes alliés? La bonne blague.~ 
-@17=~Je vais lui offrir, hummm, vôtre tête! Si vous croupissez ici, c'est que Bhaal en avait marre de la voir!~ 
-@18=~L'humour n'a jamais été mon fort. Ma fontaine sang attend son dû. Désignez moi votre choix.~ 
-@19=~Ma réponse est toujours non.~ 
-@20=~Sacrifions, <PLAYER2>, j'en ai assez de lui.~ 
-@21=~Sacrifions, <PLAYER3>, j'en ai assez de lui.~ 
-@22=~Sacrifions, <PLAYER4>, j'en ai assez de lui.~ 
-@23=~Sacrifions, <PLAYER5>, j'en ai assez de lui.~ 
-@24=~Sacrifions, <PLAYER6>, j'en ai assez de lui.~ 
-@25=~Vous vous opposez au désir de vôtre père. Réaction très intéressante. Maintenant voyons-voir si vous en avez le pouvoir!~ 
-@26=~Ca ne me fait pas rire du tout! Vôtre propre sang alimentera ma fontaine!~ 
-
-// Kael sacrifie un membre du groupe *****************************************************************************************************************************************
-@27=~Mon maître! L'heure du sacrifice a sonné et le meurtre appelle le sang! Acceptes cette offrande et montres la voie à ton digne représentant!~ 
-// Le Charname refuse le sacrifice et Kael est vaincu ***********************************************************************************************************************************
-@28=~Vous m'avez vaincu. Dès votre arrivé, je savais que vous étiez le sang de Bhaal que j'attendai.~
-@29=~Prenez ma larme de sang mais gardez vous de l'utiliser. Je serai à vos côtés durant le combat ultime.~ 
-@30=~(il vous tend son anneau). Dites à votre Clerc (il se met à chuchotter et vous entendez à peine) "Ceci est l'anneau de Kael, il serait honoré de servir."~ 
-@31=~Armez-vous de sagesse pour vôtre prochaine épreuve. Vous êtes prêt du but.~ 
-@32=~Vous venez d'obéir à ce dieu moribond tapis dans l'ombre et je suis au regret de vous annoncer que vous n'êtez point celui que j'attendais...~ 
-// Le Charname est seul et Kael a besoin d'un sacrifice ***********************************************************************************************************************************
-@33=~votre père attend une offrande de votre part. Etant donné que vous êtes seul, je ne vois qu'une seule issue possible. C'est vous qui allez nourrir ma fontaine de sang!~ 
-
-// Pendant le combat *****************************************************************************************************************************************
-@100=~Ici j'ai eu le loisir d'apprendre le pouvoir de la chair. Vous allez en faire la cruelle expérience!~
-@101=~Vous ne pouvez me vaincre, je suis Immortel!~
-
-// Le Charname accepte le sacrifice et Kael est vaincu ***********************************************************************************************************************************************************
-@120=~Ce pathétique enfant de Bhaal m'a vaincu, comment est ce possible?~
-*/
-
-
-
-
-
+@28=~You have defeated me. From the moment you arrived, I knew you were the blood of Bhaal I had been waiting for.~
+@29=~Take my tear of blood, but refrain from using it. I will be by your side during the final battle.~
+@30=~(He hands you his ring). Tell your Cleric (he begins to whisper, and you can barely hear) "This is Kael's ring; he would be honored to serve."~ 
+@31=~Arm yourself with wisdom for your next trial. You are close to your goal.~ @32=~You have just obeyed this dying god lurking in the shadows, and I regret to inform you that you are not the one I expected...~
+// The Charname is alone, and Kael needs a sacrifice ************************************************************************************************************************************** 
+@33=~Your father awaits an offering from you. Since you are alone, I see only one possible solution. You will feed my fountain of blood!~ // During the fight ***********************************************************************************************************************************************
+@100=~Here I had the opportunity to learn the power of the flesh. You're about to learn that the hard way!~ 
+@101=~You cannot defeat me, I am Immortal!~ 
+// The Charname accepts the sacrifice and Kael is defeated ************************************************************************************************************************************************************** 
+@120=~This pathetic child of~ 
+// During the fight **********************************************************************************************************************************************
+@100=~Here I had the opportunity to learn the power of the flesh. You will experience its cruel consequences!~
+@101=~You cannot defeat me, I am Immortal!~
+// The Charname accepts the sacrifice and Kael is defeated **************************************************************************************************************************************************************
+@120=~This pathetic child of~ 
+// During the fight ********************************************************************************************************************************************** 
+@100=~Here I had the opportunity to learn the power of the flesh. You will experience its cruel consequences!~
+@101=~You cannot defeat me, I am Immortal!~
+// The Charname accepts the sacrifice and Kael is defeated ************************************************************************************************************************************************************** 
+@120=~This pathetic child of Bhaal. wheah.~
