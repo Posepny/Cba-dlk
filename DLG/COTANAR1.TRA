@@ -1,0 +1,33 @@
+@1=~Apportez moi l'épée du Cambion et je vous donnerai un présent digne d'un héros.~
+@2=~Ca ne m'intéresse pas.~
+@3=~Ca ne m'intéresse pas. Je vais prendre ton coeur.~
+@4=~Ton présent à intérêt d'être à la hauteur de mes attentes.~
+@5=~Est-ce ceci que tu désires (vous lui montrez l'épée du Cambion)?~
+@6=~Hors de ma vue!~
+@7=~Démon, le Cambion a besoin de ton coeur et je suis venu te l'arracher!~
+@8=~~
+@9=~Une magnifique épée... J'espère qu'il a souffert. Hors de ma vue maintenant.~
+@10=~Et mon présent?~
+@11=~Ne rien dire.~
+@12=~Je vous laisse vôtre misérable existance. Hors de ma vue avant que je change d'avis!~
+@13=~Vous n'avez pas l'épée. Vous me faites perdre mon temps!~
+@14=~J'ai parlé au Cambion. Je suis venu chercher ton coeur.~
+@15=~Ce serpent vous a rallié à sa cause!~
+@16=~Ne rien répondre.~
+
+// quête
+@100=~L'épée du Cambion
+
+Malgré son ton sec, le démon me propose un marché. Si je lui remets l'épée d'un Cambion, il me donnera un présent digne d'un héros.~
+
+@101=~L'épée du Cambion
+
+Le démon m'a proposé un marché. Si je lui remets l'épée du Cambion, en échange il me donnera un présent digne d'un héros!
+
+J'ai remis l'épée au démon. En retour, il ne m'a rien donné. Le sélérat!~
+
+@102=~L'épée du Cambion
+
+Le démon m'a proposé un marché. Si je lui remets l'épée du Cambion, en échange il me donnera un présent digne d'un héros!
+
+J'ai remis l'épée au démon. En retour, il m'annonce m'offrir ma vie en échange. Le sélérat!~

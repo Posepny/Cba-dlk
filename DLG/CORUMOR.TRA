@@ -1,0 +1,95 @@
+@1=~Entar est Mort et Eltan a disparu. Liia et Belt veulent régner seul.~
+@2=~Les ducs cacheraient la mort du duc Eltan au peuple afin de ne pas le remplacer.~
+@3=~La maison des voleurs où Koveras a été tué, est interdite d'accès. Ca cache quelque chose de louche.~
+@4=~Koveras n'est pas mort. Il est torturé dans la maison des voleurs pour retrouver ses acolytes. C'est bien fait pour lui!~
+@5=~Macros le noir a viré la moitié de la garde ducale à son arrivé. Espérons qu'il a gardé les bons!~
+
+
+
+
+/*
+Bratak, Chef de la compagnie des haches noires, adore les duels. Il a déjà tué 5 balduriens...
+
+XXX, Chef de la compagnie des aigles d'argent, serait un ami du duc Eltan.
+
+Brilla la veuve d'Entar écu d'argent n'a pas perdu de temps. Elle va se marier avec , XXX , le chef des Licornes d'ébène.
+
+Cassandra, la chef de la compagnie des GarÃ´ts rouges, est d'un appétit insasiable. La nuit elle ne dort jamais seule...
+
+La compagnie de Golem d'ambre propose d'acheter des articles magiques. MÃªme des golems!
+
+La compagnie des Béliers d'obsidienne mangerait des gens et ferait des armes avec les os...
+
+
+Sir Adrius a recruté la compagnie Pourpre pour ratisser les campagnes et éliminer les derniers brigands.
+
+La compagnie Pourpre ce n'est qu'une bande de tueurs sans foi ni loi dirigé par un nain des plus dangereux, Grok GrondeMarteau. Grock aurait perdu l'usage de son Å“il en tuant une dizaine de géants qui l'aurait attaqué.
+
+Il y a plus un seul membre du TrÃ´ne de fer dans la cité. C'est bien fait pour eux!
+
+Koveras s'appelait en fait Sarevok. C'était un enfant du dieu mort Bhaal, seigneur du meurtre. Il voulait qu'une guerre meurtrière éclate entre Amn et la porte de Baldurâ€¦
+
+Les compagnies de mercenaires sement le trouble dans la cité et les ducs ne font rien...
+
+
+"
+discussion sur le sujet
+On voit Macros venir régulièrement dans la demeure loué par la compagnie des Golems d'Ambre. Qu'est qu'il peut bien faire là bas?
+Macros paye cette compagnie pour en apprendre plus sur l'art permettant de manipuler l'Ambre.
+Les ducs ont engagé la grande compagnie Pourpre. Elle rattisse actuellement les campagnes pour débusquer les derniers brigands qui s'y cachent et ainsi assurer la sécurité des routes commerciales.
+"Oyez oyez, peuple de la porte de Baldur!
+Les ducs ont engagé la grande compagnie Pourpre. Elle rattisse actuellement les campagnes pour débusquer les derniers brigands qui s'y cachent. BientÃ´t les routes seront sÃ»res!"
+a compagnie compte une 100aine de membres peu recommandables. Le nain qui les diriges s'appele Block GrondeMarteau. Il aurait perdu son Å“il en éliminant à lui seul une dizaine de de géants.
+La compagnie Pourpre est partie à la chasse aux brigands. Si on pouvait faire pareil avec les autres compagnies, on pourrait peut Ãªtre enfin avoir la paix!
+"Ces gredins du TrÃ´ne du fer ont essayé de prendre le pouvoir à Baldur. Vous avez bien fait de les tuer. Qu'ils reviennent et on les massacre.
+
+
+
+J'avais placé toutes mes économies dans le TrÃ´ne fer, je suis ruiné..."
+"Oyez oyez, peuple de la porte de Baldur! 
+La paix est revenue entre Amn et la porte de Baldur. Balem l'émissaire d'Amn nous fait l'honneur d'une visite.
+Une réception est prévue à son attention dans le batiment du TrÃ´ne de fer!!"
+"Oyez oyez, peuple de la porte de Baldur! 
+Notre héros est devenu le Protecteur de Baldur, celui qui sert et protège le peuple!"
+Les ducs ont récompensé <CHARNAME>, le peuple est ravi et attend que le Protecteur rétablisse l'ordre et le calme dans la cité.
+"Féliciations! Les ducs ont bien fait. GrÃ¢ce à vous ce satané Koveras est mort! 
+
+Si j'avais su, j'aurai tué ce Koveras moi-mÃªme et je serai le héros de Baldur à l'heure qu'il estâ€¦ J'ai jamais de bol moi...
+
+Avant que tu arrives dans la cité, on vivait en paix...Maintenant c'est le bordel"
+"Oyez oyez, peuple de la porte de Baldur! 
+Notre protecteur <CHARNAME> cherche des compagnons pour protéger et servir le peuple! Si vous sentez l'Ã¢me d'un héros, dépéchez-vous d'aller à l'auberge du Heaume et de la cape."
+un citadin se propose ^^
+"La paix est revenue entre Amn et la porte de Baldur. Balem l'ambassadeur d'Amn nous fait l'honneur d'une visite.
+Une réception serait prévue en son honneur dans le batiment du trÃ´ne de fer. Les hautes personnalités de la cité sont invités."
+
+"Oyez oyez, peuple de la porte de Baldur! 
+Les ducs ont confié la mission au Protecteur de rétablir l'ordre et le calme dans la cité. Souhaitons bonne chance au Protecteur, il en aura besoin!"
+"Une partie du peuple pense que le Protecteur n'aura pas le courage de mettre dehors les compagnies de mercenaires. D'autres ont confiance et se demande comment le Protecteur va s'y prendre.
+"
+
+"Oyez oyez, peuple de la porte de Baldur! 
+Un sorcier a attaqué et tué une escouade du Poing enflammé. Le félon a intérÃªt à se rendre. Les ducs envoient le Protecteur à sa recherche!
+"
+
+
+"Oyez oyez, peuple de la porte de Baldur! 
+Le domaine d'Anxval est attaqué par des barbares. Les ducs envoient le Protecteur. Les barbares ne vont pas faire long feu!"
+
+
+
+
+
+"Ce Koveras en fait c'est un enfant de Bhaal, le seigneur du meurtreâ€¦ Si le dieu se réveille, vous Ãªtes malâ€¦ Vous avez tué son filsâ€¦
+
+Ce Koveras, il voulait tuer les ducs et entrer en guerre contre Amn. C'était un grand malade ce type, vous avez bien fait de le zigouiller..."
+DLG DUC
+Votre anneau n'est pas unique, les ducs en possèdent 9 exemplaires qu'ils ont distribué. Chaque anneau possède des  pouvoirs différents (Feu, Air, Terre, Eau, Esprit, Magie, Vie, Poison et Electricité). Ils sont en possession des ducs depuis peu. Nous ignorons comment il les ont obtenus.
+DLG DUC
+L'anneau a une fonction de gardien. 
+
+
+Les ducs et le poing enflammé ont peur des compagnies de mercenaires. Au lieu de les mettre dehors à coup de pied dans le cul, ils les laissent semer le trouble dans la cité. Les vols et agressions se multiplient. Le peuple commence à en avoir assezâ€¦
+
+
+*/

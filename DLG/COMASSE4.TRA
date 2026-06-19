@@ -1,0 +1,58 @@
+@1=~L'enfant de Bhaal est de retour! Loué le seigneur du meurtre, mes frères!~
+@2=~Mais qui sont tous ces gens?~
+@3=~Vous m'avez vraiment attendu! Et maintenant, il n'est plus seul...~
+@4=~Vous êtes du genre collant. Je vais me débarrassez de vous tous avant de partir. C'est plus sur!~
+@5=~J'ai réveillé mes frères pendant votre absence.~
+@6=~(Massena se tourne vers les autres) Regardez Masque de mort, le champion de Bhaal a été révélé. Notre grande prétresse Systéra avait raison!~
+@7=~(il vous regarde à nouveau en levant les bras) Un grand destin vous attend!~
+@8=~J'y compte bien. Au fait, c'était vraiment le bordel les épreuves. J'espère que c'est fini...~
+@9=~Je me montrerai digne de cet honneur. Que dois-je faire?~
+@10=~Trouvez-vous un autre champion. J'en ai assez de ce temple. Je pars!~
+@11=~Le grand maître devait s'assurer que vous étiez l'élu.~
+@12=~Le grand maître a fait de vous son champion. Un grand destin vous attend!~
+@13=~Je serai le pantin de personne. Votre groupe d'illuminés peut se trouver un autre champion. Je pars!~
+@14=~Un grand destin, humm j'espère que ça en vaut la peine. Qu'attendez-vous de moi?~
+@15=~Vous osez refuser l'honneur qui vous est fait!~
+@16=~Oh non, vous n'irez nulle part...~
+@17=~Vôtre place est au fond du puit. Vous répondrez de votre traitrise au grand maïtre!~
+@18=~Nous, les masques de mort, devons remettre le temple en état. Champion de Bhaal, vous pouvez remonter à la surface. Nous vous contacterons très bientôt.~
+@19=~Masques de morts, commençons par prier.~
+
+// Réalisation quête
+@200=~L'épreuve de Bhaal
+
+Massena est persuadé que ma présence n'est pas le fruit du hasard. selon lui, mon père veut que je réussisse son épreuve pour me récompenser.
+
+J'ai accepté de relever son défis qui m'attend derrière cette grille.~
+
+
+@201=~L'épreuve de Bhaal
+
+Massena est persuadé que ma présence n'est pas le fruit du hasard. selon lui, mon père veut que je réussisse son épreuve pour me récompenser.
+
+J'ai refusé de relever son défis qui m'attend derrière cette grille. Massena l'a très mal pris. Le combat est inévitable!~
+
+
+@202=~L'épreuve de Bhaal
+
+J'ai affronté de nombreux dangers et j'en suis sorti vainqueur. Le meurtre lui même m'a marqué du symbol de Bhaal dans la paume!
+
+A mon retour, Massena et ses masques de mort m'attendaient. Je suis désormais le champion de Bhaal! Un grand destin m'attend.
+
+Massena me contactera dès que le temple sera remis en état.~
+
+
+@203=~L'épreuve de Bhaal
+
+J'ai affronté de nombreux dangers et j'en suis sorti vainqueur. Le meurtre lui même m'a marqué du symbol de Bhaal dans la paume!
+
+A mon retour, Massena et ses masques de mort m'attendaient. Ras le bol leur histoire de champion.
+
+Je me suis débarrassé d'eux.~
+
+
+@204=~L'épreuve de Bhaal
+
+Visiblement le meurtre, lui même, m'a mis à l'épreuve et j'ai survécu!
+
+Il m'a marqué du symbol de Bhaal dans la paume! J'ignore où tout cela va me conduire...~

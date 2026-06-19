@@ -1,0 +1,43 @@
+[COSYSTE]Ils sont donc parvenus jusqu'ici. (son regard vide est posé sur vous)
+
+[COSYSTE]=Vôtre route s'arrête là fidèles du dieu fou. Moi, Systéra la grande prêtresse de Bhaal, je vais mettre un terme à vôtre quête.
+
+	[PC]Il y a méprise, je suis juste coincé dans votre temple. Massena m'a dit que je devais trouver le crâne de Kept pour en sortir.
+
+		[COSYSTE]Massena aurait dû tenir sa langue. Quand à la vôtre, vous n'en aurai bientôt plus besoin.
+
+
+	[PC]Hey doucement, je ne suis pas un fidèle de Cyric mais un enfant de Bhaal. C'est sans doute sa décision si je suis là.
+
+		[COSYSTE]Cyric croit me tromper avec ses douces paroles. Mais je sais reconnaître un fidèle de mon maître lorsque j'en vois un! 
+
+	[PC]Donnez moi le crâne de Kept.
+
+		[COSYSTE]Vous croyez être capable de me le prendre mais Vous n'êtes pas de taille.
+
+[COSYSTE]Ces lieux ont été préparés spécialement à vôtre intention. Il est temps de terminer ce que j'ai commencé.
+
+[COSYSTE]=Personne ne troublera le repos de mon maître! 
+
+
+
+
+
+[Ekilis]Je t'ai enfin retrouvé Systéra! Le temps ne t'as pas beaucoup arrangé la facade mais il faut que déjà de base, tu n'étais pas gatée par la nature...
+
+	[SYSTERA]Ekilis, tu aurais dû accepter cette mort lente que je t'ai généreusement offerte.
+
+		[Ekilis]Offerte? Tu oses me parler sur ce ton!
+
+		[Ekilis]=Je vais te démembrer morceau par morceau et tu vas m'implorer de t'achever! SYSTERA!
+
+			[PC]Hey on se calme, je veux juste sortir d'ici!
+
+				[Ekilis]La ferme! On va la démembrer!
+
+			[PC]Ca c'est de la haine ou je ne m'y connais pas!
+
+
+[COSYSTE]là Fidèles du dieu fou, vôtre route s'arrête ici. Ces lieux ont été préparés spécialement à vôtre intention et il est temps de terminer ce que j'ai commencé.
+
+[COSYSTE]=Personne ne troublera le repos de mon maître! 

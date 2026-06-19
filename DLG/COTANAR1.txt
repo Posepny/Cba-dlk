@@ -1,0 +1,41 @@
+// Proposition Cambion épée
+Apportes moi l'épée du Cambion et je te donnerai un présent digne d'un sang de Bhaal.
+
+	Ca ne m'intéresse pas. 
+
+		Hors de ma vue!
+
+	// Quête coeur démon Active
+	Ca ne m'intéresse pas. Je vais prendre ton coeur.
+
+	Ton présent a intérêt d'être à la hauteur de mes attentes.
+		// Quête épée Cambion Activée
+
+	Est-ce ceci que tu désires (vous lui montrez l'épée du Cambion)?
+	
+
+// Quête épée Cambion Inactive - Quête coeur démon Active
+Démon, le Cambion a besoin de ton coeur et je suis venu te l'arracher!
+
+	Ce serpent a rallié le sang de Bhaal à sa cause mais j'ai mieux à t'offrir.
+
+
+// Quête épée Cambion résolue 
+Une magnifique épée... J'espère qu'il a souffert. Hors de ma vue maintenant.
+
+	Et mon présent?
+
+		Je te laisse en vie. J'ai à faire, Hors de ma vue! 
+        
+  	Ne rien dire.
+  
+  
+// Quête épée Cambion active
+Tu n'as pas l'épée. Tu me fais perdre mon temps!
+
+	// Quête coeur démon Active
+	J'ai parlé au Cambion. Je suis venu chercher ton coeur.
+
+		Ce serpent a rallié le sang de Bhaal à sa cause!
+  		// Combat
+

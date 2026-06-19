@@ -1,0 +1,32 @@
+[COHARP1]Ahh me voilà réveillée! (la Harpie regarde autour d'elle et pose son regard sur vous)
+
+[COHARP1]=Que m'as tu apporté à manger étranger? J'ai dû mal à tenir une conversation le ventre vide.
+
+	[PC]Euhh rien, vous mangez quoi au juste?
+
+
+	[PC]Je recherche une Rûne. Massena m'a dit que je la trouverai dans un coffre à ce niveau.
+
+		[COHARP1]Ce gredin dit vrai. C'est très aimable de sa part de vous envoyer jusqu'à moi.
+
+		[COHARP1]=Que me donnes-tu en échange de cette Rune?
+
+			[PC]Je ne sais pas. Que voulez-vous?
+
+
+	[PC]Je me moque de tes envies, il y a quoi la dedans?
+
+		[COHARP1]Ah ah ha, un deux pattes agressif! Nous allons calmer tes ardeurs!
+
+
+[COHARP1]De la viande évidemment et je la veux fraîche. Dépêches toi, j'ai faim!
+ 
+	[Pc]Ca va être difficle à trouver dans un tel endroit... Autre chose?
+
+		[COHARP1]Ta race a toujours manqué de sens pratique, deux pates. Cherches bien, il y en a tout près de moi. (elle vous fixe du regard)
+
+			[PC]Je vois... Désolé mais Je ne suis pas au menu.
+
+				[COHARP1]Je vois les choses autrement. J'ai dû mal à tenir une conversation le ventre vide et celle-ci a suffisamment duré! 
+
+				[COHARP1]=De la viande fraîche mes amies! A table!

@@ -1,0 +1,8 @@
+[Walter] Bonjour Protecteur, merci à vous de m'accorder un peu de votre temps. 
+[Walter]=Je viens d'hériter de l'auberge. Dans la cave, vous trouverez une échelle avec une trappe que j'ai ouvert avec la clé de mon défunt père. En dessous, il y a des cellules et une galerie derrière un mur effondré et j'avoue ne pas avoir osé aller au de là.
+[Walter]=J'ignore tout des activités de mon père et je ne souhaite pas d'ennuis.
+	[PC] Vous faites bien l'ordre et la justice doit régner à Baldur. Je vais tirer cette affaire au clair.
+		[Walter] Merci à vous de me rendre ce service Protecteur, je sais que vous êtes très occupé. Voici la clé de la trappe.
+	[Pc] Effectivement tout celà m'a l'air louche ou pour le moins mystérieux. Je vais jeter un oeil à cette galerie.
+		[Walter] Merci à vous de me rendre ce service Protecteur, je sais que vous êtes très occupé. Voici la clé de la trappe.
+
