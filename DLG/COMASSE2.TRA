@@ -1,77 +1,77 @@
 // Rencontre entre le groupe et Massena devant la grille circulaire
-@1=~Excellent, Vous êtes parvenu jusqu'ici! ~
-@2=~Approchez-vous du mur et ouvrez le passage secret. A l'intérieur, il y a un sarcophage.~
-@3=~Votre nouveau compagnon est un serviteur de Cyric! Tuez-le où vous moisirez tous ici!~
-@4=~Bien, un fidèle de Cyric n'a rien à faire dans ce temple!~
+@1=~Excellent, Vous Ãªtes parvenu jusqu'ici! ~
+@2=~Approchez-vous du mur et ouvrez le passage secret. A l'intÃ©rieur, il y a un sarcophage.~
+@3=~Votre nouveau compagnon est un serviteur de Cyric! Tuez-le oÃ¹ vous moisirez tous ici!~
+@4=~Bien, un fidÃ¨le de Cyric n'a rien Ã  faire dans ce temple!~
 @5=~~
-@6=~Vous placerez mes restes à l'intérieur.~
+@6=~Vous placerez mes restes Ã  l'intÃ©rieur.~
 @7=~Et si je ne veux pas.~
 @8=~Je veux savoir comment sortir d'ici avant.~
-@9=~(ne rien répondre)~
-@10=~Libre à vous de refuser et de rester coincé dans ce temple jusqu'à votre mort. ~
+@9=~(ne rien rÃ©pondre)~
+@10=~Libre Ã  vous de refuser et de rester coincÃ© dans ce temple jusqu'Ã  votre mort. ~
 @11=~Vous le saurez une fois que mes restes seront dans le sarcophage.~
 
-// Les restes de Massena sont placés dans le sarcophage: Massena apparait
-@12=~Je vois que vous avez tenu parôle étranger. C'est donc à moi de tenir la mienne.~
-@13=~Pour ouvrir les portes du temple, il faut placer le crâne de Kept au centre de la salle des prières située au niveau inférieur.~
-@14=~Pour descendre, vous avez besoin de la rune qui débloque le passage secret. Avec cette clé, vous ouvrirez le coffre qui contient la rune. Je vous laisse le soin de trouver le coffre situé à ce niveau.~
-@15=~Excellent et il est où est ce crâne?~
-@16=~Systéra, la gardienne du temple, en était responsable. Son cadavre traine quelque part dans le temple. Trouvez-le et vous trouverez le crâne.~
-@17=~(ne rien répondre)~
-@18=~Qu'est ce qui s'est passé dans ce temple, il y a des morts partout.~
-@19=~Systéra nous a ordonné de garder la foi et de préparer le retour de Bhaal. Certains d'entre nous ne l'ont pas écouté et ils ont préfèré Cyric...~
-@20=~Ils ont révélé la position du temple et les fidèles de Cyric nous ont attaqué. Mais Systèra les attendait! Elle les a laissé entrer puis elle a scellé les portes derrière eux.~
-@21=~Le temple de Bhaal est devenu leur tombeau! Quand à moi, j'ai succombé pendant la bataille. (sourire sadique)~
+// Les restes de Massena sont placÃ©s dans le sarcophage: Massena apparait
+@12=~Je vois que vous avez tenu parÃ´le Ã©tranger. C'est donc Ã  moi de tenir la mienne.~
+@13=~Pour ouvrir les portes du temple, il faut placer le crÃ¢ne de Kept au centre de la salle des priÃ¨res situÃ©e au niveau infÃ©rieur.~
+@14=~Pour descendre, vous avez besoin de la rune qui dÃ©bloque le passage secret. Avec cette clÃ©, vous ouvrirez le coffre qui contient la rune. Je vous laisse le soin de trouver le coffre situÃ© Ã  ce niveau.~
+@15=~Excellent et il est oÃ¹ est ce crÃ¢ne?~
+@16=~SystÃ©ra, la gardienne du temple, en Ã©tait responsable. Son cadavre traine quelque part dans le temple. Trouvez-le et vous trouverez le crÃ¢ne.~
+@17=~(ne rien rÃ©pondre)~
+@18=~Qu'est ce qui s'est passÃ© dans ce temple, il y a des morts partout.~
+@19=~SystÃ©ra nous a ordonnÃ© de garder la foi et de prÃ©parer le retour de Bhaal. Certains d'entre nous ne l'ont pas Ã©coutÃ© et ils ont prÃ©fÃ¨rÃ© Cyric...~
+@20=~Ils ont rÃ©vÃ©lÃ© la position du temple et les fidÃ¨les de Cyric nous ont attaquÃ©. Mais SystÃ¨ra les attendait! Elle les a laissÃ© entrer puis elle a scellÃ© les portes derriÃ¨re eux.~
+@21=~Le temple de Bhaal est devenu leur tombeau! Quand Ã  moi, j'ai succombÃ© pendant la bataille. (sourire sadique)~
 @22=~A quoi servait ce temple?~
 @23=~(ne rien dire)~
-@24=~Ne soyez pas trop curieux... Trouvez le crâne et quittez ce temple au plus vite.~
-@25= ~Vous avez fait un mauvais choix. Les fidèles de Cyric n'ont pas leur place ici!~ 
+@24=~Ne soyez pas trop curieux... Trouvez le crÃ¢ne et quittez ce temple au plus vite.~
+@25= ~Vous avez fait un mauvais choix. Les fidÃ¨les de Cyric n'ont pas leur place ici!~ 
 @26=~Bhaal, LE SEIGNEUR DU MEURTRE, vous salue, TOUS!~
-@27=~Adieu étranger(s).~
+@27=~Adieu Ã©tranger(s).~
 
 
-// Quête
-@63=~Aider le fantôme Massena
+// Quest
+@63=~Aider le fantÃ´me Massena
 
-Un fantôme est apparu. Massena était au service de Bhaal et il prétend que je suis enfermé dans son temple. En résumé, il m'annonce que je vais mourir ici sans son aide.
+Un fantÃ´me est apparu. Massena Ã©tait au service de Bhaal et il prÃ©tend que je suis enfermÃ© dans son temple. En rÃ©sumÃ©, il m'annonce que je vais mourir ici sans son aide.
 
-Si j'apporte ses restes près d'une grille circulaire, il m'aidera peut-être à sortir d'ici. Cette grille se trouverait derrière une grande herse. Massena a sous-entendu que je devrai trouver un moyen pour la franchir.~
-@64=~Aider le fantôme Massena
+Si j'apporte ses restes prÃ¨s d'une grille circulaire, il m'aidera peut-Ãªtre Ã  sortir d'ici. Cette grille se trouverait derriÃ¨re une grande herse. Massena a sous-entendu que je devrai trouver un moyen pour la franchir.~
+@64=~Aider le fantÃ´me Massena
 
-Un phénomène étrange s'est produit. Lorsque j'ai mis les restes du fantôme Massena dans mon équipement, un collier rouge est apparu à son cou.~
-@65=~Aider le fantôme Massena
+Un phÃ©nomÃ¨ne Ã©trange s'est produit. Lorsque j'ai mis les restes du fantÃ´me Massena dans mon Ã©quipement, un collier rouge est apparu Ã  son cou.~
+@65=~Aider le fantÃ´me Massena
 
-Massena le fantôme désire que j'ouvre le passage secret près du mur. A l'intérieur, il y a un sarcophage où je dois mettre ses restes si je désire son aide.~
+Massena le fantÃ´me dÃ©sire que j'ouvre le passage secret prÃ¨s du mur. A l'intÃ©rieur, il y a un sarcophage oÃ¹ je dois mettre ses restes si je dÃ©sire son aide.~
 
-@66=~Aider le fantôme Massena
+@66=~Aider le fantÃ´me Massena
 
-Massena le fantôme est en colère, il m'affirme que mon allié Karl, le chasseur de trésors est en fait un serviteur de Cyric! Si je ne l'élimine pas, je n'aurai pas son aide.~
+Massena le fantÃ´me est en colÃ¨re, il m'affirme que mon alliÃ© Karl, le chasseur de trÃ©sors est en fait un serviteur de Cyric! Si je ne l'Ã©limine pas, je n'aurai pas son aide.~
 
-@67=~Aider le fantôme Massena
+@67=~Aider le fantÃ´me Massena
 
-Je me suis débarrassé d'Ekilis, Massena devrait accepter de m'aider à sortir d'ici.~
+Je me suis dÃ©barrassÃ© d'Ekilis, Massena devrait accepter de m'aider Ã  sortir d'ici.~
 
-@68=~Aider le fantôme Massena
+@68=~Aider le fantÃ´me Massena
 
-J'ai suivi les instructions du fantôme Massena en déposant ses restes dans le sarcophage d'une salle secrète. Grâce à ses informations, je sais comment sortir de ce temple!~
+J'ai suivi les instructions du fantÃ´me Massena en dÃ©posant ses restes dans le sarcophage d'une salle secrÃ¨te. GrÃ¢ce Ã  ses informations, je sais comment sortir de ce temple!~
 
 
 
 @69=~Histoire du temple de Bhaal
 
-L'existence de ce temple était visiblement secrète et Systéra en était la gardienne. A la chûte de Bhaal, Systéra exhortait les fidèles à garder la foi et à préparer le retour de leur maître. Certains ont préréré la trahison et les fidèles de Cyric ont attaqué le temple. 
+L'existence de ce temple Ã©tait visiblement secrÃ¨te et SystÃ©ra en Ã©tait la gardienne. A la chÃ»te de Bhaal, SystÃ©ra exhortait les fidÃ¨les Ã  garder la foi et Ã  prÃ©parer le retour de leur maÃ®tre. Certains ont prÃ©rÃ©rÃ© la trahison et les fidÃ¨les de Cyric ont attaquÃ© le temple. 
 
-Systèra a scellé les portes derrière eux. Le temple de Bhaal est devenu leur tombeau!~
+SystÃ¨ra a scellÃ© les portes derriÃ¨re eux. Le temple de Bhaal est devenu leur tombeau!~
 
 @70=~Histoire du temple de Bhaal
 
-J'ai demandé à Massena à quoi servait ce temple. Il m'a conseillé de ne pas être trop curieux et de partir rapidement... J'ai senti une menace dans ses propos.~
+J'ai demandÃ© Ã  Massena Ã  quoi servait ce temple. Il m'a conseillÃ© de ne pas Ãªtre trop curieux et de partir rapidement... J'ai senti une menace dans ses propos.~
 
 
 
 @71=~Sortir d'ici
 
-D'après Massena, pour ouvrir les portes du temple, je dois trouver le crâne de Kept et le placer au centre de la salle des prières qui est au niveau inférieur. C'est Systéra, la gardienne du temple qui était responsable du crâne. Son cadavre traine quelque part dans le temple. Si je le trouve, je trouverai le crâne!
+D'aprÃ¨s Massena, pour ouvrir les portes du temple, je dois trouver le crÃ¢ne de Kept et le placer au centre de la salle des priÃ¨res qui est au niveau infÃ©rieur. C'est SystÃ©ra, la gardienne du temple qui Ã©tait responsable du crÃ¢ne. Son cadavre traine quelque part dans le temple. Si je le trouve, je trouverai le crÃ¢ne!
 
-Mais ce n'est pas tout! Pour descendre au niveau inférieur, il faut que je trouve un coffre contenant la rune ouvrant le passage secret. Massena m'a donné la clé ouvrant le coffre. A moi de trouver le coffre situé à ce niveau.~
+Mais ce n'est pas tout! Pour descendre au niveau infÃ©rieur, il faut que je trouve un coffre contenant la rune ouvrant le passage secret. Massena m'a donnÃ© la clÃ© ouvrant le coffre. A moi de trouver le coffre situÃ© Ã  ce niveau.~
 
