@@ -1,31 +1,31 @@
-// Le charname remonte à l'auberge sans Ekilis
-@1=~Protecteur, vous êtes enfin de retour. Grâce à vous la porte du temple est à nouveau ouverte.~ 
-@2=~Qui êtes-vous?~ 
-@3=~Je n'ai rien fait, elle s'est ouverte toute seule devant moi.~ 
-@4=~Je suis Candelas, grand inquisiteur du dieu des dieux, Cyric.~ 
-@5=~J'aurai aimé voir celà de mes yeux.~ 
-@6=~A la mort de Bhaal, beaucoup de ses serviteurs se sont ralliés à Cyric et nous avons appris l'existance de ce temple. Ekilis avait pour mission de le détruire.~ 
-@7=~Grâce à sa stupidité, le temple s'est trouvé scellé pendant de nombreuses années dans l'attente qu'un enfant de Bhaal se présente à sa porte.~ 
-@8=~J'allais utiliser Sarevok lorsque vous l'avez tué. Imaginez ma déception quand j'ai appris sa mort...~ 
-@9=~J'ai supposé que vous êtiez aussi un enfant de Bhaal. Je me suis donc servi de Barni pour vous attirer ici et je ne suis pas déçu du résultat.~ 
-@10=~Voilà Protecteur, je vous ai compté mon histoire. A votre tour, parlez moi de ce temple.~ 
-@11=~(Vous accédez à la demande de Candelas)~ 
-@12=~Je vois, vous avez peur d'être enfermé à votre tour et vous avez bien raison. Ce temple est un piège mortel pour les fidèles de Cyric. (air moqueur)~ 
-@13=~Cyric est vraiment entouré de crétins. Il est urgent de faire le ménage!~ 
-@14=~Je vous remercie de m'avoir conduit ici. Mais j'ai autre idée en tête. Vous allez goûter au CHAMPION DE BHAAL!~ 
-@15=~(ne rien répondre et passer à l'attaque)~ 
-@16=~Excellent, il me tarde d'y pénétrer. Il me reste juste à me débarrasser de vous maintenant.~ 
-@17=~Je tenais à vous rendre la pareille. Finis de jouer! A l'attaque!~ 
-@18=~Cyric est vraiment entouré de crétins. Il est temps de faire le ménage!~ 
-@19=~Je vous remercie de m'avoir conduit ici. Mais j'ai autre idée en tête. Vous allez goûter au CHAMPION DE BHAAL!~ 
-@20=~(ne rien répondre et passer à l'attaque)~ 
-@21=~Comme il vous plaira. Je le découvrirai par moi même. Finissons en!~ 
 
-// Le charname remonte à l'auberge avec Ekilis
-@100=~Vous voilà donc enfin de retour et avec Ekilis que nous pensions perdu.~
-@101=~J'aurais dû me douter que vous profiteriez de l'occasion...~
-@102=~On peut savoir qui vous êtes?~
-@103=~Je ne suis pas stupide! Je suis Ekilis le grand inquisiteur de Cyric et vous devez me traiter avec respect!~
-@104=~Les choses ont bien changé en votre absence, mon cher Ekilis. Nous réglerons ce point après nous être débarrassé de l'enfant de Bhaal.~
-@105=~Je vais offrir son coeur à la gloire de Cyric et ensuite vous serez chatié pour votre manque de respect!~
-
+// The charname returns to the inn without Ekilis.
+@1=~Protector, you have finally returned. Thanks to you, the temple door is open again.~
+@2=~Who are you?~ 
+@3=~I did nothing; it opened by itself before me.~
+@4=~I am Candelas, Grand Inquisitor of the god of gods, Cyric.~
+@5=~I wish I could have seen this with my own eyes.~ 
+@6=~Upon Bhaal's death, many of his servants rallied to Cyric, and we learned of the existence of this temple. Ekilis's mission was to destroy it.~
+@7=~Thanks to his stupidity, the temple remained sealed for many years, waiting for a child of Bhaal to appear at its door.~
+@8=~I was about to use Sarevok when you killed him. Imagine my disappointment when I learned of his death...~
+@9=~I assumed you were also a child of Bhaal. So I used Barni to lure you here, and I'm not disappointed with the result.~ 
+@10=~There you have it, Protector, I've told you my story. Now it's your turn. Tell me about this temple.~
+@11=~(You grant Candelas's request)~
+@12=~I see, you're afraid of being imprisoned yourself, and you have good reason. This temple is a death trap for Cyric's followers. (mocking tone)~
+@13=~Cyric is truly surrounded by idiots. It's urgent that we clean house!~ 
+@14=~Thank you for bringing me here. But I have another idea in mind. You're going to taste the CHAMPION OF BHAAL!~
+@15=~(no response, then attack)~
+@16=~Excellent, I can't wait to get in. All I have to do now is get rid of you.~
+@17=~I wanted to return the favor. No more playing around! Attack!~ 
+@18=~Cyric is really surrounded by idiots. It's time to clean house!~
+@19=~Thank you for bringing me here. But I have another idea in mind. You're going to get a taste of BHAAL'S CHAMPION!~ 
+@20=~(don't reply and attack)~
+@21=~As you wish. I'll find out for myself. Let's finish this!~ 
+// The charname returns to the inn with Ekilis 
+@100=~So you're finally back, and with Ekilis, whom we thought was lost.~
+@101=~I should have known you'd take advantage of the situation...~
+@102=~May we know who you are?~ 
+@103=~I'm not stupid! I am Ekilis, Cyric's Grand Inquisitor, and you must treat me with respect!~ 
+@104=~Things have changed a lot in your absence, my dear Ekilis. We will settle this matter after we get rid of Bhaal's child.~ 
+@105=~I will offer his heart to Cyric's glory, and then you will be punished for your disrespect!~
+I'll 
