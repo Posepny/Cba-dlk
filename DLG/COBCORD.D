@@ -1,7 +1,4 @@
 
-
-Copilot Chat
-New chat
 BEGIN ~COBCORD~
 
 IF ~Global("Corde_lancee1","GLOBAL",1)~ THEN BEGIN 1
