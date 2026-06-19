@@ -1,114 +1,114 @@
-BEGIN ~COCARIS~
+BEGIN ~COCARIS~ 
 
-// Le charname est sur cette carte
-IF ~IsGabber(PLAYER1)
-    OpenState("PS2",FALSE)       
-    Global("Caris_init","COM021",0)~ THEN BEGIN 1
+// The character is on this card 
+IF ~IsGabber(PLAYER1) 
+    OpenState("PS2",FALSE)        
+    Global("Caris_init","COM021",0)~ THEN BEGIN 1 
 
-  SAY   @1 /*  ~Bienvenu parmis les morts, sang de Bhaal.~  */ 
+  SAY @1 /* ~Welcome among the dead, blood of Bhaal.~ */ 
   IF ~~ THEN 
-          REPLY @2 /* ~Qui êtes vous?~  */
-          DO ~SetGlobal("Caris_init","COM021",1)~
-          GOTO  3
-END
+          REPLY @2 /* ~Who are you?~ */ 
+          DO ~SetGlobal("Caris_init","COM021",1)~ 
+          GOTO 3 
+END 
 
-// Le charname n'est pas sur cette carte
-IF ~!IsGabber(PLAYER1)
-    OpenState("PS2",FALSE)
-    Global("Caris_init","COM021",0)~ THEN BEGIN 2
+// The character is not on this card 
+IF ~!IsGabber(PLAYER1) 
+    OpenState("PS2",FALSE) 
+    Global("Caris_init","COM021",0)~ THEN BEGIN 2 
 
-  SAY  @5 /*  ~Bienvenu parmis les morts, serviteur du sang de Bhaal.~  */ 
+  SAY @5 /* ~Welcome among the dead, servant of the blood of Bhaal.~ */ 
   IF ~~ THEN 
-          REPLY @6 /* ~Qui êtes vous?~  */
-          DO ~SetGlobal("Caris_init","COM021",1)~
-          GOTO  3
-END
+          REPLY @6 /* ~Who are you?~ */ 
+          DO ~SetGlobal("Caris_init","COM021",1)~ 
+          GOTO 3 
+END 
 
-IF ~~ THEN BEGIN 3
+IF ~~ THEN BEGIN 3 
 
-  SAY   @3=@4/*  ~Caris, j'étais l'embaumeur personnel du maître.~ ~En ces lieux, je m'assure de trouver une place pour chacun de nos invités. Néanmoins, il existe quatre coffres dans ce niveau réservé aux morts. Trouver les quatres clés et les coffres s'ouvriront sur un objet particulier. Bien placés, ces objets ouvriront un accès vers une autre mort. A mon avis, bien moins plaisante qu'ici. Je vous assure qu'aucuns de nos clients s'est plaint jusqu'à présent! (grand sourire)~  */ 
+  SAY @3=@4/* ~Caris, I was the master's personal embalmer.~ ~In this place, I make sure to find a place for each of our guests. However, there are four chests in this level reserved for the dead. Find the four keys and the chests will open to reveal a special item. When placed correctly, these items will grant access to another death. In my opinion, much less pleasant than this one. I assure you, none of our clients have complained so far! (big smile)~ */ 
   IF ~~ THEN 
-           DO ~AddJournalEntry(@27,INFO)
-               DestroySelf()~
-           EXIT
-END
+           DO ~AddJournalEntry(@27,INFO) 
+               DestroySelf()~ 
+           EXIT 
+END 
 
-IF ~~ THEN BEGIN 5
+IF ~~ THEN BEGIN 5 
 
-  SAY @11 /* ~N'ayez pas d'inquiétudes, vous trouverez le vôtre. Nous avons encore pleins de cercueils à vous proposer.~ */
+  SAY @11 /* ~Don't worry, you'll find yours. We still have plenty of coffins to offer you.~ */ 
   
    IF ~~ THEN 
-           REPLY @12 /* ~Vous avez un drôle d'humour...~  */
-           GOTO 6
+           REPLY @12 /* ~You have a strange sense of humor...~ */ 
+           GOTO 6 
 
   IF ~~ THEN 
-          REPLY @26 /* ~(Ne rien répondre)~  */
-          DO ~DestroySelf()~
-          EXIT
-END
+          REPLY @26 /* ~(Do not reply)~ */ 
+          DO ~DestroySelf()~ 
+          EXIT 
+END 
 
-IF ~~ THEN BEGIN 6
+IF ~~ THEN BEGIN 6 
 
-  SAY @15 /*  ~Je suis des plus sérieux. Un meurtre se traite avec le plus grand soin.~  */ 
+  SAY @15 /* ~I am quite serious. A murder is handled with the utmost care.~ */ 
   IF ~~ THEN 
-         DO ~DestroySelf()~
-         EXIT
-END
+         DO ~DestroySelf()~ 
+         EXIT 
+END 
 
 
-// au moins un des coffres est ouvert et la sortie est fermée *******************************************************************************************************************************************************************************
-IF ~OpenState("PS2",FALSE)
-    Global("Objet_sortie","COM021",0)
-    GlobalGT("nb_coffre_ouvert","COM021",0)~ THEN BEGIN 9
+// at least one of the chests is open and the exit is closed ********************************************************************************************************************************************************************************** 
+IF ~OpenState("PS2",FALSE) 
+    Global("Exit_Object","COM021",0) 
+    GlobalGT("number_of_open_chests","COM021",0)~ THEN BEGIN 9
 
-  SAY   @18=@16 /*  ~Hey bien, je constate avec grand plaisir qui nous avons à faire à des hôtes de qualité. Vôtre meurtre ne vous à pas encore trouvé.~ ~Soyez un peu patient, nous allons vous trouver un beau meurtre, avec du sang et de la douleur.~  */ 
+  SAY @18=@16 /* ~Well, I note with great pleasure that we are dealing with quality guests. Your murder has not yet found you.~ ~Be a little patient, we will find you a fine murder, with blood and pain.~ */ 
   IF ~~ THEN 
-          EXIT
-END
+          EXIT 
+END 
 
 
-// la sortie est ouverte ********************************************************************************************************************************************************************************************************************
-IF ~OpenState("PS2",TRUE)
-    Global("Sortie_ouverte","COM021",0)~ THEN BEGIN 13
+// The exit is open *********************************************************************************************************************************************************************************************************************** 
+IF ~OpenState("PS2",TRUE) 
+    Global("Open_Exit","COM021",0)~ THEN BEGIN 13 
 
-  SAY   @24 /* ~C'est avec tristesse que je vous allez continuer votre chemin. Armez vous de sagesse, vous en aurez besoin pour vôtre prochaine épreuve. (l'effigie ferme les yeux le sourire aux lèvres)~ */
+  SAY @24 /* ~It is with sadness that I will see you continue on your way. Arm yourself with wisdom; you will need it for your next trial. (the effigy closes its eyes with a smile on its lips)~ */ 
   IF ~~ THEN 
-           DO ~SetGlobal("Sortie_ouverte","COM021",1)~
-           GOTO 14
-END
+           DO ~SetGlobal("Open_Exit","COM021",1)~ 
+           GOTO 14 
+END 
 
-IF ~~ THEN BEGIN 14
+IF ~~ THEN BEGIN 14 
 
-  SAY   @25 /* ~Ce fût un plaisir de vous voir jouer avec le meurtre. (l'effigie ferme les yeux le sourire aux lèvres)~  */
+  SAY @25 /* ~It was a pleasure to see you play with murder. (The effigy closes its eyes, a smile on its lips)~ */ 
   IF ~~ THEN 
-          DO ~DestroySelf()~
-          EXIT  
-END
+          DO ~DestroySelf()~ 
+          EXIT   
+END 
 
 
-// Ils sont allées à la salle 1: boule de feu **********************************************************************************************************************************************************************************************
-IF ~Global("salle_feu","COM021",1)
-    Global("Sortie_ouverte","COM021",0)~ THEN BEGIN 15
+// They went to room 1: fireball ************************************************************************************************************************************************************************************************* 
+IF ~Global("fire_room","COM021",1) 
+    Global("Open_exit","COM021",0)~ THEN BEGIN 15 
 
-  SAY   @9 /*  ~Je vois que les cercueils de feu ne vous ont pas plus. Il y en a qui préfèrent rester à même le sol. Personnelement, je pense qu'il est important d'être à son aise pour son trépas éternel.~   */
+  SAY @9 /* ~I see the fire coffins didn't appeal to you. Some of you prefer to stay on the ground. Personally, I think it's important to be comfortable in one's eternal demise.~ */ 
   IF ~Global("Caris_cerqueil","COM021",0)~ THEN 
-          DO ~SetGlobal("salle_feu","COM021",2)~
-          GOTO 5
+          DO ~SetGlobal("salle_feu","COM021",2)~ 
+          GOTO 5 
           
   IF ~Global("Caris_cerqueil","COM021",1)~ THEN 
-          DO ~SetGlobal("salle_feu","COM021",2)
-              DestroySelf()~
-          EXIT
-END
+          DO ~SetGlobal("salle_feu","COM021",2) 
+              DestroySelf()~ 
+          EXIT 
+END 
 
 
-// Ils sont allées à la salle d'Urglite *****************************************************************************************************************************************************************************************************
-IF ~Global("salle_glace","COM021",1)
-    Global("Sortie_ouverte","COM021",0)~ THEN BEGIN 16
+// They went to the Urglite room *********************************************************************************************************************************************************************************************************** 
+IF ~Global("salle_glace","COM021",1) 
+    Global("Open_Exit","COM021",0)~ THEN BEGIN 16 
 
-  SAY   @10 /* ~Je vois que les cercueils d'Urglite ne vous conviennent pas. Un peu trop glacé peut-être?~ */
+  SAY @10 /* ~I see that Urglite's coffins are not to your liking.A little too icy perhaps?~ */ 
   IF ~Global("Caris_cerqueil","COM021",0)~ THEN 
-          DO ~SetGlobal("salle_glace","COM021",2)~
+          DO ~SetGlobal("salle_glace","COM021",2)~ 
           GOTO 5
           
   IF ~Global("Caris_cerqueil","COM021",1)~ THEN 
