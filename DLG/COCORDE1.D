@@ -38,7 +38,7 @@ IF ~Global("Corde_lancee1","GLOBAL",1)~ THEN BEGIN 2
     EXIT
 
   IF ~~ THEN 
-    REPLY @8 /* ~Récuperer la corde.~ */
+    REPLY @8 /* ~RÃ©cuperer la corde.~ */
     DO ~SetGlobal("Corde_lancee1","GLOBAL",0)
         ActionOverride(Myself,CreateItem("MISCP31",0,0,0))
         AmbientActivate("TR1C",FALSE)~
