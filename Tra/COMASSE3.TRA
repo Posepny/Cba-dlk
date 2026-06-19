@@ -1,90 +1,90 @@
-// rencontre avec Massena près du puit.
-@1=~Vous êtes donc toujours en vie. Je pensais que le temple aurait raison de vous...~
+// rencontre avec Massena prÃ¨s du puit.
+@1=~Vous Ãªtes donc toujours en vie. Je pensais que le temple aurait raison de vous...~
 @2=~Massena, c'est vous?~
-@3=~Evidemment! Je vois qu'il est toujours parmi vous. (Massena désigne Karl)~
+@3=~Evidemment! Je vois qu'il est toujours parmi vous. (Massena dÃ©signe Karl)~
 @4=~De chair et d'os cette fois.~
-@5=~Comment avez-vous fait? vous étiez mort!~
-@6=~Le temple de Bhaal recele de grands pouvoirs pour celui qui sait lui rester fidèle.~
-@7=~Je vois. Je vous aide et ensuite le temple devait vous débarrasser de nous...~
-@8=~Vous pensiez vraiment que j'allais laisser des étrangers sortir du temple secret de mon maître?~
-//@9=~Bhaal sera bientôt de retour et Cyric tremblera devant lui!~
-@9=~Tu oses insulter Bhaal le seigneur du meurtre dans son antre! Méfies toi de son courroux!~
-//@10=~Tu seras le premier à mourir Ekilis grand inquisiteur du dieu fou!~
-@10=~Je vais offrir vos têtes à mon maître. (il désigne du doigt Ekilis). Tu seras le premier à mourir serviteur du dieu fou!~
-@11=~N'y voyez rien de personnel. Dans le fond je vous aime bien mais vôtre route s'arrête ici.~
-@12=~Adieu étranger(s)!~
+@5=~Comment avez-vous fait? vous Ã©tiez mort!~
+@6=~Le temple de Bhaal recele de grands pouvoirs pour celui qui sait lui rester fidÃ¨le.~
+@7=~Je vois. Je vous aide et ensuite le temple devait vous dÃ©barrasser de nous...~
+@8=~Vous pensiez vraiment que j'allais laisser des Ã©trangers sortir du temple secret de mon maÃ®tre?~
+//@9=~Bhaal sera bientÃ´t de retour et Cyric tremblera devant lui!~
+@9=~Tu oses insulter Bhaal le seigneur du meurtre dans son antre! MÃ©fies toi de son courroux!~
+//@10=~Tu seras le premier Ã  mourir Ekilis grand inquisiteur du dieu fou!~
+@10=~Je vais offrir vos tÃªtes Ã  mon maÃ®tre. (il dÃ©signe du doigt Ekilis). Tu seras le premier Ã  mourir serviteur du dieu fou!~
+@11=~N'y voyez rien de personnel. Dans le fond je vous aime bien mais vÃ´tre route s'arrÃªte ici.~
+@12=~Adieu Ã©tranger(s)!~
 
 
-// Bhaal est entré en contact avec le Charname
-@13=~Attendez! Mon maître vous a parlé?~
-@14=~Cessez le combat immédiatement!~
-@15=~Incroyable! L'essence de mon maître coule dans vos veines. Comment est ce possible?~
+// Bhaal est entrÃ© en contact avec le Charname
+@13=~Attendez! Mon maÃ®tre vous a parlÃ©?~
+@14=~Cessez le combat immÃ©diatement!~
+@15=~Incroyable! L'essence de mon maÃ®tre coule dans vos veines. Comment est ce possible?~
 @16=~Je vous l'avais dit mais vous ne m'avez pas cru!~
-@17=~Mon père est Bhaal. Ce qui fait de toi mon humble serviteur!~
-@18=~Bhaal a couché avec ma mère et hop neuf mois plus tard me voilà!~
-@19=~C'est pas ton problème! Le combat n'est pas terminé!~
-@20=~Bhaal a laissé son enfant entrer dans le temple!~
-@21=~Systéra avait raison... Bhaal a des enfants!~
+@17=~Mon pÃ¨re est Bhaal. Ce qui fait de toi mon humble serviteur!~
+@18=~Bhaal a couchÃ© avec ma mÃ¨re et hop neuf mois plus tard me voilÃ !~
+@19=~C'est pas ton problÃ¨me! Le combat n'est pas terminÃ©!~
+@20=~Bhaal a laissÃ© son enfant entrer dans le temple!~
+@21=~SystÃ©ra avait raison... Bhaal a des enfants!~
 @22=~Il faudrait savoir ce que vous voulez! On se bat ou pas?~
-@23=~Vous êtes au courant de rien en fait!~
-@24=~Milles pardons, j'ignorai qui vous étiez.~
+@23=~Vous Ãªtes au courant de rien en fait!~
+@24=~Milles pardons, j'ignorai qui vous Ã©tiez.~
 @25=~~
-@26=~Ce n'est pas un hasard si vous êtes ici. Mon maître désire vous mettre à l'épreuve. Si vous êtes digne de vôtre père, son présent sera vôtre.~
-@27=~La mort ne vous a pas réussi! Vous êtes complètement malade. Je veux juste sortir de ce maudit temple!~
-@28=~Un présent?~
+@26=~Ce n'est pas un hasard si vous Ãªtes ici. Mon maÃ®tre dÃ©sire vous mettre Ã  l'Ã©preuve. Si vous Ãªtes digne de vÃ´tre pÃ¨re, son prÃ©sent sera vÃ´tre.~
+@27=~La mort ne vous a pas rÃ©ussi! Vous Ãªtes complÃ¨tement malade. Je veux juste sortir de ce maudit temple!~
+@28=~Un prÃ©sent?~
 @29=~~
-@30=~Ca ne peut pas être Bhaal. Cyric l'a tué!~
-@31=~De l'action et une récompense divine. Ca me plait!~
-@32=~Vôtre père a un plan pour vous et vous ne pouvez vous y soustraire!~
-@33=~Hors de question d'obéir à quiconque. Moi j'ai un meilleur plan pour vous. Trouvez quelqu'un d'autre!~
-@34=~Vous refusez vôtre héritage? Dans ce cas, votre place est fond du puit!~
-@35=~Sortez victorieux du temple et vous serez récompensé!~
-@36=~Oui et grâce à vous Bhaal sera bientôt de retour!~
-@37=~Approchez-vous de la grille et elle s'ouvrira. Vos serviteurs vous assisteront dans vôtre noble quête.
+@30=~Ca ne peut pas Ãªtre Bhaal. Cyric l'a tuÃ©!~
+@31=~De l'action et une rÃ©compense divine. Ca me plait!~
+@32=~VÃ´tre pÃ¨re a un plan pour vous et vous ne pouvez vous y soustraire!~
+@33=~Hors de question d'obÃ©ir Ã  quiconque. Moi j'ai un meilleur plan pour vous. Trouvez quelqu'un d'autre!~
+@34=~Vous refusez vÃ´tre hÃ©ritage? Dans ce cas, votre place est fond du puit!~
+@35=~Sortez victorieux du temple et vous serez rÃ©compensÃ©!~
+@36=~Oui et grÃ¢ce Ã  vous Bhaal sera bientÃ´t de retour!~
+@37=~Approchez-vous de la grille et elle s'ouvrira. Vos serviteurs vous assisteront dans vÃ´tre noble quÃªte.
 
-Je resterai ici à attendre votre retour.~
+Je resterai ici Ã  attendre votre retour.~
 
-@38=~Mon maître est ici en sommeil dans ce puit. Vous avez senti son bref contact tout comme moi.~
-@39=~Et il attend quoi pour se réveiller alors?~
+@38=~Mon maÃ®tre est ici en sommeil dans ce puit. Vous avez senti son bref contact tout comme moi.~
+@39=~Et il attend quoi pour se rÃ©veiller alors?~
 @40=~J'ignore ses desseins mais vous en faite parti.~
 
 
-@100=~Histoire du temple de Bhaal
+@100=~History of the Bhaal,s temple.
 
-Il est vivant! Le sarcophage a ramené Massena d'entre les morts, c'est pour celà qu'il voulait être dans le sarcophage. Ce temple est incroyable.~
+Il est vivant! Le sarcophage a ramenÃ© Massena d'entre les morts, c'est pour celÃ  qu'il voulait Ãªtre dans le sarcophage. Ce temple est incroyable.~
 
 @101=~Histoire du temple de Bhaal
 
-J'ai senti son contact meurtrier. Massena a raison mon père est sommeil caché dans ce puit!. Ce temple le protège dans l'attente sans doute qu'un évènement se produise.~
+J'ai senti son contact meurtrier. Massena a raison mon pÃ¨re est sommeil cachÃ© dans ce puit!. Ce temple le protÃ¨ge dans l'attente sans doute qu'un Ã©vÃ¨nement se produise.~
 
 
-@200=~L'épreuve de Bhaal
+@200=~L'Ã©preuve de Bhaal
 
-Massena est persuadé que ma présence n'est pas le fruit du hasard. selon lui, mon père veut que je réussisse son épreuve pour me récompenser.
+Massena est persuadÃ© que ma prÃ©sence n'est pas le fruit du hasard. selon lui, mon pÃ¨re veut que je rÃ©ussisse son Ã©preuve pour me rÃ©compenser.
 
-J'ai accepté de relever son défis qui m'attend derrière cette grille.~
+J'ai acceptÃ© de relever son dÃ©fis qui m'attend derriÃ¨re cette grille.~
 
-@201=~L'épreuve de Bhaal
+@201=~L'Ã©preuve de Bhaal
 
-Massena est persuadé que ma présence n'est pas le fruit du hasard. selon lui, mon père veut que je réussisse son épreuve pour me récompenser.
+Massena est persuadÃ© que ma prÃ©sence n'est pas le fruit du hasard. selon lui, mon pÃ¨re veut que je rÃ©ussisse son Ã©preuve pour me rÃ©compenser.
 
-J'ai refusé de relever son défis qui m'attend derrière cette grille. Massena l'a très mal pris. Le combat est inévitable!~
-
-
-@202=~L'épreuve de Bhaal
-
-J'ai affronté de nombreux dangers et j'en suis sorti vainqueur. Le meurtre lui même m'a marqué du symbol de Bhaal dans la paume!
-
-A mon retour, Massena et ses masques de mort m'attendaient. Je suis désormais le champion de Bhaal! Un grand destin m'attend.
-
-Massena me contactera dès que le temple sera remis en état.~
+J'ai refusÃ© de relever son dÃ©fis qui m'attend derriÃ¨re cette grille. Massena l'a trÃ¨s mal pris. Le combat est inÃ©vitable!~
 
 
-@203=~L'épreuve de Bhaal
+@202=~L'Ã©preuve de Bhaal
 
-J'ai affronté de nombreux dangers et j'en suis sorti vainqueur. Le meurtre lui même m'a marqué du symbol de Bhaal dans la paume!
+J'ai affrontÃ© de nombreux dangers et j'en suis sorti vainqueur. Le meurtre lui mÃªme m'a marquÃ© du symbol de Bhaal dans la paume!
+
+A mon retour, Massena et ses masques de mort m'attendaient. Je suis dÃ©sormais le champion de Bhaal! Un grand destin m'attend.
+
+Massena me contactera dÃ¨s que le temple sera remis en Ã©tat.~
+
+
+@203=~L'Ã©preuve de Bhaal
+
+J'ai affrontÃ© de nombreux dangers et j'en suis sorti vainqueur. Le meurtre lui mÃªme m'a marquÃ© du symbol de Bhaal dans la paume!
 
 A mon retour, Massena et ses masques de mort m'attendaient. Ras le bol leur histoire de champion.
 
-Je me suis débarrassé d'eux.~
+Je me suis dÃ©barrassÃ© d'eux.~
 
