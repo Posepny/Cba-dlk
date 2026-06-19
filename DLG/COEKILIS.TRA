@@ -1,117 +1,41 @@
-// Première rencontre avec Ekilis dans la salle n°1
-@1=~Tu pensais pouvoir m'attaquer par surprise! 
-(regarde autour de lui finalement surpris)~
-@2=~Dites-moi où est cette garce de Systéra, je n'ai que faire de ses laquais!~
-@3=~On est les laquais de personne! Qu'est ce que vous faisiez là en stase?~
-@4=~Tu es bien sur de toi. Si tu nous montrais plutôt comment tu vas mourir!~
-@5=~De simples aventuriers alors...~
-@6=~Mon nom est Karl et je suis ici pour les mêmes raisons que vous mes braves. Je cherche le trésor de Bhaal, le dieu mort!~
-@7=~Ce n'est pas grave... Tuer ne m'a jamais posé problème. (sourire carnassier)~
-@8=~Vous allez vous joindre à moi et chacun aura sa part du butin.~
-@9=~Ca me va mais on est plus nombreux donc c'est toi qui vient avec nous.~
-@10=~Ca me va. Allons-y!~
-@11=~On a pas besoin de toi. Tu peux partir.~
-@12=~Pas envie. Et pas envie non plus que tu restes en vie.~
-@13=~Etant un enfant de Bhaal, tu comprendras que je n'aime pas trop qu'on vienne piller mon temple...~
-@14=~Ne soyez pas ridicule mon ami(e). Je n'ai pas envie de jouer à celui qui a la plus grosse. Vous seriez perdant. Allons-y! On n'a pas de temps à perdre.~
-@15=~Je ne donne pas cher de vôtre peau sans moi. En fait, vous êtes déjà mort. Adieu!~
-@16=~Ce n'est pas grave... Tuer ne m'a jamais posé problème. (sourire carnassier)~
-@17=~La rumeur était donc vraie... Bhaal a fait des mioches! (rires)~
-@18=~Pour votre gouverne, mon vrai nom est Ekilis, le grand inquisiteur. Cyric va généreusement me récompenser pour ta tête!~
-@19=~Que est ce que vous voulez?~
-@20=~C'est qui cette Systéra?~
-@21=~Vous êtes venu seul dans le temple?~
-@22=~Il nous est arrivé la même chose... On est bloqué tout comme vous.~
-@23=~Autant que vous le sachiez, la porte s'est à nouveau fermée. Mais on a rencontré un fantôme qui est près à nous aider. On doit d'abord enmêner ses restes près d'une grille.~
-@24=~Que pouvez-vous nous dire sur le temple?~
-@25=~Pourquoi étiez-vous en stase?~
-@26=~Systéra est au service de Bhaal. Elle est la gardienne du temple malgré la disparition de son maître. Elle rôde dans le coin.~
-@27=~Mes compagnons sont morts pendant qu'on visitait les lieux. Leur manque de prudence leur a été fatale.~
-@28=~Ah... Hey bien dans ce cas, nous trouverons le moyen de sortir d'ici une fois que nous aurons trouvé le trésor! J'en ai assez de ce temple...~
-@29=~(surprise contenue) C'est une excellente nouvelle. Il ne nous reste plus qu'à trouver le trésor dans ce cas.~
-@30=~Méfiez-vous des grilles et des murs,il y a souvent des pièges et parfois des créatures surgissent de nulle part. Je vous conseille d'ouvrir l'oeil.~
-@31=~La porte du temple s'est refermée derrière nous et je n'ai pas trouvé d'autre issue. Mais maintenant que vous êtes là, c'est que la porte elle est à nouveau ouverte!~
-@32=~Le trésor de Bhaal
 
-J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
-
-Karl affirme qu'un trésor est caché dans le temple. Nous avons conclu une alliance pour le trouver ensemble.~
-
-@33=~Le trésor de Bhaal
-
-J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de sa stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
-
-Karl affirme qu'un trésor est caché dans le temple.
-
-J'ai réfusé sa proposition d'alliance pour partager le trésor. Je le trouverai sans lui!~
-
-@34=~Le trésor de Bhaal
-
-J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
-
-Karl affirme qu'un trésor est caché dans le temple.
-
-J'ai réfusé sa proposition d'alliance et j'ai décidé de me débarrasser de lui. Je trouverai le trésor sans lui.~
-
-@35=~Le trésor de Bhaal
-
-J'ai découvert Karl en stase dans le temple de Bhaal. A mon approche, il est sorti de stase près au combat, il pensait que nous étions des laquais de 'Systéra'!
-
-Karl affirme qu'un trésor est caché dans le temple.
-
-J'ai décidé de me débarrasser de lui. On ne pille pas le temple de mon défunt père impunément!
-
-Ca l'a fait rire. Karl est en fait Ekilis le grand inquisiteur de cyric. Il se rejouit d'avance de prendre ma tête.~
-
-@36=~Comment vous savez qu'il y a un trésor?~
-@37=~Si j'en crois mon expérience, lorsqu'un lieu est tenu secret c'est qu'il recele des richesses. Il ne reste plus qu'à trouver l'endroit.~
-@38=~Suivez nous!~
-
-
-@39=~Le trésor de Bhaal
-
-Massena a accusé mon nouveau compagnon Karl d'être un serviteur de Cyric. Karl dément formellement. Qui croire?~
-
-//Massena exige la mort d'Ekilis
-@60=~L'or est mon seul maître et personne ne m'empêchera pas de trouver le trésor de Bhaal. Pas même un fantôme!~
-@61=~Continuons! Je sens qu'on est sur la bonne voie pour s'en mettre plein les poches.~
-@62=~Un fidèle de Cyric, ça se tient... Dommage pour toi!~
-@63=~Nous avons ses restes avec moi si ça peut être utile pour s'en débarrasser.~
-@64=~En avant, je n'ai pas de temps à perdre avec ces niaiseries!~
-@65=~Excellent, sous peu nous n'aurons plus ce parasite sur le dos.~
-@66=~Je sens qu'on va le regretter dans pas longtemps...~
-
-// Ekilis rencontre Systera
-@67=~Je vais te démembrer morceau par morceau. SYSTERA!~
-@68=~Tu aurais dû accepter cette mort lente!~
-
-// Rencontre au puit avec Massena
-@90=~Pourquoi continuer à servir un dieu qui n'existe plus? Reconnais Cyric le dieu des dieux et entre à son service. Il t'accordera des pouvoirs bien au de là de ce que tu imagines...~
-//@90=~Ekilis, le grand inquisiteur de Cyric, est venu achever ton pathétique maître tapis dans ce trou...~
-@91=~Quel gachis vous ne trouvez pas? Cette fois ci on l'élimine!~
-//@91=~Cyric reconnaitra mon inéstimable valeur et je serai récompensé!~
-
-// arrivée au puit, Massena a été brûlé par Ekilis.
-@92=~C'est donc ici que se cache Bhaal, tapis dans un trou... C'est pathétique (sourire carnassier)~
-@93=~Bhaal est mort, il ne peut pas être ici.~
-@94=~Ses fidèles ont parlé, Il agonise en ces lieux et je suis le seul à le savoir!~
-@95=~(il se tourne vers le puit) Moi, Ekilis le grand inquisiteur de Cyric, je suis venu t'achever et ta descendence immonde disparaitra en même temps! (il brandit un crâne violet comme un trophé, le regard fou)~
-@96=~Cyric reconnaitra mon inestimable valeur et je serai récompensé par de terrifiants pouvoirs!~
-@97=~Mais les trésor et le butin?~
-@98=~Ne me dérangez pas avec votre question triviale. Soyez les temoins de ma victoire! Une dernière incantation et l'heure de mon sacre aura sonné!~
-@99=~C'est une belle histoire mais j'ai une meilleure fin pour toi. Bhaal est mon père et je vais lui offrir ton cadavre!~
-@100=~Votre présence n'était donc pas le fruit du hasard. Très bien, je vais commencer avec toi, chiot de Bhaal. Ensuite j'en terminerai avec toute ta famille!~
-
-
-/*
-// Massena est mort et le puit est découvert
-@92=~Excellent, le puit est enfin découvert et cet insignifiant de prêtre est mort.~
-@93=~Vous m'avez bien servi mais Ekilis, le grand inquisiteur de Cyric, n'a plus besoin de vous...
-
-DISPARAISSEZ! (regard fou)~
-@94=~Ekilis,le grand inquisiteur de Cyric, n'a plus qu'à éliminer le chiot de Bhaal!~
-*/
-
-
-// DisplayStringHead
-@500=~On évitera le coffre du milieu si possible...~
+// First encounter with Ekilis in room #1
+@1=~You thought you could attack me by surprise! (looks around, finally surprised)~
+@2=~Tell me where that bitch Systera is, I don't care about her lackeys!~
+@3=~We're nobody's lackeys! What were you doing here in stasis?~ 
+@4=~You're pretty sure of yourself. Why don't you show us how you're going to die instead!~
+@5=~Just simple adventurers then...~
+@6=~My name is Karl and I'm here for the same reasons as you, my brave ones. I'm looking for the treasure of Bhaal, the dead god!~ 
+@7=~It doesn't matter... Killing has never been a problem for me. (predatory smile)~ 
+@8=~You will join me and each of you will have your share of the loot.~ @9=~That's fine with me, but there are more of us, so you're coming with us.~ 
+@10=~That's fine with me. Let's go!~ 
+@11=~We don't need you. You can leave.~
+@12=~I don't want to. And I don't want you to stay alive either.~
+@13=~As a child of Bhaal, you'll understand that I don't much like people coming to plunder my temple...~ 
+@14=~Don't be ridiculous, my friend. I don't want to play the "mine's bigger than yours" game. You'd be the loser. Let's go! We don't have time to waste.~ 
+@15=~I wouldn't bet on your survival without me. In fact, you're already dead. Farewell!~ 
+@16=~It's alright... Killing has never been a problem for me. (predatory grin)~ 
+@17=~So the rumor was true... Bhaal has kids! (laughs)~ 
+@18=~For your information, my real name is Ekilis, the Grand Inquisitor. Cyric will generously reward me for your head!~
+@19=~What do you want?~ 
+@20=~Who is this Systera?~ 
+@21=~Did you come to the temple alone?~ 
+@22=~The same thing happened to us... We're trapped just like you.~ 
+@23=~Just so you know, the door has closed again. But we've met a ghost who's ready to help us. We must first take its remains to a gate.~
+@24=~What can you tell us about the temple?~
+@25=~Why were you in stasis?~
+@26=~Systera serves Bhaal. She is the guardian of the temple despite the disappearance of her master. She prowls the area.~ 
+@27=~My companions died while we were exploring the place. Their lack of caution was fatal.~
+@28=~Ah... Well, in that case, we'll find a way out of here once we've found the treasure! I'm fed up with this temple...~
+@29=~(contained surprise) That's excellent news. All we have to do now is find the treasure then.~ 
+@30=~Beware of the gates and walls; there are often traps, and sometimes creatures appear out of nowhere. I advise you to keep your eyes peeled.~ 
+@31=~The temple door closed behind us, and I couldn't find another way out. But now that you're here, it means the door is open again!~ 
+@32=~The Treasure of Bhaal I discovered Karl in stasis in the temple of Bhaal.As I approached, he emerged from stasis, ready for battle. He thought we were lackeys of 'Systera'! Karl claims a treasure is hidden in the temple. We formed an alliance to find it together.~
+@33=~The Treasure of Bhaal I discovered Karl in stasis in the Temple of Bhaal. As I approached, he emerged from his stasis, ready for battle. He thought we were lackeys of 'Systera'! Karl claims a treasure is hidden in the temple. I refused his offer of an alliance to share the treasure. I will find it without him!~ 
+@34=~The Treasure of Bhaal I discovered Karl in stasis in the Temple of Bhaal. As I approached, he emerged from his stasis, ready for battle. He thought we were lackeys of 'Systera'! Karl claims a treasure is hidden in the temple. I refused his offer of an alliance and decided to get rid of him. I will find the treasure without him.~ 
+@35=~The Treasure of Bhaal I discovered Karl in stasis in the Temple of Bhaal. As I approached, he emerged from stasis, ready for battle. He thought we were lackeys of 'Systera'! Karl claims that a treasure is hidden in the temple. I decided to get rid of him. One does not plunder the temple of my late father with impunity! That made him laugh. Karl is actually Ekilis, the Grand Inquisitor of Cyric. He is already looking forward to taking my head.~
+@36=~How do you know there is a treasure?~ 
+@37=~If my experience is anything to go by, when a place is kept secret, it is because it holds riches. All that remains is to find the place.~ 
+@38=~Follow us!~
+@39=~The Treasure of Bhaal Massena accused my new companion Karl of being a servant of Cyric. Karl categorically denies it. Who to believe?~ //Massena demands Ekilis's death @60=~Gold is my only master, and no one will stop me from finding Bhaal's treasure. Not even a ghost!~ @61=~Let's continue! I have a feeling we're on the right track to making a fortune.~ @62=~A loyal follower of Cyric, that makes sense... Too bad for you!~ @63=~We have his remains with me if that can be useful in getting rid of him.~ @64=~Onward, I don't have time to waste on this nonsense!~ @65=~Excellent, soon we won't have this parasite on our backs anymore.~ @66=~I have a feeling we're going to regret this soon...~ // Ekilis meets Systera @67=~I'm going to dismember you piece by piece. SYSTERA!~ @68=~You should have accepted this slow death!~ // Meeting at the well with Massena @90=~Why continue to serve a god who no longer exists? Recognize Cyric, the god of gods, and enter his service. He will grant you powers far beyond what you can imagine...~ //@90=~Ekilis, Cyric's grand inquisitor, has come to finish off your pathetic master hiding in this hole...~ @91=~What a waste, don't you think? This time we'll eliminate him!~ //@91=~Cyric will recognize my inestimable worth and I will be rewarded!~ // Arriving at the well, Massena was burned by Ekilis. @92=~So this is where Bhaal is hiding, crouching in a hole... It's pathetic (predatory smile)~ @93=~Bhaal is dead, he cannot be here.~ @94=~His followers have spoken, he is dying in this place and I am the only one who knows it!~ @95=~(he turns towards the well) I, Ekilis, the Grand Inquisitor of Cyric, have come to finish you off and your vile offspring will disappear at the same time! (He brandishes a purple skull like a trophy, his eyes wild)~ @96=~Cyric will recognize my inestimable worth, and I will be rewarded with terrifying powers!~ @97=~But what about the treasure and the loot?~ @98=~Don't bother me with your trivial question. Witness my victory! One last incantation, and the hour of my coronation will have struck!~ @99=~It's a fine story, but I have a better ending for you. Bhaal is my father, and I will offer him your corpse!~ @100=~So your presence was no accident. Very well, I'll start with you, Bhaal's pup. Then I'll finish off your whole family!~ /* // Massena is dead and the well is discovered @92=~Excellent, the well is finally discovered and that insignificant priest is dead.~ @93=~You served me well, but Ekilis, Cyric's Grand Inquisitor, no longer needs you... DISAPPEAR! (crazy look)~ @94=~Ekilis, Cyric's Grand Inquisitor, now only has to eliminate Bhaal's puppy!~ */ // DisplayStringHead @500=~We'll avoid the middle chest if possible...~doesn't need you anymore... DISAPPEAR! (crazy stare)~ @94=~Ekilis, Cyric's Grand Inquisitor, only has to eliminate Bhaal's puppy!~ */ // DisplayStringHead @500=~We'll avoid the middle chest if possible...~doesn't need you anymore... DISAPPEAR! (crazy stare)~ @94=~Ekilis, Cyric's Grand Inquisitor, only has to eliminate Bhaal's puppy!~ */ // DisplayStringHead 
+@500=~We'll avoid the middle chest if possible...~
