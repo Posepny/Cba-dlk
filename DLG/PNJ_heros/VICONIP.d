@@ -1,4 +1,4 @@
-APPEND ~VICONIP~
+APPEND ~VICONP~
 
 // 1iere rencontre dans le mod: recrutement possible
 IF WEIGHT #0 ~Global("Protecteur_baldur","GLOBAL",1)

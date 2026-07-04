@@ -1,4 +1,4 @@
-APPEND ~JAHEIRAP~
+APPEND ~JAHEIP~
 
 // Khalid part. Jaheira suit.
 IF WEIGHT #0 ~Global("Leave_Jaheira","GLOBAL",1)~ THEN BEGIN 0

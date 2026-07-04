@@ -1,4 +1,4 @@
-APPEND ~DYNAP~
+APPEND ~DYNAHP~
 
 // Minsc part. Dyna suit.
 IF WEIGHT #0 ~Global("Leave_dyna","GLOBAL",1)~ THEN BEGIN 0
