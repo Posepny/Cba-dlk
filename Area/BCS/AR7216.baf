@@ -270,7 +270,7 @@ IF
 THEN
  RESPONSE #100
  SetGlobal("Recrut_fin","AR7216",1)
- DisplayString(PLAYER1,"FIN") 
+ DisplayString(PLAYER1,"1") 
  FadeFromColor([20.0],0) 
  
  ActionOverride("AJANTIS",SetGlobal("IWasKickedOut","LOCALS",0))
